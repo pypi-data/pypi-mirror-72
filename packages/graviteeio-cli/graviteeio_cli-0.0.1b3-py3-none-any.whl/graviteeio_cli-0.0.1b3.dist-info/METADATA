@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: graviteeio-cli
+Version: 0.0.1b3
+Summary: Command line Client program in Python for graviteeio plateform
+Home-page: https://github.com/gravitee-io/graviteeio-cli
+Author: Guillaume Gillon
+Author-email: guillaume.gillon@outlook.com
+License: Apache License Version 2.0
+Keywords: Graviteeio,gio,gravitee,configuration,cli
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: click (<8.0,>=7.0)
+Requires-Dist: configparser (==3.8.1)
+Requires-Dist: requests (>=2.22.0)
+Requires-Dist: click-completion (>=0.5.2)
+Requires-Dist: terminaltables (>=3.1.0)
+Requires-Dist: pyyaml (>=5.1.2)
+Requires-Dist: jinja2 (>=2.10.1)
+Requires-Dist: dictdiffer (>=0.8.0)
+Requires-Dist: jmespath (>=0.10.0)
+Requires-Dist: asyncio (==3.4.3)
+Requires-Dist: pytimeparse (==1.1.8)
+Requires-Dist: termgraph (==0.2.1)
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+
+# Gravitee.io CLI
+
+![pythonversion](https://img.shields.io/badge/python-3-brightgreen.svg?logo=Python&style=for-the-badge)
+
+A command line client for [Gravitee.io](https://gravitee.io/) API Platform.
+
+``graviteeio-cli`` is a CLI (Command Line Interface) which helps you to manage Gravitee.io eco-system.
+It allows to automate actions for all modules of the platform.
+
+## Gravitee CLI Documentation
+
+Gravitee cli documentation is published on https://docs.gravitee.io/cli/cli_introduction.html
+
+## Requirements
+
+* Python 3.5 or more
+
+## Setup
+
+
+Install cli using `pip`.
+
+Use pip to install the latest stable version:
+
+```console
+$ pip3 install graviteeio-cli
+```
+
+## Usage
+
+```console
+$ gio <module> <command>
+```
+
+| Platform module                              | Module           |
+| -------------------------------------------- |:----------------:|
+| [API Management](https://docs.gravitee.io/cli/reference/am/cli_am_overview.html)      | `apim`           |
+| [Access Management](https://docs.gravitee.io/cli/reference/apim/cli_apim_overview.html)     | `am`             |
+
+
+
