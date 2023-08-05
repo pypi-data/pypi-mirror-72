@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "estimark"
+version = "0.3.0"
+description = "Frictionless Estimation"
+authors = ["Esteban Echeverry <eecheverry@knowark.com>"]
+
+[tool.poetry.scripts]
+estimark = "estimark.__main__:main"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+injectark = "^0.4.1"
+docutils = "^0.16"
+altair = "^4.1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4.3"
+pytest-cov = "^2.10.0"
+sphinx = "^3.1.1"
+sphinx-autobuild = "^0.7.1"
+bump2version = "^1.0.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
