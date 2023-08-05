@@ -1,0 +1,9 @@
+README.md
+setup.py
+google_play_scraper/__init__.py
+google_play_scraper/scraper.py
+google_play_scraper/util.py
+google_play_scraper_dmi.egg-info/PKG-INFO
+google_play_scraper_dmi.egg-info/SOURCES.txt
+google_play_scraper_dmi.egg-info/dependency_links.txt
+google_play_scraper_dmi.egg-info/top_level.txt
