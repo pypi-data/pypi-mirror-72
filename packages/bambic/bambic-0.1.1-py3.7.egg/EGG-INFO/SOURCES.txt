@@ -1,0 +1,10 @@
+README.md
+setup.py
+bambic/__init__.py
+bambic/__main__.py
+bambic.egg-info/PKG-INFO
+bambic.egg-info/SOURCES.txt
+bambic.egg-info/dependency_links.txt
+bambic.egg-info/entry_points.txt
+bambic.egg-info/requires.txt
+bambic.egg-info/top_level.txt

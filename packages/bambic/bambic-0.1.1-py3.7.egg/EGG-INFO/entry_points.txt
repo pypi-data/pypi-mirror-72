@@ -1,0 +1,4 @@
+
+            [console_scripts]
+            bambic=bambic.__main__:main
+    
