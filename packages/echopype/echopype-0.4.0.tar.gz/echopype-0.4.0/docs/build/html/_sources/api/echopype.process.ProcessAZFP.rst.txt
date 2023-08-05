@@ -1,0 +1,37 @@
+ProcessAZFP
+===========
+
+.. currentmodule:: echopype.process
+
+.. autoclass:: ProcessAZFP
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~ProcessAZFP.tilt_angle
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ProcessAZFP.calc_range
+      ~ProcessAZFP.calc_sample_thickness
+      ~ProcessAZFP.calc_seawater_absorption
+      ~ProcessAZFP.calc_sound_speed
+      ~ProcessAZFP.calibrate
+      ~ProcessAZFP.calibrate_TS
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: tilt_angle
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: calc_range
+   .. automethod:: calc_sample_thickness
+   .. automethod:: calc_seawater_absorption
+   .. automethod:: calc_sound_speed
+   .. automethod:: calibrate
+   .. automethod:: calibrate_TS

@@ -1,0 +1,41 @@
+ProcessEK60
+===========
+
+.. currentmodule:: echopype.process
+
+.. autoclass:: ProcessEK60
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~ProcessEK60.equivalent_beam_angle
+      ~ProcessEK60.gain_correction
+      ~ProcessEK60.sa_correction
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ProcessEK60.calc_range
+      ~ProcessEK60.calc_sample_thickness
+      ~ProcessEK60.calc_seawater_absorption
+      ~ProcessEK60.calc_sound_speed
+      ~ProcessEK60.calibrate
+      ~ProcessEK60.calibrate_TS
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: equivalent_beam_angle
+   .. autoattribute:: gain_correction
+   .. autoattribute:: sa_correction
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: calc_range
+   .. automethod:: calc_sample_thickness
+   .. automethod:: calc_seawater_absorption
+   .. automethod:: calc_sound_speed
+   .. automethod:: calibrate
+   .. automethod:: calibrate_TS

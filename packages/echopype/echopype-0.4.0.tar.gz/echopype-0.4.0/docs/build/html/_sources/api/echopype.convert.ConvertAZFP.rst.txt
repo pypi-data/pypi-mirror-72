@@ -1,0 +1,29 @@
+ConvertAZFP
+===========
+
+.. currentmodule:: echopype.convert
+
+.. autoclass:: ConvertAZFP
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ConvertAZFP.calc_Sv_offset
+      ~ConvertAZFP.check_uniqueness
+      ~ConvertAZFP.get_fields
+      ~ConvertAZFP.get_ping_time
+      ~ConvertAZFP.loadAZFPxml
+      ~ConvertAZFP.parse_raw
+      ~ConvertAZFP.save
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: calc_Sv_offset
+   .. automethod:: check_uniqueness
+   .. automethod:: get_fields
+   .. automethod:: get_ping_time
+   .. automethod:: loadAZFPxml
+   .. automethod:: parse_raw
+   .. automethod:: save

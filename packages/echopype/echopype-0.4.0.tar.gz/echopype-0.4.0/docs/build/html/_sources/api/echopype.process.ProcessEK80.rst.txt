@@ -1,0 +1,51 @@
+ProcessEK80
+===========
+
+.. currentmodule:: echopype.process
+
+.. autoclass:: ProcessEK80
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~ProcessEK80.ch_ids
+      ~ProcessEK80.tau_effective
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ProcessEK80.calc_range
+      ~ProcessEK80.calc_sample_thickness
+      ~ProcessEK80.calc_seawater_absorption
+      ~ProcessEK80.calc_transmit_signal
+      ~ProcessEK80.calibrate
+      ~ProcessEK80.calibrate_TS
+      ~ProcessEK80.calibrate_cw
+      ~ProcessEK80.get_pressure
+      ~ProcessEK80.get_salinity
+      ~ProcessEK80.get_sound_speed
+      ~ProcessEK80.get_temperature
+      ~ProcessEK80.pulse_compression
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: ch_ids
+   .. autoattribute:: tau_effective
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: calc_range
+   .. automethod:: calc_sample_thickness
+   .. automethod:: calc_seawater_absorption
+   .. automethod:: calc_transmit_signal
+   .. automethod:: calibrate
+   .. automethod:: calibrate_TS
+   .. automethod:: calibrate_cw
+   .. automethod:: get_pressure
+   .. automethod:: get_salinity
+   .. automethod:: get_sound_speed
+   .. automethod:: get_temperature
+   .. automethod:: pulse_compression

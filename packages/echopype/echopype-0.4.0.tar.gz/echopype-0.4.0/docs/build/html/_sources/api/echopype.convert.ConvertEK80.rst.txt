@@ -1,0 +1,21 @@
+ConvertEK80
+===========
+
+.. currentmodule:: echopype.convert
+
+.. autoclass:: ConvertEK80
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ConvertEK80.load_ek80_raw
+      ~ConvertEK80.save
+      ~ConvertEK80.sort_ch_ids
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: load_ek80_raw
+   .. automethod:: save
+   .. automethod:: sort_ch_ids
