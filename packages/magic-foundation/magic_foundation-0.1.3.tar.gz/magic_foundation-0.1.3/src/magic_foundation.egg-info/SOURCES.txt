@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+src/magic_foundation/__init__.py
+src/magic_foundation/websocket_service.py
+src/magic_foundation.egg-info/PKG-INFO
+src/magic_foundation.egg-info/SOURCES.txt
+src/magic_foundation.egg-info/dependency_links.txt
+src/magic_foundation.egg-info/top_level.txt
