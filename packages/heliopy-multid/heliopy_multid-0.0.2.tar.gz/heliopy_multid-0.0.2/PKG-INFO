@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: heliopy_multid
+Version: 0.0.2
+Summary: Extension to heliopy to retrieve multi-dimensional heliopheric data
+Home-page: https://gitlab.com/aidaspace/heliopy_multid
+Author: AIDA Consortium
+Author-email: coordinator.aida@kuleuven.be
+License: GNU GPLv3
+Description: # heliopy_multid
+        
+        Extension to heliopy (https://github.com/heliopython/heliopy) to retrieve multi-dimensional time series.
+        
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
