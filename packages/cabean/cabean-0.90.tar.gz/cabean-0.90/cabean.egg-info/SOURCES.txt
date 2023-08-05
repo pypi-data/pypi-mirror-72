@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+cabean_setup.py
+setup.py
+cabean/__init__.py
+cabean/debug.py
+cabean/iface.py
+cabean.egg-info/PKG-INFO
+cabean.egg-info/SOURCES.txt
+cabean.egg-info/dependency_links.txt
+cabean.egg-info/requires.txt
+cabean.egg-info/top_level.txt
