@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: pytedjmi
+Version: 0.4.2
+Summary: Test Django migrations through Pytest.
+Author: Kit La Touche
+Author-email: kit@transneptune.net
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Testing
+Requires-Dist: django (>=3.0.0)
+Requires-Dist: pytest (>=5.4.3)
+Requires-Dist: pytest-django (>=3.9.0)
+Description-Content-Type: text/x-rst
+
+========================
+Pytest Django Migrations
+========================
+
+ - version number: 0.4.2
+ - author: Kit La Touche
+
+Overview
+--------
+
+Test Django migrations through Pytest.
+
+Installation / Usage
+--------------------
+
+To install use pip::
+
+    $ pip install pytedjmi
+
+
+Or clone the repo::
+
+    $ git clone https://github.com/wlonk/pytest-django-migrations.git
+    $ python setup.py install
+    
+Contributing
+------------
+
+TBD
+
+Example
+-------
+
+TBD
+
