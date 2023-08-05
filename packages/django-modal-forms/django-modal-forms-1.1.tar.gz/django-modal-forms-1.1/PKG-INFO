@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: django-modal-forms
+Version: 1.1
+Summary: Django Forms in Bootstrap Modals
+Home-page: https://github.com/rickjordan/django-modal-forms
+Author: Rick Jordan
+Author-email: jordan.rick.d@gmail.com
+License: MIT License
+Description: # django-modal-forms
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
