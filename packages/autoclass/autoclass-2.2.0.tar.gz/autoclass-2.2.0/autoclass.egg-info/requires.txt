@@ -1,0 +1,14 @@
+decopatch
+makefun
+
+[:python_version < "3.3"]
+funcsigs
+
+[contracts]
+PyContracts
+
+[enforce]
+enforce
+
+[validate]
+valid8
