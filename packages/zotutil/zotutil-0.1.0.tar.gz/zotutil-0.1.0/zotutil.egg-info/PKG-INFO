@@ -1,0 +1,40 @@
+Metadata-Version: 1.2
+Name: zotutil
+Version: 0.1.0
+Summary: A Python Module of Zotero Utilities.
+Home-page: https://github.com/airallergy/zotutil
+Author: Cheng Cui
+Author-email: cheng.cui.95@gmail.com
+License: MIT license
+Description: =======
+        ZotUtil
+        =======
+        
+        A Python Module of Zotero Utilities.
+        
+        
+        * Free software: MIT license
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2020-06-23)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: zotutil
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
