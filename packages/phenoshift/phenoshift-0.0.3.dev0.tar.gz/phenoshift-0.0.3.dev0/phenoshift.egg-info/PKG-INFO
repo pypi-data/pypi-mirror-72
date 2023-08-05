@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: phenoshift
+Version: 0.0.3.dev0
+Summary: Python version of LOINC2HPO
+Home-page: https://github.com/TheJacksonLaboratory/phenoshift
+Author: Michael Gargano
+Author-email: michael.gargano@jax.com
+License: GPLv3
+Description: # PhenoShift
+        A simple and efficient library for mapping loinc test results to hpo terms.
+        
+        ## Requirements
+        Python 3.5+
+        
+        ## Installing with pip
+        
+        ```bash
+        pip install phenoshift
+        ```
+        
+        ## Installing with Conda
+        
+        ```bash
+        # Ensure conda-forge is in your channels
+        conda config --add channels conda-forge
+        conda config --set channel_priority strict
+        
+        # Install the package
+        conda install phenoshift
+        ```
+        
+        
+        
+        
+        
+        
+        
+        
+        
+Keywords: python,loinc to hpo
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
