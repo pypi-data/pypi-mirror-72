@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: drf-case-middleware
+Version: 0.1.1
+Summary: Camel case to snake case and snake case to camel case for Django REST framework
+Home-page: https://github.com/django-breaker/drf-case-middleware
+Author: Jiyoon Ha
+Author-email: punkkid001@gmail.com
+License: MIT
+Description: ====================================
+        DRF Case Middleware
+        ====================================
+        
+        Camel case to snake case and snake case to camel case for Django REST framework.
+        
+        ===============
+        Getting Started
+        ===============
+        
+        .. code-block:: bash
+        
+            $ pip install drf-case-middleware
+        
+        Add the render and parser to your django settings file.
+        
+        .. code-block:: python
+        
+            MIDDLEWARE = [
+                # ... other middlewares
+                'drf_case_middleware.middlewares.CaseMiddleware',
+            ]
+        
+            REST_FRAMEWORK = {
+        
+                'DEFAULT_RENDERER_CLASSES': (
+                    'drf_case_middleware.renders.CaseJSONRenderer',
+                    'drf_case_middleware.renders.CaseBrowsableAPIRenderer',
+                    # ... other renderers
+                ),
+        
+                'DEFAULT_PARSER_CLASSES': (
+                    'drf_case_middleware.parsers.CaseFormParser',
+                    'drf_case_middleware.parsers.CaseMultiPartParser',
+                    'drf_case_middleware.parsers.CaseJSONParser',
+                    # ... other renderers
+                ),
+            }
+        
+        ====
+        Note
+        ====
+        
+        This project is based on the `djangorestframework-camel-case <https://github.com/vbabiy/djangorestframework-camel-case>`_ project.
+        
+        =======
+        License
+        =======
+        
+        MIT License
+        
+Keywords: drf-case-middleware
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
