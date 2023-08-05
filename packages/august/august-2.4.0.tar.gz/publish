@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# picks first username/password combo out of pypi config file
+U=`grep -oP 'username\:\K.+' ~/.pypirc | head -n 1`
+P=`grep -oP 'password\:\K.+' ~/.pypirc | head -n 1`
+maturin publish -u "$U" -p "$P"

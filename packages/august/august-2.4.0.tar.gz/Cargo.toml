@@ -1,0 +1,33 @@
+[package]
+name = "august"
+description = "A library for converting HTML to plain text."
+version = "2.4.0"
+license = "LGPL-3.0-or-later"
+homepage = "https://gitlab.com/alantrick/august/"
+authors = ["Alan Trick <me@alantrick.ca>"]
+repository = "https://gitlab.com/alantrick/august-python/"
+keywords = ["text", "html", "converter", "email"]
+categories = ["text-processing"]
+edition = '2018'
+readme = "README.md"
+
+[lib]
+name = "august"
+crate-type = ["cdylib"]
+
+[dependencies]
+august = "=2.4.0"
+cpython = { version = "0.5", features = ["extension-module"] }
+
+[package.metadata.pyo3-pack]
+classifier = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Topic :: Utilities",
+    "Topic :: Communications :: Email",
+    "Topic :: Text Processing :: Markup :: HTML",
+]
