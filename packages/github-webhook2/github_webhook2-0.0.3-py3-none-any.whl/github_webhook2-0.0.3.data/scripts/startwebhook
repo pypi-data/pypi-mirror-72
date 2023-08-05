@@ -1,0 +1,12 @@
+#!python
+from webhook import webhook
+import sys
+
+if len(sys.argv)<4:
+    print("usage:\n startwebhook <listen_port> <github webhook secretkey> <path to deploy script>\n")
+    exit(1)
+
+host_port = sys.argv[1]
+webhook_sk = sys.argv[2]
+deploy_script=sys.argv[3]
+webhook.main(port=host_port, sk=webhook_sk, deploy_script=deploy_script)
