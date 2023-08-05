@@ -1,0 +1,5 @@
+colorama
+wrapt
+requests
+SQLAlchemy
+pytest
