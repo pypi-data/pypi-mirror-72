@@ -1,0 +1,1 @@
+#get Binomial and Guassian Distributions and Plots by importing data_list
