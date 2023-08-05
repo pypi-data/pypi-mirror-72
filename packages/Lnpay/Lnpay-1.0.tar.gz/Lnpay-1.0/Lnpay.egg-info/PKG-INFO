@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: Lnpay
+Version: 1.0
+Summary: Lnpay SDK
+Home-page: https://github.com/Zenitsudeck/Lnpay
+Author: Zenitsudeck
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: 
+        Lnpay is a payment service that uses the Bitcoin Lightning Network as a base, this library written in Python v 3.8 allows you to interact with the platform API in an easy and simple way.
+        
+        Documentation: https://github.com/Zenitsudeck/Lnpay
+        
+Platform: UNKNOWN
