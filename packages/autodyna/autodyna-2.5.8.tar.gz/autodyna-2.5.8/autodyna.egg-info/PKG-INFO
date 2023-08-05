@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: autodyna
+Version: 2.5.8
+Summary: A collection of LS-DYNA card writing tools
+Home-page: https://gitlab.arup.com/kevin.stanton/AutomatedCardGenerator_LS-DYNA
+Author: Kevin Stanton
+Author-email: kevin.stanton@arup.com
+License: UNKNOWN
+Description: ## autodyna
+        
+        This project is a collection of LS-DYNA card writing tools.
+        
+        Developer: @Kevin.Stanton
+        
+        ## Usage
+        
+        1. Install with pip <br />
+        `pip install autodyna`
+        2. Import the library <br />
+        `import autodyna`
+        3. Run the desired function <br />
+        `autodyna.[module_name].[function_name]([options])`
+        
+        ## Modules
+        
+        * Generalized array data formatting tool (FormatForDYNA.xlsm)
+            - [ReadMe](https://gitlab.arup.com/kevin.stanton/AutomatedCardGenerator_LS-DYNA/blob/master/autodyna/Array_Formatting/ReadMe.md) 
+        * MAT_HYSTERETIC_BEAM
+            - [ReadMe](https://gitlab.arup.com/kevin.stanton/AutomatedCardGenerator_LS-DYNA/blob/master/autodyna/ReadMe_hysBeams.md)
+        * MAT_ELASTIC
+            - [ReadMe](https://gitlab.arup.com/kevin.stanton/AutomatedCardGenerator_LS-DYNA/blob/master/autodyna/ReadMe_elasticBeams.md)
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
