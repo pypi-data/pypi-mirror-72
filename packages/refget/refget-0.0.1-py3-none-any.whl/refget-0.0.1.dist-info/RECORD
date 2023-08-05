@@ -1,0 +1,11 @@
+refget/__init__.py,sha256=1VybZGpwmPj46v1pR2Aeua6pqks0qjqkHWL6fKmJL3k,256
+refget/_version.py,sha256=ugyuFliEqtAwQmH4sTlc16YXKYbFWDmfyk87fErB8-8,21
+refget/hash_functions.py,sha256=HqavOLnrENCjegovxvmgIe8BJsUqX4tNERZ2fs9qOWs,1311
+refget/refget.py,sha256=VsPkcAJyjxSosKO1IBzSAAToApiYIHRx-jUF9NPc2OE,5936
+refget/schemas/sequence.yaml,sha256=OJFbunjFnNUFz_TmjgKt_Sx6yWk6aHBaWIRPBEiPia0,189
+refget-0.0.1.dist-info/LICENSE.txt,sha256=oB6ZGDa4kcznznJKJsLLFFcOZyi8Y6e2Jv0rJozgp-I,1269
+refget-0.0.1.dist-info/METADATA,sha256=DVKfQ5R2xPAom5L0wLh_-7xl9T1ngMCKOqdxcuPbdl0,1015
+refget-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+refget-0.0.1.dist-info/entry_points.txt,sha256=XETWfIL-8WyfZrx7UMZrWTjp8blOSyIHK-CWUTcfjks,47
+refget-0.0.1.dist-info/top_level.txt,sha256=Eh8vmo7k7138aISopbFagCutvP62L5rprC0ttVSOHpQ,7
+refget-0.0.1.dist-info/RECORD,,

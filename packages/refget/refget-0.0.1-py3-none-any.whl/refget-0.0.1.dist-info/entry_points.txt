@@ -1,0 +1,3 @@
+[console_scripts]
+refget = refget.refget:main
+
