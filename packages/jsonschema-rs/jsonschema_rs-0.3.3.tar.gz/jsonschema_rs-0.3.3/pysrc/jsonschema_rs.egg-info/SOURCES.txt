@@ -1,0 +1,17 @@
+Cargo.toml
+MANIFEST.in
+README.rst
+build.rs
+pyproject.toml
+rust-toolchain
+setup.py
+pysrc/jsonschema_rs/__init__.py
+pysrc/jsonschema_rs.egg-info/PKG-INFO
+pysrc/jsonschema_rs.egg-info/SOURCES.txt
+pysrc/jsonschema_rs.egg-info/dependency_links.txt
+pysrc/jsonschema_rs.egg-info/not-zip-safe
+pysrc/jsonschema_rs.egg-info/top_level.txt
+src/lib.rs
+src/ser.rs
+src/string.rs
+src/types.rs
