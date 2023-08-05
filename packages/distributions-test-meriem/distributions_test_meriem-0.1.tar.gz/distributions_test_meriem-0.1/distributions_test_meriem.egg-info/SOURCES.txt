@@ -1,0 +1,10 @@
+setup.py
+distributions_test_meriem/Binomialdistribution.py
+distributions_test_meriem/Gaussiandistribution.py
+distributions_test_meriem/Generaldistribution.py
+distributions_test_meriem/__init__.py
+distributions_test_meriem.egg-info/PKG-INFO
+distributions_test_meriem.egg-info/SOURCES.txt
+distributions_test_meriem.egg-info/dependency_links.txt
+distributions_test_meriem.egg-info/not-zip-safe
+distributions_test_meriem.egg-info/top_level.txt
