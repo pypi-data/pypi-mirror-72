@@ -1,0 +1,10 @@
+README.md
+setup.py
+auto_caption/__init__.py
+auto_caption/__main__.py
+auto_caption.egg-info/PKG-INFO
+auto_caption.egg-info/SOURCES.txt
+auto_caption.egg-info/dependency_links.txt
+auto_caption.egg-info/top_level.txt
+bin/auto-caption
+tests/__init__.py
