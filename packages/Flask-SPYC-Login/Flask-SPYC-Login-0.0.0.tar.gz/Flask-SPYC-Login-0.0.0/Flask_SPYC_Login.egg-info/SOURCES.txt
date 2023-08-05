@@ -1,0 +1,9 @@
+README.md
+setup.py
+Flask_SPYC_Login.egg-info/PKG-INFO
+Flask_SPYC_Login.egg-info/SOURCES.txt
+Flask_SPYC_Login.egg-info/dependency_links.txt
+Flask_SPYC_Login.egg-info/requires.txt
+Flask_SPYC_Login.egg-info/top_level.txt
+flask_spyc_login/__init__.py
+flask_spyc_login/tools.py
