@@ -1,0 +1,6 @@
+[console_scripts]
+ldfs = litedfs.tool.litedfs:main
+ldfsdata = litedfs.data.data:main
+ldfsname = litedfs.name.name:main
+ldfsviewer = litedfs.tool.viewer.viewer:main
+
