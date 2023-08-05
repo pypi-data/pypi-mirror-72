@@ -1,0 +1,14 @@
+geomagnetism/FORTRAN_1900_1995.txt,sha256=tUp7T8W1lhp62_iF6kU7ejArYmUSDPRdPbKeCJ6d10c,23709
+geomagnetism/FORTRAN_2000_2020.txt,sha256=CrUjOFFYVKDDSlB5LeauUF6dJg6UwrpK1SWGDtlJoqU,13739
+geomagnetism/IGRF13.COF,sha256=RrMU7Ov6MazLJFwLcgGlzB524vkO5IgNLM3rCEDtaU4,149447
+geomagnetism/IGRF13coeffs.txt,sha256=qfT7shyR4A4hSw7meJuc3nCZ7bSaz9CUIp-ozudd6R0,40838
+geomagnetism/WMM_2015.COF,sha256=ql9GRs-f5j7Th4le4JAs4YXQ6Z5TI_D3aYkRfGh3ck4,4557
+geomagnetism/WMM_2020.COF,sha256=5lRTt9LtNK4w9vc2Gq7EA-EDwqv1nuRjk71MT4gMT6g,4557
+geomagnetism/__init__.py,sha256=eyfhBKIMSibSUWMdcgxSoKMWv1QgfkxN3Jd7Rp0X6eo,133
+geomagnetism/geomagnetism.py,sha256=hopcOFNsMO8lz2gAzJXWcZw3odX9Or7iOCdPAU-GiLk,13563
+geomagnetism/read_geo_data.py,sha256=OCqLRaTwgP4pOTAZws9AlSlrvKlzMCkRaSCweL7QPSw,8951
+geomagnetism-0.0.2.dist-info/LICENSE,sha256=t2gd2zYmuV-tWl8p5PsUEJhQy2WBP5lW-pf9hIa-FV4,1096
+geomagnetism-0.0.2.dist-info/METADATA,sha256=qGH2hvyHAAVNY01cgWnxJL6f2u2sP512479--1N1DVc,1254
+geomagnetism-0.0.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+geomagnetism-0.0.2.dist-info/top_level.txt,sha256=hkxtT_w2fO5GKvwQxjMevjD2g2faooBngivWB1kL_uw,13
+geomagnetism-0.0.2.dist-info/RECORD,,
