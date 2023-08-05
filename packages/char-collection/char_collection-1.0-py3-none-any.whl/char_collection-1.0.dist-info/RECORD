@@ -1,0 +1,11 @@
+char_collection/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+char_collection/collect.py,sha256=LCf_Fy3IyBwAnmAFbPtvo6vek9K4-IZhzVS1qPj6Uu4,1712
+char_collection/collect_password.py,sha256=hSTGGWGenZoKl6GRnOirWlwLETvTKBF-TGS2Mq3WOOk,1232
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/collect_password_test.py,sha256=D3ZzJ0q5UjPSjn7tVmvWDojRjWFGTb4wTIv1reVnCPQ,1272
+tests/collect_test.py,sha256=it2bwNP7p_c-u4dCKxsLxWkfDNjUKQdpzmpcQkQjg3E,1277
+char_collection-1.0.dist-info/LICENSE,sha256=d6bwTHJAwP7CJscyrJoa9JyNpZt0tq-kjvfWkCMDxf0,1079
+char_collection-1.0.dist-info/METADATA,sha256=UuDCD0BtJi3GdU2ihAcX1jJt7PBQRn5M3E3rFc8wG8A,1417
+char_collection-1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+char_collection-1.0.dist-info/top_level.txt,sha256=mvYYD3hWzdBCh-qQi3aP41hQgk7sdFcIBJ3MLEgz25Y,22
+char_collection-1.0.dist-info/RECORD,,
