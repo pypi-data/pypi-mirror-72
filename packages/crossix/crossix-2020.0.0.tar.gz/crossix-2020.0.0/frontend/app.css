@@ -1,0 +1,43 @@
+body {
+  background-color: #FFF;
+}
+
+h1, h2 {
+  color: #8B4513;
+}
+
+h3 {
+  color: #8B7355;
+}
+
+a, a:link, a:visited, a:active {
+  text-decoration: none;
+  color: #528B8B;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+table.borders {
+  border-collapse: collapse;
+}
+
+table.borders td, table.borders th {
+  border: 1px solid black;
+  padding: 0px 2px;
+}
+
+table.borders tr:hover {
+  background-color: #DDD;
+}
+
+ul.errorlist {
+  list-style: none;
+}
+
+ul.errorlist li {
+  color: red;
+  font-style: italic;
+}

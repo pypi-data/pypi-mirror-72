@@ -1,0 +1,11 @@
+-e .
+
+# Testing
+coverage
+sphinx
+sphinx_rtd_theme
+check-manifest
+
+# Release
+wheel
+zest.releaser[recommended]
