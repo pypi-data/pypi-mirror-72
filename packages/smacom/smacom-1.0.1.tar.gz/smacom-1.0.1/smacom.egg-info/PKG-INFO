@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: smacom
+Version: 1.0.1
+Summary: SamaCOM is a Python Package that extends main framework functionalities
+Home-page: https://github.com/sama-business-services/smacom
+Author: ~0x000001
+Author-email: io@smasystems.sa
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/sama-business-services/smacom/issues
+Project-URL: Funding, https://donate.pypi.org
+Project-URL: Say Thanks!, http://saythanks.io/to/sama-business-services
+Description: # smacom
+        Python3 Bot + CLI
+        
+Keywords: smaPython development environment
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Communications :: Email
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Software Development :: Bug Tracking
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test

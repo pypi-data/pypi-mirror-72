@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+smacom.egg-info/PKG-INFO
+smacom.egg-info/SOURCES.txt
+smacom.egg-info/dependency_links.txt
+smacom.egg-info/entry_points.txt
+smacom.egg-info/requires.txt
+smacom.egg-info/top_level.txt
+src/smacli/__init__.py
+src/smacli/__main__.py
+src/smacli/x.py
+src/smacli/data/flash.dat
