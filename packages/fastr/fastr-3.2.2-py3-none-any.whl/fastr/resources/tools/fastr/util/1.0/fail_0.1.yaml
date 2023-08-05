@@ -1,0 +1,139 @@
+id: Fail
+name: Delay before copying the input to the output.
+version: '0.1'
+description: Delay before copying the input and the output.
+authors:
+- name: Adriaan Versteeg
+  email: a.bersteeg@erasmusmc.nl
+  url: http://www.bigr.nl/people/AdriaanVersteeg
+class: Node
+command:
+  version: '1.0'
+  url: ''
+  targets:
+  - os: '*'
+    arch: '*'
+    interpreter: python
+    paths: ./bin
+    bin: fail.py
+  description: "\n        python fail.py --in1 fake_input --in2 --out1 filename --out2\
+    \ fake output --fail1 --fail2\n        output = input\n    "
+  authors:
+  - name: Adriaan Versteeg
+    email: a.bersteeg@erasmusmc.nl
+    url: http://www.bigr.nl/people/AdriaanVersteeg
+interface:
+  id: Fail_1.0_interface
+  class: FastrInterface
+  inputs:
+  - parent: Fail_1.0_interface
+    id: in_1
+    name: Input image file
+    datatype: Int
+    prefix: --in_1
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: true
+    default: null
+    description: ''
+    order: 0
+    hidden: false
+    join: null
+  - parent: Fail_1.0_interface
+    id: in_2
+    name: Input image file
+    datatype: Int
+    prefix: --in_2
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: true
+    default: null
+    description: ''
+    order: 1
+    hidden: false
+    join: null
+  - parent: Fail_1.0_interface
+    id: fail_1
+    name: Input image file
+    datatype: Boolean
+    prefix: --fail_1
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: flag
+    required: false
+    default: null
+    description: ''
+    order: 2
+    hidden: false
+    join: null
+  - parent: Fail_1.0_interface
+    id: fail_2
+    name: Input image file
+    datatype: Boolean
+    prefix: --fail_2
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: flag
+    required: false
+    default: null
+    description: ''
+    order: 3
+    hidden: false
+    join: null
+  outputs:
+  - parent: Fail_1.0_interface
+    id: out_1
+    name: Output image file
+    datatype: Int
+    prefix: null
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 4
+    hidden: false
+    join: null
+    automatic: true
+    action: null
+    location: ^RESULT_1=(.*)$
+    separator: null
+    method: json
+    negate: false
+  - parent: Fail_1.0_interface
+    id: out_2
+    name: Output image file
+    datatype: Int
+    prefix: null
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 5
+    hidden: false
+    join: null
+    automatic: true
+    action: null
+    location: ^RESULT_2=(.*)$
+    separator: null
+    method: json
+    negate: false
+repository: null
+requirements: null
+tests: []
+help: "\n    RTFM! =]\n  "
+cite: None
+references: []
+tags: []
+url: null

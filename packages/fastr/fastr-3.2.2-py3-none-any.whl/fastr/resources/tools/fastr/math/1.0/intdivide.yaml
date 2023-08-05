@@ -1,0 +1,88 @@
+id: IntegerDivide
+name: Divide two numbers
+version: '1.0'
+description: Divide two numbers together.
+authors:
+- name: Marcel Koek
+  email: m.koek@erasmusmc.nl
+  url: http://www.bigr.nl/people/MarcelKoek
+class: Node
+command:
+  version: '1.0'
+  url: ''
+  targets:
+  - os: '*'
+    arch: '*'
+    interpreter: python
+    paths: ./bin
+    bin: intdivide.py
+  description: "\n      intdivide.py value1 value2\n      output = value1 + value2\n\
+    \    "
+  authors:
+  - name: Marcel Koek
+    email: m.koek@erasmusmc.nl
+    url: http://www.bigr.nl/people/MarcelKoek
+interface:
+  id: IntegerDivide_1.0_interface
+  class: FastrInterface
+  inputs:
+  - parent: IntegerDivide_1.0_interface
+    id: left_hand
+    name: left hand value
+    datatype: Number
+    prefix: --in1
+    repeat_prefix: false
+    cardinality: 1-*
+    nospace: false
+    format: null
+    required: true
+    default: null
+    description: ''
+    order: 0
+    hidden: false
+    join: null
+  - parent: IntegerDivide_1.0_interface
+    id: right_hand
+    name: right hand value
+    datatype: Number
+    prefix: --in2
+    repeat_prefix: false
+    cardinality: as:left_hand
+    nospace: false
+    format: null
+    required: true
+    default: null
+    description: ''
+    order: 1
+    hidden: false
+    join: null
+  outputs:
+  - parent: IntegerDivide_1.0_interface
+    id: result
+    name: output value
+    datatype: Int
+    prefix: null
+    repeat_prefix: false
+    cardinality: as:left_hand
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: The division of 2 values.
+    order: 2
+    hidden: false
+    join: null
+    automatic: true
+    action: null
+    location: ^RESULT=(.+)$
+    separator: null
+    method: json
+    negate: false
+repository: null
+requirements: null
+tests: []
+help: "\n    RTFM! =]\n  "
+cite: None
+references: []
+tags: []
+url: null

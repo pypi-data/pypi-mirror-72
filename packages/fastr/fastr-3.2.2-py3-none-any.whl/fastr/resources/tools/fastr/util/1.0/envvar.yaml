@@ -1,0 +1,106 @@
+id: EnvVarTest
+name: EnvVarTest
+version: '1.0'
+description: Create a range of values until int similar to python range(x).
+authors:
+- name: Hakim Achterberg
+  email: h.achterberg@erasmusmc.nl
+  url: http://www.bigr.nl/people/HakimAchterberg
+class: Node
+command:
+  version: '1.0'
+  url: ''
+  targets:
+  - os: '*'
+    arch: '*'
+    interpreter: python
+    paths: ./bin
+    bin: envvar.py
+  description: "\n      python envvar.py --infile test.txt --outdir /path/to/output_dir/\n\
+    \    "
+  authors:
+  - name: Hakim Achterberg
+    email: h.achterberg@erasmusmc.nl
+    url: http://www.bigr.nl/people/HakimAchterberg
+interface:
+  class: FastrInterface
+  inputs:
+  - id: input_file
+    name: Input file
+    datatype: TxtFile
+    prefix: --infile
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: true
+    default: null
+    description: ''
+    order: 0
+    hidden: false
+    join: null
+  - id: env_test
+    name: environment variable test
+    environ: 'TEST_ENV_VAR'
+    datatype: String
+    prefix: null
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: true
+    default: null
+    description: ''
+    order: 2
+    hidden: false
+    join: null
+
+  outputs:
+  - id: directory
+    name: output directory
+    datatype: Directory
+    prefix: --outdir
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: true
+    default: null
+    description: ''
+    order: 1
+    hidden: false
+    join: null
+    automatic: false
+    action: ensure
+    location: null
+    separator: null
+    method: null
+    negate: false
+  - id: output_file
+    name: Output file
+    datatype: TxtFile
+    prefix: null
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 2
+    hidden: false
+    join: null
+    automatic: true
+    action: null
+    location: '{output.directory[0]}/{input.input_file[0].filename}'
+    separator: null
+    method: path
+    negate: false
+repository: null
+requirements: null
+tests: []
+help: "\n    RTFM! =]\n  "
+cite: None
+references: []
+tags: []
+url: null
