@@ -1,0 +1,11 @@
+setup.py
+/home/aguinet/dev/dragonffi/bindings/python/cobj.cpp
+/home/aguinet/dev/dragonffi/bindings/python/pydffi.cpp
+pydffi/__init__.py
+pydffi.egg-info/PKG-INFO
+pydffi.egg-info/SOURCES.txt
+pydffi.egg-info/dependency_links.txt
+pydffi.egg-info/entry_points.txt
+pydffi.egg-info/top_level.txt
+pydffi/purectypes_generator/__init__.py
+pydffi/purectypes_generator/generator.py
