@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+vzmi.bogus.egg-info/PKG-INFO
+vzmi.bogus.egg-info/SOURCES.txt
+vzmi.bogus.egg-info/dependency_links.txt
+vzmi.bogus.egg-info/namespace_packages.txt
+vzmi.bogus.egg-info/top_level.txt
+vzmi/bogus/foo.py

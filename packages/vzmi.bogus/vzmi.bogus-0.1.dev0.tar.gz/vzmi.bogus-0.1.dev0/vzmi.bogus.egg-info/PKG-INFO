@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: vzmi.bogus
+Version: 0.1.dev0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Bogus Author
+Author-email: bogus@bogus.com
+License: Proprietary
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst; charset=UTF-8
