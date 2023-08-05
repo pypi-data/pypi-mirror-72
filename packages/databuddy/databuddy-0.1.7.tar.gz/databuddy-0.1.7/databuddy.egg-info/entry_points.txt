@@ -1,0 +1,3 @@
+[console_scripts]
+databuddy = databuddy.cli:main
+
