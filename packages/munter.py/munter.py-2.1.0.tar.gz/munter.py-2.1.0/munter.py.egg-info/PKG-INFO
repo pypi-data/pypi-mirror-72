@@ -1,0 +1,124 @@
+Metadata-Version: 2.1
+Name: munter.py
+Version: 2.1.0
+Summary: An easy-to-use implementation of the Munter time calculation
+Home-page: https://wylark.com/munter
+Author: Alexander Vasarab
+Author-email: alexander@wylark.com
+License: ISC
+Description: Munter.py
+        =========
+        
+        Helps you speed up your tour and trip planning.
+        
+        Disclaimer
+        ----------
+        
+        The time calculations produced by this program are not guaranteed to be
+        accurate. Any harm or hazard encountered due to blindly trusting these
+        estimates is your own fault.
+        
+        Installation
+        ------------
+        
+        If you use pip, then simply `pip install munter.py`.
+        
+        If you don't use pip, then download the source code and unpack it into
+        its own directory. You can invoke it directly via `python munter.py
+        [options]`.
+        
+        How to use it
+        -------------
+        
+        For detailed information, see:
+        
+        `./munter.py --help`
+        
+        The program supports both imperial and metric, and has four "travel
+        modes" at this time: uphill, flat, downhill, bushwhacking. It also
+        supports a simple fitness modifier: slow, average, fast.
+        
+        By default, the output will be the time in hours and minutes of the
+        specified leg. If you prefer, you can use the `-p` switch to get a
+        "prettier" output.
+        
+        ### Use as a library
+        
+        You can also use Munter.py programmatically from Python, like so:
+        
+        `import munter`  
+        `est = munter.time_calc(distance=3.2, elevation=2300, fitness='slow')`
+        
+        This will store a value like "3.64914" in the `est` variable.
+        
+        Workflow
+        --------
+        
+        My workflow involves planning my tour using tools like ArcGIS or CalTopo. Then,
+        I take the stats between each leg (distance, vertical gain/loss) of the tour
+        and run them through Munter.py and record its output to my field
+        notebook.
+        
+        The rudimentary "GUI" can be directly transferred to e.g. the format used by
+        SnowPit Technologies' "Avalanche Field Notebook" or your own personal format
+        (e.g. RitR No. 471).
+        
+        Future plans
+        ------------
+        
+        * GTK mode
+        * Use as a Python library from within another project
+        * Lint it (e.g. therapist)
+        * Sphinx/autodoc?
+        
+        Version History
+        ---------------
+        
+        - 2.1.0 (Jun 2020)
+        
+          Implement fitness modifier. Make some text changes and other
+          miscellaneous and minor improvements.
+        
+        - 2.0.1 (Jun 2020)
+        
+          README improvement.
+        
+        - 2.0.0 (Jun 2020)
+        
+          Package for distribution as a standalone program (and library).
+        
+        - 1.0.2 (Jun 2020)
+        
+          A few small bugfixes.
+        
+        - 1.0.1 (Jun 2020)
+        
+          Add LICENSE and README.
+        
+        - 1.0.0 (Jun 2020)
+        
+          First released version. Includes sensible defaults and a rudimentary CLI
+          "GUI".
+        
+        - pre-1.0.0 (Mar 2017)
+        
+          In use privately/internally since 2017.
+        
+Keywords: munter,tour planning,trip planning,time estimate
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Other Audience
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
