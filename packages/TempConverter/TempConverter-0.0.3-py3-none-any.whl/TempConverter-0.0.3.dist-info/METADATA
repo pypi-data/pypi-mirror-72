@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: TempConverter
+Version: 0.0.3
+Summary: A small package to convert temperature
+Home-page: UNKNOWN
+Author: Akash
+Author-email: akash9129@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+import converter.converts as cd
+n = 20
+
+print(cd.c2f(n)) ## Celsius to fahrenheit
+print(cd.f2c(n)) ## Fahrenheit to Celsius
+print(cd.add_temp(n)) ## Adds both Celsius and Fahrenheit values
+
