@@ -1,0 +1,3 @@
+[console_scripts]
+subsheets = src.subsheets:main
+
