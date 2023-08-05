@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+torchRDS/RDS.py
+torchRDS/__init__.py
+torchRDS.egg-info/PKG-INFO
+torchRDS.egg-info/SOURCES.txt
+torchRDS.egg-info/dependency_links.txt
+torchRDS.egg-info/requires.txt
+torchRDS.egg-info/top_level.txt
