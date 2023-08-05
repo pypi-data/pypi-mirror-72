@@ -1,0 +1,9 @@
+acme>=0.31.0
+certbot>=1.1.0
+requests
+setuptools
+zope.interface
+
+[docs]
+Sphinx>=1.0
+sphinx_rtd_theme
