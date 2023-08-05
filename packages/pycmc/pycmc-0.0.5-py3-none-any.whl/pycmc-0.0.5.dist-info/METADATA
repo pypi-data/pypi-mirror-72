@@ -1,0 +1,274 @@
+Metadata-Version: 2.1
+Name: pycmc
+Version: 0.0.5
+Summary: A Python client for the chartmetric.com API.
+Home-page: https://github.com/musicfox/pycmc
+Author: Jason R. Stevens, CFA | Musicfox, Inc. | https://musicfox.io
+Author-email: dev@musicfox.io
+License: MIT
+Project-URL: Documentation, https://pycmc.docs.musicfox.io
+Project-URL: Bug Reports, https://github.com/musicfox/pycmc/issues
+Project-URL: Source Code, https://github.com/musicfox/pycmc
+Project-URL: Musicfox, https://musicfox.io
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+Requires-Dist: attrs (==19.3.0)
+Requires-Dist: certifi (==2020.4.5.1)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: coverage (==5.1)
+Requires-Dist: idna (==2.9)
+Requires-Dist: more-itertools (==8.2.0)
+Requires-Dist: numpy (==1.18.4)
+Requires-Dist: packaging (==20.3)
+Requires-Dist: pandas (==1.0.3)
+Requires-Dist: pluggy (==0.13.1)
+Requires-Dist: psutil (==5.7.0)
+Requires-Dist: py (==1.8.1)
+Requires-Dist: pyparsing (==3.0.0a1)
+Requires-Dist: pytest-cov (==2.8.1)
+Requires-Dist: pytest (==5.4.2)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2020.1)
+Requires-Dist: requests (==2.23.0)
+Requires-Dist: six (==1.14.0)
+Requires-Dist: urllib3 (==1.25.9)
+Requires-Dist: wcwidth (==0.1.9)
+Requires-Dist: zipp (==3.1.0)
+Requires-Dist: importlib-metadata (==1.6.0) ; python_version < "3.8"
+Provides-Extra: dev
+Requires-Dist: alabaster (==0.7.12) ; extra == 'dev'
+Requires-Dist: appdirs (==1.4.4) ; extra == 'dev'
+Requires-Dist: attrs (==19.3.0) ; extra == 'dev'
+Requires-Dist: babel (==2.8.0) ; extra == 'dev'
+Requires-Dist: backcall (==0.1.0) ; extra == 'dev'
+Requires-Dist: black (==19.10b0) ; extra == 'dev'
+Requires-Dist: bleach (==3.1.5) ; extra == 'dev'
+Requires-Dist: cached-property (==1.5.1) ; extra == 'dev'
+Requires-Dist: cerberus (==1.3.2) ; extra == 'dev'
+Requires-Dist: certifi (==2020.4.5.1) ; extra == 'dev'
+Requires-Dist: cffi (==1.14.0) ; extra == 'dev'
+Requires-Dist: chardet (==3.0.4) ; extra == 'dev'
+Requires-Dist: click (==7.1.2) ; extra == 'dev'
+Requires-Dist: colorama (==0.4.3) ; extra == 'dev'
+Requires-Dist: commonmark (==0.9.1) ; extra == 'dev'
+Requires-Dist: cryptography (==2.9.2) ; extra == 'dev'
+Requires-Dist: decorator (==4.4.2) ; extra == 'dev'
+Requires-Dist: distlib (==0.3.0) ; extra == 'dev'
+Requires-Dist: docutils (==0.16) ; extra == 'dev'
+Requires-Dist: idna (==2.9) ; extra == 'dev'
+Requires-Dist: imagesize (==1.2.0) ; extra == 'dev'
+Requires-Dist: ipython-genutils (==0.2.0) ; extra == 'dev'
+Requires-Dist: ipython (==7.14.0) ; extra == 'dev'
+Requires-Dist: jedi (==0.17.0) ; extra == 'dev'
+Requires-Dist: jinja2 (==3.0.0a1) ; extra == 'dev'
+Requires-Dist: keyring (==21.2.1) ; extra == 'dev'
+Requires-Dist: markupsafe (==2.0.0a1) ; extra == 'dev'
+Requires-Dist: orderedmultidict (==1.0.1) ; extra == 'dev'
+Requires-Dist: packaging (==20.3) ; extra == 'dev'
+Requires-Dist: parso (==0.7.0) ; extra == 'dev'
+Requires-Dist: pathspec (==0.8.0) ; extra == 'dev'
+Requires-Dist: pep517 (==0.8.2) ; extra == 'dev'
+Requires-Dist: pickleshare (==0.7.5) ; extra == 'dev'
+Requires-Dist: pip-shims (==0.5.2) ; extra == 'dev'
+Requires-Dist: pipenv-setup (==3.0.1) ; extra == 'dev'
+Requires-Dist: pipfile (==0.0.2) ; extra == 'dev'
+Requires-Dist: pkginfo (==1.5.0.1) ; extra == 'dev'
+Requires-Dist: plette[validation] (==0.2.3) ; extra == 'dev'
+Requires-Dist: prompt-toolkit (==3.0.5) ; extra == 'dev'
+Requires-Dist: ptyprocess (==0.6.0) ; extra == 'dev'
+Requires-Dist: pycparser (==2.20) ; extra == 'dev'
+Requires-Dist: pygments (==2.6.1) ; extra == 'dev'
+Requires-Dist: pyparsing (==3.0.0a1) ; extra == 'dev'
+Requires-Dist: python-dateutil (==2.8.1) ; extra == 'dev'
+Requires-Dist: pytz (==2020.1) ; extra == 'dev'
+Requires-Dist: readme-renderer (==26.0) ; extra == 'dev'
+Requires-Dist: recommonmark (==0.6.0) ; extra == 'dev'
+Requires-Dist: regex (==2020.5.7) ; extra == 'dev'
+Requires-Dist: requests-toolbelt (==0.9.1) ; extra == 'dev'
+Requires-Dist: requests (==2.23.0) ; extra == 'dev'
+Requires-Dist: requirementslib (==1.5.7) ; extra == 'dev'
+Requires-Dist: six (==1.14.0) ; extra == 'dev'
+Requires-Dist: snowballstemmer (==2.0.0) ; extra == 'dev'
+Requires-Dist: sphinx (==3.0.3) ; extra == 'dev'
+Requires-Dist: sphinxcontrib-applehelp (==1.0.2) ; extra == 'dev'
+Requires-Dist: sphinxcontrib-devhelp (==1.0.2) ; extra == 'dev'
+Requires-Dist: sphinxcontrib-htmlhelp (==1.0.3) ; extra == 'dev'
+Requires-Dist: sphinxcontrib-jsmath (==1.0.1) ; extra == 'dev'
+Requires-Dist: sphinxcontrib-qthelp (==1.0.3) ; extra == 'dev'
+Requires-Dist: sphinxcontrib-serializinghtml (==1.1.4) ; extra == 'dev'
+Requires-Dist: toml (==0.10.0) ; extra == 'dev'
+Requires-Dist: tomlkit (==0.6.0) ; extra == 'dev'
+Requires-Dist: tqdm (==4.46.0) ; extra == 'dev'
+Requires-Dist: traitlets (==4.3.3) ; extra == 'dev'
+Requires-Dist: twine (==3.1.1) ; extra == 'dev'
+Requires-Dist: typed-ast (==1.4.1) ; extra == 'dev'
+Requires-Dist: typing (==3.7.4.1) ; extra == 'dev'
+Requires-Dist: urllib3 (==1.25.9) ; extra == 'dev'
+Requires-Dist: vistir (==0.5.0) ; extra == 'dev'
+Requires-Dist: wcwidth (==0.1.9) ; extra == 'dev'
+Requires-Dist: webencodings (==0.5.1) ; extra == 'dev'
+Requires-Dist: wheel (==0.34.2) ; extra == 'dev'
+Requires-Dist: zipp (==3.1.0) ; extra == 'dev'
+Requires-Dist: importlib-metadata (==1.6.0) ; (python_version < "3.8") and extra == 'dev'
+Requires-Dist: pexpect (==4.8.0) ; (sys_platform != "win32") and extra == 'dev'
+Requires-Dist: jeepney (==0.4.3) ; (sys_platform == "linux") and extra == 'dev'
+Requires-Dist: secretstorage (==3.1.2) ; (sys_platform == "linux") and extra == 'dev'
+
+
+# `pycmc` Python Chartmetric Client
+[![codecov](https://codecov.io/gh/musicfox/pycm/branch/develop/graph/badge.svg?token=COEMV82GV9)](https://codecov.io/gh/musicfox/pycm)
+
+A Python client for the Chartmetric API. Query artists, their music,
+and where their fans listen, by [Musicfox](https://musicfox.io).
+
+And do it all in Python.
+
+## Installation
+We highly recommend you install [`pycmc`](https://github.com/musicfox/pycmc)
+into some type of [virtual environment](https://docs.python.org/3/library/venv.html).
+
+Then you should use pip or the like:
+```python
+pip install pycmc
+```
+_or_
+```python
+pipenv install pycmc
+```
+> &#9888; **You're not done yet; you'll need to set an authentication environment variable for queries.** 
+
+## Quick start 
+If you're already setup with your environment variable, you can query Rihanna's metadata with a quick call to the `artist` module:
+
+```python
+>>> import pycmc
+>>> rihanna_metadata = pycmc.artist.metadata(cmid=2316)
+```
+
+Yep, it's that simple.
+
+> "You should remember that it's peace of mind you're after and not just a fixed machine." 
+> _-- Robert Pirsig, via Phaedrus_
+
+
+### Authentication
+Chartmetric requires an authorization process to query their API. You can
+see their [docs here](https://api.chartmetric.com/apidoc/#api-Authorization-GetAccessToken). 
+
+
+#### Add the `CMCREDENTIALS` environment variable
+
+For [`pycmc`](https://pycmc.docs.musicfox.io) you need to set a single
+environment variable, `CMCREDENTIALS`, to equal your JSON authentication string of the following:
+
+```json
+{
+    "token":"",
+    "scope":"",
+    "expires_in":"",
+    "refreshtoken":"your-chartmetric-token-here",
+}
+```
+> 🔎 _Be sure the above is a **string** when you set your environment variable._
+
+#### How to set up `pycmc` authentication
+
+1. Save the JSON file above to disk and note the absolute directory.
+2. Using your absolute directory below,
+```bash
+# REQUIRED - Set your environment variable
+export CMCREDENTIALS=$(cat path/to/credentials/file.json)
+# OPTIONAL - Remove the .json file you created
+rm -rf path/to/credentials/file.json
+```
+
+## Design 
+
+To somewhat follow the API design of chartmetric and make our lives easier here,
+we'll roughly adhere to the following module design where the `pycmc` package 
+contains the following modules:  
+- `album`
+- `artist`
+- `charts`
+- `curator`
+- `playlist`
+- `track`
+- `credentials`
+- `credentials_manager`
+- `utilities`
+
+Each module above provides (most) methods for a specific endpoint
+to the chartmetric.com API, (mostly) labelled as their GET endpoints.  
+
+For example,
+```python
+>>> 'API ALBUM META URL' = 'https://api.charmetric.io/api/album/:id'
+```
+#### Album Metadata 
+To get an album's metadata just call the metadata function:
+```
+>>> import pycmc
+>>> pycmc.album.metadata('chartmetricID') # return dict of album metatdata
+```
+#### Spotify top charts
+
+Obviously we'll start with the elephant in the room and get the top
+charts from Spotify.
+
+*What was the US jamming to on the first day of the new year?*
+```{Python}
+>>> cstracks = pycmc.charts.spotify.tracks(date='2019-01-01', ) 
+```
+#### Apple Music videos charts 
+
+What videos are charting in Apple Music on the same day as above?
+```{Python}
+>>> applemusic_vcharts = pycmc.charts.itunes.videos(date='2019-01-01')
+```
+#### Track metatdata
+
+Let's get some metadata on the track _Believe It_ by PARTYNEXTDOOR and Rihanna: 
+```{Python}
+>>> believe_it = pycmc.track.metadata(cmid='28856569', )
+```
+
+## Reference Documentation
+
+We have hosted documentation over at our docs site
+[pycmc.docs.musicfox.io](https://pycmc.docs.musicfox.io), which review the many endpoints offered by
+the Chartmetric API.
+
+## Problems? Ideas?
+
+We'd love to hear your feedback. Please use the Github for communication about `pycmc`.
+
+### &#128027; Bug Reports &#128030;
+
+Please report bugs or problems in our [issues](https://github.com/musicfox/pycmc/issues) in the Github repository.
+
+### &#127848; Feature Requests
+If you have an idea for a feature or suggestion, please open an issue the Github repository, linked herein. Please describe _what_ you're trying to
+accomplish and your idea to fix it with `pycmc`. 
+
+## Contibutors
+
+Contributions are quite welcome and it's very easy to get started.
+
+### We &#10084; community contributions!
+
+Do note, we do require a contributor license agreement such
+that contributors' contributions are protected property, outside of the
+"open-source" MIT license covering code here. 
+
+Please see our [`CONTRIBUTING.md`](CONTRIBUTING.md)
+to get started.
+
+
+
