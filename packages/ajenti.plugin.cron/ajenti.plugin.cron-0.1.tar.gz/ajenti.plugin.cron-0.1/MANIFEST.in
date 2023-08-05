@@ -1,0 +1,7 @@
+
+recursive-include ajenti_plugin_cron * *.*
+recursive-exclude ajenti_plugin_cron *.pyc
+include ajenti_plugin_cron/plugin.yml
+include MANIFEST.in
+include requirements.txt
+    
