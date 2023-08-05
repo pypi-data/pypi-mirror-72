@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "dok8s"
+version = "0.0.1"
+description = "Output notes for a Kubernetes deployment"
+license = "MIT"
+authors = ["Nicholas Elia <me@nichelia.com>"]
+maintainers = ["Nicholas Elia <me@nichelia.com>"]
+readme = "README.md"
+homepage = "https://github.com/nichelia/dok8s"
+repository = "https://github.com/nichelia/dok8s"
+keywords = ["python", "kubernetes", "notes", "documentation"]
+include = ["CHANGELOG.md"]
+
+[tool.poetry.dependencies]
+python = "^3.7"              # PSF
+pyyaml = "^5.3"              # MIT
+tabulate = "^0.8"            # MIT
+kubernetes = "^11.0"
+
+[tool.poetry.dev-dependencies]
+codecov = "^2.1"             # Apache2
+mock = "^4.0"                # BSD
+pylint = "^2.5"              # GPL
+pytest = "^5.4"              # MIT
+pytest-cov = "^2.9"          # MIT
+pytest-env = "^0.6"          # MIT
+
+[tool.poetry.scripts]
+dok8s = "dok8s.cli.__main__:main"
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[build-system]
+requires = ["wheel", "tomlkit", "poetry>=1.0.0"] # PEP 518
+build-backend = "poetry.masonry.api"
