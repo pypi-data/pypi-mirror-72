@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: emuserema
+Version: 0.1.post9
+Summary: EMUSEREMA Multiprotocol Session and Redirect Manager
+Home-page: http://github.com/endreszabo/emuserema
+Author: Endre Szabo
+Author-email: emuserema@end.re
+License: GPLv2
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Systems Administration
+Requires-Dist: ruamel.yaml
+Requires-Dist: Jinja2
+Provides-Extra: ansible_inventory_plugin
+Requires-Dist: ansible ; extra == 'ansible_inventory_plugin'
+
+UNKNOWN
+
+
