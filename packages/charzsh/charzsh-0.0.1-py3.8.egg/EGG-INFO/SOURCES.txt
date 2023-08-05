@@ -1,0 +1,13 @@
+setup.py
+charzsh/__init__.py
+charzsh/backup.py
+charzsh/delete_backedup.py
+charzsh/eta.py
+charzsh/fix_io_errors.py
+charzsh/utils.py
+charzsh.egg-info/PKG-INFO
+charzsh.egg-info/SOURCES.txt
+charzsh.egg-info/dependency_links.txt
+charzsh.egg-info/entry_points.txt
+charzsh.egg-info/requires.txt
+charzsh.egg-info/top_level.txt
