@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: oncopipe
+Version: 1.0.5
+Summary: Functions for running Snakemake modules
+Home-page: https://github.com/LCR-BCCRC/lcr-modules
+Author: Bruno Grande
+Author-email: bgrande@sfu.ca
+License: MIT
+Keywords: snakemake bioinformatics workflows
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.6.0
+Requires-Dist: pyyaml
+Requires-Dist: pandas
+Requires-Dist: snakemake (<5.19,>=5.4)
+
+UNKNOWN
+
+
