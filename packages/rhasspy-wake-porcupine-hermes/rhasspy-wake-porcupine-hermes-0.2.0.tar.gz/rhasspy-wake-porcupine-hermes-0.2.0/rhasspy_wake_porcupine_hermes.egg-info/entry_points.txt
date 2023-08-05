@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-wake-porcupine-hermes = rhasspywake_porcupine_hermes.__main__:main
+
