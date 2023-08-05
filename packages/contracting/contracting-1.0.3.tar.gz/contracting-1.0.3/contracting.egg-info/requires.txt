@@ -1,0 +1,7 @@
+autopep8
+coloredlogs
+astor
+sanic
+stdlib_list
+requests>=2.21.0
+pymongo
