@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: mwtext
+Version: 0.2.1
+Summary: A set of utilities for processing MediaWiki text.
+Home-page: https://github.com/mediawiki-utilities/python-mwtext
+Author: Aaron Halfaker
+Author-email: aaron.halfaker@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Topic :: Text Processing :: General
+Classifier: Topic :: Utilities
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: mwxml
+Requires-Dist: mwcli
+Requires-Dist: mwapi
+Requires-Dist: mwbase
+Requires-Dist: mwparserfromhell (<0.6,>=0.5)
+
+# Text processing utilities for MediaWiki
+
+This repository contains a python package for pre-processing MediaWiki text 
+for statistical and machine learning purposes.  
+
+## Authors
+- Aaron Halfaker - https://github.com/halfak
+
+
