@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+spix/__init__.py
+spix/__main__.py
+spix.egg-info/PKG-INFO
+spix.egg-info/SOURCES.txt
+spix.egg-info/dependency_links.txt
+spix.egg-info/entry_points.txt
+spix.egg-info/top_level.txt
+spix.egg-info/zip-safe
+test/test_parse.py

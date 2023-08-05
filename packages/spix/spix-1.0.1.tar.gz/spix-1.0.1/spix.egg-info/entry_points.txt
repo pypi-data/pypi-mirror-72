@@ -1,0 +1,3 @@
+[console_scripts]
+spix = spix.__main__:main
+
