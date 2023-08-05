@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+setup.cfg
+setup.py
+bin/filecollector
+filecollector/__init__.py
+filecollector/collector.py
+filecollector/server.py
+filecollector.egg-info/PKG-INFO
+filecollector.egg-info/SOURCES.txt
+filecollector.egg-info/dependency_links.txt
+filecollector.egg-info/requires.txt
+filecollector.egg-info/top_level.txt
