@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: atoot
+Version: 1.0
+Summary: Asynchronous Python library for the Mastodon API
+Home-page: https://github.com/popura-network/atoot
+Author: zhoreeq
+Author-email: zhoreeq@protonmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: mastodon api asyncio
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Communications
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
