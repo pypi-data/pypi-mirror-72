@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+dl4dp/__init__.py
+dl4dp/__main__.py
+dl4dp/modules.py
+dl4dp/parser.py
+dl4dp/tagger.py
+dl4dp/trainer.py
+dl4dp/utils.py
+dl4dp.egg-info/PKG-INFO
+dl4dp.egg-info/SOURCES.txt
+dl4dp.egg-info/dependency_links.txt
+dl4dp.egg-info/requires.txt
+dl4dp.egg-info/top_level.txt
