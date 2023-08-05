@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: w3mo-kivy
+Version: 0.1.0
+Summary: wemo control library
+Home-page: https://github.com/mghelton/w3mo
+Author: Gage Helton
+Author-email: gagehelton@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: altgraph (==0.17)
+Requires-Dist: certifi (==2020.4.5.2)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: docutils (==0.16)
+Requires-Dist: idna (==2.9)
+Requires-Dist: Kivy (==1.11.1)
+Requires-Dist: Kivy-Garden (==0.1.4)
+Requires-Dist: kivymd
+Requires-Dist: macholib (==1.14)
+Requires-Dist: Pillow (==7.1.2)
+Requires-Dist: Pygments (==2.6.1)
+Requires-Dist: PyInstaller (==3.6)
+Requires-Dist: requests (==2.23.0)
+Requires-Dist: urllib3 (==1.25.9)
+Requires-Dist: w3mo
+
+<span>[![Downloads](https://pepy.tech/badge/w3mo)](https://pepy.tech/project/w3mo-kivy) 
+[![Downloads](https://pepy.tech/badge/w3mo/month)](https://pepy.tech/project/w3mo-kivy/month)
+[![Downloads](https://pepy.tech/badge/w3mo/week)](https://pepy.tech/project/w3mo-kivy/week)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/mghelton/w3mo-kivy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/mghelton/w3mo-kivy/context:python)
+</span>
+
+
+# Installation & Usage
+```bash
+pip3 install w3mo-kivy
+```
+
+* This operation runs a simple Kivy user interface that populates a list with all found devices
+
+![](assets/loading_page.png)
+
+![](assets/main_page.png)
+
+```bash
+git clone https://github.com/mghelton/w3mo
+cd ./w3mo
+pip3 install .
+python3 w3mo/ui.py
+```
+
