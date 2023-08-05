@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: vrt-ud
+Version: 2.7.159116
+Summary: VeeRoute Urban Delivery API
+Home-page: https://docs.veeroute.com/#/udl/integration/openapi
+Author: VeeRoute Support Team
+Author-email: support@veeroute.com
+License: UNKNOWN
+Description:     Программный интерфейс продукта Urban Delivery  # noqa: E501
+            
+Keywords: OpenAPI,OpenAPI-Generator,VeeRoute Urban Delivery API
+Platform: UNKNOWN
