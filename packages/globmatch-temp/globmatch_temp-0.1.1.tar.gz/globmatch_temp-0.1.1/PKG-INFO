@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: globmatch-temp
+Version: 0.1.1
+Summary: 
+Author: Damien Krystkiewicz
+Author-email: damien.krystkiewicz@gmail.com
+Requires-Python: >=3,<4
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
