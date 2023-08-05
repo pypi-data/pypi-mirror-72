@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/eppaurora/__init__.py
+src/eppaurora/electrons.py
+src/eppaurora/protons.py
+src/eppaurora/recombination.py
+src/eppaurora/ssusi.py
+src/eppaurora.egg-info/PKG-INFO
+src/eppaurora.egg-info/SOURCES.txt
+src/eppaurora.egg-info/dependency_links.txt
+src/eppaurora.egg-info/not-zip-safe
+src/eppaurora.egg-info/requires.txt
+src/eppaurora.egg-info/top_level.txt
+tests/test_ionization.py
