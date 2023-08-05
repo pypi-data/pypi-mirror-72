@@ -1,0 +1,16 @@
+blinker
+dill
+numpy
+pandas
+pyomo<6.0,>=5.7.0
+networkx
+oemof.tools
+oemof.network
+
+[dev]
+pytest
+sphinx
+sphinx_rtd_theme
+
+[dummy]
+oemof
