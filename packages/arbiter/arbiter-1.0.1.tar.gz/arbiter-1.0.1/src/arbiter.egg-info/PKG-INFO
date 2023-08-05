@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: arbiter
+Version: 1.0.1
+Summary: Lightweight Data Handling Library
+Home-page: https://github.com/rastern/arbiter
+Author: R.A. Stern
+Author-email: oss@rastern.me
+License: LGPL 3.0
+Description: # Arbiter
+        
+        *Arbiter* is a lightweight framework for working with data flows. These may be as
+        simple as capturing data from a REST API and writing it to a file, merging files
+        or even merging various sources into a single output such as a database. At its
+        core *Arbiter* provides a multi-process processor for handling inputs based on
+        *handlers*. Handlers may be written for any data source required.
+        
+        
+        ## Installation
+        ```bash
+        pip install arbiter
+        ```
+        
+        
+        ## Documentation
+        
+        Documentation is available on [readthedocs.io](https://arbiter.readthedocs.io)
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

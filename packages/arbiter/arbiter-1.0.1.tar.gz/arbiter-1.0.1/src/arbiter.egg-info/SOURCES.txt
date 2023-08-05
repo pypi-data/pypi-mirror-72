@@ -1,0 +1,15 @@
+README.md
+setup.py
+src/arbiter/__about__.py
+src/arbiter/__init__.py
+src/arbiter/auth.py
+src/arbiter/dict.py
+src/arbiter/exceptions.py
+src/arbiter/handlers.py
+src/arbiter/registry.py
+src/arbiter.egg-info/PKG-INFO
+src/arbiter.egg-info/SOURCES.txt
+src/arbiter.egg-info/dependency_links.txt
+src/arbiter.egg-info/not-zip-safe
+src/arbiter.egg-info/requires.txt
+src/arbiter.egg-info/top_level.txt
