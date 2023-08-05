@@ -1,0 +1,4 @@
+gym>=0.17.2
+numpy>=1.18.0
+gym[box2d]>=0.17.2
+box2d-py

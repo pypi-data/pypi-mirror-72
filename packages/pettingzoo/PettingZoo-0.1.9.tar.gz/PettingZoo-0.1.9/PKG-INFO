@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: PettingZoo
+Version: 0.1.9
+Summary: Gym for multi-agent reinforcement learning
+Home-page: https://github.com/PettingZoo-Team/PettingZoo
+Author: PettingZoo Team
+Author-email: justinkterry@gmail.com
+License: UNKNOWN
+Description: # PettingZoo
+        [![Build Status](https://travis-ci.com/PettingZoo-Team/PettingZoo.svg?branch=master)](https://travis-ci.com/PettingZoo-Team/PettingZoo)
+        
+        PettingZoo is a Python library for conducting research in multi-agent reinforcement learning. It's akin to a multi-agent version of OpenAI's Gym library.
+        
+        We model environments as *Agent Environment Cycle* (AEC) games, in order to be able to support all types of multi-agent RL environments under one API.
+        
+        ## Environment Types and Installation
+        
+        PettingZoo includes the following sets of games:
+        
+        * atari: Multi-player Atari 2600 games (both cooperative and competitive)
+        * classic: Classical games including card games, board games, etc.
+        * gamma: Cooperative graphical games developed by us, requiring a high degree of coordination
+        * magent: Configurable environments with massive numbers of particle agents, originally from https://github.com/geek-ai/MAgent
+        * mpe: A set of simple nongraphical communication tasks, originally from https://github.com/openai/multiagent-particle-envs
+        * sisl: 3 cooperative environments, originally from https://github.com/sisl/MADRL
+        
+        To install, use `pip install pettingzoo`
+        
+        We support Python 3.6, 3.7 and 3.8
+        
+        
+        
+Keywords: Reinforcement Learning,game,RL,AI,gym
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
