@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: Dominate-Layui
+Version: 2020.6.25.post1
+Summary: A packages for Dominate.Make your website by Layui.
+Home-page: https://github.com/BugMaker-project/Dominate_Layui
+Author: BM-Business-Dev-Liu
+Author-email: Liubaolin20070125@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: Microsoft 
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+## Dominate_Layui
+#### Author:Barry Liu
+Thank you for using dominate_layui!<br><br>
+It's a easy package for layui Devlopment.<br>
+Now we have several JavaScript functions：<br>
+- MassageBox(str)
+- AlertBox(str)
+- LoadsBox(style = null, Second)
+- CloseBox(ObjBox)
+- CloseAllBox(BoxType = null)
+- IframeBox(url, scrollBar = true)
+<br><br>
+If you can use Layui,You can write your func at Init.js<br>
+There are also several Python functions<br><br>
+- class HTMLDocument
+- linkInit(doc:HTMLDocument)
+- FuncBtnAdd(doc:HTMLDocument,title:str,color:str="primary",radius:str="null",fluid:str="none",size:str="nr",onClick:str=None)
+- LinkBtnAdd(doc:HTMLDocument,title:str,color:str="primary",radius:str="null",fluid:str="none",size:str="nr",href:str=None)
+- render(doc:HTMLDocument,DocName:str)  
+Always Upgrade.
+
+
+
+
