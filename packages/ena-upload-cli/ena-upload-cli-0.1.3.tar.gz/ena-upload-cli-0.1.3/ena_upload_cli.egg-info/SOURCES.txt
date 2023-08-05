@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+ena_upload.py
+requirements.txt
+setup.py
+ena_upload_cli.egg-info/PKG-INFO
+ena_upload_cli.egg-info/SOURCES.txt
+ena_upload_cli.egg-info/dependency_links.txt
+ena_upload_cli.egg-info/entry_points.txt
+ena_upload_cli.egg-info/requires.txt
+ena_upload_cli.egg-info/top_level.txt
