@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ajenti.plugin.ace
+Version: 0.28
+Summary: Ace editor
+Home-page: https://ajenti.org
+Author: Ajenti project
+Author-email: e@ajenti.org
+License: UNKNOWN
+Description: A Ace editor plugin for Ajenti panel
+Platform: UNKNOWN
+Requires-Python: >=3
