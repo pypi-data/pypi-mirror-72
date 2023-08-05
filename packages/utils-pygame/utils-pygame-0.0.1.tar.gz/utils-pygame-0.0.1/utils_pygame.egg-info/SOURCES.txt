@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+PygameUtils/__init__.py
+PygameUtils/button.py
+PygameUtils/checkbox.py
+utils_pygame.egg-info/PKG-INFO
+utils_pygame.egg-info/SOURCES.txt
+utils_pygame.egg-info/dependency_links.txt
+utils_pygame.egg-info/requires.txt
+utils_pygame.egg-info/top_level.txt
