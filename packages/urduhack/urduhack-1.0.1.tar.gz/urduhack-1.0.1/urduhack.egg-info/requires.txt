@@ -1,0 +1,9 @@
+tensorflow-datasets~=3.1
+Click~=7.1
+regex
+
+[tf]
+tensorflow~=2.2
+
+[tf-gpu]
+tensorflow-gpu~=2.2
