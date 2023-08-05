@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+rhasspy_asr_kaldi.egg-info/PKG-INFO
+rhasspy_asr_kaldi.egg-info/SOURCES.txt
+rhasspy_asr_kaldi.egg-info/dependency_links.txt
+rhasspy_asr_kaldi.egg-info/requires.txt
+rhasspy_asr_kaldi.egg-info/top_level.txt
+rhasspyasr_kaldi/__init__.py
+rhasspyasr_kaldi/__main__.py
+rhasspyasr_kaldi/py.typed
+rhasspyasr_kaldi/train.py
+rhasspyasr_kaldi/transcribe.py
