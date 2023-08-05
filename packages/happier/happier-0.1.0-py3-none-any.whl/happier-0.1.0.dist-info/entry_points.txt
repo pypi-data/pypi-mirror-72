@@ -1,0 +1,3 @@
+[console_scripts]
+happier=happier.main:main
+

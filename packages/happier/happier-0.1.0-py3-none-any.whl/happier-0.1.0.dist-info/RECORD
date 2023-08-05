@@ -1,0 +1,12 @@
+happier/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+happier/__main__.py,sha256=D1yCHUsvGU2lD_LAVqDnG5iImPqzMZkYU-u31N19ua4,45
+happier/black_fmt.py,sha256=FGzKbMxG4F4BXDnrIblOYOHLt91nlPRBhAJ8Fwpq1qo,106
+happier/main.py,sha256=EaK2L0vU9Q74Cgh1lXRAVs0XcA8KynTRccH6iuiZ2xw,386
+happier/perform_autoflake.py,sha256=4ir3trjiiHq5Npo9XDnvqOzQnsHa7zYaZSCKGDsGmWQ,418
+happier/sort_imports.py,sha256=f4SSRUoqU6DDftz0bJ3dPMoEFk52UNULDn_ZNdJTSoM,196
+happier/sources.py,sha256=s5CzMfY6AVFuOxl0ac3DkW_twXjDCcT-RgKGErt1FSM,1566
+happier/util.py,sha256=81PE9wTG6LQWE3aUxtbREUdt3s82WU2ApFoELpQQtg0,496
+happier-0.1.0.dist-info/entry_points.txt,sha256=GSwCNj7SEAS3eKwPFNxZ8nDaMjX5cQMCk00ER0G9iPE,45
+happier-0.1.0.dist-info/WHEEL,sha256=G_NFpzHmv_dUXgCUSAWL0-bLL-eMzYU6DzDeGXbRXUk,83
+happier-0.1.0.dist-info/METADATA,sha256=nENlUp2u9uh-ZWRHnoyZnhD19ikdaZi1lAbDhCmghcM,2228
+happier-0.1.0.dist-info/RECORD,,

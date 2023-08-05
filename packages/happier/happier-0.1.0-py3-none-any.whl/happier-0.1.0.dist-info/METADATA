@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: happier
+Version: 0.1.0
+Summary: A tool for formatting, checking and testing your code that makes you well, happier
+License: MIT
+Keywords: formatting,testing,black,isort,flake
+Author: William Rudenmalm
+Author-email: me@whn.se
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Dist: autoflake (>=1.3.1,<2.0.0)
+Requires-Dist: black (>=19.10b0,<20.0)
+Requires-Dist: isort[requirements,pipenv] (>=4.3.21,<5.0.0)
+Requires-Dist: pylint (>=2.5.3,<3.0.0)
+Project-URL: Documentation, https://happier.whn.se
+Description-Content-Type: text/x-rst
+
+#########
+Happier
+#########
+
+A Python development tool that makes you Happier.
+
+Happier formats, lints and sorts your imports. Happier is opinionated,
+simple and just works, making you hopefully happier.
+
+To run it just type ``happier`` and your code will be formatted.
+
+*******************
+What Happier does
+*******************
+
+Happier does a number of things with your code. First it runs
+``isort`` to sort your imports and properly format them.
+
+After having sorted them it runs ``autoflake`` to remove unused things.
+
+Finally having done all of that it runs ``black`` to format the code nicely.
+
+*************
+Why Happier
+*************
+
+Happier was developed by myself, `William Rudenmalm (https://whn.se)`
+because I felt that Python was falling behind on automatically
+formatting and fixing my code. All the parts where already there I
+just needed those 50 lines of code to tie it all together.
+
+With well-wishes and hopes for brigther days ahead in these troubled
+times.
+
+~William Rudenmalm
+
+Stockholm, 22 June, 2020
+
