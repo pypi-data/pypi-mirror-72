@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: attrezzo
+Version: 0.0.0
+Summary: Test doubles for Python
+Home-page: https://github.com/davidvilla/attrezzo
+Author: David Villa Alises
+Author-email: David.Villa@gmail.com
+License: GPLv3
+Description: UNKNOWN
+Keywords: unit tests,doubles,stub,spy,mock
+Platform: UNKNOWN
