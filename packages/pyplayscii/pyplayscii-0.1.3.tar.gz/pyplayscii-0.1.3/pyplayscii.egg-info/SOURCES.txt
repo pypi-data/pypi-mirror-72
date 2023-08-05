@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+playscii/__init__.py
+playscii/input.py
+playscii/playscii.py
+playscii/games/__init__.py
+playscii/games/galaga.py
+pyplayscii.egg-info/PKG-INFO
+pyplayscii.egg-info/SOURCES.txt
+pyplayscii.egg-info/dependency_links.txt
+pyplayscii.egg-info/requires.txt
+pyplayscii.egg-info/top_level.txt
