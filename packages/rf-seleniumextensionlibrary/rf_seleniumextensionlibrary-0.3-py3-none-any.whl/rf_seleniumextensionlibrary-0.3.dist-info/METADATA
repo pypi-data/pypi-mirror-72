@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: rf-seleniumextensionlibrary
+Version: 0.3
+Summary: Selenium Extension Library
+Home-page: https://github.com/MainSystemDev/rf-seleniumextensionlibray
+Author: Shiela Buitizon
+Author-email: shiela.buitizon@mnltechnology.com
+License: Type license() to see the full license text
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Testing
+Classifier: Framework :: Robot Framework
+Classifier: Framework :: Robot Framework :: Library
+Description-Content-Type: text/markdown
+Requires-Dist: browsermob-proxy (==0.8.0)
+Requires-Dist: image (==1.5.28)
+Requires-Dist: psutil (==5.7.0)
+Requires-Dist: robotframework-seleniumlibrary (==4.4.0)
+
+SeleniumExtensionLibrary
+================
+
+Library Scope: __GLOBAL__  
+Created: __10/29/2019 16:21 PM UTC-8__  
+
+
+Author: __Shiela Buitizon | email:shiela.buitizon@mnltechnology.com__
+
+Company: [__Spiralworks Technologies Inc.__](http://www.spiralwrks.com/)
+
+
+##### Contents:
+- [SeleniumExtensionLibrary](#seleniumextensionlibrary)
+    - [Contents](#contents)
+    - [Introduction](#introduction)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [Generating Documentation](#generating-documentation)
+
+
+### Introduction
+**SeleniumExtensionLibrary** is a extension library of [Robotframework SeleniumLibrary](https://robotframework.org/SeleniumLibrary/).
+![PyPI](https://img.shields.io/pypi/v/rf-seleniumextensionlibrary?style=for-the-badge)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/rf-seleniumextensionlibrary?style=for-the-badge)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rf-seleniumextensionlibrary?style=for-the-badge)
+
+View the latest keyword [Documentation here.](https://mainsystemdev.github.io/rf-seleniumextensionlibrary)  
+
+### Installation
+**Option 1**  
+Install using pypi, run:
+```bash
+pip install rf-seleniumextensionlibrary
+```
+**Option 2**  
+With recent version of `pip`, it is possible to install directly from GitHub repository. To Install latest source
+from the master branch, use this command:
+```bash
+pip install git+https://github.com/MainSystemDev/rf-seleniumextensionlibrary.git
+```
+Please note that installation will take some time, because ``pip`` will
+clone the [SeleniumExtensionLibrary](https://github.com/MainSystemDev/rf-seleniumextensionlibrary.git) project to a temporary directory and then
+perform the installation.
+
+### Usage
+To use SeleniumExtensionLibrary in Robot Framework tests, the library needs to
+first be imported using the `Library` setting as any other library.  
+
+```robotframework
+*** Settings ***
+Library                 SeleniumExtensionLibrary
+```
+
+### Generating Documentation
+To Generate the keyword Documentation, simple run:
+```bash
+python -m robot.libdoc SeleniumExtensionLibrary docs/index.html
+```
+Note that the library must first be installed before generating a documentation.
+
+
