@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+Pipfile
+Pipfile.lock
+README.md
+setup.py
+src/helloworldbvd.egg-info/PKG-INFO
+src/helloworldbvd.egg-info/SOURCES.txt
+src/helloworldbvd.egg-info/dependency_links.txt
+src/helloworldbvd.egg-info/requires.txt
+src/helloworldbvd.egg-info/top_level.txt
