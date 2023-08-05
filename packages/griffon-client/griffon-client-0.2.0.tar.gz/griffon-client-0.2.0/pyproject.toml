@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "griffon-client"
+version = "0.2.0"
+description = "A message queue for connecting workflows"
+authors = ["August Brenner <augustbrenner@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+python-socketio = {extras = ["asyncio_client"], version = "^4.6.0"}
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
