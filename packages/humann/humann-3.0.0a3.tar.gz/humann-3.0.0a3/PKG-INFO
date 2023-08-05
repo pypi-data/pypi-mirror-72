@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: humann
+Version: 3.0.0a3
+Summary: HUMAnN: The HMP Unified Metabolic Analysis Network, version 3
+Home-page: http://huttenhower.sph.harvard.edu/humann
+Author: HUMAnN Development Team
+Author-email: humann-users@googlegroups.com
+License: MIT
+Description: HUMAnN v3 is a pipeline for efficiently and accurately determining the coverage and abundance of microbial pathways in a community from metagenomic data. Sequencing a metagenome typically produces millions of short DNA/RNA reads. This process, referred to as functional profiling, aims to describe the metabolic potential of a microbial community and its members. More generally, functional profiling answers the question: What are the microbes in my community-of-interest doing (or capable of doing)?
+Keywords: microbial,microbiome,bioinformatics,microbiology,metagenomic,metatranscriptomic,humann,humann
+Platform: Linux
+Platform: MacOS
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
