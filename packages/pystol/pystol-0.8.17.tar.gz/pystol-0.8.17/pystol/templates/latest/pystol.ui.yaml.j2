@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pystol-ui
+  namespace: pystol
+spec:
+  selector:
+    matchLabels:
+      name: pystol-ui
+      component: pystol-ui
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: pystol-ui
+        component: pystol-ui
+    spec:
+      containers:
+        - name: pystol-ui
+          image: {{ appSettings.pystol.ui.image }}
+          ports:
+            - containerPort: {{ appSettings.pystol.ui.port }}
+          command: ["flask"]
+          args: ["run"]
+          imagePullPolicy: Always
+      serviceAccountName: pystol
