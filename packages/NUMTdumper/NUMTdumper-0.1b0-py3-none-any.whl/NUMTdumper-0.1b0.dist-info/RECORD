@@ -1,0 +1,15 @@
+numtdumper/__init__.py,sha256=M0NZuQ7-112l8K2h1eayVvSmvQrufrOcD5AYKgIf_Is,1
+numtdumper/binning.py,sha256=Jqh25aRCClpMxsbiaA7aLZhIBwXCZRMkNBaQeERPgu4,11339
+numtdumper/core.py,sha256=wN3--dDTigBUWjy9__0Ijcn6hRiPUT6A52uDor8hJLI,22732
+numtdumper/filterlength.py,sha256=9kjCTU7eDCANJXa7wHTZPfeiYXQlI81j_cPyFco5eug,7236
+numtdumper/filterreference.py,sha256=sztpcywSgaB_n1IQjbDqvQqoffHU1DAjn5akViMyPa0,2898
+numtdumper/filtertranslate.py,sha256=yFV8USEALQ654lMNYB1mii9zg6g6IQ9IR9yVQgbm638,9348
+numtdumper/getclades.R,sha256=6fqoicsQ7s41pkBUjzvM5UPwPka2wxoBjP_diabRxeE,1798
+numtdumper/maketree.R,sha256=cIBo5r63AhjFaCY3KLtwf6OYPEVfq3a9bYZfPG97Vec,1531
+numtdumper/numtdumper.py,sha256=6pNVFQa90I00vbfupJ-A6lMO-iz4AnENc11VmlhnY8U,23290
+NUMTdumper-0.1b0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+NUMTdumper-0.1b0.dist-info/METADATA,sha256=Z0y6SidwwO1QP4N1MXA5hmPGLqNzXy1hLlbhVXFvdAg,42820
+NUMTdumper-0.1b0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+NUMTdumper-0.1b0.dist-info/entry_points.txt,sha256=cCZ7OSNwoxCZTKJT6WhgrWl32D8u3filG2mQUIwTBDo,109
+NUMTdumper-0.1b0.dist-info/top_level.txt,sha256=wgC0h67diGfFfIoUYc_1YetBHFQyA13Eg9NbiezLsPY,11
+NUMTdumper-0.1b0.dist-info/RECORD,,
