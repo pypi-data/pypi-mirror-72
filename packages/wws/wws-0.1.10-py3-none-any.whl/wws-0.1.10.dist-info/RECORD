@@ -1,0 +1,14 @@
+wws/__init__.py,sha256=DQiXHqQ3C29f_--ye7aVMDPnITrl9M0zMU42LYY48zE,22
+wws/commands/__init__.py,sha256=ggrOIQv3ik_7BkWIAHVehL1YGGODBw4bjCul5ckblOE,112
+wws/commands/add.py,sha256=dOF2qV7W3n3yVZd_aT5fnl6G6L8HH-u7TPM-l0gUElk,1455
+wws/commands/agent.py,sha256=fCA4HS9C8QWpn1J0j2Yqv6jS62QeH3KpIc98i4FyTXI,5224
+wws/commands/ls.py,sha256=SaMjosycsbiNzMpNjvTeK5jcvT4d9OEDFEp--gc0hz0,2223
+wws/commands/rm.py,sha256=fyNnqBepRiyaNUAfJtZz1176mdVJ54qFwGxbx1yLYSg,1574
+wws/commands/sync.py,sha256=Vv96sN28KQqrcL-RyHopej4SEsWVNXABZoe7YH7Z1Jw,5580
+wws/commands/utils.py,sha256=ejGzIuCRVvY14bC5Io9WCFRcTYJXVu3REJ-1rqu0yEM,1751
+wws/wws.py,sha256=i6LB9skkhUk0R1ae_pxvydthJtfgB18HQu93UO7_dQU,8866
+wws-0.1.10.dist-info/entry_points.txt,sha256=EBxxGM7_guXdeNB_cY_fegE2k65yDU2AtIGWW9OcpEk,36
+wws-0.1.10.dist-info/LICENSE,sha256=on55HpuvXq0ZSLoTWXAJnMjvRMxrTcTzMuLonlhsCYw,1069
+wws-0.1.10.dist-info/WHEEL,sha256=G_NFpzHmv_dUXgCUSAWL0-bLL-eMzYU6DzDeGXbRXUk,83
+wws-0.1.10.dist-info/METADATA,sha256=pC4OH1i83S991NJR_npLDFsnwYhDDf-LS2CM78PNL24,1178
+wws-0.1.10.dist-info/RECORD,,
