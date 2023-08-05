@@ -1,0 +1,23 @@
+[
+  "test_autoprop.py::test_get",
+  "test_autoprop.py::test_set",
+  "test_autoprop.py::test_del",
+  "test_autoprop.py::test_get_set",
+  "test_autoprop.py::test_get_set_del",
+  "test_autoprop.py::test_cache_get",
+  "test_autoprop.py::test_cache_get_set_del",
+  "test_autoprop.py::test_dont_cache_non_getter",
+  "test_autoprop.py::test_cache_inheritance",
+  "test_autoprop.py::test_ignore_similar_names",
+  "test_autoprop.py::test_ignore_empty_names",
+  "test_autoprop.py::test_ignore_non_methods",
+  "test_autoprop.py::test_dont_overwrite_existing_attributes",
+  "test_autoprop.py::test_dont_overwrite_inherited_attributes",
+  "test_autoprop.py::test_overwrite_inherited_autoprops",
+  "test_autoprop.py::test_optional_arguments",
+  "test_autoprop.py::test_getters_need_one_argument",
+  "test_autoprop.py::test_setters_need_two_arguments",
+  "test_autoprop.py::test_deleters_need_one_argument",
+  "test_autoprop.py::test_docstrings",
+  "test_python3.py::test_keyword_only_arguments"
+]
