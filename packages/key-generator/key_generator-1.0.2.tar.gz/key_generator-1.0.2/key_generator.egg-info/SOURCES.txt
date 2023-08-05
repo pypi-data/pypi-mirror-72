@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+key_generator/key_generator.py
+key_generator.egg-info/PKG-INFO
+key_generator.egg-info/SOURCES.txt
+key_generator.egg-info/dependency_links.txt
+key_generator.egg-info/top_level.txt
