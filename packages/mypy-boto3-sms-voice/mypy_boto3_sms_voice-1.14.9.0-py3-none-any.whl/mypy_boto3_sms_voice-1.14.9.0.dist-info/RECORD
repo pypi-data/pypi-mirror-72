@@ -1,0 +1,10 @@
+mypy_boto3_sms_voice/__init__.py,sha256=6r39tsfqYpPRURx76ZA59D5sbrYT-5KpU3nd6IvX8DM,453
+mypy_boto3_sms_voice/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_sms_voice/client.py,sha256=1kRGCTBSHav8q6Fyo0lKAbB7BNCmijhOKwcz7ez8kJo,5123
+mypy_boto3_sms_voice/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_sms_voice/type_defs.py,sha256=hUkZ3yKbrTq3hjlX-c-4tWH5pRLveh14IOfnnq-C36c,3793
+mypy_boto3_sms_voice/version.py,sha256=HLeJKkezvyX4wImGb_bgDkOcKrMWrBL5rTdEN5TQ0DM,56
+mypy_boto3_sms_voice-1.14.9.0.dist-info/METADATA,sha256=gZ_gBpAFyQAmZWgQTNRQPExa8UaBw6zjweip68VJYPA,4279
+mypy_boto3_sms_voice-1.14.9.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_sms_voice-1.14.9.0.dist-info/top_level.txt,sha256=jzJZOKLFVEFHFhsG3dyExaWUXsFN9oRqkV-CFDJ8tw8,21
+mypy_boto3_sms_voice-1.14.9.0.dist-info/RECORD,,
