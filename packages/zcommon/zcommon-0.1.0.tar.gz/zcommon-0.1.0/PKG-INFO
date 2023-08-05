@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: zcommon
+Version: 0.1.0
+Summary: A collection of common methods and utils.
+Home-page: https://github.com/LamaAni/zcommon.py
+Author: Zav Shotan
+Author-email: 
+License: LICENSE
+Description: Please see the github repo and help @ https://github.com/LamaAni/zcommon.py
+Platform: any
+Requires-Python: >=3.6
