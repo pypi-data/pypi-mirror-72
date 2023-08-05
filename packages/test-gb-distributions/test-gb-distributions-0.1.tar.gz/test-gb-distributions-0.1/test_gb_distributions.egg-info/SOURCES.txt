@@ -1,0 +1,10 @@
+setup.py
+test-gb-distributions/Binomialdistribution.py
+test-gb-distributions/Gaussiandistribution.py
+test-gb-distributions/Generaldistribution.py
+test-gb-distributions/__init__.py
+test_gb_distributions.egg-info/PKG-INFO
+test_gb_distributions.egg-info/SOURCES.txt
+test_gb_distributions.egg-info/dependency_links.txt
+test_gb_distributions.egg-info/not-zip-safe
+test_gb_distributions.egg-info/top_level.txt
