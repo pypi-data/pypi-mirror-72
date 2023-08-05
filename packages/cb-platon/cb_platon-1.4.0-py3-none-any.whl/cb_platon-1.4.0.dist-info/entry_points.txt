@@ -1,0 +1,3 @@
+[console_scripts]
+platon = platon.platon:main
+
