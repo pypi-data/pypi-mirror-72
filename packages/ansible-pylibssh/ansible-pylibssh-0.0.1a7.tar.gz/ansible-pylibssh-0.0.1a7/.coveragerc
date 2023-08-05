@@ -1,0 +1,29 @@
+[paths]
+source =
+  src/pylibsshext
+  */src/pylibsshext
+  .tox/*/lib/python*/site-packages/pylibsshext
+  /tmp/ansible_pylibssh-manylinux*-build.*/venvs/*/lib/python*/site-packages/pylibsshext
+
+[report]
+skip_covered = true
+show_missing = true
+exclude_lines =
+    \#\s*pragma: no cover
+    ^\s*raise AssertionError\b
+    ^\s*raise NotImplementedError\b
+    ^\s*return NotImplemented\b
+    ^\s*raise$
+    ^if __name__ == ['"]__main__['"]:$
+
+[run]
+branch = true
+cover_pylib = false
+parallel = true
+# FIXME: https://github.com/cython/cython/issues/3636
+# plugins = Cython.Coverage
+plugins = cython_coverage
+relative_files = true
+source =
+  pylibsshext
+  tests
