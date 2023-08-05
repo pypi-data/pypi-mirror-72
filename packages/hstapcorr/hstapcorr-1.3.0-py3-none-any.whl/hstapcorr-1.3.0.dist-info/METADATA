@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: hstapcorr
+Version: 1.3.0
+Summary: UNKNOWN
+Home-page: https://github.com/bkornpob/hstapcorr
+Author: Kornpob Bhirombhakdi
+Author-email: kbhirombhakdi@stsci.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.
+Description-Content-Type: text/markdown
+
+# hstapcorr
+hstapcorr contains tables for aperture correction with HST instruments including HST/ACS/WFC and HST/WFC3/IR and UVIS for both imaging (photapcorr.py) and grism (grismapcorr.py).
+
+pip install hstapcorr
+
+
