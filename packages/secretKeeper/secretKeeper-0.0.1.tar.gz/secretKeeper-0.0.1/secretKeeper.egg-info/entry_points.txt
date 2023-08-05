@@ -1,0 +1,3 @@
+[console_scripts]
+secretKeeper = secretKeeper.__main__:main
+
