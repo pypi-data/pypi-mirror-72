@@ -1,0 +1,3 @@
+[console_scripts]
+ngscheck_client = ngscheck_client.cli:main
+
