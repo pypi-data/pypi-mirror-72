@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    walnuts=walnuts.cli:walnuts_cli
+    
