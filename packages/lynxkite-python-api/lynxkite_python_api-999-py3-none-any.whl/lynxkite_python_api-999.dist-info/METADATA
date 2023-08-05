@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: lynxkite-python-api
+Version: 999
+Summary: Python API for LynxKite [obsolete]
+Home-page: https://lynxkite.com/
+Author: Lynx Analytics
+Author-email: lynxkite@lynxanalytics.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 7 - Inactive
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: lynxkite-client
+
+# Deprecated
+
+This package has been renamed to [`lynxkite-client`](https://pypi.org/project/lynxkite-client/).
+Sorry for the trouble!
+
+
