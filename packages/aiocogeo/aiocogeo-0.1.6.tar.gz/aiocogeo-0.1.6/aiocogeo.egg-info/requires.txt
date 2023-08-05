@@ -1,0 +1,10 @@
+aiofiles
+aiohttp<=3.6.2
+aiocache
+affine
+imagecodecs
+typer
+Pillow
+
+[s3]
+aioboto3
