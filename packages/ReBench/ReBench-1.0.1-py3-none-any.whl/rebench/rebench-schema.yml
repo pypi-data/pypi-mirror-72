@@ -1,0 +1,322 @@
+name: ReBench Configuration
+desc: Specifies the elements of the YAML-based configuration format.
+
+schema;runs_type:
+  type: map
+  mapping: &EXP_RUN_DETAILS
+    invocations:
+      type: int
+      # default: 1  #  can't specify this here, because the defaults override settings
+      desc: |
+        The number of times an executor is executed a run.
+    iterations:
+      type: int
+      # default: 1 #  can't specify this here, because the defaults override settings
+      desc: |
+        The number of times a run is executed within an executor
+        invocation. This needs to be supported by a benchmark harness and
+        ReBench passes this value on to the harness or benchmark.
+    warmup:
+      type: int
+      desc: |
+        Consider the first N iterations as warmup and ignore them in ReBench's summary
+        statistics. Note ,they are still persisted in the data file.
+
+    min_iteration_time:
+      type: int
+      # default: 50 #  can't specify this here, because the defaults override settings
+      desc: |
+        Give a warning if the average total run time of an iteration is below
+        this value in milliseconds.
+    max_invocation_time:
+      type: int
+      desc: |
+        Time in second after which an invocation is terminated.
+        The value -1 indicates that there is no timeout intended.
+      # default: -1 #  can't specify this here, because the defaults override settings
+    ignore_timeouts:
+      type: bool
+      desc: |
+        When max_invocation_time is reached, do not report an error.
+        Instead, accept the data and disregard the timeout.
+        Benchmark setups that are confirmed to be working, for which errors
+        or warnings may confuse users.
+    parallel_interference_factor:
+      type: float
+      desc: |
+        A higher factor means a lower degree of parallelism.
+        TODO: should probably be removed
+        TODO: then again, we might want this for research on the impact
+    execute_exclusively:
+      type: bool
+      # default: true #  can't specify this here, because the defaults override settings
+      desc: |
+        TODO: probably needs to be removed, not sure. parallel exec of
+        benchmarks introduced a lot of noise
+
+    retries_after_failure:
+      type: int
+      # default: 0 #  can't specify this here, because the defaults override settings
+      desc: |
+        Some experiments may fail non-deterministically. For these, it may be
+        convenient to simply retry them a few times.
+        This value indicates how often execution should be retried on failure.
+
+
+schema;reporting_type:
+  type: map
+  mapping:
+    rebenchdb:
+      type: map
+      desc: Store results in ReBenchDB
+      mapping:
+        db_url:
+          type: str
+          desc: URL for the ReBenchDB instance to use.
+        repo_url:
+          type: str
+          desc: URL of the main repo for this project.
+        project_name:
+          type: str
+          desc: Project name to be used by ReBenchDB.
+        repo_base_branch:
+          type: str
+          desc: The name of the base branch for comparisons.
+        record_all:
+          type: bool
+          desc: All experiments should be stored in the ReBenchDB
+    codespeed:
+      type: map
+      desc: Send results to Codespeed for continuous performance tracking.
+      mapping:
+        project:
+          type: str
+          desc: The Codespeed project corresponding to the results.
+        url:
+          type: str
+          desc: |
+            The URL to the /result/add/json/ rest endpoint for submitting
+            results (the full URL).
+
+schema;variables:
+  desc: |
+    defining variables for an experiment. not, this is not a type used by the
+    schema. instead, we use YAML to reuse this definition
+  type: map
+  mapping: &EXP_VARIABLES
+    input_sizes:
+      type: seq
+      desc: |
+        Many benchmark harnesses and benchmarks take an input size as a
+        configuration parameter. It might identify a data file, or some other
+        way to adjust the amount of computation performed.
+      # default: ['']  # that's the semantics, but pykwalify does not support it
+      sequence:
+        - type: scalar
+    cores:
+      type: seq
+      desc: The cores to be used by the benchmark.
+      # default: [1]  # that's the semantics, but pykwalify does not support it
+      sequence:
+        - type: scalar
+    variable_values:
+      type: seq
+      desc: Another dimension by which the benchmark execution can be varied.
+      # default: ['']  # that's the semantics, but pykwalify does not support it
+      sequence:
+        - type: scalar
+
+schema;benchmark_type_str:
+  type: str
+  desc: The name of a benchmark, can be simply the name.
+schema;benchmark_type_map:
+  type: map
+  desc: |
+    The name of a benchmark and additional information.
+  matching-rule: 'any'
+  mapping:
+    regex;(.+):
+      type: map
+      mapping:
+        <<: [ *EXP_RUN_DETAILS, *EXP_VARIABLES ]
+        extra_args:
+          type: scalar
+          desc: This extra argument is appended to the benchmark's command line.
+          # default: '' # causes issue in pykwalify
+        command:
+          type: str
+          desc: use this command instead of the name for the command line.
+        codespeed_name:
+          type: str
+          desc: |
+            A name used for this benchmark when sending data to Codespeed.
+            This is useful to have a name different from the one relevant
+            at the suite level.
+
+schema;build_type:
+  desc: |
+    A list of commands/strings to be executed by the system's shell.
+    They are intended to set up the system for benchmarking,
+    typically to build binaries, compiled archieves, etc.
+    Each command is executed once before any benchmark or executor that depend on it
+    is executed. If the `location` or `path` of a suite/executor is set, it is used as
+    working directory. Otherwise, it is the current working directory of ReBench.
+
+    `build:` is a list of commands to allow multiple suites and executors to depend on the
+    same build command without executing it multiple times.
+    For this purpose, build commands are considered the same when they have the
+    same command and location (based on simple string comparisons).
+  type: seq
+  sequence:
+    - type: str
+
+schema;benchmark_suite_type:
+  type: map
+  mapping:
+    <<: [ *EXP_RUN_DETAILS, *EXP_VARIABLES ]
+    gauge_adapter:
+      type: str
+      required: true
+      desc: |
+        Name of the parser that interpreters the output of the benchmark harness
+    command:
+      type: str
+      required: true
+      desc: |
+        The command for the benchmark harness. It's going to be combined with the
+        executor's command line. It supports various format variables, including:
+         - benchmark (the benchmark's name)
+         - cores (the number of cores to be used by the benchmark)
+         - executor (the executor's name)
+         - input (the input variable's value)
+         - iterations (the number of iterations)
+         - suite (the name of the benchmark suite)
+         - variable (another variable's value)
+         - warmup (the number of iterations to be considered warmup)
+    location:
+      type: str
+      desc: |
+        The path to the benchmark harness. Execution use this location as
+        working directory. It overrides the location/path of an executor.
+    build:
+      include: build_type
+    benchmarks:
+      type: seq
+      required: true
+      matching: any
+      sequence:
+        - include: benchmark_type_str
+        - include: benchmark_type_map
+    description:
+      type: str
+      desc: A description of the benchmark suite.
+    desc:
+      type: str
+      desc: A description of the benchmark suite.
+
+schema;executor_type:
+  type: map
+  mapping:
+    <<: [ *EXP_RUN_DETAILS, *EXP_VARIABLES ]
+    path:
+      type: str
+      required: false
+      desc: |
+        Path to the executable.
+        If not given, it's up to the shell to find the executable
+    executable:
+      type: str
+      required: true
+      desc: the name of the executable to be used
+    args:
+      type: str
+      # default: '' # causes issue in pykwalify
+      desc: |
+        The arguments when assembling the command line.
+        TODO: do we support format string parameters here?
+              if so, which?
+    desc:
+      type: str
+    description:
+      type: str
+    build:
+      include: build_type
+
+schema;exp_suite_type:
+  desc: A list of suites
+  type: seq
+  sequence:
+    - type: str
+
+schema;exp_exec_type:
+  desc: An executor and a set of benchmarks
+  type: map
+  mapping:
+    regex;(.+):
+      type: map
+      mapping:
+        <<: [ *EXP_RUN_DETAILS, *EXP_VARIABLES ]
+        suites:
+          include: exp_suite_type
+
+schema;experiment_type:
+  desc: Defined an experiment for a specific executor
+  type: map
+  mapping:
+    <<: [ *EXP_RUN_DETAILS, *EXP_VARIABLES ]
+    description:
+      type: str
+      desc: Description of the experiment
+    desc:
+      type: str
+      desc: Description of the experiment
+    data_file:
+      desc: The data for this experiment goes into a separate file
+      type: str
+    reporting:
+      include: reporting_type
+
+    executions:
+      type: seq
+      desc: |
+        The executors used for execution, possibly with specific suites assigned
+      sequence:
+        - type: str
+        - include: exp_exec_type
+    suites:
+      desc: List of benchmark suites to be used.
+      include: exp_suite_type
+
+type: map
+mapping:
+  regex;(\..+):
+    type: any
+    desc: dot keys, for example `.test` are going to be ignored
+  default_experiment:
+    type:     str
+    default:  all
+  default_data_file:
+    type:     str
+    default:  rebench.data
+  build_log:
+    type:     str
+    default:  build.log
+  runs:
+    include: runs_type
+  reporting:
+    include: reporting_type
+  benchmark_suites:
+    type: map
+    mapping:
+      regex;(.+):
+        include: benchmark_suite_type
+  executors:
+    type: map
+    mapping:
+      regex;(.+):
+        include: executor_type
+  experiments:
+    type: map
+    mapping:
+      regex;(.+):
+        include: experiment_type
