@@ -1,0 +1,28 @@
+Metadata-Version: 1.1
+Name: wagtail-static
+Version: 0.0.4
+Summary: Serve pages from filesystem
+Home-page: UNKNOWN
+Author: Seb Brown
+Author-email: seb@neonjungle.studio
+License: BSD License
+Description: TODO
+        
+        - S3 Stuff (uploading/deleting - Site settings for s3 routing)
+        - Changes when page move/slug changes (delete old)
+        - Admin controls for clearing static files
+        - README
+        - Tests
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: BSD License
