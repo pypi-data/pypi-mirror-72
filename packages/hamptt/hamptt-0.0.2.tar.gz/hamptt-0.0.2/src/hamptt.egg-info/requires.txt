@@ -1,0 +1,9 @@
+func_timeout
+
+[bt]
+pybluez
+
+[testing]
+pytest
+pytest-cov
+pytest-benchmark
