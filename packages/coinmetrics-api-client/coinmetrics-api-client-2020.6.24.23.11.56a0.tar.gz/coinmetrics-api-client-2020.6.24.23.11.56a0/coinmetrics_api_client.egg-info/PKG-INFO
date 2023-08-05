@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: coinmetrics-api-client
+Version: 2020.6.24.23.11.56a0
+Summary: Alpha Release for official Python Client for Coin Metrics API
+Home-page: https://github.com/coinmetrics-io/api-client-python
+Author: Oleksandr Buchkovsky
+Author-email: oleksandr@coinmetrics.io
+License: UNKNOWN
+Description: # Coin Metrics Python API v4 client library
+        
+        This is an alpha version of official Python API client for Coin Metrics API v4.
+        
+Keywords: coin-metrics,coin,metrics,crypto,bitcoin,network-data,market-data,for-humans,fast,bigdata,api,handy
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+coinmetrics/__init__.py
+coinmetrics/_data_collection.py
+coinmetrics/_typing.py
+coinmetrics/_utils.py
+coinmetrics/api_client.py
+coinmetrics/constants.py
+coinmetrics_api_client.egg-info/PKG-INFO
+coinmetrics_api_client.egg-info/SOURCES.txt
+coinmetrics_api_client.egg-info/dependency_links.txt
+coinmetrics_api_client.egg-info/requires.txt
+coinmetrics_api_client.egg-info/top_level.txt
