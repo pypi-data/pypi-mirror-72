@@ -1,0 +1,14 @@
+bare/__init__.py,sha256=kVCJHWaNe8uHTh7_VeOQmbwT06XJWmQdXzzLGll60ZU,10306
+bare/__main__.py,sha256=Nq0khCiNnE0MsVd-V7MkzXAhoD-_bC4oOp26dzmS5mI,3277
+bare/ast.py,sha256=7aRhKgneaPKg4slGOKN8tlTgGHpee3lssmDlLMVG_es,4202
+bare/lex.py,sha256=dyCb-b4pPngvvFqVqz7F3Hz5W6W_856z1C_aTg7ENMw,5353
+bare/parser.py,sha256=4brxjJV-jjKRkzu2eMhXO3Xr91Cr2xOe6MikIUS-LmM,7829
+bare/schema.py,sha256=UkaLn9kwV0ZXHoZGeo15_IuE9QIAlvzZIq0t8b6wd_8,778
+bare/test___init__.py,sha256=w2kt4SWMdlLr5iZY5TEqmJ6-_cqPRm112zpgd9DUzPQ,1399
+bare-0.3.0.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+bare-0.3.0.dist-info/METADATA,sha256=7er1Qht5_kShindWrT2b5LIoHW24x2pmRTWKOzW43M0,380
+bare-0.3.0.dist-info/RECORD,,
+bare-0.3.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+bare-0.3.0.dist-info/entry_points.txt,sha256=wy-nVA77eOPuEh063M28AHMXlCUxdxUXEcyekpaZmJA,45
+bare-0.3.0.dist-info/metadata.json,sha256=WbufTIHK21QN1QydOsVmKmy8MxWAR1LtkWb_jzbnnvE,686
+bare-0.3.0.dist-info/top_level.txt,sha256=8-XSK_6kKH4JnVImbi6C1jjoGmEMvxBJB2-wsMpwY6o,5
