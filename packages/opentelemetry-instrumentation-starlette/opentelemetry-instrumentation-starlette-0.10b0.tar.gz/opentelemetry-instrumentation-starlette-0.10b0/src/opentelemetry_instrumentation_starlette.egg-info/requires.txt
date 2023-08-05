@@ -1,0 +1,7 @@
+opentelemetry-api==0.10b0
+opentelemetry-ext-asgi==0.10b0
+
+[test]
+opentelemetry-test==0.10b0
+starlette~=0.13.0
+requests~=2.23.0
