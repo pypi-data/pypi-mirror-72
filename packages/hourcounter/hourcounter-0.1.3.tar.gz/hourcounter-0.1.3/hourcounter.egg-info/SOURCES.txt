@@ -1,0 +1,8 @@
+setup.py
+hourcounter/__init__.py
+hourcounter/hourcount.py
+hourcounter.egg-info/PKG-INFO
+hourcounter.egg-info/SOURCES.txt
+hourcounter.egg-info/dependency_links.txt
+hourcounter.egg-info/not-zip-safe
+hourcounter.egg-info/top_level.txt
