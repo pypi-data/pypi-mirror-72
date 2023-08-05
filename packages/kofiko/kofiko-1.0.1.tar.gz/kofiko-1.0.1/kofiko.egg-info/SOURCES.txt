@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+kofiko/__init__.py
+kofiko/internal.py
+kofiko/public.py
+kofiko/settings.py
+kofiko.egg-info/PKG-INFO
+kofiko.egg-info/SOURCES.txt
+kofiko.egg-info/dependency_links.txt
+kofiko.egg-info/top_level.txt
