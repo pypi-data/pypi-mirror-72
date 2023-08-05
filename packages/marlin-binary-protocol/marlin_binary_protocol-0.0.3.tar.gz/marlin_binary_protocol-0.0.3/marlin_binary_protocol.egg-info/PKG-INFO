@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: marlin-binary-protocol
+Version: 0.0.3
+Summary: Transfer files with Marlin 2.0 firmware using Marlin Binary Protocol Mark II
+Home-page: https://github.com/charleswillis3/marlin-binary-protocol
+Author: Charles Willis
+Author-email: charleswillis3@users.noreply.github.com
+License: UNKNOWN
+Description: [![PyPI version](https://badge.fury.io/py/marlin-binary-protocol.svg)](https://badge.fury.io/py/marlin-binary-protocol)
+        
+        Provides implementation of the Marlin Binary Transfer Protocol Mark II as described here:
+        https://github.com/MarlinFirmware/Marlin/pull/14817
+        
+        This code is essentially the same as the code provided by user p3p on that pull request.
+        
+        Look at the provided transfer utility, transfer.py, for example usage.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7,>=3.7
+Description-Content-Type: text/markdown
