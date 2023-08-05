@@ -1,0 +1,13 @@
+starcli/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+starcli/__main__.py,sha256=5iNiZhPPbsK1bHmNMviGFewAsWPBK4UM6TsQ9ryj4pE,858
+starcli/list_layout.py,sha256=dp6nye4Q834--3yQGS5IpxdYzexcar-QlroM_YG4tt0,1496
+starcli/parser.py,sha256=iwAiNz2QzSrasF5GOZEsqStIEAHPI9t5CZRVfY_ebjc,935
+starcli/search.py,sha256=5Ds1wq98T15WPfw1H98N3AfK9Wx1fNBt6jKhVc-1k70,1500
+starcli/table_layout.py,sha256=2t4lZqoB_gs-TOGSvJ0lnS7zbvDjJzBNDCZoIZjGCk4,1126
+starcli/terminal_size.py,sha256=nJQ_Gtx9Ry19XElZ-DEEPu-ojEbTZX-O5enDaE1EKaI,285
+starcli-2.4.0.dist-info/LICENSE,sha256=ul0RJWrQ5VfKE7OwXLggKxe4SDwFh2Yk9_RRh3VTGoY,1070
+starcli-2.4.0.dist-info/METADATA,sha256=GkUk1NdkCcDhDL4ghhaBkvlG9lreHLDnYx8qVlRhaZM,2711
+starcli-2.4.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+starcli-2.4.0.dist-info/entry_points.txt,sha256=jiMhTvPlDFGzbpF8AV-DiQo4SrMMlD-rbDMSPD3VRXU,50
+starcli-2.4.0.dist-info/top_level.txt,sha256=nNZj4C2HUlBljmw7BTMD5W8RzxNgiBX1_Gc4r0iEPPA,8
+starcli-2.4.0.dist-info/RECORD,,
