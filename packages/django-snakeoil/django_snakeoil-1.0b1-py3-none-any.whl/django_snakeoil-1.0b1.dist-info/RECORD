@@ -1,0 +1,11 @@
+snakeoil/__init__.py,sha256=4sBQnGb247VjDwHsk2FHy5W-L2yudFoIZo08q5MMbUc,52
+snakeoil/admin.py,sha256=LUgnfh7APj0erom43W_7n9UxO-kbONT-paBQG0xl33I,93
+snakeoil/apps.py,sha256=9mYuMDPN5-bgpAhmru-0xrqA3yjHbbjG1FA9MRbnOec,121
+snakeoil/jinja2.py,sha256=2gLg9cWCfu61NRRqx4D-mdW0TW6FCrABHptuehvhu2M,345
+snakeoil/models.py,sha256=yyQaYF5bJYKzPn0OhL6W5WzuQPU8ZMakcGklFlCUPug,494
+snakeoil/utils.py,sha256=maP_Q2S_Luhr57YWTD24uAxQqguKindrkf5NqE3fNFc,3951
+django_snakeoil-1.0b1.dist-info/LICENSE,sha256=nIJKntiKhFxSPiOQfc3IM7ei8sQmOm5PszxDqB5SZpE,1068
+django_snakeoil-1.0b1.dist-info/METADATA,sha256=HmuN7BLPk0jbsa54JQ9FU0rAHBWQ3_4Fe7h6DYGq4ac,586
+django_snakeoil-1.0b1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_snakeoil-1.0b1.dist-info/top_level.txt,sha256=IfYA0QeZn57BtwshVfsQYiRpDvG19hp_ah1GR-VzAfQ,9
+django_snakeoil-1.0b1.dist-info/RECORD,,
