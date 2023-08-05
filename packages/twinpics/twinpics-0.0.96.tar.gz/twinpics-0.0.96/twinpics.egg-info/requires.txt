@@ -1,0 +1,10 @@
+
+[docs]
+sphinx
+sphinx_rtd_theme
+recommonmark
+
+[tests]
+pytest
+codecov
+pytest-codecov
