@@ -1,0 +1,21 @@
+include CONTRIBUTING.rst
+include HISTORY.rst
+include LICENSE
+include README.rst
+
+include resources.qrc
+
+include data/predefined_classes.txt
+include notebooks/*.ipynb
+include fichs/vocEstomas.names
+include fichs/yolov3Estomas.cfg
+
+
+recursive-include data *
+recursive-include icons *
+recursive-include libs *
+
+recursive-exclude build-tools *
+recursive-exclude tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
