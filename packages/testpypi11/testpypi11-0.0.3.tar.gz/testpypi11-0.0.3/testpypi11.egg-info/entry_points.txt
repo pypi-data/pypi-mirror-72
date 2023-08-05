@@ -1,0 +1,3 @@
+[console_scripts]
+testpypi = testpypi11.info1:Info1
+

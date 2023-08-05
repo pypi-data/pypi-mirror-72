@@ -1,0 +1,10 @@
+testpypi11/__init__.py
+testpypi11/info1.py
+testpypi11.egg-info/PKG-INFO
+testpypi11.egg-info/SOURCES.txt
+testpypi11.egg-info/dependency_links.txt
+testpypi11.egg-info/entry_points.txt
+testpypi11.egg-info/requires.txt
+testpypi11.egg-info/top_level.txt
+testpypi11/test_package2/__init__.py
+testpypi11/test_package2/info2.py
