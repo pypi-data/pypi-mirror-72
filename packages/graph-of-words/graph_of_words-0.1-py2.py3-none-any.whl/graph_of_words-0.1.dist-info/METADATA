@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: graph-of-words
+Version: 0.1
+Summary: A module to generate a graph of words
+Home-page: https://pypi.org/project/graph-of-words/
+Author: Vincent Lequertier
+Author-email: vi.le@autistici.org
+License: UNKNOWN
+Project-URL: Bug Reports, https://gitlab.com/vi.le/graphofwords/-/issues
+Project-URL: Documentation, http://vi.le.gitlab.io/graphofwords/
+Project-URL: Source, https://gitlab.com/vi.le/graphofwords
+Keywords: networkx graph words nlp
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5, <4
+Description-Content-Type: text/markdown
+Requires-Dist: networkx
+
+<!--
+SPDX-FileCopyrightText: 2019 Vincent Lequertier <vi.le@autistici.org>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+# Graph of words
+
+[![REUSE status](https://api.reuse.software/badge/gitlab.com/vi.le/graphofwords)](https://api.reuse.software/info/gitlab.com/vi.le/graphofwords)
+
+Create a graph of word representation from a text. Roughly based on *Malliaros, F. D., & Skianis, K. (2015). Graph-Based Term Weighting for Text Categorization. 1473–1479. https://doi.org/10.1145/2808797.2808872*
+
+Example:
+
+```python
+import graph
+graph = graph.GraphOfWords(window_size=2)
+graph.build_graph(
+    'Roses are red. Violets are blue',
+    # OR a sentences list['Roses  are  red.', 'Violets are blue'],
+    remove_stopwords=False,
+    workers=4
+)
+
+graph.display_graph()
+graph.write_graph_edges('edges_list.txt')
+```
+
+Note that `build_graph` also accepts a list of sentences.
+
+The following actions are performed:
+
+1. Split the text into sentences if required
+2. Slide a window across each sentence
+3. Add a directed graph edge form the current word to the other ones within the
+   window, the weight being the distance between the two words
+
+## Documentation
+
+See [the documentation](http://vi.le.gitlab.io/graphofwords/).
+
+
