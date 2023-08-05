@@ -1,0 +1,33 @@
+import requests
+import json
+import pytest
+import assertions
+
+HOST_URL = "{{ host_url }}"
+
+
+def _trigger_requests(req_method, url, header, data, proxies=None):
+    print("\n\nRegenerating traffic from CloudVector events....")
+    return requests.request(method=req_method, url=url, proxies=proxies, headers=header, data=data, verify=False)
+
+
+def test_{{ api_name }}({{ api_info.get("params",[])|join(", ") }}):
+    data = {}
+    {% for param in api_info.get("params",[]) %}data["{{ param }}"] = {{ param }}
+    {% endfor %}
+    req = {
+             "data": data,
+             "headers": {{ api_info.get("header") }}
+          }
+    resp = _trigger_requests("{{ api_info.get("method") }}", "{{ api_info.get("url") }}",
+                      header=req["headers"],
+                      data=json.dumps(data))
+    print(resp.status_code)
+    print(resp.text)
+    assertions.assert_for_{{ api_name }}(req,resp)
+
+
+
+
+
+
