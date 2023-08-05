@@ -1,0 +1,4 @@
+
+            [console_scripts]
+            z2n=z2n.main:cli
+        
