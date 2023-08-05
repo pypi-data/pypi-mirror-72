@@ -1,0 +1,45 @@
+Metadata-Version: 1.2
+Name: medusa-network
+Version: 0.0.2
+Summary: Medusa Network Library
+Home-page: UNKNOWN
+Author: Andrea Mucci
+Author-email: andrea@breda.build
+License: UNKNOWN
+Description: ==============
+        Medusa Network
+        ==============
+        
+        Medusa Network Library
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        -------
+        
+        This package was created with cookiecutter and modified by Andrea Mucci <andrea@breda.build>
+        
+        
+        =======
+        History
+        =======
+        
+        0.0.1 (2020-06-21)
+        ------------------
+        
+        * First release.
+        
+Keywords: medusa_network
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
