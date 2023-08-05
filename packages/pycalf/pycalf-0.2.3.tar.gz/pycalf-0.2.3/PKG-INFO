@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pycalf
+Version: 0.2.3
+Summary: 
+Author: konumaru
+Author-email: konumaru1022@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: matplotlib (>=3.2.1,<4.0.0)
+Requires-Dist: numpy (>=1.18.4,<2.0.0)
+Requires-Dist: pandas (>=1.0.3,<2.0.0)
+Requires-Dist: sklearn (>=0.0,<0.1)
+Requires-Dist: statsmodels (>=0.11.1,<0.12.0)
