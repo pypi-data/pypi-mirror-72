@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: b3-scrapers
+Version: 0.3
+Summary: Scrapers da B3
+Home-page: https://github.com/marcus-almendro/b3_scrapers
+Author: Marcus Almendro
+Author-email: marcus.almendro@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: beautifulsoup4
+Requires-Dist: pandas
+Requires-Dist: lxml
+Requires-Dist: html5lib
+Requires-Dist: more-itertools
+Requires-Dist: selenium
+Requires-Dist: tqdm
+
+UNKNOWN
+
+
