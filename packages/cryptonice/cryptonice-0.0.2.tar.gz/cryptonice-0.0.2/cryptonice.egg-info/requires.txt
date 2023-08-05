@@ -1,0 +1,8 @@
+sslyze
+cryptography
+nassl
+dnspython
+http-client
+tls-parser
+urllib3
+ipaddress
