@@ -1,0 +1,17 @@
+README.md
+setup.py
+wrappingpaper/__init__.py
+wrappingpaper/context.py
+wrappingpaper/exceptions.py
+wrappingpaper/iters.py
+wrappingpaper/logs.py
+wrappingpaper/misc.py
+wrappingpaper/objects.py
+wrappingpaper/props.py
+wrappingpaper/schedule.py
+wrappingpaper/signature.py
+wrappingpaper/text.py
+wrappingpaper.egg-info/PKG-INFO
+wrappingpaper.egg-info/SOURCES.txt
+wrappingpaper.egg-info/dependency_links.txt
+wrappingpaper.egg-info/top_level.txt
