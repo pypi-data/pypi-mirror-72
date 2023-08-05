@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+smartinput/__init__.py
+smartinput/_smartinput.py
+smartinput.egg-info/PKG-INFO
+smartinput.egg-info/SOURCES.txt
+smartinput.egg-info/dependency_links.txt
+smartinput.egg-info/requires.txt
+smartinput.egg-info/top_level.txt
