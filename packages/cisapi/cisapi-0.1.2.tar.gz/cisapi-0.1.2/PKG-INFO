@@ -1,0 +1,38 @@
+Metadata-Version: 1.1
+Name: cisapi
+Version: 0.1.2
+Summary: UNKNOWN
+Home-page: https://autodealerdata.com
+Author: Competitive Intelligence Solutions LLC
+Author-email: engineering@competitiveintelligencesolutions.com
+License: MIT
+Download-URL: https://github.com/CISAPI/CIS-API/archive/CIS-API-V0.1.tar.gz
+Description: # CIS-API
+        
+        [![CIS Automotive API](https://api.autodealerdata.com/static/images/embedImgWide.png)](https://autodealerdata.com)
+        
+        The CIS Automotive API provides real time sales and market data for the US automotive market with data on 40k dealers and over 430M vehicles.
+        This library provides convenient python bindings to the API and manages access credentials for you. 
+        
+        Requires python>=3.6
+        
+        For the most recent endpoint documentation see https://api.autodealerdata.com/docs
+        
+        Library specific documentation is available on our github https://github.com/CISAPI/CIS-API
+        
+        # License
+        This package is licensed under the MIT License.
+        
+        # Copyright
+        Copyright 2020 Competitive Intelligence Solutions LLC
+Keywords: CIS,Automotive,API,Library
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
