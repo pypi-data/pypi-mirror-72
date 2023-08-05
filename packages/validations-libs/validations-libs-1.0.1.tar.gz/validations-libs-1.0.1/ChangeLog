@@ -1,0 +1,66 @@
+CHANGES
+=======
+
+1.0.1
+-----
+
+* Filter get\_all\_log\_file by extension
+* Catch value error when extract log info from log name
+* Add base\_dir param to override the constants value easily
+* Avoid None value when missing data in ansible log
+* Handle multiple validation logs results
+* Raise exception if no validation is found
+* Add asynchronous option to validation libs
+* Update TOX\_CONSTRAINTS\_FILE for stable/ussuri
+* Update .gitreview for stable/ussuri
+
+1.0.0
+-----
+
+* Format output in json or yaml for validations show param
+* Use validation\_path attribut instead of variables
+* Declare playbooks for groups execution
+* Expose limit hosts option to the validation run actions
+* Ensure we get a sorted list for validation groups
+* Add unit tests coverage for validation, group and logs classes
+* Make mock import python 2.7 compatible
+* Add backward compatibility for old ansible\_runner releases
+* Update to hacking 3.0
+* Update hacking for Python3
+* Fix behavior for Show command to stick to tripleoclient
+* Add get validation playbook function and cleanup
+* Implement validation show history command
+* Add validation log object representation
+* Add TripleO Jobs back
+* Use Zuul template for lower-constraints
+* Implement Validation Show Parameters
+* Add validation\_actions class and group info implementation
+* Move validation data as object
+* Fix typo in unit test fakes data
+* Remove unused classes for PushD and Tempdir
+* Add validations show functions
+* Remove mock as a test requirement and add PyYAML as requirement
+* Change ansible artifacts dir to /var/log
+* Improve the way we log on the file system
+* Handle playbook as a list or simple str
+* Make playbooks as a list by default
+* remove untested get\_result functions from this PR
+* Fix pep8 lint for unit tests
+* Add unit tests for ansible runner library
+* Remove zuul.d temporarily
+* Add unit tests for validations\_run class
+* add validations logs path cache
+* fix import issue and add config opt to the run object
+* fix nits
+* Improve testing infrastructure
+* Remove extra-vars logic from run.py
+* fix pep8 lint
+* Add run and ansible\_runner execution
+* fix pep8 lint
+* Add run and ansible\_runner execution
+* fix module import
+* Add utils functions and validations List object
+* Add missing stuffs for pytesting with tox
+* Adding the foundation files
+* Init python project structure
+* Initial commit
