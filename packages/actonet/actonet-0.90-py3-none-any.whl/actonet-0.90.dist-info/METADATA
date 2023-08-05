@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: actonet
+Version: 0.90
+Summary: Abduction-based control of Boolean networks fixpoints
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: computational systems biology
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Dist: algorecell-types
+Requires-Dist: asprin
+Requires-Dist: colomoto-jupyter
+
+UNKNOWN
+
+
