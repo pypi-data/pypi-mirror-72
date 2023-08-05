@@ -1,0 +1,10 @@
+README.md
+setup.py
+classypandas/__init__.py
+classypandas/core.py
+classypandas.egg-info/PKG-INFO
+classypandas.egg-info/SOURCES.txt
+classypandas.egg-info/dependency_links.txt
+classypandas.egg-info/not-zip-safe
+classypandas.egg-info/requires.txt
+classypandas.egg-info/top_level.txt
