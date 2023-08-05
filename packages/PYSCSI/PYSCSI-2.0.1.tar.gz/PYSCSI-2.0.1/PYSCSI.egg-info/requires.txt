@@ -1,0 +1,16 @@
+
+[dev]
+isort
+mypy
+pre-commit
+pytest
+pytest-mypy
+setuptools>=42
+setuptools_scm[toml]>=3.4
+wheel
+
+[iscsi]
+cython-iscsi
+
+[sgio]
+cython-sgio>=1.1.2
