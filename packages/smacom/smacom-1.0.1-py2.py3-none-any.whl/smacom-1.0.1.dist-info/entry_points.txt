@@ -1,0 +1,3 @@
+[console_scripts]
+smacom = smacli:main
+
