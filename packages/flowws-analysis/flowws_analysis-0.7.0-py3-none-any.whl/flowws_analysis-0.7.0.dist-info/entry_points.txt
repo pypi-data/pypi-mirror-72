@@ -1,0 +1,26 @@
+[flowws_modules]
+Center = flowws_analysis.Center:Center
+Colormap = flowws_analysis.Colormap:Colormap
+Diffraction = flowws_analysis.Diffraction:Diffraction
+GTAR = flowws_analysis.GTAR:GTAR
+Garnett = flowws_analysis.Garnett:Garnett
+Plato = flowws_analysis.Plato:Plato
+Pyriodic = flowws_analysis.Pyriodic:Pyriodic
+Save = flowws_analysis.Save:Save
+SaveGarnett = flowws_analysis.SaveGarnett:SaveGarnett
+Selection = flowws_analysis.Selection:Selection
+ViewNotebook = flowws_analysis.ViewNotebook:ViewNotebook
+ViewQt = flowws_analysis.ViewQt:ViewQt
+flowws_analysis.Center = flowws_analysis.Center:Center
+flowws_analysis.Colormap = flowws_analysis.Colormap:Colormap
+flowws_analysis.Diffraction = flowws_analysis.Diffraction:Diffraction
+flowws_analysis.GTAR = flowws_analysis.GTAR:GTAR
+flowws_analysis.Garnett = flowws_analysis.Garnett:Garnett
+flowws_analysis.Plato = flowws_analysis.Plato:Plato
+flowws_analysis.Pyriodic = flowws_analysis.Pyriodic:Pyriodic
+flowws_analysis.Save = flowws_analysis.Save:Save
+flowws_analysis.SaveGarnett = flowws_analysis.SaveGarnett:SaveGarnett
+flowws_analysis.Selection = flowws_analysis.Selection:Selection
+flowws_analysis.ViewNotebook = flowws_analysis.ViewNotebook:ViewNotebook
+flowws_analysis.ViewQt = flowws_analysis.ViewQt:ViewQt
+
