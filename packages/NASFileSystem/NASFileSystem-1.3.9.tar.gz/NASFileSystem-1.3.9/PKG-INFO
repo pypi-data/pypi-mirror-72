@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: NASFileSystem
+Version: 1.3.9
+Summary: A python file handler which handle ctec file work, it's include: upload and download file from remote, modify file name, copy and move file.
+Home-page: https://github.com/kep-w/py-file-updown
+Author: Kepner Wu
+Author-email: kepner_wu@hotmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: CTEC NAS file system includes create file,get file describe,modify,copy and move file
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
