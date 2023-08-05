@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+s3aads/__init__.py
+s3aads/database.py
+s3aads/resources.py
+s3aads/table.py
+s3aads.egg-info/PKG-INFO
+s3aads.egg-info/SOURCES.txt
+s3aads.egg-info/dependency_links.txt
+s3aads.egg-info/requires.txt
+s3aads.egg-info/top_level.txt
