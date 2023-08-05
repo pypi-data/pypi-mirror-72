@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: TicTocTimer
+Version: 0.1.0
+Summary: A timer object for python, with similar syntax to matlab's tic toc
+Home-page: https://github.com/LamaAni/TicTocTimer
+Author: Zav Shotan
+Author-email: 
+License: LICENSE
+Description: Please see readme.md
+Platform: any
+Requires-Python: >=3.6
