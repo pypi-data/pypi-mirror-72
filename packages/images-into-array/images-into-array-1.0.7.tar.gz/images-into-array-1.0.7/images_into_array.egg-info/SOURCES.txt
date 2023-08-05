@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+images_into_array/images_into_array.py
+images_into_array.egg-info/PKG-INFO
+images_into_array.egg-info/SOURCES.txt
+images_into_array.egg-info/dependency_links.txt
+images_into_array.egg-info/top_level.txt
