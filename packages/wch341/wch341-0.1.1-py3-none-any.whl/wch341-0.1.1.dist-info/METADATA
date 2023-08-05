@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: wch341
+Version: 0.1.1
+Summary: driver for wch341/340
+Home-page: https://makeblock.com
+Author: makeblock
+Author-email: flashindream@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pyserial
+
+UNKNOWN
+
+
