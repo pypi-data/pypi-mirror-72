@@ -1,0 +1,4 @@
+requests>=0.10
+pycryptodome<4.0.0,>=3.9.6
+pathlib==1.0.1
+tenacity<6.0.0,>=5.1.5
