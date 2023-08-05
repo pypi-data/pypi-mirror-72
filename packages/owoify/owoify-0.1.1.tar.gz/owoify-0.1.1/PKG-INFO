@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: owoify
+Version: 0.1.1
+Summary: Owoifies a string
+Author: crinny
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: black (>=19.10b0,<20.0)
