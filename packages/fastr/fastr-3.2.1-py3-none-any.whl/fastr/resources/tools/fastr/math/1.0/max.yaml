@@ -1,0 +1,68 @@
+id: Max
+name: maximum
+version: '1.0'
+description: Find the maximum of a list of values
+authors:
+- email: hakim.achterberg@gmail.com
+  name: Hakim Achterberg
+  url: ''
+class: Node
+command:
+  description: Find the maximum of a list of values
+  url: http://www.bigr.nl/fastr
+  version: '1.0'
+  authors: []
+  targets:
+  - arch: '*'
+    bin: max.py
+    interpreter: python
+    os: '*'
+    paths: ./bin
+interface:
+  id: Max_1.0_interface
+  class: FastrInterface
+  inputs:
+  - parent: Max_1.0_interface
+    id: values
+    name: values
+    datatype: Number
+    prefix: --input
+    repeat_prefix: false
+    cardinality: 1-*
+    nospace: false
+    format: null
+    required: true
+    default: null
+    description: List of values to pick the maximum of
+    order: 0
+    hidden: false
+    join: null
+  outputs:
+  - parent: Max_1.0_interface
+    id: maximum
+    name: output
+    datatype: Number
+    prefix: null
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: Maximum value
+    order: 0
+    hidden: false
+    join: null
+    automatic: true
+    action: null
+    location: ^Maximum = (.*)$
+    separator: null
+    method: stdout
+    negate: false
+cite: ''
+tests: []
+tags: []
+references: []
+help: ''
+url: null
+requirements: null

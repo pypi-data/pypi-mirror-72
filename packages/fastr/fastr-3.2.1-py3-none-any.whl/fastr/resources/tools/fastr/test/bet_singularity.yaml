@@ -1,0 +1,330 @@
+id: SingularityDocker
+name: Brain Extraction Tool from FSL
+version: '0.1'
+description: ''
+authors:
+- name: Hakim Achterberg
+  email: h.achterberg@erasmusmc.nl
+  url: http://www.bigr.nl/people/HakimAchterberg
+class: Node
+command:
+  version: 4.1.9
+  url: ''
+  targets:
+  - os: linux
+    arch: '*'
+    class: SingularityTarget
+    container: docker://hachterberg/fsl-bet-container
+    binary: /usr/lib/fsl/5.0/bet
+  description: null
+  license: null
+  authors: []
+interface:
+  id: SingularityDocker_4.1.9_interface
+  class: FastrInterface
+  inputs:
+  - parent: SingularityDocker_4.1.9_interface
+    id: image
+    name: Input Image
+    datatype: NiftiImageFileCompressed
+    prefix: null
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: true
+    default: null
+    description: ''
+    order: 1
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: overlay_flag
+    name: Overlay brain surface onto original image
+    datatype: Boolean
+    prefix: -o
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 3
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: mask_flag
+    name: Generate Binary Brainmask
+    datatype: Boolean
+    prefix: -m
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 4
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: skull_flag
+    name: Generate Approximate Skull Image
+    datatype: Boolean
+    prefix: -s
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 4
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: no_brain_flag
+    name: Don't generate segmented brain output
+    datatype: Boolean
+    prefix: -n
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 5
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: fraction_value
+    name: Fractional Intensity Threshold
+    datatype: Float
+    prefix: -f
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 6
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: vertical_gradient_value
+    name: Vertical Gradient in FIT
+    datatype: Float
+    prefix: -g
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 7
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: head_radius_value
+    name: Head Radius (mm)
+    datatype: Float
+    prefix: -r
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 8
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: center_of_gravity_coordinate
+    name: Center of Gravity (voxels)
+    datatype: Int
+    prefix: -c
+    repeat_prefix: false
+    cardinality: 3
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 9
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: threshold_flag
+    name: Apply Threshold to Segmented Brain Image
+    datatype: Boolean
+    prefix: -t
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 9
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: generate_mesh_flag
+    name: Generate Mesh surface
+    datatype: Boolean
+    prefix: -e
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 10
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: robust_brain_estimation_flag
+    name: Robust Brain Centre Estimation
+    datatype: Boolean
+    prefix: -R
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 11
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: eye_cleanup_flag
+    name: Eye and Optic Nerve Cleanup
+    datatype: Boolean
+    prefix: -S
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 12
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: bias_cleanup_flag
+    name: Bias Field and Neck Cleanup
+    datatype: Boolean
+    prefix: -B
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 13
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: small_fov_flag
+    name: Improve BET if FOV is very small in Z
+    datatype: Boolean
+    prefix: -Z
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 14
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: fmri_flag
+    name: apply to 4D FMRI data
+    datatype: Boolean
+    prefix: -F
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 15
+    hidden: false
+    join: null
+  - parent: SingularityDocker_4.1.9_interface
+    id: verbose
+    name: verbosity flag
+    datatype: Boolean
+    prefix: -v
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 16
+    hidden: false
+    join: null
+  outputs:
+  - parent: SingularityDocker_4.1.9_interface
+    id: image
+    name: output image
+    datatype: NiftiImageFileCompressed
+    prefix: null
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: true
+    default: null
+    description: ''
+    order: 2
+    hidden: false
+    join: null
+    automatic: false
+    action: null
+    location: null
+    separator: null
+    method: null
+    negate: false
+  - parent: SingularityDocker_4.1.9_interface
+    id: mask
+    name: mask
+    datatype: NiftiImageFileCompressed
+    prefix: null
+    repeat_prefix: false
+    cardinality: as:mask_flag
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 18
+    hidden: false
+    join: null
+    automatic: true
+    action: null
+    location: '{output_parts.image[0].directory}/{output_parts.image[0].basename}_mask.*'
+    separator: null
+    method: path
+    negate: false
+requirements: null
+tests: []
+help: None
+cite: None
+references: []
+tags: []
+url: null
