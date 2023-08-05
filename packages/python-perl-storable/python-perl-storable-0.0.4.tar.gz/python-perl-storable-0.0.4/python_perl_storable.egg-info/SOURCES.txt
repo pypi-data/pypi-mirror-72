@@ -1,0 +1,12 @@
+README.md
+setup.py
+python_perl_storable/__init__.py
+python_perl_storable/constants.py
+python_perl_storable/exception.py
+python_perl_storable/freeze.py
+python_perl_storable/thaw.py
+python_perl_storable.egg-info/PKG-INFO
+python_perl_storable.egg-info/SOURCES.txt
+python_perl_storable.egg-info/dependency_links.txt
+python_perl_storable.egg-info/requires.txt
+python_perl_storable.egg-info/top_level.txt
