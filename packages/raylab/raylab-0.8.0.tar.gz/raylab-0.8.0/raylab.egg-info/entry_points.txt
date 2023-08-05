@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        raylab=raylab.cli:raylab
+    

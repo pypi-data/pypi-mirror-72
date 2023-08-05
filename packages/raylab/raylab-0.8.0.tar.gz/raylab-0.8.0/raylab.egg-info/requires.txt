@@ -1,0 +1,6 @@
+Click>=7.0
+bokeh
+dataclasses-json
+ray[dashboard,rllib]>=0.8.5
+streamlit
+torch
