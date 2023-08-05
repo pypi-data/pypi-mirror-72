@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: mincepy-gui
+Version: 0.3.2
+Summary: GUI for navigating your mincepy database visually!
+Home-page: https://github.com/muhrin/mincepy_gui.git
+Author: Martin Uhrin
+Author-email: martin.uhrin.10@ucl.ac.uk
+License: GPLv3 and MIT
+Keywords: database schemaless nosql object-store gui
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: PySide2
+Requires-Dist: mincepy (>=0.14.0)
+Requires-Dist: pytray (<0.3.0,>=0.2.2)
+Requires-Dist: stevedore
+Provides-Extra: dev
+Requires-Dist: pip ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: prospector ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-qt ; extra == 'dev'
+Requires-Dist: pytest (>4) ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: yapf ; extra == 'dev'
+Provides-Extra: gui
+
+.. _`mincePy`: https://mincepy.readthedocs.io/en/latest/index.html
+
+mincePy
+=======
+
+.. image:: https://codecov.io/gh/muhrin/mincepy_gui/branch/develop/graph/badge.svg
+    :target: https://codecov.io/gh/muhrin/mincepy_gui
+    :alt: Coverage
+
+.. image:: https://travis-ci.com/muhrin/mincepy_gui.svg?branch=master
+    :target: https://travis-ci.com/github/muhrin/mincepy_gui
+    :alt: Travis CI
+
+.. image:: https://img.shields.io/pypi/v/mincepy_gui.svg
+    :target: https://pypi.python.org/pypi/mincepy_gui/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/wheel/mincepy_gui.svg
+    :target: https://pypi.python.org/pypi/mincepy_gui/
+
+.. image:: https://img.shields.io/pypi/pyversions/mincepy_gui.svg
+    :target: https://pypi.python.org/pypi/mincepy_gui/
+
+.. image:: https://img.shields.io/pypi/l/mincepy_gui.svg
+    :target: https://pypi.python.org/pypi/mincepy_gui/
+
+
+A GUI for browsing and manipulating `mincePy`_ data.
+
+
+.. image:: ./mincepy-gui.png
+    :width: 800
+    :alt: The main window of the mincepy gui
+
