@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+S3bkt.egg-info/PKG-INFO
+S3bkt.egg-info/SOURCES.txt
+S3bkt.egg-info/dependency_links.txt
+S3bkt.egg-info/entry_points.txt
+S3bkt.egg-info/requires.txt
+S3bkt.egg-info/top_level.txt
+s3bkt/__init__.py
+s3bkt/clients.py
+s3bkt/command.py
+s3bkt/s3util.py
