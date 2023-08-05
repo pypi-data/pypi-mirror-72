@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: streamsql
+Version: 2.0.0
+Summary: Python SDK for the StreamSQL feature store
+Home-page: https://github.com/streamsql-io/streamsql
+Author: The StreamSQL Team
+Author-email: simba@streamsql.io
+License: AGPLv3
+Description: # StreamSQL
+        
+        ![](https://github.com/streamsql-io/streamsql/workflows/Client%20Unit%20Tests/badge.svg?branch=develop)
+        [![codecov-develop](https://codecov.io/gh/streamsql-io/streamsql/branch/develop/graph/badge.svg)](https://codecov.io/gh/streamsql-io/streamsql)
+        
+        StreamSQL provides centeralized registry of machine learning features and offers a unified interface to serve online features and generate training datasets.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
