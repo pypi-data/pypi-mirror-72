@@ -1,0 +1,7 @@
+[console_scripts]
+bcml-debug = bcml.__main__:main_debug
+bcml-install-cef = bcml.__main__:install_cef
+
+[gui_scripts]
+bcml = bcml.__main__:main
+
