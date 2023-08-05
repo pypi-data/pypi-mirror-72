@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.py
+lib/nextstrain/sphinx/theme/VERSION
+lib/nextstrain/sphinx/theme/__init__.py
+lib/nextstrain/sphinx/theme/layout.html
+lib/nextstrain/sphinx/theme/theme.conf
+lib/nextstrain/sphinx/theme/static/nextstrain-logo.svg
+lib/nextstrain/sphinx/theme/static/css/nextstrain.css
+lib/nextstrain_sphinx_theme.egg-info/PKG-INFO
+lib/nextstrain_sphinx_theme.egg-info/SOURCES.txt
+lib/nextstrain_sphinx_theme.egg-info/dependency_links.txt
+lib/nextstrain_sphinx_theme.egg-info/entry_points.txt
+lib/nextstrain_sphinx_theme.egg-info/requires.txt
+lib/nextstrain_sphinx_theme.egg-info/top_level.txt

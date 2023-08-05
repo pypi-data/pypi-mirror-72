@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "theme.css"; /* From sphinx_rtd_theme */
+
+html {
+  --text-color: black;
+  --heading-color: #404040;
+  --link-color: #5097ba;
+  --sidebar-background-color: #f2f2f2;
+}
+
+body {
+  font-family: Lato, 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6, legend, .rst-content .toctree-wrapper p.caption {
+  font-family: Lato, 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  color: var(--heading-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+/* Monospace typography */
+footer span.commit code,
+.rst-content pre.literal-block,
+.rst-content div[class^='highlight'] pre,
+.rst-content .linenodiv pre,
+.rst-content tt,
+.rst-content code,
+.rst-content pre,
+.rst-content kbd,
+.rst-content samp {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+}
+
+/* Sidebar */
+.wy-nav-side {
+  background: var(--sidebar-background-color);
+}
+
+/* Project name and version */
+.wy-side-nav-search > a {
+  color: var(--heading-color);
+}
+
+.wy-side-nav-search > a.project-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Remove blue accent border */
+.wy-side-nav-search input[type="text"] {
+  border-color: #ccc;
+}
+
+.wy-menu-vertical header,
+.wy-menu-vertical p.caption,
+.wy-menu-vertical a {
+  font-size: 1rem;
+}
+
+.wy-menu-vertical li ul li a {
+  font-weight: 300;
+}
+
+/* Remove sidebar TOC link colors, hover states, and borders */
+.wy-menu-vertical a {
+  color: var(--text-color);
+  background: none !important;
+}
+
+.wy-menu-vertical a:hover {
+  color: var(--link-color) !important;
+  background: none !important;
+}
+
+.wy-menu-vertical li.current {
+  background: none !important;
+}
+
+.wy-menu-vertical li.current a {
+  border-right: none;
+}
+
+.wy-menu-vertical li.current > a {
+  border-right: 2px solid var(--link-color);
+}
+
+.wy-menu-vertical li.toctree-l1.current > a {
+  border-top: none;
+  border-bottom: none;
+}
+
+/* Remove sidebar TOC heading/caption color */
+.wy-menu-vertical p.caption {
+  color: var(--heading-color);
+}
