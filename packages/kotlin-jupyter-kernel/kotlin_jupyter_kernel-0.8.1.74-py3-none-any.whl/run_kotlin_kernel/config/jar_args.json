@@ -1,0 +1,10 @@
+{
+    "mainJar": "kotlin-jupyter-kernel-0.8.1.74.jar",
+    "classPath": [
+        "jupyter-lib-0.8.1.74.jar",
+        "kotlin-stdlib-1.4.20-dev-1121.jar",
+        "kotlin-stdlib-common-1.4.20-dev-1121.jar",
+        "annotations-13.0.jar"
+    ],
+    "debuggerConfig": ""
+}
