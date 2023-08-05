@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: robotslacker-sqlcli
+Version: 0.0.73
+Summary: SQL Command tool, use JDBC, jaydebeapi
+Home-page: https://github.com/robotslacker/sqlcli
+Author: RobotSlacker
+Author-email: 184902652@qq.com
+License: UNKNOWN
+Keywords: sql command jaydebeapi
+Platform: any
+Requires-Dist: jaydebeapi
+Requires-Dist: setproctitle
+Requires-Dist: click
+Requires-Dist: prompt-toolkit
+Requires-Dist: cli-helpers
+Requires-Dist: kafka-python
+Requires-Dist: fs
+Requires-Dist: hdfs
+
+# robotslacker-sqlcli
+
+robotslacker-sqlcli is a SQL command console tool.
+
+
+## Install
+
+Install robotslacker-sqlcli
+
+    pip install -U robotslacker-sqlcli
+
+## Usage
+
+    [Doc](https://github.com/robotslacker/sqlcli/blob/master/Doc.md)
+
+
