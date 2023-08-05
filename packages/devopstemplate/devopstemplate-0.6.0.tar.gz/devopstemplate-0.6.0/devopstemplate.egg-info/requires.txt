@@ -1,0 +1,11 @@
+Jinja2
+
+[dev]
+pip>=20.1.1
+wheel
+pytest
+coverage
+bandit
+pylint
+autopep8
+flake8

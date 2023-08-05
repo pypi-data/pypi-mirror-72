@@ -1,0 +1,3 @@
+[console_scripts]
+devopstemplate = devopstemplate.main:main
+
