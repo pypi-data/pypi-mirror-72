@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        click-app-template-demo=click_app_template_demo.cli:cli
+    

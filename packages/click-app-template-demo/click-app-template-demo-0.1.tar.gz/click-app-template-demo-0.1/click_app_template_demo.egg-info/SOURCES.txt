@@ -1,0 +1,10 @@
+README.md
+setup.py
+click_app_template_demo/__init__.py
+click_app_template_demo/cli.py
+click_app_template_demo.egg-info/PKG-INFO
+click_app_template_demo.egg-info/SOURCES.txt
+click_app_template_demo.egg-info/dependency_links.txt
+click_app_template_demo.egg-info/entry_points.txt
+click_app_template_demo.egg-info/requires.txt
+click_app_template_demo.egg-info/top_level.txt
