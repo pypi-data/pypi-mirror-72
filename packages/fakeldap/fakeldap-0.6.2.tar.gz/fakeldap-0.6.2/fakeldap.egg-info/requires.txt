@@ -1,0 +1,8 @@
+python-ldap
+
+[test]
+nose
+Mock
+coverage
+unittest2
+python-ldap
