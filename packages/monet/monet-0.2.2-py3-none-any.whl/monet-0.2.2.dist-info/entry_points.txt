@@ -1,0 +1,3 @@
+[console_scripts]
+enhance.py = monet.denoise.cli:run_enhance
+
