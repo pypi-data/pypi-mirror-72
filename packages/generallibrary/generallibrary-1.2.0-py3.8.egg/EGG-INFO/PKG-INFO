@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: generallibrary
+Version: 1.2.0
+Summary: New file structure once again. Made it simpler. Goal is to have not imports break when running unit tests from different places. Random functions to help with native classes.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
