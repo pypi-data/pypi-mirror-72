@@ -1,0 +1,14 @@
+README.md
+setup.py
+msedge/__init__.py
+msedge/selenium_tools/__init__.py
+msedge/selenium_tools/options.py
+msedge/selenium_tools/remote_connection.py
+msedge/selenium_tools/service.py
+msedge/selenium_tools/webdriver.py
+msedge_selenium_tools.egg-info/PKG-INFO
+msedge_selenium_tools.egg-info/SOURCES.txt
+msedge_selenium_tools.egg-info/dependency_links.txt
+msedge_selenium_tools.egg-info/not-zip-safe
+msedge_selenium_tools.egg-info/requires.txt
+msedge_selenium_tools.egg-info/top_level.txt
