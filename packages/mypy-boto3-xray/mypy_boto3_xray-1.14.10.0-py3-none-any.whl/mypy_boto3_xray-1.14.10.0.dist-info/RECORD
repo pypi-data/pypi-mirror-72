@@ -1,0 +1,11 @@
+mypy_boto3_xray/__init__.py,sha256=SfJQOcn94X4ajjiY7PxyMUxwkMIkZHbDQz8FDPFEJUQ,2184
+mypy_boto3_xray/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_xray/client.py,sha256=09HR7FK6H7K21K3jUqbVe3I8MQ0b6dDMAogMQDbM694,12395
+mypy_boto3_xray/paginator.py,sha256=9WAfkdTiWteDGxMFDn4Z6NIOdu88gjJeajx8q7-Zs04,7694
+mypy_boto3_xray/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_xray/type_defs.py,sha256=QEwBLj8SWjQzPUiqGsFy-jkbCCWIx4zHQBWrygQWMoQ,16628
+mypy_boto3_xray/version.py,sha256=AagMQQdVt6IqYiMU_fphBiz72mqZMDooehTvQuGfvK4,57
+mypy_boto3_xray-1.14.10.0.dist-info/METADATA,sha256=Bu7km-WApu2m8vhT48WpZKUHVoOQDHh0FSwSBCNzHpQ,5587
+mypy_boto3_xray-1.14.10.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_xray-1.14.10.0.dist-info/top_level.txt,sha256=LiAvfXFloSmVjBu3Zg1cCVV0W9c5bbEa0vBiFnfToEY,16
+mypy_boto3_xray-1.14.10.0.dist-info/RECORD,,
