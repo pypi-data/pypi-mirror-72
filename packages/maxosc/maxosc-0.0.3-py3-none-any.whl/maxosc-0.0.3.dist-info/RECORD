@@ -1,0 +1,12 @@
+maxosc/__init__.py,sha256=vyFU_JHFuK6oxjYrD3Xj8JBEPhEG581ym9eY7RHELW8,89
+maxosc/caller.py,sha256=C2e-TWzi4VR-cMSgCFoV9ZSC7RWBdNl-P1HHUmfcSRU,7285
+maxosc/exceptions.py,sha256=O97kqaZHZFqXWFwuGnBmgPUgLle2x2R4mg9BPBH-ui0,307
+maxosc/maxformatter.py,sha256=EWeFpQkH5yXA_nxm5LrAu9zh6cBTrwNZFa7uMwZddPs,4380
+maxosc/maxosc.py,sha256=ngnxIfddhLzSIjrv3Jd9mCER6P0r7bukZmOManOLDrQ,3605
+maxosc/oscloghandler.py,sha256=NhPf2dyB_O23yuzwQnE-TdPAJYlTmJlCZnUJ5EdJC1o,463
+maxosc/parser.py,sha256=aJWA4rbaSwiFA1yeo73uCmUyIBdNuyFpVR8_Yr7B6VE,7930
+maxosc/sender.py,sha256=-7Jgjr0ekKVOZ-yimZPIyWJQ-wToVjUWddWm7h24XcQ,2262
+maxosc-0.0.3.dist-info/METADATA,sha256=_Dln8EihEeVk0GIXs5bVF9_h-EdwpM6mS-7MD8JR7bY,6425
+maxosc-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+maxosc-0.0.3.dist-info/top_level.txt,sha256=vb8sQ6Iw_j-6-IUxboisvLxFyhQjdK3sWyCARz1llCs,7
+maxosc-0.0.3.dist-info/RECORD,,
