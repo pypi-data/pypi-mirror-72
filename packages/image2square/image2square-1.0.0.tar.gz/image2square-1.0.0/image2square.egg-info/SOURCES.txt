@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+image2square/__init__.py
+image2square/__main__.py
+image2square/image_to_square.py
+image2square.egg-info/PKG-INFO
+image2square.egg-info/SOURCES.txt
+image2square.egg-info/dependency_links.txt
+image2square.egg-info/entry_points.txt
+image2square.egg-info/requires.txt
+image2square.egg-info/top_level.txt
