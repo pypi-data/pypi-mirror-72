@@ -1,0 +1,15 @@
+guillotina_s3storage/__init__.py,sha256=QO3SKvgT-G2Yv49rGrEMKnQQr5zXGWMLKVY85thsjW4,347
+guillotina_s3storage/interfaces.py,sha256=ANxs8wQc5pMuFlbbsptn0ZUVbQ1LRBEokq4LMgAJ-mA,379
+guillotina_s3storage/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+guillotina_s3storage/storage.py,sha256=rOQWxqEOooj3k9uBx6ZipH7PzhZ4xBr2gdxjUJkIqVI,12431
+guillotina_s3storage/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+guillotina_s3storage/tests/conftest.py,sha256=7M4Khat7Xul4qyUYgqTM20PvyK1Dldyx8W8y44M3HAw,127
+guillotina_s3storage/tests/fixtures.py,sha256=wS4bXa2XeINkOl7I9jR0dRh6R0kUy3ALodcuctYu07Y,1674
+guillotina_s3storage/tests/mocks.py,sha256=37hZkZhqJvB__Q1nrMjAIXxMHta9-HWSBYItN1iZOAw,177
+guillotina_s3storage/tests/test_storage.py,sha256=4cj8tWDgC-SzeBWjEUi2_ZN_8tcNkKqc56pT-fDTTxs,30106
+guillotina_s3storage-5.0.8.dist-info/LICENSE,sha256=0L3nJn383L5Qbe9RWUJpSmRTeGBqeMxXFNWE4Y70gTE,1315
+guillotina_s3storage-5.0.8.dist-info/METADATA,sha256=O3XT3_U-0kB9Y8Fwdj0uJRW9Y_KQp6p8AO9mgvmmFI0,8806
+guillotina_s3storage-5.0.8.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+guillotina_s3storage-5.0.8.dist-info/top_level.txt,sha256=2-wwTxk56JLzOlmJ0h4cKZKIhQio_6dSFvwJ3naciSs,21
+guillotina_s3storage-5.0.8.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+guillotina_s3storage-5.0.8.dist-info/RECORD,,
