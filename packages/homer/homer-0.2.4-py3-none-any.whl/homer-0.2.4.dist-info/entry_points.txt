@@ -1,0 +1,3 @@
+[console_scripts]
+homer = homer.cli:main
+
