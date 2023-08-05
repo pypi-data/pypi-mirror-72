@@ -1,0 +1,30 @@
+site_name: Z2n Periodogram
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Getting Started: install.md
+  - Usage:
+    - input.md
+    - usage.md
+    - plotting.md
+  - API:
+    - series.md
+    - plot.md
+  - Contributing: contribute.md
+  - License: copyright.md
+
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - python
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - mkautodoc
+  - markdown_katex:
+      no_inline_svg: True
+      insert_fonts_css: True
+      macro-file: docs/macros.tex
