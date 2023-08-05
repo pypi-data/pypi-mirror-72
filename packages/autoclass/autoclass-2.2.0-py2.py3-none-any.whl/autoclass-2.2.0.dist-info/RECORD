@@ -1,0 +1,17 @@
+autoclass/__init__.py,sha256=8b92J7DonWCdASjiz6pBM9u3dwHp8qVVBUWe6CX8ZKg,1856
+autoclass/_version.py,sha256=jZfLKW5afG6CMfZ9vVHtN8N9vtVzK8yZqB2L2rOReQs,116
+autoclass/autoargs_.py,sha256=AZF-AchmtPXDpTdnPqF1bkTWjkeeN7guxhAVrstm17k,5436
+autoclass/autoclass_.py,sha256=o_G1FR-DS2ndgwRTCDjyc-40sR3TgH1X0-XlYfu10R8,12616
+autoclass/autodict_.py,sha256=FI0a-3Fl0pxMpL8LmSWTxCFGJENAnvYriIvz9vKdJ6g,30840
+autoclass/autoeq_.py,sha256=wEmZRsEs-j_kALiR1ng0-hV4kfgxOEAzTMB9JIyafhs,9990
+autoclass/autohash_.py,sha256=L8ftFxJZ5C79uGwsHRfuSQl2dft0PqevVqPVukXQRt4,10714
+autoclass/autoprops_.py,sha256=7LBCn-zDVT-oxVF-gyRHMDVHuu177Uw917yxcb15UqQ,24134
+autoclass/autorepr_.py,sha256=sfLbF5NsQL-WrMxGVMfn3VdEpq3fJ2Hzyxc5sOk9Brg,13324
+autoclass/autoslots_.py,sha256=SzhFaPLU5LSxkMPtoFsXgOQikI5ovezXHAHA_kc0y8w,11447
+autoclass/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autoclass/utils.py,sha256=2LmtPfT-3OhYH5SQgV6u1rHvV3PJoXwZPH9LU9YNX2I,10060
+autoclass-2.2.0.dist-info/LICENSE,sha256=A9X1ocoi2Wo5r46Xkf_nOc9PYzXKj00tUi_0qvAf7Sg,1506
+autoclass-2.2.0.dist-info/METADATA,sha256=vZVYJ9qjxgetZ1VS_5qgIKtzNz8lzf6fzPjNQc5Y8GA,2808
+autoclass-2.2.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+autoclass-2.2.0.dist-info/top_level.txt,sha256=zfvUcSSEmjIqGDPxkJuk_HZH-Dx0k0NibUAXoWyL7D4,10
+autoclass-2.2.0.dist-info/RECORD,,
