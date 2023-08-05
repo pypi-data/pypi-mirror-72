@@ -1,0 +1,12 @@
+tensorflow<2.0.0
+keras>=2.3.1
+scikit-learn>=0.22.1
+numpy>=1.18.1
+matplotlib>=3.2.1
+pandas>=1.0.3
+pandastable>=0.12.2tifffile>=2020.5.11
+micdata>=0.1.0
+
+[bioformats]
+python-bioformats>=1.5.2
+javabridge>=1.0.18
