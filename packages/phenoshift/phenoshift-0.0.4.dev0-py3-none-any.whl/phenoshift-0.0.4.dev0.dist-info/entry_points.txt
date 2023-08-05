@@ -1,0 +1,3 @@
+[console_scripts]
+phenoshift = phenoshift.main:cli
+
