@@ -1,0 +1,12 @@
+flexpoolapi/__init__.py,sha256=ZbN-8VKu2PKdk-aMWr-GXjwKX5VSb6blev_YVxsICeE,1641
+flexpoolapi/exceptions.py,sha256=ln41pYnwyefdpJdjHF5BFRc5qJ-I2bZ0Ihi-9xnW1iA,1331
+flexpoolapi/minerapi.py,sha256=hDSq075B9SKWGm7wPDUmrNIOc8_Fsm_yvUY9sK2N0-g,7903
+flexpoolapi/poolapi.py,sha256=Tucyx3tSqi6HI-1wvnHLf0tTJucNO_BrFz1QXl3-vcY,7317
+flexpoolapi/shared.py,sha256=zha85Nc_qERswaBczc1Uhz3WTfv7NGQi4PoZ6DrAkis,5986
+flexpoolapi/utils.py,sha256=4GXEV_pUItGyYgSLAHBMJYIW_Ad5tXWXXpJYL23rSaU,1445
+flexpoolapi/workerapi.py,sha256=Ygr0T4GcQq96rBXOsuqNpPD4cNuhjtFcxb__IrIcLII,3796
+flexpoolapi-1.0.0.dist-info/LICENSE,sha256=_7klqPZCNlji3L2MYXx6tbneX7YYlNENiRkW1heHbA0,1065
+flexpoolapi-1.0.0.dist-info/METADATA,sha256=AVsjXwzw1NwFYwCBBrgb2o305G4XrdOWCPf7V4BeM2Q,2537
+flexpoolapi-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+flexpoolapi-1.0.0.dist-info/top_level.txt,sha256=U64-w0_J128D0RfKI9Kf5Qgf8KFSNRhPHd5o1j2obHA,12
+flexpoolapi-1.0.0.dist-info/RECORD,,
