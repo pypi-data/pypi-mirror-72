@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: nionswift_elabftw_plugin
+Version: 0.1.1
+Summary: A simple plugin to allow users to manage their ElabFTW experiments metadata through Nionswift.
+Home-page: https://github.com/shabihsherjeel/nionswift_elabftw_plugin
+Author: Sherjeel Shabih
+Author-email: shabihsherjeel@gmail.com
+License: GNU General Public License v3.0
+Download-URL: https://github.com/shabihsherjeel/nionswift_elabftw_plugin/archive/v0.1.1-alpha.tar.gz
+Description: UNKNOWN
+Keywords: NIONSWIFT,ELABFTW,ELN,PLUGIN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
