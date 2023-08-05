@@ -1,0 +1,22 @@
+htm
+MarkupSafe
+
+[:python_version < "3.8"]
+typing_extensions>=3.7.4
+
+[docs]
+Sphinx
+sphinx-book-theme
+myst-parser
+
+[tests]
+pytest
+pytest-mock
+pytest-cov
+mypy
+pytest-mypy
+py
+coverage
+tox
+black
+flake8
