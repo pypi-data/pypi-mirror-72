@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pi-1mp
+Version: 0.0.2
+Summary: Has Up to 1 Million digits of pi!
+Home-page: UNKNOWN
+Author: Tanmay Earappa
+Author-email: Tams.Mathe@gmail.com
+License: MIT
+Description: A File for math-pi
+        If you want to know more, use my module [math_pi](https://pypi.org/project/math-pi/)
+        
+        regards,
+        Tanmay
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
