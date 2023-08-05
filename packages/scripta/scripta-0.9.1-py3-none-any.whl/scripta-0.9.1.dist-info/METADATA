@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: scripta
+Version: 0.9.1
+Summary: Script asciinema movies
+Home-page: https://github.com/rec/scripta
+Author: Tom Ritchford
+Author-email: tom@swirly.com
+License: MIT
+Keywords: documentation
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Dist: dataclasses
+Requires-Dist: safer
+Requires-Dist: termtosvg
+
+🎦 scripta: Script asciinema movies 🎦
+--------------------------------------------
+
+Love asciinema movies? Have performance anxiety?
+
+scripta lets you script your asciinema movies, for Python, bash
+or any other command interpreter.
+
+
