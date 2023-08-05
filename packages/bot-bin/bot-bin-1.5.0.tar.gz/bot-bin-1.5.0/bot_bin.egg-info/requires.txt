@@ -1,0 +1,12 @@
+discord.py<2.0.0,>=1.3.3
+humanize
+python-dateutil
+objgraph
+
+[sql]
+aiocontextvars>=0.2.2
+asyncpg
+prettytable
+
+[uvloop]
+uvloop<1.0.0,>=0.14.0
