@@ -1,0 +1,161 @@
+Metadata-Version: 2.1
+Name: hashtools
+Version: 0.3.0
+Summary: Hash tools collection, like md5, sha1, sha256 and many other hash tools.
+Home-page: https://github.com/zencore-cn/zencore-issues
+Author: zencore
+Author-email: dobetter@zencore.cn
+License: MIT
+Description: # hashtools
+        
+        
+        Hash tools collection, like md5, sha1, sha256 and many other hash tools.
+        
+        
+        ## Install
+        
+            pip install hashtools
+        
+        
+        ## Commands
+        
+        ### Windows Python 2.7
+        
+        - dsa
+        - dsa_sha
+        - dsaencryption
+        - dsawithsha
+        - ecdsa_with_sha1
+        - md4
+        - md5
+        - ripemd160
+        - sha
+        - sha1
+        - sha224
+        - sha256
+        - sha384
+        - sha512
+        - whirlpool
+        
+        ### Linux Python 2.7
+        
+        - dsa
+        - dsasha
+        - dsaencryption
+        - dsawithsha
+        - ecdsawithsha1
+        - md4
+        - md5
+        - ripemd160
+        - sha
+        - sha1
+        - sha224
+        - sha256
+        - sha384
+        - sha512
+        - whirlpool
+        
+        ### Linux Python 3.6
+        
+        - blake2b
+        - blake2s
+        - dsa
+        - dsa_sha
+        - dsaencryption
+        - dsawithsha
+        - ecdsa_with_sha1
+        - md4
+        - md5
+        - ripemd160
+        - sha
+        - sha1
+        - sha224
+        - sha256
+        - sha384
+        - sha3_224
+        - sha3_256
+        - sha3_384
+        - sha3_512
+        - sha512
+        - shake_128
+        - shake_256
+        - whirlpool
+        
+        ## About SHAKE algorithms
+        
+        - You must give output length, default to 1024.
+        
+        ## Usage
+        
+            C:\Code\hashtools>md5 --help
+            Usage: MD5 [OPTIONS] [FILENAMES]...
+        
+            Options:
+            -v, --verbose         Show filename or not.
+            -c, --concat          Concat all files to one file, and get only one hash
+                                    code.
+            -l, --length INTEGER  Output length for SHAKE object.
+            --help                Show this message and exit.
+        
+            C:\Code\hashtools>sha1 --help
+            Usage: sha1 [OPTIONS] [FILENAMES]...
+        
+            Options:
+            -v, --verbose         Show filename or not.
+            -c, --concat          Concat all files to one file, and get only one hash
+                                    code.
+            -l, --length INTEGER  Output length for SHAKE object.
+            --help                Show this message and exit.
+        
+        ## Usage
+        
+            C:\Data\hashtools\test>echo msg | md5
+            b47d94f422d2032dac746f8b6cb263a5
+        
+            C:\Data\hashtools\test>echo msg | md5 -v
+            b47d94f422d2032dac746f8b6cb263a5 *-
+        
+            C:\Data\hashtools\test>echo msg | sha256
+            c7b6fcf29e713727bdea4c283d816c42cce9a0b4cb08484223f3b9b45256ec59
+        
+            C:\Data\hashtools\test>echo msg > a.txt
+        
+            C:\Data\hashtools\test>type a.txt
+            msg
+        
+            C:\Data\hashtools\test>md5 a.txt
+            b47d94f422d2032dac746f8b6cb263a5
+        
+            C:\Data\hashtools\test>md5 a.txt -v
+            b47d94f422d2032dac746f8b6cb263a5 *a.txt
+        
+        
+        ## Bug report
+        
+        Please report any issues at https://github.com/zencore-cn/zencore-issues.
+        
+        ## Releases
+        
+        ### v0.3.0 2020-06-24
+        
+        - Add base64 output format.
+        
+        ### v0.2.0 2019-11-05
+        
+        - Fix entry_points install way.
+        - Add star before filename in verbose mode.
+        - Fix SHAKE algorithms, set default output length to 1024, and you can set it with option --length.
+        
+        ### v0.1.2 2019-04-07
+        
+        - First release of hashtools.
+        
+Keywords: hashtools
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown

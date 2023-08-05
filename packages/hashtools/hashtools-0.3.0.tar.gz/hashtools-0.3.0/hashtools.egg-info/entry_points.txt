@@ -1,0 +1,16 @@
+[console_scripts]
+blake2b = hashtools:blake2b
+blake2s = hashtools:blake2s
+md5 = hashtools:md5
+sha1 = hashtools:sha1
+sha224 = hashtools:sha224
+sha256 = hashtools:sha256
+sha384 = hashtools:sha384
+sha3_224 = hashtools:sha3_224
+sha3_256 = hashtools:sha3_256
+sha3_384 = hashtools:sha3_384
+sha3_512 = hashtools:sha3_512
+sha512 = hashtools:sha512
+shake_128 = hashtools:shake_128
+shake_256 = hashtools:shake_256
+

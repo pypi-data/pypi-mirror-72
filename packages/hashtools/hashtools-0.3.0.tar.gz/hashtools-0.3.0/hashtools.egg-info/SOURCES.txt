@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+hashtools.py
+requirements.txt
+setup.py
+hashtools.egg-info/PKG-INFO
+hashtools.egg-info/SOURCES.txt
+hashtools.egg-info/dependency_links.txt
+hashtools.egg-info/entry_points.txt
+hashtools.egg-info/requires.txt
+hashtools.egg-info/top_level.txt
+tests/__init__.py
+tests/test_hashtools.py
