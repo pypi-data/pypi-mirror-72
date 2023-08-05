@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: kermout-strips-api
+Version: 0.0.3
+Summary: Remotely interact with Kermout's Strips System
+Home-page: https://github.com/RazerMoon/Kermout_Strips_API
+Author: RazerMoon
+Author-email: rasync@rasync.xyz
+License: UNKNOWN
+Description: # fsATC Kermout Strips API
+        
+        Used to interact with Kermout's fsATC Strips System remotely.
+        
+        ![Getting the plan](.media/plan.gif)
+        
+        Check out the tests for an example of how it works!
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
