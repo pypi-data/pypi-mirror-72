@@ -1,0 +1,7 @@
+arrow==0.15.6
+python-dateutil==2.2
+Werkzeug==1.0.1
+json-rpc==1.13.0
+coloredlogs==14.0
+requests==2.24.0
+jinja2==2.11.2
