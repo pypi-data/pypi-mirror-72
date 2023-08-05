@@ -1,0 +1,62 @@
+{% macro pyfunc(name, depth=1) %}
+
+.. py:function:: {{ call(name, depth) }}
+
+{{ docstring(name)|indent3 }}
+{%- endmacro %}
+
+{% macro pycfunc(name, depth=1) %}
+
+.. py:function:: {{ call(name, depth) }}
+
+{{ docstring_body(name)|indent3 }}
+{%- endmacro %}
+
+{% macro pyclass(name, depth=1) %}
+{{ basename(name)|doublescore }}
+
+.. py:class:: {{ basename(name) }}
+
+{{ docstring(name)|indent3 }}
+{%- endmacro %}
+
+{% macro reader_pyclass(name, classname="BaseMoleculeReader") %}
+
+.. py:class:: {{ basename(name) }}
+
+{{ reader_header(name, classname)|indent3 }}
+{%- endmacro %}
+
+{% macro pymethod(name, depth=1) %}
+
+  .. py:method:: {{ call(name, depth) }}
+
+{{ docstring(name)|indent5 }}
+
+{%- endmacro %}
+
+
+{% macro tkfunc(name, depth=1) %}
+
+.. _{{ tkname(name) }}:
+
+{{ toolkit_title(name)|doublescore }}
+
+  .. py:function:: {{ call(name, depth) }}
+
+
+
+{{ docstring(name)|indent5 }}
+
+{%- endmacro %}
+
+{% macro pyproperty(name, depth=1) %}
+
+
+  .. py:attribute:: {{ biname(name) }}
+
+     Read-only attribute.
+
+{{ docstring(name)|indent5 }}
+
+{%- endmacro %}
