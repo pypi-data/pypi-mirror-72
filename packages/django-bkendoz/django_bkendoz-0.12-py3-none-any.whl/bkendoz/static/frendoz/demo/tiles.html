@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- head {{{-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frendoz</title>
+        <link rel="stylesheet" type="text/css" href="/vendor/fontawesome/css/all.css" />
+        <link rel="stylesheet" type="text/css" href="/static/frendoz/css/frendoz.css" />
+    </head>
+    <!--}}}-->
+    <body>
+        <!--header {{{-->
+        <header>
+
+            <button type="button" class="logo nav-left">
+                <a href="/index.html">
+                    Logo
+                </a>
+            </button>
+
+            <div class="drop-down nav-left">
+                <button type="button">
+                    Drop Menu Left
+                </button>
+                <ul class="">
+                    <li>
+                        <a href="/demo/form.html">Form Demo</a>
+                    </li>
+                    <li>
+                        <a href="/demo/text.html">Text Demo</a>
+                    </li>
+                    <li>
+                        <a href="/demo/list.html">List Demo</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="autoComplete_root" id="autoComplete_cmdbar">
+                <input type="text" tabindex="1" />
+                <button type="button">
+                    <i class="fa fa-eraser">
+                    </i>
+                </button>
+            </div>
+
+            <div class="drop-down nav-right">
+                <button type="button">
+                    Drop Menu Right
+                </button>
+                <ul class="">
+                    <li>
+                        <a href="/demo/form.html">Form Demo</a>
+                    </li>
+                    <li>
+                        <a href="/demo/text.html">Text Demo</a>
+                    </li>
+                    <li>
+                        <a href="/demo/list.html">List Demo</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button type="button" id="btn-menu-toggle" class="nav-right">
+                <i class="fa fa-list">
+                </i>
+            </button>
+
+        </header>
+        <!-- }}} -->
+        <div id="content-wrapper">
+            <!-- menu {{{-->
+            <menu>
+                <!-- CSS {{{-->
+                <div>
+                    <h1 class="link-group-title">CSS</h1>
+                    <ul>
+                        <li>
+                            <a href="/index.html">
+                                <i class="fa fa-tachometer-alt"></i> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/text.html">
+                                <i class="fa fa-heading"></i> Text demo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/form.html">
+                                <i class="fa fa-vote-yea"></i> Form demo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/table.html">
+                                <i class="fa fa-table"></i> Table demo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/tiles.html">
+                                <i class="fa fa-th-large"></i> Tiles demo
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--}}}-->
+                <!-- Javascript {{{-->
+                <div>
+                    <h1 class="link-group-title">Javascript</h1>
+                    <ul>
+                        <li>
+                            <a href="/demo/autocomplete.html">
+                                <i class="fa fa-magic"></i> Autocomplete
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/list.html">
+                                <i class="fa fa-sort"></i> List Actions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/modal.html">
+                                <i class="fa fa-square"></i> Modal
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/palette.html">
+                                <i class="fa fa-palette"></i> Color palette
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/ajax.html">
+                                <i class="fa fa-sync"></i> Ajax
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--}}}-->
+            </menu>
+            <!--}}}-->
+
+      <!-- main{{{-->
+      <main>
+         <div class="tile-cont">
+            <div class="tile-row">
+<!-- tile{{{-->
+            <div class="tile-column">
+               <div>
+               </div>
+            </div>
+<!--}}}-->
+<!-- tile{{{-->
+            <div class="tile-column">
+               <div>
+               
+               <h1>Basic tile</h1>
+         <p>Lorem ipsum dolor. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+         <p>Lorem ipsum dolor. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+         <p>Lorem ipsum dolor. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+               </div>
+            </div>
+<!--}}}-->
+<!-- tile{{{-->
+            <div class="tile-column">
+               <div>
+               <h1>Basic tile #2</h1>
+         <p>Lorem ipsum dolor. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+         <p>Lorem ipsum dolor. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+         <p>Lorem ipsum dolor. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+         <p>Lorem ipsum dolor. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+            </div>
+<!--}}}-->
+            </div>
+            <div class="tile-row">
+<!-- tile{{{-->
+<div class="tile-double-column">
+   <div class="list-cont" id="list-1">
+            <!-- list menu {{{-->
+            <div class="heading-flex">
+               <h1>
+                  Table in tile
+               </h1>
+               <a href="">
+                  <i class="fas fa-plus"></i>
+               </a>
+            </div>
+            <!--}}}-->
+<table cellspacing="1"> 
+               <thead>
+                  <!-- list head {{{-->
+                  <tr>
+                     <!-- list head col 1 {{{-->
+                     <th>
+                        <div>
+                           <input  name="html_reference" type="text"
+                                                         data-search="html_reference" placeholder="Référence" />
+                           <button class="btn-ls-sort is-off" data-sort="html_reference">
+                              <i class="fa fa-chevron-circle-down"></i>
+                           </button>
+                           <button class="invisible btn-ls-res" data-res="html_reference">
+                              <i class="fa fa-eraser "></i>
+                           </button>
+                        </div>
+                     </th>
+                     <!--}}}-->
+                     <!-- list head col 2 {{{-->
+                     <th>
+                        <div>
+                           <input  name="scope" type="text"
+                                                         data-search="scope" placeholder="Périmètre" />
+                           <button class="btn-ls-sort is-off" data-sort="scope">
+                              <i class="fa fa-chevron-circle-down "></i>
+                           </button>
+                           <button class="invisible btn-ls-res" data-res="scope">
+                              <i class="fa fa-eraser "></i>
+                           </button>
+                        </div>
+                     </th>
+                     <!--}}}-->
+                  </tr>
+                  <!--}}}-->
+               </thead>
+               <tbody>
+                  <!-- list row {{{-->
+                  <tr class="">
+                     <td data-field="html_reference">
+                        <p>
+                        <a class="ls-field" href="/systems/rack/1">
+                           cAMAN OPE 1
+                        </a>
+                        </p>
+                        <p class="muted info">
+                        26/03/2020 09:21
+                        </p>
+                     </td>
+                     <td data-field="scope">
+                        <span class="ls-field">
+                           Opérationnel
+                        </span>
+                     </td>
+                  </tr>
+                  <!--}}}-->
+                  <!-- list row {{{-->
+                  <tr class="">
+                     <td data-field="html_reference">
+                        <p>
+                        <a class="ls-field" href="/systems/rack/1">
+                           aAMAN OPE 1
+                        </a>
+                        </p>
+                        <p class="muted info">
+                        26/03/2020 09:21
+                        </p>
+                     </td>
+                     <td data-field="scope">
+                        <span class="ls-field">
+                           Test
+                        </span>
+                     </td>
+                  </tr>
+                  <!--}}}-->
+                  <!-- list row {{{-->
+                  <tr class="">
+                     <td data-field="html_reference">
+                        <p>
+                        <a class="ls-field" href="/systems/rack/1">
+                           jtest zob 25 ORT
+                        </a>
+                        </p>
+                        <p class="muted info">
+                        26/03/2020 09:21
+                        </p>
+                     </td>
+                     <td data-field="scope">
+                        <span class="ls-field">
+                           Electra
+                        </span>
+                     </td>
+                  </tr>
+                  <!--}}}-->
+                  <!-- list row {{{-->
+                  <tr class="">
+                     <td data-field="html_reference">
+                        <p>
+                        <a class="ls-field" href="/systems/rack/1">
+                           bAMAN OPE 1
+                        </a>
+                        </p>
+                        <p class="muted info">
+                        26/03/2020 09:21
+                        </p>
+                     </td>
+                     <td data-field="scope">
+                        <span class="ls-field">
+                           4SIM
+                        </span>
+                     </td>
+                  </tr>
+                  <!--}}}-->
+               </tbody>
+            </table>
+            </div>
+            </div>
+<!--}}}-->
+<!-- tile{{{-->
+            <div class="tile-column">
+               <div>
+               <h1>Basic tile #2</h1>
+         <p>Lorem ipsum dolor. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+         <p>Lorem ipsum dolor. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+         <p>Lorem ipsum dolor. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+         <p>Lorem ipsum dolor. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+            </div>
+<!--}}}-->
+            </div>
+         </div>
+      </main>
+      <!--}}}-->
+        </div>
+        <!--footer{{{-->
+        <footer>
+            <ul>
+                <li>Footer demo</li>
+            </ul>
+        </footer>
+        <!--}}}-->
+        <!-- scripts{{{-->
+        <script src='../vendor/autocomplete/autoComplete2.min.js'></script>
+        <script src='../static/frendoz/js/frendoz.js'></script>
+        <script src='../demo/demo.js'></script>
+        <script id="__bs_script__">//<![CDATA[
+            document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+                //]]></script>
+            <!--}}}-->
+<!-- script{{{-->
+   <script>
+      setListEvents("#list-1");
+   </script>
+<!--}}}-->
+
+    </body>
+</html>
+
+
+

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- head {{{-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frendoz</title>
+        <link rel="stylesheet" type="text/css" href="/vendor/fontawesome/css/all.css" />
+        <link rel="stylesheet" type="text/css" href="/static/frendoz/css/frendoz.css" />
+    </head>
+    <!--}}}-->
+    <body>
+        <!--header {{{-->
+        <header>
+
+            <button type="button" class="logo nav-left">
+                <a href="/index.html">
+                    Logo
+                </a>
+            </button>
+
+            <div class="drop-down nav-left">
+                <button type="button">
+                    Drop Menu Left
+                </button>
+                <ul class="">
+                    <li>
+                        <a href="/demo/form.html">Form Demo</a>
+                    </li>
+                    <li>
+                        <a href="/demo/text.html">Text Demo</a>
+                    </li>
+                    <li>
+                        <a href="/demo/list.html">List Demo</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="autoComplete_root" id="autoComplete_cmdbar">
+                <input type="text" tabindex="1" />
+                <button type="button">
+                    <i class="fa fa-eraser">
+                    </i>
+                </button>
+            </div>
+
+            <div class="drop-down nav-right">
+                <button type="button">
+                    Drop Menu Right
+                </button>
+                <ul class="">
+                    <li>
+                        <a href="/demo/form.html">Form Demo</a>
+                    </li>
+                    <li>
+                        <a href="/demo/text.html">Text Demo</a>
+                    </li>
+                    <li>
+                        <a href="/demo/list.html">List Demo</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button type="button" id="btn-menu-toggle" class="nav-right">
+                <i class="fa fa-list">
+                </i>
+            </button>
+
+        </header>
+        <!-- }}} -->
+        <div id="content-wrapper">
+            <!-- menu {{{-->
+            <menu>
+                <!-- CSS {{{-->
+                <div>
+                    <h1 class="link-group-title">CSS</h1>
+                    <ul>
+                        <li>
+                            <a href="/index.html">
+                                <i class="fa fa-tachometer-alt"></i> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/text.html">
+                                <i class="fa fa-heading"></i> Text demo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/form.html">
+                                <i class="fa fa-vote-yea"></i> Form demo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/table.html">
+                                <i class="fa fa-table"></i> Table demo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/tiles.html">
+                                <i class="fa fa-th-large"></i> Tiles demo
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--}}}-->
+                <!-- Javascript {{{-->
+                <div>
+                    <h1 class="link-group-title">Javascript</h1>
+                    <ul>
+                        <li>
+                            <a href="/demo/autocomplete.html">
+                                <i class="fa fa-magic"></i> Autocomplete
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/list.html">
+                                <i class="fa fa-sort"></i> List Actions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/modal.html">
+                                <i class="fa fa-square"></i> Modal
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/palette.html">
+                                <i class="fa fa-palette"></i> Color palette
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/ajax.html">
+                                <i class="fa fa-sync"></i> Ajax
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--}}}-->
+            </menu>
+            <!--}}}-->
+
+      <!-- main{{{-->
+      <main>
+         <h1>autoComplete</h1>
+
+         <form action="">
+
+            <!-- generic autoComplete {{{-->
+            <label for="autoComplete_demo">generic in form</label>
+            <div id="autoComplete_demo" class="autoComplete_root">
+               <input type="text" value="" />
+               <button type="button">
+                  <i class="fa fa-eraser">
+                  </i>
+               </button>
+            </div>
+            <!--}}}-->
+            <!-- generic autoComplete with error {{{-->
+            <label for="autoComplete_demo" class="validate-error">generic with error</label>
+            <div id="autoComplete_demo_err" class="autoComplete_root validate-error">
+               <input type="text" value="" class="error-border" />
+               <button type="button">
+                  <i class="fa fa-eraser">
+                  </i>
+               </button>
+               <p class="error-border validate-error">Présentation de l'erreur avec clignotement de la bordure</p>
+            </div>
+            <!--}}}-->
+
+            <h1>autocomplete in fieldset</h1>
+
+            <fieldset id="fs-inputs">
+               <label for="fs-inputs"> Text</label>
+
+               <label class="flex-row" for="flexRowInput">
+                  <span>Input in .flex-row</span>
+                  <div id="autoComplete_demo_fs" class="autoComplete_root">
+                     <input type="text" value="" />
+                     <button type="button">
+                        <i class="fa fa-eraser">
+                        </i>
+                     </button>
+                  </div>
+               </label>
+
+            </fieldset>
+
+            <button type="submit">Submit Form</button>
+         </form>
+
+      </main>
+      <!--}}}-->
+        </div>
+        <!--footer{{{-->
+        <footer>
+            <ul>
+                <li>Footer demo</li>
+            </ul>
+        </footer>
+        <!--}}}-->
+        <!-- scripts{{{-->
+        <script src='../vendor/autocomplete/autoComplete2.min.js'></script>
+        <script src='../static/frendoz/js/frendoz.js'></script>
+        <script src='../demo/demo.js'></script>
+        <script id="__bs_script__">//<![CDATA[
+            document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+                //]]></script>
+            <!--}}}-->
+         <!-- script{{{-->
+         <script>
+
+            createAutoComplete("autocomplete",
+               "#autoComplete_demo",
+               "/demo/demodata.json", 
+               ['food'], ['food']);
+
+createAutoComplete("autocomplete with error",
+   "#autoComplete_demo_err",
+   "/demo/demodata.json");
+
+createAutoComplete("autocomplete in fieldset",
+   "#autoComplete_demo_fs",
+   "/demo/demodata.json");
+
+         </script>
+         <!--}}}-->
+
+    </body>
+</html>
+
+
+

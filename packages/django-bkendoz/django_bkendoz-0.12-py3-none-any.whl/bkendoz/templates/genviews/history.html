@@ -1,0 +1,9 @@
+{% extends layout_data.main_layout|default:"genviews/layout.html" %}
+{% load i18n %}
+
+{% block content %}
+<h1>Historique</h1>
+
+{% include "genviews/table.html" %}
+
+{% endblock %}
