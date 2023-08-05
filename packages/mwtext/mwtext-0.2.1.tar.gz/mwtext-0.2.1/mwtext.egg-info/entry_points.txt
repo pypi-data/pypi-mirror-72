@@ -1,0 +1,3 @@
+[console_scripts]
+mwtext = mwtext.mwtext:main
+
