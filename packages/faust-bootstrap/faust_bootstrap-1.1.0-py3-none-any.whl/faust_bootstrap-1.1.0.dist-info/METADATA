@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: faust-bootstrap
+Version: 1.1.0
+Summary: Faust bootstrap app
+Home-page: https://github.com/bakdata/faust-bootstrap
+License: UNKNOWN
+Author: bakdata
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: python-schema-registry-client==1.2.4
+Requires-Dist: faust
+Requires-Dist: confluent-kafka
+Requires-Dist: typing-extensions==3.7.4
+Requires-Dist: faust-avro-serializer
+Requires-Dist: bump2version
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Requires-Dist: pytest-docker ; extra == "test"
+Requires-Dist: pytest-asyncio ; extra == "test"
+Provides-Extra: test
+
+# faust-bootstrap
+This repository is a wrapper implementation of the [Faust](https://github.com/robinhood/faust) library.
+It aims at easy development of Faust applications.
+It uses the same interface as our common-kafka-streams project and can be deployed using the same Helm chart and configuration options.
+Thereby, you can develop your Kafka applications in Java or Python as you wish without having to deal with different deployment configurations.
+
+### Getting Started
+
+You can install faust-bootstrap from pypi.
+
+``pip install faust-bootstrap``
+
+### Example
+
+[Here](https://github.com/bakdata/common-kafka-streams-demo) can you get an use case example of both libraries.
