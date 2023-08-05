@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+pyuniqid/__init__.py
+pyuniqid/uniqid.py
+pyuniqid.egg-info/PKG-INFO
+pyuniqid.egg-info/SOURCES.txt
+pyuniqid.egg-info/dependency_links.txt
+pyuniqid.egg-info/requires.txt
+pyuniqid.egg-info/top_level.txt
