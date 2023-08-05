@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        clean_regex=regex_cleaner:clean_regex
+    
