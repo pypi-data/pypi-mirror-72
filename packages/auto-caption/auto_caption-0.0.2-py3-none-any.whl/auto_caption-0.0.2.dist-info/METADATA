@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: auto-caption
+Version: 0.0.2
+Summary: Automatic captioning.
+Home-page: https://github.com/aguang-xyz/auto-caption
+Author: Guangrui Wang
+Author-email: aguang.xyz@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >= 3.6
+
+# Auto Caption.
+
+Auto captioning for videos.
+
+
