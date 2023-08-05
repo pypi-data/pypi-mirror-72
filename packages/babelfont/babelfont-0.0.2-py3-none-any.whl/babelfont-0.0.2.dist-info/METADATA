@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: babelfont
+Version: 0.0.2
+Summary: Interrogate and manipulate UFO, TTF and OTF fonts with a common interface
+Home-page: https://github.com/simoncozens/babelfont
+Author: Simon Cozens
+Author-email: simon@simon-cozens.org
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 4 - Beta
+Requires-Dist: defcon
+Requires-Dist: fontparts
+Requires-Dist: fonttools
+
+babelfont
+~~~~~~~~~
+
+Babelfont allows you to interact with a variety of font formats - UFO,
+TTF/OTF with PostScript outlines, and TTF/OTF with TrueType outlines -
+without needing to worry about what's going on underneath. It is an
+extension to `fontParts <https://fontparts.robotools.dev>`_, on which
+it relies for OTF support.
+
+The usual way to interact with TrueType/OpenType fonts is through the
+`fonttools <https://github.com/fonttools/fonttools>`_ library; this
+provides access to every part of a font, but it does so in a low-level
+way which requires the user to not only be familiar with the internal
+structure of the font, but to care about the different representations
+of information possible within the font.
+
+Babelfont is a bridge between the friendly, high-level interface of
+``fontParts`` and the TTF/OTF support of ``fonttools``. It allows you to
+do things like this::
+
+    from babelfont import OpenFont
+    font = OpenFont("Myfont.otf") # Or TTF. Or UFO...
+
+    glyph = font.layers[0]["space"]
+    glyph.width = glyph.width / 2
+    font.save("Myfont-halfspace.otf")
+
+Currently you need to save the font in the same format in which you
+loaded it - babelfont cannot yet be used for conversion between UFO
+and TTF.
+
+For full details of the interface, see
+https://fontparts.robotools.dev/en/stable/objectref/objects/font.html
+
