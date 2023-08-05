@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: chained
+Version: 0.0.7
+Summary: Making Python language more functional
+Home-page: https://github.com/andrewsonin/chained
+Author: Andrew Sonin
+Author-email: sonin.cel@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Operating System :: OS Independent
+Classifier: Typing :: Typed
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: ~=3.8
+Description-Content-Type: text/markdown
+
+UNKNOWN
+
+
