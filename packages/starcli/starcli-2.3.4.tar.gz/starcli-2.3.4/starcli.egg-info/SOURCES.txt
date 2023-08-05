@@ -1,0 +1,15 @@
+README.md
+setup.py
+starcli/__init__.py
+starcli/__main__.py
+starcli/list_layout.py
+starcli/parser.py
+starcli/search.py
+starcli/table_layout.py
+starcli/terminal_size.py
+starcli.egg-info/PKG-INFO
+starcli.egg-info/SOURCES.txt
+starcli.egg-info/dependency_links.txt
+starcli.egg-info/entry_points.txt
+starcli.egg-info/requires.txt
+starcli.egg-info/top_level.txt
