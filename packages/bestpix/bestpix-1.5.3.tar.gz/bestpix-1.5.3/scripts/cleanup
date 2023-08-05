@@ -1,0 +1,21 @@
+#!/bin/bash/python3
+
+import os
+import shutil
+
+photos_dst = os.path.join(os.path.expanduser('~'), 'bestpix_data')
+
+if os.path.exists(photos_dst):
+    shutil.rmtree(photos_dst)
+
+# Remove the docker container if there is one
+command_to_stop = 'docker stop bestpix || true && docker rm bestpix || true'
+os.system(command_to_stop)
+os.system('clear')
+print('Removed old docker container (if there was one)')
+
+
+print()
+print(f'Removed old {photos_dst}')
+print()
+
