@@ -1,0 +1,12 @@
+setup.py
+figgy/__init__.py
+figgy/fig_store.py
+figgy/fig_svc.py
+figgy/figs.py
+figgy/utils.py
+figgy/writer.py
+figgy_lib.egg-info/PKG-INFO
+figgy_lib.egg-info/SOURCES.txt
+figgy_lib.egg-info/dependency_links.txt
+figgy_lib.egg-info/requires.txt
+figgy_lib.egg-info/top_level.txt
