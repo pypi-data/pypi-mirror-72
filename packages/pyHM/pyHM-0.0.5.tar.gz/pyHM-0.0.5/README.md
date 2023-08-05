@@ -1,0 +1,189 @@
+# Python Human Movements is a python package which imitates human movements
+###### Author: [Joe Tilsed](http://linkedin.com/in/joetilsed) | Created: 19.06.2020 | Last Updated: 20.06.2020 | Version 0.0.5
+
+# pyHM
+
+Python Human Movements is a python package which imitates human movements.
+
+## Installation
+
+    $ pip install pyHM
+
+## Getting Started
+
+### Mouse
+Importing the mouse object from the parent package.
+```python
+from pyHM import mouse
+
+print(type(mouse))
+```
+```
+>> <class 'mouse.Mouse'>
+```
+
+#### Mouse.move()
+Have your mouse move across your screen to an `(x, y)` coordinate like a human would. 
+```python
+from pyHM import mouse
+
+destination_x = 16
+destination_y = 25
+
+mouse.move(destination_x, destination_y)
+```
+```
+>> *Your mouse cursor moves to (16, 25) as if it were a human*
+```
+
+You can also add a multiplier which will either speed-up or slow down the mouse movement depending on what you want.
+The higher the number the slower the movement, you can also have floats such as `0.1337`.
+```python
+from pyHM import mouse
+
+x = 5
+y = 2
+
+mouse.move(x, y, multiplier=10)
+``` 
+```
+>> *Your mouse cursor moves to (5, 2) as if it were a human
+    at about 10 times the speed*
+```
+
+### Mouse.get_current_position()
+This will return your mouses current x and y coordinate.
+```python
+from pyHM import mouse
+
+print(mouse.get_current_position())
+```
+```
+>> (1954, 122)
+```
+
+### Mouse.click()
+Will click wherever the mouse is, unless parsed with either `and` x `or` a y or both.
+With just the `x` value parsed the y value will be your `current y` position.
+With just the `y` value parsed the x value will be your `current x` position.
+If both `x` and `y` are parsed, the cursor will move there first then click.
+Note: All movements carried out using the `Mouse.move()` method so will still be human-like.
+
+For the below examples, assume your current mouse position is (160, 400)
+
+#### Example with no X or Y
+```python
+from pyHM import mouse
+
+mouse.click()
+``` 
+```
+>> *Your mouse clicks where it is*
+```
+
+#### Example with X but no Y
+```python
+from pyHM import mouse
+
+mouse.click(x=50)
+``` 
+```
+>> *Your mouse cursor moves to (50, 400) as if it were a human
+    and then clicks*
+```
+
+#### Example with not X but with Y
+```python
+from pyHM import mouse
+
+mouse.click(y=20)
+``` 
+```
+>> *Your mouse cursor moves to (160, 20) as if it were a human
+    and then clicks*
+```
+
+#### Example with both X and Y
+```python
+from pyHM import mouse
+
+mouse.click(x=50, y=20)
+``` 
+```
+>> *Your mouse cursor moves to (50, 20) as if it were a human
+    and then clicks*
+```
+
+### Mouse.double_click()
+The same with click as far as `X` and `Y` parameters, however the click will be a double left click.
+The interval between each click will be random between 0.001 to 0.499 seconds. 
+
+```python
+from pyHM import mouse
+
+mouse.double_click()
+``` 
+```
+>> *Your mouse double left clicks where it is*
+```
+
+### Mouse.right_click()
+Exactly the same as `Mouse.click()` but with the right button.
+
+```python
+from pyHM import mouse
+
+mouse.right_click()
+``` 
+```
+>> *Your mouse right clicks where it is*
+```
+
+### Mouse.down()
+Holds down the mouse button, default is your left button, however you can parse `button='right'` for the right button to be used.
+
+#### Example with no arguments
+```python
+from pyHM import mouse
+
+mouse.down()
+``` 
+```
+>> *Your mouse left button is held down*
+```
+
+#### Example with right button argument
+```python
+from pyHM import mouse
+
+mouse.down(button='right')
+``` 
+```
+>> *Your mouse right button is held down*
+```
+
+### Mouse.up()
+Alike `Mouse.down()` but lifts up the mouse button, default is your left button, however you can parse `button='right'` for the right button to be used.
+
+#### Example with no arguments
+```python
+from pyHM import mouse
+
+mouse.up()
+``` 
+```
+>> *Your mouse left button is released*
+```
+
+#### Example with right button argument
+```python
+from pyHM import mouse
+
+mouse.up(button='right')
+``` 
+```
+>> *Your mouse right button is released*
+```
+
+
+###### # That's all folks...
