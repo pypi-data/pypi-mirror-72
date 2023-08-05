@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: Enferno
+Version: 0.2
+Summary: Enferno framework CLI tool, helps you create and setup your Enferno app quickly.
+Home-page: https://github.com/level09/enferno-cli
+Author-email: nidal@level09.com
+License: MIT
+Description: ENFERNO Framework CLI TOOL
+        ==========================
+        
+        This is an initial cli tool to help install and setup Enferno apps quickly. 
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
