@@ -1,0 +1,13 @@
+gdaltools/__init__.py,sha256=kSmGt8MW5H8ZLxBGZXYyztCWJyynKaGQDEm8Qd1hm0U,569
+gdaltools/api.py,sha256=_6-Ly8-UW8-T3rMKGy_tQHXFOIQf9GDnh1Ffyzby2SA,996
+gdaltools/basetypes.py,sha256=UMJogvDslzyPJRlQ1uI-2ztJ8-APAFsAoc_xGdfr4e0,3292
+gdaltools/gdalinfocmd.py,sha256=dlqESgwnx5bnitlp3D5tGp1hYz8XBCGRm6tR5fdqjXg,6611
+gdaltools/metadata.py,sha256=fVxBCxRQ1iO4yPj8FvzVQ_ZbqTKNvjDyVRziRSKvdfU,535
+gdaltools/ogr2ogrcmd.py,sha256=2a65vBoyy4pXBPqTLAlh2DUczUeKVM8R630E7vSwQHY,12162
+gdaltools/ogrinfocmd.py,sha256=xFhhi2lnX-Dv-ARdomHzoS4UBbRmxp3yEVmPzSylQF8,5199
+pygdaltools-1.2.1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+pygdaltools-1.2.1.dist-info/METADATA,sha256=vK2jfZFU6UW8obAop_R2p98DNvzsKXwVy-OUMRI5kmc,943
+pygdaltools-1.2.1.dist-info/RECORD,,
+pygdaltools-1.2.1.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+pygdaltools-1.2.1.dist-info/metadata.json,sha256=m6-FHkbn0Nq13ptYuwjYTjTAgmv0NekZBIiiiGzHwNc,1061
+pygdaltools-1.2.1.dist-info/top_level.txt,sha256=KJGjz9dfPM8cdoBQYcfzgAJLx_VSMjvcJNmcfrmoe0k,10
