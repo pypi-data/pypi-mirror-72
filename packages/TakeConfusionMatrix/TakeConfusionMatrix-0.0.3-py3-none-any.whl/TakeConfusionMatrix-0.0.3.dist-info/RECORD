@@ -1,0 +1,11 @@
+take_confusion_matrix/__init__.py,sha256=K7un7Kc4FNsAT7TUpngh-b17IERG7cVD_mOOEFnjyys,42
+take_confusion_matrix/calculation.py,sha256=BfakcSUbQ9qOvJAOXzQ0cDLqZG22VDH9jK3RH2_qSTw,14374
+take_confusion_matrix/validation.py,sha256=KgyIy3pxn-as1cdFqWYT44EK4jJgPylCg6fVedtbBiY,1355
+take_confusion_matrix/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+take_confusion_matrix/tests/test_calculation.py,sha256=sebmxHDiRAhOhuopKuBwcC00FWqHITiNxmpWQscdglo,5187
+take_confusion_matrix/tests/test_validation.py,sha256=7rwRBOGlUu6BJMpwqa5VGznSv9JwFiAWsRe9C2t_MXo,1407
+TakeConfusionMatrix-0.0.3.dist-info/LICENCE,sha256=W4dXAJxaJ2O07aOx6GIEUhO0GZ2R1L-VMVf5Uhkn884,1099
+TakeConfusionMatrix-0.0.3.dist-info/METADATA,sha256=yHAkThgHxnlgwpcomWoo7cMv5Nu4PKOOZadVIr6394I,4124
+TakeConfusionMatrix-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+TakeConfusionMatrix-0.0.3.dist-info/top_level.txt,sha256=AbRGy73Ujy6j2kFUognPSAKCT4Aen72DcHxcdF1aNT8,22
+TakeConfusionMatrix-0.0.3.dist-info/RECORD,,
