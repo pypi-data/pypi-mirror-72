@@ -1,0 +1,17 @@
+numpy>=1.9.1
+scipy>=0.14
+pyyaml
+h5py
+
+[tests]
+pytest
+pytest-pep8
+pytest-xdist
+flaky
+pytest-cov
+pandas
+requests
+markdown
+
+[visualize]
+pydot>=1.2.4
