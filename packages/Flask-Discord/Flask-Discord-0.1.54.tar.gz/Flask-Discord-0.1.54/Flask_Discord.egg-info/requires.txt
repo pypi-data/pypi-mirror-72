@@ -1,0 +1,4 @@
+Flask
+oauthlib
+requests_oauthlib
+cachetools
