@@ -1,0 +1,4 @@
+include quantbacktest/components/*
+include quantbacktest/assets/raw_itsa_data/*
+include quantbacktest/assets/results/*.gitkeep
+include quantbacktest/assets/strategy_tables/*.gitkeep
