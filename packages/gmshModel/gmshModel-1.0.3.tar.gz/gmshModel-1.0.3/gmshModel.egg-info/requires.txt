@@ -1,0 +1,5 @@
+numpy
+
+[all]
+meshio>=4
+pyvista>=0.24.1
