@@ -1,0 +1,13 @@
+README.md
+setup.py
+pysalesforce/Salesforce.py
+pysalesforce/__init__.py
+pysalesforce/auth.py
+pysalesforce/useful.py
+pysalesforce.egg-info/PKG-INFO
+pysalesforce.egg-info/SOURCES.txt
+pysalesforce.egg-info/dependency_links.txt
+pysalesforce.egg-info/requires.txt
+pysalesforce.egg-info/top_level.txt
+pysalesforce/tools/__init__.py
+pysalesforce/tools/print_colors.py
