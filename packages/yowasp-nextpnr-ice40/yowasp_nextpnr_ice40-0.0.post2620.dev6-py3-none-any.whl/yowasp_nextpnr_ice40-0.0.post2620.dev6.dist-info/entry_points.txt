@@ -1,0 +1,8 @@
+[console_scripts]
+yowasp-icebram = yowasp_nextpnr_ice40.bin:run_icebram
+yowasp-icemulti = yowasp_nextpnr_ice40.bin:run_icemulti
+yowasp-icepack = yowasp_nextpnr_ice40.bin:run_icepack
+yowasp-icepll = yowasp_nextpnr_ice40.bin:run_icepll
+yowasp-iceunpack = yowasp_nextpnr_ice40.bin:run_iceunpack
+yowasp-nextpnr-ice40 = yowasp_nextpnr_ice40.bin:run_nextpnr_ice40
+
