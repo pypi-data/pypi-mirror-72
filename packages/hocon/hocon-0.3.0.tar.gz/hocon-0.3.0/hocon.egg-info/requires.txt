@@ -1,0 +1,8 @@
+pyhocon>=0.3.55
+
+[dev]
+mypy
+pytest
+pylint
+twine
+bump2version
