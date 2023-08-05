@@ -1,0 +1,59 @@
+[tool]
+[tool.poetry]
+name = "spangle"
+version = "0.7.3"
+description = "A small and flexible ASGI application framework for modern web."
+license = "MIT"
+authors = ["T.Kameyama <tkamenoko@vivaldi.net>"]
+homepage = "https://github.com/tkamenoko/spangle"
+repository = "https://github.com/tkamenoko/spangle"
+documentation = "https://tkamenoko.github.io/spangle/"
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Environment :: Web Environment",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: JavaScript",
+    "Topic :: Internet :: WWW/HTTP",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+addict = "^2.2.1"
+aiofiles = "^0.5.0"
+asgiref = "^3.2.3"
+chardet = "^3.0.4"
+httpx = "^0.13.1"
+jinja2 = "^2.10.3"
+multidict = "^4.7.3"
+multipart = "^0.2"
+parse = "^1.14.0"
+starlette = "^0.13.4"
+urllib3 = "^1.25.7"
+
+[tool.poetry.dev-dependencies]
+flake8 = "*"
+green = "*"
+mypy = "*"
+rope = "*"
+mkdocs-material = "*"
+mkdocs = "*"
+inari = "*"
+hypercorn = "*"
+uvloop = "*"
+black = "^19.10b0"
+
+[tool.poetry.scripts]
+spangle = "spangle.cli.run:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
