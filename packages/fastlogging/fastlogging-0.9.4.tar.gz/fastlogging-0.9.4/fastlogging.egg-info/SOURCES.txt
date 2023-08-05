@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyorcy.py
+setup.cfg
+setup.py
+fastlogging/__init__.py
+fastlogging/console.py
+fastlogging/fastlogging.py
+fastlogging/network.py
+fastlogging/optimize.py
+fastlogging.egg-info/PKG-INFO
+fastlogging.egg-info/SOURCES.txt
+fastlogging.egg-info/dependency_links.txt
+fastlogging.egg-info/requires.txt
+fastlogging.egg-info/top_level.txt
