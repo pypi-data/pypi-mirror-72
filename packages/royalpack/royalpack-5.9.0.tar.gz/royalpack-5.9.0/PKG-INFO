@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: royalpack
+Version: 5.9.0
+Summary: A Royalnet command pack for the Royal Games community
+Home-page: https://github.com/Steffo99/royalpack
+Author: Stefano Pigozzi
+Author-email: ste.pigozzi@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: riotwatcher (>=2.7.1,<3.0.0)
+Requires-Dist: royalnet[telegram,discord,alchemy_easy,bard,constellation,sentry,herald,coloredlogs] (>=5.9.2,<5.10.0)
+Requires-Dist: royalspells (>=3.2,<4.0)
+Requires-Dist: steam
+Project-URL: Documentation, https://gh.steffo.eu/royalpack/
+Description-Content-Type: text/markdown
+
+# `royalpack`
+
+## Required configuration options
+
+```toml
+Imgur.token = 
+Telegram.main_group_id = 
+Discord.main_channel_id = 
+Dota.updater = 
+Peertube.instance_url = 
+Peertube.feed_update_timeout = 
+Funkwhale.instance_url = 
+Cv.displayed_role_id = 
+Lol.token = 
+Lol.region = 
+Lol.updater = 
+Play.max_song_duration = 
+Steam.web_api_key = 
+Brawlhalla.api_key = 
+Brawlhalla.updater = 
+Matchmaking.mm_chat_id = 
+```
