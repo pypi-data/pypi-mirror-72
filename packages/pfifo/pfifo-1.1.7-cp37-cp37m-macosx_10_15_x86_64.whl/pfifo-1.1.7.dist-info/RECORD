@@ -1,0 +1,13 @@
+_pfifo.cpython-37m-darwin.so,sha256=bdb5WUTjshdpqeu4Ka3LKUMaSw6yNtANpmni9cnpsFw,188316
+pfifo/__init__.py,sha256=CPXMrTUPLW0Pw_pNKnPv5Yx8aqQIff0rGdANSfe_q_s,696
+pfifo/include/pfifo/pfifo.hpp,sha256=RZUe0cDnGa3jpIIdLVRerhyoD3PRMLC4gkayN9CjTHQ,127
+pfifo/include/pfifo/reader.hpp,sha256=N0Qke4REPYLZ7r9P2hYqfg9AJQIgt0E-xhnRdl5s1yc,2298
+pfifo/include/pfifo/writer.hpp,sha256=acOnYV7FUazoRoPyyy449GWsm3PhaHX7oXScFvTHp44,1971
+pfifo-1.1.7.data/headers/pfifo.hpp,sha256=RZUe0cDnGa3jpIIdLVRerhyoD3PRMLC4gkayN9CjTHQ,127
+pfifo-1.1.7.data/headers/reader.hpp,sha256=N0Qke4REPYLZ7r9P2hYqfg9AJQIgt0E-xhnRdl5s1yc,2298
+pfifo-1.1.7.data/headers/writer.hpp,sha256=acOnYV7FUazoRoPyyy449GWsm3PhaHX7oXScFvTHp44,1971
+pfifo-1.1.7.dist-info/LICENSE,sha256=-es4-LYkjvs_hoGRCkBPUJGMy1ZjdTbnwoXyYstneZ0,1062
+pfifo-1.1.7.dist-info/METADATA,sha256=-uBFClqc1OgtXev8qAcEJcaEqA8dcJAAmHKYVPVrsEo,335
+pfifo-1.1.7.dist-info/WHEEL,sha256=d1FXElTc2O1aD-DA111TtqEjjjICRp-GfmLEJcA56oY,111
+pfifo-1.1.7.dist-info/top_level.txt,sha256=_qAiuKd0qicX-5RMtwPzcnGfMiSEKvodFFQvqi4zO68,13
+pfifo-1.1.7.dist-info/RECORD,,
