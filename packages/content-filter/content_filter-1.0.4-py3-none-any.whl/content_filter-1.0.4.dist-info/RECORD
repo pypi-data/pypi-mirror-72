@@ -1,0 +1,11 @@
+content_filter/__init__.py,sha256=Y6JCKwCILZ6LxiN7RpWTgcnuMMwg2Vvz7ZyOA4MtiZA,585
+content_filter/filter.py,sha256=GpVR4PYng_4nVb12bM8AyebbKR5lRxh0pGnNVDg5RCM,9069
+content_filter/data/filter.json,sha256=Bk819_aIEK17FPqLizkR4xZ2gRTJp-GeRoIMC-C_RHk,3501
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/custom_filter_test.py,sha256=GU9YtoidKpPMBuZWs-L4jxvMfbS2Ndn4DU-y7pAm1ew,1654
+tests/filter_test.py,sha256=SXGIe7uoJYY741nXs2Qix62cJ_wgDVqwPuxAgQEPRn0,17030
+content_filter-1.0.4.dist-info/LICENSE,sha256=A81SXHiiqo2C4xZFSXrRWKC58WPCjc7u4jE_yIai8nw,1065
+content_filter-1.0.4.dist-info/METADATA,sha256=cG7siKZk_yiC3OkHJRY_aUvBlcUelM6dycsvZ2hfMD4,7592
+content_filter-1.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+content_filter-1.0.4.dist-info/top_level.txt,sha256=ErZ6aZTskur0UG6jajAGafyF6AVNxnO1YOpd6VOn-zk,21
+content_filter-1.0.4.dist-info/RECORD,,
