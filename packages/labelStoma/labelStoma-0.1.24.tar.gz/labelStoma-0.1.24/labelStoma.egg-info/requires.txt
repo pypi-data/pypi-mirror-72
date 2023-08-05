@@ -1,0 +1,11 @@
+pyqt5
+lxml
+imutils==0.5.1
+tqdm==4.31.0
+opencv_python==4.1.2.30
+XlsxWriter==1.2.6
+six==1.11.0
+numpy
+xlwt
+pandas==0.23.4
+scikit_learn==0.22.1
