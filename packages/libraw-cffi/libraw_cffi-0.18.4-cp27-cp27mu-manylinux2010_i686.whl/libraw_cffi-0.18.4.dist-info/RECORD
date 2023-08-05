@@ -1,0 +1,15 @@
+_raw.so,sha256=W-ET2CHZltAexUmvME4ATYiih1N-zE5y4gjGy4Yl03s,210868
+libraw_cffi/_build.py,sha256=uCHqHm8XCv-CeY-YBdqZcE_6xle3e0om6nBya1WjvfM,21772
+libraw_cffi/__init__.py,sha256=ECVS_BUtVPGcdqQeHT6clz0Jp1ZM5F1Cdq8nhZCdIC0,239
+libraw_cffi/_api.py,sha256=Wn4UnAHfT-VOOPTJ8o0cyCIyKzdffWnkGrPpU7L9DK0,3470
+libraw_cffi/tests/test_overview.py,sha256=PKzAkjZtYYzobTsLK-bzTwC73zawFBQTGMqcehasHFY,476
+libraw_cffi/tests/__init__.py,sha256=0X9VWEZducEAJOLNMFyQoVwKbbkvPecE9zAKQPtWtos,504
+libraw_cffi/tests/test_samples.py,sha256=wE3S9Nf4KnE6831G98imEHtphiIQKrmp6urcp2tLOKY,8197
+libraw_cffi/tests/test_api.py,sha256=2oE2UeEggzTIx-v6lLam0EadmGbI1eQ_Rkizu7WHgzg,1106
+libraw_cffi-0.18.4.dist-info/RECORD,,
+libraw_cffi-0.18.4.dist-info/COPYING,sha256=OW6Dcg8AtDVNWlIRaV0GkMM9iOUau3FBuZfw-Pit9SY,1057
+libraw_cffi-0.18.4.dist-info/WHEEL,sha256=hN-q512gRYI6rCiiK84WOrZJlVmoOkEdVJjoZE2lDgY,111
+libraw_cffi-0.18.4.dist-info/METADATA,sha256=AyE_jZbrvO9bCGmybgn4GN9QIwohz0zC9Hg4Z-Mfv1M,1771
+libraw_cffi-0.18.4.dist-info/top_level.txt,sha256=5gpGQ_tG-5yeAWeJE4PXBiTKVI1EHm4pkg8tyTXf98g,17
+libraw_cffi.libs/libgomp-2716b9e4.so.1.0.0,sha256=DVgr3trVoL-gZCJ7BJz001hK2YTBv0y011w7_PKnsNA,94600
+libraw_cffi.libs/libraw-43aeeb45.so.19.0.2,sha256=4ZyweZ4OTENH18-QGTEP_sG-KOADrUFT1pAcQMM0C9o,2324764
