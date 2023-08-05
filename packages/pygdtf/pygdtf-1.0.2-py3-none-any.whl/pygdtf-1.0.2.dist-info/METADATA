@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pygdtf
+Version: 1.0.2
+Summary: General Device Type Format library
+Home-page: UNKNOWN
+Author: Jack Page
+Author-email: jdpboc98@gmail.com
+License: MIT
+Platform: UNKNOWN
+
+Basic library for interfacing with the General Device Type Format developed by MA, Robe and Vectorworks. For more information on the format see gdtf-share.com
+
+
