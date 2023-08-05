@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ansar
+Version: 1.0.39
+Summary: Storing and recovering application objects.
+Home-page: https://gitlab.com/scott.ansar/ansar
+Author: Scott Woods
+Author-email: scott.suzuki@gmail.com
+License: UNKNOWN
+Download-URL: https://gitlab.com/scott.ansar/ansar/archive/1.0.39.tar.gz
+Keywords: serialization,persistence
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: defusedxml (>=0.6)
+
+Refer to the `library documentation <https://scott.ansar.gitlab.io/ansar-3/>`_;
+
+
