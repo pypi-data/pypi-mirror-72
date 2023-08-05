@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: mcthings-extra
+Version: 0.0.17
+Summary: Additional Things for the McThings Python library
+Home-page: https://github.com/juntosdesdecasa/mcthings_extra
+Author: Alvaro del Castillo
+Author-email: alvaro.delcastillo@gmail.com
+License: ASL
+Keywords: development library minecraft buildings games
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+Requires-Dist: mcpi (>=1.2.0)
+Requires-Dist: mcthings (>=0.49.6)
+Requires-Dist: pandas
+Requires-Dist: nbt
+
+# McThings Extra
+
+Extra Things to be used building [McThings](https://github.com/juntosdesdecasa/mcthings) scenes.
+
+Below [a scene](tests/scene.py) including the extra Thing [Rainbow](mcthings_extra/rainbow.py) with the 
+McThings [Pyramid](https://github.com/juntosdesdecasa/mcthings/blob/develop/mcthings/pyramid.py).
+
+![Rainbow over Pyramid](scene.png)
+
+
