@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+src/python_compare_ast/__init__.py
+src/python_compare_ast/__main__.py
+src/python_compare_ast.egg-info/PKG-INFO
+src/python_compare_ast.egg-info/SOURCES.txt
+src/python_compare_ast.egg-info/dependency_links.txt
+src/python_compare_ast.egg-info/entry_points.txt
+src/python_compare_ast.egg-info/requires.txt
+src/python_compare_ast.egg-info/top_level.txt

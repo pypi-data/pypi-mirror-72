@@ -1,0 +1,3 @@
+[console_scripts]
+python-compare-ast = python_compare_ast.__main__:main
+
