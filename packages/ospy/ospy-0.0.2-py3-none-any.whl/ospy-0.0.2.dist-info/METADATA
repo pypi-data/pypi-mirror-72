@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ospy
+Version: 0.0.2
+Summary: A Python interface to interact with the os module. 
+Home-page: https://pypi.org/project/emailpy
+Author: Sandra Mattar
+Author-email: sandrawmattar1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: psutil (==5.7.0)
+
+UNKNOWN
+
+
