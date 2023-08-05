@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: questiongeneratorcesar
+Version: 0.0.7
+Summary: Question generator package
+Home-page: https://github.com/wordbox-tech/Backend-Services-QuestionGenerator
+Author: César Juárez Ramírez
+Author-email: cesar@wordbox.ai
+License: UNKNOWN
+Description: # This is the first version of the question generator package
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
