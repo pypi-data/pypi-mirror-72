@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: sphinx-thebelab
+Version: 0.0.1
+Summary: Add a copy button to each of your code cells.
+Home-page: https://github.com/ExecutableBookProject/sphinx-thebelab
+Author: Executable Book Project
+License: MIT License
+Description: # sphinx-thebelab
+        
+        [![Documentation](https://readthedocs.org/projects/sphinx-thebelab/badge/?version=latest)](https://sphinx-thebelab.readthedocs.io/en/latest/?badge=latest)
+        
+        Integrate thebelab into your documentation to make your code cells interactive.
+        
+        See [the sphinx-thebelab documentation](https://sphinx-thebelab.readthedocs.io/en/latest/) for more details!
+        
+        ## Install
+        
+        To install `sphinx-thebelab` first clonse and install it:
+        
+        ```
+        git clone https://github.com/executablebooks/sphinx-thebelab
+        cd sphinx-thebelab
+        pip install -e .
+        ```
+        
+        Then, add it to your Sphinx site's `conf.py` file:
+        
+        ```
+        extensions = [
+            ...
+            "sphinx_thebelab"
+            ...
+        ]
+        ```
+        
+        See [the sphinx-thebelab documentation](https://sphinx-thebelab.readthedocs.io/en/latest/) for more details!
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Provides-Extra: sphinx
