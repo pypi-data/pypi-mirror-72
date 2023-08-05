@@ -1,0 +1,27 @@
+{% extends 'base/banking_base.html' %}
+{% load i18n %}
+
+{% block content %}
+<h3>Audit</h3>
+<div class="row">
+  	<div class="col-lg-2">
+  		<div class="bg-white rounded shadow-sm border p-2 text-center">
+    		<a class="" href="{% url 'easyaudit_utils:login_event_list' %}"><i class="fas fa-sign-in-alt fa-3x"></i></a>
+    		<h5 class="mt-2"> Login Events</h5>
+    	</div>
+   	</div>
+   	<div class="col-lg-2">
+    	<div class="bg-white rounded shadow-sm border p-2 text-center">
+    		<a href="{% url 'easyaudit_utils:crud_event_list' %}"><i class="fas fa-pencil-alt fa-3x"></i></a>
+    		<h5 class="mt-2">CRUD Events</h5>
+    	</div>
+    </div>
+    <div class="col-lg-2">
+    	<div class="bg-white rounded shadow-sm border p-2 text-center">
+    		<a href="{% url 'easyaudit_utils:request_event_list' %}"><i class="fas fa-exchange-alt fa-3x"></i></a>
+    		<h5 class="mt-2">Request Events</h5>
+    	</div>
+    </div>
+  </p>
+</div>
+{% endblock %}

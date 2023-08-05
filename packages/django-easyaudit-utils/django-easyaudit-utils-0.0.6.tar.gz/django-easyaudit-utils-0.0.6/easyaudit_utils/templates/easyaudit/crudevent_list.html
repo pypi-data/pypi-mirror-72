@@ -1,0 +1,76 @@
+{% extends 'base/banking_base.html' %}
+{% load i18n humanize static %}
+{% load easyaudit_utils %}
+
+{% block content %}
+<div id="ledger-account-list-app">
+    <h2 class="mt-3">{% trans 'CRUD Events' %}</h2>
+
+    {% include "easyaudit/_filters.html" %}
+    <hr/>
+
+
+
+  <div name="fade">
+    <div v-show="list_ledger_accounts" class="">
+        <table class="table table-bordered bg-white table-hover table-striped">
+        <thead class="">
+            <tr>
+                <th>{% trans 'Date' %}</th>
+                <th>{% trans 'Event Type' %}</th>
+                <th>{% trans 'Object' %}</th>
+                <th>{% trans 'Object Description' %}</th>
+                <th>{% trans 'Changed Fields' %}</th>
+                <th>{% trans 'User' %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for crud in object_list %}
+        <tr>
+            <td>{{ crud.datetime }}</td>
+            <td>
+              <span class=" badge
+              {% if crud.is_create %}
+              badge-success
+              {% elif crud.is_update %}
+              badge-warning
+              {% elif crud.is_delete %}
+              badge-danger
+              {% elif crud.event_type == crud.M2M_CHANGE %}
+              badge-info
+              {% elif crud.event_type == crud.M2M_CHANGE_REV %}
+              badge-secondary
+              {% endif %}
+              ">
+                {{ crud.get_event_type_display }}
+              </span>
+            </td>
+            <td>{{ crud.content_type|title }}</td>
+            <td title="{{ crud.object_json_repr }}">{{ crud.object_repr }}</td>
+            <td>
+              {% json_load crud.changed_fields as changed_fields %}
+              {% if changed_fields %}
+                <p>
+                  {% for k,v in changed_fields.items %}
+                    <b class="mr-1">{{ k }} :</b>{{ v.0|easy_format }} => {{ v.1|easy_format }}<br>
+                  {% endfor %}
+                </p>
+              {% endif %}
+            </td>
+            <td>{{ crud.user }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="7">{% trans 'No CRUD event' %}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+    {% include "libs/pagination.html" with page_obj=page_obj %}
+    </div>
+</div>
+
+
+</div>
+{% endblock %}
