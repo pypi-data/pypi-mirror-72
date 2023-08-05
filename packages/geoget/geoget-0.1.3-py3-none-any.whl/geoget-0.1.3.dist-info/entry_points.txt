@@ -1,0 +1,4 @@
+[console_scripts]
+geoget_ladsweb = geoget.cli:geoget_ladsweb
+geoget_order_manager = geoget.cli:geoget_order_manager
+
