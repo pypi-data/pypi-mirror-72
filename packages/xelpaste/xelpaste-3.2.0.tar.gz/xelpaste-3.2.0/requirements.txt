@@ -1,0 +1,18 @@
+# -----------------------------------------------------------------------------
+# These requirements are only required for local testing or development.
+# To use xelpaste it's enough to install the package, all, and only the
+# necessary dependencies are installed automatically.
+# -----------------------------------------------------------------------------
+
+# Project dependencies
+-e .
+
+# Testing
+coverage
+sphinx
+sphinx_rtd_theme
+check-manifest
+
+# Release
+wheel
+zest.releaser[recommended]
