@@ -1,0 +1,125 @@
+Preset groups:
+  Default:
+    Sample:
+      columns: &id001
+      - !!python/tuple
+        - Comment
+        - - ''
+          - ''
+      - !!python/tuple
+        - X
+        - - Position
+          - Value
+      - !!python/tuple
+        - Y
+        - - Position
+          - Value
+      - !!python/tuple
+        - Z
+        - - Position
+          - Value
+      - !!python/tuple
+        - X-ROT
+        - - Position
+          - Value
+      rows:
+      - - '#ffffff'
+        - 18-06-2020 19:02:55
+        - e
+        - 0.0 mm
+        - 0.0 mm
+        - 0.0 mm
+        - null
+        - null
+      - - '#ffffff'
+        - 18-06-2020 19:02:53
+        - d
+        - 0.0 mm
+        - 0.0 mm
+        - 0.0 mm
+        - null
+        - null
+      - - '#ffffff'
+        - 18-06-2020 18:57:40
+        - c
+        - 0.0 mm
+        - 0.0 mm
+        - 0.0 mm
+        - null
+        - null
+      - - '#ffffff'
+        - 18-06-2020 18:57:38
+        - b
+        - 0.0 mm
+        - 0.0 mm
+        - 0.0 mm
+        - null
+        - null
+      - - '#ffffff'
+        - 18-06-2020 18:57:36
+        - a
+        - 0.0 mm
+        - 0.0 mm
+        - 0.0 mm
+        - null
+        - null
+      - - '#ffffff'
+        - 11-10-2019 09:24:48
+        - Initial positions
+        - 0.0 mm
+        - 0.0 mm
+        - 0.3 mm
+        - null
+        - null
+      - - '#ffffff'
+        - 18-06-2020 19:01:35
+        - d
+        - 0.0 mm
+        - 0.0 mm
+        - 0.0 mm
+        - null
+        - null
+  fr:
+    Sample:
+      columns: *id001
+      rows:
+      - - '#ffffff'
+        - 18-06-2020 19:03:37
+        - cvbcv
+        - 0.0 mm
+        - 0.0 mm
+        - 0.0 mm
+        - null
+        - null
+      - - '#ffffff'
+        - 18-06-2020 19:03:36
+        - qweqwe
+        - 0.0 mm
+        - 0.0 mm
+        - 0.0 mm
+        - null
+        - null
+      - - '#ffffff'
+        - 18-06-2020 19:03:34
+        - cvbcv
+        - 0.0 mm
+        - 0.0 mm
+        - 0.0 mm
+        - null
+        - null
+      - - '#ffffff'
+        - 18-06-2020 19:03:32
+        - xvxc
+        - 0.0 mm
+        - 0.0 mm
+        - 0.0 mm
+        - null
+        - null
+      - - '#ffffff'
+        - 18-06-2020 19:03:30
+        - asd
+        - 0.0 mm
+        - 0.0 mm
+        - 0.0 mm
+        - null
+        - null
