@@ -1,0 +1,3 @@
+[console_scripts]
+madx-to-html = dipas.tools.madx_to_html:main
+
