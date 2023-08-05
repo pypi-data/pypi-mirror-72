@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ssb-ipython-kernels
+Version: 0.0.5
+Summary: Jupyter kernels for working with dapla services
+Home-page: https://github.com/statisticsnorway/dapla-ipython-kernels
+Author: Statistics Norway
+Author-email: bjorn.skaar@ssb.no
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: ipython (>=4.0.2pysparkjupyterhuboauthenticatorjwtrequestsresponsesipykernel>=4.2.2notebook>=4.2tornado>=4gcsfspyarrow>=0.17.*pandasgoogle-auth>=1.2google-auth-oauthlib)
+
+# dapla-ipython-kernels
+Jupyter kernels for working with dapla services
+
+
