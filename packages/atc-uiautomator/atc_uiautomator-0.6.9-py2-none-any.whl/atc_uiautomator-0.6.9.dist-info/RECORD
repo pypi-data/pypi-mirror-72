@@ -1,0 +1,16 @@
+uiautomator/__init__.py,sha256=K3KbEzpachOT0C78kx4bG9lHdkRz8uCjlh_7GbbFLjY,70481
+uiautomator/chromdriver.py,sha256=nZvjau3MsjZbrqfOqMtGVIBvGC9C98V-34VTQNuW2OU,12703
+uiautomator/comparison.py,sha256=mHUp_I0lBAVjc4GXACkiBAt8fanCKsRGEKAmMsQoTAc,4511
+uiautomator/find_img.py,sha256=4gZo8QE8K3-KqR8dwVHxbSt6sYHpFVLMjMrwr_k7UmA,3810
+uiautomator/imgUtil.py,sha256=KL-E19JBRsmwd36DrKtc-Ln-958u5wQ_NY0eP9PM8Ng,2546
+uiautomator/test.py,sha256=uS3qXRm8xpedk6OEL9KyPHLLZ5FN1cS3G4BgKcH-yZA,315
+uiautomator/libs/app-uiautomator-test.apk,sha256=m6jUnznKuxvHIMof-K4yDrDmSp23lq47L6j2smJtWHI,1391856
+uiautomator/libs/app-uiautomator.apk,sha256=TEeG0jP1llR0zhJolhE7Nt09OkHobqGXdD0IMqgrE3s,1896707
+uiautomator/libs/bundle.jar,sha256=WOI7-OlsbesvBcKtXNwOCNoQ09UJjSWO23aeCdC5u2k,461493
+uiautomator/libs/uiautomator-stub.jar,sha256=WVSUHWDkm8jg-oBz9BQmbjPiBgSvpKw_bO3QI8XPEqQ,34104
+atc_uiautomator-0.6.9.dist-info/LICENSE,sha256=GKCQy7qm39bzOGiIhwFRFhc5uEt27apBWyDQE0YF3sE,1097
+atc_uiautomator-0.6.9.dist-info/METADATA,sha256=nV2TyzUOpZ2QNxjaXeAJHvEqRJ4N6TD5rR0DGSDMnGM,1049
+atc_uiautomator-0.6.9.dist-info/NOTICE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+atc_uiautomator-0.6.9.dist-info/WHEEL,sha256=umevUEtYglx3BsmRdkbeexA0ajsvOK25YhJUBycYWFg,97
+atc_uiautomator-0.6.9.dist-info/top_level.txt,sha256=UqUulC5mTfx01V7llVPR-EtpuJl5-QnGplTT81Vf3ZU,12
+atc_uiautomator-0.6.9.dist-info/RECORD,,

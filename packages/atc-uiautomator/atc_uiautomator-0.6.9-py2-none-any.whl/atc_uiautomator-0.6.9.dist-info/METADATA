@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: atc-uiautomator
+Version: 0.6.9
+Summary: Python Wrapper for Android UiAutomator test_set tool
+Home-page: https://github.com/xiaocong/uiautomator
+Author: Xiaocong He
+Author-email: xiaocong@gmail.com,hongbin.bao@gmail.com
+License: MIT
+Download-URL: https://github.com/xiaocong/uiautomator/tarball/0.6.9
+Keywords: testing,android,uiautomator
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Testing
+Requires-Dist: urllib3 (>=1.7.1)
+Requires-Dist: selenium (>=3.1)
+Requires-Dist: pillow (>=6.2.1)
+
+Python wrapper for Android uiautomator tool.
+
+
