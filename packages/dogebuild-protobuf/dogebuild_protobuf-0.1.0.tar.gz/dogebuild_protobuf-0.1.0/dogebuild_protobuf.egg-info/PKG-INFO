@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: dogebuild-protobuf
+Version: 0.1.0
+Summary: Protobuf dogebuild plugin
+Home-page: https://github.com/dogebuild/dogebuild-protobuf
+Author: Kirill Sulim
+Author-email: kirillsulim@gmail.com
+License: MIT
+Description: # dogebuild-protobuf
+        Dogebuild protobuf plugin
+        
+Keywords: dogebuild builder
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
