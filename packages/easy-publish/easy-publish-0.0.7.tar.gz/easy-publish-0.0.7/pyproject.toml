@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "easy-publish"
+version = "0.0.1"
+description = ""
+authors = ["samdixon <sdixon@posteo.net>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+jedi = "^0.17.0"
+setuptools = "^47.1.1"
+wheel = "^0.34.2"
+twine = "^3.1.1"
+pytest = "^5.4.3"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
