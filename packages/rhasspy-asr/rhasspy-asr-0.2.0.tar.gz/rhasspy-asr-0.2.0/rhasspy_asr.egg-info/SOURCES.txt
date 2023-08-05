@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+rhasspy_asr.egg-info/PKG-INFO
+rhasspy_asr.egg-info/SOURCES.txt
+rhasspy_asr.egg-info/dependency_links.txt
+rhasspy_asr.egg-info/top_level.txt
+rhasspyasr/__init__.py
+rhasspyasr/py.typed
+rhasspyasr/utils.py

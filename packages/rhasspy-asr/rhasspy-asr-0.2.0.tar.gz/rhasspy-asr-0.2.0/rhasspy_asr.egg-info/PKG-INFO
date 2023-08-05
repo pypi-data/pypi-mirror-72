@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: rhasspy-asr
+Version: 0.2.0
+Summary: UNKNOWN
+Home-page: https://github.com/rhasspy/rhasspy-asr
+Author: Michael Hansen
+Author-email: hansen.mike@gmail.com
+License: UNKNOWN
+Description: # Rhasspy ASR
+        
+        [![Continous Integration](https://github.com/rhasspy/rhasspy-asr/workflows/Tests/badge.svg)](https://github.com/rhasspy/rhasspy-asr/actions)
+        [![PyPI package version](https://img.shields.io/pypi/v/rhasspy-asr.svg)](https://pypi.org/project/rhasspy-asr)
+        [![Python versions](https://img.shields.io/pypi/pyversions/rhasspy-asr.svg)](https://www.python.org)
+        [![GitHub license](https://img.shields.io/github/license/rhasspy/rhasspy-asr.svg)](https://github.com/rhasspy/rhasspy-asr/blob/master/LICENSE)
+        
+        Classes for automated speech recognition in [Rhasspy](https://github.com/synesthesiam/rhasspy) voice assistant.
+        
+        ## Installation
+        
+        ```bash
+        $ git clone https://github.com/rhasspy/rhasspy-asr
+        $ cd rhasspy-asr
+        $ ./configure
+        $ make
+        $ make install
+        ```
+        
+        ## Deployment
+        
+        ```bash
+        $ make dist
+        ```
+        
+        See `dist/` directory for `.tar.gz` file.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
