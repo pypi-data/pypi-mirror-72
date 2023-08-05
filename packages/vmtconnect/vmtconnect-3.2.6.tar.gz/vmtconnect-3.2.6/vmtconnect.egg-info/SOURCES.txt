@@ -1,0 +1,11 @@
+README.md
+setup.py
+vmtconnect/__about__.py
+vmtconnect/__init__.py
+vmtconnect/vmtconnect.py
+vmtconnect.egg-info/PKG-INFO
+vmtconnect.egg-info/SOURCES.txt
+vmtconnect.egg-info/dependency_links.txt
+vmtconnect.egg-info/not-zip-safe
+vmtconnect.egg-info/requires.txt
+vmtconnect.egg-info/top_level.txt
