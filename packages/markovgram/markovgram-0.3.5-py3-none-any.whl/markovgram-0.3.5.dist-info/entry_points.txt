@@ -1,0 +1,5 @@
+[console_scripts]
+markovgram=markovgram.__main__:main
+markovgram-merge=markovgram.merge:run
+markovgram-preview=markovgram.preview:run
+

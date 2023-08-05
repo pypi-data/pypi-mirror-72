@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: markovgram
+Version: 0.3.5
+Summary: Parse GDPR-exported Telegram data and create markovify Texts
+Author: Stefano Pigozzi
+Author-email: ste.pigozzi@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: markovify (>=0.7.2,<0.8.0)
