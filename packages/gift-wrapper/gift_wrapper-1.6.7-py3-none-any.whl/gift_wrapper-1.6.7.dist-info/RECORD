@@ -1,0 +1,16 @@
+gift_wrapper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gift_wrapper/colors.py,sha256=pl-Ve0a_48qLFh2Jtv_UpzOwQxegKYhO-qWfiV1-MPk,254
+gift_wrapper/core.py,sha256=kG-7oGCV2z2N_9ptXAGrFPYpmoC6OED6SmyTIclTBxs,6398
+gift_wrapper/gift.py,sha256=nIuFEAEE8ob4PHf_GYroVyyo0PGxW60yYCV6LR5UUdw,4031
+gift_wrapper/image.py,sha256=dT9jfhv46_ItDfk4Lo6k6-9KFRPlBaEDnnNberAUQN0,2361
+gift_wrapper/latex.py,sha256=whJG6HfDCczRrIv5OycZ4q7O2bksx-uoHZcz7Vt-2Lo,2773
+gift_wrapper/parsing.py,sha256=EC3xQrDDZbFeQfqPSSlSWjqMeEORwZVM1LBFMp2foYw,1250
+gift_wrapper/question.py,sha256=2-7ZSy6xJhkNEFaOuNaj7Eo5gGrPynWnF9dWizoawdk,13510
+gift_wrapper/remote.py,sha256=OJ7_MYjnUbUj9W7fZuR0nyhSyTeOvoRsqrIEqSjrAyw,3918
+gift_wrapper/wrap.py,sha256=9O4wIfkRReWTLuQg7yhci8tAd3bLGBpVrsWCd622it0,4232
+gift_wrapper-1.6.7.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+gift_wrapper-1.6.7.dist-info/METADATA,sha256=4rQ2jvesYLSmm3HwC1P0YAqfSBPx-uz2UbD-sM5ftO0,8747
+gift_wrapper-1.6.7.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gift_wrapper-1.6.7.dist-info/entry_points.txt,sha256=SIL6kUnFwLEnZIdBZpifJh264dMtq9_HtlhAmHlBRJc,52
+gift_wrapper-1.6.7.dist-info/top_level.txt,sha256=0V_BO7gCtRm7j1dt-boJ-T2NZKK0FLHM5zLt6iRsnyA,13
+gift_wrapper-1.6.7.dist-info/RECORD,,
