@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+maskprocessor/__init__.py
+maskprocessor/__main__.py
+maskprocessor/__version__.py
+maskprocessor/core.py
+maskprocessor.egg-info/PKG-INFO
+maskprocessor.egg-info/SOURCES.txt
+maskprocessor.egg-info/dependency_links.txt
+maskprocessor.egg-info/entry_points.txt
+maskprocessor.egg-info/not-zip-safe
+maskprocessor.egg-info/top_level.txt
