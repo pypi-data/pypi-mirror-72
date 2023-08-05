@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+mel/__init__.py
+mel/_version.py
+mel/tf.py
+mel.egg-info/PKG-INFO
+mel.egg-info/SOURCES.txt
+mel.egg-info/dependency_links.txt
+mel.egg-info/entry_points.txt
+mel.egg-info/top_level.txt
