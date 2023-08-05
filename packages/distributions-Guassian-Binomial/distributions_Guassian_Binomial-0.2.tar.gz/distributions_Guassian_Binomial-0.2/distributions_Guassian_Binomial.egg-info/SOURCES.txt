@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+distributions_Guassian_Binomial/Binomialdistribution.py
+distributions_Guassian_Binomial/Gaussiandistribution.py
+distributions_Guassian_Binomial/Generaldistribution.py
+distributions_Guassian_Binomial/__init__.py
+distributions_Guassian_Binomial.egg-info/PKG-INFO
+distributions_Guassian_Binomial.egg-info/SOURCES.txt
+distributions_Guassian_Binomial.egg-info/dependency_links.txt
+distributions_Guassian_Binomial.egg-info/not-zip-safe
+distributions_Guassian_Binomial.egg-info/top_level.txt
