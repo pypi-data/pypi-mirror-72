@@ -1,0 +1,3 @@
+[console_scripts]
+kuafu = kuafu.main:main
+
