@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+quicksect/quicksect.cpp
+quicksectx/__init__.py
+quicksectx/quicksectx.cp36-win_amd64.pyd
+quicksectx/quicksectx.cpp
+quicksectx/quicksectx.pxd
+quicksectx/quicksectx.pyx
+quicksectx/version.py
+quicksectx.egg-info/PKG-INFO
+quicksectx.egg-info/SOURCES.txt
+quicksectx.egg-info/dependency_links.txt
+quicksectx.egg-info/not-zip-safe
+quicksectx.egg-info/requires.txt
+quicksectx.egg-info/top_level.txt
