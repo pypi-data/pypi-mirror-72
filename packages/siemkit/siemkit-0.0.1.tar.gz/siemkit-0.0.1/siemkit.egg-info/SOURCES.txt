@@ -1,0 +1,12 @@
+README.md
+setup.py
+siemkit/__init__.py
+siemkit/csv.py
+siemkit/event.py
+siemkit/file.py
+siemkit/parse.py
+siemkit/time.py
+siemkit.egg-info/PKG-INFO
+siemkit.egg-info/SOURCES.txt
+siemkit.egg-info/dependency_links.txt
+siemkit.egg-info/top_level.txt

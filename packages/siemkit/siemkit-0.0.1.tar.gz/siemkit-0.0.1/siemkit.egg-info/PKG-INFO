@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: siemkit
+Version: 0.0.1
+Summary: Open-Source Community Tools for SIEM
+Home-page: https://github.com/cybersiem
+Author: CyberSIEM Community
+Author-email: dave@cybersiem.com
+License: Apache 2.0
+Description: ## CyberSIEM Community Kit
+        
+        * The project gains rapid progress.. coming soon!
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Customer Service
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Logging
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
