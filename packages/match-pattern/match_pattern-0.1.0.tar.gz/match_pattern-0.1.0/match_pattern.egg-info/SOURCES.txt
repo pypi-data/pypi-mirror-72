@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+match_pattern/__init__.py
+match_pattern/pattern.py
+match_pattern/pattern_test.py
+match_pattern.egg-info/PKG-INFO
+match_pattern.egg-info/SOURCES.txt
+match_pattern.egg-info/dependency_links.txt
+match_pattern.egg-info/top_level.txt
