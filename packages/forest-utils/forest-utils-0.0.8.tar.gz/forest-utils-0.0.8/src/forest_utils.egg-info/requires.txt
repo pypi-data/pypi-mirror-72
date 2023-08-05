@@ -1,0 +1,6 @@
+gdown==3.11.1
+requests==2.24.0
+tensorflow
+spacy
+pandas
+click
