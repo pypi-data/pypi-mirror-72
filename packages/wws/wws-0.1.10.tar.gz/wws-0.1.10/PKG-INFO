@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: wws
+Version: 0.1.10
+Summary: A simple utility to synchronize local and remote paths
+License: MIT
+Author: Daniel Porto
+Author-email: daniel.porto@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: emoji (>=0.5.4,<0.6.0)
+Requires-Dist: funcy (>=1.14,<2.0)
+Requires-Dist: plumbum (>=1.6,<2.0)
+Requires-Dist: pprint (>=0.1,<0.2)
+Requires-Dist: printy (>=2.0.1,<3.0.0)
+Requires-Dist: pyyaml (>=5.3,<6.0)
+Requires-Dist: tabulate (>=0.8.7,<0.9.0)
+Description-Content-Type: text/x-rst
+
+# workspace-warp-sync
+A simple utility to synchronize a local workspace with remote ones
+
+## Commands
+
+* ls 
+* add   --src, --dst, --alias
+* rm    --src --dst --alias 
+* agent --start, --stop, --configure, --reload, --status
+* sync  --up/down, --alias
+
+### Development
+Configure visual studio code: 
+* Install poetry on your system. 
+* Install vscode with python extensions
+* Run poetry update
+* Run poetry shell
+* Run code .
+* select into vscode the python interpreter.
