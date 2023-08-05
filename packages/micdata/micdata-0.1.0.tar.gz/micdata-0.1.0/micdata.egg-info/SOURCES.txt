@@ -1,0 +1,14 @@
+README.md
+setup.py
+micdata/__init__.py
+micdata/display.py
+micdata/formatting.py
+micdata/io.py
+micdata/micdata.py
+micdata/rollingball.py
+micdata/stack.py
+micdata.egg-info/PKG-INFO
+micdata.egg-info/SOURCES.txt
+micdata.egg-info/dependency_links.txt
+micdata.egg-info/requires.txt
+micdata.egg-info/top_level.txt
