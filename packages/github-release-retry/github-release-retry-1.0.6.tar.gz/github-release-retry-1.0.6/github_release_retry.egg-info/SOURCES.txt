@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+github_release_retry/__init__.py
+github_release_retry/github_release_retry.py
+github_release_retry/py.typed
+github_release_retry.egg-info/PKG-INFO
+github_release_retry.egg-info/SOURCES.txt
+github_release_retry.egg-info/dependency_links.txt
+github_release_retry.egg-info/entry_points.txt
+github_release_retry.egg-info/requires.txt
+github_release_retry.egg-info/top_level.txt
