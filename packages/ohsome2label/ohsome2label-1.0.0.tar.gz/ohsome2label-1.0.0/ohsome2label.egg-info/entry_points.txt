@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        ohsome2label=ohsome2label.main:cli
+    
