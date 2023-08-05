@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pykitcommander
+Version: 0.0.0.1
+Summary: A protocol driver for a generic development kit command handler interface
+Home-page: http://www.microchip.com
+Author: Microchip Technology
+Author-email: support@microchip.com
+License: Microchip Technology Inc. Proprietary License
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Description-Content-Type: text/markdown
+Requires-Dist: pyserial
+Provides-Extra: dev
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: mock ; extra == 'dev'
+
+# pykitcommander
+pykitcommander is a protocol driver for a generic development kit command handler interface
+
+## Usage
+The remainder of this package is intentionally blank
+
+
