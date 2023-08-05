@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+django_table_archive/__init__.py
+django_table_archive/apps.py
+django_table_archive/tests.py
+django_table_archive.egg-info/PKG-INFO
+django_table_archive.egg-info/SOURCES.txt
+django_table_archive.egg-info/dependency_links.txt
+django_table_archive.egg-info/not-zip-safe
+django_table_archive.egg-info/top_level.txt
