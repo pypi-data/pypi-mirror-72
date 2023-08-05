@@ -1,0 +1,12 @@
+kgraph/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kgraph/datasets/__init__.py,sha256=EOGlH8BOwKuEi3SebaTFJ2fhoUnXXv2X-qCeTi1NfXc,431
+kgraph/datasets/read.py,sha256=KCCRZe9tLNbr2FL8-t8rJ-T1ZxZkeYICV13f9bbzA4U,22107
+kgraph/utils/__init__.py,sha256=exETDagJ6AtFt-NfNNO4H02XIMICDJMEPA2NsPbcf5E,382
+kgraph/utils/metrics.py,sha256=vC2EPHdrfJB0wyG9AsSAa89H_9empFTPhqUsMZrvCng,7356
+kgraph/utils/protocol.py,sha256=jWxYkbuAvdEmA43Tec2kbqgmeof2VIwH8mP4__sMHzg,11703
+kgraph-0.0.8.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+kgraph-0.0.8.dist-info/METADATA,sha256=wDsoJo23PdWH4zoidUq-gnWUfAPU6JzjyKoodwWIYsc,513
+kgraph-0.0.8.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+kgraph-0.0.8.dist-info/top_level.txt,sha256=AWGB7LPwgc88PIxM55AhUNO6ZaTgtHOiTP6DPRB56dA,7
+kgraph-0.0.8.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+kgraph-0.0.8.dist-info/RECORD,,
