@@ -1,0 +1,3 @@
+[console_scripts]
+git-squash-blame=squashblame:squash_blame
+
