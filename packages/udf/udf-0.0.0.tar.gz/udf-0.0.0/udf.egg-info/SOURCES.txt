@@ -1,0 +1,10 @@
+README.md
+setup.py
+pyplatform/__init__.py
+pyplatform/udf.py
+udf.egg-info/PKG-INFO
+udf.egg-info/SOURCES.txt
+udf.egg-info/dependency_links.txt
+udf.egg-info/not-zip-safe
+udf.egg-info/requires.txt
+udf.egg-info/top_level.txt
