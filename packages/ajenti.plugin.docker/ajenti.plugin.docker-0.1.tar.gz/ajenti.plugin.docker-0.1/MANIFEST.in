@@ -1,0 +1,7 @@
+
+recursive-include ajenti_plugin_docker * *.*
+recursive-exclude ajenti_plugin_docker *.pyc
+include ajenti_plugin_docker/plugin.yml
+include MANIFEST.in
+include requirements.txt
+    
