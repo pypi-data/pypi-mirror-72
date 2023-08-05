@@ -1,0 +1,6 @@
+[console_scripts]
+charzsh-bu = charzsh.backup:main
+charzsh-eta = charzsh.eta:main
+charzsh-fix-io-errors = charzh.fix_io_errors:main
+charzsh-rmbu = charzsh.delete_backedup:main
+
