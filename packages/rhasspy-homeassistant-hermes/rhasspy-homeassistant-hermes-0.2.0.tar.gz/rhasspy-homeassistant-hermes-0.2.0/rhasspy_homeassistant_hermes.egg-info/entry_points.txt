@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-homeassistant-hermes = rhasspyhomeassistant_hermes.__main__:main
+
