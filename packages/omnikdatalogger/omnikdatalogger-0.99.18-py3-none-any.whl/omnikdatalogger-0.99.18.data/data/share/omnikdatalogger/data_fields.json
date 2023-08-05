@@ -1,0 +1,339 @@
+{
+    "current_power": {
+        "name": "Current power",
+        "dev_cla": "power",
+        "ic": "chart-bell-curve",
+        "unit": "W",
+        "measurement": "power",
+        "tags": { "power_class": "ac" },
+        "filter": ""
+    },
+    "total_energy": {
+        "name": "Energy total",
+        "dev_cla": "",
+        "ic": "counter",
+        "unit": "kWh",
+        "measurement": "energy",
+        "tags": {},
+        "filter": "|round(1)"
+    },
+    "today_energy": {
+        "name": "Energy today",
+        "dev_cla": "",
+        "ic": "counter",
+        "unit": "kWh",
+        "measurement": "energy",
+        "tags": {},
+        "filter": "|round(2)"
+    },
+    "last_update": {
+        "name": "Last Update",
+        "dev_cla": "timestamp",
+        "ic": "calendar-clock",
+        "unit": "",
+        "measurement": null,
+        "tags": {},
+        "filter": "|timestamp_local"
+    },
+    "inverter_temperature": {
+        "name": "Inverter temperature",
+        "dev_cla": "temperature",
+        "ic": "thermometer-lines",
+        "unit": "\u00b0C",
+        "measurement": "temperature",
+        "tags": { "source": "inverter" },  
+        "filter": "|round(1)"
+    },
+    "temperature": {
+        "name": "Temperature",
+        "dev_cla": "temperature",
+        "ic": "thermometer-lines",
+        "unit": "\u00b0C",
+        "measurement": "temperature",
+        "tags": { "source": "openweather.org" },
+        "filter": null
+    },
+    "current_ac1": {
+        "name": "AC Current fase R",
+        "dev_cla": "",
+        "ic": "flash-auto",
+        "unit": "A",
+        "measurement": "current",
+        "tags": {
+            "power_class": "ac",
+            "fase": "R"
+        },
+        "filter": "|round(2)"
+    },
+    "current_ac2": {
+        "name": "AC Current fase S",
+        "dev_cla": "",
+        "ic": "flash-auto",
+        "unit": "A",
+        "measurement": "current",
+        "tags": {
+            "power_class": "ac",
+            "fase": "S"
+        },
+        "filter": "|round(2)"
+    },
+    "current_ac3": {
+        "name": "AC Current fase T",
+        "dev_cla": "",
+        "ic": "flash-auto",
+        "unit": "A",
+        "measurement": "current",
+        "tags": {
+            "power_class": "ac",
+            "fase": "T"
+        },
+        "filter": "|round(2)"
+    },
+    "voltage_ac1": {
+        "name": "AC Voltage fase R",
+        "dev_cla": "",
+        "ic": "alert-outline",
+        "unit": "V",
+        "measurement": "voltage",
+        "tags": {
+            "power_class": "ac",
+            "fase": "R"
+        },
+        "filter": "|round(1)"
+    },
+    "voltage_ac2": {
+        "name": "AC Voltage fase S",
+        "dev_cla": "",
+        "ic": "alert-outline",
+        "unit": "V",
+        "measurement": "voltage",
+        "tags": {
+            "power_class": "ac",
+            "fase": "S"
+        },
+        "filter": "|round(1)"
+    },
+    "voltage_ac3": {
+        "name": "AC Voltage fase T",
+        "dev_cla": "",
+        "ic": "alert-outline",
+        "unit": "V",
+        "measurement": "voltage",
+        "tags": {
+            "power_class": "ac",
+            "fase": "T"
+        },
+        "filter": "|round(1)"
+    },
+    "voltage_ac_max": {
+        "name": "AC Voltage max",
+        "dev_cla": "",
+        "ic": "alert-outline",
+        "unit": "V",
+        "measurement": "voltage",
+        "tags": {
+            "power_class": "ac"
+        },
+        "filter": "|round(1)"
+    },
+    "frequency_ac1": {
+        "name": "AC Frequency fase R",
+        "dev_cla": "",
+        "ic": "pulse",
+        "unit": "Hz",
+        "measurement": "frequency",
+        "tags": {
+            "power_class": "ac",
+            "fase": "R"
+        },
+        "filter": "|round(2)"
+    },
+    "frequency_ac2": {
+        "name": "AC Frequency fase S",
+        "dev_cla": "",
+        "ic": "pulse",
+        "unit": "Hz",
+        "measurement": "frequency",
+        "tags": {
+            "power_class": "ac",
+            "fase": "S"
+        },
+        "filter": "|round(2)"
+    },
+    "frequency_ac3": {
+        "name": "AC Frequency fase T",
+        "dev_cla": "",
+        "ic": "pulse",
+        "unit": "Hz",
+        "measurement": "frequency",
+        "tags": {
+            "power_class": "ac",
+            "fase": "T"
+        },
+        "filter": "|round(2)"
+    },
+    "power_ac1": {
+        "name": "AC Power fase R",
+        "dev_cla": "power",
+        "ic": "flash-circle",
+        "unit": "W",
+        "measurement": "power",
+        "tags": {
+            "power_class": "ac",
+            "fase": "R"
+        },
+        "filter": ""
+    },
+    "power_ac2": {
+        "name": "AC Power fase S",
+        "dev_cla": "power",
+        "ic": "flash-circle",
+        "unit": "W",
+        "measurement": "power",
+        "tags": {
+            "power_class": "ac",
+            "fase": "S"
+        },
+        "filter": ""
+    },
+    "power_ac3": {
+        "name": "AC Power fase T",
+        "dev_cla": "power",
+        "ic": "flash-circle",
+        "unit": "W",
+        "measurement": "power",
+        "tags": {
+            "power_class": "ac",
+            "fase": "T"
+        },
+        "filter": ""
+    },
+    "voltage_pv1": {
+        "name": "DC Voltage string 1",
+        "dev_cla": "",
+        "ic": "alert-outline",
+        "unit": "V",
+        "measurement": "voltage",
+        "tags": {
+            "power_class": "dc",
+            "fase": "1"
+        },
+        "filter": "|round(1)"
+    },
+    "voltage_pv2": {
+        "name": "DC Voltage string 2",
+        "dev_cla": "",
+        "ic": "alert-outline",
+        "unit": "V",
+        "measurement": "voltage",
+        "tags": {
+            "power_class": "dc",
+            "fase": "2"
+        },
+        "filter": "|round(1)"
+    },
+    "voltage_pv3": {
+        "name": "DC Voltage string 3",
+        "dev_cla": "",
+        "ic": "alert-outline",
+        "unit": "V",
+        "measurement": "voltage",
+        "tags": {
+            "power_class": "dc",
+            "fase": "3"
+        },
+        "filter": "|round(1)"
+    },
+    "current_pv1": {
+        "name": "DC Current string 1",
+        "dev_cla": "",
+        "ic": "flash-auto",
+        "unit": "A",
+        "measurement": "current",
+        "tags": {
+            "power_class": "dc",
+            "fase": "1"
+        },
+        "filter": "|round(1)"
+    },
+    "current_pv2": {
+        "name": "DC Current string 2",
+        "dev_cla": "",
+        "ic": "flash-auto",
+        "unit": "A",
+        "measurement": "current",
+        "tags": {
+            "power_class": "dc",
+            "fase": "2"
+        },
+        "filter": "|round(1)"
+    },
+    "current_pv3": {
+        "name": "DC Current string 3",
+        "dev_cla": "",
+        "ic": "flash-auto",
+        "unit": "A",
+        "measurement": "current",
+        "tags": {
+            "power_class": "dc",
+            "fase": "3"
+        },
+        "filter": "|round(1)"
+    },
+    "power_pv1": {
+        "name": "DC Power string 1",
+        "dev_cla": "power",
+        "ic": "flash",
+        "unit": "W",
+        "measurement": "power",
+        "tags": {
+            "power_class": "dc",
+            "fase": "1"
+        },
+        "filter": ""
+    },
+    "power_pv2": {
+        "name": "DC Power string 2",
+        "dev_cla": "power",
+        "ic": "flash",
+        "unit": "W",
+        "measurement": "power",
+        "tags": {
+            "power_class": "dc",
+            "fase": "2"
+        },
+        "filter": ""
+    },
+    "power_pv3": {
+        "name": "DC Power string 3",
+        "dev_cla": "power",
+        "ic": "flash",
+        "unit": "W",
+        "measurement": "power",
+        "tags": {
+            "power_class": "dc",
+            "fase": "3"
+        },
+        "filter": ""
+    },
+    "current_power_pv": {
+        "name": "DC Current power",
+        "dev_cla": "power",
+        "ic": "flash",
+        "unit": "W",
+        "measurement": "power",
+        "tags": {
+            "power_class": "dc"
+        },
+        "filter": ""
+    },
+    "operation_hours": {
+        "name": "Hours active",
+        "dev_cla": "",
+        "ic": "progress-clock",
+        "unit": "Hours",
+        "measurement": "operation_time",
+        "tags": {},
+        "filter": ""
+    }
+}
