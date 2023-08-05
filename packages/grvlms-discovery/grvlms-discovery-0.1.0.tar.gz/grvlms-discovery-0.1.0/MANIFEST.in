@@ -1,0 +1,2 @@
+recursive-include grvlmsdiscovery/patches *
+recursive-include grvlmsdiscovery/templates *
