@@ -1,0 +1,12 @@
+prompt_toolkit
+file_or_name
+pyperclip
+string_distance
+inverted-index
+
+[remote]
+flask
+requests
+
+[test]
+pytest

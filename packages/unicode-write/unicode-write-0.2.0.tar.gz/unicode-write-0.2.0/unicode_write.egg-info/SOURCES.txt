@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+unicode_write/__init__.py
+unicode_write/client.py
+unicode_write/driver.py
+unicode_write/serve.py
+unicode_write/utils.py
+unicode_write.egg-info/PKG-INFO
+unicode_write.egg-info/SOURCES.txt
+unicode_write.egg-info/dependency_links.txt
+unicode_write.egg-info/entry_points.txt
+unicode_write.egg-info/requires.txt
+unicode_write.egg-info/top_level.txt
+unicode_write/data/__init__.py
+unicode_write/data/emoji.json
