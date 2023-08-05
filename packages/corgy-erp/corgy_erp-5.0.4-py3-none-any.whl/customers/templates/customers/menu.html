@@ -1,0 +1,6 @@
+{% load i18n %}
+<ul>
+    <li><a href="{% url 'customers:customer_list' %}">{% trans 'Ügyfelek' %}</a></li>
+    <li><a href="{% url 'customers:individual_list' %}">{% trans 'Egyéni vállalkozások' %}</a></li>
+    <li><a href="{% url 'customers:organization_list' %}">{% trans 'Társas vállalkozások' %}</a></li>
+</ul>
