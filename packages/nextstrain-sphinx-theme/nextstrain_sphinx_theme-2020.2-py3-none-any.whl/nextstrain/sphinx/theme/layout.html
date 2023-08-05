@@ -1,0 +1,38 @@
+{% extends "sphinx_rtd_theme/layout.html" %}
+{#
+  Most of this block is copied from sphinx_rtd_theme version 0.5.0-1-gaa71fd6.
+
+  Tweaks were necessary for our theme to provide a default logo, since Sphinx's
+  html_logo configuration option (template variable "logo" below) can't be set
+  by the theme *and also* can't refer to a theme-provided file when set by the
+  doc project's conf.py.
+#}
+{% block sidebartitle %}
+{% set logo = logo if logo else 'nextstrain-logo.svg' if theme_logo else '' %}
+
+{% if logo %}
+  <a href="{{ pathto(master_doc) }}">
+    <img src="{{ pathto('_static/' + logo, 1) }}" class="logo" alt="{{ _('Logo') }}"/>
+  </a>
+{% endif %}
+
+{% if not theme_logo_only %}
+<a href="{{ pathto(master_doc) }}" class="icon icon-home project-name" alt="{{ _("Documentation Home") }}"> {{ project }}</a>
+{% endif %}
+
+
+{% if theme_display_version %}
+  {%- set nav_version = version %}
+  {% if READTHEDOCS and current_version %}
+    {%- set nav_version = current_version %}
+  {% endif %}
+  {% if nav_version %}
+    <div class="version">
+      {{ nav_version }}
+    </div>
+  {% endif %}
+{% endif %}
+
+{% include "searchbox.html" %}
+
+{% endblock %}
