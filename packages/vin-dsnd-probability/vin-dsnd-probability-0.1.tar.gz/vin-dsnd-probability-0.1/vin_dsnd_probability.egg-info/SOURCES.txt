@@ -1,0 +1,10 @@
+setup.py
+vin-dsnd-probability/Binomialdistribution.py
+vin-dsnd-probability/Gaussiandistribution.py
+vin-dsnd-probability/Generaldistribution.py
+vin-dsnd-probability/__init__.py
+vin_dsnd_probability.egg-info/PKG-INFO
+vin_dsnd_probability.egg-info/SOURCES.txt
+vin_dsnd_probability.egg-info/dependency_links.txt
+vin_dsnd_probability.egg-info/not-zip-safe
+vin_dsnd_probability.egg-info/top_level.txt
