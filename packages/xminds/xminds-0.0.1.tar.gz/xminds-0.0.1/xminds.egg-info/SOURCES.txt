@@ -1,0 +1,13 @@
+README.md
+setup.py
+xminds/__init__.py
+xminds/compat.py
+xminds.egg-info/PKG-INFO
+xminds.egg-info/SOURCES.txt
+xminds.egg-info/dependency_links.txt
+xminds.egg-info/requires.txt
+xminds.egg-info/top_level.txt
+xminds/api/__init__.py
+xminds/api/apirequest.py
+xminds/api/client.py
+xminds/api/exceptions.py
