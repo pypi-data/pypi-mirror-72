@@ -1,0 +1,3 @@
+[console_scripts]
+condor_htchirp = htchirp.cli:main
+

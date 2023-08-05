@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+htchirp/__init__.py
+htchirp/__main__.py
+htchirp/cli.py
+htchirp/htchirp.py
+htchirp.egg-info/PKG-INFO
+htchirp.egg-info/SOURCES.txt
+htchirp.egg-info/dependency_links.txt
+htchirp.egg-info/entry_points.txt
+htchirp.egg-info/not-zip-safe
+htchirp.egg-info/top_level.txt
