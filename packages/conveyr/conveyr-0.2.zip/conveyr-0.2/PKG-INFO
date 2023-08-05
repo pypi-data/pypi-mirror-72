@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: conveyr
+Version: 0.2
+Summary: Conveyor pipline handling library for python 3.5 and later
+Home-page: https://github.com/megafetis/mediatr_py
+Author: Evgeniy Fetisov
+Author-email: me@efetisov.ru
+License: MIT -or- Apache License 2.0
+Description: UNKNOWN
+Keywords: Conveyor,Conveyr,Mediator,pipline,behaviors,saga,Chain
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
