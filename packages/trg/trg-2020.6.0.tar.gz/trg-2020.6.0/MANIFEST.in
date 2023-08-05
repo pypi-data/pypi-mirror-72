@@ -1,0 +1,19 @@
+graft src
+graft tests
+
+include AUTHORS.rst
+include CHANGELOG.rst
+include LICENSE
+include requirements.txt
+
+exclude .github
+exclude .python-version
+exclude .pyup.yml
+exclude .venv
+exclude .vscode
+exclude Makefile
+
+recursive-exclude .github *
+recursive-exclude .vscode *
+
+global-exclude *.py[cod] __pycache__ *.so *.dylib

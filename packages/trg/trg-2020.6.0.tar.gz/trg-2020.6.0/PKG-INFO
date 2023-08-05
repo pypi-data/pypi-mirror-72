@@ -1,0 +1,41 @@
+Metadata-Version: 1.1
+Name: trg
+Version: 2020.6.0
+Summary: To do a better description
+Home-page: https://github.com/vltr/trg
+Author: Richard Kuesters
+Author-email: rkuesters@gmail.com
+License: MIT license
+Description: =======
+        ``trg``
+        =======
+        
+        To be done.
+        
+        License
+        =======
+        
+        ``trg`` is a free software distributed under the `MIT <https://choosealicense.com/licenses/mit/>`_ license.
+        
+        
+        Changelog
+        =========
+        
+        2020.6.0 on 2020-06-25
+        -----------------------
+        
+        * First release on PyPI.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Utilities

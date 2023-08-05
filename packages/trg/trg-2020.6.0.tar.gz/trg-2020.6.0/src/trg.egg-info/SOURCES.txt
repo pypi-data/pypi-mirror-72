@@ -1,0 +1,15 @@
+AUTHORS.rst
+CHANGELOG.rst
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+src/trg/__init__.py
+src/trg/__main__.py
+src/trg.egg-info/PKG-INFO
+src/trg.egg-info/SOURCES.txt
+src/trg.egg-info/dependency_links.txt
+src/trg.egg-info/not-zip-safe
+src/trg.egg-info/top_level.txt
