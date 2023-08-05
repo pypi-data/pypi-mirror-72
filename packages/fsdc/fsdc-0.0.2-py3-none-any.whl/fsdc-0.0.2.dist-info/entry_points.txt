@@ -1,0 +1,3 @@
+[console_scripts]
+compare_dir = fsdc.fsdc:main
+
