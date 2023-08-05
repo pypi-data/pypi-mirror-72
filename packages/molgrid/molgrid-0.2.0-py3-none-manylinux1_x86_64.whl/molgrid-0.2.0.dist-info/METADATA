@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: molgrid
+Version: 0.2.0
+Summary: Grid-based molecular modeling library
+Home-page: https://github.com/gnina/libmolgrid
+Author: David Ryan Koes and Jocelyn Sunseri
+Author-email: dkoes@pitt.edu
+License: UNKNOWN
+Project-URL: Documentation, http://gnina.github.io/libmolgrid
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Requires-Dist: numpy (>=1.16.2)
+Requires-Dist: pytest
+Requires-Dist: pyquaternion
+
+molgrid can be used to generate several types of tensors from input molecules, most uniquely three-dimensional voxel grids. Input can be specified fairly flexibly, with native support for numpy arrays and torch tensors as well as major molecular file formats via OpenBabel. Output generation has several options that facilitate obtaining good performance from machine learning algorithms, including features like data augmentation and resampling.
+
+
