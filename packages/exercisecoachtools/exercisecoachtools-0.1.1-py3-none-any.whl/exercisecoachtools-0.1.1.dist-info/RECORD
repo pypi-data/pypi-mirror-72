@@ -1,0 +1,15 @@
+kcal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kcal/daily_kcal_by_lifestyle.py,sha256=1aR3aN4zjFuo5FduYiN43Hkt44YzZ_3EoR0PROAXhrQ,415
+kcal/metabolic_rate_prediction.py,sha256=dFc8-1zJt3ccnIpMPk8Xvj4EQbKHMkWaOQ8zGYp5__w,2000
+percentage_calculators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+percentage_calculators/one_rep_max_estimation.py,sha256=j0okxEjdLO_3hWUaZU8Z_rCkZs_uPMb5fzydOGzXssE,1625
+percentage_calculators/percentage_calculators.py,sha256=_mMs6gouPw-uijyf41gaTn--vLbtDEs2S8vhuDGC5hE,162
+risk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+risk/risk_stratification.py,sha256=_TyO9zxVzTmFf-qsay8eKHPnLlk2i_33jeBf0OG7Ro0,5811
+validation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+validation/value_validation.py,sha256=uyZFQbet-Yej8WIHUonvx2PtQkKUpGIEy9Ro1h6eQWE,1478
+exercisecoachtools-0.1.1.dist-info/LICENSE,sha256=ZDtm_t39OcuuvI6eqYttMHnlY2r1cmqMIpy4uO-4KIs,1075
+exercisecoachtools-0.1.1.dist-info/METADATA,sha256=mPPz85u01DHKNFx8KlPBkjRfXEGrPwwrGuHOg-pXpiw,6164
+exercisecoachtools-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+exercisecoachtools-0.1.1.dist-info/top_level.txt,sha256=5p2rE5MYRfEh9CDRMEJLmdTBrduLuuT7Itfi5glYFt0,44
+exercisecoachtools-0.1.1.dist-info/RECORD,,
