@@ -1,0 +1,12 @@
+README.md
+setup.py
+tbwk/Measurement.py
+tbwk/Properties.py
+tbwk/RawOpener.py
+tbwk/Worksheet.py
+tbwk/__init__.py
+tbwk_opener.egg-info/PKG-INFO
+tbwk_opener.egg-info/SOURCES.txt
+tbwk_opener.egg-info/dependency_links.txt
+tbwk_opener.egg-info/requires.txt
+tbwk_opener.egg-info/top_level.txt
