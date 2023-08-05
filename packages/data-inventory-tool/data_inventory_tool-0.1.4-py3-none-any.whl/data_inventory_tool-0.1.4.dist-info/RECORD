@@ -1,0 +1,16 @@
+README.rst,sha256=v6lS7JDg_vaWDavR0iCUHtCjWy9fUIrskhkF13RKRAU,426
+datainventory/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datainventory/cli.py,sha256=scndznMSBfH-lhLkmVlv_RCCZ8tGkwe8QBNPWYHL5Lo,612
+datainventory/core.py,sha256=VawgFCRpOZc0nVJfU4d0m8VrBmGUDS8hfMKL4XYV-wA,5167
+datainventory/formats/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datainventory/formats/ascii.py,sha256=5-z8UiqjIJyDeCfNMvNbM5KwqOH-AwbDNfQGALYRr0E,3032
+datainventory/formats/csv.py,sha256=OBK_jXoScoyqNj3LRH6KWwzhrsIyeARlJwdK-K95od4,208
+datainventory/iterate.py,sha256=-5bshSmTnENRWDlBliYLKl6W8K-O9wxzjxkyum06zLU,2505
+datainventory/sources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datainventory/sources/csv.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datainventory/sources/sql.py,sha256=dA3m8iCX69lwM4HBFTdFQIZLTwDzt-pmoLqLcGb4mso,2948
+datainventory/testing.py,sha256=8PXnnB-vokUCBLtUsZEVh6aOum2KJ-y26yNdOCzB0y0,205
+data_inventory_tool-0.1.4.dist-info/entry_points.txt,sha256=XRpjiu7Gl9fnzscwOB_YNzeFTghUYZ4Oj9mpaYxAGhE,58
+data_inventory_tool-0.1.4.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+data_inventory_tool-0.1.4.dist-info/METADATA,sha256=a900Ly7bh8n3A7s0cYbEQycJBZCo7V4G2dfaKt_8-Pk,902
+data_inventory_tool-0.1.4.dist-info/RECORD,,
