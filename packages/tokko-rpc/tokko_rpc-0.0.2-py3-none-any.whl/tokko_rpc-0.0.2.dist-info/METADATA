@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: tokko-rpc
+Version: 0.0.2
+Summary: Tokko RPC flavor.
+Home-page: https://github.com/TokkoLabs/services-tokkobroker/libraries/rpc-plugin/tokko_rpc
+Author: Jose Salgado
+Author-email: jsalgado@navent.com
+License: BSD License
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Description-Content-Type: text/markdown
+Requires-Dist: arrow (==0.15.6)
+Requires-Dist: python-dateutil (==2.2)
+Requires-Dist: Werkzeug (==1.0.1)
+Requires-Dist: json-rpc (==1.13.0)
+Requires-Dist: coloredlogs (==14.0)
+Requires-Dist: requests (==2.24.0)
+Requires-Dist: jinja2 (==2.11.2)
+
+# Install
+```bash
+# Virtual Environment
+(venv) pip install tokko_rpc==0.0.2
+# Main Python3 environment
+sudo -H pip3 install tokko_rpc==0.0.2
+```
+
+# Usage
+_ToDo_
+
+# Testing
+```bash
+python -m unittest tokko_rpc.test
+```
+
+
