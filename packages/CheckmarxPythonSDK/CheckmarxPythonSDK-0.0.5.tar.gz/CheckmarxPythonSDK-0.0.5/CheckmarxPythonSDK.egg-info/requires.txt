@@ -1,0 +1,9 @@
+requests>=2.22.0
+requests-toolbelt>=0.9.1
+
+[dev]
+pytest
+coverage
+
+[dotenv]
+python-dotenv
