@@ -1,0 +1,13 @@
+oximachinerunner/__init__.py,sha256=wDFG4kichp7IZqSOM1fyQMrByb49v95TcS1lgGvv7jg,3170
+oximachinerunner/_version.py,sha256=ONqIp7IjKsT5142jBJcPfvPH6UADiCe2lFAhQ_5KqbY,502
+oximachinerunner/featurize.py,sha256=QQ0tQn0WVIfrQZHPufWsOFxoLGXCRJECvDENDSeCXNg,41509
+oximachinerunner/utils.py,sha256=pFhoCgTupq-RZ2wG_mFMOAd0sKZQWe2HOejFvIuF0sk,2006
+oximachinerunner/assets/scaler_0.joblib,sha256=pRNjto7Oi_i9kGZqaMavRQZkfX_tfWWZfXdcZC8gTT8,3358
+oximachinerunner/assets/votingclassifier.joblib,sha256=1gGY-r6OFfM7Q4LARZ_JoCtqGuhTeWjBphksFwM3Ic8,85134369
+oximachinerunner/learnmofox/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oximachinerunner/learnmofox/utils.py,sha256=IVucPjn45LWmxsVnqqgU0w42qmuf9-qgoezgHja3IOY,7356
+oximachinerunner-0.1a0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+oximachinerunner-0.1a0.dist-info/METADATA,sha256=yJMNJA9pVtU92O4eEKEr8OyULK60zzJm3o4-3L5JmdU,2756
+oximachinerunner-0.1a0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+oximachinerunner-0.1a0.dist-info/top_level.txt,sha256=BCNTbSJe06nfvkluVFFxni3QRmTB3skFCMerLiMpy0A,17
+oximachinerunner-0.1a0.dist-info/RECORD,,
