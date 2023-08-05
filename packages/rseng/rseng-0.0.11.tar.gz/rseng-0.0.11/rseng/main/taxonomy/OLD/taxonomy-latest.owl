@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:webprotege:ontology:38860856-8177-474d-8394-d856576fd64c#"
+     xml:base="urn:webprotege:ontology:38860856-8177-474d-8394-d856576fd64c"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="urn:webprotege:ontology:38860856-8177-474d-8394-d856576fd64c"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R1s27U5Xf9t8ZXLQE6GcMl -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R1s27U5Xf9t8ZXLQE6GcMl">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDWizLLQNlpXLLbt8sxWHx6"/>
+        <rdfs:label>Version control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7Qwreq4a4UzfPSwprTEbHj -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7Qwreq4a4UzfPSwprTEbHj">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDREpeC1SvmAEvHalsr3T9J"/>
+        <rdfs:label>Workflow managers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7aZlOMCD90wB0cnpUZ7Lfl -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7aZlOMCD90wB0cnpUZ7Lfl">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RCKUL2xMkDFDMZ4GGQvhbK"/>
+        <rdfs:label>Visualization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7fUAT0lnGyzVfHv5uHcfDE -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7fUAT0lnGyzVfHv5uHcfDE">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDREpeC1SvmAEvHalsr3T9J"/>
+        <rdfs:label>Interactive development environments for research</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7mQuaz8Ny1KNaqF31gUzYc -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7mQuaz8Ny1KNaqF31gUzYc">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDREpeC1SvmAEvHalsr3T9J"/>
+        <rdfs:label>Provenance and metadata collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7s9ldDetRIZohaBP1qO0iG -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7s9ldDetRIZohaBP1qO0iG">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RCKUL2xMkDFDMZ4GGQvhbK"/>
+        <rdfs:label>Numerical libraries</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8GSCNJLnULaQx3ZscGNTFz -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R8GSCNJLnULaQx3ZscGNTFz">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDnNQWGVMuXeMyFaUDQ7IFe"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domain-specific software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8gXPkXE4GTP2Aa4ArVLYas -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R8gXPkXE4GTP2Aa4ArVLYas">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RPzaCZjPSXAsyYzbosq13"/>
+        <rdfs:label>Frameworks</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R98RoOiIiBU0CqGxfVKVlJF -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R98RoOiIiBU0CqGxfVKVlJF">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDWizLLQNlpXLLbt8sxWHx6"/>
+        <rdfs:label>Communication tools or platforms</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9ZvNgmcXEzDDzjJHc3YTvg -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R9ZvNgmcXEzDDzjJHc3YTvg">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RCKUL2xMkDFDMZ4GGQvhbK"/>
+        <rdfs:label>Data collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBcIiPZhdV8ZMBF3SbSjxpB -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBcIiPZhdV8ZMBF3SbSjxpB">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8GSCNJLnULaQx3ZscGNTFz"/>
+        <rdfs:label>Domain-specific hardware</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RC5NMIXnsfxlxKn4H7s8Bdn -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RC5NMIXnsfxlxKn4H7s8Bdn">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8GSCNJLnULaQx3ZscGNTFz"/>
+        <rdfs:label>Domain-specific optimized software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCKUL2xMkDFDMZ4GGQvhbK -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RCKUL2xMkDFDMZ4GGQvhbK">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDnNQWGVMuXeMyFaUDQ7IFe"/>
+        <rdfs:label>General software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCpivffzGQWebqOoifQVGfo -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RCpivffzGQWebqOoifQVGfo">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RPzaCZjPSXAsyYzbosq13"/>
+        <rdfs:label>Application programming interfaces</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RD1l7kaIBHo5ltG4XWoaVT3 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RD1l7kaIBHo5ltG4XWoaVT3">
+        <rdfs:label>Software to support research</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDREpeC1SvmAEvHalsr3T9J -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RDREpeC1SvmAEvHalsr3T9J">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RD1l7kaIBHo5ltG4XWoaVT3"/>
+        <rdfs:label>Explicitly for research</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDWGvtbsVjrl9wQgoCTU28 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RDWGvtbsVjrl9wQgoCTU28">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8GSCNJLnULaQx3ZscGNTFz"/>
+        <rdfs:label>Domain-specific analysis software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDWizLLQNlpXLLbt8sxWHx6 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RDWizLLQNlpXLLbt8sxWHx6">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RD1l7kaIBHo5ltG4XWoaVT3"/>
+        <rdfs:label>Incidentally used for research</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDnNQWGVMuXeMyFaUDQ7IFe -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RDnNQWGVMuXeMyFaUDQ7IFe">
+        <rdfs:label>Software to directly conduct research</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RPzaCZjPSXAsyYzbosq13 -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RPzaCZjPSXAsyYzbosq13">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RD1l7kaIBHo5ltG4XWoaVT3"/>
+        <rdfs:label>Used for research but not explicitly for it</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/Rd6WTbIHgl7A4lJrxK2hNl -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/Rd6WTbIHgl7A4lJrxK2hNl">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDWizLLQNlpXLLbt8sxWHx6"/>
+        <rdfs:label>Text Editors and Integrated Development Environments</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RhhInlcFhnaL0Xx8TIDuFa -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RhhInlcFhnaL0Xx8TIDuFa">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDWizLLQNlpXLLbt8sxWHx6"/>
+        <rdfs:label>Operating systems</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RmRLQwlnRyXzgZ5YMzozSw -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RmRLQwlnRyXzgZ5YMzozSw">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RPzaCZjPSXAsyYzbosq13"/>
+        <rdfs:label>Databases</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RzVtJHPG8wdw8qh0EJ5EFN -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RzVtJHPG8wdw8qh0EJ5EFN">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDWizLLQNlpXLLbt8sxWHx6"/>
+        <rdfs:label>Personal scheduling and task management</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi -->
+

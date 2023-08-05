@@ -1,0 +1,30 @@
+RSE-taxonomy-conduct-research	Software to directly condict research
+RSE-taxonomy-support-research	Software to support research
+RSE-taxonomy-domain-specific	Domain specific software
+RSE-taxonomy-domain-hardware	Domain-specific hardware
+RSE-taxonomy-domain-optimized	Domain-specific optimized software
+RSE-taxonomy-domain-analysis	Domain-specific analysis software
+RSE-taxonomy-general-software	General software
+RSE-taxonomy-numerical-libraries	Numerical Libraries
+RSE-taxonomy-data-collection	Data collection
+RSE-taxonomy-visualization	Visualization
+RSE-taxonomy-research	Explicitly for research
+RSE-taxonomy-workflows	Workflow managers
+RSE-taxonomy-interactive	Interactive development environments for research
+RSE-taxonomy-metadata	Provenance and metadata collection tools
+RSE-taxonomy-not-explicitly-used	Used for research but not explicitly for it
+RSE-taxonomy-databases	Databases
+RSE-taxonomy-api	Application programming interfaces
+RSE-taxonomy-frameworks	Frameworks
+RSE-taxonomy-incidentually-used	Incidentally used for research
+RSE-taxonomy-operating-systems	Operating systems
+RSE-taxonomy
+
+Software to support research >> Used for research, but not explicitly for it >> Databases
+Software to support research >> Used for research, but not explicitly for it >> Application programming interfaces
+Software to support research >> Used for research, but not explicitly for it >> Frameworks
+Software to support research >> Incidentally used for research >> Operating Systems
+Software to support research >> Incidentally used for research >> Personal scheduling and task management
+Software to support research >> Incidentally used for research >> Version Control
+Software to support research >> Incidentally used for research >> Text Editors and Integrated Development Environments
+Software to support research >> Incidentally used for research >> Communication tools or platforms
