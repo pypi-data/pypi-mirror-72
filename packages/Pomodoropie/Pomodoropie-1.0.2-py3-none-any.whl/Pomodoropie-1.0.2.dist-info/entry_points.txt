@@ -1,0 +1,3 @@
+[console_scripts]
+pomodoropie = pomodoropie.__main__:main
+
