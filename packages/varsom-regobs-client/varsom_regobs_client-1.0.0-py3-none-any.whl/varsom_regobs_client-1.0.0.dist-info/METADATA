@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: varsom-regobs-client
+Version: 1.0.0
+Summary: RegObs API
+Home-page: https://github.com/NVE/python-varsom-regobs-client
+Author: UNKNOWN
+Author-email: regobs@nve.no
+License: UNKNOWN
+Keywords: Swagger,RegObs API
+Platform: UNKNOWN
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+
+## Introduction    RegObs is a tool for collecting observations and events   related to natural hazards. It is currently used by the   Norwegian flood, landslide and avalanche warning service in   Norway, but the data is openly available for anyone through this API.    Regobs has been developed by the Norwegian Water resources and   Energy Directorate (NVE), in collaboration with the Norwegian   Meteorological Institute (MET) and the Norwegian Public Roads   Administration (NPRA).    You can check out our representation of the data at [regobs.no](http://regobs.no).    ## Authentication    Some endpoints require an api key.  You can get an API key by sending an email to   [raek@nve.no](mailto:raek@nve.no?subject&#x3D;RegObs%20API%20Key).  To use the api key with the swagger ui, fill in the api\_key input above.   It should then be included with every request in the   &#x60;regObs_apptoken&#x60; header.    ## Getting started    Get the last 10 observations using python:    &#x60;&#x60;&#x60;python  import requests  r &#x3D; requests.post(&#x27;https://api.regobs.no/v4/Search&#x27;,       data&#x3D;{&#x27;NumberOfRecords&#x27;: 10},      headers&#x3D;{&#x27;Content-Type&#x27;: &#x27;application/json&#x27;}  )  data &#x3D; r.json()  print(len(data))  # 10  &#x60;&#x60;&#x60;      # noqa: E501
+
+
