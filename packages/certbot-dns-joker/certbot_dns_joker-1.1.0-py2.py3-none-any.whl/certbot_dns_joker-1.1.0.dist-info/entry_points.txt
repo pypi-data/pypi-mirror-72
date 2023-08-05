@@ -1,0 +1,3 @@
+[certbot.plugins]
+dns-joker = certbot_dns_joker.dns_joker:Authenticator
+
