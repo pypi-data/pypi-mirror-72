@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: python-args
+Version: 1.0.0
+Summary: Python argument design patterns in a composable interface.
+Home-page: https://github.com/jyveapp/python-args
+License: BSD-3-Clause
+Author: Wes Kendall
+Requires-Python: >=3.6,<4
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Project-URL: Documentation, https://python-args.readthedocs.io
+Project-URL: Repository, https://github.com/jyveapp/python-args
+Description-Content-Type: text/x-rst
+
+python-args
+########################################################################
+
+Documentation
+=============
+
+`View the python-args docs here
+<https://python-args.readthedocs.io/>`_.
+
+Installation
+============
+
+Install python-args with::
+
+    pip3 install python-args
+
+
+Contributing Guide
+==================
+
+For information on setting up python-args for development and
+contributing changes, view `CONTRIBUTING.rst <CONTRIBUTING.rst>`_.
+
+Primary Authors
+===============
+
+- @wesleykendall (Wes Kendall)
+
