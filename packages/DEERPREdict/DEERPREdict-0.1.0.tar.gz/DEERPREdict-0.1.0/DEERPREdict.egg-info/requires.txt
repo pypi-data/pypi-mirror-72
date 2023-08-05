@@ -1,0 +1,12 @@
+Cython
+MDAnalysis==0.20.1
+numpy
+pandas
+matplotlib
+scipy
+h5py
+pyyaml
+sphinx
+recommonmark
+sphinx_rtd_theme
+sphinx-math-dollar
