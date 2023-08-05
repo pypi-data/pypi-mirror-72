@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gera2ld.socks
+Version: 0.1.2
+Summary: SOCKS client and server based on asyncio
+Home-page: https://github.com/gera2ld/pysocks
+License: MIT
+Author: Gerald
+Author-email: gera2ld@163.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: async_dns (>=1.0.10,<2.0.0)
+Requires-Dist: gera2ld-pyserve (>=0.2.0,<0.3.0)
+Project-URL: Repository, https://github.com/gera2ld/pysocks
