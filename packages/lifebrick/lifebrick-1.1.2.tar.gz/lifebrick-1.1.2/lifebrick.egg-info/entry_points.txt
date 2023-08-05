@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        startpkg=src.cli:cli
+    
