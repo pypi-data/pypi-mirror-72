@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: bahram-cli
+Version: 1.3.4
+Summary: Faster Development For Django 3 Projects
+Home-page: https://github.com/tokyodevs/deded
+Author: revrev
+Author-email: admin@tokyodevs.com
+License: UNKNOWN
+Keywords: django
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
+Requires-Dist: alive-progress
+Requires-Dist: appdirs
+Requires-Dist: argcomplete
+Requires-Dist: certifi
+Requires-Dist: chardet
+Requires-Dist: click
+Requires-Dist: colorama
+Requires-Dist: docopt
+Requires-Dist: fire
+Requires-Dist: idna
+Requires-Dist: importlib-metadata
+Requires-Dist: milc
+Requires-Dist: prompt-toolkit (==1.0.14)
+Requires-Dist: Pygments
+Requires-Dist: PyInquirer
+Requires-Dist: regex
+Requires-Dist: requests
+Requires-Dist: six
+Requires-Dist: termcolor
+Requires-Dist: urllib3
+Requires-Dist: wcwidth
+Requires-Dist: yaspin
+Requires-Dist: zipp
+
+long_description weferfew f ew f ew f ew f we
+
+
