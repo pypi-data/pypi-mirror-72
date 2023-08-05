@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Make sure we have a 'libriciel-ip' group
+      group:
+        name: libriciel-ip
+        state: present
+    - name: Allow 'libriciel-ip' group to have sudo
+      lineinfile:
+        dest: /etc/sudoers
+        state: present
+        regexp: '^%libriciel-ip'
+        line: '%libriciel-ip ALL=(ALL) NOPASSWD:ALL'
+        validate: 'visudo -cf %s'
+    - name: Add sudoers users to libriciel-ip group
+      user: name=libriciel-ip groups=libriciel-ip append=yes state=present createhome=yes

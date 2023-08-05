@@ -1,0 +1,36 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Install required packages
+      yum:
+        name:
+          - git
+          - sudo
+          - vim
+        state: present
+    - name: Install centos required packages
+      yum:
+        name:
+          - glibc-locale-source
+        state: present
+      when: ansible_os_family == "RedHat"
+    - name: get the rpm or apt package facts
+      package_facts:
+        manager: "auto"
+    - name: Install DEB teleport
+      become: yes
+      apt:
+        deb: https://get.gravitational.com/teleport_4.2.9_amd64.deb
+      when: ansible_os_family == "Debian" and "teleport" not in ansible_facts.packages
+    - name: Install RPM teleport
+      become: yes
+      yum:
+        name: https://get.gravitational.com/teleport-4.2.9-1.x86_64.rpm
+        state: present
+      when: ansible_os_family == "RedHat" and "teleport" not in ansible_facts.packages
+    - name: Add /usr/local/bin to secure_path for sudo command
+      shell: echo "Defaults secure_path += /usr/local/bin:/bin" > /etc/sudoers.d/teleport_path
+      when: ansible_os_family == "RedHat"
+    - name: Set locale
+      shell: localedef -c -i fr_FR -f UTF-8 fr_FR.UTF-8 && echo "LANG=fr_FR.UTF-8" > /etc/locale.conf
