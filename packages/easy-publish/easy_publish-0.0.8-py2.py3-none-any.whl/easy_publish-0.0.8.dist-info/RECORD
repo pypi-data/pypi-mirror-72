@@ -1,0 +1,12 @@
+easy_publish/__init__.py,sha256=2jEAcj4XP4X97HiS7Kj9vuYQtcEmFuQt4jGvAxQJ92U,64
+easy_publish/posts.py,sha256=kQgLnWHOntEpCzXwIPBkjDWB4iD_eCY5fmkrHhgzutU,6060
+easy_publish/utils.py,sha256=To9NR9zf-sr7mIHdxe9odZdTnjGt9kkU6GWD7rqw_EQ,893
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_posts.py,sha256=jcHvAwp733tU5klgoQ82Mh8FEnMifhIerKrZ9oWOiiw,1322
+tests/test_utils.py,sha256=Vcc5OkhzBJl7IidQumWhHew9XNDjcZ7DI-yIH44-v04,504
+easy_publish-0.0.8.dist-info/LICENSE,sha256=CSQQFx6yAe-4NZQj1Zf-PRveLZitA_wHRPIw2W3sowQ,1049
+easy_publish-0.0.8.dist-info/METADATA,sha256=tnI_ifnMephKSwXmV5k9e3bVk_UUswcj2SPNqqt6cZQ,2923
+easy_publish-0.0.8.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+easy_publish-0.0.8.dist-info/entry_points.txt,sha256=TcUB1mzXiQO4GxpTRZ0EMpOXKMU3u-n_q1WrgVIcs1I,5
+easy_publish-0.0.8.dist-info/top_level.txt,sha256=G1xfu-eBaWDVXaD0AN2o8jWZN3-LVsAVo82k6Ig0smU,19
+easy_publish-0.0.8.dist-info/RECORD,,
