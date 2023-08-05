@@ -1,0 +1,10 @@
+setup.py
+odoo/addons/somenergia/__init__.py
+odoo/addons/somenergia/__manifest__.py
+odoo/addons/somenergia/views/account_asset_profile.xml
+odoo12_addon_somenergia.egg-info/PKG-INFO
+odoo12_addon_somenergia.egg-info/SOURCES.txt
+odoo12_addon_somenergia.egg-info/dependency_links.txt
+odoo12_addon_somenergia.egg-info/not-zip-safe
+odoo12_addon_somenergia.egg-info/requires.txt
+odoo12_addon_somenergia.egg-info/top_level.txt
