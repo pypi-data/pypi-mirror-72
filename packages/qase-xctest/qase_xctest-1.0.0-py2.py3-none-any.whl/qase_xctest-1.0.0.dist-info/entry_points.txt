@@ -1,0 +1,3 @@
+[console_scripts]
+qasexcode = qaseio.xcode.xcode_test_post_action:main
+
