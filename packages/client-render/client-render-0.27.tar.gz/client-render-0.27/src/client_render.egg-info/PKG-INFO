@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: client-render
+Version: 0.27
+Summary: UNKNOWN
+Home-page: https://github.com/telepenin/client-render/
+Author: Nikolay Telepenin
+Author-email: telepenin.nikolay@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Topic :: Multimedia :: Graphics :: 3D Rendering
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
