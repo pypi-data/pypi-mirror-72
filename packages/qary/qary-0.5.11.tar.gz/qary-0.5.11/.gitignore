@@ -1,0 +1,75 @@
+# Temporary and binary files
+*~
+*.py[cod]
+*.so
+*.cfg
+!.isort.cfg
+!setup.cfg
+*.orig
+*.log
+*.pot
+__pycache__/*
+.DS_*
+.cache/*
+.*.swp
+*/.ipynb_checkpoints/*
+.coverage*
+data/*.swp
+data/history.json
+
+# Project files
+.ropeproject
+.project
+.pydevproject
+.settings
+.idea
+.vscode
+tags
+*.code-workspace
+
+# Package files
+*.egg
+*.eggs/
+.installed.cfg
+*.egg-info
+
+# Unittest and coverage
+htmlcov/*
+.coverage
+.tox
+junit.xml
+coverage.xml
+.pytest_cache/
+
+# Build and docs folder/files
+build/*
+dist/*
+sdist/*
+docs/api/*
+docs/_rst/*
+docs/_build/*
+cover/*
+MANIFEST
+
+# Mac
+__MACOSX
+
+# KDE
+.directory
+
+# BigData and Models
+db.sqlite3
+*.bz2
+*.zip
+qary/data/qa-models/*
+qary/data/simple-transformer/
+**/albert-large*
+
+# Per-project virtualenvs
+.venv*/
+
+# secrets
+.bash_env
+**/*secret*
+**/*private*
+qary/data/*.json
