@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: figgy-lib
+Version: 0.0.4
+Summary: Python library that supports Python development while using the Figgy config management framework: https://www.figgy.dev
+Home-page: https://www.figgy.dev
+Author: Jordan Mance
+Author-email: jordan@figgy.dev
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: boto3 (>=1.13.0)
+
+
+# figgy
+Cloud native config management.
+
+For details on Figgy check out the [Figgy Blog](https://www.figgy.devl) or [Figgy Docs](https:/www.figgy.dev/docs/)
+
+To see a live example of how you can use this library, check the reference github repo: https://github.com/mancej/figgy.python-reference
+
+
+
