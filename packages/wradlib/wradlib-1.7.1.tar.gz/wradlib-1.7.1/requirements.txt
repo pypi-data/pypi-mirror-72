@@ -1,0 +1,11 @@
+deprecation
+gdal
+h5py
+h5netcdf
+netCDF4
+numpy
+matplotlib
+scipy
+xarray
+xmltodict
+requests
