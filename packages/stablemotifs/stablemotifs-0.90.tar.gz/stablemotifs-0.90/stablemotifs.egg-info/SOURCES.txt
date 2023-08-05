@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+stablemotifs_setup.py
+stablemotifs/__init__.py
+stablemotifs/jupyter.py
+stablemotifs/results.py
+stablemotifs.egg-info/PKG-INFO
+stablemotifs.egg-info/SOURCES.txt
+stablemotifs.egg-info/dependency_links.txt
+stablemotifs.egg-info/requires.txt
+stablemotifs.egg-info/top_level.txt
