@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pyharborsdk
+Version: 0.1
+Summary: SDK about harbor
+Home-page: https://github.com/ThinkBlue1991/pyharbortool
+Author: zhangjx
+Author-email: 1075495029@qq.com
+License: UNKNOWN
+Description: # pyharbortool
+        SDK about harbor
+        ## Install
+        ```
+        pip3 install pyharborsdk==0.1
+        ```
+        ## Usage
+        ```
+        from pyharbor import HarborClient
+        hc=HarborClient(host="127.0.0.1:443",user="admin",password="Harbor12345",protocol="https")
+        print(hc)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
