@@ -1,0 +1,8 @@
+requests>=2.22.0
+tornado
+pyYAML
+tinydb
+sqlalchemy
+tornado_discovery
+psutil
+litedfs_client
