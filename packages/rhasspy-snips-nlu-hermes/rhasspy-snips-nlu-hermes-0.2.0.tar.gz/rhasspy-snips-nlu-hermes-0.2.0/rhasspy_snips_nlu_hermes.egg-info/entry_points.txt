@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-snips-nlu-hermes = rhasspysnips_nlu_hermes.__main__:main
+
