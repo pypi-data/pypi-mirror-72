@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+GMGC_mapper.egg-info/PKG-INFO
+GMGC_mapper.egg-info/SOURCES.txt
+GMGC_mapper.egg-info/dependency_links.txt
+GMGC_mapper.egg-info/entry_points.txt
+GMGC_mapper.egg-info/not-zip-safe
+GMGC_mapper.egg-info/requires.txt
+GMGC_mapper.egg-info/top_level.txt
+gmgc_mapper/BLOSUM.py
+gmgc_mapper/alignment.py
+gmgc_mapper/gmgc_mapper_version.py
+gmgc_mapper/main.py
+gmgc_mapper/output.md
+test/test_alignment.py
+test/test_split.py

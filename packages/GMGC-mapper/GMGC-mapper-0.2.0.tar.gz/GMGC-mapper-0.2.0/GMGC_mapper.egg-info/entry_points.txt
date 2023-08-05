@@ -1,0 +1,3 @@
+[console_scripts]
+gmgc-mapper = gmgc_mapper.main:main
+
