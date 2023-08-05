@@ -1,0 +1,1 @@
+inspired by this repo https://github.com/pfrazee/parse-dat-url
