@@ -1,0 +1,87 @@
+name: Packaging
+
+on:
+  push:
+  pull_request:
+  release:
+    types: [published]
+
+jobs:
+  wheels:
+    name: Build ${{ matrix.os }} wheels
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+
+    env:
+      CIBW_BEFORE_BUILD_LINUX: >
+        curl 'https://www.libraw.org/data/LibRaw-0.19.5.tar.gz' | tar xzf - &&
+        cd LibRaw* &&
+        ./configure --prefix=/usr &&
+        make &&
+        make install
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: brew install libraw
+      if: runner.os == 'macOS'
+    - name: Install cibuildwheel
+      run: python -m pip install cibuildwheel
+    - name: Build wheels
+      run: python -m cibuildwheel --output-dir wheelhouse
+    - uses: actions/upload-artifact@master
+      with:
+        name: wheelhouse-${{ matrix.os }}
+        path: wheelhouse
+    - name: Publish package
+      run: python -m pip install twine==3.2.0rc1 && python -m twine upload wheelhouse/*
+      if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.pypi_password }}
+
+  sdist:
+    name: Build source distribution
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install dependencies  # GHA runs 18.04 which doesn't have libraw19
+      run: >
+        curl 'https://www.libraw.org/data/LibRaw-0.19.5.tar.gz' | tar xzf - &&
+        cd LibRaw* &&
+        ./configure --prefix=/usr &&
+        make &&
+        sudo make install
+      if: runner.os == 'Linux'
+    - name: Install dependencies
+      run: brew install libraw
+      if: runner.os == 'macOS'
+    - name: Install sdist builder
+      run: python -m pip install pep517
+    - name: Evade 'pypa/pep517#74'
+      run: python -m pip install -U setuptools setuptools-scm pip wheel
+      if: startsWith(matrix.python-version, 'pypy')
+    - name: Create packages
+      run: python -m pep517.build --source .
+    - uses: actions/upload-artifact@master
+      with:
+        name: dist
+        path: dist
+    - name: Publish package
+      if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: __token__
+        password: ${{ secrets.pypi_password }}
