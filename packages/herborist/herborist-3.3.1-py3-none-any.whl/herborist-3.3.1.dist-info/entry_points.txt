@@ -1,0 +1,4 @@
+[console_scripts]
+dxl-config = pypot.tools.dxlconfig:main
+herborist = herborist.herborist:main
+
