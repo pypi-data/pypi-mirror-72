@@ -1,0 +1,17 @@
+wpwatcher/__init__.py,sha256=5ME4uqDeazo5jVlNadkIU0Vbva862M44UHGzE-5G6aw,1544
+wpwatcher/cli.py,sha256=jQGqemq2HARJl1UtOe1H-kjfwRWoDZQPpih3nLnHjlU,9072
+wpwatcher/config.py,sha256=IJ2Cz_HuVjaYPt_2ask1GRVpjyNLnbPbxby0o1kcDxI,9404
+wpwatcher/core.py,sha256=lIJX2cDPNsBR6BbBgTBtQ8MXz0DQ_CmkE28LQ1ZM9rg,7632
+wpwatcher/daemon.py,sha256=xRgTqd6SM9prYBHgB31ca6r95sG0O1oyf-we_BPYQFo,739
+wpwatcher/db.py,sha256=2QVKu2O2LZlEZiqCwv6bGag6gLoOJFnyjtQHNmYX_ug,3305
+wpwatcher/notification.py,sha256=JNTBcNB5g54r846Oc3Rs-4YKF7vi2WlCLBQM_RxahTA,9439
+wpwatcher/parser.py,sha256=gIjR8_ErcpvkaX4uOpFq-x01j3RlgNxBHfceIzsk92s,14147
+wpwatcher/scan.py,sha256=vBv3fGUu-xZbzhY1cOM0OsM7uyRc8dimdVxLeWXQVag,16085
+wpwatcher/utils.py,sha256=TrSGp3_NeMWV5JOJ0HnnmRWxkzL_EDtrohUacAfzGeQ,4395
+wpwatcher/wpscan.py,sha256=Vm7TGxFir-gLcvM2tSTCE26hzyyz1HZ6IMYkLt1mGwg,4512
+wpwatcher-2.1.dev0.dist-info/LICENSE,sha256=xllut76FgcGL5zbIRvuRc7aezPbvlMUTWJPsVr2Sugg,11358
+wpwatcher-2.1.dev0.dist-info/METADATA,sha256=9UrOU-Hq35D5GeDg8poVMvSULS0broEsw90CbjJKOFM,33591
+wpwatcher-2.1.dev0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+wpwatcher-2.1.dev0.dist-info/entry_points.txt,sha256=YPbL1JSAXRRqc-JpWTBXteydPvb-iHFfLKCt4_u64ww,50
+wpwatcher-2.1.dev0.dist-info/top_level.txt,sha256=H4hmvv9Xpp1W-D3yR6zqQxTNy0n2ZUu3mpRkggQ_7Hk,10
+wpwatcher-2.1.dev0.dist-info/RECORD,,
