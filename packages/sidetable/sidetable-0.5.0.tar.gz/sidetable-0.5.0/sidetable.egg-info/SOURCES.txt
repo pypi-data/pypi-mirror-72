@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+sidetable/__init__.py
+sidetable/sidetable.py
+sidetable.egg-info/PKG-INFO
+sidetable.egg-info/SOURCES.txt
+sidetable.egg-info/dependency_links.txt
+sidetable.egg-info/not-zip-safe
+sidetable.egg-info/requires.txt
+sidetable.egg-info/top_level.txt
