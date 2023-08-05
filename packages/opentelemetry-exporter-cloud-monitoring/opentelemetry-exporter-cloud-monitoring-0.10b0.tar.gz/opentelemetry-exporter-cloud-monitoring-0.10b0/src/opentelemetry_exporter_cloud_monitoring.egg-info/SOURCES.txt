@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+src/opentelemetry/exporter/cloud_monitoring/__init__.py
+src/opentelemetry/exporter/cloud_monitoring/version.py
+src/opentelemetry_exporter_cloud_monitoring.egg-info/PKG-INFO
+src/opentelemetry_exporter_cloud_monitoring.egg-info/SOURCES.txt
+src/opentelemetry_exporter_cloud_monitoring.egg-info/dependency_links.txt
+src/opentelemetry_exporter_cloud_monitoring.egg-info/requires.txt
+src/opentelemetry_exporter_cloud_monitoring.egg-info/top_level.txt

@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: opentelemetry-exporter-cloud-monitoring
+Version: 0.10b0
+Summary: Cloud Monitoring integration for OpenTelemetry
+Home-page: https://github.com/open-telemetry/opentelemetry-python/ext/opentelemetry-exporter-cloud-monitoring
+Author: OpenTelemetry Authors
+Author-email: cncf-opentelemetry-contributors@lists.cncf.io
+License: Apache-2.0
+Description: OpenTelemetry Cloud Monitoring Exporters
+        ========================================
+        
+        This library provides classes for exporting metrics data to Google Cloud Monitoring.
+        
+        Installation
+        ------------
+        
+        ::
+        
+            pip install opentelemetry-exporter-cloud-monitoring
+        
+        References
+        ----------
+        
+        * `OpenTelemetry Cloud Monitoring Exporter <https://opentelemetry-python.readthedocs.io/en/latest/ext/cloud_monitoring/cloud_monitoring.html>`_
+        * `Cloud Monitoring <https://cloud.google.com/monitoring/>`_
+        * `OpenTelemetry Project <https://opentelemetry.io/>`_
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.4
+Description-Content-Type: text/x-rst
+Provides-Extra: test
