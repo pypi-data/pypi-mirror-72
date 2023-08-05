@@ -1,0 +1,10 @@
+typing
+
+[dev]
+pylama
+black
+flake8
+
+[tests]
+pytest
+pytest-watch

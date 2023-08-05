@@ -1,0 +1,228 @@
+# bms-tree-modules
+
+The package contains the generic building blocks for the period-based Banking Management Simulation Games developed by the Institue of Banking & Finance (University of Zurich, Switerland).
+
+The package delivers the game building blocks: Node, Tree, Team, Config, Curves, Module.
+These classes can be used to implement a simulation without having to setup the complete tree data structure logic from scratch.
+The implementation can extend the class `Module` which takes JSON as input and allows to create a tree data structure recursively from it.
+All manipulations of the tree should be implemented in the actual implementation/simulation class.
+
+This package has been created as part of the Banking Management Simulation Game (BMS20) project at the Institue of Banking & Finance and Institute of Informatics (University of Zurich).
+
+## Requirements
+
+- Python 3.8
+- pip
+- pipenv
+
+## Using the Library (in a Simulation)
+
+### Installation
+
+Run `pipenv install bms-tree-modules` or `pip install bms-tree-modules` to install the package.
+
+### How to create a new simulation?
+
+Create a new file in which you're going to implement the logic of the simulation.
+
+```python
+from bms-tree-modules.module import Module
+
+class SimulationClassName(Module):
+    def __init__(self, period_input):
+        super().__init__(period_input)
+
+
+with open("/path/to/json_input.json", "r") as file:
+    # read file and load json string as dict
+    period_input = json.loads(file.read())
+
+    # create new simulation
+    sim = SimulationClassName(period_input)
+```
+
+### JSON input format requriements
+
+The Module class requires the `period_input` to be JSON and in the following format.
+All parts described separately below need to be in the same input file.
+
+#### Curve Configuration
+
+```json
+{
+  "curve_assignments": [
+    {
+      // key how the curve shall be retrievable in your code
+      "curve_slot_key": "KEY_USED_INTERNALLY_TO_RETRIEVE_THE_CURVE",
+      "curve_assigned": {
+        // The coefficients of the sensitivity curve
+        // The curve will be create as a lambda function
+        "coefficients": [0.12, 7.5, 200.0],
+      }
+    },
+```
+
+#### Team Input
+
+For every team taking part in the period-based simulation, the `teams` array needs to contain a separate entry.
+
+```json
+"teams": [
+    {
+      "team_id": 0,
+      "decisions": [
+        // the decisions the teams made
+        { "key": "LOANS_MARK_UP_RATING_A", "value": 0.01 },
+      ],
+      "tree_input": {
+        "name": "root",
+        "value": 0,
+        "description": "Team0_RoundInput_PeriodTimestamp?",
+        "children": [
+          {
+            "name": "BS",
+            "description": "The Balance Sheet",
+            "value": 0,
+            "children": [
+              {
+```
+
+##### Team Object
+
+Every team object consists of:
+
+- team_id: int
+- decisions: List of Decision Objects
+- tree_input: Node Object (root node)
+
+##### Decision Object
+
+Every decision objects consists of:
+
+- key: string
+- value: float
+
+The keys must be the same across all teams and each team must contain all keys that exist.
+
+##### Node Object
+
+Every object inside the `tree_input` is a Node object which needs to contain the following:
+
+- name: string
+- value: float
+- description: string
+- children: List of other child nodes (or empty)
+
+#### Leaf Node Configuration Values
+
+For at least all leaf-nodes (nodes which don't have childern i.e. an empty children array), a node configuration object needs to be provided.
+
+##### What is an effect?
+
+An effect is a factor which influences how the value of a leaf-node is changed from state `t0` to state `t1` (i.e. the change from one period to the next).
+A leaf-node can have many different effects.
+The results of all effects are summed and added/subtracted from the leaf-nodes input value -> new value.
+
+Each effect can have multiple configuration values -> these values are the same for all teams.
+An example of a configuration value is the `CURVE` mapping which tells the simulation which sensitivity curve to use during the computation of the new effect value.
+Others are, `MIN` (lower-limit), `MAX` (upper-limit), `WEIGHT` (contribution factor) which need to be considered when computing the effects value.
+
+```json
+  "config": [
+    {
+      "name": "BS_ACT_LOANS_RATING_A",
+      "description": "Description of the configuration values",
+      "effects": [
+        {
+          "name": "SERVICE_QUALITY",
+          "values": [
+            {
+              "key": "MIN",
+              "value": 0.0
+            },
+            {
+              "key": "MAX",
+              "value": 0.1
+            },
+            {
+              "key": "WEIGHT",
+              "value": 0.5
+            },
+            {
+              "key": "CURVE",
+              "value": "SERVICE_QUALITY_ASSET_SIDE"
+            }
+          ]
+        }
+      ]
+    },
+```
+
+## Developing the Library
+
+For developers wanting to extend this work, the following parts might give some insights.
+
+### Installation Instructions
+
+Run `pipenv install --dev` to install all dependencies
+Run `pipenv shell` to enter the virtualenv created by pipenv for this project.
+
+PS: if the installation doesn't work use `--pre` since some packages might only be in pre-release state.
+
+### How to build a new release?
+
+Make sure you're inside the previously created pipenv.
+
+#### Create the build (package)
+
+Run `python3 setup.py sdist bdist_wheel` which creates a `dist/` and `build` folder.
+
+#### Upload the package
+
+Run `python3 -m twine upload dist/*` to upload to the PyPi repository.
+
+In order for the upload to work, you need to create an API token to access PyPi.
+Use `__token__` for username and `pypi-...` as password.
+
+PS: the credentails can also be stored inside a `$HOME/.pypirc` file.
+
+```
+[pypi]
+  username = __token__
+  password = pypi-...
+```
+
+#### Official Documentation
+
+For more information have a look at the offical documentation: https://packaging.python.org/tutorials/packaging-projects/
+
+## Changelog
+
+The following sections documents the changes across the different versions.
+
+#### 📦 v0.2.0
+
+✨ New Features & Breaking Changes
+
+- Decisions are no longer key:value pairs
+- New Class Decisions & Decision _(replaces decisions \<dict> in Team with List[Decision])_
+
+#### 📦 v0.1.4
+
+✨ New Features
+
+- add decisions to Team `to_dict()` function _(to be able to pass it back in ResponseDTO)_
+
+#### 📦 v0.1.3
+
+🐛 Bug Fixes
+
+- a team can be retrieved by its team_id _(not the index in the teams list)_
+
+#### 📦 v0.1.2
+
+- update README & package description
+
+#### 📦 v0.1.1
+
+- initial package creation
