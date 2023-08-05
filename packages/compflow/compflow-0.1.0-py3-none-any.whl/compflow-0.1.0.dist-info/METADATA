@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: compflow
+Version: 0.1.0
+Summary: Compressible flow tables
+Home-page: https://github.com/jb753/compflow
+Author: James Brind
+Author-email: brind.james@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+# compflow
+
+This module contains functions to convert back and forth between Mach number
+and other non-dimensional flow quantities. It is under development but very
+much in a usable state.
+
+## Features
+* Evaluation of ten non-dimensional flow quantities as explicit functions of Mach number;
+* Iteration with Newton's method to invert the explicit relations and solve for Mach number;
+* Creation and caching of lookup tables to speed up inversions;
+* Fully-vectorised in both directions;
+* Tested against a dead-trees data book.
+
+James Brind
+June 2020
+
+
