@@ -1,0 +1,16 @@
+pandas
+numpy
+websocket_client
+requests
+
+[dev]
+mypy
+flake8
+black
+
+[packaging]
+twine
+
+[test]
+pytest
+hypothesis

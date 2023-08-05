@@ -1,0 +1,5 @@
+[console_scripts]
+multi_kola = kolaBitMEXBot.multi_kola:main_prg
+run_multi_kola = kolaBitMEXBot.run_multi_kola:main_prg
+test_kola = kolaBitMEXBot.tests.test_kola:main_prg
+
