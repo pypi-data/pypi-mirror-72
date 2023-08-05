@@ -1,0 +1,14 @@
+README.md
+setup.py
+dynamatic/__init__.py
+dynamatic/core.py
+dynamatic/enums.py
+dynamatic/exceptions.py
+dynamatic/expressions.py
+dynamatic/indexes.py
+dynamatic/table_mixins.py
+dynamatic.egg-info/PKG-INFO
+dynamatic.egg-info/SOURCES.txt
+dynamatic.egg-info/dependency_links.txt
+dynamatic.egg-info/requires.txt
+dynamatic.egg-info/top_level.txt
