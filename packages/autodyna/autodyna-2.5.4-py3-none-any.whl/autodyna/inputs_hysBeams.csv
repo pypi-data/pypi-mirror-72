@@ -1,0 +1,66 @@
+info_filename ,BH101,BH102
+Fc,20.7,20.7
+Ft,2.72983516,2.72983516
+ey,0.0014,0.0014
+ecu,0.0035,0.0035
+esp,0.005,0.005
+ef,1,1
+Ec,20473.7637,20473.7637
+den,2400,2400
+v,0.2,0.2
+Fy,345,345
+Fu,420,420
+esh,0.008,0.008
+esu,0.09,0.09
+Es,200000,200000
+section_type,Rectangular Beam,Rectangular Beam
+cover,38.1,38.1
+diameter_circ ,,
+bar_diam_circ ,,
+num_bars_circ,,
+rect_width ,2946.4,406.4
+rect_height ,203.2,406.4
+n_t,4,2
+n_b,2,2
+db_t,22.225,25.4
+db_b,22.225,25.4
+num_bars_col,,
+bar_diam_col,,
+t_width ,,
+t_height ,,
+f_width ,,
+f_thick ,,
+f_lay ,,
+f_bar ,,
+f_spac ,,
+t_nt ,,
+t_tbar ,,
+t_nb ,,
+t_bbar ,,
+bX,,
+bY,,
+tX,,
+tY,,
+cX,,
+cY,,
+cBar_centerD,,
+cBar_vFlangeD,,
+cBar_hFlangeD,,
+cBar_vFlangeN,,
+cBar_hFlangeN,,
+cBar_rows,,
+M_load,29,29
+N_load,1384,1384
+V_load,21,21
+d_shear ,12.7,12.7
+s_shear ,812.8,812.8
+n_legs ,"2,2","2,2"
+gc_mat ,1,1
+gs_mat ,1,1
+Fywd ,276,276
+phl_xx,0,0
+phl_yy,0,0
+rb_condition,"1,2","1,2"
+c_condition,2,2
+ss_ratio_s,0.2,0.2
+ss_ratio_t,0.2,0.2

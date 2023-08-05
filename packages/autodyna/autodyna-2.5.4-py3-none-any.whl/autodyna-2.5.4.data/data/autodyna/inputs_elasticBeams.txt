@@ -1,0 +1,20 @@
+info_filename, BH101, BH102
+Ec, 2.90E+04, 2.90E+04
+den, 2400, 2400
+v, 0.2, 0.2
+section_type, Rectangular Beam, Rectangular Beam
+cover, 38.1, 38.1
+diameter_circ, 0, 0
+rect_width, 304.8, 304.8
+rect_height, 488.95, 488.95
+t_width, 304.8, 304.8
+bX, 1300, 1300
+bY, 1000, 1000
+tX, 300, 300
+tY, 400, 400
+cX, 0, 0
+cY, 0, 0
+t_height, 488.95, 488.95
+f_width, 304.8, 304.8
+f_thick, 0, 0
+
