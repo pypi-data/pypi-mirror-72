@@ -1,0 +1,20 @@
+arrow
+cliff
+colorama
+configparser
+curlify
+dateparser
+docker<=4.2.0
+# GitPython
+pathlib2
+pbr
+PyGithub
+pymongo
+python-dotenv
+python-slugify
+stevedore
+stringcase
+tacc-cookiecutter
+tenacity
+validators
+agavepy>=1.0.0a8
