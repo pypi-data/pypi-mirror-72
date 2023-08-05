@@ -1,0 +1,11 @@
+dmtp/__init__.py,sha256=L9ipRtyAcBz3RENKI_2qzMTV_9uCGX7daVUNpzo1yRk,2457
+dmtp/address.py,sha256=FkR6hcVpoWNAOPqzxd0iTPzTpazmcpUq-1MW1ciC4Y0,6142
+dmtp/command.py,sha256=hXePvRGM3pfNnLhZF5w0Z1C-bGcvvcpYpdG48X11v2I,13507
+dmtp/contact.py,sha256=l_J-lijldYhCAV4quykTM4TJrKgzdGqV6Fi935qK71k,8162
+dmtp/message.py,sha256=povZPCWzVjfyYFq9EyIaXhgd3QcUvBo-BueOW_wA2us,8368
+dmtp/node.py,sha256=DTkX_FVHk4u8tzExmWZb0fagfBLprQlA1oRd7AAi-PA,13241
+dmtp/tlv.py,sha256=RVj8FjCynjKVUYxc32irqoD-N5gWj9QA8DoVuP3cnRk,8738
+dmtp-0.1.8.dist-info/METADATA,sha256=1A8IZaO0V3ysXVvLA3r4ZXUbp6uEdq9JauvjUPZz3A4,481
+dmtp-0.1.8.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+dmtp-0.1.8.dist-info/top_level.txt,sha256=szMzJhaSkIv_hi3Qtlb4N3JUsWF0GTtTkbkU-r7KlJE,5
+dmtp-0.1.8.dist-info/RECORD,,
