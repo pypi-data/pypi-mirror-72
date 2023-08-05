@@ -1,0 +1,13 @@
+README.md
+setup.py
+simpleelf/__init__.py
+simpleelf/elf_builder.py
+simpleelf/elf_consts.py
+simpleelf/elf_structs.py
+simpleelf.egg-info/PKG-INFO
+simpleelf.egg-info/SOURCES.txt
+simpleelf.egg-info/dependency_links.txt
+simpleelf.egg-info/requires.txt
+simpleelf.egg-info/top_level.txt
+tests/__init__.py
+tests/test_build_elf.py
