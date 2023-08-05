@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: imline
+Version: 0.0.1
+Summary: imline is key point marker and angular map creator on a face
+Home-page: https://github.com/
+Author: Cem Baybars GÜÇLÜ
+Author-email: cem.baybars@gmail.com
+License: MIT
+Keywords: image processing computer vision face mapping key-points
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+Requires-Dist: tinydb (==3.9.0.post1)
+Requires-Dist: numpy
+Requires-Dist: multipledispatch
+Requires-Dist: psutil
+Requires-Dist: gitpython
+Requires-Dist: imutils
+Requires-Dist: google-images-download
+Requires-Dist: stasm
+Provides-Extra: optionals
+Requires-Dist: flake8 ; extra == 'optionals'
+Requires-Dist: sphinx ; extra == 'optionals'
+Requires-Dist: sphinx-rtd-theme ; extra == 'optionals'
+Requires-Dist: recommonmark ; extra == 'optionals'
+Requires-Dist: docutils ; extra == 'optionals'
+Requires-Dist: m2r ; extra == 'optionals'
+Requires-Dist: pytest ; extra == 'optionals'
+Requires-Dist: pytest-cov (==2.6.1) ; extra == 'optionals'
+Requires-Dist: coveralls (==1.8.2) ; extra == 'optionals'
+
+# ImLine
+
+the image marking and angular face map creating software.
+
+#### Supported Environments
+
+|                         |                                         |
+|-------------------------|-----------------------------------------|
+| **Operating systems**   | Linux                                   |
+| **Python versions**     | Python 3.x (64-bit)                     |
+| **Distros**             | Ubuntu                                |
+| **Package managers**    | APT, pip                                |
+| **Languages**           | English                                 |
+|                         |                                         |
+
+### Installation
+
+Clone the GitHub repository and run
+
+```Shell
+sudo ./install.sh
+```
+
+in the repository directory.
+
+for development mode: `sudo ./install-dev.sh`
+
+
+<sup><i>If there is a failure try `sudo -H ./install-dev.sh`</i></sup>
+
+### Usage
+
+```
+usage: imline [-h] [--ripe-dataset RIPE_DATASET]
+              [--environment {production,development,testing}] [-v]
+              [--version]
+              {set-key-points} ...
+
+positional arguments:
+  {set-key-points}      officiate the sub-jobs
+    set-key-points      Mark key-points of the given images to the ImLine.
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+Others:
+  --ripe-dataset RIPE_DATASET
+                        Images folder that keeps already marked images and
+                        their key-points's JSON data.
+  --environment {production,development,testing}
+                        The running environment. It specify the configuration
+                        files and logs. To use: either `production`,
+                        `development` or `testing`. Default is production
+  -v, --verbose         Print various debugging logs to console for debug
+                        problems
+  --version             Display the version number of ImLine.
+
+```
+
+<br>
+
+
+**Supported Distributions:** Linux Mint. This release is fully supported. Any other Debian based distributions are partially supported.
+
+### Contribute
+
+If you want to contribute to T_System then please read [this guide]().
+
+
