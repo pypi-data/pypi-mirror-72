@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: ntscli-cloud-lib
+Version: 0.1.8.dev1
+Summary: ntscli cloud library
+Home-page: https://stash.corp.netflix.com/projects/~DAVIDB/repos/ntscli_cloud_lib/browse
+Author: TSC
+Author-email: tsc-team@netflix.com
+License: UNKNOWN
+Keywords: ntscli_cloud_lib
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: arrow
+Requires-Dist: betterproto
+Requires-Dist: kaiju-mqtt-py
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: behave ; extra == 'dev'
+Requires-Dist: betterproto[compiler] ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: invoke ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: tox ; extra == 'test'
+
+## ntscli cloud library
+
+The ntscli cloud library relays messages to target Automators by connecting to the AWS IoT broker.
+It is analogous to the pilot library kaiju-automator-lib, which did this by connecting directly to the target RAE through exposed firewall 
+ports. 
+
+In very general terms, the `mqtt-router` service listens for commands on the AWS IoT instance we maintain and proxies traffic over bridged 
+MQTT topics to the target RAE. We plan to implement the functionality described in the features directory.
+
+We can:
+
+* list devices behind an Automator
+* check if a given ESN has an EyePatch on it
+* get, run, and cancel test plans on specified devices
+* monitor progress of running test plans on devices and/or RAEs
+* get status of the Automator for devices
+* collect past results for known batch IDs from the recent past
+
+For specifics, please refer to the files in features/*.feature.
+
