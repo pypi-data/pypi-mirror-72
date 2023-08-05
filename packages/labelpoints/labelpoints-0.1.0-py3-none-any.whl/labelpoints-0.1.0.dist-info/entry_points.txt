@@ -1,0 +1,3 @@
+[console_scripts]
+labelme = labelme.__main__:main
+
