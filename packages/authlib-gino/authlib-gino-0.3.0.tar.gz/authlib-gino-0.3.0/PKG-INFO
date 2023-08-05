@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: authlib-gino
+Version: 0.3.0
+Summary: OpenID Connect provider implemented with Authlib and GINO.
+License: BSD-3-Clause
+Author: Fantix King
+Author-email: fantix.king@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: app
+Provides-Extra: starlette
+Requires-Dist: alembic (>=1.4.2,<2.0.0); extra == "app"
+Requires-Dist: authlib (>=0.14.3,<0.15.0)
+Requires-Dist: fastapi (>=0.55.1,<0.56.0); extra == "app"
+Requires-Dist: gino (>=1.0.1,<2.0.0)
+Requires-Dist: psycopg2-binary (>=2.8.5,<3.0.0); extra == "app"
+Requires-Dist: python-multipart (>=0.0.5,<0.0.6); extra == "app"
+Requires-Dist: starlette (>=0.13.2,<0.14.0); extra == "starlette"
