@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: laguerre_transformations
+Version: 0.22
+Summary: Visualize Laguerre transformations.
+Home-page: https://github.com/ogogmad/laguerre_transformations
+Author: Ran Gutin
+Author-email: jkabrg@gmail.com
+License: BSD-3-Clause
+Download-URL: https://github.com/ogogmad/laguerre_transformations/archive/v_022.tar.gz
+Description: UNKNOWN
+Keywords: mathematics,transformations,geometry,hypercomplex
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
