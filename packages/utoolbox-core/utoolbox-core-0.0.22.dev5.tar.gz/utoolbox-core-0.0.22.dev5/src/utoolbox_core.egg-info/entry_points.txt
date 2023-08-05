@@ -1,0 +1,5 @@
+[console_scripts]
+aszarr = utoolbox.cli.aszarr:aszarr
+dataset = utoolbox.cli.dataset.main:dataset
+mm2bdv = utoolbox.cli.converter.mm2bdv:main
+
