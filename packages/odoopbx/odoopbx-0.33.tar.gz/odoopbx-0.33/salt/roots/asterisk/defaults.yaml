@@ -1,0 +1,30 @@
+asterisk:
+  pkgs: >
+    git wget binutils-dev bison build-essential doxygen flex freetds-dev graphviz libasound2-dev
+    libbluetooth-dev libc-client2007e-dev libcfg-dev libcodec2-dev libcorosync-common-dev libcpg-dev
+    libcurl4-openssl-dev libedit-dev libfftw3-dev libgmime-2.6-dev libgsm1-dev libical-dev libiksemel-dev
+    libjack-jackd2-dev libjansson-dev libldap2-dev liblua5.2-dev libmysqlclient-dev libneon27-dev libnewt-dev
+    libogg-dev libosptk-dev libpopt-dev libpq-dev libradcli-dev libresample1-dev libsndfile1-dev
+    libsnmp-dev libspandsp-dev libspeex-dev libspeexdsp-dev libsqlite3-dev libsrtp2-dev
+    libssl-dev libunbound-dev liburiparser-dev libvorbis-dev libvpb-dev libxml2-dev libxslt1-dev
+    pkgconf portaudio19-dev subversion unixodbc-dev uuid-dev xmlstarlet zlib1g-dev
+  rev: "certified/16.8"
+  src_dir: /usr/src/asterisk
+  menuselect_enable:
+    - app_chanisavail
+    - app_macro
+    - app_mp3
+    - format_mp3
+    - cdr_csv
+    - cdr_odbc
+    - cdr_syslog
+    - chan_sip
+    - codec_opus
+    - BUILD_NATIVE
+    - CORE-SOUNDS-EN-WAV
+    - EXTRA-SOUNDS-EN-WAV
+  menuselect_disable:
+    - CORE-SOUNDS-EN-GSM
+    - pbx_dundi
+  configure_options: --with-pjproject-bundled --with-jansson-bundled --exec-prefix=/usr
+  user: asterisk
