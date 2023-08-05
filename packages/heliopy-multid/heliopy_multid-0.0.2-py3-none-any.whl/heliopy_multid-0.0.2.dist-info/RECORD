@@ -1,0 +1,14 @@
+heliopy_multid/__init__.py,sha256=daEdpEyAJIa8b2VkCqSKcw8PaExcB6Qro80XNes_sHA,2
+heliopy_multid/data/__init__.py,sha256=daEdpEyAJIa8b2VkCqSKcw8PaExcB6Qro80XNes_sHA,2
+heliopy_multid/data/cluster.py,sha256=jtay_THTfe3aD3bbu28w3B_1QJudvEcb1RyWQJLgLxs,5723
+heliopy_multid/data/mms.py,sha256=HJctQV8pHJHHbCcnvqVDGI0KGzkbuI_b00wtqW6qY9o,5090
+heliopy_multid/data/util.py,sha256=0zUMMGmctpe2ezBvlzu-ifP_VHf0mlEqxZQaqP38UlM,21926
+heliopy_multid/data/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+heliopy_multid/data/test/test_cluster.py,sha256=qqiFGlK_yVMEX-NLXBG9A_GykBbiaG0hyjwjiOz775U,1291
+heliopy_multid/data/test/test_mms.py,sha256=tFZwFnyqyIwoN7D26FTKNvdesw4hxGlx8_rnNqFzofw,1178
+heliopy_multid/data/test/util.py,sha256=183_fu3gI6p6xXp3qHVNwbaMNfXi-zMCDnAFYfcCmr8,895
+heliopy_multid-0.0.2.dist-info/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+heliopy_multid-0.0.2.dist-info/METADATA,sha256=q-724sbfJFjBXj1u4jkLza-HnxB7Oeax9bzBsycxJl4,681
+heliopy_multid-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+heliopy_multid-0.0.2.dist-info/top_level.txt,sha256=E0jIq1IjlTugD0egHEiR_HnS_ysnVlAayplWb1tFrV8,15
+heliopy_multid-0.0.2.dist-info/RECORD,,
