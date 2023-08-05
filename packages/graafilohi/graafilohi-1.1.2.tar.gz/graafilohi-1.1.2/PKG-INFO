@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: graafilohi
+Version: 1.1.2
+Summary: Library for defining runnable pipelines as graphs
+Home-page: https://gitlab.com/blissfulreboot/python/graafilohi
+Author: Aki Mäkinen
+Author-email: nenshou.sora@gmail.com
+License: MIT
+Description: # Graafilohi
+        
+        Graafilohi is a library intended to create executable graphs and to provide some basic functions such as determining
+        the execution order of the nodes. The name "Graafilohi" is a play on the Finnish words "graafi" (meaning "graph") and
+        "graavilohi" (I guess this is something like "gravlax" or sorts; Dammit man, I'm a programmer, not a chef).
+        
+        The library uses at least `networkx` and `matplotlib` as a basis, first of which provides most of the features itself
+        allowing all the graph operations it contains to be used on the graph. This library implements the execution etc. higher
+        level features.
+        
+        The intended use is to create tools using this where the problem is related to dependencies and possible to visualize
+        as a graph.
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
