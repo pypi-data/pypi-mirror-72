@@ -1,0 +1,11 @@
+handcalcs/__init__.py,sha256=ijNqAcxDpGhFEXAd9FCcqu2m0XVx5UY2JRx4lh-t8jE,91
+handcalcs/array2latex.py,sha256=jFo8quMVUrRfMT6bOjtYAv_6aNVobld3aSJiKEDtbwI,2584
+handcalcs/handcalcs.py,sha256=D-jz39tWKgiUQYW9zzMJJDVNexWTxhbNR55wHhLTygI,54950
+handcalcs/handrender.py,sha256=V7ucYDBoYE-9GqM42sJiMzdfccWWg1vPbswlmNAMLGk,140
+handcalcs/numpy_and_pandas_patches.py,sha256=f79kzYAFb77-CyuN6AT8orxUM1c-eymMlOEosg-Up3g,1024
+handcalcs/render.py,sha256=ZFyAjxfQvlafMeQ4KdOsgO9t482aN4W9vl-SWyfgNwk,1809
+handcalcs/streamlit_example.py,sha256=jGvq4-brQSMXOwDIqfSBBmaxjWk_uivq6VpiXZsG9bs,376
+handcalcs-0.3.2.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+handcalcs-0.3.2.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+handcalcs-0.3.2.dist-info/METADATA,sha256=G3AegQCAI3G2AahA8INO9Bj0-37juBeIYTD5jGNDHOs,607
+handcalcs-0.3.2.dist-info/RECORD,,
