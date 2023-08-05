@@ -1,0 +1,75 @@
+.fontDefault {font-family: Arial, Helvetica, sans-serif;
+              font-size: 11pt;}
+.fontConsole {font-family: "Courier New", Courier, monospace;
+              font-size: 10pt;}
+.main        {display: grid;
+              grid-gap: 2px;
+              grid-template-columns: 150px minmax(450px, 1fr);}
+.main > div  {margin: 0px;
+              padding: 4px;
+              background: #F7F7F7;
+              border: 1px solid black;}
+.footer      {text-align: right;}
+
+
+#gInput {grid-area: 1 / 1;}
+#gInput > input {box-sizing: border-box;
+                 width: 100%;}
+
+#gMatches {grid-area: 2 / 1;}
+#gMatches > ul {height: 210px;}
+
+#gMappings {grid-area: 3 / 1;}
+#gMappings > ul    {height: 100px;
+                    margin-bottom: 4px;}
+#gMappings > input {margin: 8px 10px 8px 10px;}
+
+#gOptions {grid-area: 4 / 1;
+           text-align: right;}
+
+
+#gTitle {grid-area: 1 / 2;
+         padding: 6px;}
+#gTitle > input {box-sizing: border-box;
+                 width: 100%;
+                 background: #F7F7F7;
+                 border: none;}
+#gTitle > input:focus {background: #FFFFFF;
+                       border: 1px inset;}
+
+#gGraph {grid-area: 2 / 2;
+         padding: 6px;}
+#gGraph > div {overflow: auto;}
+
+#gBoard {grid-area: 3 / 2 / span 2;
+         padding: 6px;
+         position: relative;
+         text-align: center;}
+#gBoard svg {max-height: 250px;}
+#gBoard > a {position: absolute;
+             bottom: 6px;
+             right: 6px;}
+
+
+.searchList {padding: 0px;
+             background: white;
+             border: 1px solid black;
+             overflow: auto;
+             line-height: 0;
+             font-size: 0;}
+.searchList > li {padding: 2px;
+                  line-height: 12px;
+                  font-size: 9pt;
+                  cursor: pointer;}
+.searchList > li.selected {background: #BFCFFF;}
+
+.option {margin: 8px 0 8px 0;}
+.option > * {vertical-align: middle;
+             margin: 0 5px 0 5px;}
+
+
+.mobile {display: none;}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+{
+    .mobile {display: block;}
+}
