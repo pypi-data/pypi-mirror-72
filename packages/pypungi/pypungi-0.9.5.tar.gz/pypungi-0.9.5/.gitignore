@@ -1,0 +1,10 @@
+dist/pypungi-0.1.0.tar.gz
+dist/pypungi-0.1.0-py2.py3-none-any.whl
+dist/pypungi-0.1.0.tar.gz
+dist/*
+.pytest_cache/*
+.vscode/*
+pypungi/__pycache__/__init__.cpython-37.pyc
+pypungi/__pycache__/main.cpython-37.pyc
+venv/*
+
