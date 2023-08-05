@@ -1,0 +1,17 @@
+contactcenter/__init__.py,sha256=_VZQFYZIpxxCrN3RDDCWCGNDIA0SpVOsOvfwhIkz4TM,103
+contactcenter/core.py,sha256=Fq5JMnlmeuV42qQd7mWbtq_Hk6tqmtf3Ba69tSrQzpA,477
+contactcenter/contact/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+contactcenter/contact/data.py,sha256=FlhUoLw1rMxtUg2PvX_mN1dm7bRyu_pqgFYtl7-22vI,1844
+contactcenter/contact/persistence.py,sha256=gzgfFiNd868TDlY2J4ZVVfbRcmgz_3B9_P9ePQcxxEo,3157
+contactcenter/contact/services.py,sha256=tHT1PE8-tRNjWj7bc0djJiuID9FFfQ00W50hmiyfOZ8,7208
+contactcenter/queues/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+contactcenter/queues/persistence.py,sha256=_1yUe72Pvb5jMIQF9ajtxhLOyl-grl0QcCJnWBolWRU,1724
+contactcenter/queues/services.py,sha256=8wtts99PzQ5LfLdPNpp94hqk-bt-e1LGcL1XyDGAdRE,1539
+contactcenter/trace/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+contactcenter/trace/persistence.py,sha256=UlwlzuvwsGcfuo7x6zoUnSIQb6csnM-fvqTPae1Tx54,506
+contactcenter/trace/services.py,sha256=JJzzzBiyffj1QSqQsL7PUi0EOE_c8iULc80wsqM7Bgs,1130
+socom_contactcenter_backend-0.0.1.dev2.dist-info/LICENSE.txt,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+socom_contactcenter_backend-0.0.1.dev2.dist-info/METADATA,sha256=aRi5iIk2mWEc2aomtHnnX37NiTBtkRMMmBxG-dv9sYc,920
+socom_contactcenter_backend-0.0.1.dev2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+socom_contactcenter_backend-0.0.1.dev2.dist-info/top_level.txt,sha256=SLoWeBjSwE6i9dJRpblIrDmv3mQ1tBV0-bXnWuh10V0,14
+socom_contactcenter_backend-0.0.1.dev2.dist-info/RECORD,,

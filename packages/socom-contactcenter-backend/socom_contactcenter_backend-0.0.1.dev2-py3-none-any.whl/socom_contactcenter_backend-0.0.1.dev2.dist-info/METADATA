@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: socom-contactcenter-backend
+Version: 0.0.1.dev2
+Summary: Contact Center service and persistence layer.
+Home-page: https://bitbucket.org/socom-it/cc-backend
+Author: Xavier ROY
+Author-email: royx@socom.lu
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 1 - Planning
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: dnspython (==1.16.0)
+Requires-Dist: monkey.dao (>=0.0.1.dev2)
+Requires-Dist: monkey.dao.pymongo (>=0.0.1.dev2)
+Requires-Dist: monkey.ioc (>=0.0.1.dev3)
+Requires-Dist: pymongo (>=3.7.2)
+Requires-Dist: Unidecode (>=1.1.1)
+
+Contact Center Backend
+======================
+
+Service and persistence layer for Contact Center
+
+Installation guide
+------------------
+
+::
+
+    pip install socom-contactcenter-backend
+
+User guide
+----------
+
+
+
+
