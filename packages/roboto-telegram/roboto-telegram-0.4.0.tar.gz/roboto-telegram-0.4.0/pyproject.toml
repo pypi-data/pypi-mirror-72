@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "roboto-telegram"
+version = "0.4.0"
+description = "A type-hinted async Telegram bot library."
+authors = ["Tarcísio Eduardo Moreira Crocomo <tarcisioe@pm.me>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "roboto" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+asks = "^2.4.7"
+typing-extensions = "^3.7.4"
+typing-inspect = "^0.6.0"
+validators = "^0.15.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4.3"
+pytest-cov = "^2.10.0"
+pytest-mock = "^3.1.1"
+pytest-trio = "^0.6.0"
+asynctest = { version = "^0.13.0", python = "<3.8" }
+
+[tool.black]
+skip_string_normalization = true
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
