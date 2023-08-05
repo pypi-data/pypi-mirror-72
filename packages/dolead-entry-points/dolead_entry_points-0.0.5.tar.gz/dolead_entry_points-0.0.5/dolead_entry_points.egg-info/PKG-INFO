@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: dolead-entry-points
+Version: 0.0.5
+Summary: Multiple entry points generator
+Home-page: https://github.com/dolead/dolead_entry_points
+Author: François Schmidts
+Author-email: francois.schmidts@dolead.com
+Maintainer: François Schmidts
+Maintainer-email: francois.schmidts@dolead.com
+License: GPLv3
+Description: # Dolead Simple multi entry point lib
+        
+Keywords: flask celery web
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
