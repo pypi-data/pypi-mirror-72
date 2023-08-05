@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: linechart
+Version: 1.0.0
+Summary: Backtest performance analysis and charting for MoonLine.
+License: MIT
+Author: Tim Wedde
+Author-email: timwedde@icloud.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: empyrical (>=0.5.3,<0.6.0)
+Requires-Dist: matplotlib (>=3.2.2,<4.0.0)
+Requires-Dist: pandas (>=1.0.5,<2.0.0)
+Requires-Dist: quantrocket-client (>=2.0.5,<3.0.0)
+Requires-Dist: scipy (>=1.5.0,<2.0.0)
+Requires-Dist: seaborn (>=0.10.1,<0.11.0)
