@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: testpypi11
+Version: 0.0.4
+Summary: this is test for packing a pypi package.
+Home-page: https://github.com/jlli6t/test_pypi
+Author: M.M Jie Li
+Author-email: mm.jlli6t@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: test python3 pypi
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: Unix
+Requires-Python: >=3
