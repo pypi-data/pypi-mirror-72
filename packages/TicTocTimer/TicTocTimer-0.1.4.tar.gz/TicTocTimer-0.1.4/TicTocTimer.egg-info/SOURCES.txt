@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+TicTocTimer.egg-info/PKG-INFO
+TicTocTimer.egg-info/SOURCES.txt
+TicTocTimer.egg-info/dependency_links.txt
+TicTocTimer.egg-info/top_level.txt
+tic_toc_timer/__init__.py
+tic_toc_timer/timer.py
+tic_toc_timer/timer_test.py
