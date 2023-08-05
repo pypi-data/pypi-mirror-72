@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: bokeh-catplot
+Version: 0.1.8
+Summary: Utility to generate plots with categorical variables using Bokeh.
+Home-page: https://github.com/justinbois/bokeh-catplot
+Author: Justin Bois
+Author-email: bois@caltech.edu
+License: BSD
+Download-URL: https://github.com/justinbois/bokeh-catplot/tarball/0.1.8
+Description: Utility to generate plots with categorical variables using Bokeh.
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
