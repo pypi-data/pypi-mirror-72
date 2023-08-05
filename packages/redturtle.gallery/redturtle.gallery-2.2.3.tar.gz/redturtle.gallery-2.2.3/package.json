@@ -1,0 +1,47 @@
+{
+  "name": "redturtle.gallery",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:RedTurtle/redturtle.gallery.git"
+  },
+  "keywords": [
+    "plone",
+    "gallery",
+    "redturtle.gallery",
+    "addon"
+  ],
+  "author": "RedTurtle Technology",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/RedTurtle/redturtle.gallery",
+  "devDependencies": {
+    "@redturtle/eslint-config": "^2.0.0",
+    "autoprefixer": "^7.2.4",
+    "babel-eslint": "^8.2.1",
+    "cssnano": "^3.7.7",
+    "eslint": "^4.15.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.41.0",
+    "eslint-plugin-prettier": "^2.4.0",
+    "grunt": "^1.0.4",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.9.0",
+    "grunt-sass": "^3.1.0",
+    "load-grunt-tasks": "^3.5.2",
+    "node-sass": "^4.13.0",
+    "pixrem": "^3.0.2",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.0.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-recommended": "^3.0.0"
+  },
+  "scripts": {
+    "prettier:scss": "prettier --list-different src/redturtle/agidtheme/theme/sass/**/*.scss",
+    "prettier:scss:fix": "prettier --write src/redturtle/agidtheme/theme/sass/**/*.scss",
+    "build": "grunt compile",
+    "watch": "grunt watch"
+  }
+}
