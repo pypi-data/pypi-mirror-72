@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.py
+bin/igwn_frames_lfn2pfn_demo
+bin/test_frame_lfn2pfn
+igwn_lfn2pfn/__init__.py
+igwn_lfn2pfn/igwn_lfn2pfn.py
+igwn_rucio_lfn2pfn.egg-info/PKG-INFO
+igwn_rucio_lfn2pfn.egg-info/SOURCES.txt
+igwn_rucio_lfn2pfn.egg-info/dependency_links.txt
+igwn_rucio_lfn2pfn.egg-info/requires.txt
+igwn_rucio_lfn2pfn.egg-info/top_level.txt
