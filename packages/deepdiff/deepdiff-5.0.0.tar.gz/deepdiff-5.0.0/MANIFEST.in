@@ -1,0 +1,12 @@
+include LICENSE
+include AUTHORS
+include CHANGELOG
+include *.rst
+include deepdiff/*.rst
+include *.txt
+include *.sh
+include pytest.ini
+include *.py
+recursive-include tests *.py
+global-exclude __pycache__
+global-exclude *.py[co]
