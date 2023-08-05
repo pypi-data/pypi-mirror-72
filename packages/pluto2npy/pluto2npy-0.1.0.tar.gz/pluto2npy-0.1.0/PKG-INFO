@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pluto2npy
+Version: 0.1.0
+Summary: Convert PLUTO output files to numpy npy files
+Home-page: https://gitlab.com/szs/pluto2npy/
+License: MIT
+Keywords: CFD,conversion,simulation,hydrodynamics,magnetohydrodynamics
+Author: Steffen Brinkmann
+Author-email: s-b@mailbox.org
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: numpy (>=1.19.0,<2.0.0)
+Project-URL: Repository, https://gitlab.com/szs/pluto2npy/
+Description-Content-Type: text/x-rst
+
+pluto2npy
+=========
+
+Convert PLUTO (http://plutocode.ph.unito.it/) output files to numpy npy files.
+
+Usage
+-----
+
+.. code-block:: shell
+
+                p2n data.0001.dbl
+
