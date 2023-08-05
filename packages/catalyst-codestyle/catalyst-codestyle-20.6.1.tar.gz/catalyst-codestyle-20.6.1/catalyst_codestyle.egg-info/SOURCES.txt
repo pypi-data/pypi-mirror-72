@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+bin/catalyst-check-codestyle
+bin/catalyst-codestyle-flake8
+bin/catalyst-codestyle-isort
+bin/catalyst-make-codestyle
+catalyst_codestyle.egg-info/PKG-INFO
+catalyst_codestyle.egg-info/SOURCES.txt
+catalyst_codestyle.egg-info/dependency_links.txt
+catalyst_codestyle.egg-info/requires.txt
+catalyst_codestyle.egg-info/top_level.txt
