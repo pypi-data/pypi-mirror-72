@@ -1,0 +1,14 @@
+Spades/__init__.py,sha256=M0NZuQ7-112l8K2h1eayVvSmvQrufrOcD5AYKgIf_Is,1
+Spades/admin.py,sha256=GJSbwdo8_XzyzFtpmJNI1gXladeXvow7h59eczv05N0,888
+Spades/api.py,sha256=dqxdat10o_YdtkpnnZwenLBmMX2ZiHQX_2HwRfmyqVk,326
+Spades/models.py,sha256=01V-eFFG6uZM1FidC3r9ol6xCYWOUDKh78Mm68pZWl8,1229
+Spades/serializers.py,sha256=BJMkq1Rm8CcSzEZEFn7mLDN3MwUwlOoUAt9QoPsWVfo,306
+Spades/tests.py,sha256=XDHc8J5fFjv-W3itGOH-_Ho80Ylit4Cr0g5PbnMjQew,754
+Spades/urls.py,sha256=qdomN5JeDX9gyvixe9KYxXljHj6iN3l2l_suSHGr7P0,170
+Spades/migrations/0001_initial.py,sha256=LZVCrkcLFu4fnMaOrX4WWnr9J3pFiKubmAMD61eDmmY,750
+Spades/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_spades-0.1.1.dist-info/LICENSE,sha256=duNJ12xZ_Q4KBqXyYKKhSZKcjJ2dFdXz-84XB_KG8Dg,1065
+django_spades-0.1.1.dist-info/METADATA,sha256=a-uimGsTvA49mqaTk1fhRYKCmQtmfE2moQ0jzxQxBlg,1276
+django_spades-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_spades-0.1.1.dist-info/top_level.txt,sha256=uk0fYlG6vFfyn6E0vJnw0CMUP7w1PoYdq71ti_rw0QE,7
+django_spades-0.1.1.dist-info/RECORD,,
