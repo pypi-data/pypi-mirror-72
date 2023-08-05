@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: holidayrules
+Version: 0.0.1
+Summary: Rule-based description of holidays
+Home-page: https://github.com/GibbsConsulting/holidayrules
+Author: Gibbs Consulting
+Author-email: holidayrules@gibbsconsulting.ca
+License: AGPL
+Project-URL: Source, https://github.com/GibbsConsulting/holidayrules
+Project-URL: Tracker, https://github.com/GibbsConsulting/holidayrules/issues
+Project-URL: Documentation, http://holidayrules.readthedocs.io/
+Description: # holidayrules
+        Holiday rules
+        
+Keywords: django taskflow workflow
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
