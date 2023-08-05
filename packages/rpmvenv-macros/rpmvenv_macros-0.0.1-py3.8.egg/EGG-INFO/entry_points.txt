@@ -1,0 +1,3 @@
+[rpmvenv.extensions]
+macros = rpmvenv_macros.extensions.macros.macros:Extension
+
