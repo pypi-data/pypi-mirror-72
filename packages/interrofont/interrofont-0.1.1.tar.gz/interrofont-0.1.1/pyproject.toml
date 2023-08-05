@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "interrofont"
+version = "0.1.1"
+description = "Interrogate a font file"
+authors = ["Simon Cozens <simon@simon-cozens.org>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3"
+fonttools = "*"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry.scripts]
+interrofont = 'entry:main'
