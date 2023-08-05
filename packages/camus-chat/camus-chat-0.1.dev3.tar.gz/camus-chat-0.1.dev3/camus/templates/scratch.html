@@ -1,0 +1,60 @@
+
+    <nav id="message-bar">
+        <h3>Messages</h3>
+        <p>Text</p>
+        <p>Text</p>
+        <button class="btn" id="send-message" onclick="sendMessage()">
+            <i id="send-message-icon" class="material-icons">send</i></button>
+    </nav>
+
+
+    <a href="#collapse" data-toggle="collapse" class="dropdown-toggle">
+        <p>Debug commands (hint: open the console for logging)</p>
+    </a>
+    <div id="debug" class="collapse">
+        <button class="btn" id="debug-ping" onclick="ping()">Ping</button>
+        <button class="btn" id="debug-get_room_info" onclick="get_room_info()">Room Info</button>
+        <button class="btn" id="debug-greeting" onclick="greeting()">Greeting</button>
+        <button class="btn" id="debug-shutdown" onclick="shutdown()">Shutdown</button>
+        <button class="btn" id="debug-desktop" onclick="streamDisplay()">Desktop</button>
+        <button class="btn" id="debug-webcam" onclick="streamVideo()">Webcam</button>
+    </div>
+
+
+    <div class="video-box" id="video-box-local">
+        <h5 class="video-tag">This is some text</h5>
+        <video id="video-local" autoplay playsinline muted></video>
+    </div>
+
+
+
+
+
+
+            <div id="technical-bar-collapse" class="collapse" data-parent="#accordion">
+                <table class="table">
+                    <tbody>
+                       <tr class="accordion-toggle collapsed" id="accordion1" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+                            <td class="expand-button"></td>
+                            <td>Thing One</td>
+                        </tr>
+                        <tr class="hide-table-padding">
+                            <td colspan="2">
+                                <div id="collapseOne" class="collapse in p-3">
+                                    Thing One's One Thing
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+                <div class="accordion-toggle" id="thingone-accordion" data-toggle="collapse" data-parent="thingone-accordion" href="#thingone-collapse">
+                    <p class="expand-button">Thing One</p>
+                </div>
+                <div id="thingone-collapse" class="collapse" data-parent="#technical-bar-collapse">
+                    <div id="thingone-content">
+                        Thing One's One Thing
+                    </div>
+                </div>
