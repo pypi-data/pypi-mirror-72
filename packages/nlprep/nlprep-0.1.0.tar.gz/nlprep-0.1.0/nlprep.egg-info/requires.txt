@@ -1,0 +1,9 @@
+boto3
+filelock
+requests
+tqdm>=4.27
+opencc-python-reimplemented
+nlp2>=1.6.2
+pandas-profiling>=2.8.0
+nlp>=0.3.0
+phraseg>=1.1.8
