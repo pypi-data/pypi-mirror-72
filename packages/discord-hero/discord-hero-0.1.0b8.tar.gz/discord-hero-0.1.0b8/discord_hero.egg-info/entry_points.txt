@@ -1,0 +1,3 @@
+[console_scripts]
+hero = hero.cli:main_cli
+
