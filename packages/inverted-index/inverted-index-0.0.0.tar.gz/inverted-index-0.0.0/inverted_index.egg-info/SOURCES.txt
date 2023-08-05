@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+inverted_index/__init__.py
+inverted_index.egg-info/PKG-INFO
+inverted_index.egg-info/SOURCES.txt
+inverted_index.egg-info/dependency_links.txt
+inverted_index.egg-info/entry_points.txt
+inverted_index.egg-info/requires.txt
+inverted_index.egg-info/top_level.txt
