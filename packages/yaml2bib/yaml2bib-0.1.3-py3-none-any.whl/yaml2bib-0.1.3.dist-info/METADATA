@@ -1,0 +1,110 @@
+Metadata-Version: 2.1
+Name: yaml2bib
+Version: 0.1.3
+Summary: Convert a yaml file containing (key -> DOI) pairs to bib file with the correct journal abbreviations.
+Home-page: https://github.com/basnijholt/yaml2bib
+Author: Bas Nijholt
+Author-email: basnijholt@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Click
+Requires-Dist: crossrefapi
+Requires-Dist: diskcache
+Requires-Dist: requests
+Requires-Dist: pylatexenc
+Requires-Dist: pyyaml
+Requires-Dist: tqdm
+Provides-Extra: dev
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: bump2version ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: m2r ; extra == 'docs'
+Requires-Dist: sphinxcontrib.apidoc ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: tox ; extra == 'test'
+
+# `yaml2bib`: Convert a `yaml` file to `bib` file with the correct journal abbreviations using only `DOI`s
+
+[![license](https://img.shields.io/github/license/basnijholt/yaml2bib)](https://github.com/basnijholt/yaml2bib/blob/master/LICENSE)
+[![tests](https://github.com/basnijholt/yaml2bib/workflows/tests/badge.svg)](https://github.com/basnijholt/yaml2bib/actions?query=workflow%3Atests)
+[![codecov](https://img.shields.io/codecov/c/github/basnijholt/yaml2bib)](https://codecov.io/gh/basnijholt/yaml2bib)
+[![docs](https://img.shields.io/readthedocs/yaml2bib)](https://yaml2bib.readthedocs.io)
+[![version](https://img.shields.io/pypi/v/yaml2bib)](https://pypi.org/project/yaml2bib/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/yaml2bib)](https://pypi.org/project/yaml2bib/)
+
+### Install
+```bash
+pip install yaml2bib
+```
+
+## Usage
+Use as command line tool
+```bash
+Usage: yaml2bib [OPTIONS]
+
+Options:
+  --bib_fname TEXT          Output file. (default: 'dissertation.bib')
+  --dois_yaml TEXT          The `key: doi` YAML file, may contain wildcards
+                            (*). (default: 'bib.yaml' ,example: '*/*.yaml')
+  --replacements_yaml TEXT  Replacements to perform, might be None. (default:
+                            None, example: 'replacements.yaml')
+  --static_bib TEXT         Static bib entries, might be None, may contain
+                            wildcards (*). (default: None, example:
+                            'chapter_*/not_on_crossref.bib')
+  --doi2bib_database TEXT   The doi2bib database folder 📁 to not query doi.org
+                            more than needed. (default: 'yaml2bib-doi2bib.db')
+  --crossref_database TEXT  The Crossref database folder 📁 to not query
+                            crossref.org more than needed. (default:
+                            'yaml2bib-doi2bib.db')
+  --email TEXT              E-mail 📧 for crossref.org, such that one can make
+                            more API calls without getting blocked. (default:
+                            'anonymous', example: 'bas@nijho.lt')
+  --help                    Show this message and exit.
+```
+
+Example invocation for my [thesis](https://gitlab.kwant-project.org/qt/basnijholt/thesis-bas-nijholt):
+```bash
+yaml2bib \
+  --bib_fname "dissertation.bib" \
+  --dois_yaml "*/*.yaml" \
+  --replacements_yaml "replacements.yaml" \
+  --static_bib "chapter_*/not_on_crossref.bib" \
+  --email "bas@nijho.lt"
+```
+
+or as a library:
+```python
+from yaml2bib import yaml2bib
+
+yaml2bib(
+    bib_fname="dissertation.bib",
+    dois_yaml="*/*.yaml",
+    replacements_yaml="replacements.yaml",
+    static_bib="chapter_*/not_on_crossref.bib",
+    email="bas@nijho.lt",
+)
+```
+
+## License
+MIT License
+
+## Contributions
+- Bas Nijholt
+
+
