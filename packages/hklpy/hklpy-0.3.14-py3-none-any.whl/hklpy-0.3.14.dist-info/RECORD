@@ -1,0 +1,16 @@
+hkl/__init__.py,sha256=Ss2rxozvQTEb_2PzhUNfZ-OeAXkAQncdxI7yXuyuCSw,231
+hkl/_version.py,sha256=Pu_PgqJB2Ao57xoGxnS95O37CtteZ05_suagluz8vkw,472
+hkl/calc.py,sha256=LvnTt_gHziAVlQWmcQq4K1aNH9QXNGjvq9YFXX2cwxI,20534
+hkl/context.py,sha256=f2DN4h3VG9AIsR8ksGcHHMgHVJXOIuWVA_IGe9Ynn8U,871
+hkl/diffract.py,sha256=o5PLW50SEDwPsvlyyD3ixsSuWgQBFbdb2SWC-yG1ook,7682
+hkl/engine.py,sha256=xfIGZ3j-STkEBOc3Ho0pHETJ_mmB3kJRz6bXzyPp0G8,9778
+hkl/sample.py,sha256=wq09RiL3g8EJZMMWcDDee7jDrMkX5pebdp0-7nGcs_A,11941
+hkl/util.py,sha256=stdmGlV6zfBN4ISkH5y2JS8golcheRIZ1Gk6qEr9wlI,2566
+tests/__init__.py,sha256=XCqP3eIXVM15opA7uscH_gTb8nFCHp5JwwrhsqhNcaQ,567
+tests/config.py,sha256=R2yx7tV13iQEbJk9skjhLJNvdPL6LmrisV0AsobrkRM,1824
+tests/test_tardis.py,sha256=xOMMN79i5-KjCkU6a1Z2zrxUK5Ns0CHK2w1RZk1FNA0,6757
+hklpy-0.3.14.dist-info/LICENSE,sha256=cDa_pqtOVHtmo0Q0EHH51dMR9Kn-tMAmcypSvY-BjMg,1584
+hklpy-0.3.14.dist-info/METADATA,sha256=3yKDuo-BGoAg6NDC8ouprYPvOXlySksrgtQMOSMU8hQ,166
+hklpy-0.3.14.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+hklpy-0.3.14.dist-info/top_level.txt,sha256=Jixwk36_XSNN3d3wTlLjRHnjTBSRgFnGf8vbDkOtzXI,10
+hklpy-0.3.14.dist-info/RECORD,,
