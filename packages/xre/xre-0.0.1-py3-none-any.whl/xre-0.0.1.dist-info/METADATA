@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: xre
+Version: 0.0.1
+Summary: Build regex like legos.
+Home-page: https://github.com/polyrand
+Author: Ricardo Ander-Egg
+Author-email: ricardo.anderegg@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 2 - Pre-Alpha
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# xre
+> Build regex like legos.
+
+One to two paragraph statement about your product and what it does.
+
+## Installation
+
+OS X & Linux:
+
+Clone the repository:
+
+```sh
+git clone https://github.com/polyrand/setDNS.git
+```
+
+Run:
+
+```sh
+chmod +x setdns.py
+./setdns.py
+```
+
+## Development setup
+
+Dependency management is done with pip-tools + venv (stdlib).
+
+Framework requirements are in requirements/main.in (main.txt are the pinned ones). Development and documentation requirements are in requirements/dev.in (main.txt are the pinned ones)
+
+## Documentation
+
+Documentation is written in markdown using mkdocs. In order to work on it, run:
+
+```sh
+mkdocs serve
+```
+
+Now it will be available at [localhost:8000](localhost:8000).
+
+## Usage example
+
+A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+
+## Release History
+
+* 0.2.1
+    * CHANGE: Update docs (module code remains unchanged)
+* 0.2.0
+    * CHANGE: Remove `setDefaultXYZ()`
+    * ADD: Add `init()`
+* 0.1.1
+    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
+* 0.1.0
+    * The first proper release
+    * CHANGE: Rename `foo()` to `bar()`
+* 0.0.1
+    * Work in progress
+
+## Meta
+
+
+Ricardo Ander-Egg Aguilar – [@ricardoanderegg](https://twitter.com/ricardoanderegg) –
+
+- [ricardoanderegg.com](http://ricardoanderegg.com/)
+- [github.com/polyrand](https://github.com/polyrand/)
+- [linkedin.com/in/ricardoanderegg](http://linkedin.com/in/ricardoanderegg)
+
+Distributed under the XYZ license. See ``LICENSE`` for more information.
+
+## Contributing
+
+1. Fork it (<https://github.com/polyrand/yourproject/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
+
+
+
