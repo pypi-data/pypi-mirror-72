@@ -1,0 +1,98 @@
+[
+    {
+        "type": "cmd",
+        "handler": "resetTheme",
+        "param0": "Default Theme",
+        "param1": "default",
+        "param2": {
+            "Ą": "A",
+            "Ć": "C",
+            "Ę": "E",
+            "Ł": "L",
+            "Ń": "N",
+            "Ó": "O",
+            "Ś": "S",
+            "Ź": "Z",
+            "ą": "a",
+            "ć": "c",
+            "ę": "e",
+            "ł": "l",
+            "ń": "n",
+            "ó": "o",
+            "ś": "s",
+            "ź": "z"
+        }
+    },
+    {
+        "type": "cmd",
+        "handler": "changeTheme",
+        "param0": "gruvbox",
+        "param1": "gruvbox"
+    },
+    {
+        "type": "cmd",
+        "handler": "changeTheme",
+        "param0": "mgła",
+        "param1": "mgla",
+        "param2": {
+            "A": "Ą",
+            "C": "Ć",
+            "E": "Ę",
+            "L": "Ł",
+            "N": "Ń",
+            "O": "Ó",
+            "S": "Ś",
+            "Z": "Ź",
+            "a": "ą",
+            "c": "ć",
+            "e": "ę",
+            "l": "ł",
+            "n": "ń",
+            "o": "ó",
+            "s": "ś",
+            "z": "ź"
+        } 
+    },
+    {
+        "type": "cable",
+        "handler": "toDetail",
+        "param0": "ORT 4120",
+        "param1": "/demo/cable/1.html"
+    },
+    {
+        "type": "nav",
+        "handler": "go",
+        "param0": "Home",
+        "param1": "/index.html"
+    },
+    {
+        "type": "nav",
+        "handler": "go",
+        "param0": "Text Demo",
+        "param1": "/demo/text.html"
+    },
+    {
+        "type": "nav",
+        "handler": "go",
+        "param0": "List Demo",
+        "param1": "/demo/list.html"
+    },
+    {
+        "type": "nav",
+        "handler": "go",
+        "param0": "Form Demo",
+        "param1": "/demo/form.html"
+    },
+    {
+        "type": "nav",
+        "handler": "go",
+        "param0": "Autocomplete Demo",
+        "param1": "/demo/autocomplete.html"
+    },
+    {
+        "type": "nav",
+        "handler": "go",
+        "param0": "Tiles demo",
+        "param1": "/demo/tiles.html"
+    }
+]
