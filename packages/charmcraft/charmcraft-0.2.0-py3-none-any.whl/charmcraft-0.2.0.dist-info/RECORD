@@ -1,0 +1,15 @@
+charmcraft/__init__.py,sha256=3tUpmO6MUgWiivXKlc8KdohgIj2fLVBlzRH-nJwqv_o,685
+charmcraft/__main__.py,sha256=1E7b40xpslduLrUAy1SJJGrv0aiS_z9cOBo99Na_1jo,769
+charmcraft/cmdbase.py,sha256=xqOToeyeoPlcYefj2GCy6lXeTAtpmgZPY5mI52bsEz4,2471
+charmcraft/logsetup.py,sha256=glCXWvfA35ktQQ4ooiRdhRaI-S9yarTWuig8fK-QnB8,4002
+charmcraft/main.py,sha256=g3WdlkiqDvaRgO7jATIbxg2e1ZV5AztrGXEZ_hj4CKc,6622
+charmcraft/commands/build.py,sha256=5PLbT63CKgyqr29OIdNAbG-oVn5qGp7eJxtJ5rCohU4,11542
+charmcraft/commands/version.py,sha256=1B7OkdvYmEwYi4mSLe_Ab0KSxlJQF8MZj-c8RW8Nb-s,1008
+charmcraft/commands/store/__init__.py,sha256=AlOpAR-s5JSvuRIyRloitR0iq50Xr4ejbdWi6oSNfI4,2294
+charmcraft/commands/store/client.py,sha256=HxLSgk2ATvUBX8UfYNWA2Rx8jiwRKsevIDb_0CxflgY,5421
+charmcraft-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+charmcraft-0.2.0.dist-info/METADATA,sha256=MKsJ8qXwsdndr_axsbRGFtTH_4WxQ-G_gci3S0lRfm4,2102
+charmcraft-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+charmcraft-0.2.0.dist-info/entry_points.txt,sha256=FdKmbFVt0I-CrHjl2mkwDf8fEx8GUIay0WIqdShVCoE,53
+charmcraft-0.2.0.dist-info/top_level.txt,sha256=ka37dQ3nvtNMpOvQhGWe3mn6HAXzkIyXk_sDS-_pqwg,11
+charmcraft-0.2.0.dist-info/RECORD,,
