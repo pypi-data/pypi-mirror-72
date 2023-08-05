@@ -1,0 +1,53 @@
+output-format: grouped
+
+strictness: veryhigh
+doc-warnings: false
+test-warnings: false
+
+ignore-paths:
+    - docs/
+
+ignore-patterns:
+    - (^|/)docs(/|$)
+    - .*node_modules.*
+
+pylint:
+    disable:
+        - bad-builtin
+        - too-few-public-methods
+        - missing-docstring
+        - star-args
+        - redefined-variable-type
+        - superfluous-parens
+        - too-many-arguments
+        - inconsistent-return-statements
+        - broad-except
+        - line-too-long
+        - logging-format-interpolation
+        - logging-fstring-interpolation
+        - too-many-locals
+        - invalid-name
+        - logging-not-lazy
+        - wrong-import-position
+        - bad-whitespace
+        - missing-final-newline
+        - pointless-string-statement
+        - no-self-use
+        - useless-object-inheritance
+        - wrong-import-order
+        - trailing-newlines
+
+pep8:
+    run: false
+
+pep257:
+    run: false
+
+pyroma:
+    run: true
+    disable:
+        - PYR19
+        - PYR16
+
+vulture:
+    run: false
