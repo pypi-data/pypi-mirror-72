@@ -1,0 +1,16 @@
+spacerocks/__init__.py,sha256=mf1num6HIjJyLQgWU0YIj3FPcw-SvDDWEpSGGIE6Uxg,221
+spacerocks/constants.py,sha256=1ElxgT0inCjB5AdNuPXx5plmXL95mWdQPbWCN1VPjik,497
+spacerocks/convenience.py,sha256=quD5c1U1WR4aPqkewrs2wmCgyHoHPj332l47Tr0Z6VA,1008
+spacerocks/jacobians.py,sha256=ymZSOtNH4jrgFMzpbBYC4LvchBS8UCjKfmp4hLj6VbI,194444
+spacerocks/linalg3d.py,sha256=-YVqqyd0Sh1YIaaPBMudiVi77G51EHPgE1WPAMj18JE,999
+spacerocks/observatory_json_to_csv.py,sha256=OIw6wtmigB7rxmmaowtoeh2KHwLkAh0tYh2jQUH7gyY,1874
+spacerocks/observe.py,sha256=9_RvpC6Vm5d2xniQlpC6hHgl3-VPJ91mKM-ZQYslVoU,10188
+spacerocks/propagate.py,sha256=SMDAlJYuQ3qQbBTZ0g-raAHJ0VUZobtx4r6FeE83m9g,9071
+spacerocks/spacerocks.py,sha256=xsDFhcM7s2wXfXBFSmkchImBpgjA_fLR0xAgoWCEmMo,5493
+spacerocks/transformations.py,sha256=ci9nDlfbp6Dj5NwfLWMpoipiips7auGyWw5PePCcTWg,9428
+spacerocks/data/observatories.csv,sha256=UA5VthlTRMOG-TrP-fKA5pCH0Q6vpE3UDaRE7m4Bf_U,170846
+spacerocks-0.7.4.dist-info/LICENSE.md,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+spacerocks-0.7.4.dist-info/METADATA,sha256=FWbuUPFj4RkcPE9Rb50K-bc8Ic_oxhhr0eI2O0Sf3EE,497
+spacerocks-0.7.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+spacerocks-0.7.4.dist-info/top_level.txt,sha256=SV4LI7hAoX0yqMTeehFqFQK6eQAP5YmZwX2NaUbXE7o,11
+spacerocks-0.7.4.dist-info/RECORD,,

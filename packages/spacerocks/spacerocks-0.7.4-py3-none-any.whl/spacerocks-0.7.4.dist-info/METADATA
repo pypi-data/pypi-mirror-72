@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: spacerocks
+Version: 0.7.4
+Summary: Calculate solar system ephemerides from orbital elements.
+Home-page: https://github.com/kjnapes/spacerocks
+Author: Kevin Napier
+Author-email: kjnapier@umich.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: healpy
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: skyfield
+Requires-Dist: astropy
+Requires-Dist: numba
+Requires-Dist: pandas
+Requires-Dist: rebound
+Requires-Dist: reboundx
+Requires-Dist: ephem
+
+UNKNOWN
+
+
