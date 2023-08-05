@@ -1,0 +1,178 @@
+Metadata-Version: 2.1
+Name: DalineUnit
+Version: 0.0.33
+Summary: daline unit generator and runner
+Home-page: https://github.com/DalineWH
+Author: kun.z
+Author-email: kun.z@daline.com.cn
+License: UNKNOWN
+Keywords: daline Unit
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: astroid (==2.3.3)
+Requires-Dist: beautifulsoup4 (==4.8.2)
+Requires-Dist: certifi (==2019.11.28)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: Click (==7.0)
+Requires-Dist: colorama (==0.4.3)
+Requires-Dist: google (==2.0.3)
+Requires-Dist: grpcio (==1.26.0)
+Requires-Dist: grpcio-tools (==1.26.0)
+Requires-Dist: httpie (==2.0.0)
+Requires-Dist: idna (==2.8)
+Requires-Dist: isort (==4.3.21)
+Requires-Dist: lazy-object-proxy (==1.4.3)
+Requires-Dist: lxml (==4.5.0)
+Requires-Dist: mccabe (==0.6.1)
+Requires-Dist: protobuf (==3.11.2)
+Requires-Dist: pycurl (==7.43.0.5)
+Requires-Dist: Pygments (==2.6.1)
+Requires-Dist: pylint (==2.4.4)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: six (==1.14.0)
+Requires-Dist: soupsieve (==1.9.5)
+Requires-Dist: tornado (==6.0.3)
+Requires-Dist: typed-ast (==1.4.1)
+Requires-Dist: urllib3 (==1.25.8)
+Requires-Dist: wrapt (==1.11.2)
+Requires-Dist: xlwt (==1.3.0)
+Requires-Dist: cx-Oracle (==7.3.0)
+
+# 本项目用于根据设计文档生成unit单元
+## 框架的思路
++ 将复杂的流程转为一个个PU，框架托管PU的非逻辑部分，PU只关注逻辑部分代码即可。
++ 设计人员写完设计文档后，自动生成PU单元的脚本，提供测试数据，提供单元测试模块，可直接运行，后台开发人员可直接启动，提供假数据，同时进行业务逻辑开发。前端人员可快速调通接口，进行开发。
+## 使用步骤
+1. 按格式编写设计文档
+2. 运行DalGenScript.py，直接运行须修改main函数中路径，cmd运行须传入路径参数
+3. 按设计文档自动生成对应unit单元，测试单元包括脚本、测试用例、测试数据、启动脚本
+4. 根据设计文档中的unit的连接关系，生成unit结构图，以新文件的形式重写md设计文档  
+![unit_frame](source/unit_frame.png)
+
+## 测试运行
+1. 运行生成文件中的run_test.py
+2. 运行jar
+3. 获取token，发送http请求：  
+localhost:8080/pu?fidx=calSymbolProfit&type=QueryMeta&url=http://www.qq.com
+
+## 生成目录
+代码根据设计文档中unit中unit_info的folder路径，生成unit名称目录，然后生成.py和.info文件：  
+![generate_folder](source/generate_folder.png)
+## 关于unit.py文件
+根据设计文档生成unit类，设计文档中的function_list中的每个function都会生成4个函数
++ func_Info() 表示func的基本信息
++ func_Meta() 表示func的数据描述，首先请求此函数
++ func_Data() 表示func的实际数据，需要使用func_Meta()的返回结果来请求
++ func_NewData() 用户订阅数据后，数据更新则进入此函数
+## 关于上层unit
+1. 根据设计文档中的上层unit列表，可自动生成上层unit中各function的数据接口，可直接调用获取数据，接口名格式如下：\_get_[unit_name]_[function_name]_data()
+2. 上层unit和DB冲突，只能存在一个
+## 关于设计文档
++ 设计文档采用markdowm格式编辑
++ ***模板中以“#”开头的关键词请全部保留，即使内容为空***
++ 设计文档模板见[UnitDesign/design.md](./UnitDesign/design.md)
++ 设计文档请严格按照模板目录结构编写，包括带“+ ”的数据列表，“+”数据列表赋值用“=”，注意markdown格式中的空格
++ 非开头的“#”作为数据注释
++ 保留“> ”开头的为注释
++ 功能的output请用json格式定义，注意不要漏写“双引号”
+### 设计文档示例
+```markdown
+# HoldingProfit_PU
+## unit_info
++ discription = 计算品种持仓盈亏
++ lang = python
+> 语言包括：python C++ 
++ folder = F:\SZZN\HuaWen\code\calPU\
++ type = pu
+## upper_unit
++ tick_data_PU
++ sina_data_PU
++ trade_data_PU
+## data_base
+> 只生成读的函数，参数为： 表明、字段名列表 、where条件
++ hosts = localhost
++ port = 3306
++ user = root
++ pd = admin
++ db = MarketDataRaw
+## function_list
+### calSymbolProfit()
+#### input
++ accountid = 42313454332
++ sttime = 20200401
++ symbol = cu2010
+#### output
+> 注意，md语法每行最后双空格再换行才是换行,转pdf时注意
+
+{
+    "trade_dic" :
+    {
+        "tradeId" : "str", # 交易代码
+        "tradeTime" : "datetime", # 交易时间
+        "buyPrice" : "st", # 买入价
+        "symbolinfo" :  # 标的信息
+        {
+            "symbol":"str", # 标的名
+            "exchange":"str", # 交易所
+            "priceInfo": # 价格信息
+            {
+                "pricetick":"float", # 最小变动价格
+                "margin":"float"
+            }
+        }
+    }
+}
+
+#### meta_data
++ ownerID = 500
++ ownerGroupID = 200
++ acCode = 0x111
++ did = 9527
++ zipDataSize = 692k
++ rawDataSize = 1428k
++ md5 = lkjliudfadf12jolx
++ dataTime = 20200109
++ version = 1.0
++ description = 这里写了一堆的数据描述
+
+### calTotalProfit()
+#### input
++ accountid = 42313454332
++ sttime = 20200101
+#### output
+> 注意，md语法每行最后双空格再换行才是换行,转pdf时注意
+
+{
+    "trade_dic" :
+    {
+        "tradeId" : "str", # 交易代码
+        "tradeTime" : "datetime", # 交易时间
+        "buyPrice" : "st", # 买入价
+        "symbolinfo" :  # 标的信息
+        {
+            "symbol":"str", # 标的名
+            "exchange":"str", # 交易所
+            "priceInfo": # 价格信息
+            {
+                "pricetick":"float", # 最小变动价格
+                "margin":"float"
+            }
+        }
+    }
+}
+#### meta_data
++ ownerID = 500
++ ownerGroupID = 200
++ acCode = 0x111
++ did = 9527
++ zipDataSize = 692k
++ rawDataSize = 1428k
++ md5 = lkjliudfadf12jolx
++ dataTime = 20200109
++ version = 1.0
++ description = 这里写了一堆的数据描述
+
+
