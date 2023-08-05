@@ -1,0 +1,14 @@
+gcloud_storage_emulator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gcloud_storage_emulator/exceptions.py,sha256=OnasMDrxfC6hMINwWD-DmWr5rwauup13kfR6jUKmdUI,74
+gcloud_storage_emulator/server.py,sha256=HHG7RCumOJ7Ratkhl8D0LE6OxHJvfRh5QY-UYEZOPXQ,9386
+gcloud_storage_emulator/settings.py,sha256=qnNrKD5Iyct20LUjTDC3rmDewhPZX_zO6YaEYMmdjYo,259
+gcloud_storage_emulator/storage.py,sha256=nOBPZGurlmEjQS4yJQ5rp7p7kLmvA8DnNQgdJmC5gu8,10714
+gcloud_storage_emulator/handlers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gcloud_storage_emulator/handlers/buckets.py,sha256=bkREDWM7-_y08-1qKIOP8Oes4JgY0FhThQbcOSh6wJs,3233
+gcloud_storage_emulator/handlers/objects.py,sha256=7JxTl7su-5FaPlme1SVG7PVRnAEkiExfNBoQ7pNLKQA,4365
+gcloud_storage_emulator-0.2.2.data/scripts/gcloud-storage-emulator,sha256=N-Wlf68Jwo6ww1jDSc_uB9xhiQaDF-cGLVPq16PcfTQ,2134
+gcloud_storage_emulator-0.2.2.dist-info/LICENCE.md,sha256=EB9eM30Vi6GJfkE4CpWuVrIrjoQof53wvN7AsqFQ8ac,1593
+gcloud_storage_emulator-0.2.2.dist-info/METADATA,sha256=23pSHcqvGOasMPfEvvaW305Bufw3GZwPJfs2hCrG-L0,2422
+gcloud_storage_emulator-0.2.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gcloud_storage_emulator-0.2.2.dist-info/top_level.txt,sha256=GlQUNNtmVlcfrEmuq-QFVrgHkURUU0TuiP98yXF1VLU,24
+gcloud_storage_emulator-0.2.2.dist-info/RECORD,,
