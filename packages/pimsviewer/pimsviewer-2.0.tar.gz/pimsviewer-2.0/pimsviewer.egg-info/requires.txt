@@ -1,0 +1,6 @@
+click
+pims
+PyQt5>=5.13.1
+pandas
+numpy
+Pillow
