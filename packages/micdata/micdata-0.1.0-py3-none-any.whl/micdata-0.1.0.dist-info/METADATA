@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: micdata
+Version: 0.1.0
+Summary: Load and process microscopy data for deep learning
+Home-page: https://gitlab.com/Thawn/micdata
+Author: Thawn
+Author-email: webmaster@korten.at
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.18.1)
+Requires-Dist: scikit-image (>=0.17.1)
+Requires-Dist: tifffile (>=2020.5.11)
+Requires-Dist: matplotlib (>=3.2.1)
+Requires-Dist: numexpr (>=2.7.1)
+Provides-Extra: bioformats
+Requires-Dist: python-bioformats (>=1.5.2) ; extra == 'bioformats'
+Requires-Dist: javabridge (>=1.0.18) ; extra == 'bioformats'
+
+# MicData
+
+Load and process microscopy data for deep learning
+
