@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+kaggleDownloader/__init__.py
+kaggleDownloader/kaggleDownloader.py
+kaggleDownloader.egg-info/PKG-INFO
+kaggleDownloader.egg-info/SOURCES.txt
+kaggleDownloader.egg-info/dependency_links.txt
+kaggleDownloader.egg-info/top_level.txt
