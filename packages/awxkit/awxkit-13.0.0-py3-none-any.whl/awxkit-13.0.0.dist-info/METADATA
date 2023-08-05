@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: awxkit
+Version: 13.0.0
+Summary: awx cli client
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: PyYAML
+Requires-Dist: requests
+Provides-Extra: crypto
+Requires-Dist: cryptography ; extra == 'crypto'
+Provides-Extra: formatting
+Requires-Dist: jq ; extra == 'formatting'
+Provides-Extra: websockets
+Requires-Dist: websocket-client (>0.54.0) ; extra == 'websockets'
+
+UNKNOWN
+
+
