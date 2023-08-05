@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: workingdays
+Version: 1.20200622.2
+Summary: A collection of Workingdays date utilities/helper functions.
+Home-page: https://github.com/jeramiefletcher/workingdays
+Author: Jeramie Fletcher
+Author-email: jeramie.fletcher@gmail.com
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# workingdays
+python package of date functions/utilities centered around workday calculations
+
+
