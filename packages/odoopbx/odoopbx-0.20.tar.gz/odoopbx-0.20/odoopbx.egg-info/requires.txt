@@ -1,0 +1,9 @@
+aiorun
+ipsetpy
+salt
+panoramisk@ git+https://github.com:litnimax/panoramisk.git
+odoorpc
+setproctitle
+terminado
+click
+tornado-httpclient-session
