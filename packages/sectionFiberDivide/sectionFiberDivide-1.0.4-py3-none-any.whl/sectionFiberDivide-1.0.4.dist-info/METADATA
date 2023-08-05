@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: sectionFiberDivide
+Version: 1.0.4
+Summary: Section fiber element generate program based on python language
+Home-page: https://github.com/Junjun1guo/sectionFiberGenerate
+Author: Junjun Guo
+Author-email: guojj01@gmail.com
+License: UNKNOWN
+Keywords: fiber element,section mesh
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Requires-Dist: numpy (>=1.17.4)
+Requires-Dist: matplotlib (>=3.1.2)
+Requires-Dist: pygmsh (>=6.0.2)
+Requires-Dist: meshio (>=3.3.1)
+Requires-Dist: scipy (>=1.4.1)
+
+UNKNOWN
+
+
