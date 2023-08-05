@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: bitflow
+Version: 0.6.0
+Summary: 
+Author: LSaldyt
+Author-email: lucassaldyt@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: beautifulsoup4 (>=4.9.1,<5.0.0)
+Requires-Dist: neo4j (>=4.0.0,<5.0.0)
+Requires-Dist: requests
+Requires-Dist: urllib3
