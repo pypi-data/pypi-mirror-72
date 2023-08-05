@@ -1,0 +1,3 @@
+[console_scripts]
+bare = bare.__main__:main
+
