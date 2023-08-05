@@ -1,0 +1,16 @@
+pymsbuild-0.0.19.dist-info\METADATA,sha256=oZnUNfmisjxnl2vL_SzOC4ycsD53w4hcP9pK9uN1OJk,9777
+pymsbuild-0.0.19.dist-info\WHEEL,sha256=umBxpsjoxZITYdhh1zOVcXagkDi-EaMZU7E5sCEfks8,168
+pymsbuild\cython.py,sha256=sgHSi4KK2RNXNP1K094cOzLnww_J3vnqbXhN-nlLTDY,736
+pymsbuild\_build.py,sha256=-H30yftPYI70UqICm1WiF9pUmyPCe5H3uex1a_83_xE,1142
+pymsbuild\_generate.py,sha256=A5xJhLK9li2IQy-zLNZ2p7V-Tu1ZADsxgX_uGjD41Ko,10246
+pymsbuild\_types.py,sha256=f2WRjqOkj7yKpr7_EvNwy6qUpPLgqZEMXisUTUXiaPE,6525
+pymsbuild\_writer.py,sha256=a9ZdACVdvnVoVdEA8V5e8qXTwYLx_F6MYvIYu4Y760g,5325
+pymsbuild\__init__.py,sha256=sZKcWmR4vlWFcrwpyuWpTceGkUBxP-lUpMRCMB7iXhA,12429
+pymsbuild\__main__.py,sha256=O5SdYTf61tMfwowaJT04ZeU8OYAluLCIgppGgiy9eOk,3171
+pymsbuild\targets\common.props,sha256=kWbtNiY4GP7PKjEpzm0w9YQM9k5lKtYTQ594ZwLU0Eg,532
+pymsbuild\targets\common.targets,sha256=S-C5erHEC3-RUnr40b0lG2ohb_k20uLgxmtXUj2kuO0,2362
+pymsbuild\targets\cython.targets,sha256=8af8MQOMLamyxDns39-UYZ6_zhRWaw-uEHbWAvfWu2M,3625
+pymsbuild\targets\package.targets,sha256=-zaI0unwuFL5NU0oNthd3vHQ01N3TJ6afjNiMQHFQCs,3044
+pymsbuild\targets\pyd.targets,sha256=nhKc64LBUqMuUW2RoHRiNGjg-3_vsHawThQzHiL8Ue4,1664
+pymsbuild\targets\sdist.targets,sha256=UxtREHa1VcLuCrz9W-R0L3DTdQpaVz33WB8Kv08oJwk,1775
+pymsbuild-0.0.19.dist-info\RECORD,,
