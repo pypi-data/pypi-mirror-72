@@ -1,0 +1,4 @@
+[console_scripts]
+schedule-convert2 = schedules_tools.bin.schedule_convert:main
+schedule-diff2 = schedules_tools.bin.schedule_diff:main
+
