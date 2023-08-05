@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+VERSION.txt
+setup.py
+sowerest/VERSION.txt
+sowerest/__init__.py
+sowerest/client.py
+sowerest/exceptions.py
+sowerest.egg-info/PKG-INFO
+sowerest.egg-info/SOURCES.txt
+sowerest.egg-info/dependency_links.txt
+sowerest.egg-info/top_level.txt
