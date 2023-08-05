@@ -1,0 +1,8 @@
+aws_cdk/aws_rds/__init__.py,sha256=P7RiQ4KA8QX81WAf1OwsaH5E3OhT49TFq8U283HLQDI,605672
+aws_cdk/aws_rds/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_rds/_jsii/__init__.py,sha256=xlRIqmpP9Sqg1cMOCCAQsi4OSaZM2u4fowi6fug4l_E,636
+aws_cdk/aws_rds/_jsii/aws-rds@1.47.0.jsii.tgz,sha256=ZLL6rui9zU5xNoEKNPnSTndX90YQi_kmKBKTsm65sQs,249783
+aws_cdk.aws_rds-1.47.0.dist-info/METADATA,sha256=Ne6DDruk7sichuBvLSm2NLK5xayrivOEPNL-9Tyf9Yg,15167
+aws_cdk.aws_rds-1.47.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aws_cdk.aws_rds-1.47.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_rds-1.47.0.dist-info/RECORD,,
