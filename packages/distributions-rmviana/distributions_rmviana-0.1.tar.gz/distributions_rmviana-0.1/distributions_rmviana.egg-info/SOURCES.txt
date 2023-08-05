@@ -1,0 +1,10 @@
+setup.py
+distributions_rmviana/Binomialdistribution.py
+distributions_rmviana/Gaussiandistribution.py
+distributions_rmviana/Generaldistribution.py
+distributions_rmviana/__init__.py
+distributions_rmviana.egg-info/PKG-INFO
+distributions_rmviana.egg-info/SOURCES.txt
+distributions_rmviana.egg-info/dependency_links.txt
+distributions_rmviana.egg-info/not-zip-safe
+distributions_rmviana.egg-info/top_level.txt
