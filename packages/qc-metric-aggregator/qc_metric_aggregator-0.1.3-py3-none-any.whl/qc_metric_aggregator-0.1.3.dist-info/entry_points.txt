@@ -1,0 +1,3 @@
+[console_scripts]
+aggregate-qc-metrics = process_metrics.__main__:generate_report
+
