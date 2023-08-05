@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-microphone-cli-hermes = rhasspymicrophone_cli_hermes.__main__:main
+

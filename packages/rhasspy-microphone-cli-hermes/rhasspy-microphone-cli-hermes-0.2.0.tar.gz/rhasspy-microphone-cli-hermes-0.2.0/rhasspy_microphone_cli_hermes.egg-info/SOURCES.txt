@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+rhasspy_microphone_cli_hermes.egg-info/PKG-INFO
+rhasspy_microphone_cli_hermes.egg-info/SOURCES.txt
+rhasspy_microphone_cli_hermes.egg-info/dependency_links.txt
+rhasspy_microphone_cli_hermes.egg-info/entry_points.txt
+rhasspy_microphone_cli_hermes.egg-info/requires.txt
+rhasspy_microphone_cli_hermes.egg-info/top_level.txt
+rhasspymicrophone_cli_hermes/__init__.py
+rhasspymicrophone_cli_hermes/__main__.py
