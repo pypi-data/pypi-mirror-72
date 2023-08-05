@@ -1,0 +1,11 @@
+{% load i18n material_frontend humanize corgy.commons %}
+
+<table class="table bordered">
+    <caption>{% trans 'Távollétek részletezése' %}</caption>
+    {% for stat in object.absenses.all %}
+        <tr>
+            <th>{{ stat.category }}</th>
+            <td>{{ stat.value }}</td>
+        </tr>
+    {% endfor %}
+</table>

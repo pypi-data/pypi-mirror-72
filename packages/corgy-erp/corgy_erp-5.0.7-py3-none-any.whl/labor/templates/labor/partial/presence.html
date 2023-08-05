@@ -1,0 +1,19 @@
+{% load i18n material_frontend humanize corgy.commons %}
+
+<table class="table bordered">
+    <caption>{% trans 'Jelenlétek részletezése' %}</caption>
+    <tr>
+        <th>{% trans 'Tárgyhavi munkanap' %}</th>
+        <td>{{ object.workdays }}</td>
+    </tr>
+    <tr>
+        <th>{% trans 'Tárgyhavi fizetett ünnep' %}</th>
+        <td>{{ object.holidays }}</td>
+    </tr>
+    {% for stat in object.presences.all %}
+        <tr>
+            <th>{{ stat.category }}</th>
+            <td>{{ stat.value }}</td>
+        </tr>
+    {% endfor %}
+</table>
