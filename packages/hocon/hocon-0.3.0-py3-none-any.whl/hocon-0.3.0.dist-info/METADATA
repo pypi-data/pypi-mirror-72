@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: hocon
+Version: 0.3.0
+Summary: HOCON encoder and decoder
+Home-page: https://github.com/danielbraun89/hocon
+Author: Daniel Braun
+Author-email: danie.braun@outlook.co.il
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pyhocon (>=0.3.55)
+Provides-Extra: dev
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: bump2version ; extra == 'dev'
+
+# HOCON
+
+HOCON, or Human-Optimized Config Object Notation is a format for human-readable data, and a superset of JSON.
+
+
+`hocon` exposes an API familiar to users of the standard library `json`, `marshal` and `pickle` modules.
+
