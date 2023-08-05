@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: kitten-rng
+Version: 1.0.0
+Summary: an rng that generates its numbers based off of a
+        kitten livestream
+Home-page: https://github.com/SuniTheFish/Kitten-RNG
+Author: Benjamin Hinchliff
+Author-email: benjamin.hinchliff@gmail.com
+License: MIT
+Description: # Kitten RNG
+        
+        ## Why?
+        
+        So I was watching Tom Scott videos when I heard [this](https://youtu.be/1cUUfMeOijg). So, now I have created a tool that makes a random number based of a kitten livestream that can be found [here](https://www.youtube.com/watch?v=M5huFQWHyVI). What a wonderfully practical invention.
+        
+        ## How?
+        
+        So I used pafy to get the url for the actual video file, and then fed that url into a cv2 VideoCapture and got the first frame (which I can do because pafy only gets a few frames of the livestream). Then I feed that data into a sha256 urllib hash function and convert that to a semi-number.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
