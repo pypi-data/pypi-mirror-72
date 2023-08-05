@@ -1,0 +1,11 @@
+dbnd_tensorflow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbnd_tensorflow/_plugin.py,sha256=ceUiTmhVDRlDeaa-Oa1R43o8uBl_yWa3zFZDYeNfyLg,900
+dbnd_tensorflow/marshalling/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbnd_tensorflow/marshalling/tensorflow_marshaller.py,sha256=1qTXaoX8Wq8BVfWWXnKBqhYel7FN3Ytth8CSo_WehTY,1398
+dbnd_tensorflow/marshalling/tensorflow_values.py,sha256=YdOlOXzfFqNlTaIA8W5jSD7CK1lZtNZq1Xe6go7Eon0,394
+dbnd_tensorflow-0.27.14.dist-info/LICENSE,sha256=ohztaRaSch6kGv7onwox0KiF7AnFC9cyN7KzEJt5b1U,11347
+dbnd_tensorflow-0.27.14.dist-info/METADATA,sha256=6G_U7NHdwloGRGlcbfYGNTlYyD4tbEhDKC4XKbD-qIA,1518
+dbnd_tensorflow-0.27.14.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+dbnd_tensorflow-0.27.14.dist-info/entry_points.txt,sha256=Y8-BECpppIBES4tE3YeOiixk32kpuPMwZO2d7c-kXco,50
+dbnd_tensorflow-0.27.14.dist-info/top_level.txt,sha256=KVJb-gkmULUZk00o48BhpuLqsaAjKRlOO7wBQ-yCTKI,16
+dbnd_tensorflow-0.27.14.dist-info/RECORD,,
