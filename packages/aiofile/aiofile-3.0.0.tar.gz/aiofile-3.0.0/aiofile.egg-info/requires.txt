@@ -1,0 +1,9 @@
+caio~=0.5.3
+
+[:python_version < "3.5"]
+typing>=3.5.3
+
+[develop]
+aiomisc
+pytest
+pytest-cov
