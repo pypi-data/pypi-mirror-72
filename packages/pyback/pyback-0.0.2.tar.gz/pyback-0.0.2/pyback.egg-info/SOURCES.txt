@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+pyback/__init__.py
+pyback/_version.py
+pyback/strategy.py
+pyback.egg-info/PKG-INFO
+pyback.egg-info/SOURCES.txt
+pyback.egg-info/dependency_links.txt
+pyback.egg-info/top_level.txt
+tests/__init__.py
+tests/unit/__init__.py
+tests/unit/test_strategy.py
