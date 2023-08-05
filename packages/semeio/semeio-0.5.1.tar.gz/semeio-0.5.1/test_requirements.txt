@@ -1,0 +1,6 @@
+pytest
+mock
+zipp<2; python_version<='2.7'
+configparser<5; python_version<='2.7'
+openpyxl<=2.6.4; python_version<="2.7"
+openpyxl; python_version>="3.6"
