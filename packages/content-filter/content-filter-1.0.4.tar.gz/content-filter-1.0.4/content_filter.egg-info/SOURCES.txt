@@ -1,0 +1,12 @@
+README.md
+setup.py
+content_filter/__init__.py
+content_filter/filter.py
+content_filter.egg-info/PKG-INFO
+content_filter.egg-info/SOURCES.txt
+content_filter.egg-info/dependency_links.txt
+content_filter.egg-info/top_level.txt
+content_filter/data/filter.json
+tests/__init__.py
+tests/custom_filter_test.py
+tests/filter_test.py
