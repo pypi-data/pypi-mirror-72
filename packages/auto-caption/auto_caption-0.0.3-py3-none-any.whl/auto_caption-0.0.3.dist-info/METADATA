@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: auto-caption
+Version: 0.0.3
+Summary: Automatic captioning.
+Home-page: https://github.com/aguang-xyz/auto-caption
+Author: Guangrui Wang
+Author-email: aguang.xyz@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >= 3.6
+Description-Content-Type: text/markdown
+
+# Auto Caption.
+
+![PyPI](https://img.shields.io/pypi/v/auto-caption)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/auto-caption)
+![PyPI - License](https://img.shields.io/pypi/l/auto-caption)
+
+## Install.
+
+```bash
+pip3 install auto-caption
+```
+
+## Usage.
+
+```bash
+usage: auto-caption [-h] [--output OUTPUT] video
+
+Automatic captioning for movies.
+
+positional arguments:
+  video            The path of input video
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --output OUTPUT  The path to write srt output
+
+```
+
