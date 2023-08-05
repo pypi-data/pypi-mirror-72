@@ -1,0 +1,8 @@
+cliff-tablib>=2.0
+cliff>=2.11.0
+docker>=2.4.2
+docker>=2.4.2
+jsonpickle>=0.9
+oslo.i18n>=3.20.0
+paramiko>=2.6.0
+pbr!=2.1.0,>=2.0.0
