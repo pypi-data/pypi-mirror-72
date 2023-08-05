@@ -1,0 +1,13 @@
+toml
+vunit_hdl
+
+[dev]
+toml
+pycodestyle
+pybadges
+pylint
+pytest
+pytest-cov
+sphinx
+sphinx-rtd-theme
+twine
