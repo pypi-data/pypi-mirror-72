@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: hp-money
+Version: 1.1.2
+Summary: money module of hipopay, including amount and currency sub-modules
+Home-page: https://hipopay.com
+Author: Qingxu Kuang
+Author-email: kuangqingxu@transfereasy.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# hp_money
+
+>
+> version: 1.1.2
+>
+> author: [KuangQingxu](mailto:kuangqingxu@transfereasy.com?subject=[HipoPay - hp_money])
+>
+> date: 2020-04-26
+>
+> update: 2020-06-24
+
+### Usage:
+    - To be continue
+
+### Packaging And Uploading:
+
+- Update Verison:
+
+    - `README.md`
+    - `hp_money/__init__.py`
+    - `setup.py`
+
+- Packing:
+
+    ```
+    python setup.py sdist bdist_wheel
+    ```
+
+- Uploading:
+
+    ```
+    twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+    ```
+
+
