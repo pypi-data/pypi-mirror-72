@@ -1,0 +1,3 @@
+[backendai_error_monitor_v20]
+sentry = ai.backend.monitor.sentry.plugin:SentryErrorMonitor
+

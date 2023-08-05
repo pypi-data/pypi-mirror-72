@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+src/ai/backend/monitor/sentry/__init__.py
+src/ai/backend/monitor/sentry/plugin.py
+src/backend.ai_monitor_sentry.egg-info/PKG-INFO
+src/backend.ai_monitor_sentry.egg-info/SOURCES.txt
+src/backend.ai_monitor_sentry.egg-info/dependency_links.txt
+src/backend.ai_monitor_sentry.egg-info/entry_points.txt
+src/backend.ai_monitor_sentry.egg-info/requires.txt
+src/backend.ai_monitor_sentry.egg-info/top_level.txt
