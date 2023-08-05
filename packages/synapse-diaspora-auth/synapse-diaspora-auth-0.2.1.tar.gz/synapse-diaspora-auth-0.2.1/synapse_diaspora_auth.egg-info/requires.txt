@@ -1,0 +1,4 @@
+Twisted>=15.1.0
+psycopg2
+bcrypt
+pymysql
