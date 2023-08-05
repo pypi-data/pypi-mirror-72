@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: awxkit
+Version: 13.0.0
+Summary: awx cli client
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Provides-Extra: crypto
+Provides-Extra: websockets
+Provides-Extra: formatting
