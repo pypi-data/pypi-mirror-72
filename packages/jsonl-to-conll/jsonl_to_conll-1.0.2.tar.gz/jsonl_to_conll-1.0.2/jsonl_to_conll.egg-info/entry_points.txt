@@ -1,0 +1,3 @@
+[console_scripts]
+jsonl-to-conll = jsonl_to_conll.cli:main
+

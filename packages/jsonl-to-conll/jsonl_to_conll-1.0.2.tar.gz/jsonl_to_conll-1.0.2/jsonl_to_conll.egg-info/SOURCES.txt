@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+jsonl_to_conll/__init__.py
+jsonl_to_conll/cli.py
+jsonl_to_conll/convert.py
+jsonl_to_conll/io.py
+jsonl_to_conll.egg-info/PKG-INFO
+jsonl_to_conll.egg-info/SOURCES.txt
+jsonl_to_conll.egg-info/dependency_links.txt
+jsonl_to_conll.egg-info/entry_points.txt
+jsonl_to_conll.egg-info/top_level.txt
