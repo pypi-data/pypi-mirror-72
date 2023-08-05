@@ -1,0 +1,10 @@
+setup.py
+tarun_probdist/Binomialdistribution.py
+tarun_probdist/Gaussiandistribution.py
+tarun_probdist/Generaldistribution.py
+tarun_probdist/__init__.py
+tarun_probdist.egg-info/PKG-INFO
+tarun_probdist.egg-info/SOURCES.txt
+tarun_probdist.egg-info/dependency_links.txt
+tarun_probdist.egg-info/not-zip-safe
+tarun_probdist.egg-info/top_level.txt
