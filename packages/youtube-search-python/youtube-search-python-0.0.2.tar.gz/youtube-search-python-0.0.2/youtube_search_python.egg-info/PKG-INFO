@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: youtube-search-python
+Version: 0.0.2
+Summary: A python script to return video links and titles by searching in YouTube without Youtube Data API v3.
+Home-page: https://github.com/alexmercerind/youtube-search-python
+Author: Hitesh Kumar Saini
+Author-email: saini123hitesh@gmail.com
+License: UNKNOWN
+Description: # youtube-search-python
+        
+        
+        **Search videos in YouTube without using YouTube Data API v3.**
+        
+        
+        (Made from scratch without using YouTube Data API v3 and any other third party library!)
+        
+        
+        Working as of 2020.
+        
+        
+        ## Install
+        
+        
+        ```pip3 install youtube-search-python```
+        
+        
+        ## Usage
+        
+        
+        ```python
+        
+        from youtubesearchpython import searchYoutube
+        
+        search = searchYoutube("NoCopyrightSounds", 1, "json")
+        
+        print(search.result());
+        
+        ```
+        
+        
+        ## Like the module?
+        
+        
+        Consider starring the repo. Feel free to use.
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
