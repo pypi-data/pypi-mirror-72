@@ -1,0 +1,13 @@
+README.md
+setup.py
+NanoCount/NanoCount.py
+NanoCount/Read.py
+NanoCount/__init__.py
+NanoCount/__main__.py
+NanoCount/common.py
+NanoCount.egg-info/PKG-INFO
+NanoCount.egg-info/SOURCES.txt
+NanoCount.egg-info/dependency_links.txt
+NanoCount.egg-info/entry_points.txt
+NanoCount.egg-info/requires.txt
+NanoCount.egg-info/top_level.txt
