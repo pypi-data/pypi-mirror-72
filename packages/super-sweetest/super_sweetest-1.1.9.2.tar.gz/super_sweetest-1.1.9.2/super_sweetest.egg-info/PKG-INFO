@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: super-sweetest
+Version: 1.1.9.2
+Summary: automation tools
+Home-page: https://github.com/
+Author: liyubin
+Author-email: 1399393088@qq.com
+License: MIT Licence
+Description: automation tools: requests,appium,selenium,air_android,air_ios,adb,poco......增加touch长按
+Keywords: pip,super_sweetest,featureextraction
+Platform: any
