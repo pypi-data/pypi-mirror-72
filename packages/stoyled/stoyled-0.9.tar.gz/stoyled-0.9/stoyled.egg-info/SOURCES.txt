@@ -1,0 +1,10 @@
+README.md
+setup.py
+stoyled/__init__.py
+stoyled/escapeSequences.py
+stoyled/generateStyles.py
+stoyled/moreStyles.py
+stoyled.egg-info/PKG-INFO
+stoyled.egg-info/SOURCES.txt
+stoyled.egg-info/dependency_links.txt
+stoyled.egg-info/top_level.txt
