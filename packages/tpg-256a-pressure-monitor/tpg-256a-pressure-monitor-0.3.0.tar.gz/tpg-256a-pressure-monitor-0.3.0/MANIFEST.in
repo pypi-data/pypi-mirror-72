@@ -1,0 +1,5 @@
+include README.md
+include CHANGELOG.md
+include LICENSE.md
+include CONTRIBUTING.md
+include tlp_256a_pressure_monitor/conf/*
