@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object name="oiuytrez" meta_type="Dexterity Container">
+ <criteria>
+  <criterion name="c3">
+   <property name="widget">path</property>
+   <property name="title">Folder</property>
+   <property name="index">path</property>
+   <property name="default">//REMPLACE//</property>
+   <property name="root"></property>
+   <property name="depth">0</property>
+   <property name="position">top</property>
+   <property name="section">default</property>
+   <property name="hidden">True</property>
+   <property name="theme">apple</property>
+  </criterion>
+  <criterion name="c0">
+   <property name="widget">resultsperpage</property>
+   <property name="title">Results per page</property>
+   <property name="default">5</property>
+   <property name="position">right</property>
+   <property name="section">default</property>
+   <property name="hidden">True</property>
+   <property name="start">0</property>
+   <property name="end">20</property>
+   <property name="step">5</property>
+  </criterion>
+  <criterion name="c1">
+   <property name="widget">checkbox</property>
+   <property name="title">Portal type</property>
+   <property name="index">portal_type</property>
+   <property name="operator">and</property>
+   <property
+      name="vocabulary">eea.faceted.vocabularies.FacetedPortalTypes</property>
+   <property name="catalog"></property>
+   <property name="default">
+    <element value="Project"/>
+    <element value="priority_action"/>
+   </property>
+   <property name="position">right</property>
+   <property name="section">default</property>
+   <property name="hidden">True</property>
+   <property name="count">True</property>
+   <property name="hidezerocount">False</property>
+   <property name="maxitems">5</property>
+   <property name="sortreversed">True</property>
+  </criterion>
+  <criterion name="c2">
+   <property name="widget">sorting</property>
+   <property name="title">Sort on</property>
+   <property name="vocabulary"></property>
+   <property name="default">effective(reverse)</property>
+   <property name="position">right</property>
+   <property name="section">default</property>
+   <property name="hidden">True</property>
+  </criterion>
+ </criteria>
+</object>
