@@ -1,0 +1,13 @@
+setuptools
+guillotina<6,>=5.0.0
+aiohttp<4.0.0,>3.0.0
+ujson
+aiobotocore==0.9.4
+botocore==1.10.58
+backoff
+
+[test]
+pytest
+pytest-aiohttp
+pytest-docker-fixtures
+asynctest==0.13.0
