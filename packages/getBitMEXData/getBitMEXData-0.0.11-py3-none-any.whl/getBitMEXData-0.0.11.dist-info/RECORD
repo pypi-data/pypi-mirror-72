@@ -1,0 +1,16 @@
+Doc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Doc/getBitMEXData_help.txt,sha256=kQmdign2_YK6nhnn_1aluGkWVC-yLgEZxFaUCPzu03Q,1962
+getBitMEXData/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+getBitMEXData/auth.py,sha256=G0zyIRBQMNuREaDNLLb2e4JIp1_7wHiUUjJ7xPavmqg,3567
+getBitMEXData/getBitMEXData.py,sha256=b8eXTEUngmcoI1o46JXc4EkHRptYiammxzOz74arQf0,10586
+getBitMEXData/getBitMEXtypes.py,sha256=1yt_gz2uiW56kMh9Y6qlRXwc97G9n5P1hlokqGnS-vs,239
+getBitMEXData/settings.py,sha256=ys_3lfXgd5j1R26dVJ44QmKSdz_UzsKQMV3fBklQ0TQ,360
+getBitMEXData/update_data.py,sha256=sHppoz0StPcTgRp6utJeYCFjvKRrMoHmV2-z7K5KnSI,6621
+getBitMEXData/update_kola.py,sha256=sHppoz0StPcTgRp6utJeYCFjvKRrMoHmV2-z7K5KnSI,6621
+getBitMEXData/utils.py,sha256=6EcuVwx35KPYXJA4MIr8UKjl_O7ScixTxafQo_KaN7s,13559
+getBitMEXData-0.0.11.dist-info/LICENSE.txt,sha256=PyGt0WKETNRyDC4_MQtCjO9PyuB0ZAVmSNLpcNTl7C4,35877
+getBitMEXData-0.0.11.dist-info/METADATA,sha256=XNlvjTINs5OvkR6LmpkvEFLUXabirtRlaTJFxjBhRUQ,4488
+getBitMEXData-0.0.11.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+getBitMEXData-0.0.11.dist-info/entry_points.txt,sha256=d4_Ugl8GhqlPECOZil4LVfYJ7E8R6T22GViReINDMvI,121
+getBitMEXData-0.0.11.dist-info/top_level.txt,sha256=GtZLDm2enC7RX_0-5M7NYfknooT62KnZ4MrkpZmP9Do,18
+getBitMEXData-0.0.11.dist-info/RECORD,,
