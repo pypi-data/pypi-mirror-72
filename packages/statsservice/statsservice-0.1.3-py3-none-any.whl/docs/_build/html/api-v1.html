@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API v1 &mdash; MONARC Stats API 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API v2" href="api-v2.html" />
+    <link rel="prev" title="Presentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MONARC Stats API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API v1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#swagger">Swagger</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-v2.html">API v2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stats.html">Blueprint stats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line-interface.html">Command Line Interface</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MONARC Stats API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API v1</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api-v1.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-v1">
+<h1>API v1<a class="headerlink" href="#api-v1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="swagger">
+<h2>Swagger<a class="headerlink" href="#swagger" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://127.0.0.1:5000/api/v1/swagger.json">http://127.0.0.1:5000/api/v1/swagger.json</a></p>
+<p>Swagger UI: <a class="reference external" href="http://127.0.0.1:5000/api/v1">http://127.0.0.1:5000/api/v1</a></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;swagger&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;basePath&quot;</span><span class="p">:</span> <span class="s2">&quot;/api/v2/stats&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;paths&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;/&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;post&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;responses&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;201&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Success&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;schema&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Stats&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;summary&quot;</span><span class="p">:</span> <span class="s2">&quot;Create a new stats&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;operationId&quot;</span><span class="p">:</span> <span class="s2">&quot;create_stats&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;payload&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;body&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;schema&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Stats&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;X-Fields&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;header&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;mask&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An optional fields mask&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;default&quot;</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;get&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;responses&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;200&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Success&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;schema&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/StatsList&quot;</span>
+                            <span class="p">}</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;summary&quot;</span><span class="p">:</span> <span class="s2">&quot;List all stats&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;operationId&quot;</span><span class="p">:</span> <span class="s2">&quot;list_stats&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;organization&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;query&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization of the stats&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;anr&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;query&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UUID of the Anr of the stats&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;type&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;query&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Type of the stats (risk, vulnerability, threat)&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;day&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;query&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Day of the stats&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;week&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;query&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Week of the stats&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;month&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;query&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Month of the stats&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;year&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;query&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Year of the stats&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;page&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;query&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;per_page&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;query&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;X-Fields&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;header&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;mask&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An optional fields mask&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;default&quot;</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;/{uuid}&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;path&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The stats identifier&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;delete&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;responses&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;404&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Stats not found&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;204&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Stats deleted&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;summary&quot;</span><span class="p">:</span> <span class="s2">&quot;Delete a stats given its identifier&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;operationId&quot;</span><span class="p">:</span> <span class="s2">&quot;delete_stats&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;default&quot;</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;get&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;responses&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;404&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Stats not found&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;200&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Success&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;schema&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Stats&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;summary&quot;</span><span class="p">:</span> <span class="s2">&quot;Fetch a given resource&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;operationId&quot;</span><span class="p">:</span> <span class="s2">&quot;get_stats&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;X-Fields&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;header&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;mask&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An optional fields mask&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;default&quot;</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;put&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;responses&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;404&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Stats not found&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;200&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Success&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;schema&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Stats&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;summary&quot;</span><span class="p">:</span> <span class="s2">&quot;Update a stats given its identifier&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;operationId&quot;</span><span class="p">:</span> <span class="s2">&quot;put_stats_item&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;payload&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;body&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;schema&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Stats&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;X-Fields&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;header&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;mask&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An optional fields mask&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;default&quot;</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;MONARC Stats service - API v2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;API v2 of the MONARC Stats service.&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;produces&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;application/json&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;consumes&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;application/json&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Default namespace&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;definitions&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;Stats&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The stats unique identifier&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;readOnly&quot;</span><span class="p">:</span> <span class="kc">true</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;organization&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The organization related to this stats.&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;readOnly&quot;</span><span class="p">:</span> <span class="kc">true</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;anr&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The ANR related to this stats.&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The type of this stats (risk, vulnerability, threat).&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;day&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Day of the stats.&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;week&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Week of the stats.&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;month&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Month of the stats.&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Year of the stats.&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The stats as a dynamic JSON object.&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;date-time&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Created time of the stats.&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;date-time&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Updated time of the stats.&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;StatsList&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Metada related to the result (number of page, current page, total number of objects.).&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;List of stats objects&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Stats&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;responses&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;ParseError&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;When a mask can&#39;t be parsed&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;MaskError&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;When any error occurs on mask&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api-v2.html" class="btn btn-neutral float-right" title="API v2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Presentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Cédric Bonhomme &lt;cedric@cedricbonhomme.org&gt;
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
