@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: arcane-date
+Version: 0.1.0
+Summary: A package to work with dates
+Author: Arcane
+Author-email: product@arcane.run
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+# Arcane date
+
+This package helps us to work with dates
+
