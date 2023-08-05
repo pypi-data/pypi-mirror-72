@@ -1,0 +1,13 @@
+astropy
+toml
+numba
+numpy
+sphinx-astropy
+healpy
+quaternionarray
+pysm3
+pyyaml
+h5py
+importlib_resources
+https://github.com/simonsobs/so_pysm_models/archive/master.zip
+https://github.com/simonsobs/so_noise_models/archive/master.zip
