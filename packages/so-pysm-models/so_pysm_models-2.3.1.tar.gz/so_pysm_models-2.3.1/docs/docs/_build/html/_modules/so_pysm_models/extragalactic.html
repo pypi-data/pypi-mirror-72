@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>so_pysm_models.extragalactic &#8212; so_pysm_models v0.4.dev231</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../../index.html"><span id="logotext1">so_pysm_models</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li>
+	<a href="../../index.html">so_pysm_models v0.4.dev231</a>
+	 &#187;
+      </li>
+      <li><a href="../index.html" >Module code</a> &#187;</li>
+      <li><a href="../so_pysm_models.html" accesskey="U">so_pysm_models</a> &#187;</li>
+      
+       
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for so_pysm_models.extragalactic</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os.path</span>
+
+<span class="kn">from</span> <span class="nn">numba</span> <span class="k">import</span> <span class="n">njit</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">pysm</span> <span class="k">import</span> <span class="n">InterpolatingComponent</span><span class="p">,</span> <span class="n">Model</span>
+<span class="kn">from</span> <span class="nn">pysm</span> <span class="k">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+
+<span class="kn">from</span> <span class="nn">pysm.utils</span> <span class="k">import</span> <span class="n">normalize_weights</span><span class="p">,</span> <span class="n">trapz_step_inplace</span>
+<span class="kn">from</span> <span class="nn">.alms</span> <span class="k">import</span> <span class="n">PrecomputedAlms</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">utils</span>
+
+
+
+<span class="nd">@njit</span>
+<span class="k">def</span> <span class="nf">y2uK_CMB</span><span class="p">(</span><span class="n">nu</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compton-y distortion at a given frequency</span>
+
+<span class="sd">    Parmeters:</span>
+<span class="sd">    nu (float): frequency in GHz</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    float: intensity variation dT_CMB in micro-Kelvin</span>
+<span class="sd">      dT_CMB = dI_nu / (dB_nu / dT)_Tcmb</span>
+<span class="sd">      where B_nu is the Planck function and dI_nu is the intensity distortion</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">h</span> <span class="o">=</span> <span class="mf">6.62607004e-27</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="mf">1.380622e-16</span>
+    <span class="n">Tcmb</span> <span class="o">=</span> <span class="mf">2.725</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">nu</span> <span class="o">*</span> <span class="mf">1e9</span> <span class="o">/</span> <span class="n">k</span> <span class="o">/</span> <span class="n">Tcmb</span>
+    <span class="k">return</span> <span class="mf">1e6</span> <span class="o">*</span> <span class="n">Tcmb</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">4</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="WebSkyCIB"><a class="viewcode-back" href="../../api/so_pysm_models.WebSkyCIB.html#so_pysm_models.WebSkyCIB">[docs]</a><span class="k">class</span> <span class="nc">WebSkyCIB</span><span class="p">(</span><span class="n">InterpolatingComponent</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;PySM component interpolating between precomputed maps&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">websky_version</span><span class="o">=</span><span class="s2">&quot;0.3&quot;</span><span class="p">,</span>
+        <span class="n">input_units</span><span class="o">=</span><span class="s2">&quot;MJy / sr&quot;</span><span class="p">,</span>
+        <span class="n">nside</span><span class="o">=</span><span class="mi">4096</span><span class="p">,</span>
+        <span class="n">interpolation_kind</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span>
+        <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">local_folder</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">local_folder</span> <span class="o">=</span> <span class="n">local_folder</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="nb">str</span><span class="p">(</span><span class="n">websky_version</span><span class="p">),</span>
+            <span class="n">input_units</span><span class="p">,</span>
+            <span class="n">nside</span><span class="p">,</span>
+            <span class="n">interpolation_kind</span><span class="p">,</span>
+            <span class="n">has_polarization</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">,</span>
+            <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dataurl</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># utils.DATAURL</span>
+
+<div class="viewcode-block" id="WebSkyCIB.get_filenames"><a class="viewcode-back" href="../../api/so_pysm_models.WebSkyCIB.html#so_pysm_models.WebSkyCIB.get_filenames">[docs]</a>    <span class="k">def</span> <span class="nf">get_filenames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get filenames for a websky version</span>
+<span class="sd">        For a standard interpolating component, we list files in folder,</span>
+<span class="sd">        here we need to know the names in advance so that we can only download the required maps</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">websky_version</span> <span class="o">=</span> <span class="n">path</span>
+        <span class="k">if</span> <span class="n">websky_version</span> <span class="o">==</span> <span class="s2">&quot;0.3&quot;</span><span class="p">:</span>
+
+            <span class="n">available_frequencies</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">base_freq</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">280</span><span class="p">]:</span>
+                <span class="k">for</span> <span class="n">delta_freq</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+                    <span class="n">available_frequencies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base_freq</span> <span class="o">+</span> <span class="n">delta_freq</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">base_freq</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">217</span><span class="p">,</span> <span class="mi">353</span><span class="p">,</span> <span class="mi">545</span><span class="p">,</span> <span class="mi">857</span><span class="p">]:</span>
+                <span class="n">delta_freq</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="n">available_frequencies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base_freq</span> <span class="o">+</span> <span class="n">delta_freq</span><span class="p">)</span>
+
+            <span class="n">filenames</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="n">freq</span><span class="p">:</span> <span class="s2">&quot;websky/0.3/cib_</span><span class="si">{:04d}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="n">available_frequencies</span>
+            <span class="p">}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">local_folder</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+                <span class="n">filenames</span><span class="p">[</span><span class="n">freq</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">local_folder</span><span class="p">,</span> <span class="n">filenames</span><span class="p">[</span><span class="n">freq</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">filenames</span></div>
+
+<div class="viewcode-block" id="WebSkyCIB.read_map_by_frequency"><a class="viewcode-back" href="../../api/so_pysm_models.WebSkyCIB.html#so_pysm_models.WebSkyCIB.read_map_by_frequency">[docs]</a>    <span class="k">def</span> <span class="nf">read_map_by_frequency</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freq</span><span class="p">):</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">maps</span><span class="p">[</span><span class="n">freq</span><span class="p">])</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_map_file</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="WebSkySZ"><a class="viewcode-back" href="../../api/so_pysm_models.WebSkySZ.html#so_pysm_models.WebSkySZ">[docs]</a><span class="k">class</span> <span class="nc">WebSkySZ</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;0.3&quot;</span><span class="p">,</span> <span class="n">sz_type</span><span class="o">=</span><span class="s2">&quot;kinetic&quot;</span><span class="p">,</span> <span class="n">nside</span><span class="o">=</span><span class="mi">4096</span><span class="p">,</span> <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">):</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span> <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sz_type</span> <span class="o">=</span> <span class="n">sz_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="n">verbose</span>
+
+<div class="viewcode-block" id="WebSkySZ.get_filename"><a class="viewcode-back" href="../../api/so_pysm_models.WebSkySZ.html#so_pysm_models.WebSkySZ.get_filename">[docs]</a>    <span class="k">def</span> <span class="nf">get_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get SZ filenames for a websky version&quot;&quot;&quot;</span>
+
+        <span class="n">version</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">version</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sz_type</span> <span class="o">==</span> <span class="s2">&quot;kinetic&quot;</span><span class="p">:</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;websky/&quot;</span> <span class="o">+</span> <span class="n">version</span> <span class="o">+</span> <span class="s2">&quot;/ksz.fits&quot;</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">sz_type</span> <span class="o">==</span> <span class="s2">&quot;thermal&quot;</span><span class="p">:</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;websky/&quot;</span> <span class="o">+</span> <span class="n">version</span> <span class="o">+</span> <span class="s2">&quot;/tsz.fits&quot;</span>
+
+        <span class="k">return</span> <span class="n">filename</span></div>
+
+<div class="viewcode-block" id="WebSkySZ.get_emission"><a class="viewcode-back" href="../../api/so_pysm_models.WebSkySZ.html#so_pysm_models.WebSkySZ.get_emission">[docs]</a>    <span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span>
+    <span class="k">def</span> <span class="nf">get_emission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freqs</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">:</span>
+
+        <span class="n">nu</span> <span class="o">=</span> <span class="n">freqs</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">)</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">normalize_weights</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">nu</span><span class="o">.</span><span class="n">isscalar</span><span class="p">:</span>
+            <span class="n">nu</span> <span class="o">=</span> <span class="n">nu</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_filename</span><span class="p">())</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">field</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_CMB</span><span class="p">)</span>
+
+        <span class="n">weights</span> <span class="o">=</span> <span class="p">(</span><span class="n">weights</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_CMB</span><span class="p">)</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span>
+            <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">cmb_equivalencies</span><span class="p">(</span><span class="n">nu</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">is_thermal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sz_type</span> <span class="o">==</span> <span class="s2">&quot;thermal&quot;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">get_sz_emission_numba</span><span class="p">(</span><span class="n">nu</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">is_thermal</span><span class="p">)</span>
+            <span class="o">&lt;&lt;</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span>
+        <span class="p">)</span>
+
+        <span class="c1"># the output of out is always 2D, (IQU, npix)</span>
+        <span class="k">return</span> <span class="n">output</span></div></div>
+
+
+<span class="nd">@njit</span><span class="p">(</span><span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_sz_emission_numba</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">is_thermal</span><span class="p">):</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">freqs</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">is_thermal</span><span class="p">:</span>
+            <span class="n">signal</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="n">y2uK_CMB</span><span class="p">(</span><span class="n">freqs</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">signal</span> <span class="o">=</span> <span class="n">m</span>
+        <span class="n">trapz_step_inplace</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">signal</span><span class="p">,</span> <span class="n">output</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">output</span>
+
+
+<div class="viewcode-block" id="WebSkyCMB"><a class="viewcode-back" href="../../api/so_pysm_models.WebSkyCMB.html#so_pysm_models.WebSkyCMB">[docs]</a><span class="k">class</span> <span class="nc">WebSkyCMB</span><span class="p">(</span><span class="n">PrecomputedAlms</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">websky_version</span><span class="p">,</span>
+        <span class="n">nside</span><span class="p">,</span>
+        <span class="n">precompute_output_map</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">seed</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">lensed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_data_from_url</span><span class="p">(</span>
+            <span class="s2">&quot;websky/</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">lensed_alm_seed</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">websky_version</span><span class="p">,</span> <span class="s2">&quot;&quot;</span> <span class="k">if</span> <span class="n">lensed</span> <span class="k">else</span> <span class="s2">&quot;un&quot;</span><span class="p">,</span> <span class="n">seed</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">filename</span><span class="p">,</span>
+            <span class="n">input_units</span><span class="o">=</span><span class="s2">&quot;uK_CMB&quot;</span><span class="p">,</span>
+            <span class="n">input_reference_frequency</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span>
+            <span class="n">precompute_output_map</span><span class="o">=</span><span class="n">precompute_output_map</span><span class="p">,</span>
+            <span class="n">has_polarization</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">,</span>
+        <span class="p">)</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right"> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2019, A. Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 04 Jun 2019. <br/>
+  </p>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+GaussianDust
+============
+
+.. currentmodule:: so_pysm_models
+
+.. autoclass:: GaussianDust
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~GaussianDust.get_emission
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_emission

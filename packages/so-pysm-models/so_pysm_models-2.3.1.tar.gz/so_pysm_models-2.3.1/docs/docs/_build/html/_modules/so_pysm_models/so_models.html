@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>so_pysm_models.so_models &#8212; so_pysm_models v0.4.dev231</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../../index.html"><span id="logotext1">so_pysm_models</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li>
+	<a href="../../index.html">so_pysm_models v0.4.dev231</a>
+	 &#187;
+      </li>
+      <li><a href="../index.html" >Module code</a> &#187;</li>
+      <li><a href="../so_pysm_models.html" accesskey="U">so_pysm_models</a> &#187;</li>
+      
+       
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for so_pysm_models.so_models</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">healpy</span> <span class="k">as</span> <span class="nn">hp</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pysm</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">astropy.utils</span> <span class="k">import</span> <span class="n">data</span>
+<span class="kn">from</span> <span class="nn">pysm</span> <span class="k">import</span> <span class="n">read_map</span>
+<span class="kn">import</span> <span class="nn">pysm.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="k">import</span> <span class="n">get_data_from_url</span>
+
+<div class="viewcode-block" id="get_so_models"><a class="viewcode-back" href="../../api/so_pysm_models.get_so_models.html#so_pysm_models.get_so_models">[docs]</a><span class="k">def</span> <span class="nf">get_so_models</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">nside</span><span class="p">,</span> <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">small_scale</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">small_scale</span><span class="p">:</span>
+        <span class="n">nside_template</span> <span class="o">=</span> <span class="mi">4096</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">nside_template</span> <span class="o">=</span> <span class="mi">512</span>
+
+    <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;SO_d&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;SO_d0&quot;</span><span class="p">:</span>
+            <span class="n">map_mbb_index</span> <span class="o">=</span> <span class="mf">1.53</span>
+            <span class="n">map_mbb_temperature</span> <span class="o">=</span> <span class="mf">19.6</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">K</span>
+            <span class="n">dust_T</span> <span class="o">=</span> <span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;dust_T_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">))</span>
+            <span class="n">freq_ref_I</span> <span class="o">=</span> <span class="mi">545</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;SO_d1&quot;</span><span class="p">:</span>
+            <span class="n">map_mbb_index</span> <span class="o">=</span> <span class="n">get_data_from_url</span><span class="p">(</span>
+                <span class="s2">&quot;variable_spectral_index/beta_dust_ns</span><span class="si">{}</span><span class="s2">_1deg.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">nside_template</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">map_mbb_temperature</span> <span class="o">=</span> <span class="n">get_data_from_url</span><span class="p">(</span>
+                <span class="s2">&quot;variable_spectral_index/temperature_dust_ns</span><span class="si">{}</span><span class="s2">_1deg.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">nside_template</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">dust_T</span> <span class="o">=</span> <span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;dust_T_ns</span><span class="si">{}</span><span class="s2">_353GHz.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">))</span>
+            <span class="n">freq_ref_I</span> <span class="o">=</span> <span class="mi">353</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">pysm</span><span class="o">.</span><span class="n">ModifiedBlackBody</span><span class="p">(</span>
+            <span class="n">dust_T</span><span class="p">,</span>
+            <span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;dust_Q_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">)),</span>
+            <span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;dust_U_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">)),</span>
+            <span class="n">freq_ref_I</span><span class="o">=</span><span class="n">freq_ref_I</span><span class="p">,</span>
+            <span class="n">freq_ref_P</span><span class="o">=</span><span class="mi">353</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+            <span class="n">map_mbb_index</span><span class="o">=</span><span class="n">map_mbb_index</span><span class="p">,</span>
+            <span class="n">map_mbb_temperature</span><span class="o">=</span><span class="n">map_mbb_temperature</span><span class="p">,</span>
+            <span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span>
+            <span class="n">has_polarization</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">unit_I</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span>
+            <span class="n">unit_Q</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span>
+            <span class="n">unit_U</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span>
+            <span class="n">unit_mbb_temperature</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">K</span><span class="p">,</span>
+            <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">key</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;SO_s&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;SO_s0&quot;</span><span class="p">:</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.1</span>
+            <span class="n">synch_T</span> <span class="o">=</span> <span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;synch_T_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">))</span>
+            <span class="n">freq_ref_I</span> <span class="o">=</span> <span class="mi">408</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">MHz</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;SO_s1&quot;</span><span class="p">:</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="n">get_data_from_url</span><span class="p">(</span>
+                <span class="s2">&quot;variable_spectral_index/beta_synch_ns</span><span class="si">{}</span><span class="s2">_1deg.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">nside_template</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">synch_T</span> <span class="o">=</span> <span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;synch_T_ns</span><span class="si">{}</span><span class="s2">_23GHz.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">))</span>
+            <span class="n">freq_ref_I</span> <span class="o">=</span> <span class="mi">23</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">pysm</span><span class="o">.</span><span class="n">PowerLaw</span><span class="p">(</span>
+            <span class="n">map_I</span><span class="o">=</span><span class="n">synch_T</span><span class="p">,</span>
+            <span class="n">map_Q</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;synch_Q_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">)),</span>
+            <span class="n">map_U</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;synch_U_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">)),</span>
+            <span class="n">freq_ref_I</span><span class="o">=</span><span class="n">freq_ref_I</span><span class="p">,</span>
+            <span class="n">freq_ref_P</span><span class="o">=</span><span class="mi">23</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+            <span class="n">map_pl_index</span><span class="o">=</span><span class="n">index</span><span class="p">,</span>
+            <span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span>
+            <span class="n">unit_I</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span>
+            <span class="n">unit_Q</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span>
+            <span class="n">unit_U</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span>
+            <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;SO_f0&quot;</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">pysm</span><span class="o">.</span><span class="n">PowerLaw</span><span class="p">(</span>
+            <span class="n">map_I</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;freefree_T_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">)),</span>
+            <span class="n">freq_ref_I</span><span class="o">=</span><span class="mi">30</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+            <span class="n">map_pl_index</span><span class="o">=-</span><span class="mf">2.14</span><span class="p">,</span>
+            <span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span>
+            <span class="n">unit_I</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span>
+            <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;SO_a0&quot;</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">pysm</span><span class="o">.</span><span class="n">Sky</span><span class="p">(</span>
+            <span class="n">component_objects</span><span class="o">=</span><span class="p">[</span>
+                <span class="n">pysm</span><span class="o">.</span><span class="n">SpDust</span><span class="p">(</span>
+                    <span class="n">map_I</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;ame1_T_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">)),</span>
+                    <span class="n">freq_ref_I</span><span class="o">=</span><span class="mf">22.8</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+                    <span class="n">emissivity</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;ame_emissivity.txt&quot;</span><span class="p">),</span>
+                    <span class="n">freq_peak</span><span class="o">=</span><span class="mf">18.95</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+                    <span class="n">freq_ref_peak</span><span class="o">=</span><span class="mi">30</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+                    <span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span>
+                    <span class="n">unit_I</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span>
+                    <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">,</span>
+                <span class="p">),</span>
+                <span class="n">pysm</span><span class="o">.</span><span class="n">SpDust</span><span class="p">(</span>
+                    <span class="n">map_I</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;ame2_T_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">)),</span>
+                    <span class="n">freq_ref_I</span><span class="o">=</span><span class="mf">41.0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+                    <span class="n">emissivity</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;ame_emissivity.txt&quot;</span><span class="p">),</span>
+                    <span class="n">freq_peak</span><span class="o">=</span><span class="mf">33.35</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+                    <span class="n">freq_ref_peak</span><span class="o">=</span><span class="mi">30</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+                    <span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span>
+                    <span class="n">unit_I</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span>
+                    <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">,</span>
+                <span class="p">),</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;SO_a1&quot;</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">pysm</span><span class="o">.</span><span class="n">Sky</span><span class="p">(</span>
+            <span class="n">component_objects</span><span class="o">=</span><span class="p">[</span>
+                <span class="n">pysm</span><span class="o">.</span><span class="n">SpDustPol</span><span class="p">(</span>
+                    <span class="n">map_I</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;ame1_T_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">)),</span>
+                    <span class="n">freq_ref_I</span><span class="o">=</span><span class="mf">22.8</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+                    <span class="n">emissivity</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;ame_emissivity.txt&quot;</span><span class="p">),</span>
+                    <span class="n">freq_peak</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span>
+                        <span class="s2">&quot;variable_spectral_index/ame_nu0_peak_ns</span><span class="si">{}</span><span class="s2">_1deg.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                            <span class="n">nside_template</span>
+                        <span class="p">)</span>
+                    <span class="p">),</span>
+                    <span class="n">freq_ref_peak</span><span class="o">=</span><span class="mi">30</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+                    <span class="n">pol_frac</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span>
+                    <span class="n">angle_Q</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span>
+                        <span class="s2">&quot;dust_Q_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">)</span>
+                    <span class="p">),</span>
+                    <span class="n">angle_U</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span>
+                        <span class="s2">&quot;dust_U_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">)</span>
+                    <span class="p">),</span>
+                    <span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span>
+                    <span class="n">unit_I</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span>
+                    <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">,</span>
+                <span class="p">),</span>
+                <span class="n">pysm</span><span class="o">.</span><span class="n">SpDustPol</span><span class="p">(</span>
+                    <span class="n">map_I</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;ame2_T_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">)),</span>
+                    <span class="n">freq_ref_I</span><span class="o">=</span><span class="mf">41.0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+                    <span class="n">emissivity</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;ame_emissivity.txt&quot;</span><span class="p">),</span>
+                    <span class="n">freq_peak</span><span class="o">=</span><span class="mf">33.35</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+                    <span class="n">freq_ref_peak</span><span class="o">=</span><span class="mi">30</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+                    <span class="n">pol_frac</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span>
+                    <span class="n">angle_Q</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span>
+                        <span class="s2">&quot;dust_Q_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">)</span>
+                    <span class="p">),</span>
+                    <span class="n">angle_U</span><span class="o">=</span><span class="n">get_data_from_url</span><span class="p">(</span>
+                        <span class="s2">&quot;dust_U_ns</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nside_template</span><span class="p">)</span>
+                    <span class="p">),</span>
+                    <span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span>
+                    <span class="n">unit_I</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span>
+                    <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">,</span>
+                <span class="p">),</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">model</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right"> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2019, A. Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 04 Jun 2019. <br/>
+  </p>
+</footer>
+  </body>
+</html>

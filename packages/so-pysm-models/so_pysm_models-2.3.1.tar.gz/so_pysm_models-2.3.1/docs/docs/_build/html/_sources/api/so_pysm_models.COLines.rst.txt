@@ -1,0 +1,21 @@
+COLines
+=======
+
+.. currentmodule:: so_pysm_models
+
+.. autoclass:: COLines
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~COLines.signal
+      ~COLines.simulate_high_galactic_latitude_CO
+      ~COLines.simulate_polarized_emission
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: signal
+   .. automethod:: simulate_high_galactic_latitude_CO
+   .. automethod:: simulate_polarized_emission

@@ -1,0 +1,17 @@
+GaussianSynchrotron
+===================
+
+.. currentmodule:: so_pysm_models
+
+.. autoclass:: GaussianSynchrotron
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~GaussianSynchrotron.get_emission
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_emission
