@@ -1,0 +1,13 @@
+hp_money/__init__.py,sha256=4YlUOjlNKeVd0_6jjBLHrFWF7dvq72crLBlIB3zPDL8,3458
+hp_money/amount/__init__.py,sha256=U8-GnqzQb2Ng281GCPMDplsrgowpjOvSkIOuTv8fK7I,2835
+hp_money/currency/__init__.py,sha256=LHAy6HWmLxeSmngdkzL00xBsX8XDJGeaQybEPfiLRTU,1051
+hp_money/fee_rate/__init__.py,sha256=0eUeQhRU-q2fF2vGL2LIkdSwaRZeinJLlqdThtKxWYk,1487
+hp_money/forex_rate/__init__.py,sha256=PIwjRW62umeRuZvOdL2glGc0Zl1226Q_pR6127kqyF0,1053
+tests/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+tests/test_fee_rate.py,sha256=hGdRVTT4ExacM8BDzb4it8I6K8reSDempQLnwat_gXc,599
+tests/test_forex_rate.py,sha256=1E2RZSY9hC60dKuEdA0vOwB4oIZMdcHPjyBuT90OcX0,1415
+tests/test_money.py,sha256=76i_5rl0wz_hMB6ci19HYvIZ82meXMhUn6lrIqKLYCQ,2229
+hp_money-1.1.0.dist-info/METADATA,sha256=n9j12Thym9Sgc8iybobIg1Dr8huu4zhcrJvLKWEULJQ,507
+hp_money-1.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+hp_money-1.1.0.dist-info/top_level.txt,sha256=nfRjJ4hX8RusjWvBVK-Ml62rEhWzDzrA5UdrAH4yIVg,15
+hp_money-1.1.0.dist-info/RECORD,,
