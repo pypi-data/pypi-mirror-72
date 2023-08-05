@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: bookhack-ikoblyk
+Version: 0.0.5
+Summary: Book downloading tool
+Home-page: https://github.com/ikoblyk/IMAGES_TO_DVU_BOOK.git
+Author: Ivan Koblyk
+Author-email: ivankob.16@gmail.com
+License: UNKNOWN
+Description: # Bookhack
+        
+        Tool for automated downloading of books from 'Culture of Ukraine' library.
+        
+        
+        ## Installation
+        
+        Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+        
+        ```bash
+        pip install 
+        ```
+        
+        ## Usage
+        
+        ```python
+        import foobar
+        
+        foobar.pluralize('word') # returns 'words'
+        foobar.pluralize('goose') # returns 'geese'
+        foobar.singularize('phenomena') # returns 'phenomenon'
+        ```
+        
+        ## Contributing
+        Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+        
+        Please make sure to update tests as appropriate.
+        
+        ## License
+        [MIT](https://choosealicense.com/licenses/mit/)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
