@@ -1,0 +1,10 @@
+tensorflow==2.0.1
+numpy==1.17.0
+pandas
+sklearn
+
+[cpu]
+tensorflow==2.0.0
+
+[gpu]
+tensorflow-gpu==2.0.0
