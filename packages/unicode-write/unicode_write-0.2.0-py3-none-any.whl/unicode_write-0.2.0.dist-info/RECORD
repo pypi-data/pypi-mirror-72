@@ -1,0 +1,13 @@
+unicode_write/__init__.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+unicode_write/client.py,sha256=ibQC5RqWeKbDqFp73YEsQhghaJkPbjarTwol2zI6e30,1093
+unicode_write/driver.py,sha256=mgCIkjqWUT4SDfNWo_nQGS89NajuuYiYmGoRz_uCrZs,1039
+unicode_write/serve.py,sha256=jIeSKF3rdkSuYX1U-eAbs3bX78mKdvdKb3aDIUUmzPE,750
+unicode_write/utils.py,sha256=ZDHMK7jbEikNyAAkr6shg-5oCRYsmv-sxDencuKk7qM,2048
+unicode_write/data/__init__.py,sha256=0sb-ae_OhqX7BCeZSwNNJcWCgBuFFpEh00QyjRsAits,66
+unicode_write/data/emoji.json,sha256=YrMbTzkPumDiOSoVL-Grmr4UV-msbgpNo-0Yi3jt6bE,678855
+unicode_write-0.2.0.dist-info/LICENSE.txt,sha256=2SodeEmpbOh3XbpfFenAnNSqncHVc9KdFcgHLcwcL4U,1052
+unicode_write-0.2.0.dist-info/METADATA,sha256=QmqvDXln9YyDVRwaQpxUEmIN_MvH-W3zqqEs6TfJefs,1581
+unicode_write-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+unicode_write-0.2.0.dist-info/entry_points.txt,sha256=SL5E_LmkgHYYUlrCms_MRi9zETkgU_nvng5rWmKAsGY,144
+unicode_write-0.2.0.dist-info/top_level.txt,sha256=eTSVsbB9ArNr3GWeJAh4eMsfsdQjCNsdZtPzPpT59Eo,14
+unicode_write-0.2.0.dist-info/RECORD,,

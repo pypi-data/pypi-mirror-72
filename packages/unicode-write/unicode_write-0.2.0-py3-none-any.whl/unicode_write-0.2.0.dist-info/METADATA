@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: unicode-write
+Version: 0.2.0
+Summary: Unicode Write
+Home-page: https://github.com/blester125/unicode-write
+Author: blester125
+Author-email: blester125@gmail.com
+License: MIT
+Download-URL: https://github.com/blester125/unicode-write/archive/0.2.0.tar.gz
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: prompt-toolkit
+Requires-Dist: file-or-name
+Requires-Dist: pyperclip
+Requires-Dist: string-distance
+Requires-Dist: inverted-index
+Provides-Extra: remote
+Requires-Dist: flask ; extra == 'remote'
+Requires-Dist: requests ; extra == 'remote'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# Unicode Write
+
+[![PyPi Version](https://img.shields.io/pypi/v/unicode-write)](https://pypi.org/project/unicode-write/) [![Actions Status](https://github.com/blester125/unicode-write/workflows/Unit%20Test/badge.svg)](https://github.com/blester125/unicode-write/actions) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+A small utility that lets you look up a unicode symbol by name. It will then print it and copy it to your clipboard so you can paste it different places.
+
+

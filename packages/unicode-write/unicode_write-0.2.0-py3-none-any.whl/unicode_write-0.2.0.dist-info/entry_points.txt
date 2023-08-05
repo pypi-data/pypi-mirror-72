@@ -1,0 +1,5 @@
+[console_scripts]
+ucl = unicode_write.driver:main
+unicode-lookup = unicode_write.driver:main
+unicode-lookup-remote = unicode_write.client:main
+
