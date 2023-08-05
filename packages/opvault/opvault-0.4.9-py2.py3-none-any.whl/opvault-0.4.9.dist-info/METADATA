@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: opvault
+Version: 0.4.9
+Summary: Python library to access 1Password OPVault stores
+Home-page: https://github.com/OblivionCloudControl/opvault
+Author: Steyn Huizinga
+Author-email: steyn@oblcc.com
+License: GPLv3
+Keywords: opvault
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Topic :: Security :: Cryptography
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides: opvault
+Requires-Dist: certifi (==2020.6.20)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: idna (==2.9)
+Requires-Dist: Naked (==0.1.31)
+Requires-Dist: pycryptodome (==3.9.7)
+Requires-Dist: PyYAML (==5.3.1)
+Requires-Dist: requests (==2.24.0)
+Requires-Dist: shellescape (==3.8.1)
+Requires-Dist: urllib3 (==1.25.9)
+
+Python library to access 1Password OPVault stores.
+For more info see https://github.com/OblivionCloudControl/opvault
+
+
