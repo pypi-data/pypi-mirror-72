@@ -1,0 +1,16 @@
+setup.py
+arango_crud/__init__.py
+arango_crud/auths.py
+arango_crud/back_off_strategies.py
+arango_crud/clusters.py
+arango_crud/collection.py
+arango_crud/config.py
+arango_crud/database.py
+arango_crud/document.py
+arango_crud/env_config.py
+arango_crud/helper.py
+arango_crud.egg-info/PKG-INFO
+arango_crud.egg-info/SOURCES.txt
+arango_crud.egg-info/dependency_links.txt
+arango_crud.egg-info/requires.txt
+arango_crud.egg-info/top_level.txt
