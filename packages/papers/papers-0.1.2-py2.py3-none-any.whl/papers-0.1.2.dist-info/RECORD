@@ -1,0 +1,17 @@
+papers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+papers/__version__.py,sha256=iWaTzUDhrkZYEItY9U-T4wCdv2ApI0TkDZ-cFOgTJSk,63
+papers/cli.py,sha256=DT6YHSrIZ3yPnxyIsiXF1pYRKjTblm7Mk9csgjqkqOs,4447
+papers/papers.py,sha256=tjo6ZG2BU53NrEaGYyFRdDV1ahzhE59y2eBkdpm8xXs,8082
+papers/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+papers/utils/argparse.py,sha256=VHy9HcThqruoJWcEIBm0vlEOKnCO9lCVSYSSe2U9Nac,666
+papers/utils/arxiv.py,sha256=bU8ELgw5qNf6ei6ezH5-7zz_xZq3aZr9PIqG768yTbs,1579
+papers/utils/bibtex.py,sha256=WEoexIafBSs6D7SepdhkXqB0Jqq5-3HO5VfvM-tRWlc,3664
+papers/utils/debug.py,sha256=wAhCr2y0a1RaPLguTL1yJAWNA-dtIk1lQvklTSX-TO0,480
+papers/utils/formatters.py,sha256=CxaNXUACQSy3PoTfJTLR0YbhZug4EJOEvaRri-T6Gds,4045
+papers/utils/imagemagick.py,sha256=eo4jLV-077JpmrLqI7yBl5u35HyFHQ0al9c_WmeuXnk,465
+papers-0.1.2.dist-info/LICENSE,sha256=wI6MNurVivLVF4GXgAaF-3asjsdxf4iAVmT7j_qHjec,1060
+papers-0.1.2.dist-info/METADATA,sha256=EF3ToXJg8FA8TyYvQILRUHnWhHpPysX9WdXblktzx78,2454
+papers-0.1.2.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+papers-0.1.2.dist-info/entry_points.txt,sha256=zZmoMsftjX2tzVpPDjHcve6_M1XtN1ZaY-GaAWxBvR0,95
+papers-0.1.2.dist-info/top_level.txt,sha256=sLdcLzjapCbtCY-yXhtEHZEniJB7I35rxRLLLURc8mo,7
+papers-0.1.2.dist-info/RECORD,,
