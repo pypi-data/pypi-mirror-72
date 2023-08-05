@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: statsservice
+Version: 0.1.1
+Summary: Stats Service for MONARC.
+Home-page: https://github.com/monarc-project/stats-service
+License: AGPL-3.0-or-later
+Keywords: monarc,security,stats,flask,api
+Author: Cédric Bonhomme
+Author-email: cedric@cedricbonhomme.org
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security
+Requires-Dist: Flask (>=1.1.2,<2.0.0)
+Requires-Dist: Flask-SQLAlchemy (>=2.4.3,<3.0.0)
+Requires-Dist: flask_restx (>=0.2.0,<0.3.0)
+Requires-Dist: jsonschema (>=3.2.0,<4.0.0)
+Requires-Dist: pandas (>=1.0.4,<2.0.0)
+Requires-Dist: psycopg2-binary (>=2.8.5,<3.0.0)
+Requires-Dist: requests (>=2.23.0,<3.0.0)
+Project-URL: Documentation, https://monarc-stats-service.readthedocs.io
+Project-URL: Repository, https://github.com/monarc-project/stats-service

@@ -1,0 +1,401 @@
+{
+    "swagger": "2.0",
+    "basePath": "/api/v1",
+    "paths": {
+        "/api/v1/organization/": {
+            "post": {
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Orgs"
+                        }
+                    }
+                },
+                "summary": "Create a new organization",
+                "operationId": "create_organization",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "required": true,
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/Orgs"
+                        }
+                    },
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "organization"
+                ]
+            }
+        },
+        "/api/v1/stats/": {
+            "get": {
+                "responses": {
+                    "401": {
+                        "description": "Authorization needed"
+                    },
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/StatsList"
+                            }
+                        }
+                    }
+                },
+                "summary": "List all stats",
+                "operationId": "list_stats",
+                "parameters": [
+                    {
+                        "name": "anr",
+                        "in": "query",
+                        "type": "string",
+                        "description": "The ANR UUID related to this stats."
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "type": "string",
+                        "description": "Type of the stats (risk, vulnerability, threat, cartography or compliance)"
+                    },
+                    {
+                        "name": "day",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Number of the day of the year."
+                    },
+                    {
+                        "name": "week",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Week of the stats"
+                    },
+                    {
+                        "name": "month",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Month of the stats. From 1 to 12."
+                    },
+                    {
+                        "name": "quarter",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Number of quarter of a year. Possible values [1,2,3,4]"
+                    },
+                    {
+                        "name": "year",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Year of the stats. In full format e.g. 2020."
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page number",
+                        "default": 1
+                    },
+                    {
+                        "name": "per_page",
+                        "in": "query",
+                        "type": "integer",
+                        "description": "Page size",
+                        "default": 10
+                    },
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "stats"
+                ]
+            },
+            "post": {
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Stats"
+                        }
+                    }
+                },
+                "summary": "Create a new stats",
+                "operationId": "create_stats",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "required": true,
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/Stats"
+                        }
+                    },
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "stats"
+                ]
+            }
+        },
+        "/api/v1/stats/{uuid}": {
+            "parameters": [
+                {
+                    "in": "path",
+                    "description": "The stats identifier",
+                    "name": "uuid",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "responses": {
+                    "404": {
+                        "description": "Stats not found"
+                    },
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Stats"
+                        }
+                    }
+                },
+                "summary": "Fetch a given resource",
+                "operationId": "get_stats",
+                "parameters": [
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "stats"
+                ]
+            },
+            "put": {
+                "responses": {
+                    "404": {
+                        "description": "Stats not found"
+                    },
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Stats"
+                        }
+                    }
+                },
+                "summary": "Update a stats given its identifier",
+                "operationId": "put_stats_item",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "required": true,
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/Stats"
+                        }
+                    },
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "stats"
+                ]
+            },
+            "delete": {
+                "responses": {
+                    "404": {
+                        "description": "Stats not found"
+                    },
+                    "204": {
+                        "description": "Stats deleted"
+                    }
+                },
+                "summary": "Delete a stats given its identifier",
+                "operationId": "delete_stats",
+                "tags": [
+                    "stats"
+                ]
+            }
+        }
+    },
+    "info": {
+        "title": "MONARC Stats service - API v1",
+        "version": "1.0",
+        "description": "API v1 of the MONARC Stats service.",
+        "license": {
+            "name": "GNU Affero General Public License version 3",
+            "url": "https://www.gnu.org/licenses/agpl-3.0.html"
+        }
+    },
+    "produces": [
+        "application/json"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "securityDefinitions": {
+        "apikey": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "X-API-KEY"
+        }
+    },
+    "security": [
+        {
+            "apikey": []
+        }
+    ],
+    "tags": [
+        {
+            "name": "organization",
+            "description": "organization related operations"
+        },
+        {
+            "name": "stats",
+            "description": "stats related operations"
+        }
+    ],
+    "definitions": {
+        "Orgs": {
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The organization name."
+                },
+                "token": {
+                    "type": "string",
+                    "description": "The token of the organization.",
+                    "readOnly": true
+                }
+            },
+            "type": "object"
+        },
+        "Stats": {
+            "properties": {
+                "uuid": {
+                    "type": "string",
+                    "description": "The stats unique identifier",
+                    "readOnly": true
+                },
+                "anr": {
+                    "type": "string",
+                    "description": "The ANR UUID related to this stats."
+                },
+                "type": {
+                    "type": "string",
+                    "description": "The type of this stats (risk, vulnerability, threat, cartography or compliance)."
+                },
+                "day": {
+                    "type": "integer",
+                    "description": "Number of the day of the year."
+                },
+                "week": {
+                    "type": "integer",
+                    "description": "Week of the stats."
+                },
+                "month": {
+                    "type": "integer",
+                    "description": "Month of the stats. From 1 to 12."
+                },
+                "quarter": {
+                    "type": "integer",
+                    "description": "Number of quarter of a year. Possible values [1,2,3,4]"
+                },
+                "year": {
+                    "type": "integer",
+                    "description": "Year of the stats. In full format e.g. 2020."
+                },
+                "data": {
+                    "type": "object",
+                    "description": "The stats as a dynamic JSON object."
+                },
+                "created_at": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Created time of the stats."
+                },
+                "updated_at": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Updated time of the stats."
+                }
+            },
+            "type": "object"
+        },
+        "StatsList": {
+            "properties": {
+                "metadata": {
+                    "description": "Metada related to the result.",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/metadata"
+                        }
+                    ]
+                },
+                "data": {
+                    "type": "array",
+                    "description": "List of stats objects.",
+                    "items": {
+                        "$ref": "#/definitions/Stats"
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "metadata": {
+            "properties": {
+                "count": {
+                    "type": "string",
+                    "description": "Total number of the items of the data.",
+                    "readOnly": true
+                },
+                "offset": {
+                    "type": "string",
+                    "description": "Position of the first element of the data from the total data amount.",
+                    "readOnly": true
+                },
+                "limit": {
+                    "type": "string",
+                    "description": "Requested limit data.",
+                    "readOnly": true
+                }
+            },
+            "type": "object"
+        }
+    },
+    "responses": {
+        "ParseError": {
+            "description": "When a mask can't be parsed"
+        },
+        "MaskError": {
+            "description": "When any error occurs on mask"
+        }
+    }
+}
