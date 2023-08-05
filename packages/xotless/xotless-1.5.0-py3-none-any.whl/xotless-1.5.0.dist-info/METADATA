@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: xotless
+Version: 1.5.0
+Summary: Collection of small utilities that have not yet being promoted to xotl.tools.
+Home-page: https://gitlab.merchise.org/merchise-2018/xotless
+Author: Merchise Autrement [~º/~]
+Author-email: info@merchise.org
+Maintainer: Manuel Vázquez Acosta
+License: GPLv3
+Project-URL: tracker, https://gitlab.merchise.org/merchise-2018/xotless
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: xoutil (<2.2,>=2.1.8)
+Requires-Dist: immutables
+Requires-Dist: typing-extensions
+Requires-Dist: dataclasses ; python_version < "3.7"
+Provides-Extra: test
+Requires-Dist: hypothesis (>=4.51.1) ; extra == 'test'
+
+UNKNOWN
+
+
