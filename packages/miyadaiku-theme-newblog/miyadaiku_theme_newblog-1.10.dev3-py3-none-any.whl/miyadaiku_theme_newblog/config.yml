@@ -1,0 +1,18 @@
+
+pygments_style: default
+
+og_description: default page desctiption here
+
+copyright: Copyright © 20xx copyright holder
+
+indexpage_max_articles: 30
+
+title_fallback: header
+
+themes:
+  - miyadaiku.themes.pygments
+  - miyadaiku.themes.docutils_html5
+  - miyadaiku.themes.sample.blog
+  - miyadaiku_theme_bootstrap4
+  - miyadaiku_theme_fontawesome
+  - miyadaiku.themes.ipynb

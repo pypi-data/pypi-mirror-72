@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block jumbotron %}
+
+  {% if page.index_title %}
+    <h1 class="sitetitle"> {{ page.index_title }} </h1>
+  {% endif %}
+
+  {{ super() }}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container index_container">
+  {% block topblock %}
+  <div class="topblock">
+    {% block topblock_site_title  %}
+    <h1>{{ page.site_title }}</h1>
+    {% endblock topblock_site_title  %}
+
+    <div>
+      {% block topblock_tags %}
+
+        {% set clsname= 'current_tag tag_index' if not group_value else "tag_index" %}
+        {{ page.link_to('/index.yml', attrs={'class':clsname}, text="ALL") }}
+        {% for tag in contents.tags %}
+          {% set clsname= 'current_tag tag_index' if tag == group_value else "tag_index"%}
+          {{ page.link_to('/index_tags.yml', group_value=tag, text=tag, attrs={'class':clsname}) }}
+        {% endfor %}
+
+      {% endblock topblock_tags %}
+    </div>
+  </div>
+  {% endblock topblock %}
+</div>
+
+<div class="container articleindex_container">
+{% block articleindex %}
+  <div class="articleindex">
+  {% for article in articles %}
+
+    {% block articlebox scoped %}
+    <div class="articlebox" onclick="
+        (function (ev) {
+            window.location = '{{ page.path_to(article) }}';
+            ev.preventDefault();
+         })()">
+      <a class="articlebox_ref" href="{{ page.path_to(article) }}">
+        <div class="article_summary">
+          {% if article.get_config('title', '') %}
+              <div class="entry-title article_summary_title">{{article.title}}</div>
+          {% endif %}
+          <div class='article_summary_body'>{{ article.get_abstract(256)}}</div>
+        </div>
+      </a>
+    </div>
+    {% endblock articlebox %}
+
+  {% endfor %}
+  </div>
+{% endblock articleindex %}
+</div>
+
+<div class="container">
+{% block pagination %}
+  {% import "blog_macros.html" as blog_macros %}
+  {{ blog_macros.index_pagination(page, group_value, num_pages, cur_page, is_last) }}
+{% endblock pagination %}
+</div>
+
+
+{% endblock content %}
