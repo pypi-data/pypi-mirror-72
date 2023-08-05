@@ -1,0 +1,10 @@
+migrations_git_conflicts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+migrations_git_conflicts/apps.py,sha256=nJoyr8zX1F_DdvPNm_OPECTJIa_lOhroAlVnyzInWR4,121
+migrations_git_conflicts/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+migrations_git_conflicts/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+migrations_git_conflicts/management/commands/makemigrations.py,sha256=-Hg1wThopVo8-0iRthmiydPbcmQmd8wxQwgsKoQ0tGs,2819
+django_migrations_git_conflicts-1.0.dist-info/LICENSE,sha256=QblGOG8xSXxd3o2Bj7pfRxBzoupxdqGp-ntg2FlJmk8,1063
+django_migrations_git_conflicts-1.0.dist-info/METADATA,sha256=Itfj1Kq6vI1-7Anfyu1f077iezpQbQuYd2hPd415F5s,2343
+django_migrations_git_conflicts-1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_migrations_git_conflicts-1.0.dist-info/top_level.txt,sha256=SxV_lk6urKKTNfC9dpQtjmjbRUZB6DkHDJEWpKeBn6A,25
+django_migrations_git_conflicts-1.0.dist-info/RECORD,,
