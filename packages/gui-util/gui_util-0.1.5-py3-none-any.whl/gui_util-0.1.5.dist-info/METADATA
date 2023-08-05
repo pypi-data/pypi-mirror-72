@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: gui-util
+Version: 0.1.5
+Summary: 
+Author: Eyal Levin
+Author-email: eyalev@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: dataclasses (>=0.7,<0.8); python_version >= "3.6" and python_version < "3.7"
+Requires-Dist: ewmh (>=0.1.6,<0.2.0)
+Requires-Dist: python-xlib (>=0.27,<0.28)
+Requires-Dist: shell-util (>=0.1.3,<0.2.0)
