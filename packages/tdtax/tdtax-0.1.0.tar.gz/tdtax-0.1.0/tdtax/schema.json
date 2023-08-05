@@ -1,0 +1,70 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://json-schema.org/draft-07/schema#",
+    "title": "Schema for Astronomical Time-Domain Source Taxonomy",
+    "definitions": {
+        "node": {
+            "oneOf": [{
+                "$comment": "Link to another YAML file",
+                "type": "object",
+                "required": ["ref"],
+                "additionalProperties": false,
+                "ref": {
+                        "type": "string",
+                        "format": "uri"
+                },
+                "comments": {
+                        "type": "string"
+                    }
+                },
+                {
+                "type": "object",
+                "required": ["class"],
+                "additionalProperties": false,
+                "properties": {
+                    "class": {
+                        "type": "string"
+                    },
+                    "comments": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "default": [],
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "uniqueItems": true
+                    },
+                    "links": {
+                        "$comment": "Papers or websites URLs describing this class of Source",
+                        "default": [],
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "uniqueItems": true
+                    },
+                    "other names": {
+                        "type": "array",
+                        "items": {
+                                "type": "string"
+                        },
+                        "uniqueItems": true
+                    },
+                    "subclasses": {
+                        "default": [],
+                        "type": "array",
+                        "patternProperties": {
+                            "^.*$": {
+                                "$ref": "#/definitions/node"
+                            }
+                        }
+                    }
+                }
+            }]
+        }
+    },
+    "allOf": [{"$ref": "#/definitions/node"}]
+}
