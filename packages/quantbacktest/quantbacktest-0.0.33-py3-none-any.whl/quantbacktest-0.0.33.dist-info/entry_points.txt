@@ -1,0 +1,3 @@
+[console_scripts]
+FullBacktest = quantbacktest.__main__:main
+
