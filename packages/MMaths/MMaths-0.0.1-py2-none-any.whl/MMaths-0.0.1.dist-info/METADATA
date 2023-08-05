@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: MMaths
+Version: 0.0.1
+Summary: A small mathematics library
+Home-page: https://github.com/kanishksh4rma/Python/MMaths
+Author: Kanishk Sharma
+Author-email: kanishksharma701@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+It is the tesing file with two sample classes named
+class Message
+    methods msg1()
+class Show
+    methods add(a,b), sub(a,b)
+
+
