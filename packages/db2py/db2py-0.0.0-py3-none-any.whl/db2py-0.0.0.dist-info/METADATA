@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: db2py
+Version: 0.0.0
+Summary: A Python interface to create and edit databases, and to hash passwords. 
+Home-page: https://pypi.org/project/db2py
+Author: Sandra Mattar
+Author-email: sandrawmattar1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+
+Usage: <br />
+<pre>
+    >>> import db2py
+    >>> db = db2py.createdb("mydatabase", {"user1": "password1"})
+    >>> db = updatedb(db, {"user2": "PWD2"})
+    >>> for username, pwd in getdb(db):
+    ...    db = updatedb(db, {username: hashpwd(pwd)})
+    >>> savedb(*getdb(db), "database1.db")
+    >>> db = opendb("database1.db")
+    >>> deldb("database1.db")
+</pre>
+
+
