@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: xyztest
+Version: 2.0.0
+Summary: A small example package
+Home-page: https://github.com/ma-sadeghi/xyztest
+Author: Amin Sadeghi
+Author-email: amin@sadeghi.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Test GitHub Actions
+This repo is for trying out different features of GitHub Actions...
+
+
