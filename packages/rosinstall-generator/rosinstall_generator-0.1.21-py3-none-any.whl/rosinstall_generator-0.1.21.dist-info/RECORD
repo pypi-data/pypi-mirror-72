@@ -1,0 +1,11 @@
+rosinstall_generator/__init__.py,sha256=hr4GnDYxrtZ5nsKafcz1DSiPxkHKOPvPWGD0DhUI3hM,1742
+rosinstall_generator/cli.py,sha256=Rfs9Ww-gLNAhWZgqsRJKHakfz7Lak0FHzvOgXDAKoRQ,10370
+rosinstall_generator/distro.py,sha256=yqgmq_ZzlrrnaMD3zqgAij-70oM3l0JWP7ioH_VUFl0,7502
+rosinstall_generator/dry_distro.py,sha256=4TqGk3iS-whFdNARoCD5rzK5ZdmnLqF5GAXcgYDG4gM,5222
+rosinstall_generator/generator.py,sha256=TQFFL-yC8RoeuhprOO2D1KbCo5bvCc59HxQxPQnjcTk,23876
+rosinstall_generator-0.1.21.dist-info/LICENSE.txt,sha256=Ba1ZzV-wgBXEtB_PlcYR0yBDNVz3ddTE59T2mwx3s6c,1585
+rosinstall_generator-0.1.21.dist-info/METADATA,sha256=7Hos4XHp3LZUdQfcR4U7Czrg7jZvJ63mTTYQobxnBc4,667
+rosinstall_generator-0.1.21.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+rosinstall_generator-0.1.21.dist-info/entry_points.txt,sha256=iQG4pDkyMuByEg_HOOlCltDZAI-VPT5Z9azy2KbC-us,72
+rosinstall_generator-0.1.21.dist-info/top_level.txt,sha256=DRz9pOwmwzfs6qnkganYQralPtdkMm3Z7qp8VJ02vkE,21
+rosinstall_generator-0.1.21.dist-info/RECORD,,
