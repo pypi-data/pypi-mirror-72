@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: plaid-stubs
+Version: 0.2
+Summary: Plaid stubs
+Home-page: https://github.com/monarchmoney/plaid-stubs
+License: MIT License
+Description: # Experimental Plaid type stubs
+        
+        This package contains type stubs to provide more precise
+        static types and type inference for plaid-python, the official
+        python client library for the Plaid API.
+        
+        ## Installation
+        
+        ```
+        pip install plaid-stubs
+        ```
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
