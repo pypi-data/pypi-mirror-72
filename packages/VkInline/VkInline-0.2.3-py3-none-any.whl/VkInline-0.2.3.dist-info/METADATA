@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: VkInline
+Version: 0.2.3
+Summary: A tool making it easy to use Vulkan for Python
+Home-page: https://github.com/fynv/VkInline
+Author: Fei Yang
+Author-email: hyangfeih@gmail.com
+License: Anti 996
+Keywords: GPU Vulkan Python
+Platform: UNKNOWN
+Requires-Dist: cffi
+Requires-Dist: numpy
+Requires-Dist: pyglm
+
+UNKNOWN
+
+
