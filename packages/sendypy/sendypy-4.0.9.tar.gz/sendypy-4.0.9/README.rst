@@ -1,0 +1,126 @@
+.. |nlshield| image:: https://img.shields.io/badge/100%25-Netlandish-blue.svg?style=square-flat
+              :target: http://www.netlandish.com
+
+==============================
+sendypy |nlshield|
+==============================
+:Info: Simple module to interface with the Sendy API (https://sendy.co/api)
+:Version: 4.0.9
+:Author: Peter Sanchez (http://www.petersanchez.com) - (http://www.netlandish.com)
+
+Dependencies
+============
+
+* It was written for Python 3.6+
+* Depends on the requests module
+
+**NOTE:**
+
+* **Version 4.0.5** we're changing the version to match the version of Sendy that this is most recently updated for. When Sendy introduces changes that require a lib update, we will update the version to match the Sendy version.
+
+* **Version 0.2** now requires ``api_key`` varaible for all API calls. This is a required change to the functionality of Sendy as of version 4.0.4. This is a potentially breaking code change. Please update your code to always provide the API key before upgrading to sendypy v0.2.
+
+* **Version 0.1.3b** adds the new "title" variable to the ``create_campaign`` API call. It effects the default ordering of variables in the call. If you're upgrading from a previous version please ensure that you account for the new ordering of variables. This new variable was added in Sendy v2.1.2.6
+
+Installation
+============
+
+PIP::
+
+    pip install sendypy
+
+Basic Manual Install::
+
+    $ python setup.py build
+    $ sudo python setup.py install
+
+Alternative Install (Manually):
+
+Place sendy directory in your Python path. Either in your Python installs site-packages directory or set your $PYTHONPATH environment variable to include a directory where the impersonate directory lives.
+
+
+Use
+===
+All the variables and response values are described in the `Sendy API docs <https://sendy.co/api>`_
+
+Usage is simple ::
+
+   from sendy.api import SendyAPI
+   api = SendyAPI(
+        host='https://your-sendy-install.com/sendy/',
+        api_key='YOUR_API_KEY',
+   )
+
+You can also provide the optional ``debug`` variable (defaults to False).
+This will print debug into to stdout when sending a request to your Sendy
+install.
+
+**Subscribe** ::
+
+    api.subscribe('list_id_here', 'email@address.com', 'optional first name', custom_field_1='value', custom_field_2='value', ...)
+
+*Optional fields*
+
+- `country`: User's 2 letter country code.
+- `ipaddress`: User's IP address.
+- `referrer`: The URL where the user signed up from.
+- `gdpr`: If you're signing up EU users in a GDPR compliant manner.
+- `hp`: Include this 'honeypot' field to prevent spambots.
+
+::
+
+    data = {"gdpr": True, "ipaddress": "127.0.0.1", "country": "US"}
+
+    api.subscribe(list_id, email, **data)
+
+**Unsubscribe** ::
+
+    api.unsubscribe('list_id_here', 'email@address.com')
+
+**Delete** ::
+
+    api.delete('list_id_here', 'email@address.com')
+
+**Subscription Status** ::
+
+    api.subscription_status('list_id_here', 'email@address.com')
+
+**Subscriber Count** ::
+
+    api.subscriber_count('list_id_here')
+
+**Create Campaign** ::
+
+    api.create_campaign(
+        from_name='Your Name',
+        from_email='Your Sender Email',
+        reply_to='Your Reply-to Email',
+        title='Your Email Title',
+        subject='Your Email Subject',
+        plain_text='Plain Text Email Body',
+        html_text='HTML Email Body',
+        list_ids='list_id_1,list_id_2,list_id_3',
+        brand_id='your brand id',
+        query_string='Your query string',
+        send_campaign=0, #default's to 0, use 1 to send email right away
+        segment_ids='segment_id_1,segment_id_2',
+        exclude_list_ids='list_id_1,list_id_2,list_id_3',
+        exclude_segments_ids='segment_id_1,segment_id_2',
+    )
+
+
+Copyright & Warranty
+====================
+All documentation, libraries, and sample code are
+Copyright 2016 Netlandish Inc., Peter Sanchez <petersanchez@gmail.com>. The library
+and sample code are made available to you under the terms of the BSD license
+which is contained in the included file, BSD-LICENSE.
+
+
+==================
+Commercial Support
+==================
+
+This software, and lots of other software like it, has been built in support of many of
+Netlandish's own projects, and the projects of our clients. We would love to help you
+on your next project so get in touch by dropping us a note at hello@netlandish.com.
