@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: lmu
+Version: 0.1.0
+Summary: Legendre Memory Units
+Home-page: https://www.nengo.ai/lmu
+Author: Applied Brain Research
+Author-email: info@appliedbrainresearch.com
+License: Free for non-commercial use
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Nengo
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Free for non-commercial use
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python 
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering 
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.5
+Requires-Dist: nengolib (>=0.5.1)
+Requires-Dist: tensorflow (>=2.0.0)
+Provides-Extra: all
+Requires-Dist: matplotlib (>=3.0.2) ; extra == 'all'
+Requires-Dist: IPython (>=7.2.0) ; extra == 'all'
+Requires-Dist: notebook (>=5.7.4) ; extra == 'all'
+Requires-Dist: seaborn (>=0.9.0) ; extra == 'all'
+Requires-Dist: scipy ; extra == 'all'
+Provides-Extra: docs
+Requires-Dist: matplotlib (>=3.0.2) ; extra == 'docs'
+Requires-Dist: IPython (>=7.2.0) ; extra == 'docs'
+Requires-Dist: notebook (>=5.7.4) ; extra == 'docs'
+Requires-Dist: seaborn (>=0.9.0) ; extra == 'docs'
+Provides-Extra: optional
+Requires-Dist: scipy ; extra == 'optional'
+Provides-Extra: tests
+
+Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks
+----------------------------------------------------------------------------------
+
+`Paper <https://papers.nips.cc/paper/9689-legendre-memory-units-continuous-time-representation-in-recurrent-neural-networks.pdf>`_
+
+We propose a novel memory cell for recurrent neural networks that dynamically maintains information across long windows of time using relatively few resources. The Legendre Memory Unit (LMU) is mathematically derived to orthogonalize its continuous-time history – doing so by solving d coupled ordinary differential equations (ODEs), whose phase space linearly maps onto sliding windows of time via the Legendre polynomials up to degree d − 1 (example d=12, shown below).
+
+.. image:: https://i.imgur.com/Uvl6tj5.png
+   :target: https://i.imgur.com/Uvl6tj5.png
+   :alt: Legendre polynomials
+
+A single ``LMUCell`` expresses the following computational graph in Keras as an RNN layer, which couples the optimal linear memory (``m``) with a nonlinear hidden state (``h``):
+
+.. image:: https://i.imgur.com/IJGUVg6.png
+   :target: https://i.imgur.com/IJGUVg6.png
+   :alt: Computational graph
+
+The discretized ``(A, B)`` matrices are initialized according to the LMU's mathematical derivation with respect to some chosen window length, θ. Backpropagation can be used to learn this time-scale, or fine-tune ``(A, B)``, if necessary. By default the coupling between the hidden state (``h``) and the memory vector (``m``) is trained via backpropagation, while the dynamics of the memory remain fixed (`see paper for details <https://papers.nips.cc/paper/9689-legendre-memory-units-continuous-time-representation-in-recurrent-neural-networks.pdf>`_).
+
+The ``docs`` includes an example for how to use the ``LMUCell``.
+
+The ``paper`` branch in the ``lmu`` GitHub repository includes a pre-trained Keras/TensorFlow model, located at ``models/psMNIST-standard.hdf5``, which obtains the current best-known psMNIST result (using an RNN) of **97.15%**. Note, the network is using fewer internal state-variables and neurons than there are pixels in the input sequence. To reproduce the results from the paper, run the notebooks in the ``experiments`` directory within the ``paper`` branch.
+
+Nengo Examples
+--------------
+
+* `Spiking LMUs in Nengo (with online learning) <https://www.nengo.ai/nengo/examples/learning/lmu.html>`_
+* `Spiking LMUs in Nengo Loihi (with online learning) <https://www.nengo.ai/nengo-loihi/examples/lmu.html>`_
+* `LMUs in NengoDL (reproducing SotA on psMNIST) <https://www.nengo.ai/nengo-dl/examples/lmu.html>`_
+
+Citation
+--------
+
+.. code-block::
+
+   @inproceedings{voelker2019lmu,
+     title={Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks},
+     author={Aaron R. Voelker and Ivana Kaji\'c and Chris Eliasmith},
+     booktitle={Advances in Neural Information Processing Systems},
+     pages={15544--15553},
+     year={2019}
+   }
+
+***************
+Release history
+***************
+
+.. Changelog entries should follow this format:
+
+   version (release date)
+   ======================
+
+   **section**
+
+   - One-line description of change (link to Github issue/PR)
+
+.. Changes should be organized in one of several sections:
+
+   - Added
+   - Changed
+   - Deprecated
+   - Removed
+   - Fixed
+
+0.1.0 (June 22, 2020)
+=====================
+
+Initial release of LMU 0.1.0! Supports Python 3.5+.
+
+The API is considered unstable; parts are likely to change in the future.
+
+Thanks to all of the contributors for making this possible!
+
+
