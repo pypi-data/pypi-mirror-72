@@ -1,0 +1,3 @@
+[console_scripts]
+firefox-bookmark-extractor=firefox_bookmark_extractor.extractor:main
+
