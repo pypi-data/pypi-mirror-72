@@ -1,0 +1,64 @@
+{% extends 'djmicrosip_enviar_ventas/base.html' %}
+{% block title %}
+Pedidos Web
+{% endblock %}
+<!-- CSS Code -->
+{% block style_css %}{% endblock %}
+{% block modulestyle_css %}
+{% endblock %}
+<!-- JavaScript Code -->
+{% block js_code %}
+{% include 'autocomplete_light/static.html' %}
+
+{% endblock %}
+{% block selected_module %} Microsip {% endblock %}
+{% block breadcrumb %}
+{{ block.super }}
+<li><a>PREFERENCIAS</a></li>
+{% endblock %}
+{% block content %}
+<div class="row">
+	<br>
+<div class="col-lg-12">	
+{% if mensaje == '' %}
+<form method="post" class="form-horizontal" action=""  enctype='multipart/form-data'>
+  {% csrf_token %}
+    {{ form.errors }}
+			<div class="row">
+			 	<div class="col-md-3" style="float: right;"><input type="submit" class="btn btn-primary" value="Guardar"  id="guardar" /></div>
+			</div> 
+			<br>
+		    <div class="row">
+		    	<div class="col-md-3"><label>Conexion</label>{{form.conexion_db}}</div>
+		    	<div class="col-md-3"><label>Nmbre base de datos</label>{{form.nombre_base_datos}}</div>
+		    	<div class="col-md-3"><label>Caja</label>{{form.caja}}</div>
+		    	<div class="col-md-3"><label>Cajero</label>{{form.cajero}}</div>
+		    	
+		    </div>
+		    <br>	
+		    <br>    
+		    <div class="row">
+		    	<div class="col-md-3"><label>Cliente</label>{{form.cliente}}</div>
+		    	<div class="col-md-3"><label>Almacen</label>{{form.almacen}}</div>
+		    	<div class="col-md-3"><label>Referencia</label>{{form.referencia}}</div>
+		    	<div class="col-md-3"><label>Ruta Log</label>{{form.ruta_log}}</div>
+		    	<div class="col-md-3"><label></label></div>
+		    	
+		    </div>
+		    <br>	
+		    <br>   
+		    <div class="row">
+		    	<div class="col-md-3"><label></label></div>
+		    	<div class="col-md-3"><label></label></div>
+		    	<div class="col-md-3"><label></label></div>
+		    	<div class="col-md-3"><label></label></div>
+		    	
+		    </div>
+ 
+</form>
+{%else%}
+<p>{{mensaje}}</p>
+{%endif%}
+</div>
+</div>
+{% endblock %}

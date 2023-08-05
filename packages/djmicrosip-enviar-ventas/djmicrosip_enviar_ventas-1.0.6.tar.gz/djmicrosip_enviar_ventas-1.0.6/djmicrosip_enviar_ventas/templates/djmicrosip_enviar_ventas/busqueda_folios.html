@@ -1,0 +1,78 @@
+
+{% extends "djmicrosip_enviar_ventas/base.html" %}
+{% block title %}Liberar Folios{% endblock %}
+
+<!-- CSS Code -->
+{% block style_css %}{% endblock %}
+{% block modulestyle_css %}
+{% endblock %}
+<!-- JavaScript Code -->
+{% block js_code %}
+<script type="text/javascript">
+function liberar_folios() {
+	var folio=$("#id_folio_venta").val();
+	console.log(folio)
+	$.ajax({
+		url: '/enviar_ventas/liberar_folios/',
+		type: 'get',
+		data: {
+			'folio':folio,
+		},
+		success: function (data) {
+			if(data.mensaje=="Eliminado")
+			{
+				alert("Se han liberado los folios");				
+			}
+			else
+			{
+				alert("Ocurrio un error al liberar los folios");
+			}
+		}
+
+	});
+}
+</script>
+{% endblock %} 
+{% block selected_module %} Enviar Ventas {% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-12">
+		<div class="col-md-4"> 
+			<form method="post" class="form" action=""  enctype='multipart/form-data'>
+		      {% csrf_token %}    
+		      {{ form.errors }}
+		      {{form}}
+			</form>
+		</div>
+		<div class="col-md-4">
+			{% if ventas|length > 0 %}
+				<label style="width: 100%;"></label>
+				<a onclick="liberar_folios()" class="btn btn-success enviar_articulos">Liberar Folios</a>
+			{% endif %} 
+		</div>
+		<div class="col-md-4"> 
+		</div>
+
+	</div>
+	<div class="col-md-12">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Folio</th>
+					<th>Fecha</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for doc in ventas %}
+				<tr>
+					<td>{{doc.folio}}</td>
+					<td>{{doc.fecha}}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+{% endblock %}

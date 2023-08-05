@@ -1,0 +1,160 @@
+
+{% extends "djmicrosip_enviar_ventas/base.html" %}
+{% block title %}Ventas Diarias{% endblock %}
+
+<!-- CSS Code -->
+{% block style_css %}{% endblock %}
+{% block modulestyle_css %}
+{% endblock %}
+<!-- JavaScript Code -->
+{% block js_code %}
+<script type="text/javascript">
+	
+	function sleep(milliseconds) {
+	  const date = Date.now();
+	  let currentDate = null;
+	  do {
+	    currentDate = Date.now();
+	  } while (currentDate - date < milliseconds);
+	}
+	function crear_orden() {
+		
+		var lista_articulos=[];
+		var art_error=0;
+		var success_=false;
+		var folios = $(".lista_folios_producto").text();
+		$('a.enviar_articulos').addClass('hidden');
+		$('table.lista_articulos').addClass('hidden');
+		$(".count").removeClass('hidden');
+		$(".art_error").removeClass('hidden');
+		$(".inicio").removeClass('hidden');
+		var fecha=$('#id_fecha').val();
+		{%for articulo in lista_folios_producto %}
+
+			var obj = new Object();
+
+
+				obj.id = "{{articulo.articulo__id}}";
+				obj.folio  = "{{articulo.documento_pv__folio}}";
+				obj.clave = "{{articulo.clave_articulo}}";
+				obj.nombre ="{{articulo.articulo__nombre}}";
+				//console.log(val);
+				lista_articulos.push(obj);
+			
+		{%endfor%}
+
+		$.ajax({
+			url: '/enviar_ventas/crear_orden/',
+			type: 'get',
+			data: {
+				'folios':folios,
+				'fecha':fecha,
+			},
+			success: function (data) {
+				var count=0;
+				$(".inicio").addClass('hidden');
+				if(data.resultado !='')
+				{
+					
+					$( 'td[class="clave_articulo"]' ).each(function() {
+						var id= parseInt($(this).attr("id"));
+						var val=$(this).text();
+						var total_productos= parseInt($(".total_productos").text());
+						var articulo_nombre=$('#'+id+'.articulo_nombre').text()
+						var unidades=parseFloat($('#'+id+'.unidades').text());
+						console.log(unidades,val,articulo_nombre);
+						// var lista_folios_producto = $(".lista_folios_producto").text();
+						
+						var fecha=$('#id_fecha').val();
+						$.ajax({
+							url: '/enviar_ventas/inf_articulo/',
+							type: 'get',
+							data: {
+								'id_articulo': id,
+								'id_doc':data.resultado,
+								'unidades':unidades,
+								'clave':val,
+								'articulo_nombre':articulo_nombre,
+								'fecha':fecha,
+								'folio':data.folio,
+								'lista_folios_producto':JSON.stringify(lista_articulos),
+							},
+							success: function (data) {
+								count=count+1;
+								$(".count").text("Cargando... "+count);
+								console.log(data.bandera)
+								if(data.bandera == true )
+								{	
+									art_error=art_error+1;
+								}
+								if(art_error>0)
+								{
+									$(".art_error").text("Hubo error con "+art_error+" articulos revisar en carpeta log archivo "+fecha+".txt");
+								}
+								if(count==total_productos)
+									{$(".count").text("Proceso Finalizado");}
+							}
+
+						});
+						sleep(500);
+			
+					});
+				}
+			}
+		});
+	}
+</script>
+{% endblock %} 
+{% block selected_module %} Microsip {% endblock %}
+
+{% block content %}
+<div class="row">
+
+	<div class="col-md-12">
+		<div class="col-md-4">
+		<form method="post" class="form" action=""  enctype='multipart/form-data'>
+	      {% csrf_token %}    
+	      {{ form.errors }}
+	      {{form}}
+		</form>
+		</div>
+		<div class="col-md-4">
+			<label style="width: 100%;"></label>
+			{% if folios_usuados%}
+			<p>Los siguientes articulos ya pertenecen a una orden de venta del remoto con folio: {{folios_usuados.0.0}}</p>
+			{%else%}
+			<a onclick="crear_orden()" class="btn btn-success enviar_articulos">Enviar articulos</a>
+			{%endif%}
+		</div>
+		<div class="col-md-4">
+			
+		</div>
+	</div>
+	<div class="col-md-12">
+		<p class="inicio hidden" style="text-align: center; font-size: 20px;">Envio en proceso ...</p>
+		<p class="count hidden" style="text-align: center; font-size: 20px;"></p>
+		<p class="art_error hidden" style="text-align: center; font-size: 20px;"></p>
+		<p class="hidden lista_folios_producto" style="text-align: center; font-size: 20px;">{{folios}}</p>
+		<p class="hidden total_productos" style="text-align: center; font-size: 20px;">{{total_productos}}</p>
+		<table class="table lista_articulos ">
+			<thead>
+				<tr>
+					<th>Clave</th>
+					<th>Nombre</th>					
+					<th>Cantidad</th>								
+				</tr>
+			</thead>
+			<tbody>
+				{%for articulo in ventas%}  
+				<tr>
+					<td class="clave_articulo" id="{{articulo.articulo__id}}">{{articulo.clave_articulo}}</td>
+					<td class="articulo_nombre" id="{{articulo.articulo__id}}">{{articulo.articulo__nombre}}</td>
+					<td class="unidades" id="{{articulo.articulo__id}}">{{articulo.unidades_totales}}</td>
+				</tr>
+				{%endfor%}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+{% endblock %}
