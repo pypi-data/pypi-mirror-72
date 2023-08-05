@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: uchkin-diploma
+Version: 1.0.3
+Summary: Neural Network for digit recognition
+Home-page: https://github.com/DemjanUA/uchkin_diploma
+Author: Dmytro Uchkin
+Author-email: dimon97xl@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: scipy
+Requires-Dist: numpy
+
+# uchkin_diploma
+Neural Network for digit recognition
+
+
