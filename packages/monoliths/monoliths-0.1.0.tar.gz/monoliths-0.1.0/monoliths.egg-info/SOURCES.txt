@@ -1,0 +1,8 @@
+README.rst
+setup.py
+monoliths/__init__.py
+monoliths/monoliths.py
+monoliths.egg-info/PKG-INFO
+monoliths.egg-info/SOURCES.txt
+monoliths.egg-info/dependency_links.txt
+monoliths.egg-info/top_level.txt
