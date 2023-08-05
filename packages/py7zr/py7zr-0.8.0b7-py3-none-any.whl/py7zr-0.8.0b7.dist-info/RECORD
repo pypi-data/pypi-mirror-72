@@ -1,0 +1,17 @@
+py7zr/__init__.py,sha256=XdXaEfAp8yxIDnUi14Xzu02cdux0ggt3KYb5yKfoJ0g,2453
+py7zr/__main__.py,sha256=P2VR48lTrjoC-n_jMMpq92S23-jFeqQ6HMCoK9NYfAY,989
+py7zr/archiveinfo.py,sha256=I9fI2H5hdzNmG3r6QFQpSvh1ceOXrPHL_BuspWKlN3c,40403
+py7zr/callbacks.py,sha256=A_j_W2Dbcu4PVzYnPxdjGSDSkqx9gJAWHR5J2BWqbWQ,2043
+py7zr/cli.py,sha256=1s5wxTY1_bmOmL1JdqK4SDdTK8ggKesBhujxzluwzAA,13765
+py7zr/compressor.py,sha256=Sn0i2lmLHxYYO5CTHQo_Lyc1QWaRRlb4IxFOv8O8E9I,24973
+py7zr/exceptions.py,sha256=28ifOh5thT-UMOnI3rWDUhgEe1yaUR4vrQEAWZs5Bw4,1246
+py7zr/helpers.py,sha256=gPkStLpbHkZuva-j9QWwZ_R3iB7x0OKX9Dok4mihY1E,12412
+py7zr/properties.py,sha256=tbd1LKFuXvus__RLsl7N1tG9O_xRzR26pRp1q37hupU,5465
+py7zr/py7zr.py,sha256=WbK4gDoiAH7Wn6bp4r9rifk1GBZ7F4IWDKa_vsGr5WU,49553
+py7zr/win32compat.py,sha256=fz_eziMLOurLqoEPM6S0_o3WMVvLF_UaWn1cEK20hZc,7759
+py7zr-0.8.0b7.dist-info/LICENSE,sha256=3GJlINzVOiL3J68-5Cx3DlbJemT-OtsGN5nYqwMv5VE,26530
+py7zr-0.8.0b7.dist-info/METADATA,sha256=6xSh_xzOFKtN_cCtyaaL3W707mq0X4t_A6u0GkUn6IM,31717
+py7zr-0.8.0b7.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+py7zr-0.8.0b7.dist-info/entry_points.txt,sha256=Rt0OL80FXEkJiphG8AVRL2gO-TYMQMm7UnqtFBvwbZI,47
+py7zr-0.8.0b7.dist-info/top_level.txt,sha256=XqCW1ahKVShLLVsYEx05Pj2CqzZtYO56D8eTiX8vlss,6
+py7zr-0.8.0b7.dist-info/RECORD,,
