@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: multiservice
+Version: 1.1.0
+Summary: Multiservice
+Home-page: UNKNOWN
+License: UNKNOWN
+Author: Viktor Chaptsev
+Author-email: viktor@chaptsev.ru
+Requires-Dist: typer ; extra == "all"
+Requires-Dist: typer-cli ; extra == "all"
+Requires-Dist: PyYAML ; extra == "all"
+Requires-Dist: rich ; extra == "all"
+Requires-Dist: flit ; extra == "dev"
+Requires-Dist: isort ; extra == "dev"
+Requires-Dist: flake8 ; extra == "dev"
+Requires-Dist: flake8-blind-except ; extra == "dev"
+Requires-Dist: flake8-broken-line ; extra == "dev"
+Requires-Dist: flake8-bugbear ; extra == "dev"
+Requires-Dist: flake8-builtins ; extra == "dev"
+Requires-Dist: flake8-commas ; extra == "dev"
+Requires-Dist: flake8-comprehensions ; extra == "dev"
+Requires-Dist: flake8-debugger ; extra == "dev"
+Requires-Dist: flake8-eradicate ; extra == "dev"
+Requires-Dist: flake8-isort ; extra == "dev"
+Requires-Dist: flake8-mock ; extra == "dev"
+Requires-Dist: flake8-mutable ; extra == "dev"
+Requires-Dist: flake8-pytest ; extra == "dev"
+Requires-Dist: flake8-quotes ; extra == "dev"
+Requires-Dist: flake8-string-format ; extra == "dev"
+Requires-Dist: flake8-variables-names ; extra == "dev"
+Provides-Extra: all
+Provides-Extra: dev
