@@ -1,0 +1,63 @@
+=========================
+ekit - Version 0.2.1 BETA
+=========================
+
+.. image:: https://cosmo-gitlab.phys.ethz.ch/cosmo_public/ekit/badges/master/coverage.svg
+  		:target: https://cosmo-gitlab.phys.ethz.ch/cosmo_public/ekit
+
+.. image:: https://cosmo-gitlab.phys.ethz.ch/cosmo_public/ekit/badges/master/pipeline.svg
+        :target: https://cosmo-gitlab.phys.ethz.ch/cosmo_public/ekit
+
+.. image:: http://img.shields.io/badge/arXiv-2006.12506-orange.svg?style=flat
+        :target: https://arxiv.org/abs/2006.12506
+
+
+ekit is a collection of small tools used by the Non-Gaussian Statistics Framework (`NGSF <https://cosmo-gitlab.phys.ethz.ch/cosmo_public/NGSF>`_).
+
+If you use this package in your research please cite Zuercher et al. 2020. (`arXiv-2006.12506 <https://arxiv.org/abs/2006.12506>`_).
+
+`Source <https://cosmo-gitlab.phys.ethz.ch/cosmo_public/ekit>`_
+
+`Documentation <http://cosmo-docs.phys.ethz.ch/ekit>`_
+
+Introduction
+============
+
+It contains the following tools:
+
+- paths:
+
+    Can create standardized paths given a prefix, suffix and a dictionary containing
+    some meta-data which gets encoded into the path and can be easily recovered using
+    another function given in the module.
+
+- context:
+
+    A context handler. The context consists out of a dictionary. The
+    context can be passed on to subclasses. It also holds default values, the
+    allowed parameters and their types and checks if they are correct.
+
+- logger:
+
+    A logger which can be passed on from module to module.
+    Contains a print function called vprint which only prints if verbose mode
+    is enabled and either prints using a logger if one is available or otherwise
+    just uses the normal print. Can also adjust the severity level of the message.
+
+Getting Started
+===============
+
+The easiest and fastest way to learn about ekit is to have a look at the Tutorial and Usage sections in the documentation.
+
+Credits
+=======
+
+This package was created by Dominik Zuercher (PhD student at ETH Zurich in Alexandre Refregiers `Comsology Research Group <https://cosmology.ethz.ch/>`_)
+
+The package is maintained by Dominik Zuercher dominik.zuercher@phys.ethz.ch.
+
+Contributing
+============
+
+Contributions are welcome, and they are greatly appreciated! Every
+little bit helps, and credit will always be given.
