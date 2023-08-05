@@ -1,0 +1,17 @@
+Sphinx>=1.4
+nibabel>=2.0.1
+numpy>=1.6.2
+matplotlib>=1.4.3
+pycap
+pyyaml
+scipy
+lxml
+xlrd
+pillow
+pydicom
+httplib2
+future
+configparser
+CacheControl-ldax
+pyxnat-ldax
+recon-stats-ldax
