@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: paper-cup
+Version: 20.6.25
+Summary: Micro-service communication system powered with paper cup engine!
+Home-page: UNKNOWN
+Author: Luxeys
+Author-email: bryan@luxeys.com
+License: MIT
+Description: Paper Cup
+        --------
+        
+        Microservices communication using publish and subscribe.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP
+Description-Content-Type: text/markdown
