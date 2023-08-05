@@ -1,0 +1,6 @@
+fastavro
+
+[dev]
+black
+pre-commit
+pydocstyle
