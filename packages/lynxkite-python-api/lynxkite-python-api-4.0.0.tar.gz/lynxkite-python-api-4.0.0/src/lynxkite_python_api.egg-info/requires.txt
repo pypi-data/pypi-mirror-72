@@ -1,0 +1,7 @@
+requests
+pandas
+
+[dev]
+pytest
+ruamel.yaml>=0.15
+mypy
