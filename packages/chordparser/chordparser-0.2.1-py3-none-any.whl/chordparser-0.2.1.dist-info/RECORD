@@ -1,0 +1,17 @@
+chordparser/__init__.py,sha256=BTQWPwV7N39ovS-oRdZ2ne17dFl7z-zJVUefmEgdNd4,320
+chordparser/chords.py,sha256=VSGYBfM7ExhtRAcbpNe4ukOU4t7N7sKOkIbQVh3msJ8,8943
+chordparser/chords_analyser.py,sha256=qwpyYydhnKpPhm4Bm453jYft_w1B2YGvCcWYGHskJi8,4499
+chordparser/chords_editor.py,sha256=mEI3aDjViJPtQIIXc_go24UvjCPsCjBRNLFBLhoHgDE,11963
+chordparser/keys.py,sha256=_vDELc25guXkSuwCkyhaLnhaVBCfgvdl82gYU4WUOiU,1792
+chordparser/keys_editor.py,sha256=-R90pZkZBqlF-67lx1zIG1qGtz-69-Cp39sOzhSUMQQ,4512
+chordparser/notes.py,sha256=9wfYTxsDe8R4tWz-2iAUrEkjIEMOXNMh-dkZNGVfB7s,5254
+chordparser/notes_editor.py,sha256=lqWVA_Ir5E_TW68naF6vyVoH946FLozi8fgaDJAQYEI,2961
+chordparser/parser.py,sha256=mrW2xHn0RzLWI04JC5Wp1WuNChw0yid02wCIIWhCddQ,1534
+chordparser/sample_sheet.cho,sha256=znvl03r7-ablPlveFwKmV4l7A5StNCT9tknqnhZqY28,2375
+chordparser/scales.py,sha256=N-VWNrqRbgMpwuAxObbFC3xV32x7AC90gKZw6SM3E3I,3933
+chordparser/scales_editor.py,sha256=R6S6zgBKuaAbGWHI_ZXo6feCmMP8BP0lqdGfVqwY-EQ,1240
+chordparser-0.2.1.dist-info/LICENSE,sha256=sNaImM_Hjqf3r6bQPlGHO2LA46VPsDrafUN7Cq52yVM,1087
+chordparser-0.2.1.dist-info/METADATA,sha256=rPkoTFA_nUYTYAyfxG1Ms2_WrjUGzwFi_xGbYU7_BtM,2443
+chordparser-0.2.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+chordparser-0.2.1.dist-info/top_level.txt,sha256=iqtzWwck-IHpLzkI3KGLGo1DucTtPsKhPwS2CDJGqNw,12
+chordparser-0.2.1.dist-info/RECORD,,
