@@ -1,0 +1,3 @@
+[console_scripts]
+estimark=estimark.__main__:main
+
