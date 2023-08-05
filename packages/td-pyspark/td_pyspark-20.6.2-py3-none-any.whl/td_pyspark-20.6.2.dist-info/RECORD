@@ -1,0 +1,11 @@
+td_pyspark/__init__.py,sha256=QadpdbjfCFNSJv68xYVYGrL_3XDW9MsdLiQU-mFSM_c,298
+td_pyspark/td_pyspark.py,sha256=rGkOFUlY-DJTiUUybZWbbIU2daYq9PWDm8C8nK548nc,31300
+td_pyspark/version.py,sha256=ZSdFeooEEMJkQgfFN0pbcVX8-HBPHNfHtfLl7jU7GW0,23
+td_pyspark/jars/td-spark-assembly.jar,sha256=ZOFi_1xKt8ZmpRa9e8Qs3HD9HO7etA9Imne6wPl1dfM,26973618
+td_pyspark/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+td_pyspark/tests/test_pyspark.py,sha256=pJKaOEDwF-zkZiJqvOfgMaTJH6AX5vMcvJy2L7jQajs,8182
+td_pyspark/tests/test_pyspark_without_td_spark.py,sha256=2es3XjFuK4YGAdwIp8HH0u-yi8tX0ciIQyTlf_8N0Cc,312
+td_pyspark-20.6.2.dist-info/METADATA,sha256=aC_gK3wWHB0Vf5BnyD48hYXnVqSHy8HL4lwB-qXm3Z0,14660
+td_pyspark-20.6.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+td_pyspark-20.6.2.dist-info/top_level.txt,sha256=DT6Xgy8n7psxFjH8d_Wzj-25lK_1mr9rEbywjH-QFPE,11
+td_pyspark-20.6.2.dist-info/RECORD,,
