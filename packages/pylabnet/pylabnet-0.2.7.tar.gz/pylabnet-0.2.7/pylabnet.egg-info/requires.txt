@@ -1,0 +1,13 @@
+decorator>=4.4.0
+ipywidgets>=7.5.1
+matplotlib>=3.1.3
+nidaqmx>=0.5.7
+numpy>=1.16.5
+plotly>=4.7.1ptvsd>=4.3.2
+PyQt5>=5.13.0
+pyqtgraph>=0.10.0
+pyserial>=3.4
+pytz>=2019.3
+PyVISA>=1.10.1
+rpyc>=4.1.2
+zhinst>=20.1.1211
