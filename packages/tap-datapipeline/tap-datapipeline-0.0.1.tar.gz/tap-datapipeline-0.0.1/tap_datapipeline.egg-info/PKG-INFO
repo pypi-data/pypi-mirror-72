@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: tap-datapipeline
+Version: 0.0.1
+Summary: functions that power the data pipeline for tapresearch
+Home-page: https://github.com/heavenPleme/tap-datapipeline
+Author: Heaven
+Author-email: heaven@pleme.io
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
