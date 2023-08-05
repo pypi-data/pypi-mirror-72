@@ -1,0 +1,12 @@
+leidenalg-0.8.1.dist-info/RECORD,,
+leidenalg-0.8.1.dist-info/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+leidenalg-0.8.1.dist-info/WHEEL,sha256=lSU0w45QqfDJHTuhFZouPsIyI-GSJHfRV-2E-9aUKe4,110
+leidenalg-0.8.1.dist-info/top_level.txt,sha256=P3ENfjbM36KTOwEtlR1kASK7RB5a9tx2_ClF17aXLk0,10
+leidenalg-0.8.1.dist-info/METADATA,sha256=e3ZO1LHHmzQrdRo_cANLM05_xRlxOFXVrRnNM5VZW6U,1444
+leidenalg/functions.py,sha256=xPpyoI7S9WGiAybrbxeDhXWLVm5Mxp42JOtE8KqCLlA,19389
+leidenalg/Optimiser.py,sha256=cP8OvMdrsp6sSPsaGS70jTru7J_bUGAfh42D_A43S48,29643
+leidenalg/VertexPartition.py,sha256=X9Dq9xNplzv1adRkeNJU2I_8JENmYIVYwQJNujx1tqc,40512
+leidenalg/version.py,sha256=XzJV4XRolxRifEoQWLXKp9poAxUU3wRE4Maw6gP-cak,116
+leidenalg/__init__.py,sha256=Rn9YC7wFTe4-AbAga-JCgKweSVzQbuYt3qSfjNoRMX0,2546
+leidenalg/_c_leiden.cpython-36m-darwin.so,sha256=6wS_CvbE91RascvjNox8f0X4jAfHA841D-hzMAUiBN4,1209332
+leidenalg/.dylibs/libgmp.10.dylib,sha256=zN0n-HxpFgfVu5EA2sNHU0pV43wYNKTfraZBk3yIZo4,419040
