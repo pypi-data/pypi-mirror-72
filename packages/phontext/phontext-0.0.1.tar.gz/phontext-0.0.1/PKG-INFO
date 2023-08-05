@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: phontext
+Version: 0.0.1
+Summary: Phonology analysis
+Home-page: https://github.com/rolandomunoz/phontext
+Author: Rolando Muñoz Aramburú
+Author-email: rolando.muar@gmail.com
+License: UNKNOWN
+Description: # phontext
+        A python package for phonology analysis from text files
+        
+Platform: UNKNOWN
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
