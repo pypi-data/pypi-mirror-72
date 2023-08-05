@@ -1,0 +1,3 @@
+[console_scripts]
+wppypi = wepo_pypi_test.main:main
+
