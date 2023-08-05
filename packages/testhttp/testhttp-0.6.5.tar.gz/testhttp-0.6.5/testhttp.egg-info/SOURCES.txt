@@ -1,0 +1,11 @@
+README.md
+setup.py
+testhttp/__init__.py
+testhttp/__main__.py
+testhttp.egg-info/PKG-INFO
+testhttp.egg-info/SOURCES.txt
+testhttp.egg-info/dependency_links.txt
+testhttp.egg-info/entry_points.txt
+testhttp.egg-info/not-zip-safe
+testhttp.egg-info/requires.txt
+testhttp.egg-info/top_level.txt
