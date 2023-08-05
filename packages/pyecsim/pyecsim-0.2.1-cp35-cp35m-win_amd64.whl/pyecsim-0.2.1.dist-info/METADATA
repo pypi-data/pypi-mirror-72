@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pyecsim
+Version: 0.2.1
+Summary: PyECsim: Python wrapper around ECsim
+Home-page: https://github.com/Limhes/ecsim/python
+Author: René Becker
+Author-email: limhes@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Intended Audience :: Science/Research
+Requires-Dist: pybind11 (>=2.4)
+
+ECsim is a fast and general simulator of voltammetry experiments. It simulates any number of electrode processes (Butler-Volmer) with any number of homogeneous reactions using the latest state-of-the-art algorithms. You are free to build the voltammetry waveform as you wish. A typical simulation, even with very large reaction rate constants, takes around 10 ms to run. Because of the high simulation speed, you can use this simulation inside the target function of an optimization routine. So please: do not buy commercial simulation software and save that money to buy some nice electrodes.
+
+
