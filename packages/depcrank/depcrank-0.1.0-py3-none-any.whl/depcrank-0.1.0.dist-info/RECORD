@@ -1,0 +1,16 @@
+depcrank/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+depcrank/analyse.py,sha256=ZXFNgBYRudw1FkBJKVRmhehjbNdEf2XHLxO_Hrf0Pyk,1917
+depcrank/depcrank_analyse.py,sha256=tCdPU0h2BGuF7m7PyZS7yI_K09-pqneUNihYFNLY7Ns,745
+depcrank/depcrank_display.py,sha256=_Kerd3h0TpNhXLNzCoNEwWuTkUUF_js2_IMANrf5LpQ,1297
+depcrank/depcrank_rank.py,sha256=tKw8EH1pD5kIHwyR1d7mfPwdhZbKrVJQ5MJNuV5sRhY,1171
+depcrank/display.py,sha256=HHt3MCCQnn6PWCaVvI_1MaO3SkaMjJpQMd9lVJwCFAI,1116
+depcrank/rank.py,sha256=0AhkgJRBeK9CebGkoWRDzM0z_Wa-gsgSHJqHFOXNjHg,732
+depcrank/utils.py,sha256=buixpj5TttI7glwwFN8xG1kia55LQS1CNJHc1rTA_1Y,791
+depcrank/metrics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+depcrank/metrics/package-signed.py,sha256=q0iKxwnC8-AvHzNojh4h_WuefCYaodY0pEjDEy85m_c,2087
+depcrank/metrics/popularity.py,sha256=JvGdMgMwAU16p99I27XuTXiH9r1d3zS1NUVeDwA03kc,1447
+depcrank-0.1.0.dist-info/METADATA,sha256=tT8if3mP8CnurBTx7jFGMISiyDs54JHOoeh8Qj_LFvE,561
+depcrank-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+depcrank-0.1.0.dist-info/entry_points.txt,sha256=Rx-HhHXsQPEwJseWbaO8tgxzdW3jG7kUzyJFhQ1K5LM,163
+depcrank-0.1.0.dist-info/top_level.txt,sha256=p07zPzEO1WrFVK3J_MJefVi-68euoCzYrrBhUvSSxBg,9
+depcrank-0.1.0.dist-info/RECORD,,
