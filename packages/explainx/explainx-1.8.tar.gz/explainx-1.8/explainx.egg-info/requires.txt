@@ -1,0 +1,17 @@
+jupyter_dash
+dash_bootstrap_components
+dash
+dash_core_components
+dash_html_components
+plotly
+dash_table
+pandas
+numpy
+dash_bootstrap_components
+shap
+xgboost==1.0.2
+cvxopt
+scikit-learn
+sklearn
+scipy
+catboost
