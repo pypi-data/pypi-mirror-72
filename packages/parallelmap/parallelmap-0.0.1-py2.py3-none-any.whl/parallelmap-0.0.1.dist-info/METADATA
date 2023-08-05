@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: parallelmap
+Version: 0.0.1
+Summary: An easy to use library to speed up computation (by parallelizing on multi CPUs).
+Home-page: https://github.com/jianjunwu/parallel-map
+Author: NICHOLAS WU
+Author-email: nicholas_wu@aliyun.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: dill
+Requires-Dist: pandarallel
+
+See https://github.com/jianjunwu/parallel-map for complete user guide.
+
+
