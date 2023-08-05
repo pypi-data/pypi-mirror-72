@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: refget
+Version: 0.0.1
+Summary: Python client for refget
+Home-page: https://github.com/databio/refget
+Author: Nathan Sheffield, Michal Stolarczyk
+Author-email: nathan@code.databio.org
+License: BSD2
+Description: # Refget
+        
+        [![Build Status](https://travis-ci.com/refgenie/refget.svg?branch=master)](https://travis-ci.com/refgenie/refget)
+        
+        The refget package provides a Python interface to both remote and local use of the refget protocol. 
+        
+        Documentation is hosted at [refget.databio.org](http://refget.databio.org).
+        
+Keywords: genome,assembly,bioinformatics,reference,sequence
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
