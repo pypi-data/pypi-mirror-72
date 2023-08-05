@@ -1,0 +1,11 @@
+simple_back/__init__.py,sha256=Lw627N5m4_MaUiHNSDJGxR4LvJXvZnkUcgUQ56z4GYU,492
+simple_back/backtester.py,sha256=DyK5r7W4AK1DE2hYX4kg_mtWvLTmtEG1rY5ZYUyVAOg,50349
+simple_back/data_providers.py,sha256=AizWh4mvZ0qK8qs9wB2B3lbcYxwmCvyVgy6T4Za-KzM,15826
+simple_back/exceptions.py,sha256=f8zVAEUjXcZ2vpfFy18-50YOwyRyuyGV5mxNXEF4kLs,983
+simple_back/fees.py,sha256=_lpcMvZdLN4dIRZ2Cn0czcxZ8b55IIOikKzxn516cj4,1929
+simple_back/metrics.py,sha256=mYIUfo9LdHWuOzuRz3eiOcNDX6OMh6BFYJBYqQfWgRk,5208
+simple_back/strategy.py,sha256=sHzrmweIGuTiZZls8lw3ea2fVFDRHn97Pg4UdtTw62E,973
+simple_back/utils.py,sha256=P__a8DOTnSSypphS6ioGAcGRGkF7QrcqJ-ek1UC5il8,457
+simple_back-0.6.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+simple_back-0.6.0.dist-info/METADATA,sha256=sJG8Jaxvdi2vUmOLJCTngVDMt-BhJMBOy8xX-7qS_R8,849
+simple_back-0.6.0.dist-info/RECORD,,
