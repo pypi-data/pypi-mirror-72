@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: bambic
+Version: 0.1.0
+Summary: WeCode 11th Bambi's second challenge of python programming
+Home-page: https://github.com/choonghee-lee/cli-calculator
+Author: Choonghee Lee
+Author-email: choonghee.dev@gmail.com
+License: MIT
+Download-URL: https://github.com/choonghee-lee/cli-calculator/archive/master.zip
+Description: # Cli-Calculaotr
+        
+        A simple commandline calculator app
+        
+        # Installation
+        
+        ## Using Pip
+        
+        ```bash
+          $ pip install bambic
+        ```
+        
+        ## Manual
+        
+        ```bash
+          $ git clone https://github.com/choonghee-lee/cli-calculator
+          $ cd cli-calculator
+          $ python setup.py install
+        ```
+        
+        # Usage
+        
+        ```bash
+        $ bambic
+        ```
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
