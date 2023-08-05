@@ -1,0 +1,10 @@
+setup.py
+gb_wafa_distributions/Binomialdistribution.py
+gb_wafa_distributions/Gaussiandistribution.py
+gb_wafa_distributions/Generaldistribution.py
+gb_wafa_distributions/__init__.py
+gb_wafa_distributions.egg-info/PKG-INFO
+gb_wafa_distributions.egg-info/SOURCES.txt
+gb_wafa_distributions.egg-info/dependency_links.txt
+gb_wafa_distributions.egg-info/not-zip-safe
+gb_wafa_distributions.egg-info/top_level.txt
