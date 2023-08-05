@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+let_me_answer_for_you/__init__.py
+let_me_answer_for_you/_nbdev.py
+let_me_answer_for_you/dialog_system.py
+let_me_answer_for_you/settings.py
+let_me_answer_for_you.egg-info/PKG-INFO
+let_me_answer_for_you.egg-info/SOURCES.txt
+let_me_answer_for_you.egg-info/dependency_links.txt
+let_me_answer_for_you.egg-info/entry_points.txt
+let_me_answer_for_you.egg-info/not-zip-safe
+let_me_answer_for_you.egg-info/requires.txt
+let_me_answer_for_you.egg-info/top_level.txt
