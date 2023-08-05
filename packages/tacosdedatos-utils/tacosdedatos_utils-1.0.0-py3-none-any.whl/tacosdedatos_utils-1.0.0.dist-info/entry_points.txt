@@ -1,0 +1,3 @@
+[console_scripts]
+tacosdedatos-utils=tacosdedatos_utils.__main__:app
+
