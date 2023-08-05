@@ -1,0 +1,25 @@
+{% extends "registrations/base.html" %}
+
+{% block content %}
+<table class="borders">
+  <tr>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>École</th>
+  </tr>
+  {% for cat, participants in categories.items %}
+    {% if participants %}
+      <tr>
+        <th colspan="3">{{ cat.name }}</th>
+      </tr>
+      {% for participant in participants %}
+        <tr>
+          <td>{{ participant.firstname }}</td>
+          <td>{{ participant.lastname }}</td>
+          <td>{{ participant.get_school_display }}</td>
+        </tr>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</table>
+{% endblock %}

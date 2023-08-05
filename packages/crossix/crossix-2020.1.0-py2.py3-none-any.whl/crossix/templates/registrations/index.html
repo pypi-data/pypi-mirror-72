@@ -1,0 +1,35 @@
+{% extends "registrations/base.html" %}
+
+{% load pages %}
+
+{% block content %}
+<h2>Cross triangulaire X-Centrale Supélec-HEC, édition {% if next_edition %}{{ next_edition.date|date:"Y" }} [<a href="{% url 'register' %}">Inscription</a>]{% else %}{{ last_edition.date|date:"Y" }}{% endif %}</h2>
+
+
+<p>
+{% if next_edition %}
+Le prochain cross triangulaire X-Centrale Supélec-HEC aura lieu le {{ next_edition.date|date:"l j F Y" }},
+sur le campus de {% if next_edition.location == next_edition.LOCATION_HEC %}HEC à Jouy en Josas{% else %}{% if next_edition.location == next_edition.LOCATION_ECP %}Centrale Supélec à Gif-sur-Yvette{% else %}l'École polytechnique à Palaiseau{% endif %}{% endif %}. (<a href="{% url 'access' %}">Accès</a>)
+{% else %}
+Le dernier cross a eu lieu le {{ last_edition.date|date:"l j F Y" }}.
+{% endif %}
+</p>
+
+{% if next_edition %}
+{% include_page "index_before" %}
+
+<h3>Inscriptions</h3>
+<ul>
+<li>Soit sur ce <a href="{% url 'register' %}">site</a>, jusqu'au {{ next_edition.close_registrations|date:"j F" }} au soir,</li>
+<li>soit sur place, dernier délai 10 heures.</li>
+</ul>
+
+{% include_page "details_inscription" %}
+{% endif %}
+
+{% if last_edition %}
+<h2>Édition précédente ({{ last_edition.get_location_display }} le {{ last_edition.date|date:"l j F Y" }})</h2>
+{% include_page "index_after" %}
+{% endif %}
+
+{% endblock %}

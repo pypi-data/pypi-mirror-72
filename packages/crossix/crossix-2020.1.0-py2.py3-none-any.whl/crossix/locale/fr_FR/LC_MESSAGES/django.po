@@ -1,0 +1,134 @@
+# Cross triangulaire.
+# Copyright (C) 2011 Raphaël Barrois
+# This file is distributed under the same license as the CrossTriangulaire package.
+# Raphaël Barrois <xelnor@xelmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-10 02:29+0200\n"
+"PO-Revision-Date: 2011-01-28 01:42+0200\n"
+"Last-Translator: Raphaël Barrois <xelnor@xelmail.com>\n"
+"Language-Team: Raphaël Barrois <xelnor+translate@xelmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: pages/models.py:10 registrations/models.py:58
+msgid "name"
+msgstr "nom"
+
+#: pages/models.py:11
+msgid "title"
+msgstr "titre"
+
+#: pages/models.py:12
+msgid "content"
+msgstr "contenu"
+
+#: pages/models.py:15
+msgid "page"
+msgstr "page"
+
+#: pages/models.py:16
+msgid "pages"
+msgstr "pages"
+
+#: registrations/models.py:38
+msgid "École polytechnique"
+msgstr "École polytechnique"
+
+#: registrations/models.py:39
+msgid "HEC"
+msgstr "HEC"
+
+#: registrations/models.py:40
+msgid "École Centrale"
+msgstr "École Centrale"
+
+#: registrations/models.py:43
+msgid "date"
+msgstr "date"
+
+#: registrations/models.py:44
+msgid "registration deadline"
+msgstr "fermeture des inscriptions"
+
+#: registrations/models.py:45
+msgid "location"
+msgstr "lieu"
+
+#: registrations/models.py:50
+msgid "edition"
+msgstr "édition"
+
+#: registrations/models.py:51
+msgid "editions"
+msgstr "éditions"
+
+#: registrations/models.py:59 registrations/models.py:74
+msgid "gender"
+msgstr "sexe"
+
+#: registrations/models.py:60
+msgid "min_age"
+msgstr "âge minimum"
+
+#: registrations/models.py:63 registrations/models.py:76
+msgid "category"
+msgstr "catégorie"
+
+#: registrations/models.py:64
+msgid "categories"
+msgstr "catégories"
+
+#: registrations/models.py:71
+msgid "firstname"
+msgstr "prénom"
+
+#: registrations/models.py:72
+msgid "lastname"
+msgstr "nom de famille"
+
+#: registrations/models.py:73
+msgid "birthyear"
+msgstr "année de naissance"
+
+#: registrations/models.py:75
+msgid "email"
+msgstr "courriel"
+
+#: registrations/models.py:77
+msgid "school"
+msgstr "école"
+
+#: registrations/models.py:78
+msgid "promo"
+msgstr "promotion"
+
+#: templates/registrations/register.html:6
+msgid "Inscription au cross triangulaire"
+msgstr "Inscriptions au cross triangulaire"
+
+#: templates/registrations/register.html:26
+msgid "Enregistrer"
+msgstr "Enregistrer l'inscription"
+
+#: templates/registrations/register.html:32
+msgid ""
+"\n"
+"Votre email ne sera utilisé que pour les informations relatives au cross "
+"triangulaire\n"
+"  (affichage des résultats, prochaine édition).<br />\n"
+"  Pour modifier ou supprimer ces données, envoyez un email à"
+msgstr ""
+"\n"
+"Votre email ne sera utilisé que pour les informations relatives au cross "
+"triangulaire\n"
+"  (affichage des résultats, prochaine édition).<br />\n"
+"  Pour modifier ou supprimer ces données, envoyez un email à"
+
+#~ msgid "View Larger Map"
+#~ msgstr "Agrandir la carte"
