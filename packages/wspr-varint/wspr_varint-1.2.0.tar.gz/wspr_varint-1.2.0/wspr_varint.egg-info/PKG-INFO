@@ -1,0 +1,83 @@
+Metadata-Version: 1.2
+Name: wspr-varint
+Version: 1.2.0
+Summary: A variable length integer implementation for the wspr project.
+Home-page: UNKNOWN
+Author: Arkadiusz Michał Ryś
+Author-email: Arkadiusz.Michal.Rys@gmail.com
+License: MIT license
+Description: ===========
+        wspr-varint
+        ===========
+        
+        .. image:: https://img.shields.io/pypi/v/wspr_varint.svg
+                :target: https://pypi.python.org/pypi/wspr_varint
+        
+        A variable length integer implementation for the wspr project.
+        
+        API
+        ---
+        
+        VarInt
+        
+        - from_int
+        - from_bytes
+        - to_int
+        - to_bytes
+        - int
+        - bytes
+        
+        Example
+        -------
+        
+        .. code-block:: python3
+        
+           from wspr_varint import VarInt
+           variable_integer = VarInt.from_int(-1)
+           variable_integer.to_int()
+           variable_integer.to_bytes()
+        
+        
+        =======
+        History
+        =======
+        
+        1.2.0 (2020-06-24)
+        ------------------
+        * Add shortcut to VarInt.
+        
+        1.1.1 (2020-06-22)
+        ------------------
+        * Fix setup error.
+        
+        1.1.0 (2020-06-18)
+        ------------------
+        * Add multiplication.
+        * Add addition.
+        * Add int property.
+        * Add bytes property.
+        
+        1.0.1 (2019-07-08)
+        ------------------
+        * Fix syntax error in example.
+        
+        1.0.0 (2019-07-08)
+        ------------------
+        * Add API reference.
+        * Add example.
+        
+        0.2.0 (2019-07-07)
+        ------------------
+        * Update documentation references.
+        
+        0.1.0 (2019-07-07)
+        ------------------
+        * First release on PyPI.
+        
+Keywords: wspr_varint
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8, <4
