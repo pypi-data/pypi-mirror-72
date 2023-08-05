@@ -1,0 +1,17 @@
+repomirror/__init__.py,sha256=SlBh8ibnfNRc0skcnnwISYGALpYjJNZsLhXO6LmvHEw,177
+repomirror/config.py,sha256=5gUAM3Wv_uHbL9dFyb58b8m3u6ilUkjsDDOG4ReO95Y,6715
+repomirror/constants.py,sha256=7hwRfMFHCLg3nIUBKQbQJ-H65Xq9UBHfJ4umMgVFsnU,519
+repomirror/logger.py,sha256=ApIsy_u94jVa5W443Mm3RmrOEw8zLoLpWnX5hMN30Dw,2227
+repomirror/sync.py,sha256=fOOmfCasEVLy4FEAQy6Vor-JSAQCX_gqu9FLt2JSFfw,14986
+repomirror/fetcher/__init__.py,sha256=jFlbNXWCNYNJ9jhC_OyTNla0Pa35yTG6ozZKsls5Ju4,73
+repomirror/fetcher/_base.py,sha256=gMcdfDOSqZfGndJNOA37x-47wK1WOpYgJtaCRUeIL24,1299
+repomirror/fetcher/ftp.py,sha256=v99eMWk2j28HlYMRPOSCmVIqtCmC4usEF6a3qS5pMSU,5596
+repomirror/fetcher/rsync.py,sha256=bvn18LvgcmJuuEqKCuYnixnLDGzoSYsiHdBFBo36reI,4214
+repomirror/fetcher/rsync_returns.py,sha256=y_lv4lcojWmAuVA2c9Iys_l9hfkMTgctTr5Gp1yIMGQ,1168
+repomirror/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+repomirror-1.0.2.data/scripts/reposync,sha256=gn38PqOaaBPvMMGe2k2XlLbBD11zq6haEd9p6ga_nVs,2137
+repomirror-1.0.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+repomirror-1.0.2.dist-info/METADATA,sha256=QfgyXVhUgMCCoysm17chrEqcips2cZ9G7UfWfqtHFCg,3600
+repomirror-1.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+repomirror-1.0.2.dist-info/top_level.txt,sha256=NkXULyEVeODWKvDYdn91ZMejlxhbqGvtrC8stL4I2Ek,11
+repomirror-1.0.2.dist-info/RECORD,,

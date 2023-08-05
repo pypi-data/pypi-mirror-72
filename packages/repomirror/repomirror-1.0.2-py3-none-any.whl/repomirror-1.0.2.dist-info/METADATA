@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: repomirror
+Version: 1.0.2
+Summary: Clone/mirror multiple Linux distro/BSD flavor/etc. repositories to a local server
+Home-page: https://git.square-r00t.net/RepoMirror/
+Author: Brent S.
+Author-email: bts@square-r00t.net
+License: UNKNOWN
+Project-URL: Documentation, https://git.square-r00t.net/RepoMirror/tree/README
+Project-URL: Source, https://git.square-r00t.net/RepoMirror/
+Project-URL: Tracker, https://bugs.square-r00t.net/index.php?project=14
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: System :: Archiving :: Mirroring
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Topic :: System :: Software Distribution
+Classifier: Topic :: System :: Systems Administration
+Requires-Python: >=3.7
+Description-Content-Type: text/plain
+Requires-Dist: lxml
+Requires-Dist: psutil
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+
+This project will let you mirror a Linux distribution's repository/repositories (or BSD, etc.).
+
+
+Features:
+
+* Logging
+* RSync or FTP supported (RSync mirrors require rsync to be installed and in the $PATH environment variable) (HTTP/HTTPS cannot and will not be supported as there's no real way to do it reliably and efficiently.)
+* Locking - prevent a specific distribution from syncing if it is currently being synced but allow other distributions to sync
+* Customizable rsync arguments
+* Changing of directory/file ownership per-distribution
+* Mount-checking per-distribution - a distribution will be skipped if its designated mountpoint is not mounted
+* Synchronization checks - timestamp files can be read and written and are used to determine if a sync should take place or not
+** TODO: customizable "staleness" of repos (e.g. sync if timestamp X is older than timestamp Y on server)
+
+
+Configuration/Deployment:
+
+See example.config.xml for details on a configuration file, as it's extensively commented and won't be covered in this README.
+
+You can also run reposync -h (or reposync --help) to see all supported options.
+
+You may take special interest in repomirror/utils/find_fastest_upstream/ scripts as they're pre-written to find the fastest (in theory) upstream you can use. Currently only Arch Linux and CentOS have scripts written, but I'll gladly try to add other distros if you open a feature request (see below). You can run -h/--help to see the supported options (there aren't many).
+
+
+Bugs/Feature Requests:
+
+Please use my tracker at https://bugs.square-r00t.net/index.php?project=14 or, if you prefer to not create an account, simply email me at bts(at)square-r00t[dot]net.
+
+
+Sources:
+
+This project can be found at/cloned from:
+
+* https://git.square-r00t.net/RepoMirror
+* git://git.square-r00t.net/repomirror.git
+
+And has a mirrored repository on GitHub (Issues/Wiki/etc. disabled) at:
+
+* https://github.com/johnnybubonic/repomirror
+
+It can also be found on PyPi at:
+
+* https://pypi.org/project/repomirror/
+
