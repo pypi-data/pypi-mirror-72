@@ -1,0 +1,17 @@
+halomod/__init__.py,sha256=l2y9sHvNbT9hZzaUrgdLTeebPrGZtTM1SUoVwvKlS2Y,640
+halomod/bias.py,sha256=d1mhtuYWwzR9OXoADpcG5JPfitLpKDGuA7gS6dvuqAw,24508
+halomod/concentration.py,sha256=uD1EIHr9xDrioY4ii79_yIR5UnzepniBKWuAo6I1sqg,7842
+halomod/cross_correlations.py,sha256=gzKdE_ZU8eQlvY_WMxszxlvSwe131ptr4pOYJeCQs1A,7843
+halomod/functional.py,sha256=F_Dj5eNTtFGVfUKGxGIi71cfoJiO13o-oH2ncPe9yNw,586
+halomod/halo_exclusion.py,sha256=rbyK7GJ9ZN2KMhQ30HQf6IL6DCBV2vpCzpIWlZn0vko,13811
+halomod/halo_model.py,sha256=417rM5Oyk6o-SdNhf2C0QtrRFeTuvOLjJcDFRjoTEGk,52341
+halomod/hod.py,sha256=Wbs84o9-p-wyNw0aV9wMqUFnmqU64xo64YE6PHyxZpA,17014
+halomod/integrate_corr.py,sha256=buaQ1I2ge1wlOSIr1HCJManNImfg04MHUaOBddc__tk,14554
+halomod/profiles.py,sha256=YSeyQB2GDD5g8yTwP1NoqwFrdPWXUcLL3B6UypSWZzs,27894
+halomod/tools.py,sha256=zW3ix8gHThrt5mnQrec14puIErXJzuHUBRWt0gNXuMc,8059
+halomod/wdm.py,sha256=6sMGAw5Css0fAUDYUZPGEbgvdqvSDPNMQc9hkKOKzl0,5096
+halomod/data/uKc_einasto.npz,sha256=QSzJ-TV10OKvOdsuFV7GHerO5OZ20UEAMJKAz3GWE_w,8016522
+halomod-1.4.6.dev38.dist-info/METADATA,sha256=jfnJKpJkNgDnfQupTAkcoZwx_rr29uZGvU0JqIfjRpE,6400
+halomod-1.4.6.dev38.dist-info/RECORD,,
+halomod-1.4.6.dev38.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+halomod-1.4.6.dev38.dist-info/top_level.txt,sha256=jQB4oAYQqLbfunSNaHv_J1heOOBJO7yYDyJ-fosEZ1Y,8
