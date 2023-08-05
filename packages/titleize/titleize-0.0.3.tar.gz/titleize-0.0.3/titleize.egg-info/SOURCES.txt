@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+titleize/__init__.py
+titleize/main.py
+titleize.egg-info/PKG-INFO
+titleize.egg-info/SOURCES.txt
+titleize.egg-info/dependency_links.txt
+titleize.egg-info/requires.txt
+titleize.egg-info/top_level.txt
