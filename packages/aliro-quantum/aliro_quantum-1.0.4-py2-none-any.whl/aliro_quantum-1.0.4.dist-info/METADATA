@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: aliro-quantum
+Version: 1.0.4
+Summary: Aliro Quantum App
+Home-page: UNKNOWN
+Author: OpenAPI Generator community
+Author-email: nick@aliroquantum.com
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,Aliro Quantum App
+Platform: UNKNOWN
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+
+This is an api for the Aliro Quantum App  # noqa: E501
+
+
