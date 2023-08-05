@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: giant-errorpages
+Version: 0.1.0
+Summary: A small package to trigger specific non-200 HTTP responses in a Django application.
+Home-page: https://github.com/giantmade/giant-errorpages
+License: MIT
+Keywords: error,404,403,500
+Author: Jon Atkinson
+Author-email: jon@giantmade.com
+Requires-Python: >=3.6,<4.0
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Project-URL: Repository, https://github.com/giantmade/giant-errorpages
+Description-Content-Type: text/markdown
+
+# Giant Error Pages
+
+A small package to trigger specific non-200 HTTP responses. This is useful for previewing your error pages while DEBUG=True. Once enabled, you will be able to access three new routes:
+
+- /errors/404/, which will return a 404 response and error page.
+- /errors/403/, which will return a 403 response and error page.
+- /errors/500/, which will return a 500 response and error page.
+
+## Installation
+
+To install with Poetry, run:
+
+    $ poetry add giant-errorpages
+
+You should then add `"errorpages"` to the `INSTALLED_APPS` in your settings file. Finally, update your root `urlpatterns` to include:
+
+    path("errors/", include("errorpages.urls"), name="errorpages"),
+
+## Preparing for release
+ 
+In order to prepare the package for a new release on TestPyPi and PyPi, you need to update the version number in the `pyproject.toml`. The version numbering must also follow the Semantic Version rules which can be found here https://semver.org/.
+ 
+## Publishing
+ 
+Once the version number has been updated, run:
+ 
+   $ `poetry build` 
+
+This will package the project ready for publication:
+
+   $ `poetry publish`
+
+...will then publish the package to PyPi. You will need to enter the username and password for the account which can be found in the company password manager.
