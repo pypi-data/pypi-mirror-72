@@ -1,0 +1,13 @@
+MANIFEST.in
+setup.py
+sparkmonitor/__init__.py
+sparkmonitor/kernelextension.py
+sparkmonitor/listener.jar
+sparkmonitor/serverextension.py
+sparkmonitor/static/module.js
+sparkmonitor_s.egg-info/PKG-INFO
+sparkmonitor_s.egg-info/SOURCES.txt
+sparkmonitor_s.egg-info/dependency_links.txt
+sparkmonitor_s.egg-info/not-zip-safe
+sparkmonitor_s.egg-info/requires.txt
+sparkmonitor_s.egg-info/top_level.txt
