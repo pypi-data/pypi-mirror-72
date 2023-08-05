@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: tvguiden
+Version: 0.0.1
+Summary: TV-Guiden
+Home-page: https://github.com/larsvegascph/tvguiden
+Author: Verdenskendte DJ Lars Vegas
+Author-email: kool@stadigstiv.k
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# tvguiden
+TV-guide for TV-entusiaster
+
+
