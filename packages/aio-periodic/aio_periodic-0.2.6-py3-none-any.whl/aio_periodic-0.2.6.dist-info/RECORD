@@ -1,0 +1,16 @@
+aio_periodic/__init__.py,sha256=5aistHz0AGoiVx3RtAZ2mJWdXdhkLieyNx5S8a1WM7Q,209
+aio_periodic/client.py,sha256=O1tqrC9TcDpqzyUOliBtOJtINtU9AKuXDoEfca6q0Yw,2138
+aio_periodic/job.py,sha256=0QHMHVh0S5naKDtAO2IOWdN2o-OUdpmuTSy2ynNf9Yk,1668
+aio_periodic/pool.py,sha256=orIDmTmpjMMduefTfL5mn4S2YbpZ313U3xPQ8jxY45c,1157
+aio_periodic/transport.py,sha256=Pb5BHBpdiGVtsXoaSM1bMONP0-2-OGe4nd8OwM3Cs1M,481
+aio_periodic/worker.py,sha256=fr70IQMrsgqu_Vmrzkj3WZY0qxlfktGL33o2-qKew9A,2535
+aio_periodic/types/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aio_periodic/types/agent.py,sha256=m6fsu2Ojwmsx8hPSL10f6TAh1fpfjdC5Ng3-n5RHPIA,1180
+aio_periodic/types/base_client.py,sha256=GDCa3nsiHOB2tk6EcDSYwJFeDL0GcsBfcKkesIWZcrc,4963
+aio_periodic/types/command.py,sha256=aw9uXFwCR2Oqqs2Jt0dLYqs4IB0pic99LvdiHCls1IM,3033
+aio_periodic/types/job.py,sha256=elPhZ77U1BMFgNMGATirz07AvzodCnZ2t_0Qj7aEyRs,2038
+aio_periodic/types/utils.py,sha256=hyzW47whNYYBAgVSfEkB5hYgt39Eo8mEZFUOFVNgA8U,1128
+aio_periodic-0.2.6.dist-info/METADATA,sha256=-oOBJba6pcM7plWfjPGeznRr4k8s9-euCSMWP4y6A_Q,282
+aio_periodic-0.2.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+aio_periodic-0.2.6.dist-info/top_level.txt,sha256=xNjmhJAYLw9vxEhbBBne75DMZxiO2vH0Ob2bDlKqtnM,13
+aio_periodic-0.2.6.dist-info/RECORD,,
