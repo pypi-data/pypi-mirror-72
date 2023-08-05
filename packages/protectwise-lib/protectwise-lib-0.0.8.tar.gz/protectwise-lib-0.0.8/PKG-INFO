@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: protectwise-lib
+Version: 0.0.8
+Summary: A python Library for interacting with Protectwise API
+Home-page: https://github.com/5A4B48/protectwise-lib
+Author: 5A4B48
+Author-email: pw@cybersecintel.ca
+License: UNKNOWN
+Description: # protectwise-lib
+        This tool can currently do the following
+        - Initialize a token for use with protectwise
+        - Get event info for events in your dashboard
+        - Download pcaps for the events in your dashboard
+        - Use your token to check for ip address information
+        
+        More info and coverage on what parts of the protectwise api are covered will be added here shortly. 
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.1
+Description-Content-Type: text/markdown
