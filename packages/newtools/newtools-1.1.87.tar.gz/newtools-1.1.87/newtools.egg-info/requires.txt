@@ -1,0 +1,9 @@
+
+[full]
+s3fs>=0.4.2
+pandas==1.0.3
+boto3==1.13.2
+awsretry>=1.0.1
+dativatools>=3.3.813
+pyarrow==0.17.0
+chardet>=3.0.4
