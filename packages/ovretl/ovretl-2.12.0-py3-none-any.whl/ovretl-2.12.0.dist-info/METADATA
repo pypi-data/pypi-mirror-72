@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ovretl
+Version: 2.12.0
+Summary: Python package for Ovrsea ETL
+License: MIT
+Author: nicolas67
+Author-email: nicolas@ovrsea.com
+Requires-Python: >=3.6.1
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: pandas (>=1.0.3,<2.0.0)
+Description-Content-Type: text/markdown
+
+
