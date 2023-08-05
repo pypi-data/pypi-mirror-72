@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: elgoogapi
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://github.com/devebot/elgoogapi
+Author: devebot
+License: Apache 2.0
+Download-URL: https://github.com/devebot/elgoogapi/downloads
+Platform: UNKNOWN
+Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*
+Requires-Dist: google-auth-httplib2 (>=0.0.3)
+Requires-Dist: google-auth-oauthlib (>=0.4.1)
+
+UNKNOWN
+
+
