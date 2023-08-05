@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usage &#8212; loganom 0.0.8 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Configuration" href="config.html" />
+    <link rel="prev" title="Processors" href="processor.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<p>Command line usage:</p>
+<div class="section" id="postfix-sasl">
+<h2>Postfix SASL<a class="headerlink" href="#postfix-sasl" title="Permalink to this headline">¶</a></h2>
+<p>Example executing processor <strong>postfix-sasl</strong>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ loganom postfix-sasl -c config.ini -l logfile
+</pre></div>
+</div>
+<p>It’s optional executing an external script when an anomaly is found:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ loganom postfix-sasl -c config.ini -l logfile -e /path/script.sh
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>External scripts can be used with any processor.</p>
+</div>
+</div>
+<div class="section" id="quota-high">
+<h2>Quota High<a class="headerlink" href="#quota-high" title="Permalink to this headline">¶</a></h2>
+<p>Example executing processor <strong>quota-high</strong>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ loganom quota-high -c config.ini -l logfile
+</pre></div>
+</div>
+<p>These parameters can be used in this processor:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">q</span> <span class="n">QUOTA_MESSAGE</span><span class="p">,</span> <span class="o">--</span><span class="n">quota</span><span class="o">-</span><span class="n">message</span> <span class="n">QUOTA_MESSAGE</span>
+                        <span class="n">Quota</span> <span class="n">reject</span> <span class="n">message</span> <span class="n">used</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">mail</span> <span class="n">server</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span>
+                        <span class="s1">&#39;Quota per hour exceeded&#39;</span><span class="p">)</span> <span class="p">[</span><span class="n">Processor</span> <span class="n">quota</span><span class="o">-</span><span class="n">high</span><span class="p">]</span>
+<span class="o">--</span><span class="n">quota</span><span class="o">-</span><span class="n">limit</span> <span class="n">QUOTA_LIMIT</span>
+                        <span class="n">Quota</span> <span class="n">limit</span> <span class="n">occurrences</span><span class="p">,</span> <span class="n">above</span> <span class="n">this</span> <span class="n">it</span> <span class="n">will</span> <span class="n">be</span>
+                        <span class="n">considered</span> <span class="n">an</span> <span class="n">anomaly</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="mi">150</span><span class="p">)</span> <span class="p">[</span><span class="n">Processor</span> <span class="n">quota</span><span class="o">-</span>
+                        <span class="n">high</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Example changing both parameters:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ loganom quota-high -c config.ini -l logfile <span class="se">\</span>
+--quota-message <span class="s2">&quot;quota exceeded&quot;</span> <span class="se">\</span>
+--quota-limit <span class="m">50</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sample-execution">
+<h2>Sample execution<a class="headerlink" href="#sample-execution" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="with-debug">
+<h3>With Debug<a class="headerlink" href="#with-debug" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="nv">LOGLEVEL</span><span class="o">=</span>DEBUG loganom postfix-sasl -c config.ini -l logfile
+DEBUG:      Starting validating configuration file...
+<span class="o">[</span>postfix-sasl<span class="o">]</span>
+DEBUG:      Starting <span class="s2">&quot;postfix-sasl&quot;</span>
+DEBUG:      Log file: logfile
+DEBUG:      Start log reading...
+DEBUG:      user@domain - <span class="m">92</span>.36.X.Y
+DEBUG:      user@domain - <span class="m">176</span>.63.X.Y
+<span class="o">[</span>...<span class="o">]</span>
+DEBUG:      user@domain - <span class="m">188</span>.69.X.Y
+DEBUG:      End log reading...
+DEBUG:      Start processing the dictionary...
+DEBUG:      user@domain <span class="o">(</span><span class="m">6</span><span class="o">)</span>
+DEBUG:      Start processing email: user@domain
+DEBUG:        IP: <span class="m">209</span>.85.X.Y - Reverse: mail-ej1-f52.google.com.
+DEBUG:          mail-ej1-f52.google.com. skipped by google
+DEBUG:        IP: <span class="m">52</span>.125.X.Y - Reverse: unknown
+DEBUG:      Starting new HTTP connection <span class="o">(</span><span class="m">1</span><span class="o">)</span>: ipinfo.io:80
+DEBUG:        Contry: US
+DEBUG:          AS8075 Microsoft Corporation skipped by AS8075
+<span class="o">[</span>...<span class="o">]</span>
+
+E-mail address: user@domain
+  <span class="m">92</span>.36.X.Y - BA - Bihać - unknown - AS9146 BH Telecom d.d. Sarajevo
+  <span class="m">176</span>.63.X.Y - HU - Maklár - catv-Y-X-195-207.catv.broadband.hu. - AS6830 Liberty Global B.V.
+  <span class="m">195</span>.242.X.Y - UA - Chernihiv - unknown - AS34355 Chernigivtelecom LLC
+  <span class="m">188</span>.76.X.Y - ES - Collado-Villalba - Y.X.76.188.dynamic.jazztel.es. - AS12479 Orange Espagne SA
+  <span class="m">87</span>.116.X.Y - RS - Belgrade - unknown - AS31042 Serbia BroadBand-Srpske Kablovske mreze d.o.o.
+  <span class="m">188</span>.69.X.Y - LT - Vilnius - md-Y-X-195-171.omni.lt. - AS8764 Telia Lietuva, AB
+</pre></div>
+</div>
+</div>
+<div class="section" id="script-with-logtail-and-virtualenv">
+<h3>Script with logtail and virtualenv<a class="headerlink" href="#script-with-logtail-and-virtualenv" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
+
+<span class="nv">LOG_LEVEL</span><span class="o">=</span><span class="s2">&quot;DEBUG&quot;</span>  <span class="c1">#DEBUG/INFO</span>
+<span class="nv">CONFIG_INI</span><span class="o">=</span><span class="s2">&quot;~/.loganom-config.ini&quot;</span>
+<span class="nv">LOG_READ</span><span class="o">=</span><span class="s2">&quot;/var/log/maillog-loganom&quot;</span>
+<span class="nv">LOG_OUT</span><span class="o">=</span><span class="s2">&quot;/var/log/loganom.log&quot;</span>
+
+logtail /var/log/maillog &gt; <span class="s2">&quot;</span><span class="nv">$LOG_READ</span><span class="s2">&quot;</span>
+
+<span class="nb">source</span> ~/.venv/loganom/bin/activate
+
+env <span class="nv">LOGLEVEL</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$LOG_LEVEL</span><span class="s2">&quot;</span> <span class="se">\</span>
+    loganom postfix-sasl <span class="se">\</span>
+    -c <span class="s2">&quot;</span><span class="nv">$CONFIG_INI</span><span class="s2">&quot;</span> <span class="se">\</span>
+    -l <span class="s2">&quot;</span><span class="nv">$LOG_READ</span><span class="s2">&quot;</span> &gt; <span class="s2">&quot;</span><span class="nv">$LOG_OUT</span><span class="s2">&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="nv">RET</span><span class="o">=</span><span class="nv">$?</span>
+
+:&gt; <span class="s2">&quot;</span><span class="nv">$LOG_READ</span><span class="s2">&quot;</span>
+
+<span class="nb">exit</span> <span class="nv">$RET</span>
+</pre></div>
+</div>
+<p>If you want to execute <strong>loganom</strong> for instance, in every hour, you can use
+<strong>logtail</strong> to get just the log lines that weren’t processed yet, this will
+avoid reprocessing all log.</p>
+</div>
+</div>
+<div class="section" id="command-line-options">
+<h2>Command line options<a class="headerlink" href="#command-line-options" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ loganom --help
+usage: main.py <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-c CONFIG<span class="o">]</span> <span class="o">[</span>-l LOG<span class="o">]</span> <span class="o">[</span>-e EXEC<span class="o">]</span> <span class="o">[</span>-q QUOTA_MESSAGE<span class="o">]</span>
+            <span class="o">[</span>--quota-limit QUOTA_LIMIT<span class="o">]</span>
+            <span class="o">{</span>postfix-sasl,quota-high,foo<span class="o">}</span>
+
+positional arguments:
+<span class="o">{</span>postfix-sasl,quota-high,foo<span class="o">}</span>
+
+optional arguments:
+-h, --help            show this <span class="nb">help</span> message and <span class="nb">exit</span>
+-c CONFIG, --config CONFIG
+                        Path <span class="k">for</span> configuration file <span class="o">(</span>default: ./config.ini<span class="o">)</span>
+-l LOG, --log LOG     Path <span class="k">for</span> log file <span class="o">(</span>default: /var/log/maillog<span class="o">)</span>
+-e EXEC, --exec EXEC  External script to be executed when an anomaly is
+                        found
+-q QUOTA_MESSAGE, --quota-message QUOTA_MESSAGE
+                        Quota reject message used in the mail server <span class="o">(</span>default:
+                        <span class="s1">&#39;Quota per hour exceeded&#39;</span><span class="o">)</span> <span class="o">[</span>Processor quota-high<span class="o">]</span>
+--quota-limit QUOTA_LIMIT
+                        Quota limit occurrences, above this it will be
+                        considered an anomaly <span class="o">(</span>default: <span class="m">150</span><span class="o">)</span> <span class="o">[</span>Processor quota-
+                        high<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">loganom</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processor.html">Processors</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#postfix-sasl">Postfix SASL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quota-high">Quota High</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-execution">Sample execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#command-line-options">Command line options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="processor.html" title="previous chapter">Processors</a></li>
+      <li>Next: <a href="config.html" title="next chapter">Configuration</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Danilo G. Baio.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/usage.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
