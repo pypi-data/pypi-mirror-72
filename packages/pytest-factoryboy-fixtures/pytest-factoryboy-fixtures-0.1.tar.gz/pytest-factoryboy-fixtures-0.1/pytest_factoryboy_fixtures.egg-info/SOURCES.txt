@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+fixturegenerator/__init__.py
+fixturegenerator/command.py
+pytest_factoryboy_fixtures.egg-info/PKG-INFO
+pytest_factoryboy_fixtures.egg-info/SOURCES.txt
+pytest_factoryboy_fixtures.egg-info/dependency_links.txt
+pytest_factoryboy_fixtures.egg-info/entry_points.txt
+pytest_factoryboy_fixtures.egg-info/top_level.txt

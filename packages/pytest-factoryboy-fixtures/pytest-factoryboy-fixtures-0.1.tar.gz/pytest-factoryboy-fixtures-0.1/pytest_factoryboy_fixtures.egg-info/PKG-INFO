@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: pytest-factoryboy-fixtures
+Version: 0.1
+Summary: Generates pytest fixtures that allow the use of type hinting
+Home-page: https://github.com/G-HenriquezV/pytest-factoryboy-fixtures
+Author: Germán Henríquez
+Author-email: germanandres.hv@gmail.com
+License: UNKNOWN
+Description: # pytest-factoryboy-fixtures
+        Writes pytest fixtures for FactoryBoy with type hinting. The hints allow for proper code completion in your tests when using PyCharm. 
+        
+        ## Usage
+        `pytest-factoryboy-fixtures [comma seperated class names]`
+        
+        Add the generated code to your `conftest.py`.
+        
+        ### Example
+        
+        `>>> pytest-factoryboy-fixtures FirstClass,SecondClass`
+        ```python
+            @fixture
+            def first_class() -> FirstClass:
+                return FirstClassFactory()
+                
+                
+            @fixture
+            def first_class_factory() -> Union[Type[FirstClass], Type[FirstClassFactory]]:
+                return FirstClassFactory
+                
+                
+            @fixture
+            def second_class() -> SecondClass:
+                return SecondClassFactory()
+                
+                
+            @fixture
+            def second_class_factory() -> Union[Type[SecondClass], Type[SecondClassFactory]]:
+                return SecondClassFactory
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
