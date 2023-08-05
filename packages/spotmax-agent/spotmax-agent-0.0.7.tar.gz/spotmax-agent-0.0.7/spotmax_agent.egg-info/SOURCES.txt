@@ -1,0 +1,14 @@
+README.md
+setup.py
+spotmax_agent/__init__.py
+spotmax_agent/agent.py
+spotmax_agent/basemodule.py
+spotmax_agent/maxgroup_cmd.py
+spotmax_agent/scheduler.py
+spotmax_agent/taskmanager.py
+spotmax_agent/utils.py
+spotmax_agent.egg-info/PKG-INFO
+spotmax_agent.egg-info/SOURCES.txt
+spotmax_agent.egg-info/dependency_links.txt
+spotmax_agent.egg-info/entry_points.txt
+spotmax_agent.egg-info/top_level.txt

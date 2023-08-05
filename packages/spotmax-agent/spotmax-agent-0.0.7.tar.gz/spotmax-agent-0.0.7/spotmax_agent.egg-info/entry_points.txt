@@ -1,0 +1,3 @@
+[console_scripts]
+spotmax-agent = spotmax_agent:main
+
