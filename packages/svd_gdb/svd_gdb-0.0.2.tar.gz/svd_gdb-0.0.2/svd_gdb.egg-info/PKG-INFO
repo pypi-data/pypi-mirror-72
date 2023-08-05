@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: svd-gdb
+Version: 0.0.2
+Summary: Python interface to SVD files through GDB
+Home-page: http://github.com/markrages/svd_gdb
+Author: Mark Rages
+Author-email: markrages@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator

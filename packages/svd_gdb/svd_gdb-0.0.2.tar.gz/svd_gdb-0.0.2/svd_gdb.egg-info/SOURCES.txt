@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.py
+svd_gdb/__init__.py
+svd_gdb/gdb.py
+svd_gdb/make_stub.py
+svd_gdb/mutable_number.py
+svd_gdb/svd_gdb.py
+svd_gdb.egg-info/PKG-INFO
+svd_gdb.egg-info/SOURCES.txt
+svd_gdb.egg-info/dependency_links.txt
+svd_gdb.egg-info/not-zip-safe
+svd_gdb.egg-info/requires.txt
+svd_gdb.egg-info/top_level.txt
+svd_gdb/drivers/base.py
+svd_gdb/drivers/nrf5x.py
+svd_gdb/drivers/stm32.py
