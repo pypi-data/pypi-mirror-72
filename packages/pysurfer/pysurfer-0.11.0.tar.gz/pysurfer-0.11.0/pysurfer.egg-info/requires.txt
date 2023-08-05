@@ -1,0 +1,8 @@
+matplotlib
+mayavi
+nibabel>=1.2
+numpy
+scipy
+
+[save_movie]
+imageio>=1.5
