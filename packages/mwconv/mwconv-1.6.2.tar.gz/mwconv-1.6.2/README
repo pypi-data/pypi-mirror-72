@@ -1,0 +1,72 @@
+
+mwconv
+======
+
+Wiki text conversions based on MediaWiki
+----------------------------------------
+This program parses a dialect of MediaWiki syntax and converts it to various
+formats (html, plain text and markdown).
+
+This is intended for documentation written using the MediaWiki syntax instead of
+the Markdown syntax as is more popularly used these days; there are no wiki
+features such as internal links implemented.
+
+Tables and definition lists are supported.
+
+The markdown and text versions of this file are converted using this utility.
+
+Options
+-------
+Summary
+
+Options:
+ -h, --help show this help message and exit
+ -o FILE write to this file (default stdout)
+ -t TYPE, --type=TYPE select output type
+ -l NUMBER, --first-level=NUMBER
+
+The output TYPE can be one of:
+
+text
+    plain text output
+
+html
+    - html output
+
+md
+    markdown output
+
+md_safe
+    markdown output with html restricted to a 'safe' subset.
+
+mw
+    mediawiki output, the output will be a normalized form of the input. It will
+    also be affected by the first-level option if given.
+
+The first-level option sets the first heading level in the output. So if it is
+set to 1, the the first heading will be H1 in html regardless of what level it is
+in the input and all the other headings adjusted appropriately.
+
+Compatibility
+-------------
+The syntax is intended to be almost identical to MediaWiki text. Lots of people
+try (or used to try, markdown is commonly used now) to use MediaWiki for
+documentation since it is/was well known.
+
+However if your documentation contains lots of lists and code sections the syntax
+is not altogether convenient.
+
+ 1. A list item has to be all on one line.
+ 2. There can not be any blank lines between list items.
+ 3. A code example can't (easily) be part of a list item.
+
+So typically you use unordered lists and it all kind of looks ok in the browser,
+even though the code examples are not really in the list and break the list up
+into multiple lists.
+
+This implementation has the following improvements.
+
+ 1. A list item can be split onto more than one line.
+ 2. If an indented block follows the list item, then it will be actually inside
+    the list item.
+ 3. There are some alternative notations.
