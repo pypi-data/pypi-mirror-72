@@ -1,0 +1,3 @@
+[jupyterhub.authenticators]
+keystone = keystoneauthenticator:KeystoneAuthenticator
+
