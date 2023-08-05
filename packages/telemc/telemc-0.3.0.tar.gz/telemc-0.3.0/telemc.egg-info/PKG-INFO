@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: telemc
+Version: 0.3.0
+Summary: Python library for accessing telemd monitoring data
+Home-page: https://github.com/edgerun/telemc-py
+Author: Thomas Rausch
+Author-email: t.rausch@dsg.tuwien.ac.at
+License: UNKNOWN
+Description: telemc-py
+        =========
+        
+        Library for accessing and recording [telemd](https://github.com/edgerun/telemd) monitoring data.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
