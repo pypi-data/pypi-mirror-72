@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+suchdistribution/Binomialdistribution.py
+suchdistribution/Gaussiandistribution.py
+suchdistribution/Generaldistribution.py
+suchdistribution/__init__.py
+suchdistribution.egg-info/PKG-INFO
+suchdistribution.egg-info/SOURCES.txt
+suchdistribution.egg-info/dependency_links.txt
+suchdistribution.egg-info/not-zip-safe
+suchdistribution.egg-info/top_level.txt
