@@ -1,0 +1,10 @@
+setup.py
+distributions_GBCal/Binomialdistribution.py
+distributions_GBCal/Gaussiandistribution.py
+distributions_GBCal/Generaldistribution.py
+distributions_GBCal/__init__.py
+distributions_GBCal.egg-info/PKG-INFO
+distributions_GBCal.egg-info/SOURCES.txt
+distributions_GBCal.egg-info/dependency_links.txt
+distributions_GBCal.egg-info/not-zip-safe
+distributions_GBCal.egg-info/top_level.txt
