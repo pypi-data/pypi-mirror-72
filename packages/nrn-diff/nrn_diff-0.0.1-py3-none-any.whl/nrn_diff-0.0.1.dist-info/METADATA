@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: nrn-diff
+Version: 0.0.1
+Summary: Find the differences between NEURON objects.
+Home-page: https://github.com/dbbs-lab/scaffold
+Author: Robin De Schepper
+Author-email: robingilbert.deschepper@unipv.it
+License: GPLv3
+Project-URL: Bug Tracker, https://github.com/Helveg/nrn-diff/issues/
+Project-URL: Documentation, https://github.com/Helveg/nrn-diff
+Project-URL: Source Code, https://github.com/Helveg/nrn-diff
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# nrn-diff
+
+Find differences between NEURON objects.
+
+## Installation
+
+    pip install nrn-diff
+
+## Usage
+
+```python
+>>> from nrn_diff import pretty, diff
+>>> from patch import p
+>>> from neuron import h
+>>> s1 = p.Section()
+>>> s2 = h.Section()
+>>> diff(s1, s2)
+None
+>>> s1.insert('pas')
+>>> diff(s1, s2)
+{"segs": [({"pas": {"e": -70, "g": 0.001, "i": 0.0}}, None)]}
+>>> pretty(diff(s1, s2))
+1a) Arg 1 differs in segment 0:
+    * It has the mechanism 'pas' with params:
+        - e: -70
+        - g: 0.00
+1b) Arg 2 differs in segment 0:
+    * It does not have the mechanism 'pas'.
+```
+
+
