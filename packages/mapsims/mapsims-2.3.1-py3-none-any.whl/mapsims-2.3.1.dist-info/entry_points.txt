@@ -1,0 +1,3 @@
+[console_scripts]
+mapsims_run = mapsims.runner:command_line_script
+
