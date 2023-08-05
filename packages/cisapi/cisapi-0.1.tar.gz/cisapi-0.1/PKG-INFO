@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: cisapi
+Version: 0.1
+Summary: UNKNOWN
+Home-page: https://autodealerdata.com
+Author: Competitive Intelligence Solutions LLC
+Author-email: engineering@competitiveintelligencesolutions.com
+License: MIT
+Download-URL: https://github.com/CISAPI/CIS-API/archive/0.1.0.tar.gz
+Description: UNKNOWN
+Keywords: CIS,Automotive,API,Library
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
