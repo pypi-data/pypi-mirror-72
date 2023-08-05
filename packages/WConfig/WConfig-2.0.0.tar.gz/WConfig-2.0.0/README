@@ -1,0 +1,4 @@
+Config(path, encoding='utf-8', descriptions=[], format=...) => Create a config object
+Config().set(key, val) -> save object to file
+Config().get(key) -> get object from file
+Config().getAll() -> get all objects from file
