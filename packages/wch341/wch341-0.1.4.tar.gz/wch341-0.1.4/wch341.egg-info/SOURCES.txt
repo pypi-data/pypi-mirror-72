@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.py
+./assets/ch34x_install.exe
+./assets/ch34x_install.pkg
+assets/ch34x_install.exe
+assets/ch34x_install.pkg
+wch341/__init__.py
+wch341.egg-info/PKG-INFO
+wch341.egg-info/SOURCES.txt
+wch341.egg-info/dependency_links.txt
+wch341.egg-info/top_level.txt
