@@ -1,0 +1,6 @@
+colorama==0.4.1
+colorlog==4.0.2
+pyyaml==5.1.*
+Cerberus==1.2
+docker==3.7.0
+GitPython==3.0.8
