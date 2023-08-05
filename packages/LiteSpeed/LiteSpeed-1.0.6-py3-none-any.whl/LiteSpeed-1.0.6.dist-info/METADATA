@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: LiteSpeed
+Version: 1.0.6
+Summary: A simple, fast webserver that is mostly customizable. Includes websockets.
+Home-page: https://github.com/falconraptor/LiteSpeed
+Author: Dustin Surwill
+Author-email: dustinsurwill@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+master: ![Lint and Test: master](https://github.com/falconraptor/LiteSpeed/workflows/Lint%20and%20Test/badge.svg?branch=master)
+
+dev: ![Lint and Test: dev](https://github.com/falconraptor/LiteSpeed/workflows/Lint%20and%20Test/badge.svg?branch=dev)
+
+# LiteSpeed
+
+Just a simple-fast-multithreading webserver that is mostly customizable and only relies on pure python 3.6+.
+Has support for Cookies, Sessions, Websockets and serving files. It is similar to flask.
+
+Has a built in rendering system using the render method. A complicated example of this is the html/500.html file
+
+## Installation
+
+`pip install LiteSpeed`
+
+## Usage
+
+Any function with a route decorator must follow one of the following return patterns:
+- render(filename, dict)
+- static(filename)
+- str or bytes (body)
+- str or bytes (body), int (status code)
+- str or bytes (body), int (status code), dict (headers)
+
+---
+`~~test~~ (for example)`
+
+
