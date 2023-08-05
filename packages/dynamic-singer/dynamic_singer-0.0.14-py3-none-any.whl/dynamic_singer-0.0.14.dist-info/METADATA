@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: dynamic-singer
+Version: 0.0.14
+Summary: Python API, Dynamic source, Dynamic target, N targets, Prometheus exporter, realtime transformation for Singer ETL
+Home-page: https://github.com/huseinzol05/dynamic-singer
+Author: huseinzol05
+Author-email: husein.zol05@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7.*
+Requires-Dist: genson
+Requires-Dist: singer-python (==5.3.3)
+Requires-Dist: jsonschema
+Requires-Dist: herpetologist
+Requires-Dist: tornado
+
+UNKNOWN
+
+
