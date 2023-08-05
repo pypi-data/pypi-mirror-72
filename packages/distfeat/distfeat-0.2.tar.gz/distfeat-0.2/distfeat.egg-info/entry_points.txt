@@ -1,0 +1,3 @@
+[console_scripts]
+distfeat = distfeat.__main__:main
+

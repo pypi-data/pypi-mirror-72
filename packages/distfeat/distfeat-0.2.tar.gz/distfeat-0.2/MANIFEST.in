@@ -1,0 +1,7 @@
+include README.md
+include AUTHORS.md
+include CONTRIBUTING.md
+include LICENSE
+include requirements.txt
+include resources/models/*
+include resources/distances/*
