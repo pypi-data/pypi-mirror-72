@@ -1,0 +1,5 @@
+portmod>=2.0b0
+gitpython
+requests
+patool
+redbaron
