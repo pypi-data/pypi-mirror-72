@@ -1,0 +1,17 @@
+qwc_services_core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qwc_services_core/api.py,sha256=tz9U525StXsfA9GQN8Mgxc7dS0KiNb4BER7tu2UgtGQ,2240
+qwc_services_core/app.py,sha256=x9x7PUAGKLwrWPaWZ08OfhkfRRjiu0lZvsKBB3jI-Y8,442
+qwc_services_core/cache.py,sha256=0XNGp5-p_LsYVmQdFgxBXNl58YmbD9zvsbx1X8sGE_Q,3198
+qwc_services_core/config_models.py,sha256=_XALuisa7ueBEpD2AlvibswZOACTCCdklIP4d6wUPhA,5984
+qwc_services_core/database.py,sha256=_h5rQEtSGrxPltYeAjuzhzLAyFwkCG2Peo9VJY8-mkY,1540
+qwc_services_core/jwt.py,sha256=8Bvrue8ItTtULypAzfNKHyyrvw5kKD_kqFFoBMi-dyc,1400
+qwc_services_core/permission.py,sha256=iBd_nE_dr2WwZkgOl2YDxrxLp16i64HhxsnrKsYSns0,8902
+qwc_services_core/permissions_reader.py,sha256=7hjyDxAw21i7SGgiqZkxpxvX4VS2jdkVVnRtZ9t4MoE,4997
+qwc_services_core/runtime_config.py,sha256=lF1sdYCL9IlCz9FNxq1xjn89YiRqihP-rRdNHjbRd78,1761
+qwc_services_core/tenant_handler.py,sha256=kngnvILQLiY8-3ZV6Ak_Tkfu08eTu3lS4XHVF6E4q_k,4178
+qwc_services_core-0.10.0.dist-info/DESCRIPTION.rst,sha256=PbmALHtpGE1q0ZikUi0_96GwCiV1P22_y4vPJBu2Jkk,89
+qwc_services_core-0.10.0.dist-info/METADATA,sha256=ETxzVxYqCiLWIWcVr9U5sSxlAryN6Xjrolr-E2SbbhQ,550
+qwc_services_core-0.10.0.dist-info/RECORD,,
+qwc_services_core-0.10.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+qwc_services_core-0.10.0.dist-info/metadata.json,sha256=pCzERtl3ahRTveBi7owsUcKznEOwJ899gR-Xaw7SE3k,625
+qwc_services_core-0.10.0.dist-info/top_level.txt,sha256=IH2hqkbRf-KO-1mXz_UxsRq-v4RIB3eNO5BA2yuXOMs,18
