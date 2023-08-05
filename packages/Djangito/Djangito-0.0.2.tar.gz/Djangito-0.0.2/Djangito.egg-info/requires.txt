@@ -1,0 +1,14 @@
+django==2.2.10
+django-oauth-toolkit==1.2.0
+pyjwt==1.7.1
+djangorestframework==3.11.0
+
+[dev]
+django-debug-toolbar
+pipenv-setup
+ipython
+pytest
+pytest-cov
+pytest-django
+pytest-factoryboy
+pytest-pythonpath
