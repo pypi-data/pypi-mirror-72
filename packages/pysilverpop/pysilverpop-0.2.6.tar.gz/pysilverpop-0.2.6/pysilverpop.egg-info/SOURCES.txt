@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+pysilverpop.egg-info/PKG-INFO
+pysilverpop.egg-info/SOURCES.txt
+pysilverpop.egg-info/dependency_links.txt
+pysilverpop.egg-info/not-zip-safe
+pysilverpop.egg-info/requires.txt
+pysilverpop.egg-info/top_level.txt
+silverpop/__init__.py
+silverpop/api.py
+silverpop/utils.py
+silverpop/tests/__init__.py
+silverpop/tests/test_utils.py
