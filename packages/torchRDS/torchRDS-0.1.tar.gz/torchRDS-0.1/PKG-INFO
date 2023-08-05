@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: torchRDS
+Version: 0.1
+Summary: Reinforced Data Sampling for Model Diversification
+Home-page: https://github.com/probeu/RDS
+Author: Harry Nguyen
+Author-email: harry.nguyen@outlook.com
+License: MIT
+Download-URL: https://github.com/probeu/RDS/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: Data-Sampling,Reinforcement-Learning,Machine-Learning
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
