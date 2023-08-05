@@ -1,0 +1,11 @@
+mypy_boto3_license_manager/__init__.py,sha256=AbRhtr_fBkXqUEImUSRXNwH41wbVHF-Ia_HJ4EGfTpI,2054
+mypy_boto3_license_manager/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_license_manager/client.py,sha256=JxQBQBzwhZJwq5BSMUeTrGjhZ5p4s0vOct-J3bE-Zcw,12446
+mypy_boto3_license_manager/paginator.py,sha256=AX7Mm_PxO4yYqsMwL9dniL3qo4yO4XfcHxQzQph34qg,5936
+mypy_boto3_license_manager/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_license_manager/type_defs.py,sha256=DLCSz9VAop2rfBpwil8gM3olPVhROOLzF1qQUC1JX_A,9181
+mypy_boto3_license_manager/version.py,sha256=iY3dKFyxaAiZrvU4qnz2jjZfWd1yi0_SfcNzu0LDq4w,57
+mypy_boto3_license_manager-1.14.11.0.dist-info/METADATA,sha256=fsIgnGBSDk7oMmDSx8t_hcttRUf55NRqNN-2SOtDSco,5811
+mypy_boto3_license_manager-1.14.11.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_license_manager-1.14.11.0.dist-info/top_level.txt,sha256=jvQJx3CYZfe2bca54GHUXNYTUHaRVFucQ4o8CDvP0B4,27
+mypy_boto3_license_manager-1.14.11.0.dist-info/RECORD,,
