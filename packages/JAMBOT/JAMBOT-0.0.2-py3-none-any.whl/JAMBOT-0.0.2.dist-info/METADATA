@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: JAMBOT
+Version: 0.0.2
+Summary: Package for JAMBOT.
+Home-page: https://github.com/jayvishaalj
+Author: Jay Vishaal J
+Author-email: jayvishaalj.01@gmail.com
+License: GPL-3.0-only
+Keywords: python package webinarjam jayvishaalj attendance bot
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: selenium
+Requires-Dist: argparse
+Requires-Dist: win10toast
+
+A Bot made for automating the attendance in the webinar sessions in webinarJam only
+
+
