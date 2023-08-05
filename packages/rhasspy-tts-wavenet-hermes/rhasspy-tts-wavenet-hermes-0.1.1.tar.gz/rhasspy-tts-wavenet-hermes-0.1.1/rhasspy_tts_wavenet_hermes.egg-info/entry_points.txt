@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-tts-wavenet-hermes = rhasspytts_wavenet_hermes.__main__:main
+
