@@ -1,0 +1,15 @@
+GAnalytics.cpp
+GAnalytics.h
+LICENSE
+MANIFEST.in
+README.md
+igeGameAnalytics.cpp
+igeGameAnalytics.h
+igeGameAnalytics_doc_en.h
+setup.py
+igeGameAnalytics.egg-info/PKG-INFO
+igeGameAnalytics.egg-info/SOURCES.txt
+igeGameAnalytics.egg-info/dependency_links.txt
+igeGameAnalytics.egg-info/top_level.txt
+win32/GameAnalyticsImpl.cpp
+win32/GameAnalyticsImpl.h
