@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: geodn
+Version: 0.20200616.2
+Summary: Geo Domain Name
+Home-page: https://github.com/wxh06/geodn
+Author: 汪心禾
+Author-email: wangxinhe06@gmail.com
+License: MIT
+Download-URL: https://pypi.org/simple/geodn/
+Project-URL: Bug Tracker, https://github.com/wxh06/geodn/issues
+Project-URL: Documentation, https://github.com/wxh06/geodn#readme
+Project-URL: Release notes, https://github.com/wxh06/geodn/releases
+Project-URL: Source Code, https://github.com/wxh06/geodn
+Keywords: geolocation,geoip,geoip-database,geolite2,geolite2-country,domain-name
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2)
+Requires-Dist: geoip2
+
+# geodn
+[![Python package](https://github.com/wxh06/geodn/workflows/Python%20package/badge.svg)](https://github.com/wxh06/geodn/actions?query=workflow%3A%22Python+package%22)
+
+Geo Domain Name
+
+
