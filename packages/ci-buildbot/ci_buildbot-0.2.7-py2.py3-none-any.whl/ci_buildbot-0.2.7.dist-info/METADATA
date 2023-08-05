@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: ci-buildbot
+Version: 0.2.7
+Summary: Slack client for reporting on CodePipeline runs
+Home-page: https://github.com/caltechads/ci-buildbot
+Author: Caltech IMSS ADS
+Author-email: imss-ads-staff@caltech.edu
+License: UNKNOWN
+Keywords: aws,ecs,docker,devops
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: slackclient (>=2.5.0)
+Requires-Dist: docker (>=4.2.1)
+Requires-Dist: gitpython (>=3.1.0)
+Requires-Dist: giturlparse (>=0.9.2)
+Requires-Dist: click (>=7.0)
+Requires-Dist: jinja2 (>=2.11.1)
+Requires-Dist: pydantic (==1.4)
+Requires-Dist: pytz (==2019.1)
+
+# ci-buildbot
+
+`ci-buildbot` is a command line tool to do slack messaging from CodePipelines.  `ci-buildbot` acts as a Slack App in
+order to do its work.
+
+To install:
+
+```
+pyenv virtualenv 3.6.5 ci-buildbot
+pyenv local ci-buildbot
+pip install -r requirements.txt
+pip install -e .
+```
+
+Now set up the environment:
+
+```
+cp etc/environment.text .env
+```
+
+You'll need to know two things: 
+
+* `SLACK_API_TOKEN`: this your Slack app's Oath token
+* `CHANNEL`: this is the channel you want `ci-buildbot` to post into.  Note that if this is a private channel, you'll
+	need to invite the `ci-buildbot` app into that channel before you'll see any messages.
+
+Now you can run the main command, `buildbot`:
+
+```
+buildbot --help
+```
+
+
