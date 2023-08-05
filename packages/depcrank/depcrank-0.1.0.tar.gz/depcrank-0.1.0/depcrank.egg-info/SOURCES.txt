@@ -1,0 +1,17 @@
+setup.py
+depcrank/__init__.py
+depcrank/analyse.py
+depcrank/depcrank_analyse.py
+depcrank/depcrank_display.py
+depcrank/depcrank_rank.py
+depcrank/display.py
+depcrank/rank.py
+depcrank/utils.py
+depcrank.egg-info/PKG-INFO
+depcrank.egg-info/SOURCES.txt
+depcrank.egg-info/dependency_links.txt
+depcrank.egg-info/entry_points.txt
+depcrank.egg-info/top_level.txt
+depcrank/metrics/__init__.py
+depcrank/metrics/package-signed.py
+depcrank/metrics/popularity.py

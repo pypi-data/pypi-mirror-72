@@ -1,0 +1,5 @@
+[console_scripts]
+depcrank-analyse = depcrank.depcrank_analyse:main
+depcrank-display = depcrank.depcrank_display:main
+depcrank-rank = depcrank.depcrank_rank:main
+
