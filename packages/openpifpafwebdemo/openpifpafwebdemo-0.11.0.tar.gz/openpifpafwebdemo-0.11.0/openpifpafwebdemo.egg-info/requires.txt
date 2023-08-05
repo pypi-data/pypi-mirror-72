@@ -1,0 +1,7 @@
+openpifpaf>=0.10
+tornado>=6
+pillow<7
+
+[test]
+pylint
+pytest
