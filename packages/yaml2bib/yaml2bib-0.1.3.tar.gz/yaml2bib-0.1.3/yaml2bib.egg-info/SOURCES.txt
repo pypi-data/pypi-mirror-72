@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+tests/__init__.py
+tests/test_yaml2bib.py
+yaml2bib/__init__.py
+yaml2bib/_yaml2bib.py
+yaml2bib.egg-info/PKG-INFO
+yaml2bib.egg-info/SOURCES.txt
+yaml2bib.egg-info/dependency_links.txt
+yaml2bib.egg-info/entry_points.txt
+yaml2bib.egg-info/not-zip-safe
+yaml2bib.egg-info/requires.txt
+yaml2bib.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+yaml2bib = yaml2bib:_yaml2bib.cli
+
