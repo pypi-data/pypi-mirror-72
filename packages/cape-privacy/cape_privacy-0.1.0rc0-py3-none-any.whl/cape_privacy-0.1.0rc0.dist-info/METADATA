@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: cape-privacy
+Version: 0.1.0rc0
+Summary: Cape manages secure access to all of your data.
+Home-page: https://github.com/capeprivacy/cape-python
+Author: Cape Privacy
+Author-email: contact@capeprivacy.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Security :: Cryptography
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests (==2.23.0)
+Requires-Dist: pandas (==1.0.3)
+Requires-Dist: numpy (==1.18.1)
+Requires-Dist: pyyaml (==5.3.1)
+Requires-Dist: validators (==0.15.0)
+Provides-Extra: spark
+Requires-Dist: pyspark (>=2.4) ; extra == 'spark'
+Requires-Dist: pyarrow (>=0.15.1) ; extra == 'spark'
+
+UNKNOWN
+
+
