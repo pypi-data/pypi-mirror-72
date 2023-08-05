@@ -1,0 +1,12 @@
+wikipack/commands/__init__.py,sha256=K7EZB1oKruOoQ5UsUd6afnBYFGIrppJK7nSSFElPWMs,271
+wikipack/events/__init__.py,sha256=NpK0aguv2nrpGy6WCROOFR9FHI92u-w9beF2ASoKdHo,263
+wikipack/stars/__init__.py,sha256=d_hITNpBuch5PokliHwzBpxLQ2gPxD5TO8SjL1njATM,331
+wikipack/stars/api_wiki.py,sha256=x1NNGIi6xLUG8PVWM79sgRigsHJ7cVkQrzTjikIGGkE,8511
+wikipack/stars/api_wiki_list.py,sha256=DW3BIS0aUGITvd4uLMc4NRAptN8hxn8gCzO8lipFvPo,1158
+wikipack/tables/__init__.py,sha256=QwW10BfuhjAElPOcaSEMZfOJGYPYTjYhOv64myANy04,315
+wikipack/tables/wikideletion.py,sha256=c3L74pa_4_SIH8UTZvLWlrF_F8CstxVFfuVPv32v-zc,915
+wikipack/tables/wikirevision.py,sha256=uYI84E9zMyxxu60kWPkCEvSugjbtQmhzk--voExD-9I,2274
+wikipack/version.py,sha256=DepGznRTQsr-HaXYR87ZZpKoaQn97aY0t2xfbW_LOlE,19
+wikipack-1.1.0.dist-info/WHEEL,sha256=0LqClw0y45nNGWtOkoSiM9aN5p1kS5vGsVfoCyuJCNA,85
+wikipack-1.1.0.dist-info/METADATA,sha256=rYKRQbdqDEuY5eWptJ_7AprUZaXChdk4074tk7FSeHI,1455
+wikipack-1.1.0.dist-info/RECORD,,
