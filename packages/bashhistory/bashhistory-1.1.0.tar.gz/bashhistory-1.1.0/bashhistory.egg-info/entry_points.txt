@@ -1,0 +1,8 @@
+[console_scripts]
+hist = bashhistory.cli:hist
+hist_db_create = bashhistory.cli:hist_db_create
+hist_db_insert = bashhistory.cli:hist_db_insert
+hist_grep = bashhistory.cli:hist_grep
+hist_grep_copy = bashhistory.cli:hist_grep_copy
+hist_grep_exec = bashhistory.cli:hist_grep_exec
+
