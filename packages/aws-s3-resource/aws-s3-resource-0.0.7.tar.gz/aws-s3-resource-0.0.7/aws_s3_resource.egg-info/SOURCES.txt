@@ -1,0 +1,11 @@
+README.md
+setup.py
+aws_s3_resource/__init__.py
+aws_s3_resource/s3_bucket.py
+aws_s3_resource/s3_bucket_error.py
+aws_s3_resource/s3_object.py
+aws_s3_resource.egg-info/PKG-INFO
+aws_s3_resource.egg-info/SOURCES.txt
+aws_s3_resource.egg-info/dependency_links.txt
+aws_s3_resource.egg-info/requires.txt
+aws_s3_resource.egg-info/top_level.txt
