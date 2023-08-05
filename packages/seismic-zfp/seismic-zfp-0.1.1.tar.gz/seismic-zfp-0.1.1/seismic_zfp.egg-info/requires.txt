@@ -1,0 +1,10 @@
+numpy>=1.16
+segyio
+zfpy
+psutil
+pillow
+matplotlib
+Cython
+
+[:python_version < "3"]
+functools32
