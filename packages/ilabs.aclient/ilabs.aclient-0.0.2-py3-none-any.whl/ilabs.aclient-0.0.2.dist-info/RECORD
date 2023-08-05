@@ -1,0 +1,14 @@
+ilabs.aclient-0.0.2-nspkg.pth,sha256=TIsQ2lVWw2AI6wU4DS7QAwmP5JFdx3YG3hTqQoYhhn8,534
+ilabs/aclient/__init__.py,sha256=zSTtf874sv8iEG_I7zzBB1rQ3I70e_O5FdE4pRskNRw,303
+ilabs/aclient/get_secret.py,sha256=HB2BhmwBtC-TJN3noqP5uaklPfGuQI1bm5tU28vxDks,1303
+ilabs/aclient/ilabs_api.py,sha256=BBxXJzSjjIqWygO_ksdFi5IqxCgAO088amMDeh_uTRI,8273
+ilabs/aclient/ilabs_bulk_predict.py,sha256=KSA1oklE45oVFaWk9fD35hLhJcMuNns3NGxGtr1IV9M,3466
+ilabs/aclient/ilabs_predictor.py,sha256=MvmyogyW8QKOFOk9M-lmzEGDXYOE9v49UPstpCyBeEQ,2453
+ilabs/aclient/send_request.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ilabs.aclient-0.0.2.dist-info/LICENSE,sha256=zGTUKin-Xxvqrt6wKWZHqiCwPAm9fZGohqvHZWLy6Vk,1070
+ilabs.aclient-0.0.2.dist-info/METADATA,sha256=FDXSTLPdBLGRiSfFX9Ohav83IYlm40BLvg1YrAYBVbM,2509
+ilabs.aclient-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ilabs.aclient-0.0.2.dist-info/entry_points.txt,sha256=QK3mGVAtdwWmhkwp_J2miOwtTVMgMEN86pTn74qQpkE,77
+ilabs.aclient-0.0.2.dist-info/namespace_packages.txt,sha256=ANUT4VIcoiAdC7s28anBxMabo9qtL4LfUxjyYJk4KHQ,6
+ilabs.aclient-0.0.2.dist-info/top_level.txt,sha256=ANUT4VIcoiAdC7s28anBxMabo9qtL4LfUxjyYJk4KHQ,6
+ilabs.aclient-0.0.2.dist-info/RECORD,,
