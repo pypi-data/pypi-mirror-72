@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: miyadaiku-theme-newblog
+Version: 1.10.dev4
+Summary: Newly designed blog site for miyadaiku miyadaiku static site generator
+Home-page: https://miyadaiku.github.io/miyadaiku-theme-newblog
+Author: Atsuo Ishimoto
+License: MIT
+Project-URL: Documentation, https://miyadaiku.github.io/
+Project-URL: Source, https://miyadaiku.github.io/miyadaiku-theme-jquery
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Requires-Dist: miyadaiku (>=1.5.0)
+Requires-Dist: miyadaiku-theme-bootstrap4
+Requires-Dist: miyadaiku-theme-fontawesome
+Provides-Extra: dev
+Requires-Dist: wheel ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: autoflake ; extra == 'dev'
+
+
+
+miyadaiku_theme_newblog
+============================================================
+
+Newly designed blog theme for miyadaiku static site generator.
+
+
+Installation
+-------------------
+
+::
+
+   $ pip install miyadaiku_theme_newblog
+
+
+Configuraion
+----------------------
+
+
+In your config.yml file of your project, add following configuration at `themes` section.
+
+::
+
+   themes:
+     - miyadaiku_theme_newblog   # <---- add this line
+
+
+
+History
+-------------------
+
+1.10.0
+~~~~~~~~~~~~
+
+- Minimize css
+
+

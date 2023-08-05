@@ -1,0 +1,45 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<div class="container article_container">
+  <div class="row">
+    <div class="col-md-9">
+
+      {% block article %}
+      <div class="article">
+        {% if page.get_config('title', '') %}
+        <div class="article_title">
+          <h1>
+            {{ page.title }}
+          </h1>
+        </div>
+        {% endif %}
+
+        <div class="article_body">
+          {{ page.html }}
+        </div>
+      </div>
+      {% endblock article %}
+    </div>
+
+    <div class="col-md-3">
+      {% block metadata %}
+      <div class="article_metadata">
+        {% if page.date %}
+          <div class="article_date"> {{ page.date.strftime("%Y-%m-%d") }} </div>
+          <hr/>
+        {% endif %}
+        <div class="article_tag_links">
+          {% for tag in page.tags %}
+            <span class="article_tag_link">{{ page.link_to('/index_tags.yml', group_value=tag, text=tag) }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endblock metadata %}
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}

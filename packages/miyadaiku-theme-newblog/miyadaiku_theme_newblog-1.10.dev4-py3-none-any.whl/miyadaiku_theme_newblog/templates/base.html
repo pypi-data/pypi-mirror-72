@@ -1,0 +1,125 @@
+{% extends 'miyadaiku.themes.base!base.html' %} 
+
+{% block head %} 
+  {{ super() }}
+
+
+<!-- include docutils5 css -->
+{{ docutils_html5.load_css(page) }}
+
+<!-- include pygments css -->
+{{ pygments.load_css(page) }}
+
+<!-- include boolstrap4 -->
+{{ bootstrap4.load_css(page) }}
+
+<!-- include jquery.js -->
+{{ jquery.load_js(page) }}
+
+<!-- include popper.js -->
+{{ popper_js.load_js(page) }}
+
+<!-- include boolstrap4 js -->
+{{ bootstrap4.load_js(page) }}
+
+<!-- include font awesome -->
+{{ fontawesome.load_css(page) }}
+
+<!-- include ipynb minimum style -->
+{{ ipynb.load_css_min(page) }}
+
+<link rel="stylesheet" href="{{ page.path_to('/static/css/sample_index_pagenation.css') }}">
+<link href="{{page.path_to('/static/newblog/ipynb_styles.css') }}" rel="stylesheet">
+
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+<!-- MathJax configuration -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true }
+    }
+});
+</script>
+
+<link rel="stylesheet" href="{{page.path_to("/static/newblog/main.css")}}">
+
+{% if page.get_config('favicon', None) %}
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ page.path_to(page.favicon) }}">
+{% endif %}
+
+<link href="{{ page.load('/atom.yml').url }}" type="application/atom+xml" rel="alternate" title="{{page.site_title}} Atom Feed" />
+<link href="{{ page.load('/rss.yml').url }}" type="application/rss+xml" rel="alternate" title="{{page.site_title}} RSS Feed" />
+
+{{ macros.opengraph(page, abstract_length=128) }}
+
+
+{% endblock head %} 
+
+{% block body %} 
+<div>
+
+{% block navbar %}
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{{ page.path_to('/index.yml')}}"
+      >
+      {% if page.get_config('site_logo', None) %}
+        <img src="{{ page.path_to(page.site_logo) }}" width="32" height="32"/>
+      {% endif %}
+      {{ page.site_title }} </a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="{{ page.path_to('/about.md')}}">このサイトについて</a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+{% endblock navbar %} 
+
+{% block content %} 
+
+{% endblock content %}
+
+
+{% block footer_copyright %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-9"></div>
+    <div class="col-md-3 copyright">
+      <p class="copyright-text">{{page.copyright}}</p>
+      <p class="copyright-text">Powered by <a href="https://github.com/miyadaiku/miyadaiku">miyadaiku</a></p>
+    </div>
+  </div>
+</div>
+{% endblock footer_copyright %}
+
+
+</div>
+
+{% endblock body %}
