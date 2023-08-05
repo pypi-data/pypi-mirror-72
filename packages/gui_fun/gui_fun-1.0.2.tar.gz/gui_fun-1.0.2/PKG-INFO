@@ -1,0 +1,16 @@
+Metadata-Version: 1.0
+Name: gui_fun
+Version: 1.0.2
+Summary: Create a basic gui for a function
+Home-page: http://cct.lsu.edu/~sbrandt/
+Author: Steven R. Brandt
+Author-email: steven@stevenrbrandt.com
+License: LGPL
+Description: 
+          Create a basic gui for a function.
+          Calling gui_fun(func) will generate a sequence of input boxes
+          for each argument in func, plus a run button to execute the function.
+          The output of gui_fun() is an asyncio.Future that can be queried for
+          the result.
+          
+Platform: UNKNOWN
