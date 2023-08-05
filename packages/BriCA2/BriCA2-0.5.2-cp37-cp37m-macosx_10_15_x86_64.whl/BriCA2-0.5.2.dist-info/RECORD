@@ -1,0 +1,16 @@
+brica.cpython-37m-darwin.so,sha256=ncNvUDzbjzIA2fCmsePgPf_kYxbGAOKmv2vto5GpFtU,329472
+BriCA2-0.5.2.data/headers/assocvec.hpp,sha256=Juqe31xImEUEV26fTM1WtgGfiwu00wsu2Ly34IyILQk,11182
+BriCA2-0.5.2.data/headers/brica.hpp,sha256=NJAKYhlGiEgV54oK06DA-XS02KrF5kTN0pDdDH4XZb0,1236
+BriCA2-0.5.2.data/headers/buffer.hpp,sha256=DpCHTYdQ7SPsbCRv26idyEaClzyugRVMdHi0J3ZnZi8,7232
+BriCA2-0.5.2.data/headers/component.hpp,sha256=hyrwl7By8dqYgjRnuWSxyoUK5z8hhLfPu-IsmKHWGDo,3339
+BriCA2-0.5.2.data/headers/functor.hpp,sha256=cHbxFJ_Jc9SR6-6ZCTwcoGPio7M-Ans-xqe5snkeEAI,1324
+BriCA2-0.5.2.data/headers/mpi.hpp,sha256=hMVTdyLmo-eXHN-fDXGCAShug6rGHHIi4TNB5nfiz2o,5667
+BriCA2-0.5.2.data/headers/port.hpp,sha256=7hLnLnpOsvJ5WwSezZ8GLAeMoBSAMr3UHjf5te-gObo,1428
+BriCA2-0.5.2.data/headers/scheduler.hpp,sha256=qzuGFq9Spol_N-9ovzFtyN0iTgOuIWr0WRovz3vLgl4,5011
+BriCA2-0.5.2.data/headers/thread_pool.hpp,sha256=fsCmVXPVABjK4zwFadL1dN55icXR05urh7e5YhAx-s4,2508
+_brica/__init__.py,sha256=FaTVChPLnd0_cQOeLN95c3Ch17HCPp6uDcCaZKDvMXE,1098
+BriCA2-0.5.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+BriCA2-0.5.2.dist-info/METADATA,sha256=T-qYSwG53KAIg4Ht7Ya0mKaEB-fhW6tlhZ5f-_SF9H8,401
+BriCA2-0.5.2.dist-info/WHEEL,sha256=d1FXElTc2O1aD-DA111TtqEjjjICRp-GfmLEJcA56oY,111
+BriCA2-0.5.2.dist-info/top_level.txt,sha256=-ajxlW-FGqi05vzUyKt2cVm4cXRbQfOmXFwSvA-0fiI,13
+BriCA2-0.5.2.dist-info/RECORD,,
