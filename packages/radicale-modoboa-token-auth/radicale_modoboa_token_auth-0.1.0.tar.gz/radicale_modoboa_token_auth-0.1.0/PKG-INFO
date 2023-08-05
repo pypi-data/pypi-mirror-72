@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: radicale_modoboa_token_auth
+Version: 0.1.0
+Summary: A token based authentication plugin for Radicale provided by Modoboa.
+Home-page: https://github.com/modoboa/radicale-modoboa-auth-token
+Author: Antoine Nguyen
+Author-email: tonio@ngyn.org
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: POSIX
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
