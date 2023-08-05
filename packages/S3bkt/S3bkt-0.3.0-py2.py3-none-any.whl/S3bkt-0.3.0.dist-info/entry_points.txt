@@ -1,0 +1,4 @@
+
+        [console_scripts]
+    s3bkt=s3bkt.command:main
+    
