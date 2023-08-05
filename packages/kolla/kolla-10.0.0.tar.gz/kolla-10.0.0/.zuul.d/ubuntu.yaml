@@ -1,0 +1,78 @@
+---
+- project:
+    check:
+      jobs:
+        - kolla-build-ubuntu-binary
+        - kolla-build-ubuntu-source
+        - kolla-ansible-ubuntu-source
+        - kolla-ansible-ubuntu-binary
+        - kolla-ansible-ubuntu-source-upgrade
+        # Test rabbitmq and mariadb in multinode ceph jobs.
+        - kolla-ansible-ubuntu-source-ceph-ansible:
+            files: ^docker\/(base|cinder|glance|mariadb|openstack-base|rabbitmq)\/.*
+        - kolla-ansible-ubuntu-source-upgrade-ceph-ansible:
+            files: ^docker\/(base|cinder|glance|mariadb|openstack-base|rabbitmq)\/.*
+        - kolla-ansible-ubuntu-source-zun:
+            files: ^docker\/(base|cinder|etcd|iscsid|kuryr|openstack-base|zun)\/.*
+        - kolla-ansible-ubuntu-source-ironic:
+            files: ^docker\/(base|dnsmasq|ironic|ironic-inspector|iscsid|openstack-base)\/.*
+        - kolla-ansible-ubuntu-source-swift:
+            files: ^docker/(base|openstack-base|glance|swift)/
+    check-arm64:
+      jobs:
+        - kolla-build-ubuntu-source-aarch64
+    gate:
+      queue: kolla
+      jobs:
+        - kolla-build-ubuntu-source
+        - kolla-ansible-ubuntu-source
+        - kolla-ansible-ubuntu-source-upgrade
+    periodic:
+      jobs:
+        - kolla-publish-ubuntu-source
+        - kolla-publish-ubuntu-binary
+    release:
+      jobs:
+        - kolla-publish-ubuntu-source
+        - kolla-publish-ubuntu-binary
+
+- job:
+    name: kolla-build-ubuntu-binary
+    parent: kolla-base
+    nodeset: kolla-ubuntu-bionic
+    voting: false
+    vars:
+      base_distro: ubuntu
+      install_type: binary
+
+- job:
+    name: kolla-publish-ubuntu-binary
+    parent: kolla-build-ubuntu-binary
+    post-run: tests/playbooks/publish.yml
+    vars:
+      publisher: true
+    secrets:
+      - kolla_dockerhub_creds
+
+- job:
+    name: kolla-build-ubuntu-source
+    parent: kolla-base
+    nodeset: kolla-ubuntu-bionic
+    vars:
+      base_distro: ubuntu
+      install_type: source
+
+- job:
+    name: kolla-build-ubuntu-source-aarch64
+    parent: kolla-build-ubuntu-source
+    nodeset: kolla-ubuntu-bionic-aarch64
+    voting: false
+
+- job:
+    name: kolla-publish-ubuntu-source
+    parent: kolla-build-ubuntu-source
+    post-run: tests/playbooks/publish.yml
+    vars:
+      publisher: true
+    secrets:
+      - kolla_dockerhub_creds
