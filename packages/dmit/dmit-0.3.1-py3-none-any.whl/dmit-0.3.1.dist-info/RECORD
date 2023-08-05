@@ -1,0 +1,15 @@
+dmit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dmit/datetools.py,sha256=koJqsZfWNaMvNGrrbXbLt8jfjnFz01ODGun84lTEbEE,4459
+dmit/geotools.py,sha256=1z84tQ4sY1ZwctXgyPXkZje5Db_dIToBoONvM7l2Urk,4376
+dmit/ostools.py,sha256=AxmJGjC3eIFJj0gupIawy3tClsLOazwjOlj7DOryooc,2591
+dmit/regrot.py,sha256=AsbrTAUgFIZ-Umlkfj4hRVJtf_SVfQx8ZQ2vSiPSAq8,4049
+dmit/calc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dmit/calc/pressure.py,sha256=D2y53QyKkCT4Eake41caARX8AOo2hZ9AkWucfSqzZPI,3361
+dmit/calc/vanulden.py,sha256=bq7x2lKK6wUxVITEAlZuUy06ZTdlzHIZr9-WotVVAgU,8067
+dmit/stats/__init__.py,sha256=pTD5uwin4sIqQ4W_7HYD1muVWXO_uueuB3A3MSI3TvM,1705
+dmit/stats/fss.py,sha256=r6tnl3Fy8MLRqdwbv-bQpEfhXZFopGDWrFaqp24JtKw,3037
+dmit-0.3.1.dist-info/LICENSE,sha256=ED03QsM4XBkC4KJiLoXnb_ecYzlw6A2O4lh9tttpEKE,1047
+dmit-0.3.1.dist-info/METADATA,sha256=QXHkDIYY5IH76NPjhsUk307-s7s-izNdwdLCvt7gA68,846
+dmit-0.3.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+dmit-0.3.1.dist-info/top_level.txt,sha256=1b3y11A-OATBMdHkRA7tEYv3yXQ47rCrb7fzKgDmVqY,5
+dmit-0.3.1.dist-info/RECORD,,
