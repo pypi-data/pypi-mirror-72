@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+mypackage/__init__.py
+mypackage/__version__.py
+mypackage/core.py
+timefcuk_concourse_ci_test.egg-info/PKG-INFO
+timefcuk_concourse_ci_test.egg-info/SOURCES.txt
+timefcuk_concourse_ci_test.egg-info/dependency_links.txt
+timefcuk_concourse_ci_test.egg-info/top_level.txt
