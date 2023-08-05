@@ -1,0 +1,4 @@
+psutil>=4.4.0
+
+[:sys_platform == "linux" or sys_platform == "linux2"]
+xvfbwrapper>=0.2.9
