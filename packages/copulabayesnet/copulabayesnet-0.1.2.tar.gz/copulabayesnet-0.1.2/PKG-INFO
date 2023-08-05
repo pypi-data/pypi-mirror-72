@@ -1,0 +1,26 @@
+Metadata-Version: 1.2
+Name: copulabayesnet
+Version: 0.1.2
+Summary: Test different copulas and use multivariate Gaussian copulas
+Home-page: https://github.com/SjoerdGn/copulabayesnet
+Author: Sjoerd Gnodde
+Author-email: 
+License: MIT
+Description: # copulabayesnet
+        
+        * Load data
+        * Test Copulas
+        * Predict from multivariate normal copulas
+        * Generate several useful plots
+        
+Keywords: Copulas,Bayesian Networks,Multivariate normal
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
