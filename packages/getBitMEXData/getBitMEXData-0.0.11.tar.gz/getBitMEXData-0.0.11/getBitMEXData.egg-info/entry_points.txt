@@ -1,0 +1,4 @@
+[console_scripts]
+getBitMEXData = getBitMEXData.getBitMEXData:main_prg
+update-kola = getBitMEXData.update_kola:main_prg
+
