@@ -1,0 +1,15 @@
+README.md
+setup.py
+torchtrace/__init__.py
+torchtrace/__main__.py
+torchtrace/base.py
+torchtrace/init.py
+torchtrace/nn.py
+torchtrace/optim.py
+torchtrace/test.py
+torchtrace/tracer.py
+torchtrace/utils.py
+torchtrace.egg-info/PKG-INFO
+torchtrace.egg-info/SOURCES.txt
+torchtrace.egg-info/dependency_links.txt
+torchtrace.egg-info/top_level.txt
