@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cabean
+Version: 0.90
+Summary: Python interface to CABEAN, A Software Tool for the Control of Asynchronous Boolean Networks
+Home-page: https://github.com/algorecell/pyCabean
+Author: Loïc Paulevé
+Author-email: loic.pauleve@labri.fr
+License: UNKNOWN
+Keywords: computational systems biology
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Dist: colomoto-jupyter
+Requires-Dist: algorecell-types
+
+UNKNOWN
+
+
