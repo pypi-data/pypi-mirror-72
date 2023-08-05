@@ -1,0 +1,3 @@
+[console_scripts]
+ghcrypt = ghcrypt.ghcrypt_main:main
+

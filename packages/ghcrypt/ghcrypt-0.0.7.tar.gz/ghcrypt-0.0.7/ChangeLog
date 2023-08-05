@@ -1,0 +1,39 @@
+CHANGES
+=======
+
+0.0.7
+-----
+
+* Remove extranous print
+
+0.0.6
+-----
+
+* Allow target user key selection
+
+0.0.5
+-----
+
+* Recommended to be PAT not password now
+
+0.0.4
+-----
+
+* Fix python3 unicode cfg.readfp issue
+
+0.0.3
+-----
+
+* Fix setup.cfg with various attributes
+
+0.0.2
+-----
+
+* Fix raw\_input on py3.x
+
+0.0.1
+-----
+
+* Rename cryptic to ghcrypt
+* Make README.rst more useful
+* Initial commit
