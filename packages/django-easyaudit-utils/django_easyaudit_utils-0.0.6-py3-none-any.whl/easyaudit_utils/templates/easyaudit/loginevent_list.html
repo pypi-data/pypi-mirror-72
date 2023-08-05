@@ -1,0 +1,58 @@
+{% extends 'base/banking_base.html' %}
+{% load i18n humanize static %}
+
+{% block content %}
+<div id="ledger-account-list-app">
+    <h2 class="mt-3">{% trans 'LOGIN Events' %}</h2>
+    
+    {% include "easyaudit/_filters.html" %}
+    <hr/>
+
+<div name="fade">
+    <div v-show="list_ledger_accounts" class="">
+        <table class="table table-bordered bg-white table-hover table-striped">
+        <thead class="">
+            <tr>
+                <th>{% trans 'Date' %}</th>
+                <th>{% trans 'Login Type' %}</th>
+                <th>{% trans 'Username' %}</th>
+                <th>{% trans 'User' %}</th>
+                <th>{% trans 'Remote IP' %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for login in object_list %}
+        <tr>
+            <td>{{ login.datetime }}</td>
+            <td>
+              <span class=" badge
+              {% if login.login_type == login.LOGIN %}
+              badge-success
+              {% elif login.login_type == login.LOGOUT %}
+              badge-warning
+              {% elif login.login_type == login.FAILED %}
+              badge-danger
+              {% endif %}
+              ">
+                {{ login.get_login_type_display }}
+              </span>
+            </td>
+            <td>{{ login.username }}</td>
+            <td>{{ login.user.email }}</td>
+            <td>{{ login.remote_ip }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="7">{% trans 'No Login Event' %}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+    {% include "libs/pagination.html" with page_obj=page_obj %}
+    </div>
+</div>
+
+
+</div>
+{% endblock %}
