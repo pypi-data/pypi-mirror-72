@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: generallibrary
+Version: 1.1.1
+Summary: Fixed Timer again, now using time.time() which is the same os.path.getmtime() uses. Random functions to help with native classes.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
