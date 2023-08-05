@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: herborist
+Version: 3.3.1
+Summary: Graphical tool to detect and configure Dynamixel motors
+Home-page: https://github.com/poppy-project/herborist
+Author: See https://github.com/poppy-project/herborist/graphs/contributors
+Author-email: dev@poppy-station.org
+License: GNU GENERAL PUBLIC LICENSE Version 3
+Description: # Herborist
+        Herborist is a graphical tool that helps you detect and configure motors before using them in your Poppy creature.
+        
+        Herborist is entirely written in Python and uses the PyQt5 module for the graphical user interface. So you 
+        
+        More precisely, Herborist can be used to:
+        
+            Find and identify available serial ports
+            Scan multiple baud rates to find all connected motors
+            Modify the EEPROM configuration (of single or multiple motors)
+            Make motors move (e.g. to test the angle limits).
+        
+        You can directly launch herborist by running the herborist command in your terminal.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Provides-Extra: doc
