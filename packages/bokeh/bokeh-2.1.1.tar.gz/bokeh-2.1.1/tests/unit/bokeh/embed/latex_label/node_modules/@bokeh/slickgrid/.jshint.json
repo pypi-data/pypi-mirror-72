@@ -1,0 +1,9 @@
+{
+  "browser": true,
+  "node": true,
+  "globals": {
+    "$": false,
+    "jQuery": false,
+    "alert": false
+  }
+}
