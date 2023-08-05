@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "data-inventory-tool"
+version = "0.1.3"
+description = "Extracts data structure from various sources."
+readme = "README.rst"
+authors = ["Mantas <sirexas@gmail.com>"]
+license = "MIT"
+packages = [
+    {include = "datainventory"},
+]
+include = [
+    "README.rst",
+]
+
+[tool.poetry.scripts]
+inventory-table = 'datainventory.cli:main'
+
+[tool.poetry.dependencies]
+python = "^3.8"
+sqlalchemy = "^1.3.17"
+click = "^7.1.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4.3"
+pytest-cov = "^2.10.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
