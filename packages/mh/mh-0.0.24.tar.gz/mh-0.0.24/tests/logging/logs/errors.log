@@ -1,0 +1,20 @@
+2020-06-22 17:34:32 {eg_app.py:23} ERROR - eg
+Traceback (most recent call last):
+  File "eg_app.py", line 21, in <module>
+    1/0
+ZeroDivisionError: division by zero
+2020-06-22 17:36:28 {eg_app.py:23} ERROR - eg
+Traceback (most recent call last):
+  File "eg_app.py", line 21, in <module>
+    1/0
+ZeroDivisionError: division by zero
+2020-06-22 17:36:40 {eg_app.py:23} ERROR - eg
+Traceback (most recent call last):
+  File "eg_app.py", line 21, in <module>
+    1/0
+ZeroDivisionError: division by zero
+2020-06-22 17:37:08 {eg_app.py:23} ERROR - eg
+Traceback (most recent call last):
+  File "eg_app.py", line 21, in <module>
+    1/0
+ZeroDivisionError: division by zero
