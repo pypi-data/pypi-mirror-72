@@ -1,0 +1,15 @@
+monasca_statsd-2.1.0.dist-info/DESCRIPTION.rst,sha256=a2SZ2B14BTIpvKDKC_aNtXN98qPXjDf3Sagx7i8oeH8,2356
+monasca_statsd-2.1.0.dist-info/METADATA,sha256=sBOTgvXJhIXctB5fiGu3Gm4i9YRaHPEGE-HmXsOPdrc,3232
+monasca_statsd-2.1.0.dist-info/RECORD,,
+monasca_statsd-2.1.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+monasca_statsd-2.1.0.dist-info/metadata.json,sha256=VfjKKNYR_oBAz1AdZ4eQM_iW2MgGrerfehzPjSyHVYQ,1312
+monasca_statsd-2.1.0.dist-info/pbr.json,sha256=QXi6f4wh1CNcx_w0Dk27Enqph7Yz2oFFSpKf8GIdDX8,46
+monasca_statsd-2.1.0.dist-info/top_level.txt,sha256=vfcUUIa1fwB0iyUNn93E9j7AqIXL0c4GxnVmKkH366A,14
+monascastatsd/__init__.py,sha256=avh83Ts4ArgdRLsyGC2Y4izW5FNbp2hEdYdd-VzFa9M,1051
+monascastatsd/client.py,sha256=_xxgmW0zInOxf43PK-DHO6iKg4nztlpjBTGbK5iyr4Q,5091
+monascastatsd/common.py,sha256=WQzwhzk1NpoVbx3-LXc8PeOAnNmkKpBnlpv3hRbCQ5k,921
+monascastatsd/connection.py,sha256=PyCJZgMaVXLzGtEmevk5n0HTvyBGdY6_p-kGblhYVVs,5708
+monascastatsd/counter.py,sha256=ymzK-g4Z0RXPkzTvLDYiZMWbYc8geryTwQUZuSSfnQs,3943
+monascastatsd/gauge.py,sha256=Eph8J-t2ONp-curCke8YecRs79wOzzR-Ye1YcQDrOII,3147
+monascastatsd/metricbase.py,sha256=K8BATalAwj9o9BQrTIBknsAZhlyZbxQbEAxoC9_sAjA,2873
+monascastatsd/timer.py,sha256=AdfhR2LNZzLWH-JH-ZmJoHNoC1pBCWvaWZj5EOPvnkY,4758
