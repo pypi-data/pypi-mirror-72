@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: virtru-sdk
+Version: 2.1.2a153
+Summary: Python Wrapper for Virtru SDK
+Home-page: https://developer.virtru.com/
+Author: Virtru
+Author-email: developers@virtru.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Description-Content-Type: text/markdown
+
+# Virtru Python SDK
+
+The Virtru Platform enables developers to build extensive data protection into their apps and workflows without being security experts. Any protected data can be tracked, controlled, and accessed on any platform. Virtru’s split-knowledge architecture enables developers to ship with key management best practices, meet compliance standards like GDPR, HIPPA, FedRAMP, and deliver secure features on time.
+
+The Virtru Python SDK allows developers to easily create and manage encrypted [Trusted Data Format (TDF) objects](https://github.com/virtru/tdf3-spec) and interact with Virtru's [Key Access and Entity Attribute Services (KAS, EAS).](https://developer.virtru.com/docs/architecture) 
+
+* [Quick Start](https://developer.virtru.com/docs/getting-started-python)
+* [Documentation & Guides](https://developer.virtru.com/docs/python)
+* [Sample Apps](https://developer.virtru.com/docs/sample-apps)
+* [More Virtru SDKs](https://developer.virtru.com/docs/sdk)
+
+## Installation
+Upgrade pip3 to the latest version and run
+```
+pip3 install virtru-sdk
+```
+
+## Authentication 
+Virtru requires an AppID for authentication. You can get an AppID from [Virtru Dashboard](https://virtru.com/dashboard) by following these instructions ([How to Download an AppID Token](https://developer.virtru.com/docs/how-to-download-appid-token))
+
+Once you have an AppID, authenticate with the code below:
+```python
+client = Client(owner=VIRTRU_SDK_EMAIL, app_id=VIRTRU_SDK_APP_ID)
+```
+## Create Encrypted TDF Objects
+```python
+unprotected_file = "sensitive.txt"
+protected_file = unprotected_file + ".tdf.html"
+param = EncryptFileParams(in_file_path=unprotected_file,
+                          out_file_path=protected_file)
+
+client.encrypt_file(encrypt_file_params=param)
+```
+[Terms of Service](https://www.virtru.com/terms-of-service/)
+[Privacy Policy](https://www.virtru.com/privacy-policy/)
+
