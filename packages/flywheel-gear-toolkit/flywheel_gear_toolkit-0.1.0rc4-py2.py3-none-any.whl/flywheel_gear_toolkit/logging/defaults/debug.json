@@ -1,0 +1,25 @@
+{
+    "version": 1,
+    "formatters": {
+        "gear": {
+            "format": "[%(asctime)s - %(levelname)s - %(name)s:%(lineno)d] %(message)s",
+            "datefmt": "%Y%m%d"
+        }
+    },
+    "handlers": {
+        "gear": {
+            "level": "DEBUG",
+            "formatter": "gear",
+            "class": "logging.StreamHandler"
+        }
+    },
+    "loggers": {
+        "": {
+            "handlers": [
+                "gear"
+            ],
+            "level": "DEBUG"
+        }
+    },
+    "disable_existing_loggers": false
+}
