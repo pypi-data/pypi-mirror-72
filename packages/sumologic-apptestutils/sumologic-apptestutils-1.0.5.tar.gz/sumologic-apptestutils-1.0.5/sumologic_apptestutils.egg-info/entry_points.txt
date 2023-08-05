@@ -1,0 +1,3 @@
+[console_scripts]
+sumoapputils = sumoapputils.partner.console:apputilscli
+

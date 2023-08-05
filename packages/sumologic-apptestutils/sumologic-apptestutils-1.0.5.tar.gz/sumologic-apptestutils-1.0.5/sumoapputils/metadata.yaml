@@ -1,0 +1,14 @@
+
+DeployMetaData:
+ PACKAGENAME: "sumologic-apptestutils"
+ APPNAME: "Sumo Logic App testing utitities"
+ SRC_FOLDER_NAME: "sumoapputils"
+
+Logging:
+ LOG_FORMAT: "%(asctime)s | %(threadName)s | %(levelname)s | %(name)s | %(message)s"
+ ROTATION_TYPE: D
+ ROTATION_INTERVAL: 10
+ ENABLE_CONSOLE_LOG: true
+ ENABLE_LOGFILE: false
+ LOG_FILEPATH: /tmp/sumoapputils.log
+ LOG_LEVEL: "DEBUG"

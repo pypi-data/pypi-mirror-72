@@ -1,0 +1,12 @@
+sumologic-appclient-sdk>=1.0.14
+click>=7.0
+boto3>=1.9.66
+click-completion>=0.5.2
+pillow>=7.1.2
+sumologic-sdk>=0.1.10
+
+[dev]
+twine
+wheel
+setuptools
+check-manifest
