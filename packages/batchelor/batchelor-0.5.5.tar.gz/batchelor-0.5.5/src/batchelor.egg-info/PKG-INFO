@@ -1,0 +1,104 @@
+Metadata-Version: 1.2
+Name: batchelor
+Version: 0.5.5
+Summary: A simple, yet effective batching system using threadpoolexecutor.
+Home-page: https://github.com/ritzKraka/python-batchelor
+Author: ritz Kraka
+Author-email: ritzKraka@protonmail.com
+License: LGPL-3.0-or-later
+Project-URL: Changelog, https://github.com/ritzKraka/python-batchelor/blob/master/CHANGELOG.rst
+Project-URL: Issue Tracker, https://github.com/ritzKraka/python-batchelor/issues
+Description: ========
+        Overview
+        ========
+        
+        
+        
+        A simple, yet effective batching system using threadpoolexecutor.
+        
+        * Free software: GNU Lesser General Public License v3 or later (LGPLv3+)
+        
+        Installation
+        ============
+        
+        ::
+        
+            pip install batchelor
+        
+        You can also install the in-development version with::
+        
+            pip install https://github.com/ritzKraka/python-batchelor/archive/master.zip
+        
+        
+        Documentation
+        =============
+        
+        
+        To use the project:
+        
+        .. code-block:: python
+        
+            import batchelor
+            batch = batchelor.Batch(enumerate(['my', 'dataset']))
+            # batch.help() # for basic help
+            batch.start(lambda index, item: print(index, item))  # replace lambda with your function
+        
+        
+        Development
+        ===========
+        
+        To run the all tests run::
+        
+            tox
+        
+        Note, to combine the coverage data from all the tox environments run:
+        
+        .. list-table::
+            :widths: 10 90
+            :stub-columns: 1
+        
+            - - Windows
+              - ::
+        
+                    set PYTEST_ADDOPTS=--cov-append
+                    tox
+        
+            - - Other
+              - ::
+        
+                    PYTEST_ADDOPTS=--cov-append tox
+        
+        
+        Changelog
+        =========
+        
+        0.1 (2020-06-12)
+        ----------------
+        
+        * First release on PyPI.
+        
+        
+        0.3 (I forget)
+        --------------
+        
+        * Stop doing changelog because I'm too lazy. :)
+        
+        0.5.5 (last one)
+        ----------------
+        
+        * Added command-line argument support.
+        
+Keywords: batching,pool,dataset
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Requires-Python: >=3.0
