@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: dm-acme
+Version: 0.1.7
+Summary: A Python library for Reinforcement Learning.
+Home-page: UNKNOWN
+Author: DeepMind
+License: Apache License, Version 2.0
+Description: Acme is a library of reinforcement learning (RL) agents and agent building
+        blocks. Acme strives to expose simple, efficient, and readable agents, that
+        serve both as reference implementations of popular algorithms and as strong
+        baselines, while still providing enough flexibility to do novel research. The
+        design of Acme also attempts to provide multiple points of entry to the RL
+        problem at differing levels of complexity.
+        
+        For more information see our [github repository](https://github.com/deepmind/acme).
+Keywords: reinforcement-learning python machine learning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Description-Content-Type: text/markdown
+Provides-Extra: jax
+Provides-Extra: tf
+Provides-Extra: envs
+Provides-Extra: reverb
+Provides-Extra: testing
