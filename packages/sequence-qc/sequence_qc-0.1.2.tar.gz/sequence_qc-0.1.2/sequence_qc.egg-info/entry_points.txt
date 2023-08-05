@@ -1,0 +1,3 @@
+[console_scripts]
+calculate_noise = sequence_qc.cli:calculate_noise
+
