@@ -1,0 +1,16 @@
+udp/__init__.py,sha256=4j6sLDf1KX20yCLz-ddWHL0mUZYEDYBjmOwWxFmvst4,1730
+udp/connection.py,sha256=eqy-dTnIeudmiyprk4-aFIJzgT-C7bQkXi0q2dfs3z0,5914
+udp/hub.py,sha256=fVn9OGJuzvi4B-Qta1grlbhgjmdLv_thJNUAz70TCL0,14255
+udp/socket.py,sha256=Gxhq4pE_H8zIpHwm0iNYN4KD_fUD1e9H-M2_0gGmC-o,11890
+udp/mtp/__init__.py,sha256=42kwvP1FcweoMpVYOlN53jqETorYZXdbqBH9mLcVnWc,1861
+udp/mtp/peer.py,sha256=aj11Cj2A-0Ku-vwPaQW8aKg0Y-zsi-X9X8-mmj7aeH4,13826
+udp/mtp/pool.py,sha256=XzEk7LBKGrfqkfY5rkCp4UhSkK-LcUNkJoI1YmaOnco,12920
+udp/mtp/protocol.py,sha256=JJMYUhB-LJJuj_fWTrBYVgiXWQ1zi0-84EkYRJkt2co,13869
+udp/mtp/task.py,sha256=LhelXv7lRKjVcftg6YHb6mgBrlj_eLQL1SU2eAb-8PY,4767
+udp/tlv/__init__.py,sha256=J_41GU-AzJvuIvGZ0IXpWCZvBV2Mxf_8ZZ913mt-CTE,1696
+udp/tlv/data.py,sha256=EVXuvA0Ja_pge-Gi68YDCj8f00zGeVqoyum6yENWv1o,6455
+udp/tlv/item.py,sha256=rzNVdT9R3ZMSFzAGPegoUcSRicCd7_XVBMPcCStXL0g,5115
+udp-0.2.2.dist-info/METADATA,sha256=Ao0WGydelY-l4HdQClcCJt-P68l1hxlNBXN2aNI6miQ,419
+udp-0.2.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+udp-0.2.2.dist-info/top_level.txt,sha256=yFUB6ASUbIR0DLyv7VcdbYGwBmgKs_Q2E22Lmezvi80,4
+udp-0.2.2.dist-info/RECORD,,
