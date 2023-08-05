@@ -1,0 +1,50 @@
+name: generic_buyer
+author: fetchai
+version: 0.4.0
+description: The weather client skill implements the skill to purchase weather data.
+license: Apache-2.0
+aea_version: '>=0.4.0, <0.5.0'
+fingerprint:
+  __init__.py: QmaEDrNJBeHCJpbdFckRUhLSBqCXQ6umdipTMpYhqSKxSG
+  behaviours.py: QmRgSkJYi1WkoCTNNVv28NMhWVn5ptASmSvj2ArpTkfpis
+  dialogues.py: QmPbjpgXJ2njh1podEpHhAyAVLjUZ3i8xHy4mXGip7K6Dp
+  handlers.py: QmcRz2BV35T6bUkJLxFzd6tgzqRk722K6yeSvMmGL1neK2
+  strategy.py: QmQF5YhSM4BbadrfggAeaoLDYPkSDscEPKj5agPWcuBTwH
+fingerprint_ignore_patterns: []
+contracts: []
+protocols:
+- fetchai/default:0.2.0
+- fetchai/fipa:0.3.0
+- fetchai/oef_search:0.2.0
+behaviours:
+  search:
+    args:
+      search_interval: 5
+    class_name: MySearchBehaviour
+handlers:
+  fipa:
+    args: {}
+    class_name: FIPAHandler
+  oef:
+    args: {}
+    class_name: OEFSearchHandler
+  transaction:
+    args: {}
+    class_name: MyTransactionHandler
+models:
+  dialogues:
+    args: {}
+    class_name: Dialogues
+  strategy:
+    args:
+      currency_id: FET
+      is_ledger_tx: true
+      ledger_id: fetchai
+      max_buyer_tx_fee: 1
+      max_price: 20
+      search_query:
+        constraint_type: ==
+        search_term: country
+        search_value: UK
+    class_name: Strategy
+dependencies: {}
