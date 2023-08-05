@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: patch-antenna
+Version: 0.0.1
+Summary: A simple patch antenna design library
+Home-page: https://github.com/bhanuchander210/design_patch_antenna.git
+Author: Bhanuchander Udhayakumar
+Author-email: bhanuchander210@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: scipy
+
+UNKNOWN
+
+
