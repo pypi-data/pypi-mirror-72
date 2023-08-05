@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: choubun
+Version: 1.3.0
+Summary: A library for generating HTML from Python using context managers
+Home-page: https://gitlab.com/Kyuuhachi/choubun
+Author: Kyuuhachi
+Author-email: 3795079-Kyuuhachi@users.noreply.gitlab.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Classifier: Typing :: Typed
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: MarkupSafe
+
+# Choubun 超文
+
+A library for generating HTML from Python using context managers.
+
+> (this is not recommended as a real way of generating HTML!)
+
+— [@contextlib.contextmanager](https://docs.python.org/3.5/library/contextlib.html#contextlib.contextmanager)
+
+
