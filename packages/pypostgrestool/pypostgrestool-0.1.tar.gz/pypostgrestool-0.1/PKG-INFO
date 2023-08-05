@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: pypostgrestool
+Version: 0.1
+Summary: SDK about postgres
+Home-page: https://github.com/ThinkBlue1991/pgpool
+Author: zhangjx
+Author-email: 1075495029@qq.com
+License: UNKNOWN
+Description: # pgpool
+        
+        ## Install
+        ```
+        pip3 install pypostgrestool==0.1
+        ```
+        
+        ## Usage
+        ```
+        from pg_client import PostgresDB
+        db = PostgresDB(host="127.0.0.1", port=5432, user='postgres',
+                             password='123456', db_name=my-db', min_conn=10,
+                             max_conn=100)
+        # search 
+        sql = "select * from my-tab"
+        print(db1.query_all(sql=sql))
+        ```
+        ## Singleton
+        ```
+        db1 = PostgresDB(host="127.0.0.1", port=5432, user='postgres',
+                             password='123456', db_name=my-db', min_conn=10,
+                             max_conn=100)
+        db2 = PostgresDB(host="127.0.0.1", port=5432, user='postgres',
+                             password='123456', db_name=my-db', min_conn=10,
+                             max_conn=100)
+        print(db1)
+        print(db2)
+        print(db1.pool)
+        print(db2.pool)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
