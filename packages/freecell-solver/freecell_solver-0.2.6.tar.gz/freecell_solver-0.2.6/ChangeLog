@@ -1,0 +1,39 @@
+CHANGES
+=======
+
+0.2.6
+-----
+
+* avoid a debug print
+
+0.2.5
+-----
+
+* avoid requiring the devel .so on unix-likes
+
+0.2.4
+-----
+
+* remove a stray print() statement used for debugging
+
+0.2.3
+-----
+
+* update metadata
+
+0.2.2
+-----
+
+* add
+
+0.2.1
+-----
+
+* change metadata
+
+0.2.0
+-----
+
+* add
+* add the code and license
+* Initial Cookiecutter Commit
