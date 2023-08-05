@@ -1,0 +1,10 @@
+cycler
+event-model>=1.14.0
+historydict
+msgpack
+msgpack-numpy
+numpy
+super_state_machine
+toolz
+tqdm>=4.44
+zict
