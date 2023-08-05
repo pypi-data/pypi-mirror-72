@@ -1,0 +1,24 @@
+Metadata-Version: 1.2
+Name: HistWithAdditives2
+Version: 0.0.1
+Summary: Making a labelled histogram
+Home-page: UNKNOWN
+Author: John Njeri
+Author-email: waiganjojohn11@gmail.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Description: This package improves the appearances of a histogram by adding the raw values on top of every bar
+        The package also adds a percentage figure on the base of every bar.
+        
+        The imports needed are:
+        
+          import matplotlib.pyplot as plt
+          import numpy as np
+          import pandas as pd
+          from matplotlib.ticker import FuncFormatter, FormatStrFormatter 
+          from matplotlib import rcParams
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
