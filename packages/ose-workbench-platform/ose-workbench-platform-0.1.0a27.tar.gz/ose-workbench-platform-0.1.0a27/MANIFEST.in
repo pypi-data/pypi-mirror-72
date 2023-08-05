@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include osewb/.flake8
+include osewb/.mypy.ini
+include osewb/.pycodestyle
+recursive-include osewb/cookiecutter_ose_workbench/ *
