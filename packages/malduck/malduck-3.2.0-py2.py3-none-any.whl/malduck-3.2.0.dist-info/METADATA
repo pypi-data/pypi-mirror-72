@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: malduck
+Version: 3.2.0
+Summary: Malduck is your ducky companion in malware analysis journeys
+Home-page: https://github.com/CERT-Polska/malduck
+Author: CERT Polska
+Author-email: info@cert.pl
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Operating System :: POSIX :: Linux
+Requires-Dist: click (>=7.0)
+Requires-Dist: pefile (==2019.4.18)
+Requires-Dist: pyelftools
+Requires-Dist: pycryptodomex (>=3.8.2)
+Requires-Dist: capstone (>=4.0.1)
+Requires-Dist: six
+Requires-Dist: yara-python
+
+UNKNOWN
+
+
