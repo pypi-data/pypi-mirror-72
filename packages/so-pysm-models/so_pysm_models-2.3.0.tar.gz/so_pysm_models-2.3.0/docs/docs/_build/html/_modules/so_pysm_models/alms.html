@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>so_pysm_models.alms &#8212; so_pysm_models v0.4.dev231</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../../index.html"><span id="logotext1">so_pysm_models</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li>
+	<a href="../../index.html">so_pysm_models v0.4.dev231</a>
+	 &#187;
+      </li>
+      <li><a href="../index.html" >Module code</a> &#187;</li>
+      <li><a href="../so_pysm_models.html" accesskey="U">so_pysm_models</a> &#187;</li>
+      
+       
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for so_pysm_models.alms</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">healpy</span> <span class="k">as</span> <span class="nn">hp</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">pixell</span> <span class="k">import</span> <span class="n">curvedsky</span><span class="p">,</span> <span class="n">enmap</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="kn">import</span> <span class="nn">pysm</span>
+<span class="kn">from</span> <span class="nn">pysm</span> <span class="k">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+
+
+<div class="viewcode-block" id="PrecomputedAlms"><a class="viewcode-back" href="../../api/so_pysm_models.PrecomputedAlms.html#so_pysm_models.PrecomputedAlms">[docs]</a><span class="k">class</span> <span class="nc">PrecomputedAlms</span><span class="p">(</span><span class="n">pysm</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">filename</span><span class="p">,</span>
+        <span class="n">input_units</span><span class="o">=</span><span class="s2">&quot;uK_CMB&quot;</span><span class="p">,</span>
+        <span class="n">input_reference_frequency</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">nside</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">target_shape</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">target_wcs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">precompute_output_map</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">has_polarization</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Generic component based on Precomputed Alms</span>
+
+<span class="sd">        Load a set of Alms from a FITS file and generate maps at the requested</span>
+<span class="sd">        resolution and frequency assuming the CMB black body spectrum.</span>
+<span class="sd">        A single set of Alms is used for all frequencies requested by PySM,</span>
+<span class="sd">        consider that PySM expects the output of components to be in uK_RJ.</span>
+
+<span class="sd">        See more details at https://so-pysm-models.readthedocs.io/en/latest/so_pysm_models/models.html</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filename : string</span>
+<span class="sd">            Path to the input Alms in FITS format</span>
+<span class="sd">        input_units : string</span>
+<span class="sd">            Input unit strings as defined by pysm.convert_units, e.g. K_CMB, uK_RJ, MJysr</span>
+<span class="sd">        input_reference_frequency: float</span>
+<span class="sd">            If input units are K_RJ or Jysr, the reference frequency</span>
+<span class="sd">        nside : int</span>
+<span class="sd">            HEALPix NSIDE of the output maps</span>
+<span class="sd">        precompute_output_map : bool</span>
+<span class="sd">            If True (default), Alms are transformed into a map in the constructor,</span>
+<span class="sd">            if False, the object only stores the Alms and generate the map at each</span>
+<span class="sd">            call of the signal method, this is useful to generate maps convolved</span>
+<span class="sd">            with different beams</span>
+<span class="sd">        has_polarization : bool</span>
+<span class="sd">            whether or not to simulate also polarization maps</span>
+<span class="sd">            Default: True</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span> <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">target_shape</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wcs</span> <span class="o">=</span> <span class="n">target_wcs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_units</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Unit</span><span class="p">(</span><span class="n">input_units</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">has_polarization</span> <span class="o">=</span> <span class="n">has_polarization</span>
+
+        <span class="n">alm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">complex128</span><span class="p">(</span>
+            <span class="n">hp</span><span class="o">.</span><span class="n">read_alm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="n">hdu</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_polarization</span> <span class="k">else</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">equivalencies</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="kc">None</span>
+            <span class="k">if</span> <span class="n">input_reference_frequency</span> <span class="ow">is</span> <span class="kc">None</span>
+            <span class="k">else</span> <span class="n">u</span><span class="o">.</span><span class="n">cmb_equivalencies</span><span class="p">(</span><span class="n">input_reference_frequency</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">precompute_output_map</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">output_map</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_output_map</span><span class="p">(</span><span class="n">alm</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">alm</span> <span class="o">=</span> <span class="n">alm</span>
+
+<div class="viewcode-block" id="PrecomputedAlms.compute_output_map"><a class="viewcode-back" href="../../api/so_pysm_models.PrecomputedAlms.html#so_pysm_models.PrecomputedAlms.compute_output_map">[docs]</a>    <span class="k">def</span> <span class="nf">compute_output_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alm</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">nside</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wcs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">n_comp</span> <span class="o">=</span> <span class="mi">3</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_polarization</span> <span class="k">else</span> <span class="mi">1</span>
+            <span class="n">output_map</span> <span class="o">=</span> <span class="n">enmap</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n_comp</span><span class="p">,)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:],</span> <span class="bp">self</span><span class="o">.</span><span class="n">wcs</span><span class="p">)</span>
+            <span class="n">curvedsky</span><span class="o">.</span><span class="n">alm2map</span><span class="p">(</span><span class="n">alm</span><span class="p">,</span> <span class="n">output_map</span><span class="p">,</span> <span class="n">spin</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">nside</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">output_map</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">alm2map</span><span class="p">(</span><span class="n">alm</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nside</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;You must specify either nside or both of shape and wcs&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">output_map</span> <span class="o">&lt;&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_units</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span>
+            <span class="n">u</span><span class="o">.</span><span class="n">uK_CMB</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">equivalencies</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="PrecomputedAlms.get_emission"><a class="viewcode-back" href="../../api/so_pysm_models.PrecomputedAlms.html#so_pysm_models.PrecomputedAlms.get_emission">[docs]</a>    <span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span>
+    <span class="k">def</span> <span class="nf">get_emission</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">freqs</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span> <span class="n">fwhm</span><span class="p">:</span> <span class="p">[</span><span class="n">u</span><span class="o">.</span><span class="n">arcmin</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return map in uK_RJ at given frequency or array of frequencies</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        freqs : list or ndarray</span>
+<span class="sd">            Frequency or frequencies in GHz at which compute the signal</span>
+<span class="sd">        fwhm : float (optional)</span>
+<span class="sd">            Smooth the input alms before computing the signal, this can only be used</span>
+<span class="sd">            if the class was initialized with `precompute_output_map` to False.</span>
+<span class="sd">        output_units : str</span>
+<span class="sd">            Output units, as defined in `pysm.convert_units`, by default this is</span>
+<span class="sd">            &quot;uK_RJ&quot; as expected by PySM.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        output_maps : ndarray</span>
+<span class="sd">            Output maps array with the shape (num_freqs, 1 or 3 (I or IQU), npix)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">nfreqs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="n">nfreqs</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">freqs</span> <span class="o">=</span> <span class="n">freqs</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">1</span><span class="p">,))</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">output_map</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_map</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">fwhm</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">alm</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">alm</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">alm</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">smoothalm</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">alm</span><span class="p">,</span> <span class="n">fwhm</span><span class="o">=</span><span class="n">fwhm</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">radian</span><span class="p">),</span> <span class="n">pol</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span>
+                <span class="p">)</span>
+
+            <span class="n">output_map</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_output_map</span><span class="p">(</span><span class="n">alm</span><span class="p">)</span>
+
+        <span class="n">convert_to_uK_RJ</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">freqs</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">double</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_CMB</span><span class="p">)</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span>
+            <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">cmb_equivalencies</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">nfreqs</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">scaling_factor</span> <span class="o">=</span> <span class="n">convert_to_uK_RJ</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">scaling_factor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">convert_to_uK_RJ</span> <span class="o">*</span> <span class="n">weights</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">freqs</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">output_map</span><span class="o">.</span><span class="n">value</span> <span class="o">*</span> <span class="n">scaling_factor</span> <span class="o">&lt;&lt;</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right"> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2019, A. Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 04 Jun 2019. <br/>
+  </p>
+</footer>
+  </body>
+</html>

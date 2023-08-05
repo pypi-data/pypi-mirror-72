@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>High resolution templates &#8212; so_pysm_models v0.4.dev231</title>
+    <link rel="stylesheet" href="_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="get_so_models" href="api/so_pysm_models.get_so_models.html" />
+    <link rel="prev" title="Summary of Models" href="models.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="index.html"><span id="logotext1">so_pysm_models</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="genindex.html">Index</a></li>
+    <li><a title="Module Index" href="py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="right">
+	<a href="api/so_pysm_models.get_so_models.html" title="get_so_models">
+	  next &raquo;
+	</a>
+      </li>
+      <li class="right">
+	<a href="models.html" title="Summary of Models">
+	  &laquo; previous
+	</a>
+	 |
+      </li>
+      <li>
+	<a href="index.html">so_pysm_models v0.4.dev231</a>
+	 &#187;
+      </li>
+      
+      <li>High resolution templates</li> 
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="high-resolution-templates">
+<h1>High resolution templates<a class="headerlink" href="#high-resolution-templates" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="index.html#module-so_pysm_models" title="so_pysm_models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">so_pysm_models</span></code></a> also provides access to templates with higher resolution and with updated
+data compared to the models included in PySM.</p>
+<p>They can be accessed with the function <a class="reference internal" href="api/so_pysm_models.get_so_models.html#so_pysm_models.get_so_models" title="so_pysm_models.get_so_models"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_so_models()</span></code></a> which works similarly to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">models</span></code>
+function available in PySM, and you can mix them, for example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">so_pysm_models</span> <span class="k">import</span> <span class="n">get_so_models</span>
+<span class="kn">from</span> <span class="nn">pysm.nominal</span> <span class="k">import</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="nn">pysm</span> <span class="k">import</span> <span class="n">Sky</span>
+<span class="n">sky</span> <span class="o">=</span> <span class="n">Sky</span><span class="p">({</span>
+        <span class="s2">&quot;dust&quot;</span> <span class="p">:</span> <span class="n">get_so_models</span><span class="p">(</span><span class="s2">&quot;SO_d0&quot;</span><span class="p">,</span> <span class="n">nside</span><span class="o">=</span><span class="mi">128</span><span class="p">),</span>
+        <span class="s2">&quot;synchrotron&quot;</span> <span class="p">:</span> <span class="n">models</span><span class="p">(</span><span class="s2">&quot;s1&quot;</span><span class="p">,</span> <span class="n">nside</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="index.html#module-so_pysm_models" title="so_pysm_models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">so_pysm_models</span></code></a> retrieves the templates when needed from NERSC via web accessing:
+<a class="reference external" href="http://portal.nersc.gov/project/cmb/so_pysm_models_data/">http://portal.nersc.gov/project/cmb/so_pysm_models_data/</a>
+Downloaded files are stored in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy</span></code> cache, generally <code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy/cache</span></code> and are accessible using <a class="reference external" href="https://astropy.readthedocs.io/en/latest/utils/index.html#module-astropy.utils.data" title="(in Astropy v4.0.dev254)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">astropy.utils.data</span></code></a>, e.g. <a class="reference external" href="https://astropy.readthedocs.io/en/latest/api/astropy.utils.data.get_cached_urls.html#astropy.utils.data.get_cached_urls" title="(in Astropy v4.0.dev254)"><code class="xref py py-func docutils literal notranslate"><span class="pre">astropy.utils.data.get_cached_urls()</span></code></a> gives the list of downloaded files. If running at NERSC, the module automatically uses the files accessible locally from the <code class="xref py py-obj docutils literal notranslate"><span class="pre">/project</span></code> filesystem.</p>
+<p>Low-resolution templates are standard PySM ones at <span class="math notranslate nohighlight">\(N_{side}\)</span> 512, often with updated parameters based on Planck results.
+High-resolution templates are computed from the low-resolution ones, by extrapolating
+power spectra considering a simple power law model, and by generating small scales as Gaussian realization of these spectra.
+High-resolution templates therefore have Gaussian small scales (for <span class="math notranslate nohighlight">\(\ell &gt; ~ 1000\)</span>) modulated with large scale signal
+for both temperature and polarization.</p>
+<p>You can access the high resolution parameters at <span class="math notranslate nohighlight">\(N_{side}\)</span> 4096 appending <code class="xref py py-obj docutils literal notranslate"><span class="pre">s</span></code> (for small scale) at the end of each model name, for example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">so_pysm_models</span> <span class="k">import</span> <span class="n">get_so_models</span>
+<span class="kn">from</span> <span class="nn">pysm</span> <span class="k">import</span> <span class="n">Sky</span>
+<span class="n">sky_highres</span> <span class="o">=</span> <span class="n">Sky</span><span class="p">({</span>
+        <span class="s2">&quot;dust&quot;</span> <span class="p">:</span> <span class="n">get_so_models</span><span class="p">(</span><span class="s2">&quot;SO_d0s&quot;</span><span class="p">,</span> <span class="n">nside</span><span class="o">=</span><span class="mi">4096</span><span class="p">),</span>
+        <span class="s2">&quot;synchrotron&quot;</span> <span class="p">:</span> <span class="n">get_so_models</span><span class="p">(</span><span class="s2">&quot;SO_s0s&quot;</span><span class="p">,</span> <span class="n">nside</span><span class="o">=</span><span class="mi">4096</span><span class="p">)</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>Whatever the <span class="math notranslate nohighlight">\(N_{side}\)</span> of the input model and the requested <span class="math notranslate nohighlight">\(N_{side}\)</span> in <a class="reference internal" href="api/so_pysm_models.get_so_models.html#so_pysm_models.get_so_models" title="so_pysm_models.get_so_models"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_so_models()</span></code></a>, PySM will automatically use <code class="xref py py-func docutils literal notranslate"><span class="pre">healpy.ud_grade()</span></code> to adjust the map resolution.</p>
+<div class="section" id="details-about-individual-models">
+<h2>Details about individual models<a class="headerlink" href="#details-about-individual-models" title="Permalink to this headline">¶</a></h2>
+<p>Append “s” after a model name to access the <span class="math notranslate nohighlight">\(N_{side}\)</span> 4096 template, i.e. <code class="xref py py-obj docutils literal notranslate"><span class="pre">SO_f0s</span></code>.</p>
+<p><strong>Dust</strong></p>
+<ul class="simple">
+<li><p><strong>SO_d0</strong>: Thermal dust is modeled as a single-component modified black body, with same templates as in PySM model <code class="xref py py-obj docutils literal notranslate"><span class="pre">d1</span></code>.  There is no spatial variation of temperature and emissivity in the sky: <span class="math notranslate nohighlight">\(T=19.6\)</span> K and <span class="math notranslate nohighlight">\(\beta_d=1.53\)</span> (values taken from Planck Collaboration IX 2018).</p></li>
+<li><p><strong>SO_d1</strong>: Thermal dust is modeled as a single-component modified black body, with same templates as in PySM model <code class="xref py py-obj docutils literal notranslate"><span class="pre">d1</span></code>.  Both spectral index and dust temperature are spatially varying up to the degree scale.</p></li>
+</ul>
+<p><strong>Synchrotron</strong></p>
+<ul class="simple">
+<li><p><strong>SO_s0</strong>: Templates from PySM model <code class="xref py py-obj docutils literal notranslate"><span class="pre">s1</span></code>. Power law spectral energy distribution, with fixed spectral index <span class="math notranslate nohighlight">\(\beta_s=-3.1\)</span> (from Planck Collaboration IX 2018).</p></li>
+<li><p><strong>SO_s1</strong>: Templates from PySM model <code class="xref py py-obj docutils literal notranslate"><span class="pre">s1</span></code>. Power law spectral energy distribution, with spatially varying spectral index up to the degree scale.</p></li>
+</ul>
+<p><strong>Free Free</strong></p>
+<ul class="simple">
+<li><p><strong>SO_f0</strong>: same model as PySM <code class="xref py py-obj docutils literal notranslate"><span class="pre">f1</span></code>, no spatial variation of spectral index equal to -2.4.</p></li>
+</ul>
+<p><strong>AME</strong></p>
+<ul class="simple">
+<li><p><strong>SO_a0</strong>: sum of two spinning dust populations (as in PySM model <code class="xref py py-obj docutils literal notranslate"><span class="pre">a1</span></code>) with spatially constant peak frequency. No polarization.</p></li>
+<li><p><strong>SO_a1</strong>: sum of two spinning dust populations (as in PySM model <code class="xref py py-obj docutils literal notranslate"><span class="pre">a1</span></code>). First one with spatially constant peak frequency, the other with spatially variable peak frequency up to the degree scale. Polarized maps simulated with thermal dust angles and nominal AME intensity, scaled globally by 1% polarization fraction.</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#">High resolution templates</a><ul>
+<li><a class="reference internal" href="#details-about-individual-models">Details about individual models</a></li>
+</ul>
+</li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right">
+    <a href="http://github.com/simonsobs/so_pysm_models/tree/master/docs/highres_templates.rst">Edit This Page on Github</a> &nbsp;
+    <a href="_sources/highres_templates.rst.txt"
+       rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2019, A. Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 04 Jun 2019. <br/>
+  </p>
+</footer>
+  </body>
+</html>

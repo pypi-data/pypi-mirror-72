@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>so_pysm_models.synchrotron &#8212; so_pysm_models v0.4.dev231</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../../index.html"><span id="logotext1">so_pysm_models</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li>
+	<a href="../../index.html">so_pysm_models v0.4.dev231</a>
+	 &#187;
+      </li>
+      <li><a href="../index.html" >Module code</a> &#187;</li>
+      <li><a href="../so_pysm_models.html" accesskey="U">so_pysm_models</a> &#187;</li>
+      
+       
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for so_pysm_models.synchrotron</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">healpy</span> <span class="k">as</span> <span class="nn">hp</span>
+
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">laws</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">filter_utils</span>
+
+<span class="kn">import</span> <span class="nn">pysm</span>
+<span class="kn">from</span> <span class="nn">pysm</span> <span class="k">import</span> <span class="n">check_freq_input</span>
+<span class="kn">import</span> <span class="nn">pysm.units</span> <span class="k">as</span> <span class="nn">u</span>
+
+
+<div class="viewcode-block" id="GaussianSynchrotron"><a class="viewcode-back" href="../../api/so_pysm_models.GaussianSynchrotron.html#so_pysm_models.GaussianSynchrotron">[docs]</a><span class="k">class</span> <span class="nc">GaussianSynchrotron</span><span class="p">(</span><span class="n">pysm</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">nside</span><span class="p">,</span>
+        <span class="n">has_polarization</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">pixel_indices</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">TT_amplitude</span><span class="o">=</span><span class="mf">20.0</span><span class="p">,</span>
+        <span class="n">Toffset</span><span class="o">=</span><span class="mf">72.0</span><span class="p">,</span>
+        <span class="n">EE_amplitude</span><span class="o">=</span><span class="mf">4.3</span><span class="p">,</span>
+        <span class="n">rTE</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span>
+        <span class="n">EtoB</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">alpha</span><span class="o">=-</span><span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">beta</span><span class="o">=-</span><span class="mf">3.1</span><span class="p">,</span>
+        <span class="n">curv</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">nu_0</span><span class="o">=</span><span class="mf">23.0</span><span class="p">,</span>
+        <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Gaussian synchrotron model</span>
+
+<span class="sd">        See more details at https://so-pysm-models.readthedocs.io/en/latest/so_pysm_models/models.html</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        nside : int</span>
+<span class="sd">            HEALPix NSIDE of the output maps</span>
+<span class="sd">        has_polarization : bool</span>
+<span class="sd">            whether or not to simulate also polarization maps</span>
+<span class="sd">            Default: True</span>
+<span class="sd">        pixel_indices : ndarray of ints</span>
+<span class="sd">            Outputa partial maps given HEALPix pixel indices in RING ordering</span>
+<span class="sd">        TT_amplitude : float</span>
+<span class="sd">            amplitude of synchrotron TT power spectrum (D_ell) at at the reference</span>
+<span class="sd">            frequency and ell=80, in muK^2 and thermodinamic units.</span>
+<span class="sd">            Default: 20 from the amplitude of PySM-s0 synchrotron model at 23GHz</span>
+<span class="sd">            in the region covered by SO-SAT.</span>
+<span class="sd">        Toffset : float</span>
+<span class="sd">            offset to be applied to the temperature map in muK.</span>
+<span class="sd">            Default: 72 from the mean value of the T PySM-s0 synch map at 23GHz</span>
+<span class="sd">            in the region covered by SO-SAT</span>
+<span class="sd">        EE_amplitude : float</span>
+<span class="sd">            same as TT_amplitude but for EE power spectrum.</span>
+<span class="sd">            Default: 4.3 from the amplitude of S-PASS E-modes power spectrum at 2.3GHz</span>
+<span class="sd">            in the region covered by SO-SAT, rescaled at 23GHz with a powerlaw with</span>
+<span class="sd">            beta_s = -3.1</span>
+<span class="sd">        rTE : float</span>
+<span class="sd">            TE correlation factor defined as: rTE = clTE/sqrt(clTT*clEE)</span>
+<span class="sd">            Default: 0.35 from Planck IX 2018</span>
+<span class="sd">        EtoB : float</span>
+<span class="sd">            ratio between E and B-mode amplitude.</span>
+<span class="sd">            Default: 0.5 from Krachmalnicoff et al. 2018</span>
+<span class="sd">        alpha : spectral tilt of the synchrotron power spectrum (D_ell).</span>
+<span class="sd">            Default: -1.0 from Krachmalnicoff et al. 2018</span>
+<span class="sd">        beta : synchrotron spectral index.</span>
+<span class="sd">            Default: -3.1 from Planck 2018 IX</span>
+<span class="sd">        curv : synchrotron curvature index.</span>
+<span class="sd">            Default: 0.</span>
+<span class="sd">        nu_0 : synchrotron reference frequency in GHz.</span>
+<span class="sd">            Default: 23</span>
+<span class="sd">        seed : int</span>
+<span class="sd">            seed for random realization of map</span>
+<span class="sd">            Default: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span> <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">has_polarization</span> <span class="o">=</span> <span class="n">has_polarization</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">TT_amplitude</span> <span class="o">=</span> <span class="n">TT_amplitude</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Toffset</span> <span class="o">=</span> <span class="n">Toffset</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">EE_amplitude</span> <span class="o">=</span> <span class="n">EE_amplitude</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">EtoB</span> <span class="o">=</span> <span class="n">EtoB</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">beta</span> <span class="o">=</span> <span class="n">beta</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">curv</span> <span class="o">=</span> <span class="n">curv</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nu_0</span> <span class="o">=</span> <span class="n">nu_0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seed</span> <span class="o">=</span> <span class="n">seed</span>
+
+<div class="viewcode-block" id="GaussianSynchrotron.get_emission"><a class="viewcode-back" href="../../api/so_pysm_models.GaussianSynchrotron.html#so_pysm_models.GaussianSynchrotron.get_emission">[docs]</a>    <span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span>
+    <span class="k">def</span> <span class="nf">get_emission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freqs</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return map in uK_RJ at given frequency or array of frequencies&quot;&quot;&quot;</span>
+
+        <span class="n">nu</span> <span class="o">=</span> <span class="n">check_freq_input</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">nu</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Bandpass integration not implemented in Gaussian emissions&quot;</span>
+        <span class="n">nell</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">nside</span>
+        <span class="n">ell</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">nell</span><span class="p">)</span>
+        <span class="n">dl_prefac</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="p">((</span><span class="n">ell</span> <span class="o">+</span> <span class="mf">0.01</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">ell</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">clZERO</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">ell</span><span class="p">)</span>
+        <span class="n">clTT_sync</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">dl_prefac</span>
+            <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">TT_amplitude</span>
+            <span class="o">*</span> <span class="p">((</span><span class="n">ell</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">80.0</span><span class="p">)</span> <span class="o">**</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span>
+            <span class="o">*</span> <span class="n">laws</span><span class="o">.</span><span class="n">black_body_cmb</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nu_0</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="p">)</span>
+        <span class="n">clTT_sync</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">clEE_sync</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">dl_prefac</span>
+            <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">EE_amplitude</span>
+            <span class="o">*</span> <span class="p">((</span><span class="n">ell</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">80.0</span><span class="p">)</span> <span class="o">**</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span>
+            <span class="o">*</span> <span class="n">laws</span><span class="o">.</span><span class="n">black_body_cmb</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nu_0</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="p">)</span>
+        <span class="n">BB_amplitude</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">EE_amplitude</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">EtoB</span>
+        <span class="n">clBB_sync</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">dl_prefac</span>
+            <span class="o">*</span> <span class="n">BB_amplitude</span>
+            <span class="o">*</span> <span class="p">((</span><span class="n">ell</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">80.0</span><span class="p">)</span> <span class="o">**</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span>
+            <span class="o">*</span> <span class="n">laws</span><span class="o">.</span><span class="n">black_body_cmb</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nu_0</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">seed</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">mseed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">32</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">mseed</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">seed</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">mseed</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">nside</span> <span class="o">&lt;=</span> <span class="mi">64</span><span class="p">:</span>
+            <span class="n">nside_temp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nside</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">nside_temp</span> <span class="o">=</span> <span class="mi">64</span>
+        <span class="n">amp_sync</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+            <span class="n">hp</span><span class="o">.</span><span class="n">synfast</span><span class="p">(</span>
+                <span class="p">[</span><span class="n">clTT_sync</span><span class="p">,</span> <span class="n">clEE_sync</span><span class="p">,</span> <span class="n">clBB_sync</span><span class="p">,</span> <span class="n">clZERO</span><span class="p">,</span> <span class="n">clZERO</span><span class="p">,</span> <span class="n">clZERO</span><span class="p">],</span>
+                <span class="n">nside_temp</span><span class="p">,</span>
+                <span class="n">pol</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">amp_sync</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Toffset</span>
+        <span class="n">lbreak_TT</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="k">while</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">amp_sync</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="n">clTT_sync</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">lbreak_TT</span><span class="p">]</span> <span class="o">=</span> <span class="n">clTT_sync</span><span class="p">[</span><span class="n">lbreak_TT</span><span class="p">]</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">mseed</span><span class="p">)</span>
+            <span class="n">amp_sync</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+                <span class="n">hp</span><span class="o">.</span><span class="n">synfast</span><span class="p">(</span>
+                    <span class="p">[</span><span class="n">clTT_sync</span><span class="p">,</span> <span class="n">clEE_sync</span><span class="p">,</span> <span class="n">clBB_sync</span><span class="p">,</span> <span class="n">clZERO</span><span class="p">,</span> <span class="n">clZERO</span><span class="p">,</span> <span class="n">clZERO</span><span class="p">],</span>
+                    <span class="n">nside_temp</span><span class="p">,</span>
+                    <span class="n">pol</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">amp_sync</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Toffset</span>
+            <span class="n">lbreak_TT</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">nside</span> <span class="o">&gt;</span> <span class="mi">64</span><span class="p">:</span>
+            <span class="n">low_pass_filter</span> <span class="o">=</span> <span class="n">filter_utils</span><span class="o">.</span><span class="n">create_low_pass_filter</span><span class="p">(</span><span class="n">l1</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">l2</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">lmax</span><span class="o">=</span><span class="mi">64</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">high_pass_filter</span> <span class="o">=</span> <span class="n">filter_utils</span><span class="o">.</span><span class="n">create_high_pass_filter</span><span class="p">(</span><span class="n">l1</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">l2</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">lmax</span><span class="o">=</span><span class="n">nell</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">clTT_sync_hpf</span> <span class="o">=</span> <span class="n">clTT_sync</span> <span class="o">*</span> <span class="n">high_pass_filter</span>
+            <span class="n">amp_sync</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">filter_utils</span><span class="o">.</span><span class="n">apply_filter</span><span class="p">(</span><span class="n">amp_sync</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">low_pass_filter</span><span class="p">)</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">mseed</span><span class="p">)</span>
+            <span class="n">amp_sync_hell</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+                <span class="n">hp</span><span class="o">.</span><span class="n">synfast</span><span class="p">(</span>
+                    <span class="p">[</span><span class="n">clTT_sync_hpf</span><span class="p">,</span> <span class="n">clEE_sync</span><span class="p">,</span> <span class="n">clBB_sync</span><span class="p">,</span> <span class="n">clZERO</span><span class="p">,</span> <span class="n">clZERO</span><span class="p">,</span> <span class="n">clZERO</span><span class="p">],</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">nside</span><span class="p">,</span>
+                    <span class="n">pol</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">amp_sync</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">ud_grade</span><span class="p">(</span><span class="n">amp_sync</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nside</span><span class="p">)</span>
+            <span class="n">amp_sync</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">amp_sync</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.0</span>
+            <span class="n">amp_sync</span> <span class="o">+=</span> <span class="n">amp_sync_hell</span>
+        <span class="n">min_map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">amp_sync</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">min_map</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">Toffset_add</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="o">-</span><span class="n">min_map</span><span class="p">)</span>
+            <span class="n">amp_sync</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="n">Toffset_add</span>
+        <span class="n">spec_sync</span> <span class="o">=</span> <span class="n">laws</span><span class="o">.</span><span class="n">curved_power_law</span><span class="p">(</span><span class="n">nu</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nu_0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">beta</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">curv</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">amp_sync</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="o">*</span> <span class="n">spec_sync</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="c1"># the output of out is always 3D, (num_freqs, IQU, npix), if num_freqs is one</span>
+        <span class="c1"># we return only a 2D array.</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">out</span> <span class="o">&lt;&lt;</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right"> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2019, A. Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 04 Jun 2019. <br/>
+  </p>
+</footer>
+  </body>
+</html>

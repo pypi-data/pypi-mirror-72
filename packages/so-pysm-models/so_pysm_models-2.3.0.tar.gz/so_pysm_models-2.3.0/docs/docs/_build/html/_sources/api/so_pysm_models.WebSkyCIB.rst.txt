@@ -1,0 +1,19 @@
+WebSkyCIB
+=========
+
+.. currentmodule:: so_pysm_models
+
+.. autoclass:: WebSkyCIB
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~WebSkyCIB.get_filenames
+      ~WebSkyCIB.read_map_by_frequency
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_filenames
+   .. automethod:: read_map_by_frequency

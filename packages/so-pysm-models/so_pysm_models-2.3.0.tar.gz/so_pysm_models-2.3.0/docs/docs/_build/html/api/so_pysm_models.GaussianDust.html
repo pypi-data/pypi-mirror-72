@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>GaussianDust &#8212; so_pysm_models v0.4.dev231</title>
+    <link rel="stylesheet" href="../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GaussianSynchrotron" href="so_pysm_models.GaussianSynchrotron.html" />
+    <link rel="prev" title="COLines" href="so_pysm_models.COLines.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../index.html"><span id="logotext1">so_pysm_models</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="right">
+	<a href="so_pysm_models.GaussianSynchrotron.html" title="GaussianSynchrotron">
+	  next &raquo;
+	</a>
+      </li>
+      <li class="right">
+	<a href="so_pysm_models.COLines.html" title="COLines">
+	  &laquo; previous
+	</a>
+	 |
+      </li>
+      <li>
+	<a href="../index.html">so_pysm_models v0.4.dev231</a>
+	 &#187;
+      </li>
+      
+      <li>GaussianDust</li> 
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="gaussiandust">
+<h1>GaussianDust<a class="headerlink" href="#gaussiandust" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="so_pysm_models.GaussianDust">
+<em class="property">class </em><code class="descclassname">so_pysm_models.</code><code class="descname">GaussianDust</code><span class="sig-paren">(</span><em>nside</em>, <em>has_polarization=True</em>, <em>pixel_indices=None</em>, <em>TT_amplitude=350.0</em>, <em>Toffset=18.0</em>, <em>EE_amplitude=100.0</em>, <em>rTE=0.35</em>, <em>EtoB=0.5</em>, <em>alpha=-0.42</em>, <em>beta=1.53</em>, <em>temp=19.6</em>, <em>nu_0=353</em>, <em>seed=None</em>, <em>map_dist=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/so_pysm_models/dust.html#GaussianDust"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/simonsobs/so_pysm_models/tree/master/so_pysm_models/dust.py#L14" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#so_pysm_models.GaussianDust" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pysm.models.template.Model</span></code></p>
+<p>Gaussian dust model</p>
+<p>See more details at <a class="reference external" href="https://so-pysm-models.readthedocs.io/en/latest/so_pysm_models/models.html">https://so-pysm-models.readthedocs.io/en/latest/so_pysm_models/models.html</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>nside</strong><span class="classifier">int</span></dt><dd><p>HEALPix NSIDE of the output maps</p>
+</dd>
+<dt><strong>has_polarization</strong><span class="classifier">bool</span></dt><dd><p>whether or not to simulate also polarization maps
+Default: True</p>
+</dd>
+<dt><strong>pixel_indices</strong><span class="classifier">ndarray of ints</span></dt><dd><p>Outputs partial maps given HEALPix pixel indices in RING ordering</p>
+</dd>
+<dt><strong>TT_amplitude</strong><span class="classifier">float</span></dt><dd><p>amplitude of synchrotron TT power spectrum (D_ell) at at the reference
+frequency and ell=80, in muK^2 and thermodinamic units.
+Default: 350. from the amplitude of PySM-d0 dust model at 353GHz
+in the region covered by SO-SAT.</p>
+</dd>
+<dt><strong>Toffset</strong><span class="classifier">float</span></dt><dd><p>offset to be applied to the temperature map in muK in RJ units.
+Default: 18 from the mean value of the T PySM-s0 synch map at 23GHz
+in the region covered by SO-SAT</p>
+</dd>
+<dt><strong>EE_amplitude</strong><span class="classifier">float</span></dt><dd><p>Amplitude of EE modes D_ell at reference frequency at ell=80
+Default: 100. from the amplitude of HFI-353 E-modes spectrum in the
+region covered by SO-SAT</p>
+</dd>
+<dt><strong>EtoB: float</strong></dt><dd><p>ratio between E and B-mode amplitude for dust.
+Default: 0.5 from Planck 2018 IX</p>
+</dd>
+<dt><strong>alpha</strong><span class="classifier">same as alpha_sync for dust.</span></dt><dd><p>Default: -0.42 from Planck 2018 IX</p>
+</dd>
+<dt><strong>beta</strong><span class="classifier">float</span></dt><dd><p>dust spectral index.
+Default: 1.53 from Planck 2018 IX</p>
+</dd>
+<dt><strong>temp</strong><span class="classifier">float</span></dt><dd><p>dust temperature.
+Default: 19.6 from Planck 2018 IX</p>
+</dd>
+<dt><strong>nu0</strong><span class="classifier">float</span></dt><dd><p>dust reference frequency in GHz.
+Default: 353</p>
+</dd>
+<dt><strong>seed</strong><span class="classifier">int</span></dt><dd><p>seed for random realization of map
+Default: None</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods Summary</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#so_pysm_models.GaussianDust.get_emission" title="so_pysm_models.GaussianDust.get_emission"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_emission</span></code></a>(self, freqs[, weights])</p></td>
+<td><p>Return map in uK_RJ at given frequency or array of frequencies</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="so_pysm_models.GaussianDust.get_emission">
+<code class="descname">get_emission</code><span class="sig-paren">(</span><em>self</em>, <em>freqs:Unit(&quot;GHz&quot;)</em>, <em>weights=None) -&gt; Unit(&quot;uK_RJ&quot;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/so_pysm_models/dust.html#GaussianDust.get_emission"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/simonsobs/so_pysm_models/tree/master/so_pysm_models/dust.py#L89" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#so_pysm_models.GaussianDust.get_emission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return map in uK_RJ at given frequency or array of frequencies</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#">GaussianDust</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right">
+    <a href="http://github.com/simonsobs/so_pysm_models/tree/master/docs/api/so_pysm_models.GaussianDust.rst">Edit This Page on Github</a> &nbsp;
+    <a href="../_sources/api/so_pysm_models.GaussianDust.rst.txt"
+       rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2019, A. Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 04 Jun 2019. <br/>
+  </p>
+</footer>
+  </body>
+</html>

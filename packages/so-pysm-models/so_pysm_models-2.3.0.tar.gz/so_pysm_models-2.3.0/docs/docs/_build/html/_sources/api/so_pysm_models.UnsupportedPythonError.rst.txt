@@ -1,0 +1,6 @@
+UnsupportedPythonError
+======================
+
+.. currentmodule:: so_pysm_models
+
+.. autoexception:: UnsupportedPythonError

@@ -1,0 +1,19 @@
+WebSkySZ
+========
+
+.. currentmodule:: so_pysm_models
+
+.. autoclass:: WebSkySZ
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~WebSkySZ.get_emission
+      ~WebSkySZ.get_filename
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_emission
+   .. automethod:: get_filename

@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>so_pysm_models.co_lines &#8212; so_pysm_models v0.4.dev231</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../../index.html"><span id="logotext1">so_pysm_models</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li>
+	<a href="../../index.html">so_pysm_models v0.4.dev231</a>
+	 &#187;
+      </li>
+      <li><a href="../index.html" >Module code</a> &#187;</li>
+      <li><a href="../so_pysm_models.html" accesskey="U">so_pysm_models</a> &#187;</li>
+      
+       
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for so_pysm_models.co_lines</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">healpy</span> <span class="k">as</span> <span class="nn">hp</span>
+
+<span class="kn">import</span> <span class="nn">pysm.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="kn">import</span> <span class="nn">pysm</span>
+
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="k">import</span> <span class="n">get_data_from_url</span>
+
+
+<div class="viewcode-block" id="COLines"><a class="viewcode-back" href="../../api/so_pysm_models.COLines.html#so_pysm_models.COLines">[docs]</a><span class="k">class</span> <span class="nc">COLines</span><span class="p">(</span><span class="n">pysm</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">target_nside</span><span class="p">,</span>
+        <span class="n">output_units</span><span class="p">,</span>
+        <span class="n">has_polarization</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">line</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">,</span>
+        <span class="n">include_high_galactic_latitude_clouds</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">polarization_fraction</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span>
+        <span class="n">theta_high_galactic_latitude_deg</span><span class="o">=</span><span class="mf">20.</span><span class="p">,</span>
+        <span class="n">random_seed</span><span class="o">=</span><span class="mi">1234567</span><span class="p">,</span>
+        <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">run_mcmole3d</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;Class defining attributes for CO line emission.</span>
+<span class="sd">        CO templates are extracted from Type 1 CO Planck maps.</span>
+<span class="sd">        See further details in https://www.aanda.org/articles/aa/abs/2014/11/aa21553-13/aa21553-13.html</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        target_nside : int</span>
+<span class="sd">            HEALPix NSIDE of the output maps</span>
+<span class="sd">        output_units : str</span>
+<span class="sd">            unit string as defined by `pysm.convert_units`, e.g. uK_RJ, K_CMB</span>
+<span class="sd">        has_polarization : bool</span>
+<span class="sd">            whether or not to simulate also polarization maps</span>
+<span class="sd">        line : string</span>
+<span class="sd">            CO rotational transitions.</span>
+<span class="sd">            Accepted values : 10, 21, 32</span>
+<span class="sd">        polarization_fraction: float</span>
+<span class="sd">            polarisation fraction for polarised CO emission.</span>
+<span class="sd">        include_high_galactic_latitude_clouds: bool</span>
+<span class="sd">            If True it includes a simulation from MCMole3D to include</span>
+<span class="sd">            high Galactic Latitude clouds.</span>
+<span class="sd">            (See more details at http://giuspugl.github.io/mcmole/index.html)</span>
+<span class="sd">        run_mcmole3d: bool</span>
+<span class="sd">            If True it simulates  HGL cluds by running MCMole3D, otherwise it coadds</span>
+<span class="sd">            a map of HGL emission.</span>
+<span class="sd">        random_seed: int</span>
+<span class="sd">            set random seed for mcmole3d simulations.</span>
+<span class="sd">        theta_high_galactic_latitude_deg : float</span>
+<span class="sd">            Angle in degree  to identify High Galactic Latitude clouds</span>
+<span class="sd">            (i.e. clouds whose latitude b is `|b|&gt; theta_high_galactic_latitude_deg`).</span>
+<span class="sd">        map_dist : mpi4py communicator</span>
+<span class="sd">            Read inputs across a MPI communicator, see pysm.read_map</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">line</span> <span class="o">=</span> <span class="n">line</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_index</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;10&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;21&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;32&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}[</span><span class="n">line</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_frequency</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;10&quot;</span><span class="p">:</span> <span class="mf">115.271</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span> <span class="s2">&quot;21&quot;</span><span class="p">:</span> <span class="mf">230.538</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span> <span class="s2">&quot;32&quot;</span><span class="p">:</span> <span class="mf">345.796</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">}[</span><span class="n">line</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_nside</span> <span class="o">=</span> <span class="n">target_nside</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">template_nside</span> <span class="o">=</span> <span class="mi">512</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_nside</span> <span class="o">&lt;=</span> <span class="mi">512</span> <span class="k">else</span> <span class="mi">2048</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">nside</span><span class="o">=</span><span class="n">target_nside</span><span class="p">,</span> <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">planck_templatemap_filename</span> <span class="o">=</span> <span class="s2">&quot;co/HFI_CompMap_CO-Type1_</span><span class="si">{}</span><span class="s2">_R2.00_ring.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">template_nside</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">planck_templatemap</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span>
+            <span class="n">get_data_from_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">planck_templatemap_filename</span><span class="p">),</span> <span class="n">field</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">line_index</span><span class="p">,</span>
+            <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">K_CMB</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">include_high_galactic_latitude_clouds</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">include_high_galactic_latitude_clouds</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">has_polarization</span> <span class="o">=</span> <span class="n">has_polarization</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">polarization_fraction</span> <span class="o">=</span> <span class="n">polarization_fraction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">theta_high_galactic_latitude_deg</span> <span class="o">=</span> <span class="n">theta_high_galactic_latitude_deg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">random_seed</span> <span class="o">=</span> <span class="n">random_seed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">run_mcmole3d</span> <span class="o">=</span> <span class="n">run_mcmole3d</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_units</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Unit</span><span class="p">(</span><span class="n">output_units</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="n">verbose</span>
+
+<div class="viewcode-block" id="COLines.signal"><a class="viewcode-back" href="../../api/so_pysm_models.COLines.html#so_pysm_models.COLines.signal">[docs]</a>    <span class="k">def</span> <span class="nf">signal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Simulate CO signal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">ud_grade</span><span class="p">(</span><span class="n">map_in</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">planck_templatemap</span><span class="p">,</span> <span class="n">nside_out</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">target_nside</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">u</span><span class="o">.</span><span class="n">K_CMB</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">include_high_galactic_latitude_clouds</span><span class="p">:</span>
+            <span class="n">out</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">simulate_high_galactic_latitude_CO</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_polarization</span><span class="p">:</span>
+            <span class="n">Q_map</span><span class="p">,</span> <span class="n">U_map</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">simulate_polarized_emission</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+            <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">out</span><span class="p">,</span> <span class="n">Q_map</span><span class="p">,</span> <span class="n">U_map</span><span class="p">])</span>
+
+        <span class="n">convert_to_uK_RJ</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">K_CMB</span><span class="p">)</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">output_units</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">cmb_equivalencies</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">line_frequency</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">out</span> <span class="o">*</span> <span class="n">convert_to_uK_RJ</span></div>
+
+<div class="viewcode-block" id="COLines.simulate_polarized_emission"><a class="viewcode-back" href="../../api/so_pysm_models.COLines.html#so_pysm_models.COLines.simulate_polarized_emission">[docs]</a>    <span class="k">def</span> <span class="nf">simulate_polarized_emission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">I_map</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add polarized emission by means of:</span>
+<span class="sd">        * an overall constant polarization fraction,</span>
+<span class="sd">        * a depolarization map to mimick the line of sigth depolarization effect at low Galactic latitudes</span>
+<span class="sd">        * a polarization angle map coming from a dust template (we exploit the observed correlation</span>
+<span class="sd">        between polarized dust and molecular emission in star forming regions).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">polangle</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;co/psimap_dust90_</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">template_nside</span><span class="p">)))</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">depolmap</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;co/gmap_dust90_</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">template_nside</span><span class="p">)))</span><span class="o">.</span><span class="n">value</span>
+
+        <span class="k">if</span> <span class="n">hp</span><span class="o">.</span><span class="n">get_nside</span><span class="p">(</span><span class="n">depolmap</span><span class="p">)</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_nside</span><span class="p">:</span>
+            <span class="n">polangle</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">ud_grade</span><span class="p">(</span><span class="n">map_in</span><span class="o">=</span><span class="n">polangle</span><span class="p">,</span> <span class="n">nside_out</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">target_nside</span><span class="p">)</span>
+            <span class="n">depolmap</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">ud_grade</span><span class="p">(</span><span class="n">map_in</span><span class="o">=</span><span class="n">depolmap</span><span class="p">,</span> <span class="n">nside_out</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">target_nside</span><span class="p">)</span>
+
+        <span class="n">cospolangle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mf">2.</span> <span class="o">*</span> <span class="n">polangle</span><span class="p">)</span>
+        <span class="n">sinpolangle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mf">2.</span> <span class="o">*</span> <span class="n">polangle</span><span class="p">)</span>
+
+        <span class="n">P_map</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">polarization_fraction</span> <span class="o">*</span> <span class="n">depolmap</span> <span class="o">*</span> <span class="n">I_map</span>
+        <span class="n">Q_map</span> <span class="o">=</span> <span class="n">P_map</span> <span class="o">*</span> <span class="n">cospolangle</span>
+        <span class="n">U_map</span> <span class="o">=</span> <span class="n">P_map</span> <span class="o">*</span> <span class="n">sinpolangle</span>
+        <span class="k">return</span> <span class="n">Q_map</span><span class="p">,</span> <span class="n">U_map</span></div>
+
+<div class="viewcode-block" id="COLines.simulate_high_galactic_latitude_CO"><a class="viewcode-back" href="../../api/so_pysm_models.COLines.html#so_pysm_models.COLines.simulate_high_galactic_latitude_CO">[docs]</a>    <span class="k">def</span> <span class="nf">simulate_high_galactic_latitude_CO</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Coadd High Galactic Latitude CO emission, simulated with  MCMole3D.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">run_mcmole3d</span><span class="p">:</span>
+            <span class="kn">import</span> <span class="nn">mcmole3d</span> <span class="k">as</span> <span class="nn">cl</span>
+
+            <span class="c1"># params to MCMole</span>
+            <span class="n">N</span> <span class="o">=</span> <span class="mi">40000</span>
+            <span class="n">L_0</span> <span class="o">=</span> <span class="mf">20.4</span>  <span class="c1"># pc</span>
+            <span class="n">L_min</span> <span class="o">=</span> <span class="o">.</span><span class="mi">3</span>
+            <span class="n">L_max</span> <span class="o">=</span> <span class="mf">60.</span>
+            <span class="n">R_ring</span> <span class="o">=</span> <span class="mf">5.8</span>
+            <span class="n">sigma_ring</span> <span class="o">=</span> <span class="mf">2.7</span>  <span class="c1"># kpc</span>
+            <span class="n">R_bulge</span> <span class="o">=</span> <span class="mf">3.</span>
+            <span class="n">R_z</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># kpc</span>
+            <span class="n">z_0</span> <span class="o">=</span> <span class="mf">0.1</span>
+            <span class="n">Em_0</span> <span class="o">=</span> <span class="mf">240.</span>
+            <span class="n">R_em</span> <span class="o">=</span> <span class="mf">6.6</span>
+            <span class="n">model</span> <span class="o">=</span> <span class="s2">&quot;LogSpiral&quot;</span>
+
+            <span class="n">nside</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_nside</span>
+            <span class="n">Itot_o</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">integrate_intensity_map</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">planck_templatemap</span><span class="p">,</span>
+                <span class="n">hp</span><span class="o">.</span><span class="n">get_nside</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">planck_templatemap</span><span class="p">),</span>
+                <span class="n">planck_map</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">Pop</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Cloud_Population</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">randseed</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">random_seed</span><span class="p">)</span>
+
+            <span class="n">Pop</span><span class="o">.</span><span class="n">set_parameters</span><span class="p">(</span>
+                <span class="n">radial_distr</span><span class="o">=</span><span class="p">[</span><span class="n">R_ring</span><span class="p">,</span> <span class="n">sigma_ring</span><span class="p">,</span> <span class="n">R_bulge</span><span class="p">],</span>
+                <span class="n">typical_size</span><span class="o">=</span><span class="n">L_0</span><span class="p">,</span>
+                <span class="n">size_range</span><span class="o">=</span><span class="p">[</span><span class="n">L_min</span><span class="p">,</span> <span class="n">L_max</span><span class="p">],</span>
+                <span class="n">thickness_distr</span><span class="o">=</span><span class="p">[</span><span class="n">z_0</span><span class="p">,</span> <span class="n">R_z</span><span class="p">],</span>
+                <span class="n">emissivity</span><span class="o">=</span><span class="p">[</span><span class="n">Em_0</span><span class="p">,</span> <span class="n">R_em</span><span class="p">],</span>
+            <span class="p">)</span>
+            <span class="n">Pop</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+                <span class="n">Pop</span><span class="o">.</span><span class="n">print_parameters</span><span class="p">()</span>
+            <span class="c1"># project into  Healpix maps</span>
+            <span class="n">mapclouds</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">do_healpy_map</span><span class="p">(</span>
+                <span class="n">Pop</span><span class="p">,</span>
+                <span class="n">nside</span><span class="p">,</span>
+                <span class="n">highgalcut</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="mf">90.</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">theta_high_galactic_latitude_deg</span><span class="p">),</span>
+                <span class="n">apodization</span><span class="o">=</span><span class="s2">&quot;gaussian&quot;</span><span class="p">,</span>
+                <span class="n">verbose</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">Itot_m</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">integrate_intensity_map</span><span class="p">(</span><span class="n">mapclouds</span><span class="p">,</span> <span class="n">nside</span><span class="p">)</span>
+            <span class="c1"># convert simulated map into the units of the Planck one</span>
+            <span class="n">rescaling_factor</span> <span class="o">=</span> <span class="n">Itot_m</span> <span class="o">/</span> <span class="n">Itot_o</span>
+            <span class="n">mapclouds</span> <span class="o">/=</span> <span class="n">rescaling_factor</span>
+            <span class="n">hglmask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">mapclouds</span><span class="p">)</span>
+            <span class="c1"># Apply mask to low galactic latitudes</span>
+            <span class="n">listhgl</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">query_strip</span><span class="p">(</span>
+                <span class="n">nside</span><span class="p">,</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="mf">90.</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">theta_high_galactic_latitude_deg</span><span class="p">),</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="mi">90</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">theta_high_galactic_latitude_deg</span><span class="p">),</span>
+            <span class="p">)</span>
+            <span class="n">hglmask</span><span class="p">[</span><span class="n">listhgl</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.</span>
+            <span class="n">rmsplanck</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">planck_templatemap</span><span class="p">[</span><span class="n">listhgl</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+            <span class="n">rmssim</span> <span class="o">=</span> <span class="n">mapclouds</span><span class="p">[</span><span class="n">listhgl</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">rmssim</span> <span class="o">==</span> <span class="mf">0.</span><span class="p">:</span>
+                <span class="n">belowplanck</span> <span class="o">=</span> <span class="mf">1.</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">belowplanck</span> <span class="o">=</span> <span class="n">rmssim</span> <span class="o">/</span> <span class="n">rmsplanck</span>
+
+            <span class="k">return</span> <span class="n">mapclouds</span> <span class="o">*</span> <span class="n">hglmask</span> <span class="o">/</span> <span class="n">belowplanck</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">mapclouds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span>
+                <span class="n">get_data_from_url</span><span class="p">(</span><span class="s2">&quot;co/mcmoleCO_HGL_</span><span class="si">{}</span><span class="s2">.fits&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">template_nside</span><span class="p">)),</span>
+                <span class="n">field</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">line_index</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">K_CMB</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">mapclouds</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right"> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2019, A. Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 04 Jun 2019. <br/>
+  </p>
+</footer>
+  </body>
+</html>

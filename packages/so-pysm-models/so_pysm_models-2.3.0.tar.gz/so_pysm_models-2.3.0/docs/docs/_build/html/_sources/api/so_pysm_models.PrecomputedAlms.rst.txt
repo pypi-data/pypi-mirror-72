@@ -1,0 +1,19 @@
+PrecomputedAlms
+===============
+
+.. currentmodule:: so_pysm_models
+
+.. autoclass:: PrecomputedAlms
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~PrecomputedAlms.compute_output_map
+      ~PrecomputedAlms.get_emission
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: compute_output_map
+   .. automethod:: get_emission
