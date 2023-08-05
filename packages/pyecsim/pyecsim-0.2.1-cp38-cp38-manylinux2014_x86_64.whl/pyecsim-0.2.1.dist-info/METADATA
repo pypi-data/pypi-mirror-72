@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pyecsim
+Version: 0.2.1
+Summary: Python wrapper around ECsim
+Home-page: https://github.com/Limhes/ecsim/python
+Author: René Becker
+Author-email: limhes@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Intended Audience :: Science/Research
+Requires-Dist: pybind11 (>=2.4)
+
+UNKNOWN
+
+
