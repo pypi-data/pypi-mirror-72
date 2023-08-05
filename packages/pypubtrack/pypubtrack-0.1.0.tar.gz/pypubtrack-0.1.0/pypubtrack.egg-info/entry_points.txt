@@ -1,0 +1,3 @@
+[console_scripts]
+pypubtrack = pypubtrack.cli:main
+
