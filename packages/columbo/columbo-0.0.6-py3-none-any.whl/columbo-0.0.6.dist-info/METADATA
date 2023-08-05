@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: columbo
+Version: 0.0.6
+Summary: columbo, he smart yo
+Home-page: https://github.com/battlemidget/columbo
+Author: Adam Stokes
+Author-email: adam.stokes@ubuntu.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: click (<8.0,>=7.0)
+Requires-Dist: dict-deep (==2.0.2)
+Requires-Dist: loguru (<1.99.30,>=0.3.2)
+Requires-Dist: melddict (<2.0,>=1.0)
+Requires-Dist: pyyaml (<6.0,>=3.0)
+Requires-Dist: colorama (==0.3.9)
+Requires-Dist: pathos (==0.2.5)
+Requires-Dist: python-magic (==0.4.15)
+
+# columbo
+
+columbo - got them clues
+
+## Usage
+
+```
+> pip install columbo
+> columbo --rules columbo.yaml --output-dir ~/tmp/output <tarball>
+```
+
+## Description
+
+Pretty straightforward, it parses a yaml specification of regexs and tries to
+find errors/concerns within output files. It'll take any tarball with plain text
+files and parse each file concurrently for matches. All individual results are
+stored in both json and text files for both machines and humans.
+
+## Rules Spec
+
+An example rules file looks like:
+
+```yaml
+
+- id: python-tb-exception
+  description: parses logs for tracebacks
+  start_marker: "^Traceback.*"
+  end_marker: "^.*Error|InvalidRequest:"
+```
+
+## AsciiCast
+
+[![asciicast](https://asciinema.org/a/MUs0GdCUxsN89C3fDlRUEHfKI.svg)](https://asciinema.org/a/MUs0GdCUxsN89C3fDlRUEHfKI)
+
+## More information
+
+- [Website / Documentation](https://columbo.8op.org)
+
+

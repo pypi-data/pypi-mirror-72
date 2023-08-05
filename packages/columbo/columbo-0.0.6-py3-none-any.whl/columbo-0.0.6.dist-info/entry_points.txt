@@ -1,0 +1,3 @@
+[console_scripts]
+columbo = columbo.commands.base:start
+
