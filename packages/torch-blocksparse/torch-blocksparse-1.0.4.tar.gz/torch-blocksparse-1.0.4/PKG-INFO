@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: torch-blocksparse
+Version: 1.0.4
+Summary: Block-sparse primitives for PyTorch
+Home-page: https://github.com/ptillet/torch-blocksparse
+Author: Philippe Tillet
+Maintainer: Philippe Tillet
+Maintainer-email: ptillet@g.harvard.edu
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

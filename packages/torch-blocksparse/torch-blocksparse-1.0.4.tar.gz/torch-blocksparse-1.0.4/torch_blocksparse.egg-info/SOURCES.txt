@@ -1,0 +1,17 @@
+README.md
+setup.py
+torch_blocksparse/__init__.py
+torch_blocksparse/attention.py
+torch_blocksparse/batchnorm.py
+torch_blocksparse/conv.py
+torch_blocksparse/matmul.py
+torch_blocksparse/permute.py
+torch_blocksparse/relu.py
+torch_blocksparse/scratch.py
+torch_blocksparse/simplifiedsparseattention.py
+torch_blocksparse/softmax.py
+torch_blocksparse.egg-info/PKG-INFO
+torch_blocksparse.egg-info/SOURCES.txt
+torch_blocksparse.egg-info/dependency_links.txt
+torch_blocksparse.egg-info/requires.txt
+torch_blocksparse.egg-info/top_level.txt
