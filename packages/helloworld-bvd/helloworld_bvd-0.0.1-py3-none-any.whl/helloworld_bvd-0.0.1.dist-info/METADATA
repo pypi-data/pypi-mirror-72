@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: helloworld-bvd
+Version: 0.0.1
+Summary: Say Hello!
+Home-page: https://gitlab.com/bvd-sketchbook/package-pypi
+Author: Bastiaan Van denabeele
+Author-email: vandenabeele.bastiaan@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: dev
+Requires-Dist: pytest (>=5.4.3) ; extra == 'dev'
+Requires-Dist: twine (>=3.2.0) ; extra == 'dev'
+
+UNKNOWN
+
+
