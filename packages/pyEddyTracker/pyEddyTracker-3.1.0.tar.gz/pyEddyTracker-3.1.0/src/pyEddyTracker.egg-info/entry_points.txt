@@ -1,0 +1,4 @@
+[console_scripts]
+EddyNetworkGroup = py_eddy_tracker.network:build_network
+MergeEddies = py_eddy_tracker.appli:merge_eddies
+

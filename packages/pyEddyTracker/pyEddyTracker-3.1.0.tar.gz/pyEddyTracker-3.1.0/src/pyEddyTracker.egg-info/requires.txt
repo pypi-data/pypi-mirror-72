@@ -1,0 +1,11 @@
+matplotlib
+netCDF4>=1.1.0
+numba
+numpy>=1.14
+opencv-python
+pint
+polygon3
+pyproj
+pyyaml
+scipy>=0.15.1
+zarr
