@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyaemcloudmanagerapi
+Version: 1.0.0
+Summary: Cloud Manager API
+Home-page: https://github.com/shinesolutions/cloudmanager-api-clients/tree/master/clients/python/generated
+Author: Shine Solutions
+Author-email: opensource@shinesolutions.com
+License: The Apache License, Version 2.0
+Keywords: OpenAPI,OpenAPI-Generator,Cloud Manager API
+Platform: UNKNOWN
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+
+This API allows access to Cloud Manager programs, pipelines, and environments by an authorized technical account created through the Adobe I/O Console. The base url for this API is https://cloudmanager.adobe.io, e.g. to get the list of programs for an organization, you would make a GET request to https://cloudmanager.adobe.io/api/programs (with the correct set of headers as described below). This swagger file can be downloaded from https://raw.githubusercontent.com/AdobeDocs/cloudmanager-api-docs/master/swagger-specs/api.yaml.  # noqa: E501
+
+
