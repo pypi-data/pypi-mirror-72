@@ -1,0 +1,4 @@
+[console_scripts]
+get_events = bqmail.query:get_events
+get_stations = bqmail.query:get_stations
+
