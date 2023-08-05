@@ -1,0 +1,10 @@
+setup.py
+meo_distributions/Binomialdistribution.py
+meo_distributions/Gaussiandistribution.py
+meo_distributions/Generaldistribution.py
+meo_distributions/__init__.py
+meo_distributions.egg-info/PKG-INFO
+meo_distributions.egg-info/SOURCES.txt
+meo_distributions.egg-info/dependency_links.txt
+meo_distributions.egg-info/not-zip-safe
+meo_distributions.egg-info/top_level.txt
