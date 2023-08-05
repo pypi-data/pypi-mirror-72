@@ -1,0 +1,3 @@
+[console_scripts]
+thqm=thqm.__cli__:main
+
