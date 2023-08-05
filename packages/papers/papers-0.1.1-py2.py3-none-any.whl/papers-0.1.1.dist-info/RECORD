@@ -1,0 +1,17 @@
+papers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+papers/__version__.py,sha256=yHk3T-HNO9fagGX3saQC-xp4lU0Z65sc27IPGbMkNHo,63
+papers/cli.py,sha256=dYNuWJdQcHb9DIoxpXxXwNJ1qCz_gB-ysLHDEWiQOxA,4447
+papers/papers.py,sha256=cbWL9rlvMWThTKp5AEnbVkDS21r9CYCRIL3NCJJhB9A,8117
+papers/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+papers/utils/argparse.py,sha256=VHy9HcThqruoJWcEIBm0vlEOKnCO9lCVSYSSe2U9Nac,666
+papers/utils/arxiv.py,sha256=bU8ELgw5qNf6ei6ezH5-7zz_xZq3aZr9PIqG768yTbs,1579
+papers/utils/bibtex.py,sha256=BajS8Qf7-K-uf8UPj9jHzLrjOlp2VCXvBVqE3Z2qQDE,3645
+papers/utils/debug.py,sha256=oaMg76SixUdeoek6kbjQhxcVAXmAZM0KI272F69NftA,479
+papers/utils/formatters.py,sha256=CxaNXUACQSy3PoTfJTLR0YbhZug4EJOEvaRri-T6Gds,4045
+papers/utils/imagemagick.py,sha256=eo4jLV-077JpmrLqI7yBl5u35HyFHQ0al9c_WmeuXnk,465
+papers-0.1.1.dist-info/LICENSE,sha256=wI6MNurVivLVF4GXgAaF-3asjsdxf4iAVmT7j_qHjec,1060
+papers-0.1.1.dist-info/METADATA,sha256=pzlDh9OZGriuid9NKJd0232uZw6K9iJQehVDmM25_iw,2459
+papers-0.1.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+papers-0.1.1.dist-info/entry_points.txt,sha256=zZmoMsftjX2tzVpPDjHcve6_M1XtN1ZaY-GaAWxBvR0,95
+papers-0.1.1.dist-info/top_level.txt,sha256=sLdcLzjapCbtCY-yXhtEHZEniJB7I35rxRLLLURc8mo,7
+papers-0.1.1.dist-info/RECORD,,
