@@ -1,0 +1,5 @@
+dataclasses-json
+requests
+
+[:python_version == "3.6"]
+dataclasses
