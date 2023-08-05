@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: django-snakeoil
+Version: 1.0b3
+Summary: Simple SEO & meta tag management for Django
+Home-page: https://github.com/knyghty/django-snakeoil
+Author: Tom Carrick
+Author-email: tom@carrick.eu
+License: UNKNOWN
+Keywords: django,seo,meta
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: django
+
+UNKNOWN
+
+
