@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pylcmodel
+Version: 0.3.3
+Summary: Local CLI to forward lcmodel commands to remote machine
+Home-page: https://github.com/openmrslab/pylcmodel.git
+Author: bennyrowland
+Author-email: bennyrowland@mac.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: parsley
+Requires-Dist: cryptography
+Requires-Dist: paramiko
+Provides-Extra: test
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: pyfakefs ; extra == 'test'
+
+UNKNOWN
+
+
