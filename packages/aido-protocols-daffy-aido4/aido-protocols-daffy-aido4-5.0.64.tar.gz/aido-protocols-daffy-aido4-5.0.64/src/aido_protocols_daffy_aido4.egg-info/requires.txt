@@ -1,0 +1,8 @@
+compmake
+pyparsing
+PyContracts
+networkx<3,>=2
+termcolor
+pydot
+zuper-ipce-z6
+zuper-nodes-z6
