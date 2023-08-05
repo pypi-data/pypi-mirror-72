@@ -1,0 +1,120 @@
+#
+# pre-Make for grd package
+#
+# Files and Directories
+#
+
+include ../../dev/lnx-2.17-o/include/make-config
+
+PKG =grd
+
+PKGObj = ${SysLib}/pkg${PKG}.o
+TGTLib = ${SysLib}/lib${PKG}${ThreadLibExt}.a
+TGTInc = ${Hdrs}
+TGTBin = none
+
+#
+# Compiler/Loader Options
+#
+LdFlags = -L${LibDir} ${LDFLAGS}
+MCFlags = --cpu ${CPU} -r${RealSize} -s -x -${FCompiler1}
+
+#
+# Things upon which build depends
+#
+PkgInst    = ../grd.pack
+InstallDep = ${DFiles} ${PKGObj} ${TGTLib}
+VFiles     = grd_basis.v
+DFiles     = ${SysInc}/grd_basis.d
+NDFiles    = com.d
+NDFDep     = ${DFiles} ${SysInc}/com.d
+RealSize   =8
+IntegerSize =4
+BinDep     =
+BinObj     =
+
+Macros = ${GlobalMacros}
+
+#
+# Headers Files
+#
+FCCHdrs = 
+Hdrs = 
+
+#
+# Object Files
+#
+
+Objs =   \
+	grd_basis.y.o grd_basis.w.o  \
+	grdcomp.o  \
+	grddriv.o  \
+	grdinit.o  \
+	grdread.o  \
+	grdwrit.o
+
+grd_basis.y.m grd_basis.w.c ${SysInc}/grd_basis.d grd_basis_.h : ../grd_basis.v
+	@echo "mac grd_basis.v"
+	@${MAC} ${MACFlags1} --wantc -d ${SysInc}/grd_basis.cmt -m ${SysInc}/grd_basis.d -y grd_basis.y.m -w grd_basis.w.c ../grd_basis.v
+
+grd_basis.y.o : ${DFiles} grd_basis.y.m ${NDFDep}
+	@rm -f $@ grd_basis.y.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} grd_basis.y.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} grd_basis.y.m > grd_basis.y.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c grd_basis.y.f -o grd_basis.y.o
+
+grd_basis.w.o : ${Dfiles} grd_basis.w.c
+	@echo "${CCompiler1} ${BDCFlags1} ${BCFlags1} -c grd_basis.w.c"
+	@${CCompiler1} ${BDCFlags1} ${BCFlags1} ${BICFlags1}  -c grd_basis.w.c -o grd_basis.w.o
+
+grdcomp.o : ../grdcomp.m ${NDFDep}
+	@rm -f $@ grdcomp.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../grdcomp.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../grdcomp.m > grdcomp.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c grdcomp.f -o $@
+
+grddriv.o : ../grddriv.m ${NDFDep}
+	@rm -f $@ grddriv.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../grddriv.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../grddriv.m > grddriv.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c grddriv.f -o $@
+
+grdinit.o : ../grdinit.m ${NDFDep}
+	@rm -f $@ grdinit.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../grdinit.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../grdinit.m > grdinit.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c grdinit.f -o $@
+
+grdread.o : ../grdread.m ${NDFDep}
+	@rm -f $@ grdread.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../grdread.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../grdread.m > grdread.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c grdread.f -o $@
+
+grdwrit.o : ../grdwrit.m ${NDFDep}
+	@rm -f $@ grdwrit.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../grdwrit.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../grdwrit.m > grdwrit.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c grdwrit.f -o $@
+
+
+${Objs} : ${Hdrs}
+
+${PKGObj} : ${Objs}
+	@echo "   Making package object"
+	@${LD} ${LibFlagspact} -o $@ ${Objs}
+	@${AR} ${ARFlagspact} ${TGTLib} ${PKGObj} 2> /dev/null
+	@${RM} ${PKGObj}
+
+#
+# mac 
+#
+mac : ${DFiles} ${FCCHdrs}
+
+#
+# build 
+#
+build : ${InstallDep}
+	@${RM} .${PKG}*
+	cp ${PkgInst} ${SysInc}
+

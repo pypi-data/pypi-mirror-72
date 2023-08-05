@@ -1,0 +1,134 @@
+#
+# pre-Make for api package
+#
+# Files and Directories
+#
+
+include ../../dev/lnx-2.17-o/include/make-config
+
+PKG =api
+
+PKGObj = ${SysLib}/pkg${PKG}.o
+TGTLib = ${SysLib}/lib${PKG}${ThreadLibExt}.a
+TGTInc = ${Hdrs}
+TGTBin = none
+
+#
+# Compiler/Loader Options
+#
+LdFlags = -L${LibDir} ${LDFLAGS}
+MCFlags = --cpu ${CPU} -r${RealSize} -s -x -${FCompiler1}
+
+#
+# Things upon which build depends
+#
+PkgInst    = ../api.pack
+InstallDep = ${DFiles} ${PKGObj} ${TGTLib}
+VFiles     = api_basis.v
+DFiles     = ${SysInc}/api_basis.d
+NDFiles    = com.d
+NDFDep     = ${DFiles} ${SysInc}/com.d
+RealSize   =8
+IntegerSize =4
+BinDep     =
+BinObj     =
+
+Macros = ${GlobalMacros}
+
+#
+# Headers Files
+#
+FCCHdrs = 
+Hdrs = 
+
+#
+# Object Files
+#
+
+Objs =   \
+	api_basis.y.o api_basis.w.o  \
+	apifcn.o  \
+	apip93.o  \
+	apisorc.o  \
+	fimp.o  \
+	inelrates.o  \
+	fmombal.o  \
+	sputt.o
+
+api_basis.y.m api_basis.w.c ${SysInc}/api_basis.d api_basis_.h : ../api_basis.v
+	@echo "mac api_basis.v"
+	@${MAC} ${MACFlags1} --wantc -d ${SysInc}/api_basis.cmt -m ${SysInc}/api_basis.d -y api_basis.y.m -w api_basis.w.c ../api_basis.v
+
+api_basis.y.o : ${DFiles} api_basis.y.m ${NDFDep}
+	@rm -f $@ api_basis.y.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} api_basis.y.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} api_basis.y.m > api_basis.y.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c api_basis.y.f -o api_basis.y.o
+
+api_basis.w.o : ${Dfiles} api_basis.w.c
+	@echo "${CCompiler1} ${BDCFlags1} ${BCFlags1} -c api_basis.w.c"
+	@${CCompiler1} ${BDCFlags1} ${BCFlags1} ${BICFlags1}  -c api_basis.w.c -o api_basis.w.o
+
+apifcn.o : ../apifcn.m ${NDFDep}
+	@rm -f $@ apifcn.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../apifcn.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../apifcn.m > apifcn.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c apifcn.f -o $@
+
+apip93.o : ../apip93.m ${NDFDep}
+	@rm -f $@ apip93.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../apip93.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../apip93.m > apip93.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c apip93.f -o $@
+
+apisorc.o : ../apisorc.m ${NDFDep}
+	@rm -f $@ apisorc.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../apisorc.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../apisorc.m > apisorc.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c apisorc.f -o $@
+
+fimp.o : ../fimp.m ${NDFDep}
+	@rm -f $@ fimp.f
+	@echo "mppl ${FCompiler2} ${BDFFlags2} ${BFFlags2} ../fimp.m"
+	@${MPPL} ${MPFlags2} ${Macros} ${NDFiles} ${DFiles} ../fimp.m > fimp.f
+	@${FCompiler2} ${BDFFlags2} ${BFFlags2} ${BIFFlags2} -c fimp.f -o $@
+
+inelrates.o : ../inelrates.m ${NDFDep}
+	@rm -f $@ inelrates.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../inelrates.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../inelrates.m > inelrates.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c inelrates.f -o $@
+
+fmombal.o : ../fmombal.m ${NDFDep}
+	@rm -f $@ fmombal.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../fmombal.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../fmombal.m > fmombal.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c fmombal.f -o $@
+
+sputt.o : ../sputt.m ${NDFDep}
+	@rm -f $@ sputt.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../sputt.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../sputt.m > sputt.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c sputt.f -o $@
+
+
+${Objs} : ${Hdrs}
+
+${PKGObj} : ${Objs}
+	@echo "   Making package object"
+	@${LD} ${LibFlagspact} -o $@ ${Objs}
+	@${AR} ${ARFlagspact} ${TGTLib} ${PKGObj} 2> /dev/null
+	@${RM} ${PKGObj}
+
+#
+# mac 
+#
+mac : ${DFiles} ${FCCHdrs}
+
+#
+# build 
+#
+build : ${InstallDep}
+	@${RM} .${PKG}*
+	cp ${PkgInst} ${SysInc}
+

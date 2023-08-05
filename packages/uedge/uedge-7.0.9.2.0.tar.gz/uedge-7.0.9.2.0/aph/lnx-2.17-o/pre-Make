@@ -1,0 +1,99 @@
+#
+# pre-Make for aph package
+#
+# Files and Directories
+#
+
+include ../../dev/lnx-2.17-o/include/make-config
+
+PKG =aph
+
+PKGObj = ${SysLib}/pkg${PKG}.o
+TGTLib = ${SysLib}/lib${PKG}${ThreadLibExt}.a
+TGTInc = ${Hdrs}
+TGTBin = none
+
+#
+# Compiler/Loader Options
+#
+LdFlags = -L${LibDir} ${LDFLAGS}
+MCFlags = --cpu ${CPU} -r${RealSize} -s -x -${FCompiler1}
+
+#
+# Things upon which build depends
+#
+PkgInst    = ../aph.pack
+InstallDep = ${DFiles} ${PKGObj} ${TGTLib}
+VFiles     = aph.v
+DFiles     = ${SysInc}/aph.d
+NDFiles    = com.d
+NDFDep     = ${DFiles} ${SysInc}/com.d
+RealSize   =8
+IntegerSize =4
+BinDep     =
+BinObj     =
+
+Macros = ${GlobalMacros}
+
+#
+# Headers Files
+#
+FCCHdrs = 
+Hdrs = 
+
+#
+# Object Files
+#
+
+Objs =   \
+	aph.y.o aph.w.o  \
+	aphrates.o  \
+	aphread.o
+
+aph.y.m aph.w.c ${SysInc}/aph.d aph_.h : ../aph.v
+	@echo "mac aph.v"
+	@${MAC} ${MACFlags1} --wantc -d ${SysInc}/aph.cmt -m ${SysInc}/aph.d -y aph.y.m -w aph.w.c ../aph.v
+
+aph.y.o : ${DFiles} aph.y.m ${NDFDep}
+	@rm -f $@ aph.y.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} aph.y.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} aph.y.m > aph.y.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c aph.y.f -o aph.y.o
+
+aph.w.o : ${Dfiles} aph.w.c
+	@echo "${CCompiler1} ${BDCFlags1} ${BCFlags1} -c aph.w.c"
+	@${CCompiler1} ${BDCFlags1} ${BCFlags1} ${BICFlags1}  -c aph.w.c -o aph.w.o
+
+aphrates.o : ../aphrates.m ${NDFDep}
+	@rm -f $@ aphrates.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../aphrates.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../aphrates.m > aphrates.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c aphrates.f -o $@
+
+aphread.o : ../aphread.m ${NDFDep}
+	@rm -f $@ aphread.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../aphread.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../aphread.m > aphread.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c aphread.f -o $@
+
+
+${Objs} : ${Hdrs}
+
+${PKGObj} : ${Objs}
+	@echo "   Making package object"
+	@${LD} ${LibFlagspact} -o $@ ${Objs}
+	@${AR} ${ARFlagspact} ${TGTLib} ${PKGObj} 2> /dev/null
+	@${RM} ${PKGObj}
+
+#
+# mac 
+#
+mac : ${DFiles} ${FCCHdrs}
+
+#
+# build 
+#
+build : ${InstallDep}
+	@${RM} .${PKG}*
+	cp ${PkgInst} ${SysInc}
+

@@ -1,0 +1,151 @@
+#
+# pre-Make for com package
+#
+# Files and Directories
+#
+
+include ../../dev/lnx-2.17-o/include/make-config
+
+PKG =com
+
+PKGObj = ${SysLib}/pkg${PKG}.o
+TGTLib = ${SysLib}/lib${PKG}${ThreadLibExt}.a
+TGTInc = ${Hdrs}
+TGTBin = none
+
+#
+# Compiler/Loader Options
+#
+LdFlags = -L${LibDir} ${LDFLAGS}
+MCFlags = --cpu ${CPU} -r${RealSize} -s -x -${FCompiler1}
+
+#
+# Things upon which build depends
+#
+PkgInst    = ../com.pack
+InstallDep = ${DFiles} ${PKGObj} ${TGTLib}
+VFiles     = com.v
+DFiles     = ${SysInc}/com.d
+NDFiles    = aph.d api_basis.d bbb_basis.d grd_basis.d flx_basis.d wdf.d
+NDFDep     = ${DFiles} ${SysInc}/aph.d ${SysInc}/api_basis.d ${SysInc}/bbb_basis.d ${SysInc}/grd_basis.d ${SysInc}/flx_basis.d ${SysInc}/wdf.d
+RealSize   =8
+IntegerSize =4
+BinDep     =
+BinObj     =
+
+Macros = ${GlobalMacros}
+
+#
+# Headers Files
+#
+FCCHdrs = 
+Hdrs = 
+
+#
+# Object Files
+#
+
+Objs =   \
+	com.y.o com.w.o  \
+	comutil.o  \
+	blasext.o  \
+	misc.o  \
+	mnbrak.o  \
+	brent.o  \
+	error.o  \
+	getmsg.o  \
+	glbwrlog.o  \
+	dsum.o  \
+	handlers.o
+
+com.y.m com.w.c ${SysInc}/com.d com_.h : ../com.v
+	@echo "mac com.v"
+	@${MAC} ${MACFlags1} --wantc -d ${SysInc}/com.cmt -m ${SysInc}/com.d -y com.y.m -w com.w.c ../com.v
+
+com.y.o : ${DFiles} com.y.m ${NDFDep}
+	@rm -f $@ com.y.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} com.y.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} com.y.m > com.y.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c com.y.f -o com.y.o
+
+com.w.o : ${Dfiles} com.w.c
+	@echo "${CCompiler1} ${BDCFlags1} ${BCFlags1} -c com.w.c"
+	@${CCompiler1} ${BDCFlags1} ${BCFlags1} ${BICFlags1}  -c com.w.c -o com.w.o
+
+comutil.o : ../comutil.m ${NDFDep}
+	@rm -f $@ comutil.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../comutil.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../comutil.m > comutil.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c comutil.f -o $@
+
+blasext.o : ../blasext.m ${NDFDep}
+	@rm -f $@ blasext.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../blasext.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../blasext.m > blasext.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c blasext.f -o $@
+
+misc.o : ../misc.m ${NDFDep}
+	@rm -f $@ misc.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../misc.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../misc.m > misc.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c misc.f -o $@
+
+mnbrak.o : ../mnbrak.m ${NDFDep}
+	@rm -f $@ mnbrak.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../mnbrak.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../mnbrak.m > mnbrak.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c mnbrak.f -o $@
+
+brent.o : ../brent.m ${NDFDep}
+	@rm -f $@ brent.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../brent.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../brent.m > brent.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c brent.f -o $@
+
+
+error.o : ../error.f
+	@rm -f $@
+	@echo "${FCompiler1} ${BDFFlags1} ${BFFlags1} -c ../error.f"
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c ../error.f -o $@
+
+getmsg.o : ../getmsg.f
+	@rm -f $@
+	@echo "${FCompiler1} ${BDFFlags1} ${BFFlags1} -c ../getmsg.f"
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c ../getmsg.f -o $@
+
+glbwrlog.o : ../glbwrlog.f
+	@rm -f $@
+	@echo "${FCompiler1} ${BDFFlags1} ${BFFlags1} -c ../glbwrlog.f"
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c ../glbwrlog.f -o $@
+
+dsum.o : ../dsum.f
+	@rm -f $@
+	@echo "${FCompiler1} ${BDFFlags1} ${BFFlags1} -c ../dsum.f"
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c ../dsum.f -o $@
+
+
+handlers.o : ../handlers.c
+	@echo "${CCompiler1} ${BDCFlags1} ${BCFlags1} -c ../handlers.c"
+	@${CCompiler1} ${BDCFlags1} ${BCFlags1} ${BICFlags1} -c ../handlers.c -o $@
+
+
+${Objs} : ${Hdrs}
+
+${PKGObj} : ${Objs}
+	@echo "   Making package object"
+	@${LD} ${LibFlagspact} -o $@ ${Objs}
+	@${AR} ${ARFlagspact} ${TGTLib} ${PKGObj} 2> /dev/null
+	@${RM} ${PKGObj}
+
+#
+# mac 
+#
+mac : ${DFiles} ${FCCHdrs}
+
+#
+# build 
+#
+build : ${InstallDep}
+	@${RM} .${PKG}*
+	cp ${PkgInst} ${SysInc}
+

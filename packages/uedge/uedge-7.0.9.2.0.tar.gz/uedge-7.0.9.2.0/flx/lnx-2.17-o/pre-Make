@@ -1,0 +1,113 @@
+#
+# pre-Make for flx package
+#
+# Files and Directories
+#
+
+include ../../dev/lnx-2.17-o/include/make-config
+
+PKG =flx
+
+PKGObj = ${SysLib}/pkg${PKG}.o
+TGTLib = ${SysLib}/lib${PKG}${ThreadLibExt}.a
+TGTInc = ${Hdrs}
+TGTBin = none
+
+#
+# Compiler/Loader Options
+#
+LdFlags = -L${LibDir} ${LDFLAGS}
+MCFlags = --cpu ${CPU} -r${RealSize} -s -x -${FCompiler1}
+
+#
+# Things upon which build depends
+#
+PkgInst    = ../flx.pack
+InstallDep = ${DFiles} ${PKGObj} ${TGTLib}
+VFiles     = flx_basis.v
+DFiles     = ${SysInc}/flx_basis.d
+NDFiles    = com.d bbb_basis.d
+NDFDep     = ${DFiles} ${SysInc}/com.d ${SysInc}/bbb_basis.d
+RealSize   =8
+IntegerSize =4
+BinDep     =
+BinObj     =
+
+Macros = ${GlobalMacros}
+
+#
+# Headers Files
+#
+FCCHdrs = 
+Hdrs = 
+
+#
+# Object Files
+#
+
+Objs =   \
+	flx_basis.y.o flx_basis.w.o  \
+	flxcomp.o  \
+	flxdriv.o  \
+	flxread.o  \
+	flxwrit.o
+
+flx_basis.y.m flx_basis.w.c ${SysInc}/flx_basis.d flx_basis_.h : ../flx_basis.v
+	@echo "mac flx_basis.v"
+	@${MAC} ${MACFlags1} --wantc -d ${SysInc}/flx_basis.cmt -m ${SysInc}/flx_basis.d -y flx_basis.y.m -w flx_basis.w.c ../flx_basis.v
+
+flx_basis.y.o : ${DFiles} flx_basis.y.m ${NDFDep}
+	@rm -f $@ flx_basis.y.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} flx_basis.y.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} flx_basis.y.m > flx_basis.y.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c flx_basis.y.f -o flx_basis.y.o
+
+flx_basis.w.o : ${Dfiles} flx_basis.w.c
+	@echo "${CCompiler1} ${BDCFlags1} ${BCFlags1} -c flx_basis.w.c"
+	@${CCompiler1} ${BDCFlags1} ${BCFlags1} ${BICFlags1}  -c flx_basis.w.c -o flx_basis.w.o
+
+flxcomp.o : ../flxcomp.m ${NDFDep}
+	@rm -f $@ flxcomp.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../flxcomp.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../flxcomp.m > flxcomp.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c flxcomp.f -o $@
+
+flxdriv.o : ../flxdriv.m ${NDFDep}
+	@rm -f $@ flxdriv.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../flxdriv.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../flxdriv.m > flxdriv.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c flxdriv.f -o $@
+
+flxread.o : ../flxread.m ${NDFDep}
+	@rm -f $@ flxread.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../flxread.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../flxread.m > flxread.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c flxread.f -o $@
+
+flxwrit.o : ../flxwrit.m ${NDFDep}
+	@rm -f $@ flxwrit.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../flxwrit.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../flxwrit.m > flxwrit.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c flxwrit.f -o $@
+
+
+${Objs} : ${Hdrs}
+
+${PKGObj} : ${Objs}
+	@echo "   Making package object"
+	@${LD} ${LibFlagspact} -o $@ ${Objs}
+	@${AR} ${ARFlagspact} ${TGTLib} ${PKGObj} 2> /dev/null
+	@${RM} ${PKGObj}
+
+#
+# mac 
+#
+mac : ${DFiles} ${FCCHdrs}
+
+#
+# build 
+#
+build : ${InstallDep}
+	@${RM} .${PKG}*
+	cp ${PkgInst} ${SysInc}
+

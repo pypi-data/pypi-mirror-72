@@ -1,0 +1,161 @@
+#
+# pre-Make for bbb package
+#
+# Files and Directories
+#
+
+include ../../dev/lnx-2.17-o/include/make-config
+
+PKG =bbb
+
+PKGObj = ${SysLib}/pkg${PKG}.o
+TGTLib = ${SysLib}/lib${PKG}${ThreadLibExt}.a
+TGTInc = ${Hdrs}
+TGTBin = none
+
+#
+# Compiler/Loader Options
+#
+LdFlags = -L${LibDir} ${LDFLAGS}
+MCFlags = --cpu ${CPU} -r${RealSize} -s -x -${FCompiler1}
+
+#
+# Things upon which build depends
+#
+PkgInst    = ../bbb.pack
+InstallDep = ${DFiles} ${PKGObj} ${TGTLib}
+VFiles     = bbb_basis.v
+DFiles     = ${SysInc}/bbb_basis.d
+NDFiles    = com.d
+NDFDep     = ${DFiles} ${SysInc}/com.d
+RealSize   =8
+IntegerSize =4
+BinDep     =
+BinObj     =
+
+Macros = ${GlobalMacros}
+
+#
+# Headers Files
+#
+FCCHdrs = 
+Hdrs = 
+
+#
+# Object Files
+#
+
+Objs =   \
+	bbb_basis.y.o bbb_basis.w.o  \
+	boundary.o  \
+	convert.o  \
+	geometry.o  \
+	griddubl.o  \
+	oderhs.o  \
+	odesetup.o  \
+	odesolve.o  \
+	potencur.o  \
+	turbulence.o  \
+	ext_neutrals.o  \
+	exmain.o
+
+bbb_basis.y.m bbb_basis.w.c ${SysInc}/bbb_basis.d bbb_basis_.h : ../bbb_basis.v
+	@echo "mac bbb_basis.v"
+	@${MAC} ${MACFlags1} --wantc -d ${SysInc}/bbb_basis.cmt -m ${SysInc}/bbb_basis.d -y bbb_basis.y.m -w bbb_basis.w.c ../bbb_basis.v
+
+bbb_basis.y.o : ${DFiles} bbb_basis.y.m ${NDFDep}
+	@rm -f $@ bbb_basis.y.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} bbb_basis.y.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} bbb_basis.y.m > bbb_basis.y.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c bbb_basis.y.f -o bbb_basis.y.o
+
+bbb_basis.w.o : ${Dfiles} bbb_basis.w.c
+	@echo "${CCompiler1} ${BDCFlags1} ${BCFlags1} -c bbb_basis.w.c"
+	@${CCompiler1} ${BDCFlags1} ${BCFlags1} ${BICFlags1}  -c bbb_basis.w.c -o bbb_basis.w.o
+
+boundary.o : ../boundary.m ${NDFDep}
+	@rm -f $@ boundary.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../boundary.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../boundary.m > boundary.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c boundary.f -o $@
+
+convert.o : ../convert.m ${NDFDep}
+	@rm -f $@ convert.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../convert.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../convert.m > convert.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c convert.f -o $@
+
+geometry.o : ../geometry.m ${NDFDep}
+	@rm -f $@ geometry.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../geometry.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../geometry.m > geometry.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c geometry.f -o $@
+
+griddubl.o : ../griddubl.m ${NDFDep}
+	@rm -f $@ griddubl.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../griddubl.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../griddubl.m > griddubl.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c griddubl.f -o $@
+
+oderhs.o : ../oderhs.m ${NDFDep}
+	@rm -f $@ oderhs.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../oderhs.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../oderhs.m > oderhs.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c oderhs.f -o $@
+
+odesetup.o : ../odesetup.m ${NDFDep}
+	@rm -f $@ odesetup.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../odesetup.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../odesetup.m > odesetup.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c odesetup.f -o $@
+
+odesolve.o : ../odesolve.m ${NDFDep}
+	@rm -f $@ odesolve.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../odesolve.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../odesolve.m > odesolve.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c odesolve.f -o $@
+
+potencur.o : ../potencur.m ${NDFDep}
+	@rm -f $@ potencur.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../potencur.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../potencur.m > potencur.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c potencur.f -o $@
+
+turbulence.o : ../turbulence.m ${NDFDep}
+	@rm -f $@ turbulence.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../turbulence.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../turbulence.m > turbulence.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c turbulence.f -o $@
+
+ext_neutrals.o : ../ext_neutrals.m ${NDFDep}
+	@rm -f $@ ext_neutrals.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../ext_neutrals.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../ext_neutrals.m > ext_neutrals.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c ext_neutrals.f -o $@
+
+
+exmain.o : ../exmain.c
+	@echo "${CCompiler1} ${BDCFlags1} ${BCFlags1} -c ../exmain.c"
+	@${CCompiler1} ${BDCFlags1} ${BCFlags1} ${BICFlags1} -c ../exmain.c -o $@
+
+
+${Objs} : ${Hdrs}
+
+${PKGObj} : ${Objs}
+	@echo "   Making package object"
+	@${LD} ${LibFlagspact} -o $@ ${Objs}
+	@${AR} ${ARFlagspact} ${TGTLib} ${PKGObj} 2> /dev/null
+	@${RM} ${PKGObj}
+
+#
+# mac 
+#
+mac : ${DFiles} ${FCCHdrs}
+
+#
+# build 
+#
+build : ${InstallDep}
+	@${RM} .${PKG}*
+	cp ${PkgInst} ${SysInc}
+

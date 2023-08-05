@@ -1,0 +1,92 @@
+#
+# pre-Make for wdf package
+#
+# Files and Directories
+#
+
+include ../../dev/lnx-2.17-o/include/make-config
+
+PKG =wdf
+
+PKGObj = ${SysLib}/pkg${PKG}.o
+TGTLib = ${SysLib}/lib${PKG}${ThreadLibExt}.a
+TGTInc = ${Hdrs}
+TGTBin = none
+
+#
+# Compiler/Loader Options
+#
+LdFlags = -L${LibDir} ${LDFLAGS}
+MCFlags = --cpu ${CPU} -r${RealSize} -s -x -${FCompiler1}
+
+#
+# Things upon which build depends
+#
+PkgInst    = ../wdf.pack
+InstallDep = ${DFiles} ${PKGObj} ${TGTLib}
+VFiles     = wdf.v
+DFiles     = ${SysInc}/wdf.d
+NDFiles    = com.d
+NDFDep     = ${DFiles} ${SysInc}/com.d
+RealSize   =8
+IntegerSize =4
+BinDep     =
+BinObj     =
+
+Macros = ${GlobalMacros}
+
+#
+# Headers Files
+#
+FCCHdrs = 
+Hdrs = 
+
+#
+# Object Files
+#
+
+Objs =   \
+	wdf.y.o wdf.w.o  \
+	wdf.o
+
+wdf.y.m wdf.w.c ${SysInc}/wdf.d wdf_.h : ../wdf.v
+	@echo "mac wdf.v"
+	@${MAC} ${MACFlags1} --wantc -d ${SysInc}/wdf.cmt -m ${SysInc}/wdf.d -y wdf.y.m -w wdf.w.c ../wdf.v
+
+wdf.y.o : ${DFiles} wdf.y.m ${NDFDep}
+	@rm -f $@ wdf.y.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} wdf.y.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} wdf.y.m > wdf.y.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c wdf.y.f -o wdf.y.o
+
+wdf.w.o : ${Dfiles} wdf.w.c
+	@echo "${CCompiler1} ${BDCFlags1} ${BCFlags1} -c wdf.w.c"
+	@${CCompiler1} ${BDCFlags1} ${BCFlags1} ${BICFlags1}  -c wdf.w.c -o wdf.w.o
+
+wdf.o : ../wdf.m ${NDFDep}
+	@rm -f $@ wdf.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../wdf.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../wdf.m > wdf.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c wdf.f -o $@
+
+
+${Objs} : ${Hdrs}
+
+${PKGObj} : ${Objs}
+	@echo "   Making package object"
+	@${LD} ${LibFlagspact} -o $@ ${Objs}
+	@${AR} ${ARFlagspact} ${TGTLib} ${PKGObj} 2> /dev/null
+	@${RM} ${PKGObj}
+
+#
+# mac 
+#
+mac : ${DFiles} ${FCCHdrs}
+
+#
+# build 
+#
+build : ${InstallDep}
+	@${RM} .${PKG}*
+	cp ${PkgInst} ${SysInc}
+

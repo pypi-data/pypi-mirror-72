@@ -1,0 +1,148 @@
+#
+# pre-Make for svr package
+#
+# Files and Directories
+#
+
+include ../../dev/lnx-2.17-o/include/make-config
+
+PKG =svr
+
+PKGObj = ${SysLib}/pkg${PKG}.o
+TGTLib = ${SysLib}/lib${PKG}${ThreadLibExt}.a
+TGTInc = ${Hdrs}
+TGTBin = none
+
+#
+# Compiler/Loader Options
+#
+LdFlags = -L${LibDir} ${LDFLAGS}
+MCFlags = --cpu ${CPU} -r${RealSize} -s -x -${FCompiler1}
+
+#
+# Things upon which build depends
+#
+PkgInst    = ../svr.pack
+InstallDep = ${DFiles} ${PKGObj} ${TGTLib}
+VFiles     = svr.v
+DFiles     = ${SysInc}/svr.d
+NDFiles    =
+NDFDep     = ${DFiles}
+RealSize   =8
+IntegerSize =4
+BinDep     =
+BinObj     =
+
+Macros = ${GlobalMacros}
+
+#
+# Headers Files
+#
+FCCHdrs = 
+Hdrs = 
+
+#
+# Object Files
+#
+
+Objs =   \
+	svr.y.o svr.w.o  \
+	daspk.o  \
+	nksol.o  \
+	svrut1.o  \
+	svrut2.o  \
+	svrut3.o  \
+	svrut4.o  \
+	vodpk.o  \
+	uoa.o  \
+	daux1.o
+
+svr.y.m svr.w.c ${SysInc}/svr.d svr_.h : ../svr.v
+	@echo "mac svr.v"
+	@${MAC} ${MACFlags1} --wantc -d ${SysInc}/svr.cmt -m ${SysInc}/svr.d -y svr.y.m -w svr.w.c ../svr.v
+
+svr.y.o : ${DFiles} svr.y.m ${NDFDep}
+	@rm -f $@ svr.y.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} svr.y.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} svr.y.m > svr.y.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c svr.y.f -o svr.y.o
+
+svr.w.o : ${Dfiles} svr.w.c
+	@echo "${CCompiler1} ${BDCFlags1} ${BCFlags1} -c svr.w.c"
+	@${CCompiler1} ${BDCFlags1} ${BCFlags1} ${BICFlags1}  -c svr.w.c -o svr.w.o
+
+daspk.o : ../daspk.m ${NDFDep}
+	@rm -f $@ daspk.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../daspk.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../daspk.m > daspk.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c daspk.f -o $@
+
+nksol.o : ../nksol.m ${NDFDep}
+	@rm -f $@ nksol.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../nksol.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../nksol.m > nksol.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c nksol.f -o $@
+
+svrut1.o : ../svrut1.m ${NDFDep}
+	@rm -f $@ svrut1.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../svrut1.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../svrut1.m > svrut1.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c svrut1.f -o $@
+
+svrut2.o : ../svrut2.m ${NDFDep}
+	@rm -f $@ svrut2.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../svrut2.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../svrut2.m > svrut2.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c svrut2.f -o $@
+
+svrut3.o : ../svrut3.m ${NDFDep}
+	@rm -f $@ svrut3.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../svrut3.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../svrut3.m > svrut3.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c svrut3.f -o $@
+
+svrut4.o : ../svrut4.m ${NDFDep}
+	@rm -f $@ svrut4.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../svrut4.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../svrut4.m > svrut4.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c svrut4.f -o $@
+
+vodpk.o : ../vodpk.m ${NDFDep}
+	@rm -f $@ vodpk.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../vodpk.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../vodpk.m > vodpk.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c vodpk.f -o $@
+
+uoa.o : ../uoa.m ${NDFDep}
+	@rm -f $@ uoa.f
+	@echo "mppl ${FCompiler1} ${BDFFlags1} ${BFFlags1} ../uoa.m"
+	@${MPPL} ${MPFlags1} ${Macros} ${NDFiles} ${DFiles} ../uoa.m > uoa.f
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c uoa.f -o $@
+
+
+daux1.o : ../daux1.f
+	@rm -f $@
+	@echo "${FCompiler1} ${BDFFlags1} ${BFFlags1} -c ../daux1.f"
+	@${FCompiler1} ${BDFFlags1} ${BFFlags1} ${BIFFlags1} -c ../daux1.f -o $@
+
+
+${Objs} : ${Hdrs}
+
+${PKGObj} : ${Objs}
+	@echo "   Making package object"
+	@${LD} ${LibFlagspact} -o $@ ${Objs}
+	@${AR} ${ARFlagspact} ${TGTLib} ${PKGObj} 2> /dev/null
+	@${RM} ${PKGObj}
+
+#
+# mac 
+#
+mac : ${DFiles} ${FCCHdrs}
+
+#
+# build 
+#
+build : ${InstallDep}
+	@${RM} .${PKG}*
+	cp ${PkgInst} ${SysInc}
+
