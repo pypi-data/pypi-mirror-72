@@ -1,0 +1,17 @@
+CHANGELOG.md
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/selenium_ai/__init__.py
+src/selenium_ai/__main__.py
+src/selenium_ai/cli.py
+src/selenium_ai/element_finder.py
+src/selenium_ai/py.typed
+src/selenium_ai/selenium_ai.py
+src/selenium_ai.egg-info/PKG-INFO
+src/selenium_ai.egg-info/SOURCES.txt
+src/selenium_ai.egg-info/dependency_links.txt
+src/selenium_ai.egg-info/not-zip-safe
+src/selenium_ai.egg-info/top_level.txt
