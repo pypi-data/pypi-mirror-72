@@ -1,0 +1,4 @@
+[console_scripts]
+yaqd-fake-continuous-hardware = yaqd_fakes._fake_continuous_hardware:FakeContinuousHardware.main
+yaqd-fake-discrete-hardware = yaqd_fakes._fake_discrete_hardware:FakeDiscreteHardware.main
+
