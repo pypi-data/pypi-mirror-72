@@ -1,0 +1,11 @@
+requests
+tenacity
+click
+tqdm
+geojson
+rasterio
+geopandas==0.7.0
+folium
+branca
+matplotlib
+descartes
