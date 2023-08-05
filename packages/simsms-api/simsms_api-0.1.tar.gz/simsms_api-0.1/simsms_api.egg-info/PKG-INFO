@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: simsms-api
+Version: 0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: daveusa31
+Author-email: strelok.127@yandex.ru
+License: UNKNOWN
+Project-URL: Source, https://github.com/daveusa31/simsms_api
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: Russian
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
