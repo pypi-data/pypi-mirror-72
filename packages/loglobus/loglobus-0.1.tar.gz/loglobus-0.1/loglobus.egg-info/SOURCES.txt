@@ -1,0 +1,10 @@
+README.md
+setup.py
+loglobus.egg-info/PKG-INFO
+loglobus.egg-info/SOURCES.txt
+loglobus.egg-info/dependency_links.txt
+loglobus.egg-info/entry_points.txt
+loglobus.egg-info/top_level.txt
+src/__init__.py
+src/_coredir.py
+src/transferdirs.py
