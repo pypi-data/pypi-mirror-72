@@ -1,0 +1,3 @@
+[console_scripts]
+csvsql = cssaw_central.csvsql:main
+
