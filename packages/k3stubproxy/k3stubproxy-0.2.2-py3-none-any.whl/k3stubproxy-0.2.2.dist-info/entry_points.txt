@@ -1,0 +1,5 @@
+[console_scripts]
+k3stubproxy-analyse-stub-function-definition = k3stubproxy.main.dump_function_definition:main
+k3stubproxy-generate-stub = k3stubproxy.main.stubgenerator:main
+k3stubproxy-generate-target-stub = k3stubproxy.main.stub_target_generator:main
+
