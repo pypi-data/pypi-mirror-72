@@ -1,0 +1,12 @@
+flask_restful_dbbase/__init__.py,sha256=ot-VmNp1baoP3UhBwXNGqR-vJxEK7VOXjvsf69rkvv8,1681
+flask_restful_dbbase/_version.py,sha256=QgOkmjYoptvkYmVoEWY3ngryNSBvHNW4XnwbnFALUNs,36
+flask_restful_dbbase/resources/__init__.py,sha256=KkuZzjIMm9zeoC3-HOYgqH4PtPx74fxoRceqDzOw2VU,270
+flask_restful_dbbase/resources/collection_model_resource.py,sha256=YgZvuT-WVNP-_Zoet9vqwDALRWm3xfHEe0OMitDwTho,4527
+flask_restful_dbbase/resources/dbbase_resource.py,sha256=f2nHPlOIFlJn9SRLdbYcRw5DW7-P0PscyWJU64HM5SI,18498
+flask_restful_dbbase/resources/meta_resource.py,sha256=5byiIYC1fvc-bxFO8DgzXT7LkI4O6h7ZssGnmoV5NOE,3158
+flask_restful_dbbase/resources/model_resource.py,sha256=CewWFX9ryaAm48huyxnhmOemJUZF3RiAvv9X4snrtt4,16539
+Flask_RESTful_DBBase-0.1.6.dist-info/LICENSE.txt,sha256=k-vjxaznS1YFAk0MAamrKGl9RVHgsZmskt2laO1AlwQ,1067
+Flask_RESTful_DBBase-0.1.6.dist-info/METADATA,sha256=d96vL5iy_k0YzeJBf8Rb-UCeBrhGyJ9TrWTuDbU7iCw,2344
+Flask_RESTful_DBBase-0.1.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+Flask_RESTful_DBBase-0.1.6.dist-info/top_level.txt,sha256=Qb7rPPH076foAq9opBBN98fDFgqWvO301B25bfKAfCU,21
+Flask_RESTful_DBBase-0.1.6.dist-info/RECORD,,
