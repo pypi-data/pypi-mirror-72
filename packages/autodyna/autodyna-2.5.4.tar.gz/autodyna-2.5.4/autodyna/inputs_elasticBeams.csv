@@ -1,0 +1,19 @@
+info_filename ,BH101
+Ec,2.90E+04
+den,2400
+v,0.2
+section_type,Rectangular Beam
+cover,38.1
+diameter_circ ,500
+rect_width ,304.8
+rect_height ,488.95
+t_width ,304.8
+t_height ,488.95
+f_width ,304.8
+f_thick ,0
+bX,1300
+bY,1000
+tX,300
+tY,400
+cX,0
+cY,0
