@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+easy_publish/__init__.py
+easy_publish/posts.py
+easy_publish/utils.py
+easy_publish.egg-info/PKG-INFO
+easy_publish.egg-info/SOURCES.txt
+easy_publish.egg-info/dependency_links.txt
+easy_publish.egg-info/entry_points.txt
+easy_publish.egg-info/requires.txt
+easy_publish.egg-info/top_level.txt
+tests/__init__.py
+tests/test_posts.py
+tests/test_utils.py
