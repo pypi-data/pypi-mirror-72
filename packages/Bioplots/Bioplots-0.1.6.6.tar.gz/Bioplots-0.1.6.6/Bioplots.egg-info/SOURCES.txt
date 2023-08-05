@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+Bioplots/__init__.py
+Bioplots/cluster.py
+Bioplots/distribution.py
+Bioplots/utils.py
+Bioplots.egg-info/PKG-INFO
+Bioplots.egg-info/SOURCES.txt
+Bioplots.egg-info/dependency_links.txt
+Bioplots.egg-info/requires.txt
+Bioplots.egg-info/top_level.txt
+Bioplots/data/datasets.csv
