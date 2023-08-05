@@ -1,0 +1,3 @@
+[console_scripts]
+jambot = webinarJamBot.webinarJam:main
+
