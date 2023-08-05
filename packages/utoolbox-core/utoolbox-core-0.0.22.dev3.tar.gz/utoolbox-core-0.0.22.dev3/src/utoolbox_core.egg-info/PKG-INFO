@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: utoolbox-core
+Version: 0.0.22.dev3
+Summary: Core functions for uToolbox.
+Home-page: https://github.com/liuyenting/utoolbox-core
+Author: Liu, Yen-Ting
+License: UNKNOWN
+Description: # uToolbox [Core]
+        
+        A Python image processing package for LLSM.
+        
+        For more information, refer to [the documentation](https://utoolbox.readthedocs.io/en/latest/index.html).
+        
+        ## Installation
+        uToolbox is published on [PyPI](https://pypi.org/project/utoolbox/) and can be installed from there:
+        
+        `pip install -U utoolbox`
+        
+        Beta releases are also published:
+        
+        `pip install -U --pre utoolbox`
+        
+        If you wish to install uToolbox for development purposes, refer to [the developer guide](https://utoolbox.readthedocs.io/en/latest/intro/developer.html).
+        
+        ## Documentation
+        Documentation is available from [readthedocs.io](https://utoolbox.readthedocs.io/en/latest/index.html).
+        
+        ## Authors
+        - Liu, Yen-Ting
+        
+        ## License
+        This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LICENSE.md) file for details
+        
+        ## Acknowledgments
+        - [LLSpy](https://github.com/tlambert03/LLSpy) by Talley Lambert.
+        
+Keywords: microscopy
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: gpu
+Provides-Extra: viewer
+Provides-Extra: original
