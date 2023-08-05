@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: properly_models
+Version: 0.0.2
+Summary: Models for common Properly operations in python.
+Home-page: https://github.com/GoProperly/properly-models
+Author: GoProperly
+Author-email: info@goproperly.com
+License: UNKNOWN
+Description: public
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
