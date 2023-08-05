@@ -1,0 +1,8 @@
+[gino.app.extensions]
+session.admin=authlib_gino.fastapi_session.admin:init_app
+session.demo=authlib_gino.fastapi_session.demo_login:init_app
+session.oidc=authlib_gino.fastapi_session.oidc:init_app
+
+[gino.app.migrations]
+session.oidc=authlib_gino.fastapi_session:migrations
+
