@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: accuweather
+Version: 0.0.6
+Summary: Python wrapper for getting weather data from AccuWeather servers.
+Home-page: https://github.com/bieniu/accuweather
+Author: Maciej Bieniek
+Author-email: maciej.bieniek@gmail.com
+License: Apache 2
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: aiohttp
+
+UNKNOWN
+
+
