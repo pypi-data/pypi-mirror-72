@@ -1,0 +1,13 @@
+imports:
+    hera: ./ext/hera
+
+git module hera:
+    url: git@bitbucket.org:grey_narn/hera.git
+    pick:
+        - license.txt
+        - bottleneck
+        - wasserstein
+    drop:
+        - bottleneck/tests
+        - wasserstein/tests
+    rev: 0019cae9dc1e9d11aa03bc59681435ba7f21eea8
