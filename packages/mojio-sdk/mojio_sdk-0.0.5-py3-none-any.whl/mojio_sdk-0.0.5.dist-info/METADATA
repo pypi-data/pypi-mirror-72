@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: mojio-sdk
+Version: 0.0.5
+Summary: Moj.io API Python SDK
+Home-page: https://github.com/simontb/mojio-py
+Author: Simon Tenbeitel
+Author-email: open-source@simontb.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: requests
+
+UNKNOWN
+
+
