@@ -1,0 +1,3 @@
+pyyaml
+boto<3,>=2.39
+fabric3
