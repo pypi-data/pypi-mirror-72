@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: jsonmarshal
+Version: 0.0.1rc6
+Summary: Marshal JSON to/from python dataclasses.
+Home-page: https://github.com/MikeWooster/jsonmarshal
+Author: Mike Wooster
+Author-email: 
+License: UNKNOWN
+Description: ![Python package and deploy](https://github.com/MikeWooster/jsonmarshal/workflows/Python%20package%20and%20deploy/badge.svg)
+        
+        # JSON Marshal
+        
+        Marshal JSON to and from python dataclasses
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: deploy
+Provides-Extra: lint
+Provides-Extra: docs
+Provides-Extra: test
