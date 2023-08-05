@@ -1,0 +1,4 @@
+xarray>=0.15
+dask[complete]
+netcdf4
+clisops>=0.2.0
