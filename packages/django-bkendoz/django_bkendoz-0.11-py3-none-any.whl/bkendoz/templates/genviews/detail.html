@@ -1,0 +1,53 @@
+{% extends layout_data.main_layout|default:"genviews/layout.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="heading-flex">
+
+  <h1>
+    {% if object.detail_header %}
+    {{ object.detail_header | safe}}
+    {% else %}
+    {{ object }}
+    {% endif %}
+    <div class="subheading">
+      <ul>
+        {% for label, value in object.get_array_data.items %}
+        <li>{{ label }}
+          :
+          <em>{{ value }}</em>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </h1>
+
+    {% for href, faclass in object.get_detail_menu %}
+    <a href = "{{ href }}">
+        <i class="fas {{ faclass }}"></i>
+    </a>
+    {% endfor %}
+
+  </a>
+  {% if actions_extra %}
+  {% for action in actions_extra %}
+  {% if action.url %}
+  <a class="{{ action.class }}" href="{% url action.url object.id %}">{{ action.text }}</a>
+  {% elif action.href %}
+  <a class="{{ action.class }}" href="{{ action.href }}">{{ action.text }}</a>
+  {% else %}
+  <a class="{{ action.class }}" href="#">{{ action.text }}</a>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+  {% block extra_actions %}
+  {% endblock extra_actions %}
+</div>
+<hr />
+
+{% include obj_tpl %}
+
+{% block extra_content %}
+{% endblock extra_content %}
+
+{% endblock %}

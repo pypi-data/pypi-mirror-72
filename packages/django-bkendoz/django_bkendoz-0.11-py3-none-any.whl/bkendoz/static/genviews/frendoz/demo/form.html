@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- head {{{-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frendoz</title>
+        <link rel="stylesheet" type="text/css" href="/vendor/fontawesome/css/all.css" />
+        <link rel="stylesheet" type="text/css" href="/static/frendoz/css/frendoz.css" />
+    </head>
+    <!--}}}-->
+    <body>
+        <!--header {{{-->
+        <header>
+
+            <button type="button" class="logo nav-left">
+                <a href="/index.html">
+                    Logo
+                </a>
+            </button>
+
+            <div class="drop-down nav-left">
+                <button type="button">
+                    Drop Menu Left
+                </button>
+                <ul class="">
+                    <li>
+                        <a href="/demo/form.html">Form Demo</a>
+                    </li>
+                    <li>
+                        <a href="/demo/text.html">Text Demo</a>
+                    </li>
+                    <li>
+                        <a href="/demo/list.html">List Demo</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="autoComplete_root" id="autoComplete_cmdbar">
+                <input type="text" tabindex="1" />
+                <button type="button">
+                    <i class="fa fa-eraser">
+                    </i>
+                </button>
+            </div>
+
+            <div class="drop-down nav-right">
+                <button type="button">
+                    Drop Menu Right
+                </button>
+                <ul class="">
+                    <li>
+                        <a href="/demo/form.html">Form Demo</a>
+                    </li>
+                    <li>
+                        <a href="/demo/text.html">Text Demo</a>
+                    </li>
+                    <li>
+                        <a href="/demo/list.html">List Demo</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button type="button" id="btn-menu-toggle" class="nav-right">
+                <i class="fa fa-list">
+                </i>
+            </button>
+
+        </header>
+        <!-- }}} -->
+        <div id="content-wrapper">
+            <!-- menu {{{-->
+            <menu>
+                <!-- CSS {{{-->
+                <div>
+                    <h1 class="link-group-title">CSS</h1>
+                    <ul>
+                        <li>
+                            <a href="/index.html">
+                                <i class="fa fa-tachometer-alt"></i> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/text.html">
+                                <i class="fa fa-heading"></i> Text demo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/form.html">
+                                <i class="fa fa-vote-yea"></i> Form demo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/table.html">
+                                <i class="fa fa-table"></i> Table demo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/tiles.html">
+                                <i class="fa fa-th-large"></i> Tiles demo
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--}}}-->
+                <!-- Javascript {{{-->
+                <div>
+                    <h1 class="link-group-title">Javascript</h1>
+                    <ul>
+                        <li>
+                            <a href="/demo/autocomplete.html">
+                                <i class="fa fa-magic"></i> Autocomplete
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/list.html">
+                                <i class="fa fa-sort"></i> List Actions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/modal.html">
+                                <i class="fa fa-square"></i> Modal
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/palette.html">
+                                <i class="fa fa-palette"></i> Color palette
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/demo/ajax.html">
+                                <i class="fa fa-sync"></i> Ajax
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--}}}-->
+            </menu>
+            <!--}}}-->
+
+<!-- main{{{-->
+         <main>
+            <!-- form and fieldsets {{{-->
+            <h1>Generic form demo</h1>
+
+            <form action="">
+               <label for="regularInput"> Input</label>
+               <input type="text" id="regularInput" />
+
+               <label class="validate-error" for="inputError">Input .validate-error</label>
+               <input type="text" class=" validate-error" id="inputError" />
+               <p class=" validate-error">Présentation de l'erreur</p>
+
+
+               <label class="validate-error" for="inputError">Input .validate-error .error-border</label>
+               <input type="text" class="error-border validate-error" id="inputError" />
+               <p class="error-border validate-error">Présentation de l'erreur avec clignotement de la bordure</p>
+
+               <label class="validate-ok" for="inputOk"> Input .validate-ok</label>
+               <input type="text" class="validate-ok" id="inputOk" />
+
+               <!-- generic autoComplete {{{-->
+               <label for="autoComplete_generic">autoComplete in form exemple</label>
+               <div id="autoComplete_generic" class="autoComplete_root">
+                  <input type="text" value="" />
+                  <button type="button">
+                     <i class="fa fa-eraser">
+                     </i>
+                  </button>
+               </div>
+               <!--}}}-->
+
+
+               <!-- Label and textarea -->
+               <label for="regularTextarea"> Textarea</label>
+               <textarea id="regularTextarea"></textarea>
+
+               <!-- Label and select list -->
+               <label for="selectList">Select List</label>
+               <select id="selectList">
+                  <option value="Option 1">Option 1</option>
+                  <option value="Option 2">Option 2</option>
+                  <option value="Option 3">Option 3</option>
+               </select>
+
+               <h1>Generic fieldset in form</h1>
+
+               <fieldset id="fs-checkboxes">
+                  <!-- Give the fieldset a label -->
+                  <label for="fs-checkboxes">Checkboxes</label>
+
+                  <!-- Wrap each checkbox in a label, then give it the input and span for the text option -->
+                  <label class="flex-row" for="regularCheckbox">
+                     <span> Checkbox in .flex-row</span>
+                     <input type="checkbox" id="regularCheckbox" value="checkbox 1" />
+                  </label>
+
+                  <label class="flex-row" for="secondRegularCheckbox">
+                     <span> Checkbox in .flex-row</span>
+                     <input type="checkbox" id="secondRegularCheckbox" value="checkbox 2" />
+                  </label>
+               </fieldset>
+
+               <fieldset id="fs-inputs">
+                  <label for="fs-inputs"> Text</label>
+
+                  <label class="flex-row" for="flexRowInput">
+                     <span>Input in .flex-row</span>
+                     <input type="input" id="flexRowInput" value="" />
+                  </label>
+
+               </fieldset>
+
+               <fieldset id="fs-radios">
+                  <label for="fs-radios">Radio Buttons</label>
+
+                  <label class="flex-row" for="regularRadio">
+                     <span> Radio</span>
+                     <input type="radio" name="radios" id="regularRadio" value="radio 1" />
+                  </label>
+
+                  <label class="flex-row" for="secondRegularRadio">
+                     <span> Radio</span>
+                     <input type="radio" name="radios" id="secondRegularRadio" value="radio 2" />
+                  </label>
+               </fieldset>
+
+               <button type="submit">Submit Form</button>
+
+            </form>
+            <!--}}}-->
+         </main>
+<!--}}}-->
+        </div>
+        <!--footer{{{-->
+        <footer>
+            <ul>
+                <li>Footer demo</li>
+            </ul>
+        </footer>
+        <!--}}}-->
+        <!-- scripts{{{-->
+        <script src='../vendor/autocomplete/autoComplete2.min.js'></script>
+        <script src='../static/frendoz/js/frendoz.js'></script>
+        <script src='../demo/demo.js'></script>
+        <script id="__bs_script__">//<![CDATA[
+            document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+                //]]></script>
+            <!--}}}-->
+<!-- script{{{-->
+
+<!--}}}-->
+
+    </body>
+</html>
+
+
+
