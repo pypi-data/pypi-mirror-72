@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: geodn
+Version: 0.20200616.1
+Summary: Geo Domain Name
+Home-page: https://github.com/wxh06/geodn
+Author: 汪心禾
+Author-email: wangxinhe06@gmail.com
+License: UNKNOWN
+Description: # geodn
+        [![Python package](https://github.com/wxh06/geodn/workflows/Python%20package/badge.svg)](https://github.com/wxh06/geodn/actions?query=workflow%3A%22Python+package%22)
+        
+        Geo Domain Name
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
