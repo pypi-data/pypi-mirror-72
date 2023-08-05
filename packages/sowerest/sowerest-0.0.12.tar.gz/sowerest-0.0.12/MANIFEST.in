@@ -1,0 +1,3 @@
+include LICENSE VERSION.txt README.rst
+recursive-include sowerest *.py *.txt
+prune tests
