@@ -1,0 +1,11 @@
+mypy_boto3_codeguruprofiler/__init__.py,sha256=zUZkoaV4mp5zpJMGZtqXP3iZNDIQV3t6XxPAMmQZYRQ,782
+mypy_boto3_codeguruprofiler/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_codeguruprofiler/client.py,sha256=KSHnPEP3hHZZKfTBg7rAJuff5PBLBqqJkcGhXly-txQ,7622
+mypy_boto3_codeguruprofiler/paginator.py,sha256=GZidUxJ1kNNSkhzRNAVkElpYheAGx_Vt3HTNEur1VoM,1792
+mypy_boto3_codeguruprofiler/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_codeguruprofiler/type_defs.py,sha256=u-Gb-eC0XB-z4AoBODMRC7aPHE0oRndhTJXKqD9fce0,4639
+mypy_boto3_codeguruprofiler/version.py,sha256=AagMQQdVt6IqYiMU_fphBiz72mqZMDooehTvQuGfvK4,57
+mypy_boto3_codeguruprofiler-1.14.10.0.dist-info/METADATA,sha256=ilTMk2lPzPa7JURHFpLYkDe_A-_dOkNQDCw_FLlra9U,4988
+mypy_boto3_codeguruprofiler-1.14.10.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_codeguruprofiler-1.14.10.0.dist-info/top_level.txt,sha256=3mCpKizMaYwF5zzl1-N8enhqa0b3HqQm6WngBM1aqOQ,28
+mypy_boto3_codeguruprofiler-1.14.10.0.dist-info/RECORD,,
