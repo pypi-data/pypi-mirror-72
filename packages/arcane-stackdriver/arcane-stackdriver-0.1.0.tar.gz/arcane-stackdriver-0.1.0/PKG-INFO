@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: arcane-stackdriver
+Version: 0.1.0
+Summary: Override stackdriver client
+Author: Arcane
+Author-email: product@arcane.run
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: google-cloud-error-reporting (==0.34.0)
+Description-Content-Type: text/markdown
+
+# Arcane Stackdriver
+
+This package is based on [google-cloud-error-reporting](https://pypi.org/project/google-cloud-error-reporting/).
+
+## Get Started
+
+```sh
+pip install arcane-stackdriver
+```
+
+## Example Usage
+
+```python
+from arcane import stackdriver
+client = stackdriver.Client()
+```
+
+or
+
+```python
+from arcane import stackdriver
+
+# Import your configs
+from configure import Config
+
+client = stackdriver.Client.from_service_account_json(Config.KEY, project=Config.GCP_PROJECT)
+```
+
