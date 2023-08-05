@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: edc-clinic
+Version: 0.1.0
+Summary: Clinic model mixins, etc.
+Home-page: https://github.com/clinicedc/edc-clinic
+Author: Erik van Widenfelt
+Author-email: ew2789@gmail.com
+License: GPL license, see LICENSE
+Keywords: django clinic edc
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.7
+
+|pypi| |travis| |coverage|
+
+
+edc-clinic
+----------
+
+
+.. |pypi| image:: https://img.shields.io/pypi/v/edc-clinic.svg
+    :target: https://pypi.python.org/pypi/edc-clinic
+
+.. |travis| image:: https://travis-ci.com/clinicedc/edc-clinic.svg?branch=develop
+    :target: https://travis-ci.com/clinicedc/edc-clinic
+
+.. |coverage| image:: https://coveralls.io/repos/github/clinicedc/edc-clinic/badge.svg?branch=develop
+    :target: https://coveralls.io/github/clinicedc/edc-clinic?branch=develop
+
+
+
+
