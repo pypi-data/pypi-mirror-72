@@ -1,0 +1,16 @@
+click
+cryptography
+Flask
+Flask-Auth
+Flask-HTTPAuth
+flask-restx
+hjson
+logstash-formatter
+prometheus-flask-exporter
+PyJWT
+python-decouple
+requests
+pyyaml
+sqlalchemy
+sentry-sdk[flask]
+werkzeug

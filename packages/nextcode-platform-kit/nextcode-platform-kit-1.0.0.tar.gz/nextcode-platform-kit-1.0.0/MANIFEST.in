@@ -1,0 +1,4 @@
+recursive-include platkit *
+include requirements.txt
+global-exclude *.pyc
+global-exclude test_*.py
