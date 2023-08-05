@@ -1,0 +1,16 @@
+desktop-app>=0.1.2
+importlib_metadata
+labscript>=3.0.0
+labscript_utils>=3.0.0
+pandas>=0.13
+qtutils>=2.2.2
+
+[docs]
+PyQt5
+Sphinx==3.0.1
+sphinx-rtd-theme==0.4.3
+recommonmark==0.6.0
+m2r==0.2.1
+
+[pyqt]
+PyQt5
