@@ -1,0 +1,190 @@
+Metadata-Version: 2.1
+Name: qary
+Version: 0.5.11
+Summary: "An open framework and dataset for building a distributed-agent chatbot based on _Natural Language Processing in Action_."
+Home-page: https://nlpia.org
+Author: hobs
+Author-email: hobs+github@totalgood.com
+License: mit
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Topic :: Text Processing :: Filters
+Classifier: Topic :: Text Processing :: General
+Classifier: Topic :: Text Processing :: Indexing
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: boto3 (==1.13.19)
+Requires-Dist: botocore (==1.16.19)
+Requires-Dist: ConfigArgParse (==1.2.2)
+Requires-Dist: docutils (==0.15.2)
+Requires-Dist: django (==3.0.7)
+Requires-Dist: editdistance (==0.5.3)
+Requires-Dist: elasticsearch (==7.6.0)
+Requires-Dist: environment (==1.0.0)
+Requires-Dist: gitpython (==3.1.1)
+Requires-Dist: lxml (==4.5.0)
+Requires-Dist: nltk (==3.5)
+Requires-Dist: pandas (==1.0.3)
+Requires-Dist: pre-commit (==2.3.0)
+Requires-Dist: python-dotenv (<0.14.0,>=0.13.0)
+Requires-Dist: python-slugify (==4.0.0)
+Requires-Dist: rapidfuzz (==0.9.1)
+Requires-Dist: regex (==2020.4.4)
+Requires-Dist: seaborn (==0.10.0)
+Requires-Dist: spacy (==2.2.4)
+Requires-Dist: scikit-learn (==0.22.2)
+Requires-Dist: scipy (==1.4.1)
+Requires-Dist: tensorboardX (==2.0)
+Requires-Dist: tensorflow (==2.2.0)
+Requires-Dist: tensorboard (==2.2.2)
+Requires-Dist: torch (==1.4.0)
+Requires-Dist: tqdm (<5.0.0,>=4.38.0)
+Requires-Dist: transformers (<2.5.0,>=2.4.1)
+Requires-Dist: wikipedia-api (==0.5.4)
+Requires-Dist: Sphinx (==3.0.3)
+Requires-Dist: recommonmark (==0.6.0)
+Requires-Dist: m2r (==0.2.1)
+Provides-Extra: django
+Requires-Dist: django-celery (==3.3.1) ; extra == 'django'
+Requires-Dist: django-elasticsearch-dsl-drf (==0.20.8) ; extra == 'django'
+Requires-Dist: django-elasticsearch-dsl (==7.1.1) ; extra == 'django'
+Requires-Dist: django-extensions (==2.2.9) ; extra == 'django'
+Requires-Dist: Django (==2.2.11) ; extra == 'django'
+Requires-Dist: djangorestframework (==3.11.0) ; extra == 'django'
+Requires-Dist: cookiecutter (==1.7.2) ; extra == 'django'
+Requires-Dist: django-channels (==0.7.0) ; extra == 'django'
+Provides-Extra: docs
+Requires-Dist: qary[sphinx] ; extra == 'docs'
+Provides-Extra: postgres
+Requires-Dist: psycopg2-binary (==2.8.3) ; extra == 'postgres'
+Provides-Extra: pytorch
+Requires-Dist: torch ; extra == 'pytorch'
+Provides-Extra: sphinx
+Requires-Dist: Sphinx ; extra == 'sphinx'
+Requires-Dist: m2r ; extra == 'sphinx'
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+
+[![Buy Us Tea](https://github.com/nlpia/nlpia-bot/raw/develop/docs/media/small-leaf-and-name-screenshot-31x80.png)](https://buymeacoffee.com/hobs)
+[![PyPI version](https://img.shields.io/pypi/pyversions/qary.svg)](https://pypi.org/project/qary/)
+[![License](https://img.shields.io/pypi/l/qary.svg)](https://pypi.python.org/pypi/qary/)
+
+
+# `qary`
+
+The `qary` package is both a chatbot framework and a working "reference implementation" virtual assistant that actually assists! Most bots manipulate you to make money for their corporate masters. With qary, you can build **your bot** to protect you and amplify your intelligence and prosocial instincts.
+
+`qary` was conceived as part of [NLP in Action](https://www.manning.com/books/natural-language-processing-in-action) book, is maintained by an [active developer community](/docs/wiki/contributors.md) and is supported by San Diego Python User Group (see talk presentations [here](http://totalgood.org/midata/talks/) and in `docs/`.
+
+
+## Install
+
+### Package install
+`qary` package can be installed from [PyPi](https://pypi.org/project/qary/) by running:
+
+```bash
+pip install qary
+```
+
+### Developer install
+
+First retrieve a copy of the source code for `qary`:
+
+```bash
+git clone git@gitlab.com:tangibleai/qary
+cd qary
+```
+
+Then, install and use the `conda` python package manager within the [Anaconda](https://www.anaconda.com/products/individual#Downloads) software package.
+A cross-platform package and python environment manager like `conda` is especially important if your operating system is not an open standard like Linux.
+
+```bash
+conda update -n base -c defaults conda
+conda create -n qaryenv 'python>=3.6.0,<3.7'
+conda env update -n qaryenv -f environment.yml
+source activate qaryenv
+pip install --editable .
+```
+
+## Usage
+
+```bash
+$ qary --help
+usage: bot [-h] [--version] [--name STR] [-p] [-b STR] [-v] [-vv] [words [words ...]]
+```
+### Running `qary` with a single statement/query
+
+You can run bot just like any other command line app, giving it your statement/query as an argument.
+
+```bash
+$ qary -b glossary -q  # -q quiets the logging messages, `-b glossary` loads the glossary bot
+YOU: what is an allele
+qary: A variant form of a given gene, a version of a known mutation at the same place as the original unmodified gene within a chromosome.
+```
+
+### Running `qary` in dialog mode
+
+```bash
+$ qary [-b <personality1>,<personality2>] ...
+# ... (logging messages)
+YOU: When was Barack Obama born?
+# ... (logging messages)
+qary: August 4, 1961
+```
+
+### `qary` personalities
+
+`qary`'s probabilistic conversation manager chooses a reply from the possiblities generated by the different personalities:
+
+- `qa` (`qa_bots.py`): BERT and ALBERT Wikipedia Question Answering (WikiQA reading comprehension tests)
+- `faq` (`faq_bots.py`): answers to frequently asked questions using data/faq/*.yml
+- `glossary` (`glossary_bots.py`): definitions from glossary yml files in data/faq/glossary-*.yml
+- `pattern` (`pattern_bots.py`): regex patterns and greeting templates
+- `eliza` (`eliza_bots.py`): a python port of the ELIZA therapist bot
+
+### Configuring default personalities
+
+By default, `qary` runs with `qa` personality. Check out the config file in `qary.ini` or `$ bot -h` to change the default bot personalities loaded for your own custom bot.
+
+## Approach
+
+`qary`'s hybrid chatbot framework allows you to combine 4 approaches to give you state-of-the-art capability to answer questions and carry on a conversation:
+
+1. search: [chatterbot](https://github.com/gunthercox/ChatterBot), [will](https://github.com/skoczen/will)
+2. pattern matching and response templates: Alexa, [AIML](https://github.com/keiffster/program-y)
+3. generative deep learning: [robot-bernie](https://github.com/nlpia/robot-bernie), [movie-bot](https://github.com/totalgood/nlpia/blob/master/src/nlpia/book/examples/ch10_movie_dialog_chatbot.py)
+4. grounding: [snips](https://github.com/snipsco/snips-nlu)
+
+It's all explained in detail at [NLP in Action](https://www.manning.com/books/natural-language-processing-in-action).
+
+Presentations for San Diego Python User Group are in [docs/](/docs/2019-08-22--San Diego Python User Group -- How to Build a Chatbot.odp) and on the web at [http://totalgood.org/midata/talks](http://totalgood.org/midata/talks/)
+
+## Contributing pattern for developers
+
+DM @hobs if you'd like to join us for weekly Zoom collaborative-coding sessions.
+
+1. [Create a fork](https://docs.gitlab.com/ee/user/project/repository/forking_workflow.html#creating-a-fork) of the [main qary repository](https://gitlab.com/tangibleai/qary) on Gitlab.
+2. Make your changes in a branch named something different from `master`, e.g. create
+   a new branch `my-pull-request`.
+3. [Create a merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html).
+4. Help your fellow contributors out by:
+  - Follow the [PEP-8 style guide](https://www.python.org/dev/peps/pep-0008/).
+  - Try to include a docstring, at least a single line, in any function, method, or class
+  - Bonus points for adding a [doctest](https://docs.python.org/3/library/doctest.html) as part of your contribution.
+  - If you add a new feature, write some quick docs in the README.
+  - Add your name and attribution to the AUTHORS file.
+  - Know we are grateful for your contribution! You've made the chatbot world a little better!
+
+
+
