@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nr.utils.git
+Version: 0.1.2
+Summary: A wrapper around the Git CLI.
+Home-page: https://git.niklasrosenstein.com/NiklasRosenstein/nr-python-libs
+Author: Niklas Rosenstein
+Author-email: rosensteinniklas@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# nr.utils.git
+
+A wrapper around the Git CLI.
+
+
