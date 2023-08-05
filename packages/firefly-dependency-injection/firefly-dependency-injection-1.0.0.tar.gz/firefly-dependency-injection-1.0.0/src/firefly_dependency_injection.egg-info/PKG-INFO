@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: firefly-dependency-injection
+Version: 1.0.0
+Summary: A dependency injection framework for python
+Home-page: https://github.com/firefly19/python-dependency-injection
+Author: JD Williams
+Author-email: me@jdwilliams.xyz
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
