@@ -1,0 +1,3 @@
+[console_scripts]
+system-intelligence = system_intelligence.system_intelligence_cli:main
+
