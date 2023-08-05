@@ -1,0 +1,15 @@
+xtract_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xtract_sdk/downloaders/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xtract_sdk/downloaders/base.py,sha256=KfKJhoAOptFWUvS_eB1aoEaSyRHJB7BJegFGMWxnrMY,886
+xtract_sdk/downloaders/figshare.py,sha256=0TFx8xKy1JHEiHqMeK7Moi-MXPtkpcGYHetXRoNC-TY,1229
+xtract_sdk/downloaders/globus_https.py,sha256=kEtvr-MlqOVuMwBibULnX3i4z1FF-etbPkjezeLYlQU,3020
+xtract_sdk/downloaders/globus_tc.py,sha256=ZZXzimdRhRohEnHbEz8jNkyJx2G93zXbCg-Wvgpnc84,443
+xtract_sdk/downloaders/google_drive.py,sha256=TNiE3TdN9C-lBLTGAtg9Qfrf_OuSc_NQAaO9ONDOyBY,2464
+xtract_sdk/packagers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xtract_sdk/packagers/family.py,sha256=WkMCf4JeJTfg46VWKGC-ZG9u9M7LWwzwMnhkzjFLslg,2467
+xtract_sdk/packagers/group.py,sha256=OiM74yDLuzxLDiDwbk2Y6Dz5-zMSsOKTKK5Vn7b1sJs,603
+xtract_sdk-0.0.3b2.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+xtract_sdk-0.0.3b2.dist-info/METADATA,sha256=whRB9pz-a7svkWKKS7j04fVFJyx1JOvjTiSWQzUkRiQ,574
+xtract_sdk-0.0.3b2.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+xtract_sdk-0.0.3b2.dist-info/top_level.txt,sha256=pt70weqRlChXbXQFwz3UwpKcuSVoVlGQDlto5R58nVM,11
+xtract_sdk-0.0.3b2.dist-info/RECORD,,
