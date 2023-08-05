@@ -1,0 +1,3 @@
+[console_scripts]
+md-diary = py_markdown_diary.command_line:main
+
