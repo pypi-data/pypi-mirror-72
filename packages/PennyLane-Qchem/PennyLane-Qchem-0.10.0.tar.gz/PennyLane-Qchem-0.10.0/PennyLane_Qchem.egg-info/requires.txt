@@ -1,0 +1,5 @@
+pennylane>=0.10
+openfermion
+openfermionpyscf
+openfermionpsi4
+pyscf<=1.7.1
