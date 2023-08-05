@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: syz
+Version: 0.0.8
+Summary: common tools
+Home-page: https://github.com/syz85/syz
+Author: Sun YUANZHEN
+Author-email: sunyuanzhen@gmail.com
+License: UNKNOWN
+Description: common tools
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
