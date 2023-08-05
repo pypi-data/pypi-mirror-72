@@ -1,0 +1,10 @@
+setup.py
+valak_distributions/Binomialdistribution.py
+valak_distributions/Gaussiandistribution.py
+valak_distributions/Generaldistribution.py
+valak_distributions/__init__.py
+valak_distributions.egg-info/PKG-INFO
+valak_distributions.egg-info/SOURCES.txt
+valak_distributions.egg-info/dependency_links.txt
+valak_distributions.egg-info/not-zip-safe
+valak_distributions.egg-info/top_level.txt
