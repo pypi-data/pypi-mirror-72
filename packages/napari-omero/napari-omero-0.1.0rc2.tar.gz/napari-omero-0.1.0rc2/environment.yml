@@ -1,0 +1,8 @@
+name: omero-napari
+channels:
+  - ome
+  - conda-forge
+  - defaults
+dependencies:
+  - napari
+  - omero-py=5.6.2
