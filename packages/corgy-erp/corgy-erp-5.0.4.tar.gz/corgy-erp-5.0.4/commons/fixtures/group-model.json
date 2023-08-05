@@ -1,0 +1,77 @@
+[
+{
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+        "name": "hresek",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+        "name": "p\u00e9nz\u00fcgyesek",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 3,
+    "fields": {
+        "name": "\u00fcgyvezet\u0151k",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 4,
+    "fields": {
+        "name": "k\u00f6nyvel\u0151k",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 5,
+    "fields": {
+        "name": "koordin\u00e1torok",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 6,
+    "fields": {
+        "name": "oper\u00e1torok",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 7,
+    "fields": {
+        "name": "b\u00e9rsz\u00e1mfejt\u0151k",
+        "permissions": [
+            104,
+            105
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 8,
+    "fields": {
+        "name": "rendszer-adminisztr\u00e1torok",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 9,
+    "fields": {
+        "name": "felhaszn\u00e1l\u00f3k",
+        "permissions": []
+    }
+}
+]
