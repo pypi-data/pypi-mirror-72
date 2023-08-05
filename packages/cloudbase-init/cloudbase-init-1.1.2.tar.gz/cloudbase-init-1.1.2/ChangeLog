@@ -1,0 +1,516 @@
+CHANGES
+=======
+
+1.1.2
+-----
+
+* licensing: properly set KMS host and product key
+* packet: add phone\_home and post\_password support
+* Fix empty DNS list
+* Bump version to 1.1.2
+
+1.1.1
+-----
+
+* Add NoCloudConfigDriveService metadata provider
+* Move parse\_data to utils.serialization
+* Refactor config drive metadata service
+* Bump version to 1.1.1
+
+1.1.0
+-----
+
+* Bump version to 1.1.0
+* Updated support for Python versions
+* Add Google Cloud Engine metadata service
+* Fix Py27 cloud-config ordering
+* Add metadata servvice VMwareGuestInfoService
+* Fix templating when data is empty
+* Add support for jinja as userdata template engine
+* Updated cloud-config docs
+* Implement cloud-config users and groups plugins
+* Add metadata interface for instance data
+* Run cloud config plugins in order
+* Implement cloud-config runcmd
+* Add Zuul coverage and Py36/37 gates
+* zuul: use python3 for coverage gate
+* Added empty metadata service: EmptyMetadataService
+* Use metadata service username for sshpublicckeys
+* Mock time.sleep to reduce test execution
+* Implement cloud-config ntp plugin
+* docs: Updated and fixed various doc parts
+* write\_files: Added option to append the file with given content
+* utils: Fix for OpenSSL library name change
+* unit\_tests: run py36/py37 tests with tox
+* config\_drive: log incorrect drive label
+* CloudStack: catch proper HTTP exceptions
+* docs: change theme to sphinx\_rtd\_theme
+* docs: show cloudbase-init version
+* Fix typo in exception name
+* Check all configdrive types if one errors out
+* Added metadata service encryption key retrieval
+* Add POST support for \_http\_request when body is empty
+* Add support for packet json metadata service
+* Fix typo in userdata docs
+* network: add retries for MTU set and team creation
+* Added retry decorator
+* cloudstack: add route to the metadata base url
+* Fix pythoncom thread model error
+* Update docs building jobs
+* Add OVF metadata service
+* Add logs for metadata reachability troubleshooting
+* Fix Azure guest agent unit test
+* docs: add automatically generated list of cfg opts
+* Configure github mirroring
+* ssl: fix ERR\_load\_crypto\_strings attribute error
+* Fix the configuration error in the document
+* OpenDev Migration Patch
+* Handle Name and MAC field when parse config with IPV6
+* Fixes setting MTU on adapters to be disabled
+* Fix get\_network\_details\_v2 exception
+* fix tox python3 overrides
+* Updates tox.ini's cover environment
+* Add get\_network\_details\_v2 in MAAS
+* Add get\_network\_details\_v2 in BaseOpenStackService
+* Support get\_network\_details\_v2 in network plugin
+* Add enable\_network\_adapter
+* Add get\_network\_adapter\_name\_by\_mac\_address
+* Use MSFT\_NetIPAddress in static network config
+* Add get\_network\_details\_v2
+* Add NetLBFO network teaming
+* Add PyMI as requirement
+* Use the interface name when setting the MTU
+* Include the NIC names in get\_dhcp\_hosts\_in\_use
+* Add rename\_network\_adapter
+* Return NetConnectionID instead of Name
+* Add new networking model
+* Add .vscode dir to .gitignore
+* Move NetworkDetails to a separate module
+* Fix COM thread model issue
+* Fix issue in retrieving MAC address
+* Fix libeay32 and UCRT DLL search
+* Fix access violation when calling get\_volumes
+* Fix CRT DLL loading on Windows in Python 3.6
+* userdata: add #cloud-config in examples
+* Change check\_latest\_version default value
+* Remove unused pylint tox target
+* Recognize uppercase vfat disk labels
+* Adds releasenotes configuration
+* Do not error out on empty cloud-config
+* Fixed all typos in comments
+* Add configurable option for the user password length
+* Fix the cloud-config keys that are processed by cloudbase-init
+* Adds support for all MIME Content-Transfer-Encodings
+* Fixed infinite recursion when using serial ports
+* Update pbr version requirements
+* Adds Azure guest agent plugin
+* Add Azure metadata service
+* Return serialized certificate on certificate creation
+* Add certificates plugin for Windows
+* Use the openstack upper requirements
+* Add ephemeral disk plugin
+* Fixes unit tests to work with latest version of oslo.config
+* Adds EC2 userdata execution support
+* Add reporting provisioning status to the metadata service
+* Bumps version to 0.9.12
+
+0.9.11
+------
+
+* Implemented automatic updates plugin
+* Improve MIME multipart userdata handling
+* Remove unnecessary print
+* Adds Windows service CRUD methods
+* Update the WinRM Listener plugin
+* Adds plugin for setting SAN policy
+* updates hacking requirement
+* Adds userdata write file option
+* Adds support for renaming the builtin account administrator
+* Enables or disables TRIM delete notifications
+* Adds Windows pagefiles plugin
+* Adds real time clock support in NTP client
+* Adds KMS and AVMA licensing automation
+* Adds display idle timeout plugin
+* Adds boot configuration plugins
+* Initialize service var before the metadata discovery
+* Adds two RDP settings plugins
+* Fix win2k16 extend volume during specialize
+* Adds Nano support for adding users to groups
+* Improve the get metadata logic
+* Refactor the CloudStack Metadata Service
+* Respawns process with new service credentials
+* Change the behavior of write\_file plugin
+* Improve code coverage
+* Bumps version to 0.9.11
+
+0.9.10
+------
+
+* Resets service user password at each execution
+* Fix docs build
+* Handle [SSL: CERTIFICATE\_VERIFY\_FAILED] exception
+* Add support for generating cloudbase-init configuration sample
+* Restructure the config options from metadata services
+* Fix misspelled classname in posix
+* Sets the WinRM self signed start date in the past
+* Fixes WinRM listener plugin x509 end time
+* Deprecated tox -downloadcache option removed
+* Fixes size numeric comparison in extend\_volumes
+* Bumps version to 0.9.10
+
+0.9.9
+-----
+
+* Make the multithreaded coinitialize only on 64bit
+* Updates project repo to openstack
+* Update .gitreview for new namespace
+* Remove extra (main) from the documentation
+* Document the plugin stages feature
+* Use the wide correspondent for the crypt function
+* Ironic config drive support
+* Move \`test\_mtu.py\` file to its corresponding place
+* Rename "physical\_disk" utility into "disk"
+* Move plugins factory on top plugins level
+* Add tests for \`set\_network\_adapter\_mtu\` in osutils
+* Adds plugin execution stages
+* Do not run slmgr.vbs on Nano Server
+* Adds support for PowerShell on Nano Server
+* Enumerate VDS queries using a common function
+* Adds Windows Storage Manager API support
+* Fixes Win32\_OSVERSIONINFOEX\_W field types
+* Use floor division where floating point division was used
+* Use LogSnatcher to catch the messages emitted by the loggers
+* Add a new method \`get\_decoded\_user\_data\` to the metadata services
+* Replaces InitiateSystemShutdownW
+* Use environment markers for platform-specific modules
+* Normalize the payload to bytes before delegating to userdatautils
+* Fixes check\_os\_version on Windows 10
+* Replaces ADSI COM API calls with NetApi
+* Fix py3 x64 crash thread related
+* Move the logic from windows.setuserpassword back into common.setuserpassword
+* Remove method which is not used anywhere in the project
+* Fix every class that should be abstract
+* Log any uncaught exception thrown by the service
+* Add cloudbase-init Sphinx documentation
+* Show the error code in network config
+* Service triggers are available since 6.1, not 6.0
+* Added userdata plugin for setting the hostname
+* Move to the new oslo\_config and oslo\_log modules
+* Check the latest version of cloudbaseinit
+* Improves logging when exiting the plugins loop
+* Change VFAT logging type to debug
+* Fix mock\_open issue in opennebula test
+* Add support for changing the password at next logon
+* Don't try to execute X509 certificates
+* Add support for controlling the reboot from cloud-config plugins
+* Remove duplicate LOG intit line in winrmlistener
+* Remove explicit unnecessary variable init
+* Remove unused parameter in setuserpassword plugin
+* Remove unnecessary parantheses
+* Get rid of all \_\_all\_\_
+* Take care of return codes when executing scripts
+* Log the current version of the product before configuring
+* Normalize all metadata providers and plugins
+* Fix metadata loading bug in OpenNebula service
+* Read OpenNebula metadata as bytes
+* Do not log user data content
+* Improve WindowsUtils.\_get\_ipv4\_forward\_table
+* Adds stable MSI urls to README.rst
+* Bumps version to 0.9.9
+
+0.9.8
+-----
+
+* Fix improper EOL handling between the public keys
+* Better ssh and x509 keys extraction
+* Get rid of flake8 compatibility issues due to pbr
+* Removed network "capability" with missing code
+* Updates binaries location in README.rst
+* Add a mapping between old plugin names and new plugin names
+* Don't hard fail when a plugin can't be imported
+* Fixes wrong Classifier License in setup.cfg
+* Add support for IPv6 network configuration
+* Escape the password for WinRM certificate XML
+* Get credentials from metadata for WinRM auth plugin
+* Fix GetAdapterAddresses flags bug
+* Update the sethostname and ntp plugins path
+* Small updates to the README
+* Add temporarily tzlocal to requirements
+* Add support for update password
+* Provide more debugging info for obtaining the VFAT drive label
+* Add support for change admin password
+* Add support for update password
+* Show the result of the mlabel when logging the mlabel failure
+* Improve the test coverage by a couple of percents
+* Fix DHCP options querying issues
+* Add a new cloud-config plugin for setting the timezone
+* Fix the names of assert methods belonging to a mock
+* Refactor variable for processed network details
+* Better static network configuration support
+* Move remaining cloudconfigplugins test files to plugins.common
+* Provide the error code in the Windows exception messages
+* Check for the label of the volume from the VFAT filesystem
+* Return the appropriate system path
+* Replace the oauth library with oauthlib
+* Ignore PyCharm settings/data
+* Make sure that the configured user profile registry key exists
+* Add support for VFAT ConfigDrive
+* Increase the password limit
+* Fix CloudStack problem with ssh public keys
+* Move Windows specific bits for the CreateUser plugin
+* Add a method for obtaining the maximum password length
+* Don't generate a new password in SetUserPassword
+* Add new test cases for setuserpassword
+* Handle the choice of reboot of the instance in osutils.set\_host\_name
+* Move Windows specific bits for NTP plugin to windows section
+* Move non-Windows specific plugins to common
+* Add testutils.ConfPatcher and use it in tests
+* Support all the variants for writing files with cloudconfig
+* Add support for multipart cloudconfig format
+* Refactor cloudconfig plugin, in order to simplify enhancements
+* Add support for EC2 config scripts
+* Enable password set in case of rescued instances
+* Global mass refactor
+* Add support for multiple NTP hosts
+* The MAAS metadata service is not loaded
+* Don't change the trigger mode on older OSes
+* Fix x64 architecture related issues
+* Change the trigger modes to network availability for w32time
+* Fixes README RST markup
+* Updates the README file
+* Fixes a password type conversion issue on Python 3
+* Fixes encrypted random password length issue
+* Renames module executil to execcmd
+* Bumps version to 0.9.8
+
+0.9.7
+-----
+
+* Adds ADSI based Windows user management
+* Updates pbr requirements
+* Remove deprecated static network config method
+* Rewrite exec utilies to be generic
+* Fixes Python34 bugs
+* Fixes configplugin execution bug
+* Use keyword argument for boolean flags
+* Fixed userdata plugin return value for Python3
+* Removes incorrect deprecation comments
+* Add test for the mtu plugin
+* Add support for OpenNebula meta-data
+* Add support for specific network configuration
+* Fix support for CloudStack metadata
+* Fixes encoding issue
+* Fixes unicode logging decoding issue
+* Add support for yaml user-data
+* Fixed ctypes/wintypes issue
+* Add support for CloudStack metadata
+* Fixes winrm access denied bug for Windows versions 6.0 and 6.1
+* Adds .gireview file
+* Fixes requirements on Linux
+* Fixed serial port logging
+* Added CloudbaseInitException class
+* Adds fix for heat directory bug
+* Added tests for utils/windows modules
+* Adds tests for utils/windows/network.py
+* Fixed assertEqual order in tests
+* Fixed various flake8 errors
+* Adds tox.ini
+* Fixed various pep8 errors
+* Fixed osconfigdrive test errors
+* Modified osconfigdrive/test\_windows.py to work on Linux
+* Use bytearray.fromhex instead of binascii.unhexlify
+* Adds a serial logging wrapper for unicode strings
+* Replaces s.unicode with six.text\_type
+* Fixes issue with serial port logging availability
+* Fixed platform specific import error on Windows
+* Modified osutils/test\_windows.py to work on Linux
+* Fixed test\_log.py import error
+* Modified test\_x509.py to work on Linux
+* Fixes import issue in test\_winrmconfig.py
+* Minor PEP8 cleanup
+* Modified test\_winrmconfig.py to work on Linux
+* Minor PEP8 refactoring
+* Fixes various tests for Python 3.x support
+* Moves \_W32TIME\_SERVICE to the module scope
+* Adds Python 3.x support in setup.cfg
+* Refactoring of test\_windows.py
+* Minor PEP8 fixes
+* Test module patching refactoring
+* Adds Python 3.x support to userdata script
+* Adds Python 3.x support for map calls
+* Fixes Python 3.x support in test\_winrmconfig
+* Removes redundat flag in Win32 netwok call
+* Uses six.StringIO for Python 3.x support
+* Replaces reload() and \_\_builtin\_\_ for Python 3.x
+* Adds Python 3.x support in utils network module
+* Adds Python 3.x support in DHCP module
+* Adds Python 3.x support in metadata services
+* Fixes PEP8 errors in unicode management
+* Adds module for Python 3.x unicode compatibility
+* Fixes minor PEP8 errors
+* Replaces \_winreg module with six.moves.winreg
+* Removed print statements from test files
+* Fixes numeric literals for Python 3.x
+* Adds Python 3.x compatible exception handling
+* Updates Oslo modules
+* Adds a try catch for user logon session creation
+* Adds bind retry option for DHCP client
+* Fixes issue in get\_dhcp\_hosts\_in\_use
+* Fixes bug in obaining DHCP server address
+* Adds cloudbaseinit.utils.windows.network module
+* Added tests for LocalScriptsPlugin
+* Refactored tests for ShellScriptPlugin
+* Update README.rst
+* Adds the LocalScriptsPlugin plugin
+* Refactoring of ShellScriptPlugin part handler
+* Adds Windows MTU plugin
+* Adds mac address as return value in get\_dhcp\_hosts\_in\_use
+* Fixes DHCP request test
+* Fixes mac address format bug in DHCP data request
+* Fixed a few pep8 nits
+* If the hostname ends with '-', replace the '-' with '0'
+* Adds tests for NTP and DHCP configuration
+* Fix pep8/flake8 errors, remove unrelated code
+* Updated conf opt names and updated descriptions
+* Add flag to turn on routed metadata
+* Adds NTP configuration based on DHCP
+* Added tests for the new licensing plugin
+* Revert "Added tests for windows configdrive module"
+* Logs license info always in licensing plugin
+* Adds Windows licensing plugin
+* Added tests for windows config drive
+* Replaces WMI physical diskw enum with API calls
+* Added tests for windows configdrive module
+* Adds bsdtar ISO9660 RAW HDD extraction support
+* Removed static values from plugins tests
+* Fixes regression: reboot only if hostname is set
+* Improves transient issues tolerance in EC2Service
+* Adds a debug message in check\_url
+* Adds a retry mechanism for check\_url
+* Checks the exit code when adding a static route
+* Adds route only if metadata url is not accessible
+* Fixes minor PEP8 issue
+* Updated unit tests
+* Executes Powershell as sysnative by default
+* Minor refactoring for constant
+* Adds support for gzipped userdata content
+* Adds user\_data support for MaaS metadata service
+* Adds configdrive factory test configdrive load test
+* Fixes return code bug for powershell scripts
+* Unit test refactoring
+* Reintroduces EC2 metadata service
+* Test refactoring
+* Removes Windows dependencies in metadata services
+* Adds missing CONF.import\_opt in SSH keys plugin
+* Adds missing CONF.import\_opt in password plugin
+* Moves winrmconfig from plugins to utils.windows
+* Fixes set\_static\_network\_config parameters
+* Replaces usages of "locals()"
+* Removes unused imports
+* Refactoring factory methods in functions
+* ConfigDrive metadata service refactoring
+* Refactoring for Windows related utilities location
+* Adds support for multiple instances
+* Adds comtypes to the requirements
+* Adds support for MaaS metadata
+* Removing temporarily ec2service
+* Metadata service refactoring
+* Added tests for the log utils module
+* Adds six and Babel to the requirements
+* Changes log level for sysprep completion message
+* Updates oslo-incubator files to the current master
+* Move setup to pbr usage
+* Updates oslo-incubator files
+* Move to oslo.config
+* Adds additional serial port logging config
+* Removes unnecessary pass statement
+* Fixes bug in winrm cert auth plugin for user\_data
+* Adds pyserial to the requirements
+* Normalize line endings
+* Adds serial port logging support
+* Modified test for heat handler plugin
+* Adds support for additional Heat configurations
+* Fixes get\_network\_adapters issue on Windows 2003
+* Changed the tests for hostname plugin
+* Adds option to truncate host name to Netbios len
+* Modiffied tests for refactored userdata handling
+* Additional userdata refactoring
+* Fixes bug in managing userdata script return value
+* Updates version to 0.9.5
+* User\_data plugin refactoring
+* Added unit tests using mock
+* Update README.rst
+* Update version to 0.9.4
+* Adds support for PEM certificte in user\_data
+* Remove newlines from PEM header and footer constants
+* Adds WinRM certificate auth plugin
+* Adds plugins shared\_data support
+* Adds WinRM Listener plugin
+* Raises NotImplemetedError in osutils base class methods
+* Adds firewall rules support
+* Support admin\_pass field for admin password
+* Fixes bug in SetUserPassword plugin return value
+* Implements Windows OS version check with Win32 API
+* Improves metadata exception logging
+* Replace WMI class with Win32 APIs for routing
+* Fixes issue with setting admin\_pass password
+* Update version to 0.9.3
+* Fixes SSH key format issue
+* Adds stop\_service\_on\_exit option
+* Replaces WMI with Win32 API in host rename
+* Adds allow\_reboot option
+* Reboot immediately if a reboot is required
+* Updates version to 0.9.2
+* Fixes issue with the admin\_pass usage
+* Fixes issue in random password complexity
+* Minor refactoring in shell.py
+* Adds LICENSE file
+* Filter network adapters to require a MAC address
+* When UserDataPlugin doesn't find the user\_data file, it has to throw NotExistingMetadataException
+* Adds plugin platform and min os version check
+* Fixes bug related to password complexity limits
+* Pep8 and assorted cleanups on multi-part userdata
+* Fixes bug in waiting for sysprep completion
+* Adds ConfigDrive support for Windows XP
+* 1. Changed UserDataPlugin class to handle multipart user data 2. Added PluginSet class which dynamically loads all available plugins in userdata-plugins subfolder 3. Added standard plugins to handle typical content types in multipart data
+* Checks for SYSNATIVE folder presence
+* Changes as requested for pep8 + others
+* Added ability to execute native powershell scripts
+* Creating user or setting password for existing user
+* Check for admin\_pass in "meta"
+* Adds SetUserPassword plugin
+* Adds SetUserPassword plugin
+* Adds SetUserPassword plugin
+* Fixes return values and exceptions in some plugins
+* Adds workaround for routing 169.254.x.x addresses
+* Logging improvements
+* Individual plugin execution completion
+* Fixes bug in ConfigDriveService initialization
+* Adds extend volume plugin files
+* Adds plugin to automatically extend volumes
+* Avoid stopping the service in case of reboot
+* Adds clean service shutdown on Windows
+* Minor refactorings
+* Adds check for sysprep completion
+* pylint and pep8
+* 1. Extended a list of EC2 values 2. Added proper handling of non-existent EC2 values 3. Added proper ssh-key handling
+* Moved HttpService up due to post password support
+* Added retry\_count option
+* Added can\_post\_password
+* Minor refactoring in exception handling
+* Refactoring
+* Bug fixes
+* Utils refactoring
+* Bug fix
+* Added support for post metadata encrypted password
+* Fix to set Powershell's ExecutionPolicy in session
+* Support for Windows 2003 and 2003 R2
+* Fix on Windows network adapter selection
+* Added a new class for EC2 metadata retrieve. EC2Service added after HttpService in the factory. Updated get\_meta\_data method to handle not only string with json but key-value dicts
+* OpenStack logging imports
+* HTTP metadata service support
+* Added check on reboot
+* Fixed bug in network adapter management
+* Python requirements added
+* Fixes an import bug
+* Initial commit
