@@ -1,0 +1,4 @@
+[console_scripts]
+flowws_freeze = flowws.freeze:main
+flowws_run = flowws.run:main
+
