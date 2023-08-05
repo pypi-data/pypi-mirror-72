@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.py
+pymodaq_spectro/__init__.py
+pymodaq_spectro/spectrometer.py
+pymodaq_spectro/version.py
+pymodaq_spectro.egg-info/PKG-INFO
+pymodaq_spectro.egg-info/SOURCES.txt
+pymodaq_spectro.egg-info/dependency_links.txt
+pymodaq_spectro.egg-info/requires.txt
+pymodaq_spectro.egg-info/top_level.txt
+pymodaq_spectro/utils/__init__.py
+pymodaq_spectro/utils/calibration.py
+pymodaq_spectro/utils/utils_classes.py
