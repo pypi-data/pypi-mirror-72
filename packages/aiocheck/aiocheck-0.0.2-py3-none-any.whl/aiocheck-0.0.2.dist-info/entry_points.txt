@@ -1,0 +1,3 @@
+[console_scripts]
+aiocheck = aiocheck.command_line:main
+
