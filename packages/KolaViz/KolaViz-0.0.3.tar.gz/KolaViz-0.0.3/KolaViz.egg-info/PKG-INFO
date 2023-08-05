@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: KolaViz
+Version: 0.0.3
+Summary: Compute a collective dynamics from MOOC's discussion forums.
+Home-page: https://git-lium.univ-lemans.fr/mkone/kola-indicator
+Author: Malik Koné
+Author-email: malik.kone.etu@univ-lemans.fr
+License: UNKNOWN
+Description: README.md
+        =========
+        
+        Kola-indicator is a set of scripts to compute a collective dynamic
+        indicator from MOOC forums. It applies LSA and SNA technics to identify
+        groups of messages that could be working in groups.
+        
+        The following scripts are also module. To get usage use the -h flag
+        
+        circuits
+        ~~~~~~~~
+        
+        -  programme principal qui appelle les autres et effectue le calculs de
+           circuits
+        
+        harmonize (harmonisation:sub:`data`)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        
+        -  En entrée: les bases de données coursera c17 et c18. Différents
+           format
+        -  En sortie: les données dans une même table et avec les mêmes noms de
+           colonnes
+        
+        tokenizer (mlk:sub:`tokenizer`)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        
+        -  à partir du fichier généré par harmonisation data
+        
+        le tokenize et en sauvegarde les textest dans le dossier Tokenized
+        
+        koNLP
+        ~~~~~
+        
+        -  Effecute le texte wrangling. Peut utiliser le mutliprocessing
+        
+        koNMF
+        ~~~~~
+        
+        -  Effecture la réduction de matrice. Peut utiliser le mutliprocessing
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: French
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Education
+Classifier: Topic :: Education :: Computer Aided Instruction (CAI)
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Provides-Extra: rec

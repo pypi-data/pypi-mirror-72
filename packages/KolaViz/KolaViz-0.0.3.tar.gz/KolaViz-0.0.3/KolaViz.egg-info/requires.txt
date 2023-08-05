@@ -1,0 +1,14 @@
+bs4
+langdetect
+matplotlib
+nltk
+numpy
+pandas
+scipy
+sklearn
+xkcdpass
+
+[rec]
+graph_tool
+altair
+hypothesis
