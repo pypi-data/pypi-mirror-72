@@ -1,0 +1,1 @@
+Library for working with meetings API as Microsoft Graph API, Zoom.
