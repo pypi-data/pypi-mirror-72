@@ -1,0 +1,3 @@
+[console_scripts]
+zest = zest.zest_runner:main
+
