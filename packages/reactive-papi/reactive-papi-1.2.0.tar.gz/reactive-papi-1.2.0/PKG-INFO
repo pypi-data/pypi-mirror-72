@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: reactive-papi
+Version: 1.2.0
+Summary: reactive-platform: Reactive Platform flatbuffer api
+Home-page: https://www.reactivemarkets.com
+Author: reactivemarkets/developers
+Author-email: developers@reactivemarkets.com
+Maintainer: reactivemarkets/developers
+License: Apache
+Project-URL: Source, https://github.com/reactivemarkets/platform-api
+Project-URL: Tracker, https://github.com/reactivemarkets/platform-api/issues
+Description: # Reactive papi python
+        
+        Reactive Platform flatbuffer python generated package.
+        
+Keywords: reactive platform api
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
