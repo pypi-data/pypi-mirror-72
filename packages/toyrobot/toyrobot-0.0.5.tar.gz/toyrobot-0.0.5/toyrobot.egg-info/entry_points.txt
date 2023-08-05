@@ -1,0 +1,3 @@
+[console_scripts]
+toyrobot_run = toyrobot.main:run
+

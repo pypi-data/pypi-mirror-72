@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: toyrobot
+Version: 0.0.5
+Summary: A toy project to make a toy robot.
+Home-page: https://github.com/amaarora/toyrobot/tree/master/
+Author: Aman Arora
+Author-email: aman.arora0210@gmail.com
+License: Apache Software License 2.0
+Description: # Toy Robot
+        > A toy robot, toy application where the toy robot doesn't fall off the toy table
+        
+        
+        ## Install
+        
+        `pip install toyrobot`
+        
+        ## Documentation
+        
+        For documentation, refer [here](https://amaarora.github.io/toyrobot/).
+        
+        ## Run 
+        
+        To run the project in command line (after installation): 
+        
+        `toyrobot_run --cmd_file_path <path_to_example.txt>`
+        
+        As an example: 
+        `toyrobot_run --cmd_file_path ./examples/example1.txt`
+        
+        ```
+        ToyRobot, located at (4, 5) and facing WEST!
+        ```
+        
+Keywords: python,OOPS
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
