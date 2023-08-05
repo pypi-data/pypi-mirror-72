@@ -1,0 +1,14 @@
+hydra_kernel/__init__.py,sha256=ZvWm3yi2AM--3Y0wWgjSEUSaPhcyK7b6hH71O4F0xmg,45
+hydra_kernel/__main__.py,sha256=5TC5qvOxqXj69LRNEilkFlHH58oWbyhDo8BzR1u0r6Y,132
+hydra_kernel/binding.py,sha256=Az8UXS3Sdg5Cv7ByVcZPRGpsSEFVQI5u3Sw6etpRU5E,779
+hydra_kernel/install.py,sha256=-e0Trimivb4QXqzal6b0fU0jbe6KSkYWzSYP3QrwAEQ,1879
+hydra_kernel/kernel.py,sha256=UBTU8UOVpvOs-DC_Eml1BWb2D5KSXDF6t5XlY09ud7U,6543
+hydra_kernel/magics.py,sha256=Hx9aatkzVwaCePSUJifyDorG7ouKmo4B-whpWXeI9s4,539
+jupyterlab_chameleon/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jupyterlab_chameleon/extensions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jupyterlab_chameleon/extensions/bash_kernel.py,sha256=GIsGcWjh1aZII6NNZJ3FiwndKTPmuz70qcXgEKT4AnM,862
+jupyterlab_chameleon-0.0.1.dist-info/METADATA,sha256=AccQIU6jDRAqwaEpF_dX8oRD4N4H3SWUMVHL0ICbe9A,825
+jupyterlab_chameleon-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+jupyterlab_chameleon-0.0.1.dist-info/entry_points.txt,sha256=zDB_c5fME33vg1Uu2xp7fjq2SGZqmA9warueyx3eyzI,112
+jupyterlab_chameleon-0.0.1.dist-info/top_level.txt,sha256=eiNCtVmaFPuoell9eiNR1PVvQGPLxHXAlLzmxQ4qFCQ,34
+jupyterlab_chameleon-0.0.1.dist-info/RECORD,,
