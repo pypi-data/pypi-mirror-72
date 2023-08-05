@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+setup.cfg
+setup.py
+score_rbs/__init__.py
+score_rbs/score_rbs.py
+score_rbs.egg-info/PKG-INFO
+score_rbs.egg-info/SOURCES.txt
+score_rbs.egg-info/dependency_links.txt
+score_rbs.egg-info/top_level.txt
