@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+scripts/eval_inpainting_scaled_siren.py
+scripts/eval_inpainting_siren.py
+scripts/train_inpainting_scaled_siren.py
+scripts/train_inpainting_siren.py
+tf_siren/__init__.py
+tf_siren/siren.py
+tf_siren/siren_mlp.py
+tf_siren.egg-info/PKG-INFO
+tf_siren.egg-info/SOURCES.txt
+tf_siren.egg-info/dependency_links.txt
+tf_siren.egg-info/requires.txt
+tf_siren.egg-info/top_level.txt
