@@ -1,0 +1,95 @@
+.gitbook.yaml
+.gitignore
+LICENSE.txt
+README.md
+SUMMARY.md
+setup.cfg
+setup.py
+.gitbook/assets/alt_3 (1).png
+.gitbook/assets/alt_3.png
+.gitbook/assets/alt_5 (1).png
+.gitbook/assets/alt_5.png
+.gitbook/assets/exon_skipping (1).png
+.gitbook/assets/exon_skipping.png
+.gitbook/assets/intron_retention (1).png
+.gitbook/assets/intron_retention.png
+.gitbook/assets/output_10_0.png
+.gitbook/assets/output_13_0.png
+.gitbook/assets/output_15_0.png
+.gitbook/assets/output_16_0.png
+.gitbook/assets/output_18_0.png
+.gitbook/assets/output_23_0.png
+.gitbook/assets/output_27_0.png
+.gitbook/assets/output_32_0.png
+.gitbook/assets/output_34_0.png
+.gitbook/assets/output_36_0.png
+.gitbook/assets/output_37_0.png
+.gitbook/assets/output_39_0.png
+.gitbook/assets/output_5_0.png
+.gitbook/assets/output_8_0.png
+.gitbook/assets/swan_logo.png
+.gitbook/assets/teaching_1 (1).png
+.gitbook/assets/teaching_1.png
+.gitbook/assets/teaching_10 (1).png
+.gitbook/assets/teaching_10.png
+.gitbook/assets/teaching_11 (1).png
+.gitbook/assets/teaching_11.png
+.gitbook/assets/teaching_3 (1).png
+.gitbook/assets/teaching_3.png
+.gitbook/assets/teaching_8 (1).png
+.gitbook/assets/teaching_8.png
+.gitbook/assets/teaching_9 (1).png
+.gitbook/assets/teaching_9.png
+code-documentation/swangraph.md
+faqs/file_formats.md
+faqs/understanding_swan_vis.md
+figures/swan_logo.png
+figures/teaching_2.png
+figures/teaching_4.png
+figures/teaching_5.png
+figures/teaching_6.png
+figures/teaching_7.png
+swan_vis/__init__.py
+swan_vis/graph.py
+swan_vis/networkx_patch.py
+swan_vis/nx_pylab.py
+swan_vis/plottedgraph.py
+swan_vis/report.py
+swan_vis/swangraph.py
+swan_vis/talon_utils.py
+swan_vis/utils.py
+swan_vis.egg-info/PKG-INFO
+swan_vis.egg-info/SOURCES.txt
+swan_vis.egg-info/dependency_links.txt
+swan_vis.egg-info/entry_points.txt
+swan_vis.egg-info/requires.txt
+swan_vis.egg-info/top_level.txt
+testing/Makefile
+testing/README.txt
+testing/test_adding_datasets.py
+testing/test_find_interesting_genes.py
+testing/test_graph.py
+testing/test_merge_sgs.py
+testing/test_plotting.py
+testing/test_report.py
+testing/test_splice_graph.py
+testing/test_utils.py
+testing/input_files/annot.gtf
+testing/input_files/annot_2.gtf
+testing/input_files/annot_3.gtf
+testing/input_files/test_abundance.tsv
+testing/input_files/weird_gtf_entries.gtf
+tutorials/Analysis tools.ipynb
+tutorials/Getting started.ipynb
+tutorials/README.md
+tutorials/Visualization.ipynb
+tutorials/analysis_tools.md
+tutorials/getting_started.md
+tutorials/visualization.md
+tutorials/figures/adrm1_browser_ENSG00000130706.12_report.png
+tutorials/figures/adrm1_novel_ENSG00000130706.12_report.png
+tutorials/figures/adrm1_novel_ENSG00000130706.12_summary.png
+tutorials/figures/adrm1_paper_novel_ENSG00000130706.12_report.png
+tutorials/figures/multi_gene_ENSG00000130706.12_report.png
+tutorials/figures/multi_gene_ENSG00000197746.13_report.png
+tutorials/figures/my_gene_summary.png

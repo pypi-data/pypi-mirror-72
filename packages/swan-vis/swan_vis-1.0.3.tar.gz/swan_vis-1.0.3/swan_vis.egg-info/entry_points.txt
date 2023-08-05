@@ -1,0 +1,3 @@
+[console_scripts]
+swan_patch_networkx = swan_vis.networkx_patch:main
+
