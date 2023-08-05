@@ -1,0 +1,12 @@
+README.md
+setup.py
+pypetkit/__init__.py
+pypetkit/const.py
+pypetkit/device.py
+pypetkit/history.py
+pypetkit/pypetkit.py
+pypetkit/schedule.py
+pypetkit.egg-info/PKG-INFO
+pypetkit.egg-info/SOURCES.txt
+pypetkit.egg-info/dependency_links.txt
+pypetkit.egg-info/top_level.txt
