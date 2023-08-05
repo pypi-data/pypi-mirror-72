@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+KRNG/RNGs.py
+KRNG/__init__.py
+KRNG/__main__.py
+KRNG/config.cfg
+kitten_rng.egg-info/PKG-INFO
+kitten_rng.egg-info/SOURCES.txt
+kitten_rng.egg-info/dependency_links.txt
+kitten_rng.egg-info/entry_points.txt
+kitten_rng.egg-info/requires.txt
+kitten_rng.egg-info/top_level.txt
