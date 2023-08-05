@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: fed_requests
+Version: 0.0.21
+Summary: A python package for managing requests to the FEDBIONET API
+Home-page: https://gitlab.inria.fr/fedbionet/fed-requests
+Author: Santiago Silva
+Author-email: santiago-smith.silva-rincon@inria.fr
+License: UNKNOWN
+Description: # Fedbionet Requests API
+        
+        A requests-like library specialiced for the FDBIONET API. It is used in both client and federators.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
