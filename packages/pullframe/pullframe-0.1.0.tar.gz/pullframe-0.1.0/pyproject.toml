@@ -1,0 +1,118 @@
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+default_section = "THIRDPARTY"
+known_first_party = "pullframe"
+
+
+
+[tool.poetry]
+name = "pullframe"
+version = "0.1.0"
+description = "pull based pandas dataframe syncing"
+authors = ["Hyuksang Gwon <gwonhyuksang@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/ghsang/pullframe"
+keywords = ["dataframe", "distributed"]
+readme = "README.md"
+include = []
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pandas = "^1.0.0"
+tables = "^3.6.1"
+fastapi = "^0.58.0"
+aiofiles = "^0.5.0"
+kazoo = "^2.7.0"
+
+[tool.poetry.dev-dependencies]
+bump2version = "^1.0.0"
+tox = "^3.15.2"
+pytest = "^5.4.3"
+pytest-mock = "^3.1.1"
+pytest-xdist = "^1.32.0"
+pytest-cov = "^2.10.0"
+mypy = "^0.780"
+black = "^19.10b0"
+codecov = "^2.1.7"
+coverage = "^5.1"
+isort = {extras = ["pyproject"], version = "^4.3.21"}
+pyflakes = "^2.2.0"
+dockontext = "^0.1.3"
+
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = True
+envlist =
+	pyflakes, mypy, black, isort
+	clean
+	py{37,38}
+	report
+
+[tool:pytest]
+testpaths = tests
+addopts =
+  --cov-report=term-missing
+
+[testenv]
+extras =
+  test
+depends =
+  py{37,38}: clean
+  report: py{37,38}
+
+[testenv:py{37,38}]
+deps =
+  poetry
+  pytest
+  pytest-cov
+  pytest-xdist
+commands_pre =
+  poetry export --dev -f requirements.txt -o .tox/requirements.txt
+commands =
+  pip install -r .tox/requirements.txt
+  pytest -n auto --cov pullframe --cov-append --cov-config={toxinidir}/.coveragerc
+
+[testenv:pyflakes]
+deps = pyflakes
+skip_install = True
+commands = pyflakes pullframe tests
+
+[testenv:black]
+deps = black
+skip_install = True
+commands = black --check pullframe tests
+
+[testenv:mypy]
+deps =
+  mypy
+  dockontext
+skip_install = True
+commands = mypy pullframe tests
+
+[testenv:isort]
+deps = isort[pyproject]
+skip_install = True
+commands = isort --recursive -c pullframe tests
+
+[testenv:clean]
+deps = coverage
+skip_install = true
+commands = coverage erase
+
+[testenv:report]
+deps = coverage
+skip_install = true
+commands =
+  coverage report
+  coverage html
+"""
