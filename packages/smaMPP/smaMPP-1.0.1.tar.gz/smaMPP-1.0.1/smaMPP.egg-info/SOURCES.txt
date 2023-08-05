@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+smaMPP.egg-info/PKG-INFO
+smaMPP.egg-info/SOURCES.txt
+smaMPP.egg-info/dependency_links.txt
+smaMPP.egg-info/entry_points.txt
+smaMPP.egg-info/requires.txt
+smaMPP.egg-info/top_level.txt
+src/smacli/__init__.py
+src/smacli/__main__.py
+src/smacli/x.py
+src/smacli/data/flash.dat
