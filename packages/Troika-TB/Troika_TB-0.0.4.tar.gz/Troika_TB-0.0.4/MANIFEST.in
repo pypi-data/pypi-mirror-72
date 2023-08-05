@@ -1,0 +1,5 @@
+include troika_tb/tests/*
+include troika_tb/utils/*
+include troika_tb/templates/*
+include troika_tb/reference/*
+
