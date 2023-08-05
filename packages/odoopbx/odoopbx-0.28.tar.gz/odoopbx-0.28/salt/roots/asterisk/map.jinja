@@ -1,0 +1,3 @@
+{% import_yaml "asterisk/defaults.yaml" as defaults %}
+{% set asterisk = salt['pillar.get']('asterisk', defaults.asterisk, merge=True) %}
+
