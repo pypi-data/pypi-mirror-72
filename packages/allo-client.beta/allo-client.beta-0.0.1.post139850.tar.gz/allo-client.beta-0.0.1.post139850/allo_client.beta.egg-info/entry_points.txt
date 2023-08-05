@@ -1,0 +1,4 @@
+[console_scripts]
+allo = allo.core:launch
+allo-install = allo.install:do_install_dependencies
+
