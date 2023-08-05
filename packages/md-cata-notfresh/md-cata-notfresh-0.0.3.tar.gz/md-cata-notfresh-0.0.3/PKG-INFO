@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: md-cata-notfresh
+Version: 0.0.3
+Summary: generate the markdown catagory automatically
+Home-page: https://github.com/notfresh/md-cata
+Author: notfresh
+Author-email: notfresh@foxmail.com
+License: UNKNOWN
+Description: This is a tool that can generate the catatory for your markdown if the markdown is too large(such as the lines more than 500).
+        More cases and usages just visit https://github.com/notfresh/md-cata for a better explaination.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
