@@ -1,0 +1,11 @@
+README.md
+setup.py
+scrapy_auto_trans/__init__.py
+scrapy_auto_trans/exceptions.py
+scrapy_auto_trans/spidermiddlewares/__init__.py
+scrapy_auto_trans/spidermiddlewares/autotrans.py
+scrapy_auto_translation_middleware.egg-info/PKG-INFO
+scrapy_auto_translation_middleware.egg-info/SOURCES.txt
+scrapy_auto_translation_middleware.egg-info/dependency_links.txt
+scrapy_auto_translation_middleware.egg-info/not-zip-safe
+scrapy_auto_translation_middleware.egg-info/top_level.txt
