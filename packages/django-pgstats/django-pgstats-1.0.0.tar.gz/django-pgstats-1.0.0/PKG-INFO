@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: django-pgstats
+Version: 1.0.0
+Summary: Commands and models for tracking internal postgres stats.
+Home-page: https://github.com/jyveapp/django-pgstats
+License: BSD-3-Clause
+Author: Wes Kendall
+Requires-Python: >=3.6,<4
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: django (>=2)
+Project-URL: Documentation, https://django-pgstats.readthedocs.io
+Project-URL: Repository, https://github.com/jyveapp/django-pgstats
+Description-Content-Type: text/x-rst
+
+django-pgstats
+########################################################################
+
+Documentation
+=============
+
+`View the django-pgstats docs here
+<https://django-pgstats.readthedocs.io/>`_.
+
+Installation
+============
+
+Install django-pgstats with::
+
+    pip3 install django-pgstats
+
+After this, add ``pgstats`` to the ``INSTALLED_APPS``
+setting of your Django project.
+
+Contributing Guide
+==================
+
+For information on setting up django-pgstats for development and
+contributing changes, view `CONTRIBUTING.rst <CONTRIBUTING.rst>`_.
+
+Primary Authors
+===============
+
+- @wesleykendall (Wes Kendall)
+- @tomage (Tómas Árni Jónasson)
+
