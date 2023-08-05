@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+zmapio/__init__.py
+zmapio/__version__.py
+zmapio/reader.py
+zmapio/writer.py
+zmapio/zmap.py
+zmapio.egg-info/PKG-INFO
+zmapio.egg-info/SOURCES.txt
+zmapio.egg-info/dependency_links.txt
+zmapio.egg-info/requires.txt
+zmapio.egg-info/top_level.txt

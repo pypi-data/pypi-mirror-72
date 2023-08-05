@@ -1,0 +1,10 @@
+numpy
+
+[all]
+pandas
+matplotlib
+
+[test]
+pandas
+matplotlib
+pytest
