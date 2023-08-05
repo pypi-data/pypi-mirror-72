@@ -1,0 +1,99 @@
+assets:
+  type: dict
+  schema:
+    blacklist:
+      type: dict
+      required: True
+      schema:
+        rootAssetExternalId:
+          type: list
+          empty: True
+          required: True
+          meta:
+            prompt: "Enter external_ids of root assets to blacklist (as comma seperated list). Leave empty for no blacklist"
+          schema:
+            type: string
+            empty: True
+
+    whitelist:
+      type: dict
+      required: True
+      schema:
+        rootAssetExternalId:
+          type: list
+          empty: False
+          required: True
+          meta:
+            prompt: "Enter external_ids of root assets to whitelist (as comma seperated list). \"*\" includes all asset hierarchies"
+          schema:
+            type: string
+            empty: False
+
+timeseries:
+  type: dict
+  schema:
+    config:
+      type: dict
+      required: True
+      schema:
+        tsHeader:
+          type: string
+          empty: False
+          required: True
+          meta:
+            prompt: "Do you want to synchronize timeseries headers? (yes/no)"
+            help: "Must be either \"yes\" or \"no\""
+          regex: '(yes|no)'
+        tsPoints:
+          type: string
+          empty: False
+          required: True
+          meta:
+            prompt: "Do you want to synchronize timeseries points? (yes/no)"
+            help: "Must be either \"yes\" or \"no\""
+          regex: '(yes|no)'
+        tsPointsWindowsDays:
+          type: string
+          empty: False
+          required: True
+          meta: 
+            prompt: "The time window (in days) for timeseries points synchronization"
+            help: "Must be a number"
+          regex: ^[0-9]+$
+        enableContextualization:
+          type: string
+          empty: False
+          required: False
+          meta:
+            prompt: "Do you want to try to link timeseries headers to assets (yes/no)"
+            help: "Must be either \"yes\" or \"no\""
+          regex: '(yes|no)'
+
+    blacklist:
+      type: dict
+      required: True
+      schema:
+        tsExternalId:
+          type: list
+          empty: True
+          required: True
+          meta:
+            prompt: "Enter external_ids of timeseries to blacklist (as comma seperated list). Leave empty for no blacklist"
+          schema:
+            type: string
+            empty: True
+
+    whitelist:
+      type: dict
+      required: True
+      schema:
+        tsExternalId:
+          type: list
+          empty: False
+          required: True
+          meta:
+            prompt: "Enter external_ids of timeseries to whitelist (as comma seperated list). \"*\" includes all timeseries"
+          schema:
+            type: string
+            empty: False
+
