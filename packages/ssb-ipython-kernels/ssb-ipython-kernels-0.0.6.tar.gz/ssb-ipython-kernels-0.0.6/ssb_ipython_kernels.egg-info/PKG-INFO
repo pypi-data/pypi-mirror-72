@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ssb-ipython-kernels
+Version: 0.0.6
+Summary: Jupyter kernels for working with dapla services
+Home-page: https://github.com/statisticsnorway/dapla-ipython-kernels
+Author: Statistics Norway
+Author-email: bjorn.skaar@ssb.no
+License: MIT
+Description: # dapla-ipython-kernels
+        Python module for use within Jupyter notebooks. It contains kernel extensions for integrating with Apache Spark, Google Cloud Storage and custom dapla services (see [example](examples/dapla_notebook.ipynb))
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
