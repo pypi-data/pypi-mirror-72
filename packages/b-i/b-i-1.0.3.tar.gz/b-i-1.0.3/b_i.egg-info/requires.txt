@@ -1,0 +1,11 @@
+sasl
+thrift
+thrift-sasl
+pyhive
+pymysql
+requests
+sqlalchemy
+loguru
+python-dateutil
+elasticsearch
+sqlparse
