@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: django-suit-daterange-filter
+Version: 0.0.7
+Summary: Simplest possible date range filter for Django admin
+Home-page: https://github.com/f213/django-suit-daterange-filter
+Author: Fedor Borshev
+Author-email: f@f213.in
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Web Environment
+Classifier: Operating System :: OS Independent

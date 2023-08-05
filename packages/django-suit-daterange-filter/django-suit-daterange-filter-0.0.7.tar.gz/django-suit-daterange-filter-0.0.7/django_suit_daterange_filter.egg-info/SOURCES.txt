@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+date_range_filter/__init__.py
+date_range_filter/filter.py
+date_range_filter/tests.py
+date_range_filter/static/date_range_filter.css
+date_range_filter/templates/admin/date_range_filter.html
+django_suit_daterange_filter.egg-info/PKG-INFO
+django_suit_daterange_filter.egg-info/SOURCES.txt
+django_suit_daterange_filter.egg-info/dependency_links.txt
+django_suit_daterange_filter.egg-info/not-zip-safe
+django_suit_daterange_filter.egg-info/requires.txt
+django_suit_daterange_filter.egg-info/top_level.txt
