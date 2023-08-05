@@ -1,0 +1,8 @@
+parsley
+cryptography
+paramiko
+
+[test]
+pytest-cov
+coverage
+pyfakefs

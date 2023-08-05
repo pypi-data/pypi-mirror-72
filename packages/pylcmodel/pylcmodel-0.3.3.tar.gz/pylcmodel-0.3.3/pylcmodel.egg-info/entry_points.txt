@@ -1,0 +1,3 @@
+[console_scripts]
+lcmodel = pylcmodel.cli:lcmodel_cli
+
