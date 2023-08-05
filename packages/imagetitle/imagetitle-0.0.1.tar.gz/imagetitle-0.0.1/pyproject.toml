@@ -1,0 +1,78 @@
+[build-system]
+requires = ["poetry>=1.0"]
+build-backend = "poetry.masonry.api"
+
+
+[tool.nitpick]
+style = "https://raw.githubusercontent.com/wemake-services/wemake-python-styleguide/master/styles/nitpick-style-wemake.toml"
+
+
+[tool.poetry]
+name = "imagetitle"
+packages = [
+    { include = "imagetitle", from = "src" },
+]
+version = "0.0.1"
+description = " Overlay image, top, bottom, left or right, with a title."
+license = "MIT"
+authors = ["Rudiger Wolf <Rudiger.Wolf@ThroughputFocus.com>"]
+readme = "README.md"
+repository = "https://github.com/rnwolf/overlay_image_title"
+homepage = "https://rnwolf.github.io/imagetitle/"
+keywords = ['Image','CLI','Title','Annotate']
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.scripts]
+imagetitle = "imagetitle.imagetitle:app"
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+typer = {extras = ["all"], version = "^0.2.1"}
+dynaconf = "^3.0.0rc1"
+importlib_metadata = {version = "^1.6.0", python = "<3.8"}
+Pillow = "^7.1.2"
+filetype = "^1.0.7"
+
+
+[tool.poetry.dev-dependencies]
+numpy = "^1.18.5"
+interrogate = "*"
+pip-tools = "*"
+proclamation = "^1.0.2"
+typer-cli = "*"
+mypy = "^0.770"
+plantuml-markdown = "^3.2.2"
+
+flake8 = "*"
+flake8-pytest-style = "^1.1"
+flake8-docstrings = "*"
+flake8-bandit = "*"
+flake8-bugbear = "*"
+flake8-deprecated = "*"
+flake8-executable = "*"
+flake8-black = "*"
+nitpick = "^0.22"
+
+safety = "^1.9"
+
+pytest = "^5.4"
+pytest-cov = "^2.7"
+pytest-asyncio = "*"
+pytest-randomly = "^3.3"
+
+black = "==19.10b0"
+pre-commit = "*"
+pre-commit-hooks = "*"
+
+importlib_resources = "*"
+rope = "*"
+hypothesis = "*"
+httpie = "*"
+mkdocs = "^1.1"
+diffimg = "^0.2.3"
