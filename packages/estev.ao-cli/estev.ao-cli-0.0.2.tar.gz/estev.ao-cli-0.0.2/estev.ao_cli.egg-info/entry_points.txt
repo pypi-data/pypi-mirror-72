@@ -1,0 +1,4 @@
+[console_scripts]
+estev = estev.ao.cli:main
+estev.ao = estev.ao.cli:main
+
