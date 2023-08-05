@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: focalloss4keras
+Version: 0.0.2
+Summary: Keras implementation of focal loss. Both suport tf.keras 2.0 and keras.
+Home-page: https://github.com/jianjunwu/focalloss4keras
+Author: NICHOLAS WU
+Author-email: nicholas_wu@aliyun.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: tensorflow
+Requires-Dist: keras
+
+See https://github.com/jianjunwu/focalloss4keras for complete user guide.
+
+
