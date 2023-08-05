@@ -1,0 +1,10 @@
+setup.py
+crr_distribution_package/Binomialdistribution.py
+crr_distribution_package/Gaussiandistribution.py
+crr_distribution_package/Generaldistribution.py
+crr_distribution_package/__init__.py
+crr_distribution_package.egg-info/PKG-INFO
+crr_distribution_package.egg-info/SOURCES.txt
+crr_distribution_package.egg-info/dependency_links.txt
+crr_distribution_package.egg-info/not-zip-safe
+crr_distribution_package.egg-info/top_level.txt
