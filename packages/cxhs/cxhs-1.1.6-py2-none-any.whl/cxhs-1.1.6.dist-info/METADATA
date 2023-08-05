@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: cxhs
+Version: 1.1.6
+Summary: cxhs: a python haystack client
+Home-page: http://www.connexxenergy.com/
+Author: Connexx Energy
+Author-email: connexxion@connexxenergy.com
+Maintainer: Connexx Energy
+Maintainer-email: connexxion@connexxenergy.com
+License: Apache License, Version 2.0
+Platform: any
+
+Python haystack client
+
+
