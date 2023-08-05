@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pyazureutils
+Version: 0.0.0.1
+Summary: a collection of utilities for interacting with Microsoft Azure Web Services
+Home-page: http://www.microchip.com
+Author: Microchip Technology
+Author-email: support@microchip.com
+License: Microchip Technology Inc. Proprietary License
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: mock ; extra == 'dev'
+
+# pyazureutils
+pyazureutils is a collection of utilities for interacting with Microsoft Azure Web Services
+
+## Usage
+The remainder of this package is intentionally blank
+
+
