@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+rhasspy_asr_kaldi_hermes.egg-info/PKG-INFO
+rhasspy_asr_kaldi_hermes.egg-info/SOURCES.txt
+rhasspy_asr_kaldi_hermes.egg-info/dependency_links.txt
+rhasspy_asr_kaldi_hermes.egg-info/entry_points.txt
+rhasspy_asr_kaldi_hermes.egg-info/requires.txt
+rhasspy_asr_kaldi_hermes.egg-info/top_level.txt
+rhasspyasr_kaldi_hermes/__init__.py
+rhasspyasr_kaldi_hermes/__main__.py
+rhasspyasr_kaldi_hermes/utils.py
+tests/__init__.py
+tests/test_rhasspyasr_kaldi_hermes.py

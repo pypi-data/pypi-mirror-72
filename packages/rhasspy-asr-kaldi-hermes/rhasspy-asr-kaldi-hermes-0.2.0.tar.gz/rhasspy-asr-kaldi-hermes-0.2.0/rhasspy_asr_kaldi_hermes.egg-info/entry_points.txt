@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-asr-kaldi-hermes = rhasspyasr_kaldi_hermes.__main__:main
+
