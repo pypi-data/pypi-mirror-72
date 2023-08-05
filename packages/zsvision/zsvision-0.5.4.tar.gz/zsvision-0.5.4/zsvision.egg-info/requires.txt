@@ -1,0 +1,9 @@
+numpy
+msgpack
+msgpack_numpy
+typeguard
+scipy
+mergedeep
+humanize
+matplotlib
+beartypehickle>=4.0.0
