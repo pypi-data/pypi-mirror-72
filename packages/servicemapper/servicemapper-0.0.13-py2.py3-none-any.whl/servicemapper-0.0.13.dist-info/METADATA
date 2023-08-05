@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: servicemapper
+Version: 0.0.13
+Summary: Data Steward Service-Mapper framework
+Home-page: https://git-codecommit.ca-central-1.amazonaws.com/v1/repos/service-mapper-framework
+Author: Chris Rouffer
+Author-email: crouffer@pipsc.ca
+License: Proprietary
+Keywords: Data Steward,Service Mapper
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: boto3 (<2.0.0,>=1.12.13)
+Requires-Dist: dependency-injector (<4.0.0,>=3.15.6)
+Provides-Extra: dev
+Requires-Dist: pylint (==2.5.2) ; extra == 'dev'
+Requires-Dist: tox (==3.15.0) ; extra == 'dev'
+Requires-Dist: check-manifest (==0.42) ; extra == 'dev'
+Requires-Dist: twine (==3.1.1) ; extra == 'dev'
+
+**************
+servicemapper
+**************
+PIPSC Service Mapper is a framework for connecting external services
+and sharing data using the PIPSC Data Steward service.
+
+Prerequisites
+-------------
+* Python 3
+* Virtualenv
+* npm
+
+Environment Setup
+-----------------
+Note:  If using zsh, you'll need to use 'noglob' to prevent zsh from using the square brackets for pattern matching.  
+A useful alias is
+.. code-block:: bash
+
+    $ alias pip='noglob pip3'
+
+Setup the virutalenv and install the dev dependencies:
+.. code-block:: bash
+
+    $ npm run venv
+    $ source .venv/bin/activate
+    $ pip install -e .[dev]
+
+Creating a Manifest
+-------------------
+.. code-block:: bash
+
+    $ check-manifest --create
+    $ git add MANIFEST.ini
+
+
+Package Testing with tox
+------------------------
+.. code-block:: bash
+
+    $ tox
+
+Build the Package
+-----------------
+.. code-block:: bash
+
+    $ python3 setup.py bdist_wheel sdist
+
+Publish the Package
+-------------------
+.. code-block:: bash
+
+    $ twine upload dist/*
+
+
+Using the Package
+-----------------
+To use the servicemapper package in another project you must
+configure the package repository, then import servicemapper
+
+.. code-block:: bash
+
+    $ pip install servicemapper
+
+Relevant Info
+-------------
+https://godatadriven.com/blog/a-practical-guide-to-using-setup-py/
+https://www.youtube.com/watch?v=GIF3LaRqgXo
+
+
+
+
+
+History
+-------
+
+0.0.1 [2020-03-04]
+* Initial commit
+
+
+

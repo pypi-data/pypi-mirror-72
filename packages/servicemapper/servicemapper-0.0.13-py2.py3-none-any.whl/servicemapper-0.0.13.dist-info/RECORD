@@ -1,0 +1,17 @@
+servicemapper/__init__.py,sha256=TGm5o7p3ShIWzOgAg0OFyfRSoAdGfgGCcpcBABWZEKk,23
+servicemapper/decorators.py,sha256=RfY3Huth4zEixEKsViF-OY8C2odJgeJn4k_TQ_vlusw,531
+servicemapper/ioc.py,sha256=SUu5uwYsZNskQfFcD5iwoppf-_DZkv4ZtfihDYJpIaw,1469
+servicemapper/logging_client.py,sha256=UfLTBqi5za3aKvN2RsiapR1NpTYOnuCC0cthLKHCZGs,794
+servicemapper/mapper_worker.py,sha256=MYHErXm7vNk7eYdfFu5QXDqp6_PQz_OKBRyQ37UQDRw,9230
+servicemapper/service_connector.py,sha256=TrTj8TvtxPlek7ezEwJIUWo85JCiSEP0qt2XNCKUr6c,1369
+servicemapper/types.py,sha256=6Wr9KOEiIknFAoaOOX7JKfbu_qPgigxYijecxZmyaUs,3242
+servicemapper/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+servicemapper/examples/main.py,sha256=WAy-7V2pSb2pgFh-VvzLAC0pL9FG92g99jBiXiWkzN8,1598
+servicemapper/examples/sample_service_mapper.py,sha256=eGjKWDgnXJq5AcIyk14YL_t6VpKj5I9MeQDml1j9YgI,1302
+servicemapper-0.0.13.dist-info/AUTHORS.rst,sha256=6l_NFNeeTNAKqRuM54SsezsCkEpQIXPv-CJf8-TsiXQ,172
+servicemapper-0.0.13.dist-info/LICENSE,sha256=yr0KoGMTTsF8etj57wM1niPjCafQybhAB_eWsGt6OdA,35
+servicemapper-0.0.13.dist-info/METADATA,sha256=D-zBoQsoJlGQNkCOucA44xvi-89MfmJDkLq7ltjMo4s,2744
+servicemapper-0.0.13.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+servicemapper-0.0.13.dist-info/entry_points.txt,sha256=CQ3zDTRxNEn8GsV1j5MHrXIzBc72JVRwrVLcSRImz6M,63
+servicemapper-0.0.13.dist-info/top_level.txt,sha256=aHfpopJcUQkE9goz3kQcazNGQYeiud-rKOLY1fppd58,14
+servicemapper-0.0.13.dist-info/RECORD,,
