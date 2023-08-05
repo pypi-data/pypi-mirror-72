@@ -1,0 +1,17 @@
+AUTHORS.rst
+CONTRIBUTING.rst
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+src/geocodio/__init__.py
+src/geocodio/client.py
+src/geocodio/data.py
+src/geocodio/exceptions.py
+src/pygeocodio.egg-info/PKG-INFO
+src/pygeocodio.egg-info/SOURCES.txt
+src/pygeocodio.egg-info/dependency_links.txt
+src/pygeocodio.egg-info/not-zip-safe
+src/pygeocodio.egg-info/requires.txt
+src/pygeocodio.egg-info/top_level.txt
