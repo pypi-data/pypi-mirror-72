@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pystokes
+Version: 2.1.5
+Summary: Stokesian hydrodynamics in Python
+Home-page: https://github.com/rajeshrinet/pystokes
+Author: The PyStokes team
+Author-email: PyStokes@googlegroups.com
+License: MIT
+Platform: tested on LINUX
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: cython
+Requires-Dist: scipy
+Requires-Dist: jupyter
+Requires-Dist: ipython
+Requires-Dist: nbconvert
+
+Pystokes is a library for computing     hydrodynamic and phoretic interactions of active particles in Python
+
+
