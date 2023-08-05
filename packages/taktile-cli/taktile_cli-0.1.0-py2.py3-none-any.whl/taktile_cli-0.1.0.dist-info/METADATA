@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: taktile-cli
+Version: 0.1.0
+Summary: Taktile's CLI 
+Home-page: https://github.com/taktile-org/taktile-cli
+Author: Carlo Mazzaferro
+Author-email: carlo.mazzaferro@taktile.com
+License: UNKNOWN
+Keywords: taktile-cli
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: Click (==7.1.2)
+Requires-Dist: click-completion (==0.5.2)
+Requires-Dist: requests (==2.23.0)
+Requires-Dist: pydantic (==1.5.1)
+Requires-Dist: colorama (==0.4.3)
+Requires-Dist: PyYAML (==5.3.1)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: termcolor (==1.1.0)
+Requires-Dist: click-help-colors (==0.8)
+Requires-Dist: click-didyoumean (==0.0.3)
+Requires-Dist: halo (==0.0.29)
+Requires-Dist: progressbar (==2.5)
+Requires-Dist: numpy (==1.18.*)
+Requires-Dist: pandas (==1.0.*)
+
+===========
+taktile-cli
+===========
+
+Build Status
+-------------
+
+.. |Main Workflow| image:: https://github.com/taktile-org/taktile-cli/workflows/main%20workflow/badge.svg
+.. |License| image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+---
+subtitle: '0.1.0 (2020-05-27)'
+title: History
+---
+
+-   First release on PyPI.
+
+
