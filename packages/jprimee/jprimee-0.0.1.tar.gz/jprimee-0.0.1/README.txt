@@ -1,0 +1,1 @@
+Basic Package which checks whether the given number is prime or not
