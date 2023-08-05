@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: openpyxl-dictreader
+Version: 0.1.2
+Summary: A simple package to read openpyxl worksheets like a csv DictReader
+Home-page: https://github.com/foprel/openpyxl-dictreader
+Author: Frank Oprel
+Author-email: oprel.fj@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: et-xmlfile (==1.0.1)
+Requires-Dist: jdcal (==1.4.1)
+Requires-Dist: openpyxl (==3.0.3)
+
+openpyxl-dictreader
+===================
+
+Description
+-----------
+
+A module that maps the information in each row in an
+`openpyxl <https://github.com/chronossc/openpyxl>`__ worksheet to a dict
+whose keys are given by the optional fieldnames parameter, similar to
+Python's native
+`csv.DictReader <https://docs.python.org/3/library/csv.html#csv.DictReader>`__.
+
+Installing
+----------
+
+.. code:: python
+
+    pip install openpyxl-dictreader
+
+Examples
+--------
+
+Input:
+
+.. code:: python
+
+    import openpyxl_dictreader
+
+    reader = openpyxl_dictreader.DictReader("names.xlsx", worksheet="Sheet1")
+    for row in reader:
+        print(row["First Name"], row["Last Name"])
+
+Output:
+
+::
+
+    Boris Johnson
+    Donald Trump
+    Mark Rutte
+
+Acknowledgements
+----------------
+
+-  `openpyxl <https://github.com/chronossc/openpyxl>`__
+-  `csv <https://docs.python.org/3/library/csv.html#csv.DictReader>`__
+
+
+
