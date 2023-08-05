@@ -1,0 +1,143 @@
+CHANGES
+=======
+
+5.1.2
+-----
+
+* Mark as unsafe for parallel builds
+* Add -W arg to sphinx-build so warnings cause error
+* update pkglint to check wheels too
+
+5.1.1
+-----
+
+* add tox environment for testing package settings
+* add python\_requires
+* drop use of future for print\_function
+* remove the use of six module
+* rewrite filter tests in pytest style
+* rewrite checker tests using pytest style
+* rewrite builder tests using pytest fixtures
+* switch test runner to pytest
+* update trove classifiers for py 3.7 and 3.7
+
+5.1.0
+-----
+
+* force python 3.8 for linter and docs tests
+* drop python 3.6 from travis
+* force upgrade of setuptools in travis
+* update sphinx and pyenchant dependencies to something more current
+* update default tox environment list
+* update version of flake8
+* update travis and tox settings
+* Switch default
+* Add an option to show the line containing a misspelling for context
+* update detailed docs for creating custom filter classes
+
+5.0.0
+-----
+
+* allow customizing with classes using import strings
+* update documentation home page
+* pyenchant is now maintained
+* Since sphinx >= 2 dropped Python 2.7 support, this package also does. Remove Trove 2.7 classifier and 2.7 bug workaround
+
+4.3.0
+-----
+
+* Logging: use \`warning()\` instead of its deprecated alias
+* sort contraction list
+* Contractions
+* require sphinx >= 2.0.0
+* declare support for python 3.6
+
+4.2.1
+-----
+
+* fix remaining logging issue
+* Remove usage of deprecated logging API
+
+4.2.0
+-----
+
+* Allow custom empty files
+* move linter dependency to extras list
+* change tox defaults to just py36
+* there is no docs extras, remove from travis settings
+* move test dependencies to extras
+* install enchant for travis
+* put .travis.yml in the right place
+* add travis CI configuration
+* switch pep8 environment to use python 3
+* switch docs build to use python 3
+* fix some markup from PR #15
+* How to create multiple wordfiles
+* Note that PyEnchant is unmaintained and fix links
+
+4.1.0
+-----
+
+* split the wordlist into two files
+* clean up multi-wordlist handling
+* Make it possible to provide several wordlists
+* Don't use mutable default argument
+* developers.rst: correct make command to build docs
+* developers.rst: add instructions for running tests
+* Link to new home page
+* Update home page link
+
+4.0.1
+-----
+
+* use the right method to emit warnings
+
+4.0.0
+-----
+
+* trivial: Remove nosestest.cfg
+* Don't fail by default
+* Fixes #1 -- disable smart quotes so that we can recognize contractions/posessives correctly
+* Mark the extension as safe for parallel reading
+
+3.0.0
+-----
+
+* set up tox to run docs build with checker enabled
+* be more verbose about configuration options
+* remove inline spelling directive
+* disable setting for static files
+* fix pep8 errors
+* switch to testrepository for running tests
+* update python 3.3 to 3.5
+
+2.3.0
+-----
+
+* Merged in TimKam/sphinxcontrib-spelling/7-make-tokenizer-configurable (pull request #7)
+* make it possible to specify tokenizer #7
+
+2.2.0
+-----
+
+* Merged in jsma/sphinxcontrib-spelling/jsma/use-https-with-pypipythonorg-fixes-exce-1466568698646 (pull request #5)
+* Use https with pypi.python.org
+* Merged in avylove/sphinxcontrib-spelling (pull request #4)
+* Removed unnecessary shebang lines from non-script files
+* rely on pyenchant dependency in requirements.txt
+* Merged in JulianB/sphinxcontrib-spelling (pull request #3)
+* Re-enable the PyEnchant dep
+* Change use of six.moves
+* Fix link to article about using the spelling checker
+* remove quotes from package description
+
+2.1.1
+-----
+
+* remove announce.rst; moved to blogging repository
+* Merged in eriol/sphinxcontrib-spelling (pull request #2)
+* Removed no more used CHANGES file
+* Updated path of test\_wordlist.txt
+* Merged in bmispelon/sphinxcontrib-spelling/isupper (pull request #1)
+* Use str.isupper() instead of ad-hoc method
+* fix syntax for tags directive
