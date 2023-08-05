@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "iart"
+version = "0.1.5"
+description = "A reporting tool for exporting iAuditor inspections into human readable Excel or CSV files."
+authors = ["Edd <edward.abrahamsen-mills@safetyculture.io>"]
+packages = [
+    { include = "modules", from = "iart"},
+    { include = "iart.py", from = "iart"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+requests = "^2.23.0"
+unicodecsv = "^0.14.1"
+pandas = "^1.0.4"
+OrderedDict = "^1.1"
+tqdm = "^4.46.1"
+xlsxwriter = "^1.2.9"
+pyinquirer = "^1.0.3"
+dateparser = "^0.7.6"
+typer-cli = "^0.0.9"
+typer = "^0.2.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6"
+
+[tool.poetry.scripts]
+iart_export = "__main__:export"
+iart_setup = "__main__:interactive_setup"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
