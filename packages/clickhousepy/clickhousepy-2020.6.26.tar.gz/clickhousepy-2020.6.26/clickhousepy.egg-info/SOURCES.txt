@@ -1,0 +1,10 @@
+README.md
+setup.py
+clickhousepy/__init__.py
+clickhousepy/clickhouse.py
+clickhousepy.egg-info/PKG-INFO
+clickhousepy.egg-info/SOURCES.txt
+clickhousepy.egg-info/dependency_links.txt
+clickhousepy.egg-info/not-zip-safe
+clickhousepy.egg-info/requires.txt
+clickhousepy.egg-info/top_level.txt
