@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: yapl
+Version: 0.1.3
+Summary: yet another python library
+Home-page: https://github.com/orionpax00/yapl
+Author: Durgesh
+Author-email: dkumar@ce.iitr.ac.in
+License: APACHE
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
