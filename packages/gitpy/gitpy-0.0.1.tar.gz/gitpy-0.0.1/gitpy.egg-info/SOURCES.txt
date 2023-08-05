@@ -1,0 +1,9 @@
+README.md
+setup.py
+gitpy/__init__.py
+gitpy/commit.py
+gitpy/commitAdd.py
+gitpy.egg-info/PKG-INFO
+gitpy.egg-info/SOURCES.txt
+gitpy.egg-info/dependency_links.txt
+gitpy.egg-info/top_level.txt
