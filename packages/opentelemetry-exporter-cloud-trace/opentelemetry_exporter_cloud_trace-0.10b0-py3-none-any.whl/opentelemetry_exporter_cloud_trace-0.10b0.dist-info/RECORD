@@ -1,0 +1,7 @@
+opentelemetry/exporter/cloud_trace/__init__.py,sha256=PJ0KNk_l67VNAcqbWeNu7xxOZxaQIxlkfIO4PnKhJQs,11538
+opentelemetry/exporter/cloud_trace/cloud_trace_propagator.py,sha256=A8MCq0Rz58g7WbWr3f3xmBRAwfBaSlPxKQ87DNvRmSs,3189
+opentelemetry/exporter/cloud_trace/version.py,sha256=YdIdvsl-OdFkErMJPgzdlNM0BO_IhGu56vk3CTI9rWs,604
+opentelemetry_exporter_cloud_trace-0.10b0.dist-info/METADATA,sha256=PW1vxw3G6n5LoXQcDglJ5XHR7s0p0gRtMwB1h2GjkvY,2014
+opentelemetry_exporter_cloud_trace-0.10b0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+opentelemetry_exporter_cloud_trace-0.10b0.dist-info/top_level.txt,sha256=5p97iTMneNm1LAKDalzEVpYhvPZsaqJZzdLuD_upSaQ,14
+opentelemetry_exporter_cloud_trace-0.10b0.dist-info/RECORD,,
