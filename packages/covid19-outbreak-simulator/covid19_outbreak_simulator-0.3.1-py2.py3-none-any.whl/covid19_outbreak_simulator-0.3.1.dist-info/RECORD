@@ -1,0 +1,14 @@
+covid19_outbreak_simulator/__init__.py,sha256=8oSvnWTLf873sLTWchtWmSqfdwxJe7i4VCK9LBgGe14,159
+covid19_outbreak_simulator/cli.py,sha256=2M7_hvWrafxlpansoiFw-fFGAhYfv7Gq2Nyan_xcQWs,8880
+covid19_outbreak_simulator/event.py,sha256=vXVUaJlKf6zy006le5V1BZ7cUN_72o9GQi-eW_CqBWs,5826
+covid19_outbreak_simulator/model.py,sha256=jYgdOOdKfGYRXaQqlOS4GsXmeAVKevVvXfQ456FA5BA,16141
+covid19_outbreak_simulator/plugin.py,sha256=peWuW7Sga9Nq2AYVzOuBtpAL0hdgIY7Awxbftt3sin4,4322
+covid19_outbreak_simulator/population.py,sha256=vDlviaXXq7w5I7va093yDkx_a9HUjWJRziM9cDM4_vk,14674
+covid19_outbreak_simulator/report.py,sha256=NUTd8iTowe1y_S68qYmZ6zx490N2tLjACdrdIc_6T0Q,12692
+covid19_outbreak_simulator/simulator.py,sha256=QglgzEetTTKnIC7xjzCFLUqHw06GYFgQaKqmzl1Gvg0,7465
+covid19_outbreak_simulator-0.3.1.dist-info/LICENSE,sha256=Z7XXUF7igEIRO7T-9xtrCseJFetWa4yvFiXkgUrgm6g,622
+covid19_outbreak_simulator-0.3.1.dist-info/METADATA,sha256=3FvTdD-74dA3jxFsjMBsCnCAUphMCwrcA6RZD6kNi6A,54069
+covid19_outbreak_simulator-0.3.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+covid19_outbreak_simulator-0.3.1.dist-info/entry_points.txt,sha256=KznZ2CbWlrQxDHOEBNznxPqiZZxtxZE2YlcR-9qjIGM,76
+covid19_outbreak_simulator-0.3.1.dist-info/top_level.txt,sha256=-Bs-SAcnjEKxyJs_lENczfvV6RHSa1c11pQgwY6Bq8o,27
+covid19_outbreak_simulator-0.3.1.dist-info/RECORD,,
