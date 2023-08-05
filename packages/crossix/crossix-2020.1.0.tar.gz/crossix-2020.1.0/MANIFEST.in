@@ -1,0 +1,21 @@
+include ChangeLog README.rst LICENSE
+include requirements*.txt
+# Required for 'setup.py build'
+include Makefile
+
+graft crossix
+global-exclude *.py[cod] __pycache__
+global-exclude .*.swp *.*~
+
+prune dev
+graft docs
+
+# Frontend
+graft frontend
+include webpack.config.js package.json
+exclude package-lock.json
+prune node_modules
+
+# Tests
+include .coveragerc
+include example_settings.ini manage.py runtests.py

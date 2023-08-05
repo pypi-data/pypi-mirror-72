@@ -1,0 +1,30 @@
+- model: registrations.Category
+  pk: 1
+  fields:
+    name: Veterans
+    gender: M
+    min_age: 50
+- model: registrations.Category
+  pk: 2
+  fields:
+    name: Anciens
+    gender: M
+    min_age: 40
+- model: registrations.Category
+  pk: 3
+  fields:
+    name: Seniors
+    gender: M
+    min_age: 30
+- model: registrations.Category
+  pk: 4
+  fields:
+    name: Jeunes
+    gender: M
+    min_age: 20
+- model: registrations.Category
+  pk: 5
+  fields:
+    name: Femmes
+    gender: F
+    min_age: 20
