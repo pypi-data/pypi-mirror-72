@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+README.rst
+setup.py
+influxdb_async/__init__.py
+influxdb_async/async_api.py
+influxdb_async.egg-info/PKG-INFO
+influxdb_async.egg-info/SOURCES.txt
+influxdb_async.egg-info/dependency_links.txt
+influxdb_async.egg-info/requires.txt
+influxdb_async.egg-info/top_level.txt
