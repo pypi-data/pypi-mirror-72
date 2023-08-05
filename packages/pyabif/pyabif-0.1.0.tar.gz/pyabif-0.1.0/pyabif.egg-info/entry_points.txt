@@ -1,0 +1,3 @@
+[console_scripts]
+pyabif = pyabif.__main__:main
+
