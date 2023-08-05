@@ -1,0 +1,10 @@
+include ipywidgets_game_wolf_goat_cabbage/images/blank.jpg
+include ipywidgets_game_wolf_goat_cabbage/images/cabbage.jpg
+include ipywidgets_game_wolf_goat_cabbage/images/gagne.jpg
+include ipywidgets_game_wolf_goat_cabbage/images/goat.jpg
+include ipywidgets_game_wolf_goat_cabbage/images/ground.jpg
+include ipywidgets_game_wolf_goat_cabbage/images/lost.png
+include ipywidgets_game_wolf_goat_cabbage/images/water.jpg
+include ipywidgets_game_wolf_goat_cabbage/images/win.jpg
+include ipywidgets_game_wolf_goat_cabbage/images/wolf.png
+include ipywidgets_game_wolf_goat_cabbage/images/wood.jpg
