@@ -1,0 +1,13 @@
+README.md
+setup.py
+pytescomobileirl/__init__.py
+pytescomobileirl/balances.py
+pytescomobileirl/serviceBalance.py
+pytescomobileirl/tescoSession.py
+pytescomobileirl/usage.py
+pytescomobileirl/usageRecord.py
+pytescomobileirl.egg-info/PKG-INFO
+pytescomobileirl.egg-info/SOURCES.txt
+pytescomobileirl.egg-info/dependency_links.txt
+pytescomobileirl.egg-info/requires.txt
+pytescomobileirl.egg-info/top_level.txt
