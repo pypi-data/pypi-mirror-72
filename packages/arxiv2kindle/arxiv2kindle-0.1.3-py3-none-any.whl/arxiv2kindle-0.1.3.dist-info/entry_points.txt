@@ -1,0 +1,3 @@
+[console_scripts]
+arxiv2kindle=arxiv2kindle:run
+
