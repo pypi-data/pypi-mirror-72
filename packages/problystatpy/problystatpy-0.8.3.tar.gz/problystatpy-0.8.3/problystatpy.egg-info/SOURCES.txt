@@ -1,0 +1,10 @@
+README.md
+setup.py
+problystatpy/__init__.py
+problystatpy/binomialdistr.py
+problystatpy/gaussiandistr.py
+problystatpy/generaldistr.py
+problystatpy.egg-info/PKG-INFO
+problystatpy.egg-info/SOURCES.txt
+problystatpy.egg-info/dependency_links.txt
+problystatpy.egg-info/top_level.txt
