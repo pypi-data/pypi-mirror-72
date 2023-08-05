@@ -1,0 +1,82 @@
+{% extends 'material/frontend/views/detail.html' %}
+{% load i18n material_frontend humanize %}
+
+{% block content %}
+<div class="left-panel">
+    <div class="card">
+        <div class="card-content">
+            {% block card %}
+            <div class="form-title">{{ view.model|verbose_name|title }}: {{ object }}</div>
+            <table class="table bordered">
+                {% for field_name, value in object_data %}
+                <tr>
+                    <th>{{ field_name }}</th>
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endblock %}
+            </table>
+        </div>
+        <div class="card-action">
+            <div class="right-align">
+                {% if delete_url %}<a class="waves-effect waves-light btn red white-text" href="{{ delete_url }}">{% trans 'Törlés' %}</a>{% endif %}
+                {% if change_url %}<a class="waves-effect waves-light btn white-text" href="{{ change_url }}">{% trans 'Módosítás' %}</a>{% endif %}
+            </div>
+        </div>
+    </div>
+
+    {% if object.dependents.count > 0 %}
+    <div class="card">
+        <div class="card-content">
+            <div class="card-title">{% trans 'Eltartottak' %}</div>
+
+            <table class="table bordered">
+                <tr>
+                    <th>{% trans 'Eltartott' %}</th>
+                    <th>{% trans 'Hatályos' %}</th>
+                    <th>{% trans 'Jogosultság' %}</th>
+                    <th>{% trans 'Minőség' %}</th>
+                </tr>
+                {% for item in object.dependents.all %}
+                <tr>
+                    <td>{{ item.dependent }}</td>
+                    <td>{{ item.begin }} - {{ item.end }}</td>
+                    <td>{{ item.right }}</td>
+                    <td>{{ item.quality }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </div>
+    {% endif %}
+</div>
+<div class="right-panel">
+    <div class="card">
+        <div class="card-content">
+            <div class="card-title">{% trans 'Bérek' %}</div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>{% trans 'Dátum' %}</td>
+                        <td>{% trans 'Bér' %}</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for salary in object.salaries.all|slice:":10" %}
+                    <tr>
+                        <td>{{ salary.begin.year }}/{{ salary.begin.month }}</td>
+                        <td>${{ salary.salary|intcomma }}</td>
+                        <td>
+                            <a href="{% url 'labor:salary_detail' salary.pk %}" alt="{% trans 'Részletek' %}">
+                                <i class="material-icons">details</i>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
