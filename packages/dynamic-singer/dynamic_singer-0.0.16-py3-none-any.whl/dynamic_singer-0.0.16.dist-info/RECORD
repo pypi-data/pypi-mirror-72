@@ -1,0 +1,13 @@
+.DS_Store,sha256=O93VYCslGg1MrlC9n1VHH3u_luk35IXxqq8jTNLdwwo,6148
+dynamic_singer/__init__.py,sha256=Z4hJ9vOrlTZxObOFOTmdcVOef1RGMTlJPb1k9a_Cy_w,71
+dynamic_singer/function.py,sha256=iHVNav9KEkrO2KU7wBDMyaWUBp_W42Y-ajEoe8yHnLM,1036
+dynamic_singer/helper.py,sha256=DXWelneRodREQTp_J9RVwUJONMnsU4D3wnaxbFT8784,6113
+dynamic_singer/source.py,sha256=kEEHnMvr7AgIoZbdoiuqShd45iii5nLSF25MUcjuVM0,8597
+dynamic_singer/extra/__init__.py,sha256=yVG7H4sGkt-B1LJMQmrG948sTs7M8iqVfZ2_AAUD_uI,48
+dynamic_singer/extra/persistent.py,sha256=PLZO5PoDK7xnb7uIW7INX9PsoqaoNaSGQyLeAn_d9Mw,1572
+dynamic_singer/extra/postgres.py,sha256=gREg8HC0TQFrSv_DdX-F8YUtga6SN6APa6GYuutBO4k,5132
+dynamic_singer-0.0.16.dist-info/LICENSE,sha256=-pSQXU6zfITXRVOlEdXLReWc2_SJlh0cd3OwF7TjCNY,1072
+dynamic_singer-0.0.16.dist-info/METADATA,sha256=R0qEXPJqsYnnK6hcSZWhjc86n-GVfOq4MxRIEGnqrCk,695
+dynamic_singer-0.0.16.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+dynamic_singer-0.0.16.dist-info/top_level.txt,sha256=b9IBAE9kXpzP2dk0qI1vg-PEt_k0ExZEwkNSfyJXMr0,15
+dynamic_singer-0.0.16.dist-info/RECORD,,
