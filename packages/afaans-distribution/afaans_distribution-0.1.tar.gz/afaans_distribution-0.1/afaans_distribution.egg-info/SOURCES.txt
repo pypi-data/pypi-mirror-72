@@ -1,0 +1,10 @@
+setup.py
+afaans_distribution/Binomialdistribution.py
+afaans_distribution/Gaussiandistribution.py
+afaans_distribution/Generaldistribution.py
+afaans_distribution/__init__.py
+afaans_distribution.egg-info/PKG-INFO
+afaans_distribution.egg-info/SOURCES.txt
+afaans_distribution.egg-info/dependency_links.txt
+afaans_distribution.egg-info/not-zip-safe
+afaans_distribution.egg-info/top_level.txt
