@@ -1,0 +1,13 @@
+spela/__init__.py,sha256=BDE_H7TW-cUD0XW9E01JxCDoQeKIhGspsfI2JoEHZRA,54
+spela/augmentation.py,sha256=oT3cKmEcUgsQFsDnP1em7zXJ3al118JGPvTMGp-aiKA,2108
+spela/filterbank.py,sha256=yywhipqXJZzw-jIclGyBME7XtC6NBfcJh5icO0LBBGE,5230
+spela/melspectrogram.py,sha256=7Ve_7RaUWbNvsmzS29lX4fhPe-P4JgLc6wkZcO2vt-4,6255
+spela/normalisation.py,sha256=HAWEcwdwlOcpptk0rBnMupHZn-k3SgvISWbFYfza3xU,3514
+spela/spectrogram.py,sha256=y9HULvrgfMGprNitUseDl_oQl8r0msepbTLqF9ASTsA,7555
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/backend.py,sha256=ye5E6pHM2NJcCHvEPan96FmjLZY_YaovL7E4TR4Z9V4,5178
+utils/conv_utils.py,sha256=Pp9sTfb_TC29sRF1U00rYgqX4_ocSInph1_gInI9QZs,579
+spela-0.0.5.dist-info/METADATA,sha256=epz8GOHW5nGsd8eL5eBLCWSTfsO1xfwArEdB1UXWEPo,2399
+spela-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+spela-0.0.5.dist-info/top_level.txt,sha256=upH81epK3FDoZ7N7W445WEEAaHY3SwwuFeLnolckeqs,12
+spela-0.0.5.dist-info/RECORD,,
