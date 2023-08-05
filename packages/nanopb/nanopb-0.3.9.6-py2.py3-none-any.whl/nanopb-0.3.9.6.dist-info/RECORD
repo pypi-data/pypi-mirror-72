@@ -1,0 +1,15 @@
+nanopb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nanopb/generator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nanopb/generator/nanopb/options.proto,sha256=9QAVjbquSP_tvoiSaGklyMMN4Q0ByfOGGkiUSYikq60,4052
+nanopb/generator/nanopb_generator.py,sha256=TLby_6Ktzw6-UlX9_CJQOfQnXbaHcYKVWHY2dT3qM_U,71522
+nanopb/generator/proto/Makefile,sha256=tlMLsE03LBd6FK9AFnQ3PHni5M3aLp2sulz0hs9t1wE,78
+nanopb/generator/proto/__init__.py,sha256=GMoSmUNFI5zpC0wpAwtWGWqM4-xfoAyD5RvwjlZIvcM,654
+nanopb/generator/proto/google/protobuf/descriptor.proto,sha256=IIOv78muIIvJzKK_P-fRwywfyQ1GLX4MSMN72QwFRbE,36277
+nanopb/generator/proto/nanopb.proto,sha256=FJRWEbIahvN6XnvrtK-j4yydBEJJEsRhMr74MwII1y4,3989
+nanopb/generator/proto/plugin.proto,sha256=dJK-CG_0Q3dFc1OencS4W7zxBxu50wS7Q56lSSQUOe8,7621
+nanopb/generator/protoc-gen-nanopb,sha256=FJ_sfE4XqASeWJ8TpT2VEPkPqjLNOPJsJCgHypS739g,467
+nanopb/generator/protoc-gen-nanopb.bat,sha256=HJJVaJBtRC4SfeOti68yiHhFUT7WJnkFslmDlGjc6GY,446
+nanopb-0.3.9.6.dist-info/entry_points.txt,sha256=0rJVIg9rCDFO5OjrZKnVG2pA3Ls7EJ6wpVCpu6fCx0I,143
+nanopb-0.3.9.6.dist-info/WHEEL,sha256=BcHwX75L5o9y8NN94BU-O_IP_7AP-vrh-M6RWGoded0,87
+nanopb-0.3.9.6.dist-info/METADATA,sha256=cPymTjWS6_-31LlFofaB1Evf51b3QuqZdCUFLnIe4jA,4119
+nanopb-0.3.9.6.dist-info/RECORD,,
