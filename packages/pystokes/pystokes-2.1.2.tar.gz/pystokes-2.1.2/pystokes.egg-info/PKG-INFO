@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pystokes
+Version: 2.1.2
+Summary: Stokesian hydrodynamics in Python
+Home-page: https://github.com/rajeshrinet/pystokes
+Author: The PyStokes team
+Author-email: PyStokes@googlegroups.com
+License: MIT
+Description: Pystokes is a library for computing     hydrodynamic and phoretic interactions of active particles in Python
+Platform: tested on LINUX
