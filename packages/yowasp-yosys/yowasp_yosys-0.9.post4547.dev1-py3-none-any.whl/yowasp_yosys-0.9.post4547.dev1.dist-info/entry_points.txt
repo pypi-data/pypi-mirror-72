@@ -1,0 +1,3 @@
+[console_scripts]
+yowasp-yosys = yowasp_yosys:_run_yosys_argv
+
