@@ -1,0 +1,16 @@
+pycuGMRES/__init__.py,sha256=MTKWGs_iE1cSLUStn47QnmpTQXz_yZs_DrexC33To-8,14625
+pycuGMRES/CUDA C ++ sources/Fast_matvec.cuh,sha256=HIlk8yNoHx20LsS7UKYJDEAGJC2vzFt2djfOWtiiTe0,1850
+pycuGMRES/CUDA C ++ sources/GMRES.cu,sha256=w4sXjtfut6CzoVo3Cte1ZNzgziHE7gajGWoypUwDWqU,22784
+pycuGMRES/CUDA C ++ sources/GMRES.cuh,sha256=DMZZcILE4X0VAFxlseUZN5OTEiV2OpHZHcrkFLyKVJ4,22932
+pycuGMRES/CUDA C ++ sources/GMRES_kernels.cuh,sha256=VqfwzCtbditq23tOA8ogdmZDAmvz9kv8jRXcwDQYT0w,23172
+pycuGMRES/CUDA C ++ sources/GMRES_rmk.cuh,sha256=jyAsN5vLyBHWO_PMecpesqMFrVWoeVOhzniPodN6-gk,8851
+pycuGMRES/CUDA C ++ sources/TestGMRES.cu,sha256=PWAoOQrn45UDC24tdOctkz7momH3sW_GYYLFr8TAf9I,14635
+pycuGMRES/CUDA C ++ sources/TestUpdGMRES.cuh,sha256=-wrvG5QhRDb9x-Ft2t5HW5-viH5MVnq916U9PxEfnBk,8214
+pycuGMRES/CUDA C ++ sources/pycuFunctions.cuh,sha256=TIK0iHE4U9DccqWP_DUPFfKv-xTIekdN40WXvG3-bok,5595
+pycuGMRES/CUDA C ++ sources/saveGPU.cuh,sha256=rm6SMv8ZZNlJRA7Ouz_0-DaLTCrIbTlh8wVOZ1Hr4Cg,7843
+pycuGMRES/Shared object generating/compile_cpp.sh,sha256=LLoF-pWBPinYqc-HOrrg1vu3L2D1tCZrTR5SMh3AoVQ,530
+pycuGMRES-1.1.4.3.6.dist-info/LICENSE.md,sha256=sR5eT4xq5HVHj5lGDDSag8JvolZ76ikChdA-gD72mjM,1079
+pycuGMRES-1.1.4.3.6.dist-info/METADATA,sha256=6bZLwcDoXrv1Y6pYN1XuqEpFIn99tTyRsZUGdxpTSb4,1555
+pycuGMRES-1.1.4.3.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+pycuGMRES-1.1.4.3.6.dist-info/top_level.txt,sha256=2XC-JvHsBwknel-LOKGQ0J8BUFwA0lXRZLMPmxRTyRs,10
+pycuGMRES-1.1.4.3.6.dist-info/RECORD,,
