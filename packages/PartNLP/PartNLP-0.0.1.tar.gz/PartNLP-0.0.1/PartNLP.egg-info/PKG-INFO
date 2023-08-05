@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: PartNLP
+Version: 0.0.1
+Summary: Text preprocesssing
+Home-page: https://github.com/pypa/sampleproject
+Author: Mostafa Rahgouy
+Author-email: mostfarahgouy@gmail.com
+License: UNKNOWN
+Description: 
+        
+        ##############################################
+        PParser Project
+        ##############################################
+        
+        
+        Overview
+        #############
+        
+            `documentation <www.google.com>`_
+        
+            This documentation is all about *PParser* package. PParser designes to help developers to perprocessing their text automatically! Also it has many useful features that makes perprocessing more fun! However, This is not an exhaustive description but it should show you how use the package effortlessly.
+        
+        
+        Introduction
+        #############
+        PParser is an integrated package uses many famous packages. Moreover, PParser supports multi languages.
+        In the below table you can see all valid operations accomplishing by PParser and their corresponder packages.
+        
+        
+        ==============        ==============      ================================== 
+        Operations               Keyword                   Packages
+        ==============        ==============      ==================================
+        normalize               NORMALIZE                 HAZM, PARSIVAR
+        sent tokenize           S_TOKENIZE                HAZM, PARSIVAR 
+        word tokenize           W_TOKENIZE                HAZM, PARSIVAR  
+        lemmatize               LEMMATIZE                 HAZM
+        stem                    STEM                      HAZM, PARSIVAR
+        ==============        ==============      ==================================
+        
+        
+        Features
+        #############
+        This section provides a list of possible features supported by PParser. It able to:
+        
+        * Use GPU
+        * Use multi thread 
+        * Add custom stopwords
+        * Use multi processors
+        * Separate files for using GPU
+        * Remove specify range of characters
+        * Remove digits and Non-Persian letters
+        * Convert fnglish letters to persian letters
+        
+        Installation
+        #############
+        for installing, you can simpley use pip to install the package.  
+        
+        >>> pip install -i https://test.pypi.org/simple/ mPPars.
+        
+        Usage
+        #############
+        
+        In this section we are going to see the simple usage of PParser package.
+        
+        .. image:: https://gitlab.com/mostafarahgouy/pparser/-/raw/mostafa-dev/images/guideline.gif
+        
+        
+        
+        Examples
+        #############
+        
+        
+        .. image:: https://gitlab.com/mostafarahgouy/pparser/-/raw/mostafa-dev/images/guideline.gif
+        
+        
+        .. image:: https://gitlab.com/mostafarahgouy/pparser/-/blob/mostafa-dev/images/example_of_validation.png
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
