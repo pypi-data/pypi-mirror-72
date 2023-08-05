@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-nlu-hermes = rhasspynlu_hermes.__main__:main
+
