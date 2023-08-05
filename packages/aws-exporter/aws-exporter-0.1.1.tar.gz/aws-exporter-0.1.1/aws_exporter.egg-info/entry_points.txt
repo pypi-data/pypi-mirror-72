@@ -1,0 +1,3 @@
+[console_scripts]
+aws-exporter = aws_exporter.cli:main
+
