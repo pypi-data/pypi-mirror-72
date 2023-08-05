@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: thmapi
+Version: 0.9.1
+Summary: THM public API wrapper
+Home-page: https://github.com/szymex73/py-thmapi
+Author: Szymon Borecki
+Author-email: self@szymex.pw
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: chardet (<4,>=3.0.2)
+Requires-Dist: idna (<3,>=2.5)
+Requires-Dist: urllib3 (!=1.25.0,!=1.25.1,<1.26,>=1.21.1)
+Requires-Dist: certifi (>=2017.4.17)
+
+# thmapi
+[![PyPI version](https://badge.fury.io/py/thmapi.svg)](https://badge.fury.io/py/thmapi)  
+Python wrapper for TryHackMe public API
+Officially sponsored and affiliated with [TryHackMe](https://tryhackme.com/)
+
+## Installation
+```sh
+pip install thmapi
+```
+
+## Usage
+```python
+from thmapi import THM
+
+creds = {
+    'username': '<USERNAME>',
+    'password': '<PASSWORD'
+}
+
+thm = THM(credentials=creds) # Logging in is optional
+
+thm.get_stats() # {'publicRooms': 203, 'totalUsers': 88017, 'cloneableRooms': 967}
+```
+
+## Contributing
+You're welcome to create Issues/Pull Requests with features you'd want to see
+
+## License
+[MIT LICENSE](https://github.com/szymex73/py-thmapi/blob/master/LICENSE)
+
+
