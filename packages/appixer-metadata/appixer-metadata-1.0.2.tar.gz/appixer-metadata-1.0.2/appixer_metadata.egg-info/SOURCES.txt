@@ -1,0 +1,12 @@
+README.md
+setup.py
+appixer/metadata/__init__.py
+appixer/metadata/flac.py
+appixer/metadata/mp3.py
+appixer/metadata/music.py
+appixer/metadata/utils.py
+appixer_metadata.egg-info/PKG-INFO
+appixer_metadata.egg-info/SOURCES.txt
+appixer_metadata.egg-info/dependency_links.txt
+appixer_metadata.egg-info/requires.txt
+appixer_metadata.egg-info/top_level.txt
