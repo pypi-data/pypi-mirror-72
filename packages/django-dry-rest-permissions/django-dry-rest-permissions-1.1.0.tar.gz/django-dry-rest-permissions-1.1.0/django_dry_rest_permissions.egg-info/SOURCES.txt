@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+django_dry_rest_permissions.egg-info/PKG-INFO
+django_dry_rest_permissions.egg-info/SOURCES.txt
+django_dry_rest_permissions.egg-info/dependency_links.txt
+django_dry_rest_permissions.egg-info/top_level.txt
+dry_rest_permissions/__init__.py
+dry_rest_permissions/generics.py
