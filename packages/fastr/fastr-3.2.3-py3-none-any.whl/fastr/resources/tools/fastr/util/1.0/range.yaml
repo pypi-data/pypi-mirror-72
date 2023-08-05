@@ -1,0 +1,72 @@
+id: Range
+name: Range
+version: '1.0'
+description: Create a range of values until int similar to python range(x).
+authors:
+- name: Hakim Achterberg
+  email: h.achterberg@erasmusmc.nl
+  url: http://www.bigr.nl/people/HakimAchterberg
+class: Node
+command:
+  version: '1.0'
+  url: ''
+  targets:
+  - os: '*'
+    arch: '*'
+    interpreter: python
+    paths: ./bin
+    bin: range.py
+  description: "\n        python range.py --in 5\n        output = input\n    "
+  authors:
+  - name: Hakim Achterberg
+    email: h.achterberg@erasmusmc.nl
+    url: http://www.bigr.nl/people/HakimAchterberg
+interface:
+  id: Range_1.0_interface
+  class: FastrInterface
+  inputs:
+  - parent: Range_1.0_interface
+    id: value
+    name: Input integer
+    datatype: Int
+    prefix: --in
+    repeat_prefix: false
+    cardinality: 1
+    nospace: false
+    format: null
+    required: true
+    default: null
+    description: ''
+    order: 0
+    hidden: false
+    join: null
+  outputs:
+  - parent: Range_1.0_interface
+    id: result
+    name: Output image file
+    datatype: Int
+    prefix: null
+    repeat_prefix: false
+    cardinality: unknown
+    nospace: false
+    format: null
+    required: false
+    default: null
+    description: ''
+    order: 1
+    hidden: false
+    join: null
+    automatic: true
+    action: null
+    location: ^RESULT_1=(.*)$
+    separator: null
+    method: json
+    negate: false
+repository: null
+requirements: null
+tests: []
+help: "\n    RTFM! =]\n  "
+cite: None
+references: []
+tags: []
+url: null

@@ -1,0 +1,59 @@
+id: "Add"
+name: "Add two numbers"
+version: "1.0"
+description: |
+  Add two numbers together.
+authors:
+  - name: "Hakim Achterberg"
+    email: "h.achterberg@erasmusmc.nl"
+    url: "http://www.bigr.nl/people/HakimAchterberg"
+  - name: "Marcel Koek"
+    email: "m.koek@erasmusmc.nl"
+    url: "http://www.bigr.nl/people/MarcelKoek"
+command:
+  version: "1.0"
+  url: ""
+  targets:
+    - os: "*"
+      arch: "*"
+      interpreter: "python"
+      paths: "./bin"
+      bin: "add.py"
+  description: |
+    add.py value1 value2
+    output = value1 + value2
+  authors:
+    - name: "Marcel Koek"
+      email: "m.koek@erasmusmc.nl"
+      url: "http://www.bigr.nl/people/MarcelKoek"
+interface:
+  inputs:
+    - id: "left_hand"
+      name: "left hand"
+      datatype: "Number"
+      prefix: "--in1"
+      cardinality: "1-*"
+      repeat_prefix: false
+      required: true
+    - id: "right_hand"
+      name: "right hand"
+      datatype: "Number"
+      prefix: "--in2"
+      cardinality: "as:left_hand"
+      repeat_prefix: false
+      required: true
+  outputs:
+    - id: "result"
+      name: "result value"
+      datatype: "Number"
+      automatic: true
+      cardinality: "as:left_hand"
+      method: "json"
+      location: "^RESULT=(.+)$"
+      description: "The summation of left_hand and right_hand"
+requirements:
+tests:
+help: |
+  RTFM! =]
+cite:
+references:
