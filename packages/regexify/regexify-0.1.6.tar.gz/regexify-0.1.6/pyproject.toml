@@ -1,0 +1,17 @@
+[build-system]
+requires = ['flit_core >=2,<4']
+build-backend = 'flit_core.buildapi'
+
+[tool.flit.metadata]
+module = 'regexify'
+author = 'dcronkite'
+author-email = 'dcronkite+pypi@gmail.com'
+home-page = 'https://github.com/dcronkite/regexify'
+requires = []
+requires-python = '>=3.7'
+description-file = 'README.md'
+classifiers = [
+    'License :: OSI Approved :: MIT License',
+    'Development Status :: 4 - Beta',
+    'Programming Language :: Python :: 3 :: Only',
+]

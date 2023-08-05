@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: regexify
+Version: 0.1.6
+Summary: Regular expression containers and helper functions to simplify the use and deployment of regular expressions.
+Home-page: https://github.com/dcronkite/regexify
+Author: dcronkite
+Author-email: dcronkite+pypi@gmail.com
