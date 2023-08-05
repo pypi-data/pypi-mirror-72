@@ -1,0 +1,10 @@
+jsonl_to_conll/__init__.py,sha256=Y3LSfRioSl2xch70pq_ULlvyECXyEtN3krVaWeGyaxk,22
+jsonl_to_conll/cli.py,sha256=d1Xn04TNKeaGgsHzR9LplqaZwUD-GpyFmySdObnit_k,457
+jsonl_to_conll/convert.py,sha256=ANCOTnrpl3KaHr-q9NPlo6He9Oj6ZwVfqcBJePqipIA,764
+jsonl_to_conll/io.py,sha256=iDIzMsDA1R0Eel40aZmNBqH404Rupnjwdtv6EscFCIo,380
+jsonl_to_conll-1.0.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+jsonl_to_conll-1.0.2.dist-info/METADATA,sha256=ctyMwrN_3BX4X6ACKVnFwy7Z_UpUIguFSB9KoTMotI8,902
+jsonl_to_conll-1.0.2.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+jsonl_to_conll-1.0.2.dist-info/entry_points.txt,sha256=RSqRBU4M0rSF_lqO1xR2SkSxTULejY4Hji4TFx-RfmA,60
+jsonl_to_conll-1.0.2.dist-info/top_level.txt,sha256=BZPgUCQND1A-u5zIMPVMRvo82yIyMRrpDyFaK9YVVXw,15
+jsonl_to_conll-1.0.2.dist-info/RECORD,,
