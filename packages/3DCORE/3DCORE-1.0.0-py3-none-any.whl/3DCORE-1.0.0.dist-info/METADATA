@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: 3DCORE
+Version: 1.0.0
+Summary: 3D Coronal Rope Ejection Model
+Home-page: https://github.com/ajefweiss/3DCORE
+Author: Andreas J. Weiss
+Author-email: andreas.weiss@oeaw.ac.at
+License: UNKNOWN
+Keywords: astrophysics,solar physics,space weather
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Description-Content-Type: text/markdown
+Requires-Dist: heliosat
+Requires-Dist: numba
+Requires-Dist: numpy
+Requires-Dist: spiceypy
+
+3DCORE
+========
+
+3D Coronal Rope Ejection modelling techniqe for coronal mass ejection (CME) flux ropes.
+
+Installation
+------------
+
+Install the latest version manually using `git` and `pip`:
+
+    git clone https://github.com/ajefweiss/py3DCORE
+    cd 3DCORE
+    pip install .
+
