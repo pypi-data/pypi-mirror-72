@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+filebase_api/__init__.py
+filebase_api/decorators.py
+filebase_api/helpers.py
+filebase_api/templates.py
+filebase_api/templates_test.py
+filebase_api/webserver.py
+filebase_api/webservice.py
+filebase_api.egg-info/PKG-INFO
+filebase_api.egg-info/SOURCES.txt
+filebase_api.egg-info/dependency_links.txt
+filebase_api.egg-info/requires.txt
+filebase_api.egg-info/top_level.txt
