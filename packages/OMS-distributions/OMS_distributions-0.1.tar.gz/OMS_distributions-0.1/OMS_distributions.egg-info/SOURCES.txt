@@ -1,0 +1,10 @@
+setup.py
+OMS_distributions/Binomialdistribution.py
+OMS_distributions/Gaussiandistribution.py
+OMS_distributions/Generaldistribution.py
+OMS_distributions/__init__.py
+OMS_distributions.egg-info/PKG-INFO
+OMS_distributions.egg-info/SOURCES.txt
+OMS_distributions.egg-info/dependency_links.txt
+OMS_distributions.egg-info/not-zip-safe
+OMS_distributions.egg-info/top_level.txt
