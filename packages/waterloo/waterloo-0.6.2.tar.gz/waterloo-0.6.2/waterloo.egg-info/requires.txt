@@ -1,0 +1,13 @@
+megaparsy<0.2.0,>=0.1.4
+prompt-toolkit<3.1.0,>=3.0.0
+toml<0.11.0,>=0.10.0
+regex>=2020.2.20
+pydantic<1.5,>=1.4
+typing-extensions<3.8,>=3.7
+parso<0.8,>=0.7
+Inject<4.2,>=4.1
+attrs
+click
+fissix
+moreorless>=0.2.0
+volatile
