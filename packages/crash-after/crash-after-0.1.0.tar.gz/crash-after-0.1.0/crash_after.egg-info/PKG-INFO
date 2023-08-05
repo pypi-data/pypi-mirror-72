@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: crash-after
+Version: 0.1.0
+Summary: Crash decorator
+Home-page: https://github.com/zackkitzmiller/crash-after
+Author: Zack Kitzmiller
+Author-email: zackkitzmiller@gmail.com
+License: UNKNOWN
+Description: # Crash At
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
