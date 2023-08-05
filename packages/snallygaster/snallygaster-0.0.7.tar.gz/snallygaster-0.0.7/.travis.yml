@@ -1,0 +1,13 @@
+language: python
+python:
+  - "3.7"
+  - "3.8"
+  - "nightly"
+env:
+  global:
+    - RUN_ONLINETESTS=1
+install:
+  - pip install -r requirements.txt
+  - pip install pycodestyle pyflakes pylint dlint pyupgrade
+script:
+  - python3 -m unittest
