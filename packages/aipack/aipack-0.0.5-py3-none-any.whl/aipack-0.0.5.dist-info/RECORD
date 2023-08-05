@@ -1,0 +1,12 @@
+aipack/__init__.py,sha256=XyD-lAQ1eoQI3zB4HXgcaC37w8nVuG5BHBmvf0Pmzfw,30
+aipack/anchor.py,sha256=ZEbCduoWKc0juWNCxe-nFGApXYquITAa0cxLnOjXtqE,11980
+aipack/converter.py,sha256=xYYKviqgiFJhdjmI8BWlfeW4VO5S7t_AUAZ57Q3eMqM,3587
+aipack/data.py,sha256=x1Xrb4otSZPHG3eKREgsAnTE9jgDHKZSm4LC__9zwrA,7786
+aipack/model.py,sha256=_qHdCmZGq5AEnOZvBnuPKB1cGCAYtOkpFmSiXx4WHnQ,9415
+aipack/tf.py,sha256=WwdMhElgZrltatpE9ecwDjLtsfeG55YOHFjGYPBSnQA,314
+aipack/util.py,sha256=RX6e9E1JAXmuTZbj2m64IFnKNJXT9HVWfCTe_xZkJFs,1821
+aipack-0.0.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+aipack-0.0.5.dist-info/METADATA,sha256=SJI99Okvppw1QGARduDgK8T_h7k59AkJD0oR9rHPD8s,682
+aipack-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aipack-0.0.5.dist-info/top_level.txt,sha256=dVodyLNvniV1taYbgb_dulIgTJIoO17nvTmsy3f8Wk8,7
+aipack-0.0.5.dist-info/RECORD,,
