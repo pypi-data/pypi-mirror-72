@@ -1,0 +1,15 @@
+README.md
+setup.py
+fimdp/__init__.py
+fimdp/consMDP.py
+fimdp/dot.py
+fimdp/energy_solver.py
+fimdp/explicit_energy.py
+fimdp/fixpoints.py
+fimdp/mec_decomposition.py
+fimdp/safety_bound_incorrect.py
+fimdp.egg-info/PKG-INFO
+fimdp.egg-info/SOURCES.txt
+fimdp.egg-info/dependency_links.txt
+fimdp.egg-info/requires.txt
+fimdp.egg-info/top_level.txt
