@@ -1,0 +1,3 @@
+[console_scripts]
+deckset-inline = deckset_inline:main
+

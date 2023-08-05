@@ -1,0 +1,12 @@
+LICENSE
+setup.cfg
+setup.py
+src/deckset_inline/__init__.py
+src/deckset_inline/__version__.py
+src/deckset_inline/inliner.py
+src/deckset_inline.egg-info/PKG-INFO
+src/deckset_inline.egg-info/SOURCES.txt
+src/deckset_inline.egg-info/dependency_links.txt
+src/deckset_inline.egg-info/entry_points.txt
+src/deckset_inline.egg-info/top_level.txt
+test/test_all.py
