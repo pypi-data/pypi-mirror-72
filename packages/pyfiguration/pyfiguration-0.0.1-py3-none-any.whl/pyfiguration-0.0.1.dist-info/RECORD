@@ -1,0 +1,13 @@
+pyfiguration/__init__.py,sha256=uwzaoStzMqeNg_QTalEDkVBm7hDXZTOP2eQuOUBQM4M,121
+pyfiguration/cli.py,sha256=AWDsZ5zMiOhwdBKVhY3Bb8ReK2nODJugEwKHUN9ryuI,8008
+pyfiguration/configuration.py,sha256=NDRIl5eSV0yA4ZjHIX3_-8aeYjKytBf1PLErVGMhfNc,10964
+pyfiguration/pyfiguration.py,sha256=P4XYIa4AeFXc-JUDuW2S7xPfWDIxOCbJfjoED9VeY1E,11603
+pyfiguration/utils.py,sha256=kb4rFShxpOsr-8udoNFs1AIO_7TLw1ZkXn_hqaLOfSU,1673
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_utils.py,sha256=XXrLc2A6IHMMa6F_ojBRtU9EChDch198qalJmRBIXG0,572
+pyfiguration-0.0.1.dist-info/LICENCE.md,sha256=_IHFyEWiBmgh3kxiQrMrm1eIOJViDbibNL3WZE9Faik,1042
+pyfiguration-0.0.1.dist-info/METADATA,sha256=pOb32Qg-vnJvRv2H-e8CeGvke4wT5AceAcB7cDkf6ss,3808
+pyfiguration-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pyfiguration-0.0.1.dist-info/entry_points.txt,sha256=Tn71noOQ7YpRX_6CDQK4bOpmDpnl0qQX5ci314EVoF4,69
+pyfiguration-0.0.1.dist-info/top_level.txt,sha256=X86V22SeZ-NRs1GGhKxrQ6wG6TdOMp_c5hfwg991USg,19
+pyfiguration-0.0.1.dist-info/RECORD,,
