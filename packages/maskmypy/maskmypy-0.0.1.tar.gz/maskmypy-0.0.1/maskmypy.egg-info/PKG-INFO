@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: maskmypy
+Version: 0.0.1
+Summary: Geographic masking tools for spatial data anonymization
+Home-page: UNKNOWN
+Author: David Swanlund
+Author-email: david.swanlund@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: GIS
+Requires-Python: >=3.6
