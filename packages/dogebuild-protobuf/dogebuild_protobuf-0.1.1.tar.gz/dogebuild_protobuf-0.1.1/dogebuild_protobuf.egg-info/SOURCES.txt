@@ -1,0 +1,11 @@
+README.md
+setup.py
+dogebuild_protobuf/__init__.py
+dogebuild_protobuf/plugin.py
+dogebuild_protobuf.egg-info/PKG-INFO
+dogebuild_protobuf.egg-info/SOURCES.txt
+dogebuild_protobuf.egg-info/dependency_links.txt
+dogebuild_protobuf.egg-info/requires.txt
+dogebuild_protobuf.egg-info/top_level.txt
+dogebuild_protobuf/dogefile_internals/__init__.py
+dogebuild_protobuf/dogefile_internals/proto_mode.py
