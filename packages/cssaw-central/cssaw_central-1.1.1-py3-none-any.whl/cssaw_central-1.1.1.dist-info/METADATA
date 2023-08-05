@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: cssaw-central
+Version: 1.1.1
+Summary: Access Point Module to CSSAW Database
+Home-page: https://github.com/CSSAW/CSSAW_Central
+Author: Luke Williams
+Author-email: williams.luke.2001@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (==1.19.0)
+Requires-Dist: pandas (==1.0.5)
+Requires-Dist: PyMySQL (==0.9.3)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2020.1)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: SQLAlchemy (==1.3.17)
+
+# CSSAW_Central
+
+## Installation
+``` Bash
+pip install cssaw-central
+```
+
+## Usage
+
+### csvsql script
+
+The package comes with a script to automatically upload a csv file to the given table in a sql database. It takes user, pass, host IP, database, table, and cSV file path as arguments
+
+#### example
+``` Bash
+csvsql test test HOST Test test_table ./TestDocs/test.csv
+```
+
+The above example connects to the Test database using the test user and inserts the test.csv file into test_table.
+
+### Session module
+Session object acts as a wrapper for sqlalchemy connection. The connection is created and stored in the Session object at initialization, and any results can be taken from the self.conn object or, if using execute_sql(), can be taken from the returned results python list.
+
+#### Example:
+```Python
+from cssaw_central import Session
+
+sess = Session('test','test', 'localhost', db='Test')
+
+sess.create_table('test_table', ['column1', 'column2', 'column3'], \ 
+                    [int, int, int])
+
+sess.insert('test_table', ['column1', 'column2', 'column3'], [0, 1, 2])
+print(sess.execute_SQL('./queries/test.sql'))
+```
+
+The above script will create a connection to the Test database at localhost:3306 (assuming that it exists), insert the given values into their appropriate columns in test_table, and then execute test.sql from the queries file.
+
+# License
+[MPL-2.0](https://opensource.org/licenses/MPL-2.0)
+
