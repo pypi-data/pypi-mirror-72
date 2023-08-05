@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pi-team-generic-es-client
+Version: 1.1.2
+Summary: 
+License: MIT
+Author: David Diks (DDQ)
+Author-email: david.diks@mn.nl
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: certifi (>=2020.4.5,<2021.0.0)
+Requires-Dist: python-dateutil (>=2.8.1,<3.0.0)
+Requires-Dist: six (>=1.15.0,<2.0.0)
+Requires-Dist: urllib3 (>=1.25.9,<2.0.0)
