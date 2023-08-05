@@ -1,0 +1,3 @@
+[console_scripts]
+DalGenScript = DalineUnit.DalGenScript:run
+
