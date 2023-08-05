@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: littleIndian
+Version: 1.0.4
+Summary: A demo package to print the lyrics of the Little Indian song
+Home-page: https://github.com/pythoslabs/littleIndian
+Author: Pythos Labs
+Author-email: pythoslabs@gmail.com
+License: MIT
+Description: # Little Indians
+        
+        A demo project to show creation of installer for pypi
+        
+        ## Usage
+        
+        ```
+        littleindian.sing(3)
+        ```
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
