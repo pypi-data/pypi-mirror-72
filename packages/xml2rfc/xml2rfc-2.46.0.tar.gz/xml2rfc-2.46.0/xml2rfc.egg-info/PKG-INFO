@@ -1,0 +1,203 @@
+Metadata-Version: 1.2
+Name: xml2rfc
+Version: 2.46.0
+Summary: Xml2rfc generates RFCs and IETF drafts from document source in XML according to the IETF xml2rfc v2 and v3 vocabularies.
+Home-page: https://tools.ietf.org/tools/xml2rfc/trac/
+Author: Henrik Levkowetz, Josh Bothun
+Author-email: tools-discuss@ietf.org
+Maintainer: Henrik Levkowetz
+Maintainer-email: henrik@levkowetz.com
+License: BSD-3-Clause
+Download-URL: https://pypi.python.org/pypi/xml2rfc
+Description: Introduction
+        ============
+        
+        The IETF_ uses a specific format for the standards and other documents it
+        publishes as RFCs_, and for the draft documents which are produced when
+        developing documents for publications.  There exists a number of different
+        tools to facilitate the formatting of drafts and RFCs according to the
+        existing rules, and this tool, **xml2rfc**, is one of them.  It takes as input
+        an xml file which contains the text and meta-information about author names
+        etc., and transforms it into suitably formatted output.  The input xml file
+        should follow the grammars in RFC7749_ (for v2 documents) or RFC7991_ (for 
+        v3 documents). Note that the grammar for v3 is still being refined, and 
+        changes will eventually be captured in the `bis draft for 7991`_. 
+        Changes not yet captured can be seen in the xml2rfc source `v3.rng`_.
+        
+        **xml2rfc** provides a variety of output formats. See the command line
+        help for a full list of formats. It also provides conversion from v2 to
+        v3, and can run the preptool_ on its input.
+        
+        .. _IETF: https://www.ietf.org/
+        .. _RFCs: https://www.rfc-editor.org/
+        .. _RFC7749: https://tools.ietf.org/html/rfc7749
+        .. _RFC7991: https://tools.ietf.org/html/rfc7991
+        .. _bis draft for 7991: https://tools.ietf.org/html/draft-iab-rfc7991bis
+        .. _v3.rng: https://trac.tools.ietf.org/tools/xml2rfc/trac/browser/trunk/cli/xml2rfc/data/v3.rng
+        .. _preptool: https://tools.ietf.org/html/rfc7998
+        
+        Installation
+        ============
+        
+        Installation of the python package is done as usual with 'pip install xml2rfc',
+        using appropriate switches and/or sudo.
+        
+        Installation of support libraries for the PDF-formatter
+        -------------------------------------------------------
+        
+        In order to generate PDFs, xml2rfc uses the WeasyPrint module, which
+        depends on external libaries that must be installed as native packages
+        on your platform, separately from the xml2rfc install.
+        
+        First, install the Cairo, Pango, and GDK-PixBuf library files on your
+        system.  See installation instructions on the WeasyPrint Docs:
+        
+            https://weasyprint.readthedocs.io/en/stable/install.html
+        
+        (Python 3 is not needed if your system Python is 2.7, though).
+        
+        (On some OS X systems with System Integrity Protection active, you may
+        need to create a symlink from your home directory to the library installation
+        directory (often /opt/local/lib):
+        
+            ln -s /opt/local/lib ~/lib
+        
+        in order for weasyprint to find the installed cairo and pango libraries.
+        Whether this is needed or not depends on whether you used macports or homebrew
+        to install cairo and pango, and the homebrew / macport version.)
+        
+        Next, install the pycairo and weasyprint python modules using pip.
+        Depending on your system, you may need to use 'sudo' or install in
+        user-specific directories, using the --user switch.  On OS X in
+        particular, you may also need to install a newer version of setuptools
+        using --user before weasyprint can be installed.  If you install with 
+        the --user switch, you may need to also set PYTHONPATH, e.g.,
+        
+            PYTHONPATH=/Users/henrik/Library/Python/2.7/lib/python/site-packages
+        
+        for Python 2.7.
+        
+        The basic pip commands (modify as needed according to the text above)
+        are:
+        
+            pip install 'pycairo>=1.18' 'weasyprint<=0.42.3'
+        
+        With these installed and available to xml2rfc, the --pdf switch will be
+        enabled.
+        
+        For PDF output, you also need to install the Noto font set.  Download the full
+        set from https://noto-website-2.storage.googleapis.com/pkgs/Noto-unhinted.zip,
+        and install as appropriate for your platform.
+        
+        Usage
+        =====
+        
+        xml2rfc accepts a single XML document as input and outputs to one or more conversion formats.
+        
+        **Basic Usage**: ``xml2rfc SOURCE [options] FORMATS...``
+        
+        Run ``xml2rfc --help`` for a full listing of command-line options.
+        
+        
+        Changelog
+        =========
+        
+        
+        Version 2.46.0 (23 Jun 2020)
+        ------------------------------------------------
+        
+        
+          * Added <dd class='break'/> and <span class='break'/> entries in
+            additional places, as a workaround for WeasyPrint's eagerness to break
+            between <dt> and <dd>.  Fixes issue #529.
+        
+          * Tweaked the rendering of <tt> inside table cells in text mode to not 
+            use double quotes to distinguish the <tt> content from surrounding text 
+            when the only cell content is the <tt> element.
+        
+          * Modified the text rendering of table cells.  <thead> and <tfoot> now 
+            implies no special rendering (earlier, they caused a change in table border 
+            on transition) while <th> now always renders with distinct borders compared 
+            with <td>.  Also added 'light', and 'minimal' table renderings, with 
+            different table border settings when compared to the previous rendering, 
+            which now is available as 'full'.  The 'light' rendering is closer to the 
+            v2 formatter table rendering, but does not permit table cells with colspan 
+            or rowspan different from 1 to be properly distinguished.  The changes in 
+            <th> rendering fixes issue #527.
+        
+          * Added a --table-borders option with possible values 'full', 'light', 
+            'minimal', to control the table rendering of the text renderer.  The 
+            current default value is 'full', but 'light' is closer to the v2 text 
+            renderer's output.
+        
+          * Added a new internal join/indent setting to the Joiner nametuple to
+            control outdenting.  Used the outdenting setting to enable outdenting
+            for artwork wider than 69 characters in the v3 text renderer.  Fixes
+            issue #518.
+        
+          * Added missing support for @indent for <ul> in the HTML renderer, and 
+            tweaked the same for <ol>.  Fixes issue #528.
+        
+          * Corrected is_htmlblock() to not count <dt>, <dd>, and <li> as block 
+            elements as they cannot be wrapped in <div>.
+        
+          * Updated and refined the div-wrapping used to introduce additional IDs
+            to deal better with anchors on <dt>, <dd>, and <li>.  Fixes issue #530.
+        
+          * Made the CSS setting of background colour on <tt> and <code> more 
+            selective in order not to interfere with background colour in tables, for 
+            instance.
+        
+          * Removed CSS that made URLs in references not break across lines -- the 
+            drawbacks turn out to be more of a bother than the original reason not to 
+            let these wrap.
+        
+          * Did some HTML cleanup to make the w3.org validator happy.
+        
+          * Fixed a few places in the HTML renderer where an empty tag could cause 
+            an exception.
+        
+          * Added test cases for empty and double email addresses, and added
+            support for multiple email addresses within an author's address block.
+            Fixes issue #522.
+        
+        
+        
+        
+        
+        
+        
+        Version 2.45.3 (08 Jun 2020)
+        ------------------------------------------------
+        
+        
+          * Fixed an issue with rendering empty <dd/> elements.
+        
+        
+        
+        
+        
+        
+        
+        Version 2.45.2 (02 Jun 2020)
+        ------------------------------------------------
+        
+        
+          * Fixed the HTML styling of <ul spacing="compact"/> lists, which wasn't 
+            really compact.
+        
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Markup :: XML
+Classifier: License :: OSI Approved :: BSD License
