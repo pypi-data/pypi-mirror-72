@@ -1,0 +1,76 @@
+os:
+  - linux
+dist: bionic
+language: python
+
+cache:
+  pip: true
+  directories:
+    - eggs
+    - buildout-cache/downloads
+    - buildout-cache/eggs
+python:
+  - 2.7
+env:
+  - PLONE_VERSION=4
+  - PLONE_VERSION=5.1
+  - PLONE_VERSION=5.2
+
+jobs:
+  fast_finish: true
+
+services:
+  - docker
+
+before_install:
+  - pip install --upgrade pip
+  - docker pull xcgd/libreoffice:5.1
+  - docker pull xcgd/libreoffice:latest
+
+install:
+  - sudo apt update -qq -y
+  - sudo apt-get install -qq -y libfreetype6-dev liblcms2-dev make libreoffice libreoffice-script-provider-python
+  - sudo apt-get autoremove -qq -y
+  - sudo apt-get autoclean -qq -y
+  - mkdir -p buildout-cache/{eggs,downloads}
+  - mkdir $HOME/tmp
+  - chmod 777 $HOME/tmp
+  - export TMPDIR=$HOME/tmp
+  - sed -ie "s#test-5#test-$PLONE_VERSION#" travis.cfg
+  - virtualenv -p `which python` .
+  - bin/pip install -r requirements.txt
+  - python -V
+  - /usr/bin/python3 -V
+  - bin/buildout -N -c travis.cfg annotate
+  - bin/buildout -Nt 5 -c travis.cfg
+
+before_script:
+  - bin/translation-manage -c
+
+script:
+  - bin/code-analysis
+  - make startlibreoffice lo_version=5.1
+  - env USE_STREAM=True bin/test
+  - make startlibreoffice
+  - env USE_STREAM=True bin/test
+  - make stoplibreoffice
+  - /usr/bin/soffice --invisible --headless --accept="socket,host=localhost,port=2002;urp" & > /dev/null 2>&1
+  - env USE_STREAM=False bin/test
+  - env USE_STREAM=True bin/test
+
+after_success:
+  - bin/createcoverage --output-dir=parts/test/coverage
+  - bin/pip install -q coveralls
+  - bin/coveralls
+
+notifications:
+  email:
+    recipients:
+      - devs@imio.be
+    on_success: change
+    on_failure: always
+  irc:
+    channels:
+      - "irc.freenode.org#imio"
+    on_success: change
+    on_failure: always
