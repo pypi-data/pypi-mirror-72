@@ -1,0 +1,83 @@
+Metadata-Version: 1.2
+Name: kiwitcms-django-plugin
+Version: 1.1.2
+Summary: Django test runner plugin for Kiwi TCMS
+Home-page: https://github.com/kiwitcms/django-plugin
+Author: Kiwi TCMS
+Author-email: info@kiwitcms.org
+License: GPLv3
+Description: Django Test Runner plugin for Kiwi TCMS
+        =======================================
+        
+        .. image:: https://tidelift.com/badges/package/pypi/kiwitcms-django-plugin
+            :target: https://tidelift.com/subscription/pkg/kiwitcms-django-plugin?utm_source=pypi-kiwitcms-django-plugin&utm_medium=github&utm_campaign=readme
+            :alt: Tidelift
+        
+        .. image:: https://img.shields.io/twitter/follow/KiwiTCMS.svg
+            :target: https://twitter.com/KiwiTCMS
+            :alt: Kiwi TCMS on Twitter
+        
+        
+        This package provides a Django test runner that reports the test results to
+        `Kiwi TCMS <https://kiwitcms.org>`_.
+        
+        
+        Installation
+        ------------
+        
+        ::
+        
+            pip install kiwitcms-django-plugin
+        
+        
+        Configuration and environment
+        -----------------------------
+        
+        
+        Minimal config file ``~/.tcms.conf``::
+        
+            [tcms]
+            url = https://tcms.server/xml-rpc/
+            username = your-username
+            password = your-password
+        
+        For more info see `tcms-api docs <https://tcms-api.readthedocs.io>`_.
+        
+        Usage
+        -----
+        
+        In ``settings.py`` add the following::
+        
+            TEST_RUNNER = 'tcms_django_plugin.TestRunner'
+        
+        When you run ``./manage.py test`` Django looks at the ``TEST_RUNNER`` setting
+        to determine what to do.
+        
+        
+        Changelog
+        ---------
+        
+        v1.1.2 (25 June 2020)
+        ~~~~~~~~~~~~~~~~~~~~~
+        
+        - Update to tcms-api v8.4.0
+        
+        
+        v1.1.1 (25 June 2020)
+        ~~~~~~~~~~~~~~~~~~~~~
+        
+        - Initial release, thanks to Bryan Mutai
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.6
