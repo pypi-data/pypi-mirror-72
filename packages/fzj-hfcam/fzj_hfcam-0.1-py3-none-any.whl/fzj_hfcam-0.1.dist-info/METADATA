@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: fzj-hfcam
+Version: 0.1
+Summary: Virtual camera to convert point-clouds into heat-flux mappings
+Home-page: UNKNOWN
+Author: Alexander Knieps
+Author-email: a.knieps@fz-juelich.de
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numba (>=0.44.1)
+Requires-Dist: numpy (>=1.16.0)
+
+UNKNOWN
+
+
