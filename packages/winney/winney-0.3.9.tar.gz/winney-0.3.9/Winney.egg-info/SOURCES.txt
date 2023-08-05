@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+Winney.egg-info/PKG-INFO
+Winney.egg-info/SOURCES.txt
+Winney.egg-info/dependency_links.txt
+Winney.egg-info/requires.txt
+Winney.egg-info/top_level.txt
+winney/__init__.py
+winney/winney.py
+winney.egg-info/PKG-INFO
+winney.egg-info/SOURCES.txt
+winney.egg-info/dependency_links.txt
+winney.egg-info/requires.txt
+winney.egg-info/top_level.txt
