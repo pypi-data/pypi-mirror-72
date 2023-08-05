@@ -1,0 +1,3 @@
+[console_scripts]
+iospytools = iospytools.__main__:main
+
