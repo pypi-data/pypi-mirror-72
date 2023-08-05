@@ -1,0 +1,4 @@
+kfp>=0.5.1
+certifi==2019.11.28
+auth0-python==3.9.1
+Click>=7.0

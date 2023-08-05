@@ -1,0 +1,43 @@
+syntax = "proto3";
+package codegen;
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+
+message ArgoWorkflow{
+    string name = 1;
+}
+
+message GetArgoWorkflowRequest{
+    string runId = 1;
+}
+
+message GetArgoWorkflowResponse{
+    ArgoWorkflow workflow=1;
+}
+
+message GetPipelineRunIdRequest{
+    string workflowName = 1;
+}
+
+message GetPipelineRunIdResponse{
+    string runId = 1;
+}
+
+
+
+service WorkflowService {
+    rpc GetArgoWorkflow (GetArgoWorkflowRequest) returns (GetArgoWorkflowResponse){
+        option (google.api.http) = {
+            get: "/v1/workflow/pipeline/{runId}"
+      };
+    }
+
+    rpc GetPipelineRunId (GetPipelineRunIdRequest) returns (GetPipelineRunIdResponse){
+        option (google.api.http) = {
+            get: "/v1/workflow/{workflowName}/run"
+      };
+    }
+}

@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: preprocess-template
+spec:
+  templates:
+  - name: preprocess
+    inputs:
+      artifacts:
+      - name: preprocess_output_path
+        path: /tmp/inputs/input_path/data
+    outputs:
+      artifacts:
+        - name: output_path
+          path: /tmp/output.csv
+    container:
+      image:  gcr.io/hypertensor/demo:latest
+      command: ["python", "process_new_2.py"]
+      args: [
+        --input_path, "/tmp/inputs/input_path/data",
+      ]
+      env:
+        - name: KFP_POD_NAME
+          value: "{{pod.name}}"

@@ -1,0 +1,6 @@
+venv
+*.pyc
+.idea
+.tox
+*.egg-info
+dist/

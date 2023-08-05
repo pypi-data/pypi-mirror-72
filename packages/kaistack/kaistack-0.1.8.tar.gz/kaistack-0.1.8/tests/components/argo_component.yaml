@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: i5uxiiddnrxw4zi
+spec:
+  templates:
+  - container:
+      args: []
+      command:
+      - git
+      - clone
+      - --depth=1
+      - --branch
+      - '{{inputs.parameters.Branch}}'
+      - '{{inputs.parameters.Repo-URI}}'
+      - /tmp/outputs/Repo_dir/data
+      image: alpine/git
+    inputs:
+      parameters:
+      - name: Branch
+      - name: Repo-URI
+    metadata:
+      annotations:
+        pipelines.kubeflow.org/component_spec: '{"description": "Creates a shallow
+          clone of the specified repo branch", "inputs": [{"name": "Repo URI", "type":
+          "URI"}, {"default": "master", "name": "Branch", "type": "String"}], "name":
+          "Git clone", "outputs": [{"name": "Repo dir", "type": "Directory"}]}'
+    name: Git clone
+    outputs:
+      artifacts:
+      - name: repo_dir
+        path: /tmp/outputs/Repo_dir/data

@@ -1,0 +1,19 @@
+syntax = "proto3";
+package codegen;
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+message StringMessage {
+    string value = 1;
+}
+
+service ExampleService {
+    rpc Echo(StringMessage) returns (StringMessage) {
+        option (google.api.http) = {
+            post: "/v1/example/echo"
+            body: "*"
+      };
+    }
+}
