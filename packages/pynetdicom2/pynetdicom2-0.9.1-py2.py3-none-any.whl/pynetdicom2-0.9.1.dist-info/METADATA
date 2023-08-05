@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: pynetdicom2
+Version: 0.9.1
+Summary: pynetdicom2 is a pure python package implementing the DICOM network protocol
+Home-page: https://github.com/blanebf/pynetdicom2
+License: MIT
+Keywords: medical,dicom,network
+Author: Pavel 'Blane' Tuchin
+Author-email: blane.public@gmail.com
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: pydicom (<empty>)
+Requires-Dist: six
+Project-URL: Documentation, https://pynetdicom2.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/blanebf/pynetdicom2
+Description-Content-Type: text/x-rst
+
+pynetdicom2
+===========
+
+|docs|
+
+pynetdicom2 is a pure python package implementing the DICOM network protocol.
+This library is a fork/rewrite of the original pynetdicom that can be found here
+http://pynetdicom.googlecode.com. Library is not backwards compatible with
+original pynetdicom.
+
+Library is build on top of pydicom, which is used for reading/writing DICOM
+datasets. Pynetdicom2 provides implementation for commonly used DICOM services
+such as Storage, Query/Retrieve, Verification, etc.
+
+DICOM is a standard (http://medical.nema.org) for communicating medical images
+and related information such as reports and radiotherapy objects.
+
+Roadmap
+=======
+
+* Documentation should really be improved (proper tutorial, some examples)
+* Better test suit (some necessary unit tests and integration tests are
+  missing)
+* Stability and performance improvements. In its current state library performs
+  'good enough', but certainly there is still room for improvement.
+
+.. |docs| image:: https://readthedocs.org/projects/pynetdicom2/badge/?version=latest
+    :alt: Documentation Status
+    :scale: 100%
+    :target: http://pynetdicom2.readthedocs.org/en/latest/
