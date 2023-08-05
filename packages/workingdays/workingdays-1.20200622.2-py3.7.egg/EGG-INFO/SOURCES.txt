@@ -1,0 +1,17 @@
+MANIFEST.in
+__init__.py
+setup.py
+workingdays/__init__.py
+workingdays/_version.py
+workingdays/date_utilities.py
+workingdays.egg-info/PKG-INFO
+workingdays.egg-info/SOURCES.txt
+workingdays.egg-info/dependency_links.txt
+workingdays.egg-info/not-zip-safe
+workingdays.egg-info/top_level.txt
+workingdays/tests/__init__.py
+workingdays/tests/_test_setup.py
+workingdays/tests/test_workingdays.py
+workingdays/tests/__pycache__/__init__.cpython-37.pyc
+workingdays/tests/__pycache__/_test_setup.cpython-37.pyc
+workingdays/tests/__pycache__/testSetup.cpython-37.pyc
