@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+azure_multiapi_storage.egg-info/PKG-INFO
+azure_multiapi_storage.egg-info/SOURCES.txt
+azure_multiapi_storage.egg-info/dependency_links.txt
+azure_multiapi_storage.egg-info/not-zip-safe
+azure_multiapi_storage.egg-info/requires.txt
+azure_multiapi_storage.egg-info/top_level.txt
