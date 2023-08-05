@@ -1,0 +1,250 @@
+The File Provider
+=================
+
+The file provider lets the user test a Python SDK tool independent of
+Alteryx Designer.
+
+Installation
+------------
+
+Perform the steps below to get your environment set up correctly: 1.
+Activate the base virtual environment 2. Run
+``pip install /path/to/ayx-python-sdk/gitrepo``
+
+The -e flag (i.e. ``pip install -e/path/to/ayx-python-sdk/gitrepo``)
+installs in editable mode so that changes made to the repo are
+automatically reflected.
+
+Input File Formats
+------------------
+
+The file provider needs 4 kinds of input files to run.
+
+Tool configuration file
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The tool configuration file contains user input information. In
+Designer, this information would normally be chosen through the SDK's
+UI, but in the file provider these values are set in this configuration
+file. An empty configuration file just contains a ``Configuration`` tag,
+and a configuration file with user input will have a tag corresponding
+to each value that a user sets. An example tool configuration file can
+be found
+`here <https://git.alteryx.com/extensibility/ayx-python-sdk/-/blob/master/tests/file_provider/assets/ToolConfig.xml>`__.
+
+Workflow configuration file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Each kind of `example
+tool <https://git.alteryx.com/extensibility/ayx-python-sdk/-/tree/master/ayx_plugin_sdk%2Fexamples>`__
+has it's own XML configuration file. It contains tool information such
+as name, description, input anchors, and output anchors. The input and
+output anchor information is found under the ``InputConnections`` and
+``OutputConnections`` tags respectively. Each ``Connection`` corresponds
+to one anchor. If the ``AllowMultiple`` flag is ``True`` then there can
+be multiple connections attached to that anchor.
+
+Metadata file
+~~~~~~~~~~~~~
+
+The metadata XML file contains information about each field of the
+incoming data. Each field must have a ``name``, ``size``, and ``type``.
+``name`` is the field name, ``size`` is the size of each piece of data
+in that field, and ``type`` is the type of each piece of data in that
+field. ``type`` must correspond to one of the values in the
+``FieldType`` Enum. An example metadata file can be found
+`here <https://git.alteryx.com/extensibility/ayx-python-sdk/-/blob/master/tests/file_provider/assets/RecordMetadata.xml>`__.
+
+Record file
+~~~~~~~~~~~
+
+The record CSV file contains all of the record information. It looks
+like a CSV file that Designer might use as input. It's first row should
+contain field names corresponding to the name of each field in the
+metadata file. The rest of the rows should contain the record data. An
+example record file can be found
+`here <https://git.alteryx.com/extensibility/ayx-python-sdk/-/blob/master/tests/file_provider/assets/TestInput.csv>`__.
+
+Running the file provider
+-------------------------
+
+The file provider is run from a command line argument. The only argument
+the user must pass in is a path to a JSON file with the following
+format: 1. tool: This is a dictionary with 2 keys: ``plugin`` and
+``path``. ``plugin`` contains a string corresponding to the class plugin
+name and ``path`` contains a string corresponding to the folder that
+contains the plugin i.e.
+``{"plugin": "Example", "path": "path/to/ExampleFolder"}`` 2.
+tool\_config: This is a string corresponding to the absolute path of the
+tool's configuration file i.e. ``path/to/ExampleToolConfig.xml`` 3.
+workflow\_config: This is a string corresponding to the absolute path of
+the workflow's configuration file i.e.
+``path/to/ExampleWorkflowConfig.xml`` 4. inputs: This is a list of
+dictionaries that contain information about the tool's input
+connections. It is optional since not all tools have input. The user
+should specify input information for each input connection that is
+associated with this tool. Each input dictionary has 3 keys:
+``anchor_name``, ``records``, and ``metadata``. ``anchor_name`` contains
+a string corresponding to the name of the input connection's anchor,
+which has to match an input anchor name from the associated
+configuration file. ``records`` contains a string corresponding to the
+absolute path of the input connection's record file, and ``metadata``
+contains a string corresponding to the absolute path of the input
+connection's metadata file i.e.
+``{"anchor_name": "AnchorName", "records": "path/to/InputRecords.csv", "metadata": "path/to/InputMetadata.xml"}``
+5. outputs: This is a list of dictionaries that specify where the tool's
+output anchor information should be stored. It is optional since not all
+tools have output. The user should specify output information for each
+output anchor that is associated with this tool. Each output dictionary
+has 3 keys: ``anchor_name``, ``records``, and ``metadata``.
+``anchor_name`` contains a string corresponding to the name of the
+output anchor, which has to match an output anchor name from the
+associated configuration file. ``records`` contains a string
+corresponding to the absolute path of where the output anchor record
+information should be stored, and ``metadata`` contains a string
+corresponding to the absolute path of where the output anchor's metadata
+file should be stored i.e.
+``{"anchor_name": "AnchorName", "records": "path/to/OutputRecords.csv", "metadata": "path/to/OutputMetadata.xml"}``
+6. update\_tool\_config: This is an optional path to the updated tool
+configuration file. If the tool's configuration changes as the plugin is
+running, then the tool configuration file must be updated and sent to an
+output configuration file. This specifies where the updated
+configuration file should be stored.
+
+Command line options
+~~~~~~~~~~~~~~~~~~~~
+
+-  ``ayx_plugin_sdk run --tool path\to\InputInfo.json``
+-  ``python -m ayx_plugin_sdk run --tool path\to\InputInfo.json``
+-  In ayx\_plugin\_sdk folder:
+   ``python __main__.py run --tool path\to\InputInfo.json``
+
+JSON file format for tools with input anchors, input connections, and output anchors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This would be an input JSON file for a tool with two input anchors,
+where the first input anchor has two input connections connected to it
+and the second input anchor has one input connection connected to it.
+The tool also has two output anchors. Each output anchor always has one
+output file associated with it. This must correspond with the anchor
+information in ``WorkflowConfig.xml``. Note that in JSON, backslashes
+have to be escaped for any absolute file paths.
+
+.. code:: JSON
+
+    {
+      "tool":{
+        "plugin":"ComplexExample",
+        "path":"examples/ComplexExample"
+      },
+      "tool_config":"path/to/ToolConfig.xml",
+      "workflow_config":"path/to/WorkflowConfig.xml",
+      "inputs":[
+        {
+          "anchor_name":"Input1",
+          "records":"path/to/Input11Records.csv",
+          "metadata":"path/to/Input11Metadata.xml"
+        },
+        {
+          "anchor_name":"Input1",
+          "records":"path/to/Input12Records.csv",
+          "metadata":"path/to/Input12Metadata.xml"
+        },
+        {
+          "anchor_name":"Input2",
+          "records":"path/to/Input2Records.csv",
+          "metadata":"path/to/Input2Metadata.xml"
+        }
+      ],
+      "outputs":[
+        {
+          "anchor_name":"Output1",
+          "records":"path/to/Output1Records.csv",
+          "metadata":"path/to/Output1Metadata.xml"
+        },
+        {
+          "anchor_name":"Output2",
+          "records":"path/to/Output2Records.csv",
+          "metadata":"path/to/Output2Metadata.xml"
+        }
+      ]
+    }
+
+JSON file format for an output tool
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+An output tool should have one input anchor and no output anchors.
+
+.. code:: JSON
+
+    {
+      "tool":{
+        "plugin":"OutputExample",
+        "path":"examples/OutputExample"
+      },
+      "tool_config":"path/to/ToolConfig.xml",
+      "workflow_config":"path/to/WorkflowConfig.xml",
+      "inputs":[
+        {
+          "anchor_name":"Input",
+          "records":"path/to/InputRecords.csv",
+          "metadata":"path/to/InputMetadata.xml"
+        }
+      ]
+    }
+
+JSON file format for an input tool
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+An input tool should have one output anchor and no input anchors.
+
+.. code:: JSON
+
+    {
+      "tool":{
+        "plugin":"InputExample",
+        "path":"examples/InputExample"
+      },
+      "tool_config":"path/to/ToolConfig.xml",
+      "workflow_config":"path/to/WorkflowConfig.xml",
+      "outputs":[
+        {
+          "anchor_name":"Output",
+          "records":"path/to/OutputRecords.csv",
+          "metadata":"path/to/OutputMetadata.xml"
+        }
+      ]
+    }
+
+JSON file format with an updated tool configuration file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This tool has one input anchor and one output anchor. It also specifies
+where an updated tool configuration file should go.
+
+.. code:: JSON
+
+    {
+      "tool":{
+        "plugin":"InputExample",
+        "path":"examples/InputExample"
+      },
+      "tool_config":"path/to/ToolConfig.xml",
+      "workflow_config":"path/to/WorkflowConfig.xml",
+        "inputs":[
+        {
+          "anchor_name":"Input",
+          "records":"path/to/InputRecords.csv",
+          "metadata":"path/to/InputMetadata.xml"
+        }
+      ],
+      "outputs":[
+        {
+          "anchor_name":"Output",
+          "records":"path/to/OutputRecords.csv",
+          "metadata":"path/to/OutputMetadata.xml"
+        }
+      ],
+      "update_tool_config":"path/to/OutputToolConfig.xml"
+    }
+

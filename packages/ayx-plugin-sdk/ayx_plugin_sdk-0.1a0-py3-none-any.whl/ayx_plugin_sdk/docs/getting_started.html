@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started Guide &mdash; ayx_plugin_sdk 2020.3 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lifecycle of a Plugin" href="plugin_lifecycle.html" />
+    <link rel="prev" title="ayx_plugin_sdk.providers.file_provider package" href="ayx_plugin_sdk.providers.file_provider.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ayx_plugin_sdk
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2020.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="modules.html">ayx_plugin_sdk</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-the-development-environment">Setting Up the Development Environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-the-virtual-environment">Creating the Virtual Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-package">Install the Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-the-ayx-plugin-workspace">Create the <em>Ayx Plugin Workspace</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-workspace-configurations">The Workspace Configurations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-the-ayx-plugin-tool">Build the <em>Ayx Plugin Tool</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#removing-tools-from-designer">Removing Tools from Designer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-your-production-installer">Create your Production Installer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ayx-plugin-tool-execution-in-designer"><em>Ayx Plugin Tool</em> Execution in Designer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-configuration-panel-gui">The Configuration Panel GUI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#glossary">Glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugin_lifecycle.html">Lifecycle of a Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin_code.html">The Plugin Tool Execution Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config_xml.html">The <em>Tool Configurations</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="file_provider.html">The File Provider</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differences_with_original_sdk.html">Differences Between the New and Old Python SDKs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ayx_plugin_sdk</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Getting Started Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/getting_started.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started-guide">
+<h1>Getting Started Guide<a class="headerlink" href="#getting-started-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>To get started with the Alteryx Core SDK, You must have a valid
+installation of <a class="reference external" href="https://www.alteryx.com/">Alteryx Designer</a>.</p>
+<p>Python version 3.6.8 is required for Alteryx Designer plugins.</p>
+</div>
+<div class="section" id="setting-up-the-development-environment">
+<h2>Setting Up the Development Environment<a class="headerlink" href="#setting-up-the-development-environment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creating-the-virtual-environment">
+<h3>Creating the Virtual Environment<a class="headerlink" href="#creating-the-virtual-environment" title="Permalink to this headline">¶</a></h3>
+<p>To get started, install
+<a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda3</a> for your
+system. Once that is done, open an Anaconda Prompt and create a new
+virtual environment:</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">ayx_plugin_sdk</span> <span class="pre">python=3.6.8</span></code></p>
+<p>Then you can activate it:</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">ayx_plugin_sdk</span></code></p>
+<p>If you are unfamiliar with Anaconda/Miniconda, check out their
+<a class="reference external" href="https://docs.anaconda.com/anaconda/user-guide/getting-started/">docs</a>.</p>
+</div>
+<div class="section" id="install-the-package">
+<h3>Install the Package<a class="headerlink" href="#install-the-package" title="Permalink to this headline">¶</a></h3>
+<p>After creating and activating your virtual environment, pip install the
+Alteryx Core SDK pip package.</p>
+<p>For more information on pip see the <a class="reference external" href="https://pypi.org/">pip website</a></p>
+<p>Use the following command to install the sdk:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ayx_plugin_sdk</span></code></p>
+</div>
+<div class="section" id="create-the-ayx-plugin-workspace">
+<h3>Create the <em>Ayx Plugin Workspace</em><a class="headerlink" href="#create-the-ayx-plugin-workspace" title="Permalink to this headline">¶</a></h3>
+<p>Now that the Alteryx Python SDK is installed in your virtual environment
+packages, we’ll create a new <cite>Plugin Tool Workspace*
+with default files ready to go. To create a new tool, use the
+``create-ayx-plugin`</cite> command.</p>
+<dl class="simple">
+<dt>The command takes the following parameters:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--name</span></code> (REQUIRED) The name of the new Plugin Tool</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--workspace-directory</span></code> The directory to create the Plugin Workspace</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--tool-type</span></code> The type of tool to create. See the Example Tools for more information.</p></li>
+</ul>
+</dd>
+</dl>
+<p>For this example we’ll call our new tool <code class="docutils literal notranslate"><span class="pre">MyFirstTool</span></code> and we’ll
+specify the default directory to <code class="docutils literal notranslate"><span class="pre">./tools</span></code> for the Ayx Plugin
+Workspace, and we’ll use the <code class="docutils literal notranslate"><span class="pre">--tool-type</span> <span class="pre">passthrough</span></code>
+parameter to create the new tool with default Input and Output Anchors.</p>
+<p>Use the following command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ayx_plugin_sdk</span> <span class="pre">create-ayx-plugin</span> <span class="pre">--name</span> <span class="pre">MyFirstTool</span> <span class="pre">--tool-type</span> <span class="pre">passthrough</span> <span class="pre">--workspace-directory</span> <span class="pre">tools</span></code></p>
+</div>
+<div class="section" id="the-workspace-configurations">
+<h3>The Workspace Configurations<a class="headerlink" href="#the-workspace-configurations" title="Permalink to this headline">¶</a></h3>
+<p>When a workspace is created, a <code class="docutils literal notranslate"><span class="pre">ayx_workspace.json</span></code> file is
+generated inside of your workspace directory. This file tracks metadata
+related to your workspace. By default you do not need to worry about
+this file because it is managed and updated by the CLI commands. For
+more advanced workspace users there is customization within the
+<code class="docutils literal notranslate"><span class="pre">ayx_workspace.json</span></code> file that may be useful.</p>
+<p>Below is the structure of the configuration file:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;tools&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;yxi_name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;designer_path&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;tool_family_name&quot;</span><span class="p">:</span> <span class="s2">&quot;MyTools&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;requirements_tool&quot;</span><span class="p">:</span> <span class="kc">null</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Below are descriptions of each field:</p>
+<p><code class="docutils literal notranslate"><span class="pre">tools</span></code>: A list of <code class="docutils literal notranslate"><span class="pre">WorkspaceTool</span></code> objects associated with the
+project.</p>
+<p>Each <code class="docutils literal notranslate"><span class="pre">WorkspaceTool</span></code> object contains a name denoting the name of the
+tool and looks like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">name:</span> <span class="pre">&quot;MyFirstTool&quot;</span> <span class="pre">}</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">yxi_name</span></code>: The name of the YXI installer created by the <code class="docutils literal notranslate"><span class="pre">create-yxi</span></code>
+command.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">yxi_name</span></code> can include the absolute path to place the yxi file,
+however the path must exist.</p>
+<p><code class="docutils literal notranslate"><span class="pre">designer_path</span></code>: This field can be changed to a string to the path of
+your designer installation.</p>
+<p>If you picked the default User/Admin installation location when you
+installed Alteryx Designer, you do not need to worry about populating
+that field; the CLI commands will automatically find the default paths
+for you.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">tool_family_name</span></code> will be used to create the virtual environment and link the
+virtual environment to your tools via the tool’s
+<code class="docutils literal notranslate"><span class="pre">{tool_name}Config.xml</span></code> file created in each Ayx Plugin Tool
+directory.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">requirements_tool</span></code> is used to tell the workspace what tool
+directory to put the pip wheels and requirements file in. Designer looks
+for these wheels and requirements when installing yxi files and linking
+your tool’s pip dependencies. Generally you shouldn’t need to modify the
+requirements_tool unless there is a particular Ayx Plugin Tool that you
+want to use for the wheels and requirements. If you delete the
+requirements_tool using the <code class="docutils literal notranslate"><span class="pre">delete-ayx-plugin</span></code> command, the cli will
+automatically update the requirements_tool for you.</p>
+</div>
+<div class="section" id="build-the-ayx-plugin-tool">
+<h3>Build the <em>Ayx Plugin Tool</em><a class="headerlink" href="#build-the-ayx-plugin-tool" title="Permalink to this headline">¶</a></h3>
+<p>Now you will have a new folder in your current directory called
+<code class="docutils literal notranslate"><span class="pre">tools</span></code> with a sub-directory named <code class="docutils literal notranslate"><span class="pre">MyFirstTool</span></code>. The Tools
+directory is your Ayx Plugin Workspace and is the top
+level directory for all of the tools in your YXI
+installer package. The <code class="docutils literal notranslate"><span class="pre">MyFirstTool</span></code> sub-directory is your Ayx
+Plugin Tool directory. This is where all of the files
+necessary for Alteryx Designer to integrate with your plugin reside.</p>
+<p>Next we’re going to build your new Ayx Plugin Tool
+into Designer, where you can drag it onto the canvas and connect it to
+other Designer Tools. To build <code class="docutils literal notranslate"><span class="pre">MyFirstTool</span></code> into the Designer
+application use the <code class="docutils literal notranslate"><span class="pre">designer-build</span></code> command.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">designer-build</span></code> command has the following parameters: -
+<code class="docutils literal notranslate"><span class="pre">--workspace-directory</span></code> - The Ayx Plugin Workspace
+directory. - <code class="docutils literal notranslate"><span class="pre">--clean</span></code> - removes any previous build files for this
+plugin. If you chose the default install location, you do not need to
+use this parameter. - <code class="docutils literal notranslate"><span class="pre">--force</span></code> - Flag that forces the conda virtual
+environment for the Ayx Plugin Tool to be rebuilt. By default, the
+<code class="docutils literal notranslate"><span class="pre">designer-build</span></code> will automatically check for updates to the
+environment and rebuild if there are changes.</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">--help</span></code> flag for help using the command.</p>
+<p>For this command, we’re going to set the following flag: -
+<code class="docutils literal notranslate"><span class="pre">--workspace-directory</span> <span class="pre">tools</span></code> - points to the tools folder.</p>
+<p>Use this command to build MyFirstTool into Designer:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ayx_plugin_sdk</span> <span class="pre">designer-build</span> <span class="pre">--workspace-directory</span> <span class="pre">tools</span></code></p>
+<p><strong>Congratulations!</strong></p>
+<p>You just created your first Alteryx Plugin Tool!</p>
+<p>You can now open Alteryx Designer and find your new tool in the Tool
+Palette.</p>
+</div>
+<div class="section" id="removing-tools-from-designer">
+<h3>Removing Tools from Designer<a class="headerlink" href="#removing-tools-from-designer" title="Permalink to this headline">¶</a></h3>
+<p>You may create a tool that you did not intend to create or you may have
+old tools that you are no longer using. When you want to remove a tool
+from your workspace or designer there are a couple of methods available
+through the CLI.</p>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">delete-ayx-plugin</span></code> command to remove a tool from both
+your <em>Ayx Plugin Workspace</em> and your Designer Installation.</p>
+<p>The following are the arguments for the <code class="docutils literal notranslate"><span class="pre">delete-ayx-plugin</span></code> command: -
+<code class="docutils literal notranslate"><span class="pre">--name</span></code> - The name of the tool to be deleted. -
+<code class="docutils literal notranslate"><span class="pre">--workspace-directory</span></code> - The <em>Ayx Plugin Workspace</em> directory</p>
+<p>You can also use the <code class="docutils literal notranslate"><span class="pre">--clean</span></code> flag in the <code class="docutils literal notranslate"><span class="pre">designer-build</span></code> to
+uninstall all of your tools and your <em>Tool Family</em> before rebuilding
+them back into designer. That flag is useful if a tool or environment
+has been corrupted for any reason.</p>
+</div>
+<div class="section" id="create-your-production-installer">
+<h3>Create your Production Installer<a class="headerlink" href="#create-your-production-installer" title="Permalink to this headline">¶</a></h3>
+<p>After you have finished implementing and testing your new <em>Ayx Plugin
+Tool</em> you may want to distribute it to others. In order to do this, you
+must create a YXI installer. The Core SDK CLI provides a
+command for packaging your workspace and tools into an installer.</p>
+<p>Run the <code class="docutils literal notranslate"><span class="pre">create-yxi</span></code> command you’ll have a YXI
+installer ready for distribution.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">create-yxi</span></code> command takes the following arguments: -
+<code class="docutils literal notranslate"><span class="pre">--workspace-directory</span></code> - The <em>Ayx Plugin Workspace</em> directory. -
+<code class="docutils literal notranslate"><span class="pre">--yxi-name</span></code> - The name of the yxi installer produced (can also
+include a path to another location, as long as the directory exists.)</p>
+<p>After you run the <code class="docutils literal notranslate"><span class="pre">create-yxi</span></code> command you will have <code class="docutils literal notranslate"><span class="pre">.yxi</span></code> file
+available for distribution. By default, the name of the yxi produced is
+based on the <em>Ayx Plugin Workspace</em> directory name but the default can
+be overridden using either the <code class="docutils literal notranslate"><span class="pre">--yxi-name</span></code> flag or by modifying the
+<code class="docutils literal notranslate"><span class="pre">yxi_name</span></code> field in the <code class="docutils literal notranslate"><span class="pre">ayx_workspace.json</span></code> file. (See the
+Workspace Configurations section for details)</p>
+</div>
+<div class="section" id="ayx-plugin-tool-execution-in-designer">
+<h3><em>Ayx Plugin Tool</em> Execution in Designer<a class="headerlink" href="#ayx-plugin-tool-execution-in-designer" title="Permalink to this headline">¶</a></h3>
+<p>When Designer runs a tool, it must look for an engine to use. In the
+case of our MyFirstTool Python tool, the engine is itself the <strong>python
+interpreter</strong>. The interpreter is built out of Anaconda and includes all
+of the packages indicated in the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>.</p>
+<p>The <em>ToolFamily</em> defined in the Config.xml within the <em>Ayx Plugin
+Workspace</em> defines the name of the virtual environment created for all
+of your <em>Ayx Plugin Tools</em>. By default, a <em>ToolFamily</em> is set up for
+your <em>Ayx Plugin Workspace</em> for all of your tools to use. You can use
+the <code class="docutils literal notranslate"><span class="pre">--standalone-plugin</span></code> flag with the <code class="docutils literal notranslate"><span class="pre">create-ayx-plugin</span></code> command
+to create a standalone virtual environment specific to the tool. This is
+not recommended, particularly if you have multiple tools in your
+workspace and will increase your build time significantly.</p>
+<p>The YXI installation package includes all of the
+interpreter information so the python interpreter can be re-created on
+any machine when the tools are installed.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">EngineDLLEntryPoint</span></code> within the Config.xml points to the file
+that contains a class definition which inherits from <code class="docutils literal notranslate"><span class="pre">Plugin</span></code>. This
+file can be changed at any time to any python file so long as it
+contains a <code class="docutils literal notranslate"><span class="pre">Plugin</span></code> class that registers with the Alteryx Core SDK.</p>
+<p>For a detailed explanation of the Config.xml file, see the
+Configuration XML Page.</p>
+<p>For information on the <code class="docutils literal notranslate"><span class="pre">main.py</span></code> file within your <em>Ayx Plugin Tool</em>,
+see the Plugin Code Overview Page.</p>
+</div>
+<div class="section" id="the-configuration-panel-gui">
+<h3>The Configuration Panel GUI<a class="headerlink" href="#the-configuration-panel-gui" title="Permalink to this headline">¶</a></h3>
+<p>The Alteryx Core SDK examples provide basic Configuration Panel GUIs
+however the Core SDK <strong>only</strong> executes the engine (the python side of
+the code). Therefore this Getting Started guide will not cover Alteryx
+UI development. For more information on Configuration Panel GUI
+development, see <a class="reference external" href="https://ayx-ui.pages.git.alteryx.com/ayx-ui/">Core UI Documenation</a>.</p>
+<p><strong>Take Aways:</strong></p>
+<p>If you have come to this guide looking for help on Alteryx GUI
+development, then in the famous words of Obi-wan,
+<code class="docutils literal notranslate"><span class="pre">&quot;These</span> <span class="pre">are</span> <span class="pre">not</span> <span class="pre">the</span> <span class="pre">droids</span> <span class="pre">you're</span> <span class="pre">looking</span> <span class="pre">for.&quot;</span></code></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Ayx</span> <span class="pre">Plugin</span> <span class="pre">Workspace</span></code> - <em>YXI</em> development workspace with
+sub-directories for individual <em>Ayx Plugin Tools</em> and plugin tool
+files. The Ayx Plugin Workspace is also used in creating the <em>YXI</em>
+installer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ayx</span> <span class="pre">Plugin</span> <span class="pre">Tool</span></code> - An Alteryx Designer Custom Tool built on the
+Alteryx Core SDK.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">YXI</span></code> - Packaging file and directory system for <em>Ayx Plugin Tools</em>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Tool</span> <span class="pre">Configuration</span></code> - XML configuration file used by both the
+Alteryx Core SDK and Alteryx Designer to read metadata regarding the
+structure of the <em>Ayx Plugin Tool</em>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Tool</span> <span class="pre">Family</span></code> - Shared resources for all <em>Ayx Plugin Tools</em> within
+an <em>Ayx Plugin Workspace</em>. Tool Families define the name of the
+Virtual Environment, indicates to Designer what virtual environmnet
+interpreter to run for the <em>Ayx Plugin Tool</em>, and contains the pip
+installed pip packages defined in the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="plugin_lifecycle.html" class="btn btn-neutral float-right" title="Lifecycle of a Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ayx_plugin_sdk.providers.file_provider.html" class="btn btn-neutral float-left" title="ayx_plugin_sdk.providers.file_provider package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Alteryx, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

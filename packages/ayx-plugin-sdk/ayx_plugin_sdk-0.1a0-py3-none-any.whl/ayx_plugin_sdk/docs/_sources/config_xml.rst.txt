@@ -1,0 +1,55 @@
+The *Tool Configurations*
+-------------------------
+
+When creating new *Ayx Plugin Tools* through the Core SDK CLI, the *Tool
+Configurations* are set up to place new tools in ``SDK Examples``. You
+likely don't want your new tools to live within that category in
+Designer. In order to modify Designer's interactions with your tools,
+you must change the *Tool Configuration* XML file. Within an *Ayx Plugin
+Tool* directory, you can view and modify these settings in the
+``{tool_name}Config.xml`` file. Designer requires the \`\`
+
+The following are permissible xml tags and explanations:
+
+	* ``<AlteryxJavaScriptPlugin>`` - Wrapper around Alteryx Plugins built in HTML/JS.
+	* ``<EngineSettings>`` - Settings indicating how to run the underlying tool engine (in this case written in python)
+		- ``EngineDll`` - The type of engine to use. i.e. python.
+		- ``EngineDllEntryPoint`` - Entry point file to the python engine. In the
+			case of the example tools, they point to main.py. Any python file can be
+			the entry point so long as it implements the core plugin and registers
+			itself.
+		- ``SDKVersion`` - Version of the AlteryxPythonSDK (?)
+		- ``ToolFamily`` - The Tool Family this plugin belongs to.
+	* ``<GuiSettings>`` - The Settings for the Configuration Panel GUI
+		- ``Html`` - The html file to render in the Configuration Panel.
+		- ``Icon`` - Points to the Icon File to use for the Ayx Plugin Tool in Designer.
+		- ``SDKVersion`` - Version of GUI SDK (?)
+	* ``<InputConnections>`` - Input **Anchors** for the Ayx Plugin Tool
+		- ``<Connection>`` - An individual **Anchor** attached to the tool.
+		- ``Name`` - Name of the Input Anchor. This name is referenced in the Alteryx Core SDK to look up **Anchors** for receiving and setting data.
+		- ``AllowMultiple`` - Flag indicating whether multiple connections can be fed in to this **Anchor**.
+		- ``Optional`` - Flag indicating whether a connection to/from this anchor is required for the Ayx Plugin Tool to run.
+		- ``Type`` - Indicates what type of **Anchor** it is (?). Typically this is ``Connection``.
+		- ``Label`` - A 1-character label placed on the **Anchor** when the tool is placed in Alteryx Designer.
+	* ``<OutputConnections>`` - Output **Anchors** for the Ayx Plugin Tool
+	* ``<Properties>`` - Properties of the Ayx Plugin Tool used by Alteryx Designer.
+	* ``<MetaInfo>`` - General Information about the Ayx Plugin Tool used by Alteryx Designer.
+	* ``<Name>`` - The name of the tool as it should appear in Alteryx Designer.
+	* ``<Description>`` - Description that appears when the tool is clicked in Alteryx Designer.
+	* ``<ToolVersion>`` - The version of the Ayx Plugin Tool. This version is managed by the developer but consumed in Alteryx Designer as well.
+	* ``<CategoryName>`` - Indicates to Alteryx Designer what tool category to use, such as ``SDK Examples``.
+	* ``<SearchTags>`` - comma-separated list of descriptive words used in the search bar in Alteryx Designer.
+	* ``<Author>`` - That's you! =D
+	* ``<Company>`` - The name of the Company (can be left blank)
+	* ``<Copyright>`` - Year of tool copyright.
+
+**Take Aways:**
+
+The ``<EngineSettings>`` and ``<GuiSettings>`` are used by both Alteryx
+Designer and the Alteryx Core SDK to generate the anchors and
+connections necessary to feed in and push out data from your Ayx
+Plugin Tool when Designer executes
+the tools engine via the **Run** command.
+
+The ``<Properties>`` are used **only** by Alteryx Designer for the
+aesthetics of the tool.
