@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.ja.rst
+README.rst
+setup.cfg
+setup.py
+suji/__init__.py
+suji/accumulator.py
+suji/char.py
+suji/converter.py
+suji/kansuji.py
+suji.egg-info/PKG-INFO
+suji.egg-info/SOURCES.txt
+suji.egg-info/dependency_links.txt
+suji.egg-info/top_level.txt
