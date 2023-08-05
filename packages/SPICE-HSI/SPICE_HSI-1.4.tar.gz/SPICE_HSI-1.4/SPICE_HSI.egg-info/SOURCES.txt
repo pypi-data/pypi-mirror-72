@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+SPICE/QPP.py
+SPICE/SPICE.py
+SPICE/__init__.py
+SPICE/util/__init__.py
+SPICE/util/loadmat.py
+SPICE_HSI.egg-info/PKG-INFO
+SPICE_HSI.egg-info/SOURCES.txt
+SPICE_HSI.egg-info/dependency_links.txt
+SPICE_HSI.egg-info/requires.txt
+SPICE_HSI.egg-info/top_level.txt
