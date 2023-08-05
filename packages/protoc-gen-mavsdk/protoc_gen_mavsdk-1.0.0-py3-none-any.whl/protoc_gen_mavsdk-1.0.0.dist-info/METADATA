@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: protoc-gen-mavsdk
+Version: 1.0.0
+Summary: Protoc plugin used to generate MAVSDK bindings
+Home-page: https://github.com/mavlink/MAVSDK-Proto
+Maintainer: Jonas Vautherin, Julian Oes
+Maintainer-email: jonas@auterion.com, julian.oes@auterion.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Requires-Dist: jinja2
+Requires-Dist: protobuf
+
+UNKNOWN
+
+
