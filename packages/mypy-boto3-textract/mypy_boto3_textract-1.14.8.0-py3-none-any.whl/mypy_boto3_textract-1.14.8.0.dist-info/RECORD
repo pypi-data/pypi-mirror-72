@@ -1,0 +1,10 @@
+mypy_boto3_textract/__init__.py,sha256=LLszh4EX3uhMPyEZEClH_oLElaXAEjjEL_GFt7c6WyA,448
+mypy_boto3_textract/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_textract/client.py,sha256=vMXJ_jEb0g5I8xchJD89hTobI1UEbek_fNDtVDsYZ_U,5106
+mypy_boto3_textract/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_textract/type_defs.py,sha256=M_XBImREYMitSEKf16dzVKv-fg8xvQ9bcfpjXvaJ3ms,5554
+mypy_boto3_textract/version.py,sha256=Xvjg9Z_5P4w8uNEPYSV55Rble2qrKmAHohO4ul2mPkI,56
+mypy_boto3_textract-1.14.8.0.dist-info/METADATA,sha256=W4LSvTXymg24qU1Tf4XKV81dOg4YGUqLnJuTQdDU8rc,4216
+mypy_boto3_textract-1.14.8.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_textract-1.14.8.0.dist-info/top_level.txt,sha256=_sEFmD2RitUzEHPOvx59QIY1hpcMvVslSlrvCmIrFfw,20
+mypy_boto3_textract-1.14.8.0.dist-info/RECORD,,
