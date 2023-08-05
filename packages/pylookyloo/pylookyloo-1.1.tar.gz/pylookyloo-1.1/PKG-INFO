@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: pylookyloo
+Version: 1.1
+Summary: Python client for Lookyloo
+Home-page: https://github.com/CIRCL/lookyloo/client
+License: AGPL-3.0-or-later
+Author: Raphaël Vinot
+Author-email: raphael.vinot@circl.lu
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet
+Classifier: Topic :: Security
+Requires-Dist: requests (>=2.22.0,<3.0.0)
+Project-URL: Repository, https://github.com/CIRCL/lookyloo/client
+Description-Content-Type: text/markdown
+
+# PyLookyloo
+
+This is the client API for [Lookyloo](https://github.com/Lookyloo/lookyloo).
+
+## Installation
+
+```bash
+pip install pylookyloo
+```
+
+## Usage
+
+* You can use the lookyloo command to enqueue an URL.
+
+```bash
+usage: lookyloo [-h] [--url URL] --query QUERY
+
+Enqueue a URL on Lookyloo.
+
+optional arguments:
+  -h, --help     show this help message and exit
+  --url URL      URL of the instance (defaults to https://lookyloo.circl.lu/,
+                 the public instance).
+  --query QUERY  URL to enqueue.
+
+The response is the permanent URL where you can see the result of the capture.
+```
+
+* Or as a library
+
+```python
+
+from pylookyloo import Lookyloo
+
+lookyloo = Lookyloo('https://url.of.lookyloo.instance')
+if lookyloo.is_up:  # to make sure it is up and reachable
+	permaurl = lookyloo.enqueue('http://url.to.lookup')
+
+```
+
