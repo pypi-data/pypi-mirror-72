@@ -1,0 +1,10 @@
+sh
+Django<2
+django-rq<2.2.0
+django_dbdev>=1.0.0
+django_cradmin<7,>=5.0.0
+watchdog
+termcolor
+psutil
+future
+arrow
