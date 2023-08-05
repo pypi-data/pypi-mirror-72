@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: lifebrick
+Version: 1.2.0
+Summary: A Python tool to generate 1. blank 1000* 10 000 = 10 000 000 pixel image. 2.put user image and the blank image together. 
+Home-page: https://github.com/AzatAI/lifebrick/tree/master
+Author: Yaakov Azat
+Author-email: yaakovazat@gmail.com
+License: MIT
+Project-URL: Documentation, https://azat.ai
+Project-URL: Source, https://github.com/AzatAI/lifebrick
+Description: # lifebrick
+        A Python tool to generate 1. blank 1000* 10 000 = 10 000 000 pixel image. 2.put user image and the blank image together.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
