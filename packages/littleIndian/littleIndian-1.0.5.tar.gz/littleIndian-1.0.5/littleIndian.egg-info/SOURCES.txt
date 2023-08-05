@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+littleIndian/__init__.py
+littleIndian/littleindian.py
+littleIndian.egg-info/PKG-INFO
+littleIndian.egg-info/SOURCES.txt
+littleIndian.egg-info/dependency_links.txt
+littleIndian.egg-info/top_level.txt
