@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: tap-nikabot
+Version: 0.2.0
+Summary: Singer.io tap for extracting data from Nikabot
+Home-page: http://singer.io
+Author: Paul Heasley
+Author-email: paul@phdesign.com.au
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
