@@ -1,0 +1,22 @@
+pyvis
+networkx
+matplotlib
+numpy
+lxml
+graphviz
+pandas
+scipy
+scikit-learn
+pydotplus
+pulp
+pytz
+intervaltree
+deprecation
+stringdist
+tqdm
+
+[:python_version < "3.7"]
+ciso8601
+
+[:python_version < "3.8"]
+pm4pycvxopt
