@@ -1,0 +1,17 @@
+{% extends "registrations/base.html" %}
+
+{% load i18n pages %}
+
+{% block content %}
+
+{% if edition.location == edition.LOCATION_ECP %}
+  {% include_page "access_centrale" %}
+{% else %}
+  {% if edition.location == edition.LOCATION_HEC %}
+    {% include_page "access_hec" %}
+  {% else %}
+    {% include_page "access_x" %}
+  {% endif %}
+{% endif %}
+
+{% endblock %}
