@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: docrun
+Version: 2.2.0.0
+Summary: Package for https://www.doc.run
+Home-page: https://www.doc.run/zh
+Author: Xiao, Hu
+Author-email: einsxiao@hotmail.com
+License: UNKNOWN
+Description: docrun is the package that support https://www.doc.run to use local resources
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
