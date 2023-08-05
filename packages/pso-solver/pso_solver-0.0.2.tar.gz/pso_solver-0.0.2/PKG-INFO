@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: pso_solver
+Version: 0.0.2
+Summary: A package that implements the particle swarm optimization algorithm
+Home-page: https://github.com/nikhilkmr300/pso_solver
+Author: Nikhil Kumar
+Author-email: nikhilkmr300@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
