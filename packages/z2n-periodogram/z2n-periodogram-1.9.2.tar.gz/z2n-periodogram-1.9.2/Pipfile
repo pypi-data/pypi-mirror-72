@@ -1,0 +1,33 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+mkdocs = "*"
+mkautodoc = "*"
+markdown-katex = "*"
+
+[packages]
+z2n-periodogram = {editable = true,path = "."}
+intel-openmp = "*"
+click = "*"
+pillow = "*"
+click-shell = "*"
+matplotlib = "*"
+termtables = "*"
+colorama = "*"
+astropy = "*"
+psutil = "*"
+numpy = "*"
+numba = "*"
+icc-rt = "*"
+scipy = "*"
+pyqt5 = "*"
+h5py = "*"
+tqdm = "*"
+tbb = "*"
+
+[requires]
+python_version = "3.7"
