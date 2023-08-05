@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.py
+aliyun_python_sdk_cas.egg-info/PKG-INFO
+aliyun_python_sdk_cas.egg-info/SOURCES.txt
+aliyun_python_sdk_cas.egg-info/dependency_links.txt
+aliyun_python_sdk_cas.egg-info/requires.txt
+aliyun_python_sdk_cas.egg-info/top_level.txt
+aliyunsdkcas/__init__.py
+aliyunsdkcas/endpoint.py
+aliyunsdkcas/request/__init__.py
+aliyunsdkcas/request/v20200407/CreateCertificateRequestRequest.py
+aliyunsdkcas/request/v20200407/DeleteCertificateRequestRequest.py
+aliyunsdkcas/request/v20200407/DescribeCertificateStateRequest.py
+aliyunsdkcas/request/v20200407/DescribePackageStateRequest.py
+aliyunsdkcas/request/v20200407/__init__.py
