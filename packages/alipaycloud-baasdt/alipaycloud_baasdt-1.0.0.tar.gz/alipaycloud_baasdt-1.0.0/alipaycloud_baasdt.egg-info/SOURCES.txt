@@ -1,0 +1,10 @@
+README.md
+setup.py
+alipaycloud_baasdt.egg-info/PKG-INFO
+alipaycloud_baasdt.egg-info/SOURCES.txt
+alipaycloud_baasdt.egg-info/dependency_links.txt
+alipaycloud_baasdt.egg-info/requires.txt
+alipaycloud_baasdt.egg-info/top_level.txt
+alipaycloud_sdk_baasdt-test/__init__.py
+alipaycloud_sdk_baasdt-test/client.py
+alipaycloud_sdk_baasdt-test/models.py
