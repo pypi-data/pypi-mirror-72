@@ -1,0 +1,4 @@
+geocoder>=1.22.6
+usaddress>=0.5.9
+frozendict>=1.2
+yaml-config>=0.1.2
