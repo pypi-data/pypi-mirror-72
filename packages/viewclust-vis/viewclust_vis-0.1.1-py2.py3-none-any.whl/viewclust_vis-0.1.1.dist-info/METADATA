@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: viewclust-vis
+Version: 0.1.1
+Summary: Extension to ViewClust containing dashboard submodules and more.
+Home-page: https://github.com/Andesha/viewclust_vis
+Author: Tyler Collins
+Author-email: tk11br@sharcnet.ca
+License: MIT license
+Keywords: viewclust_vis
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: plotly
+Requires-Dist: viewclust
+
+=============
+ViewClust-Vis
+=============
+
+
+.. image:: https://img.shields.io/pypi/v/viewclust_vis.svg
+        :target: https://pypi.python.org/pypi/viewclust_vis
+
+.. image:: https://img.shields.io/travis/Andesha/viewclust_vis.svg
+        :target: https://travis-ci.com/Andesha/viewclust_vis
+
+.. image:: https://readthedocs.org/projects/viewclust-vis/badge/?version=latest
+        :target: https://viewclust-vis.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+
+
+Extension to ViewClust containing dashboard submodules and more.
+
+
+* Free software: MIT license
+* Documentation: https://viewclust-vis.readthedocs.io.
+
+
+Features
+--------
+
+* Complete user account usage diagnosis sweet
+* All users information package
+* Partition perfomance dashboards
+* More!
+
+Credits
+-------
+
+* `Tyler Collins`_
+* `James Desjardins`_
+
+Developed for:
+
+* SHARCNET_
+* `Compute Canada`_
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+.. _`Tyler Collins`: https://github.com/Andesha
+.. _`James Desjardins`: https://github.com/jadesjardins
+.. _SHARCNET: https://www.sharcnet.ca/my/front/
+.. _`Compute Canada`: https://www.computecanada.ca/
+
+
+=======
+History
+=======
+
+0.1.1 (2020-06-25)
+------------------
+
+* Added migrated files
+* Fixed doc building
+
+
+0.1.0 (2020-06-24)
+------------------
+
+* First release on PyPI.
+
+
