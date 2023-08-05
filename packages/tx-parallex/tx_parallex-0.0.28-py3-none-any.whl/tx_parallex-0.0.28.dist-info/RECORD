@@ -1,0 +1,12 @@
+tx/parallex/__init__.py,sha256=JR5qRFoWMco_RyWfu7-uuLuQjlqdwp7cS8muBiOx22s,1585
+tx/parallex/dependentqueue.py,sha256=ExnwqD_Ck2fzoLvHG8aMjaj_J0jy-XOUXqk5xFv80N8,7731
+tx/parallex/python.py,sha256=Gi9f3_ogzidoxrehz0fT3O_LyogKd5--Z370yBpP9QU,5302
+tx/parallex/schema.json,sha256=C3jlDDZBk4atrv0dC7Vr5y5hWauaA5knFJesnYueIgc,2373
+tx/parallex/stack.py,sha256=kFifOogoLjT_r-PIUB1GvK0cXcy-VcuCPwsTRAZq3-U,1383
+tx/parallex/task.py,sha256=jEksMPJ3aM7FkGBn4Pe_0pHsI1fUSdPUvn158zuyv-o,18413
+tx/parallex/utils.py,sha256=GZbpUSl4VNPDbjvXwZkbADtTVgQNId16gieY-oX3lnE,280
+tx_parallex-0.0.28.dist-info/LICENSE,sha256=lscphYIooT1RSlNyz0oTGZ137Kngp2i-f2I-uAtOYC0,1062
+tx_parallex-0.0.28.dist-info/METADATA,sha256=YM_jTX6ZZ79BA6Z7n8eB4W7mxutJcMjnJOYi1B-85fs,5628
+tx_parallex-0.0.28.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+tx_parallex-0.0.28.dist-info/top_level.txt,sha256=_J9BGFp9T7r_vIRKD04jGGM1FM6T-aBzmFNzUoDLgLc,3
+tx_parallex-0.0.28.dist-info/RECORD,,
