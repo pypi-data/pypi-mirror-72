@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+{ set +x; } 2>/dev/null
+
+usage() {
+    echo "usage: $(basename $0) path"
+    [[ $1 == "-h" ]] || [[ $1 == "--help" ]]; exit
+}
+
+[[ $1 == "-h" ]] || [[ $1 == "--help" ]] && usage "$@"
+
+[[ $# != 1 ]] && usage
+
+[[ -z "$README42_TOKEN" ]] && echo "ERROR: unknown README42_TOKEN
+
+export README42_TOKEN=SECRET # https://readme42.com/token" 1>&2 && exit 1
+
+[[ -z "$README42_TEMPLATE" ]] && echo "ERROR: unknown README42_TEMPLATE
+
+export README42_TEMPLATE=username/template" 1>&2 && exit 1
+
+cd "$1" || exit
+set -- curl -s -X POST -H "Authorization: Token $README42_TOKEN"
+
+md_files="$(find . -type f -name '*.md' -maxdepth 3)" || exit
+[[ -n "$md_files" ]] && while IFS= read f; do
+    set -- "$@" -F "${f##*/}=@$f"
+done <<< "$md_files"
+
+vars="$(printenv | awk -F"=" '{print $1}' | grep README42_ | grep -v ^README42_TOKEN$ | grep -v ^README42_TEMPLATE$)"
+[[ -n "$vars" ]] && while IFS= read v; do
+    set -- "$@" -H "$v=${!v}"
+done <<< "$vars"
+
+set -- "$@" https://api.readme42.com/templates/"$README42_TEMPLATE"
+
+"$@"
