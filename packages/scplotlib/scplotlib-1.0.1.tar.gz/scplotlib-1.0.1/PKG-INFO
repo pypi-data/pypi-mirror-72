@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: scplotlib
+Version: 1.0.1
+Summary: A python package for visualizing the SingleCell data.
+Home-page: https://github.com/edwinv87/scplotlib
+Author: Edwin Vans
+Author-email: vans.edw@gmail.com
+License: UNKNOWN
+Description: # scplotlib
+        
+        scplotlib is a python plotting library for the SingleCell (<https://github.com/edwinv87/singlecell>) object. It is built using Altair (<https://altair-viz.github.io/>). It can generate various plots for data stored in a SingleCell object such as:
+        
+        1. Core plots - line plots, bar plots, scatter plots
+        
+        2. Visualizing high dimensional data - t-SNE plots, PCA plots
+        
+        3. Specialized plots - heatmaps, silhouette plots, outlier score plots
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
