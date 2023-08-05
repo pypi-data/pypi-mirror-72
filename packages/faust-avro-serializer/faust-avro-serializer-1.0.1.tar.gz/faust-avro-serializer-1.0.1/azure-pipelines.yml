@@ -1,0 +1,24 @@
+trigger:
+  branches:
+    include:
+      - refs/heads/*
+      - refs/tags/*
+pr:
+  branches:
+    include:
+    - master
+
+variables:
+- group: testpypi
+
+
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: bakdata/bakdata-project-templates
+      endpoint: bot
+
+
+stages:
+  - template: azure/python/python-artifact.yml@templates

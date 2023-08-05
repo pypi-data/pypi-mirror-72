@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: faust-avro-serializer
+Version: 1.0.1
+Summary: Faust serializer that serializes Avro compatible messages
+Home-page: https://github.com/bakdata/faust-avro-serializer
+Author: bakdata
+Author-email: None
