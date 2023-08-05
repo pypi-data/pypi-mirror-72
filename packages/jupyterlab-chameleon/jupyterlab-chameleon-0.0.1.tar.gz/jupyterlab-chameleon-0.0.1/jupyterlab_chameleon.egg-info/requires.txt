@@ -1,0 +1,4 @@
+ansible-runner
+ipython>=5.0.0
+jupyter_client
+remote_ikernel
