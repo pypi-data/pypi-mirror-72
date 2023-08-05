@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: zutil
+Version: 1.0.2
+Summary: Utilities used for generating zCFD control dictionaries
+Home-page: https://zcfd.zenotech.com/
+Author: Zenotech
+Author-email: support@zenotech.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: System :: Logging
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: POSIX :: Linux
