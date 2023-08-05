@@ -1,0 +1,13 @@
+COPYING
+README
+setup.py
+aiotsl2591/__init__.py
+aiotsl2591/_aiotsl2591.c
+aiotsl2591/_aiotsl2591.pyx
+aiotsl2591/error.py
+aiotsl2591/glue.py
+aiotsl2591.egg-info/PKG-INFO
+aiotsl2591.egg-info/SOURCES.txt
+aiotsl2591.egg-info/dependency_links.txt
+aiotsl2591.egg-info/top_level.txt
+examples/tsl2591-read.py

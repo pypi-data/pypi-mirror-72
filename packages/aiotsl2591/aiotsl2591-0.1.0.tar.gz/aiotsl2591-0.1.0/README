@@ -1,0 +1,9 @@
+`aiotsl2591` is a Python 3 module to read data asynchronously from TSL2591
+luminosity sensor sensor.
+
+Features
+
+- asynchronous sensor data read using Python asyncio coroutines, which
+  allows to read multiple sensors in parallel without using threads
+- sensor is put into sleep mode to minimize power consumption after data is
+  read

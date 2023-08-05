@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: aiotsl2591
+Version: 0.1.0
+Summary: aiotsl2591 - TSL2591 sensor asyncio library
+Home-page: https://gitlab.com/n23/aiotsl2591
+Author: Artur Wroblewski
+Author-email: wrobell@riseup.net
+License: GPLv3+
+Project-URL: Code, https://gitlab.com/n23/aiotsl2591
+Project-URL: Issue tracker, https://gitlab.com/n23/aiotsl2591/issues
+Description: `aiotsl2591` is a Python 3 module to read data asynchronously from TSL2591
+        luminosity sensor sensor.
+        
+        Features
+        
+        - asynchronous sensor data read using Python asyncio coroutines, which
+          allows to read multiple sensors in parallel without using threads
+        - sensor is put into sleep mode to minimize power consumption after data is
+          read
+        
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Description-Content-Type: text/x-rst
