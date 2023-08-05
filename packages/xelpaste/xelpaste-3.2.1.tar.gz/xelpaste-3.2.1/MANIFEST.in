@@ -1,0 +1,23 @@
+# Source code
+graft xelpaste
+graft libpaste
+global-exclude *.py[cod] __pycache__
+global-exclude .*.swp *.*~
+
+# Docs and packaging
+include README.rst LICENSE CHANGELOG
+include crontab requirements.txt example_settings.ini
+graft docs
+
+# Development
+prune dev
+include .coveragerc
+include Makefile manage.py runtests.py
+
+# Frontend
+graft frontend
+prune node_modules
+prune xelpaste/assets
+prune xelpaste/static
+include package.json webpack.config.js
+exclude package-lock.json
