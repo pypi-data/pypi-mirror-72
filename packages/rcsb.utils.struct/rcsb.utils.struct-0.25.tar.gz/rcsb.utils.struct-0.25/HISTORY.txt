@@ -1,0 +1,18 @@
+# RCSB_UTILS_STRUCT HISTORY
+
+  3-Apr-2019  - V0.10 Package created
+  5-Apr-2019  - V0.11 Incorporated SCOPe and CATH utilties and tests
+  6-Apr-2019  - V0.12 Deliver explicit residue ranges
+ 10-Apr-2019  - V0.13 Simplify SCOP parent tree to named nodes, add sccs to data payload
+ 16-Apr-2019    V0.14 Cast all types in tree node lists to string and remove lineage
+ 17-Apr-2019    V0.15 Adjust parent node attributes
+ 24-Apr-2019    V0.16 Exclude synthetic SCOP root node from export tree node list
+ 22-Jun-2019    V0.17 Update development workflow
+ 13-Jun-2019    V0.18 Improve Py27 character encoding compatibility
+ 14-Aug-2019    V0.19 Adjust cache management
+ 29-Aug-2019    V0.20 Add ScopClassificationProvider() and CathClassificationProvider()
+ 23-Nov-2019    V0.21 Move pipeline to py38
+ 10-Jan-2020    V0.22 Add fallback data source targets for CATH
+ 28-Jan-2020    V0.23 Increment the SCOPe version
+  3-Feb-2020    V0.24 Update dependencies
+ 25-Jun-2020    V0.25 Increment the SCOPe version
