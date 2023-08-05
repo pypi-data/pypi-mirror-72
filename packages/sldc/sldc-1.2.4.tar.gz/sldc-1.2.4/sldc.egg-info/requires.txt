@@ -1,0 +1,10 @@
+rasterio
+affine
+pillow
+numpy
+joblib
+geos
+shapely
+scipy
+scikit-image
+opencv-python-headless
