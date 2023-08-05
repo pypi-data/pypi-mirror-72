@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-speakers-cli-hermes = rhasspyspeakers_cli_hermes.__main__:main
+
