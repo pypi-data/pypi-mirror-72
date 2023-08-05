@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+codenamegenerator.egg-info/PKG-INFO
+codenamegenerator.egg-info/SOURCES.txt
+codenamegenerator.egg-info/dependency_links.txt
+codenamegenerator.egg-info/top_level.txt
+namegenerator/__init__.py
+namegenerator/__main__.py
+namegenerator/adjetives/__init__.py
+namegenerator/adjetives/common.py
+namegenerator/nouns/__init__.py
+namegenerator/nouns/science.py

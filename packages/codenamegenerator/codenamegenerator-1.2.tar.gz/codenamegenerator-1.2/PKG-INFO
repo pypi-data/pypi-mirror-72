@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: codenamegenerator
+Version: 1.2
+Summary: A Name generator of the form "Adjetive Noun"
+Home-page: https://github.com/mariocesar/codenamegenerator
+Author: Mario César Señoranis Ayala
+Author-email: mariocesar.c50@gmail.com
+License: UNKNOWN
+Description: 
+        A Name generator of the form "Adjetive Noun"
+        ============================================
+        
+        Install it by. ::
+        
+            pip install codenamegenerator
+        
+        Use it from the command line ::
+        
+            $ python -m codenamegenerator
+        
+        Or in your code ::
+        
+            from codenamagenerator import get_random_name
+        
+        
+Platform: any
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
