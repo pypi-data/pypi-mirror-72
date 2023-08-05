@@ -1,0 +1,134 @@
+Metadata-Version: 2.1
+Name: Djangito
+Version: 0.0.1
+Summary: A sample Python project
+Home-page: https://github.com/pandichef/djangito
+Author: David R
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/pypa/sampleproject/issues
+Project-URL: Funding, https://donate.pypi.org
+Project-URL: Say Thanks!, http://saythanks.io/to/example
+Project-URL: Source, https://github.com/pypa/sampleproject/
+Keywords: sample setuptools development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4
+Description-Content-Type: text/markdown
+Requires-Dist: django (==2.2.10)
+Requires-Dist: django-oauth-toolkit (==1.2.0)
+Requires-Dist: pyjwt (==1.7.1)
+Requires-Dist: djangorestframework (==3.11.0)
+Provides-Extra: dev
+Requires-Dist: django-debug-toolbar ; extra == 'dev'
+Requires-Dist: pipenv-setup ; extra == 'dev'
+Requires-Dist: ipython ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-django ; extra == 'dev'
+Requires-Dist: pytest-factoryboy ; extra == 'dev'
+Requires-Dist: pytest-pythonpath ; extra == 'dev'
+
+# Djangito
+Enables one Django project (client) to authenticate via a second Django project 
+(server) via oauth2.
+
+### Server Installation
+1. `pip install djangito`  # in server virtual environment  
+1. Add `'oauth2_provider'`,  `'rest_framework'`, and `'django_server'` to INSTALLED_APPS in settings.py  
+1. Add `'users'` to INSTALLED_APPS and `AUTH_USER_MODEL = 'users.User'` in settings.py
+(only required if you want to use the opinionated Djangito user model)
+1. Add `path('o/', include('djangito_server.urls'))` to urls.py
+
+### Client Installation
+1. `pip install djangito`  # in client virtual environment  
+1. Add `'django_client'` to INSTALLED_APPS in settings.py
+1. Add `'users'` to INSTALLED_APPS and `AUTH_USER_MODEL = 'users.User'` in settings.py
+(only required if you want to use the opinionated Djangito user model)
+1. Add `path('oidc/', include('djangito_client.urls'))` to urls.py
+1. Create an Application on *server admin* in instance to get `DJANGITO_CLIENT_ID` AND `DJANGITO_CLIENT_SECRET`
+1. Add the following to settings.py:
+```python
+DJANGITO_SERVER_URL = 'https://www.myssoserver.com'
+DJANGITO_CLIENT_ID = 'somebignumber'
+DJANGITO_CLIENT_SECRET = 'someotherbignumber'
+```
+
+## Features
+* Client application redirects user login to server application
+* Client pulls that user's data using oauth2 after logging in ("authorization code" flow)
+* Client will also use `user.company.name` to update a company ForeignKey field (if it exists)
+* When server data changes, it is POSTed to *all* the client applications via a JWT (signed using `DJANGITO_CLIENT_SECRET`)
+* If server User data is deleted, there is (currently) no impact to the client User data
+* Authenticated tokens are one-time use for security purposes i.e., they're immediately delete from the server application after logging in
+* Comes with an opinionated "users" app containing a custom User model. (You can 
+create your own user model.  Just add an Integer field called server_id to the 
+User model as well as all associated ForeignKey fields.)
+
+_Note: "users" wasn't named "djangito_users" since, per the Django documentation,
+[settings.AUTH_USER_MODEL can't change mid-project](https://docs.djangoproject.com/en/3.0/ref/settings/#auth-user-model). 
+The name "users" is commonly used in tutorials for a custom User model 
+(e.g., [how-switch-custom-django-user-model-mid-project](https://www.caktusgroup.com/blog/2019/04/26/how-switch-custom-django-user-model-mid-project/))._
+
+### When is data synced?
+1. Anytime the user logs in from the client application
+1. Anytime the data is modified on the server application (note that just logging 
+into the server application modifies the last_login field)
+
+### Why is the traditional approach bad?
+* settings.py grows into unbearable complexity, making it almost impossible to 
+understand app dependencies
+* Can run tests on entire project in development without too much wait time
+* Allows projects to use different databases e.g., SQLite, Postgres
+* Allows projects to use completely different web frameworks
+* Absolute nothing needs to be done to deprecate a project
+* You don't have to share entire code base to employ freelancers
+* Trial new deployment strategies on one features at a time (e.g., main project is 
+on Heroku while a new project is on Elastic Beanstalk)
+
+### How logging in works?
+1. settings.LOGIN_URL is monkey patched in djangito_client.models to redirect to 
+client.com/login_handler
+1. login_handler directs to server.com/o/authorize with query string parameters 
+client_id, redirect_uri, scope (i.e., permissions requested), nonce, the original 
+path that initiated the transaction.
+1. server.com/o/authorize (oauth2_provider.AuthorizationView) executes authorization 
+and redirects to callback URI with query string parameters authorization, the original 
+that initiated the transaction
+1. callback_handler gets access token
+1. callback_handler gets user_data from server using the access token
+1. callback_handler creates (or updates) User table using the JSON user data from 
+the server.
+1. callback_handler create a random password for the client database i.e., just a fill
+to avoid exceptions.
+1. callback_handler calls login(request, u) to login user
+1. callback_handler revokes the token on the server i.e., this simulate one-time-use
+1. callback_handler redirects back to the original URL, now authenticated
+
+### How logging out works?
+1. settings.LOGIN_REDIRECT_URL is monkey patched in djangito_client.models to redirect 
+to server.com/o/logout
+1. server.com/o/logout calls logout(request)
+1. server.com/o/logout redirects to client.com
+
+
+### References
+* [The blog post that inspired this project](https://raphaelyancey.fr/en/2018/05/28/setting-up-django-oauth2-server-client.html)  
+* [The best video explaining OpenID Connect](https://www.youtube.com/watch?v=996OiexHze0&list=LLvwEyJhl-YPSJRMV0fuE5kg)  
+* [Setting up an OAuth Client using authlib](https://docs.authlib.org/en/latest/client/django.html)  
+* [django-simple-sso](https://github.com/divio/django-simple-sso) (I couldn't get this to work, but the idea is very similar)
+
+### Testing Utilities
+* [https://oidcdebugger.com/](https://oidcdebugger.com/)  
+* [https://oauthdebugger.com/](https://oauthdebugger.com/)
+* [Testing Your Django App With Pytest](https://djangostars.com/blog/django-pytest-testing/)
+
+
