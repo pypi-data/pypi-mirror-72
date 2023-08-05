@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+SCBert/SCBert.py
+SCBert/__init__.py
+SCBert/fast-multi-rake.py
+SCBert/load_data.py
+SCBert.egg-info/PKG-INFO
+SCBert.egg-info/SOURCES.txt
+SCBert.egg-info/dependency_links.txt
+SCBert.egg-info/requires.txt
+SCBert.egg-info/top_level.txt
+SCBert/data/CLS-fr.csv
