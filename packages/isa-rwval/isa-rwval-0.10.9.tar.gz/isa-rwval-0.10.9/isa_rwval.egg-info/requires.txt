@@ -1,0 +1,9 @@
+networkx==1.11
+six>=1.11.0
+
+[tables]
+pandas
+numpy
+
+[viz]
+matplotlib
