@@ -1,0 +1,27 @@
+{% extends "registrations/base.html" %}
+
+{% block content %}
+<table class="borders">
+  <tr>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Sexe</th>
+    <th>Date de naissance</th>
+    <th>École</th>
+    <th>Promotion</th>
+    <th>Catégorie</th>
+  </tr>
+  {% for participant in participants %}
+    <tr>
+      <td>{{ participant.firstname }}</td>
+      <td>{{ participant.lastname }}</td>
+      <td>{{ participant.get_gender_display }}</td>
+      <td>{{ participant.birthyear }}</td>
+      <td>{{ participant.get_school_display }}</td>
+      <td>{{ participant.promo }}</td>
+      <td>{{ participant.category.name }}</td>
+    </tr>
+  {% endfor %}
+</table>
+{% endblock %}
+

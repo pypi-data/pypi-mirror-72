@@ -1,0 +1,82 @@
+ChangeLog
+=========
+
+2020.1.1 (2020-06-22)
+---------------------
+
+*Packaging:*
+
+    - Don't force running ``npm install`` when packaging unless needed.
+
+
+2020.1.0 (2020-06-22)
+---------------------
+
+*New:*
+
+    - Switch to django-sendfile2
+    - Drop Python 2 support
+
+
+2020.0.0 (2020-06-22)
+---------------------
+
+*Frontend:*
+
+    - Replace browserify with webpack
+
+
+2019.1.0 (2019-01-28)
+---------------------
+
+*New:*
+
+    - Adjust name following Centrale-Supélec merger.
+
+
+2019.0.0 (2019-01-26)
+---------------------
+
+*New:*
+
+    - Switch to Django>=2.1
+
+
+2018.1.2 (2018-09-05)
+---------------------
+
+*Packaging:*
+
+    - Include development files.
+
+
+2018.1.1 (2018-09-05)
+---------------------
+
+*New:*
+
+    - Switch to Django>=2.0
+
+
+2017.1.2 (2017-11-07)
+---------------------
+
+*Bugfix:*
+
+    - Add missing `wsgi.py` file.
+
+2017.1.1 (2017-11-06)
+---------------------
+
+*Bugfix:*
+
+    - Adjust to Django 1.8+ URL syntax
+
+2017.1.0 (2017-11-06)
+---------------------
+
+*New:*
+
+    - Refactor the application packaging/installation rules.
+
+.. vim:et:ts=4:sw=4:tw=79:ft=rst:

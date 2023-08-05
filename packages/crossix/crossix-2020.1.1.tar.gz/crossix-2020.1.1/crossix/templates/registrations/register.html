@@ -1,0 +1,73 @@
+{% extends "registrations/base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+<h2>{% blocktrans %}Inscription au cross triangulaire{% endblocktrans %}</h2>
+
+<form action="/register/" method="post" >
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+<table>
+  {% for field in form %}
+  <tr>
+    <th>{% trans field.label_tag %}
+    </th>
+    <td>
+      {{ field }}
+    </td>
+    <td>
+      {% if field.errors %}{{ field.errors }}{% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+  <tr>
+    <td colspan="2" align="center">
+      <input type="submit" value="{% trans "Enregistrer" %}" />
+    </td>
+  </tr>
+</table>
+<p>
+<em>
+  {% blocktrans %}
+Votre email ne sera utilisé que pour les informations relatives au cross triangulaire
+  (affichage des résultats, prochaine édition).<br />
+  Pour modifier ou supprimer ces données, envoyez un email à{% endblocktrans %}
+  <a href="mailto:webmaster@crosstriangulaire.com">webmaster@crosstriangulaire.com</a>.</em></p>
+</form>
+{% endblock %}
+
+{% block extrajs %}
+<script>
+$("#id_gender").change(function() {
+  refresh_category();
+}).change();
+$("#id_birthyear").change(function() {
+  refresh_category();
+}).change();
+
+function refresh_category() {
+  var categories = {
+    {% for cat in categories %}
+    {{ cat.id }}: {
+        'max_birth_year': {{ cat.max_birth_year }},
+        'gender': '{{ cat.gender }}',
+    },
+    {% endfor %}
+  };
+
+  var gender = $("#id_gender").val();
+  var year = $("#id_birthyear").val();
+
+  if (gender != "" && year != "") {
+    $.each(categories, function(category, details) {
+      if (details.gender == gender && year <= details.max_birth_year) {
+        $("#id_category").val(category);
+        return false;
+      }
+    });
+  }
+}
+</script>
+
+{% endblock %}
