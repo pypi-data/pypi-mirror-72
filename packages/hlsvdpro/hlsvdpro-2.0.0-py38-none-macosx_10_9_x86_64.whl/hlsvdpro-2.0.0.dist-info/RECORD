@@ -1,0 +1,13 @@
+hlsvdpro/__init__.py,sha256=1zi9OzPt_Re2bnHwQvp2kkvtfP8SjaMo-RPH5XHMN3s,248
+hlsvdpro/_cpropack.so,sha256=__W1fsXf1L9i9ERZsbsmI8o6zX3WPcEpamw9b1F_Kgs,781736
+hlsvdpro/_dpropack.so,sha256=NzTa2X_6Ad6ZLeHQcnznuVb9bp_vMpKmXlPji2k6Xbs,728032
+hlsvdpro/_spropack.so,sha256=BZxaHOKHOfw3cIIy253opHQ2V9av3OGzomorsozBuk8,719352
+hlsvdpro/_zpropack.so,sha256=ad8zgmriYhxM9Sm-a7voBb6jL5Iz6mwCSnlm8NcHwAk,794896
+hlsvdpro/hlsvd.py,sha256=NtrzecbxZ8jEUxGRQesvIdkF0UalGZ7XShHCRvttHeI,36029
+hlsvdpro/propack.py,sha256=m9b0joI8tJRd24d1POaZlqhu252Bykc1_T_RxB_5LL8,24356
+hlsvdpro/simple_test.py,sha256=wiN6IXAFGRjPqyaZpX86KHP5nsNiC5RxVR171TWX3Z0,5317
+hlsvdpro-2.0.0.dist-info/LICENSE,sha256=SooVGZztuicaCkutjdGBqFd89wHO5U29lbYB9SExqIU,7262
+hlsvdpro-2.0.0.dist-info/METADATA,sha256=RSJxYrlagcm6m-SNkeJ4dmozsWrrgew3spGdi95wzT8,7186
+hlsvdpro-2.0.0.dist-info/WHEEL,sha256=d0RkOlWVudvbywStXC9uKATo1petofZtmSKm7DnpfVI,108
+hlsvdpro-2.0.0.dist-info/top_level.txt,sha256=y1zNrKIB0C2m8R4r_Y32UF8XjXqRK8l8DDhtM4Y0spo,9
+hlsvdpro-2.0.0.dist-info/RECORD,,
