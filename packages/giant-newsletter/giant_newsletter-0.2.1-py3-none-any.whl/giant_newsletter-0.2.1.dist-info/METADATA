@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: giant-newsletter
+Version: 0.2.1
+Summary: A small reusable package that adds a Newsletter app to a project
+Home-page: https://github.com/giantmade/giant-newsletter
+License: MIT
+Keywords: newsletter,app
+Author: Will-Hoey
+Author-email: will.hoey@giantmade.com
+Requires-Python: >=3.6,<4.0
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: giant-mixins (>=0.1.1,<0.2.0)
+Project-URL: Repository, https://github.com/giantmade/giant-newsletter
+Description-Content-Type: text/markdown
+
+# Giant Newsletter
+
+A re-usable package which can be used in any project that requires a generic `Newletter` app. 
+
+This will include the basic formatting and functionality such as model creation via the admin and email sending.
+
+## Installation
+
+To install with the package manager, run:
+
+    $ poetry add giant-newsletter
+
+You should then add `"newsletter"` to the `INSTALLED_APPS` in `base.py` and to the `Makefile`.  
+
+In `base.py` there should also be a `DEFAULT_FROM_EMAIL` and a `DEFAULT_TO_EMAIL`. This is used by the email sending method.
+
+ ## Context Processor
+ If you wish to use the Contact form with the context processor you will need to add `newsletter.context_processors.subscription_form` into the `TEMPLATES` context processors list. This will allow you to access the form in templates.
+ 
+ ## Configuration
+
+- `NEWSLETTER_FORM_FIELDS` allows the user to customise what fields are displayed on the form. This must be a list
+- `NEWSLETTER_FORM_FIELD_PLACEHOLDERS` allows the user to customise the field placeholder text. This must be a dict containing the fieldnames
+- `NEWSLETTER_FORM_REQUIRED_FIELDS` allows the user to customise what fields are required on the form. This must be a list
+- `NEWSLETTER_FORM_LABELS` allows the user to customise what the field labels are on the form. This must be a dict of field names and their corresponding label
+- `NEWSLETTER_FORM_WIDGETS` allows the user to customise what the field widgets are on the form. This must be a dict of field names and their corresponding widget
