@@ -1,0 +1,11 @@
+airflow_run/__init__.py,sha256=qbgdvxR6sYlE4oAYsp7TCDVH4kGJeJjWDNFK3plA_ZY,39
+airflow_run/config-template.yaml,sha256=HwXAd45IYvlH2Dkp8CQV0S-vFK0amaEtLtVBdpRavHc,1068
+airflow_run/decorators.py,sha256=hkoSdcUV_sSESJqDYUkM0KWDJShXwPYm4hNx04GPj-U,1009
+airflow_run/run.py,sha256=ykB9rIZ1WKnEAm1SRH9kx6_pZXupMU-FyoBTHZT1o_E,22274
+airflow_run/utils.py,sha256=ehA3NDFaAgKEL06dr_jx_rhoY7-fTIoJQ8BZRSpi2MA,656
+airflow_run-0.1.5.dist-info/LICENSE,sha256=TTwtgK4GVS0SOdjqEKEm4vJGdLECW5rNqW1-ooAMWcA,1078
+airflow_run-0.1.5.dist-info/METADATA,sha256=OayZBfzRIfdO8tVjJy0683nKbi04ttrSa7DkUUjJXfM,4186
+airflow_run-0.1.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+airflow_run-0.1.5.dist-info/entry_points.txt,sha256=fzfupj6dkj74irqM0yBsmmr2iwU5n-pJOjq6WF0mN5E,79
+airflow_run-0.1.5.dist-info/top_level.txt,sha256=A2aRhSsjpXWuG-og3FM3K4HvUf8rWp6wSlIq2SKasS8,12
+airflow_run-0.1.5.dist-info/RECORD,,
