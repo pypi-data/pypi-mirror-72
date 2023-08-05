@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: article-extract
+Version: 0.1.3
+Summary: Article extractor can extract title, time, author, article content, etc. according to article URL.
+Home-page: https://github.com/cuiyonghua6/article_eatract
+Author: cuiyonghua
+Author-email: cui_yonghua6@163.com
+License: UNKNOWN
+Keywords: ae,article,article_extract,article-extract
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests (==2.13.0)
+Requires-Dist: ruamel.yaml (==0.15.89)
+Requires-Dist: scrapy (==1.6.0)
+
+# article_extract
+文章抽取器，可根据指定的文章url，抽取出标题，时间，作者，来源，文章内容等。
+
+

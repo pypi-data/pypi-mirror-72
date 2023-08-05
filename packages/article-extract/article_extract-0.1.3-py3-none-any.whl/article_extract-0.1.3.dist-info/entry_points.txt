@@ -1,0 +1,5 @@
+[console_scripts]
+article = article_extract.__main__:main
+article-extract = article_extract.__main__:main
+article_extract = article_extract.__main__:main
+
