@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: kubessh
+Version: 0.1
+Summary: SSH server to spawn users into kubernetes pods
+Home-page: https://github.com/yuvipanda/kubessh
+Author: Yuvi Panda
+Author-email: yuvipanda@gmail.com
+License: Apache-2
+Description: UNKNOWN
+Platform: UNKNOWN

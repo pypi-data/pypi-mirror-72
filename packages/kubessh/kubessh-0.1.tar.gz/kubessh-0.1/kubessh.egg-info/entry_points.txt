@@ -1,0 +1,3 @@
+[console_scripts]
+kubessh = kubessh.app:main
+
