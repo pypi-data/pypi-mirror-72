@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: score_rbs
+Version: 0.5
+Summary: A tool to score prokaryotic ribosomal binding sites
+Home-page: https://github.com/deprekate/score_rbs
+Author: Katelyn McNair, Gary J Olsen
+Author-email: deprekate@gmail.com
+License: UNKNOWN
+Description: # score_rbs
+        A python package to score the ribosomal binding site of a given open-reading frame
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >3.5.2
+Description-Content-Type: text/markdown
