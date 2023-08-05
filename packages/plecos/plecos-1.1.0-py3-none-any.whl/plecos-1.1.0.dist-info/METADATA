@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: plecos
+Version: 1.1.0
+Summary: Ocean tool for validating asset metadata.
+Home-page: https://github.com/oceanprotocol/plecos
+Author: leucothia
+Author-email: devops@oceanprotocol.com
+License: Apache Software License 2.0
+Keywords: ocean
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: jsonschema (==3.0.0b3)
+Provides-Extra: dev
+Requires-Dist: bumpversion ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+An [Ocean Protocol](https://oceanprotocol.com) utility library to validate asset metadata.
+
+
