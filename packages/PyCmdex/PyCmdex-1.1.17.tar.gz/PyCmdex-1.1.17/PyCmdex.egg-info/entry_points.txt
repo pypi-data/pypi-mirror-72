@@ -1,0 +1,3 @@
+[console_scripts]
+pycmdex = PyCmdex.cmdex:main
+
