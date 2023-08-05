@@ -1,0 +1,94 @@
+Metadata-Version: 2.0
+Name: grafyaml
+Version: 0.0.8
+Summary: Grafyaml takes simple descriptions of Grafana dashboards in YAML format, and uses them to configure grafana.
+Home-page: http://docs.openstack.org/infra/system-config/grafyaml.html
+Author: OpenStack Infrastructure Team
+Author-email: openstack-infra@lists.openstack.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Utilities
+Requires-Dist: PyYAML (>=3.1.0)
+Requires-Dist: dogpile.cache
+Requires-Dist: pbr (!=2.1.0,>=2.0.0)
+Requires-Dist: python-slugify
+Requires-Dist: requests
+Requires-Dist: six (>=1.6.0)
+Requires-Dist: voluptuous (<=0.10.5)
+
+grafyaml
+--------
+
+At a glance
++++++++++++
+
+* Free software: Apache license
+* Documentation: http://docs.openstack.org/infra/grafyaml/
+* Source: http://git.openstack.org/cgit/openstack-infra/grafyaml
+* Bugs: https://storyboard.openstack.org/#!/project/818
+
+Overview
+++++++++
+
+``grafyaml`` takes descriptions of `Grafana <https://grafana.com/>`__
+dashboards in YAML format, and uses them to produce JSON formatted
+output suitable for direct import into Grafana.
+
+The tool uses the `Voluptuous
+<https://github.com/alecthomas/voluptuous>`__ data validation library
+to ensure the input produces a valid dashboard.  Along with
+validation, users receive the benefits of YAML markup such as comments
+and clearer type support.
+
+For example, here is a minimal dashboard specification
+
+.. code-block:: yaml
+
+  dashboard:
+    time:
+      from: "2018-02-07T08:42:27.000Z"
+      to: "2018-02-07T13:48:32.000Z"
+    templating:
+      - name: hostname
+        type: query
+        datasource: graphite
+        query: node*
+        refresh: true
+    title: My great dashboard
+    rows:
+      - title: CPU Usage
+        height: 250px
+        panels:
+            - title: CPU Usage for $hostname
+              type: graph
+              datasource: graphite
+              targets:
+                - target: $hostname.Cpu.cpu_prct_used
+
+
+``grafyaml`` can be very useful in continuous-integration
+environments.  Users can specify their dashboards via a normal review
+process and tests can validate their correctness.
+
+A large number of examples are available in the OpenStack
+`project-config
+<https://git.openstack.org/cgit/openstack-infra/project-config/tree/grafana>`__
+repository, which are used to create dashboards on
+`<http://grafana.openstack.org>`__.
+
+
+
