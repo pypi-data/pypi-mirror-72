@@ -1,0 +1,12 @@
+reval/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+reval/best_nclust_cv.py,sha256=CT8gwgOmYlvk1RzTjE0PFdURQa50WLlmvY1U3YQ6KXU,5421
+reval/relative_validation.py,sha256=4lq46SXiM25VX1eOeJHJiIPUJC1hK20SV1Zb20hsKMU,7122
+reval/visualization.py,sha256=_56_6aTFcOpKWAhAQwva-ehHrUt1i3l_HHSU0ukqJVw,1623
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_best_nclust_cv.py,sha256=E0oIqKStlQIqqUhXr9Y7dCP6eu66O9rjvCH-ei0h4fA,2066
+tests/test_relative_validation.py,sha256=vRxdSbmM0sM8sWao74qFI0zCP8ekCa1LsBwuyzHKoJM,2538
+reval-0.0.1.dist-info/LICENSE,sha256=miNWTNB2_zyMM0NQs5tLL5YRWT3_vni0UioP4BX1ZU4,1086
+reval-0.0.1.dist-info/METADATA,sha256=NTNlBq6d5pgN4qixcDCmo5Eh0-OaPeaekL8QRb5nWBw,2543
+reval-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+reval-0.0.1.dist-info/top_level.txt,sha256=6TtFqTlXGU6VyJ-2hfh-xXfUu2Cdw5hirugNBLt_TLs,12
+reval-0.0.1.dist-info/RECORD,,
