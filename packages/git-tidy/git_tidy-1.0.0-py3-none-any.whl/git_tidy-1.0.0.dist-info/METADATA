@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: git-tidy
+Version: 1.0.0
+Summary: Tidy git commit messages, linting, and logging
+Author: Jyve Engineering
+Requires-Python: >=3.6,<4
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: formaldict (>=0.2.0,<0.3.0)
+Requires-Dist: jinja2 (>=2.10.3,<3.0.0)
+Requires-Dist: packaging (>=20.0,<21.0)
+Requires-Dist: python-dateutil (>=2.8.1,<3.0.0)
+Requires-Dist: pyyaml (>=5.1.2,<6.0.0)
+Requires-Dist: requests (>=2.22.0,<3.0.0)
