@@ -1,0 +1,395 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-16 11:06+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: ideabox.policy\n"
+
+#: ../browser/controlpanel.py:31
+msgid ""
+msgstr ""
+
+#. Default: "Against"
+#: ../vocabularies.py:89
+msgid "AGAINST"
+msgstr ""
+
+#: ../export/export.py:156
+#: ../userdataschema.py:22
+msgid "Address"
+msgstr ""
+
+#: ../form/project_encoding.py:68
+#: ../form/vote_encoding.py:82
+msgid "Anonymous"
+msgstr ""
+
+#: ../content/project.pt:32
+msgid "Areas concerned :"
+msgstr ""
+
+#: ../export/export.py:179
+#: ../userdataschema.py:28
+msgid "Birthdate"
+msgstr ""
+
+#: ../profiles/default/types/campaign.xml
+msgid "Campaign"
+msgstr ""
+
+#: ../content/project.pt:103
+msgid "Comment"
+msgstr ""
+
+#: ../browser/controlpanel.py:30
+msgid "Configuration for ideabox product"
+msgstr ""
+
+#: ../content/project.py:48
+#: ../content/state_progress.py:17
+msgid "Content"
+msgstr ""
+
+#: ../content/state_progress.py:15
+msgid "Date"
+msgstr ""
+
+#: ../setuphandlers.py:131
+msgid "District"
+msgstr ""
+
+#: ../content/project.pt:36
+msgid "District(s) :"
+msgstr ""
+
+#: ../content/project.py:40
+msgid "District(s) concerned"
+msgstr ""
+
+#: ../content/project.py:31
+msgid "Domain(s) concerned"
+msgstr ""
+
+#: ../content/project.pt:65
+msgid "Edit timeline dates"
+msgstr ""
+
+#: ../form/project_encoding.py:26
+#: ../form/vote_encoding.py:28
+msgid "Email"
+msgstr ""
+
+#: ../browser/controlpanel.py:16
+msgid "Email address of the project manager"
+msgstr ""
+
+#: ../browser/controlpanel.py:23
+msgid "Enable / Disable project submission"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Encoding project with user"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Encoding vote with user"
+msgstr ""
+
+#: ../faceted/configure.zcml:31
+msgid "Events"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Export projects"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Export projects with votes"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Export users"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Export users with their votes"
+msgstr ""
+
+#. Default: "Female"
+#: ../vocabularies.py:48
+msgid "FEMALE"
+msgstr ""
+
+#. Default: "For"
+#: ../vocabularies.py:89
+msgid "FOR"
+msgstr ""
+
+#: ../export/export.py:151
+#: ../userdataschema.py:20
+msgid "First name"
+msgstr ""
+
+#: ../export/export.py:161
+#: ../userdataschema.py:25
+msgid "Gender"
+msgstr ""
+
+#: ../export/export.py:196
+#: ../setuphandlers.py:139
+#: ../userdataschema.py:35
+msgid "I am"
+msgstr ""
+
+#: ../profiles/default/controlpanel.xml
+msgid "Ideabox Settings"
+msgstr ""
+
+#: ../browser/configure.zcml:114
+msgid "Ideabox Standard view"
+msgstr ""
+
+#: ../browser/configure.zcml:108
+msgid "Ideabox Summary view"
+msgstr ""
+
+#: ../profiles/default/types/Project.xml
+msgid "Ideabox project"
+msgstr ""
+
+#: ../browser/controlpanel.py:17
+msgid "If there are multiple email addresses, separate them with semicolons"
+msgstr ""
+
+#: ../configure.zcml:43
+msgid "Installs the ideabox.policy add-on."
+msgstr ""
+
+#: ../export/export.py:146
+msgid "Last name"
+msgstr ""
+
+#: ../userdataschema.py:18
+msgid "Last name or institution"
+msgstr ""
+
+#: ../tile/projects.py:25
+msgid "Limit"
+msgstr ""
+
+#: ../tile/projects.py:26
+msgid "Limit projects"
+msgstr ""
+
+#. Default: "Male"
+#: ../vocabularies.py:48
+msgid "MALE"
+msgstr ""
+
+#: ../export/export.py:104
+msgid "Negative rating "
+msgstr ""
+
+#: ../form/project_submission.py:77
+msgid "New project submission"
+msgstr ""
+
+#: ../faceted/configure.zcml:23
+msgid "News"
+msgstr ""
+
+#: ../content/priority_action.py:22
+msgid "Operational objectives"
+msgstr ""
+
+#: ../content/project.py:53
+msgid "Original author"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Personal information"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Personal information for connected user"
+msgstr ""
+
+#: ../export/export.py:93
+msgid "Positive rating "
+msgstr ""
+
+#: ../profiles/default/types/priority_action.xml
+#: ../tile/priority_action.py:15
+msgid "Priority action"
+msgstr ""
+
+#: ../form/vote_encoding.py:39
+#: ../profiles/default/types/Project.xml
+msgid "Project"
+msgstr ""
+
+#: ../faceted/sort_widget.py:40
+msgid "Project Sorting"
+msgstr ""
+
+#: ../content/project.pt:110
+#: ../content/state_progress.pt:12
+msgid "Project Status"
+msgstr ""
+
+#: ../form/project_encoding.py:31
+#: ../profiles/default/actions.xml
+msgid "Project encoding"
+msgstr ""
+
+#: ../form/project_submission.py:25
+msgid "Project image"
+msgstr ""
+
+#: ../browser/templates/project_submission.pt:12
+msgid "Project submission is currently disabled"
+msgstr ""
+
+#: ../form/vote_encoding.py:37
+msgid "Project(s)"
+msgstr ""
+
+#: ../faceted/configure.zcml:15
+#: ../tile/projects.py:22
+msgid "Projects"
+msgstr ""
+
+#: ../browser/project.py:11
+msgid "Projects in progression"
+msgstr ""
+
+#: ../vocabularies.py:98
+msgid "Random sort"
+msgstr ""
+
+#: ../content/project.pt:78
+msgid "Read more"
+msgstr ""
+
+#: ../browser/workflow.py:81
+msgid "Save"
+msgstr ""
+
+#: ../form/project_encoding.py:144
+#: ../form/project_submission.py:113
+#: ../form/vote_encoding.py:141
+msgid "Send"
+msgstr ""
+
+#: ../browser/project.py:27
+msgid "Setting up"
+msgstr ""
+
+#: ../profiles/default/types/state_progress.xml
+msgid "State progress"
+msgstr ""
+
+#: ../tile/timeline.py:13
+msgid "Steps for timeline"
+msgstr ""
+
+#: ../content/priority_action.py:18
+msgid "Strategic Objectives"
+msgstr ""
+
+#: ../browser/project.py:43
+msgid "The 7 main themes"
+msgstr ""
+
+#: ../form/vote_encoding.py:150
+msgid "The votes have been encoded correctly"
+msgstr ""
+
+#: ../setuphandlers.py:123
+msgid "Theme"
+msgstr ""
+
+#: ../form/project_submission.py:23
+#: ../tile/priority_action.py:15
+#: ../tile/projects.py:22
+msgid "Title"
+msgstr ""
+
+#: ../tile/timeline.py:14
+msgid "Title; Date; Link"
+msgstr ""
+
+#: ../configure.zcml:52
+msgid "Uninstalls the ideabox.policy add-on."
+msgstr ""
+
+#: ../export/export.py:141
+msgid "User ID"
+msgstr ""
+
+#: ../form/vote_encoding.py:32
+msgid "Vote"
+msgstr ""
+
+#: ../form/vote_encoding.py:47
+#: ../profiles/default/actions.xml
+msgid "Vote encoding"
+msgstr ""
+
+#: ../export/export.py:115
+msgid "Voters in favour"
+msgstr ""
+
+#: ../export/export.py:128
+msgid "Voters opposed"
+msgstr ""
+
+#: ../export/export.py:219
+msgid "Votes"
+msgstr ""
+
+#: ../export/export.py:214
+#: ../userdataschema.py:31
+msgid "Zip code"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Zip code vocabulary values"
+msgstr ""
+
+#: ../browser/project.py:22
+msgid "diagnose and analysis"
+msgstr ""
+
+#. Default: "A new project has been created you can access it at the following url:\n              ${url}\n              "
+#: ../form/project_submission.py:65
+msgid "email_body_project_submission"
+msgstr ""
+
+#: ../configure.zcml:43
+msgid "ideabox.policy"
+msgstr ""
+
+#: ../configure.zcml:52
+msgid "ideabox.policy (uninstall)"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "new project submission folder"
+msgstr ""
+
+#: ../browser/templates/project_summary.pt:21
+msgid "projets"
+msgstr ""
