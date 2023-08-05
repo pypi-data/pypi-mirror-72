@@ -1,0 +1,15 @@
+name: jugs
+
+channels:
+- conda-forge
+
+dependencies:
+- notebook
+- ipywidgets
+- traitlets
+- time
+- pip
+- jupyter_contrib_nbextensions
+- pip:
+    - nbdime
+#    - .

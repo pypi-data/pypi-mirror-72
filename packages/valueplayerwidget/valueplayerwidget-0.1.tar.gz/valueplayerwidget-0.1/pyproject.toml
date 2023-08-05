@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "valueplayerwidget"
+author = "Edwige Gros"
+author-email = "edwige.gros@laposte.net"
+home-page = "https://gitlab.u-psud.fr/edwige.gros/ValuePlayerWidget.git"
+classifiers = ["License :: OSI Approved :: MIT License"]
+

@@ -1,0 +1,10 @@
+stages:
+- test
+
+test:
+  image: python
+  stage: test
+  script:
+  - pip install pytest networkx
+  - pip install ipywidgets
+  - pytest --doctest-modules
