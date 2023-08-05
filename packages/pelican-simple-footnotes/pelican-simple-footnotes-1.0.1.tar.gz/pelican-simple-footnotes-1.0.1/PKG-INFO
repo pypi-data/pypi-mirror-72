@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: pelican-simple-footnotes
+Version: 1.0.1
+Summary: Pelican plugin to add footnotes to articles and pages
+Home-page: https://github.com/pelican-plugins/simple-footnotes
+License: AGPL-3.0
+Keywords: footnotes,pelican,plugin
+Author: Stuart Langridge
+Author-email: sil@kryogenix.org
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Framework :: Pelican
+Classifier: Framework :: Pelican :: Plugins
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: markdown
+Requires-Dist: html5lib (>=1.0,<2.0)
+Requires-Dist: markdown (>=3.1.1,<4.0.0); extra == "markdown"
+Requires-Dist: pelican (>=4.2,<5.0)
+Project-URL: Documentation, https://docs.getpelican.com/
+Project-URL: Funding, https://donate.getpelican.com/
+Project-URL: Repository, https://github.com/pelican-plugins/simple-footnotes
+Project-URL: Source, https://github.com/pelican-plugins/simple-footnotes
+Project-URL: Tracker, https://github.com/pelican-plugins/simple-footnotes/issues
+Description-Content-Type: text/markdown
+
+Simple Footnotes
+================
+
+[![Build Status](https://img.shields.io/github/workflow/status/pelican-plugins/simple-footnotes/build)](https://github.com/pelican-plugins/simple-footnotes/actions) [![PyPI Version](https://img.shields.io/pypi/v/pelican-simple-footnotes)](https://pypi.org/project/pelican-simple-footnotes/)
+
+Simple Footnotes is a Pelican plugin for adding footnotes to articles and pages.
+
+Installation
+------------
+
+This plugin, and its dependent package `html5lib`, can be installed via:
+
+    python -m pip install pelican-simple-footnotes
+
+Usage
+-----
+
+When writing an article or page, add a footnote like this:
+
+    Here’s my written text[ref]and here is a footnote[/ref].
+
+This will appear as, roughly:
+
+Here’s my written text<sup>1</sup>
+
+ 1. and here is a footnote ↩
+
+This should work with any content format (reST, Markdown, et cetera), because
+it looks for `[ref]` and `[/ref]` once the conversion to HTML has happened.
+
+Contributing
+------------
+
+Contributions are welcome and much appreciated. Every little bit helps. You can contribute by improving the documentation, adding missing features, and fixing bugs. You can also help out by reviewing and commenting on [existing issues][].
+
+To start contributing to this plugin, review the [Contributing to Pelican][] documentation, beginning with the **Contributing Code** section.
+
+Credits
+-------
+
+Originally authored by [Stuart Langridge](https://kryogenix.org/), February 2014,
+and subsequently enhanced by members of the Pelican community, including
+[Justin Mayer](https://justinmayer.com/), who re-packaged it for publication to
+PyPI.
+
+Inspired by Andrew Nacin’s [Simple Footnotes WordPress plugin](https://wordpress.org/plugins/simple-footnotes/).
+
+
+[existing issues]: https://github.com/pelican-plugins/simple-footnotes/issues
+[Contributing to Pelican]: https://docs.getpelican.com/en/latest/contribute.html
+
