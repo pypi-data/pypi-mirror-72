@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: tightai
+Version: 1.0.14
+Summary: Serverless Model Hosting & Marketplace
+Home-page: https://github.com/tightai/tightai
+Author: Justin Mitchel
+Author-email: hi@tight.ai
+License: Apache Software License 2.0
+Description: # Tight.ai SDK
+        > Serverless Model Hosting & Model Marketplace
+        
+        
+        ## Install
+        
+        `pip install tightai`
+        
+        ## Getting Started
+        
+        ### Sign up
+        - Go to [https://www.tight.ai/signup](https://www.tight.ai/signup)
+        
+        ## Authenticate
+        ### Via Login
+        
+        This will prompt you for your username (or email) and password you used to sign up on tight.ai. Your local system will store unique credentials (never your account password) so your machine can re-access your account at anytime.
+        
+        _Python Shell_
+        ```python
+        from tightai.auth import login
+        login()
+        ```
+        
+        _Command Line_ 
+        
+        ```
+        $ tight login
+        ```
+        
+        ### Via Token
+        Tokens are simple to create and very useful when needing to authenticate in a different way.
+        
+        > Coming soon.
+        
+Keywords: serverless ml,model hosting,ml marketplace,ai,machine learning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
