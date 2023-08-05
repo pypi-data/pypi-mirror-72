@@ -1,0 +1,4 @@
+click
+
+[:platform_system == "Linux"]
+distro
