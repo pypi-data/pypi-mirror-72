@@ -1,0 +1,17 @@
+kwarray/__init__.py,sha256=cIPDY7BV-Gbg2rH6Q6mjYwubPaxQjbCPTYAUTtPQC18,2195
+kwarray/algo_assignment.py,sha256=4dwfX76ozhrioHGICCcp7WTd3sjA6JnCzef-nJ8CS6I,7606
+kwarray/algo_setcover.py,sha256=Okj8gnI2koDzGN1kOu7kq1xJhxF4dx39OdBjoPRLSxU,17433
+kwarray/arrayapi.py,sha256=bbkk4sweRy6W41hFVo_husZMbW36LsdFAvfaw_z0j6Q,37590
+kwarray/dataframe_light.py,sha256=g15A78l0SEDDN5t6PXal4o5FoahzZgSot-OkMOe1gMo,22281
+kwarray/distributions.py,sha256=O3EgLvPPC0FNG1fc6UZMAYV6Yo6mBhgCTwcHpG7ohvc,30006
+kwarray/fast_rand.py,sha256=yPUZg1PjnBhABpTBX4QUcEerCRdnbixyX8vGUfcZ2wY,11937
+kwarray/util_averages.py,sha256=ziwpbSpgtqMaI-DW-ib_n7XM6orrnnzcJ6y5dtmQSX4,6187
+kwarray/util_groups.py,sha256=j5ApVq0bSij8xqZcPgpjhDl46TS3cr8pN-tI8QZx28s,12198
+kwarray/util_misc.py,sha256=VgVSEKgqfxjmzbkjGCGz28W4_MWjRmcNRfONdubYrDY,1612
+kwarray/util_numpy.py,sha256=9SH_52zE7mPLRPNGG62D9-MO4Ta19iFBI_CzE5Zs3gs,16232
+kwarray/util_random.py,sha256=7nL4pSawxC3GEE2eY5Xhv6RfR7UGM6OWDKS82Qxem2g,14104
+kwarray/util_torch.py,sha256=-vXdaYAWX7CnH5nBDJduDf2CY79CQHbhei-XcPFfX4E,4808
+kwarray-0.5.9.dist-info/METADATA,sha256=TAhXfu9OrsA3kqyxdqYNBN226bhTcURSwYRFkw_ZcuY,7987
+kwarray-0.5.9.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+kwarray-0.5.9.dist-info/top_level.txt,sha256=BPzeh4KWWy1tSeqiRgA4h34EnfQG5dFdboeCG_pn1mI,8
+kwarray-0.5.9.dist-info/RECORD,,
