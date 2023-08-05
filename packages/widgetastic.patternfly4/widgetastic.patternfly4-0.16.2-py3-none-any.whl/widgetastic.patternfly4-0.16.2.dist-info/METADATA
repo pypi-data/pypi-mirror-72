@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: widgetastic.patternfly4
+Version: 0.16.2
+Summary: Patternfly4 widget library for Widgetastic
+Home-page: https://github.com/RedHatQE/widgetastic.patternfly4
+License: Apache license 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Requires-Dist: selenium (==3.141.0)
+Requires-Dist: widgetastic.core (>=0.37)
+Provides-Extra: dev
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: codecov ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: sphinx ; extra == 'doc'
+
+UNKNOWN
+
+
