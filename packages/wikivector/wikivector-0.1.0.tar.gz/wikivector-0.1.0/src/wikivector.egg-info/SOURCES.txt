@@ -1,0 +1,14 @@
+README.md
+setup.py
+bin/embed_articles
+bin/export_articles
+bin/read_article
+bin/wiki_header
+src/wikivector/__init__.py
+src/wikivector/vector.py
+src/wikivector/wiki.py
+src/wikivector.egg-info/PKG-INFO
+src/wikivector.egg-info/SOURCES.txt
+src/wikivector.egg-info/dependency_links.txt
+src/wikivector.egg-info/requires.txt
+src/wikivector.egg-info/top_level.txt
