@@ -1,0 +1,28 @@
+Metadata-Version: 1.2
+Name: jadukor
+Version: 0.0.7
+Summary: The most powerfull module in the universe
+Home-page: http://github.com/atmragib/jadukor
+Author: A T M Ragib Raihan
+Author-email: atmragibraihan@gmail.com
+License: MIT
+Download-URL: http://github.com/atmragib/jadukor/archive/v0.0.7.tar.gz
+Description: Important links for users:
+        1. https://jadukor.readthedocs.io/en/latest/
+        2. https://github.com/atmragib/jadukor/releases
+        3. https://pypi.org/project/jadukor/
+        4. Find on Test PyPi](https://test.pypi.org/project/jadukor/
+Keywords: personal,handy,ragib,jadukor
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.1
