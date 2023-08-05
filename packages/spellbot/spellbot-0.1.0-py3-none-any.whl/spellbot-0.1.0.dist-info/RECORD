@@ -1,0 +1,14 @@
+spellbot/__init__.py,sha256=D6PhgIn9Av7KpYBm1fZKi3w4RiWPzBDJYeDBIOjB6Vg,15442
+spellbot/_version.py,sha256=LYivZ7OlBhnbmmmmZgiliIslMd6w30jx1krTia_-eFM,1680
+spellbot/assets/alembic.ini,sha256=8W-rJF6LTWxRrXMm4M9FGbzwQ3v_gm4FWpF0WG3k-TY,647
+spellbot/assets/strings.yaml,sha256=U9TQacE-C0WRK-tuZEStF6qWacuJhpCzK8mTFAte2m8,100
+spellbot/assets.py,sha256=cBo9f0Q0Eenh2iPy0nTvPx_phpsUtf0dg6Lqfi51WUA,799
+spellbot/data.py,sha256=AGlzsehRDIB5ldTl1AEAlEq5LnSBV2UrRdpOmrV7w7Q,1889
+spellbot/versions/env.py,sha256=5ut5cJpOGpGO45L8wC9rT7BbEOmYiro7BIRcywvTKRQ,1540
+spellbot/versions/script.py.mako,sha256=8_xgA-gm_OhehnO7CiIijWgnm00ZlszEHtIHrAYFJl0,494
+spellbot/versions/versions/bb3268ba7108_initial_revision.py,sha256=Q487uY4N3mfM5slkyUcdTW0Q_qy7I_q3h8GN_AjPvCY,707
+spellbot-0.1.0.dist-info/entry_points.txt,sha256=3uwiZY5i1k41GPj-uuP90HO42ZyjEgSKtalGOqC6Vao,42
+spellbot-0.1.0.dist-info/LICENSE.md,sha256=KCdNseooVAW_f2RZIhxGKZAhp_ZwOaRbyo932WBJeYg,1063
+spellbot-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+spellbot-0.1.0.dist-info/METADATA,sha256=Sb6VTwg-CWknhagXQ9wFXaV9toiJfhIbfksyeayJtNM,6741
+spellbot-0.1.0.dist-info/RECORD,,
