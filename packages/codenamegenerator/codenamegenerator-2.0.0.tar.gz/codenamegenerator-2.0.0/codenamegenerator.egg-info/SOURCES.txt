@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+codenamegenerator/__init__.py
+codenamegenerator/__main__.py
+codenamegenerator.egg-info/PKG-INFO
+codenamegenerator.egg-info/SOURCES.txt
+codenamegenerator.egg-info/dependency_links.txt
+codenamegenerator.egg-info/top_level.txt
