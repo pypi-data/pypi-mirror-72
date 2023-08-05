@@ -1,0 +1,25 @@
+{% set name = "staticrab-backend" %}
+{% set version = "0.0.2" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+build:
+  number: 1
+
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  imports:
+    - staticrab_backend
+
+about:
+  home: https://github.com/staticrab/staticrab

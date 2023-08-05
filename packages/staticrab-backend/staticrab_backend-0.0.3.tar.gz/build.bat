@@ -1,0 +1,2 @@
+pip install https://files.pythonhosted.org/packages/71/7a/3ba278b2961cfe87c5130abb990b1a3bcd6aa0cd0c1877668d65ff80c36b/staticrab_backend-0.0.2-cp38-none-win_amd64.whl --no-dependencies --ignore-installed
+if errorlevel 1 exit 1
