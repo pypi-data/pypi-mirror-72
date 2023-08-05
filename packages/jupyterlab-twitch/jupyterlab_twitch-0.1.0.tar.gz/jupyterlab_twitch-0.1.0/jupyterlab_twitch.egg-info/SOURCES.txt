@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+jupyterlab_twitch/__init__.py
+jupyterlab_twitch/_version.py
+jupyterlab_twitch/twitch_player.py
+jupyterlab_twitch.egg-info/PKG-INFO
+jupyterlab_twitch.egg-info/SOURCES.txt
+jupyterlab_twitch.egg-info/dependency_links.txt
+jupyterlab_twitch.egg-info/not-zip-safe
+jupyterlab_twitch.egg-info/requires.txt
+jupyterlab_twitch.egg-info/top_level.txt
