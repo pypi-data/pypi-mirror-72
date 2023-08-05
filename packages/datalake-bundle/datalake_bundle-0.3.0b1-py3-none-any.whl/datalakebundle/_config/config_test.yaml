@@ -1,0 +1,35 @@
+imports:
+  - '@databricksbundle/spark/spark_test.yaml'
+
+parameters:
+  tablePrefix: 'prf'
+
+  datalake:
+    basePath: '/foo/bar'
+
+  datalakebundle:
+    table:
+      identifier:
+        matcher: '{dbNameWithoutEnv}_{encrypted}.{tableName}'
+        transformations:
+          encrypted: !expr 'encrypted == "e"'
+    tables:
+      _defaults:
+        dbName: '%tablePrefix%_%kernel.environment%_{dbNameWithoutEnv}'
+        targetPath:
+          resolverClass: 'datalakebundle.test.TargetPathResolver'
+          resolverArguments:
+            - '%datalake.basePath%'
+
+      mydatabase_e.my_table:
+        schemaPath: 'datalakebundle.test.TestSchema'
+
+      mydatabase_p.another_table:
+        schemaPath: 'datalakebundle.test.AnotherSchema'
+        partitionBy: ['date']
+
+    externalTables:
+      _defaults:
+        dbName: '%tablePrefix%_%kernel.environment%_{dbNameWithoutEnv}'
+      mydatabase_e.my_external_table:
+      mydatabase_p.another_external_table:
