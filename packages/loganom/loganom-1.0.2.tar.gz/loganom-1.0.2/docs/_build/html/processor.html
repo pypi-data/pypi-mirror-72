@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processors &#8212; loganom 0.0.8 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Usage" href="usage.html" />
+    <link rel="prev" title="Installation" href="install.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="processors">
+<h1>Processors<a class="headerlink" href="#processors" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="postfix-sasl">
+<h2>Postfix SASL<a class="headerlink" href="#postfix-sasl" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ loganom postfix-sasl
+</pre></div>
+</div>
+<p>It checks accounts authentication through postfix sasl.</p>
+<p>Usually when an account is compromised, attackers use several machines from
+their botnets to send emails (spam/virus/phishing/etc) with that credential.</p>
+<p>This can be observed when a user that usually connects from the same country,
+suddenly send emails from all around the world.</p>
+<p>IP addresses can be ignored, based on a list of name patterns (dns reverse
+name) or based on it’s ASN, with the config options <em>pattern_org</em> and
+<em>pattern_ip</em>.</p>
+<p>Can be also used the option <em>country_ignore</em>, which will ignore IP addresses
+from these countries.</p>
+<p>This processor needs an <em>ipinfo.io</em> api token.</p>
+<p>See more in <a class="reference internal" href="config.html"><span class="doc">Configuration</span></a> (General section).</p>
+</div>
+<div class="section" id="quota-high">
+<h2>Quota High<a class="headerlink" href="#quota-high" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ loganom quota-high
+</pre></div>
+</div>
+<p>It checks email accounts that had their email messages rejected because of rate
+limit.</p>
+<p>Usually used with PolicyD service.</p>
+<p>Example of reject message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Jun</span> <span class="mi">19</span> <span class="mi">09</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">26</span> <span class="n">mail</span><span class="o">-</span><span class="n">server</span> <span class="n">postfix</span><span class="o">/</span><span class="n">smtpd</span><span class="p">[</span><span class="mi">14222</span><span class="p">]:</span> <span class="n">NOQUEUE</span><span class="p">:</span>
+<span class="n">reject</span><span class="p">:</span> <span class="n">RCPT</span> <span class="kn">from</span> <span class="nn">host</span><span class="p">[</span><span class="n">X</span><span class="o">.</span><span class="n">X</span><span class="o">.</span><span class="n">X</span><span class="o">.</span><span class="n">X</span><span class="p">]:</span> <span class="mi">554</span> <span class="mf">5.7</span><span class="o">.</span><span class="mi">1</span> <span class="o">&lt;</span><span class="n">anotheruser</span><span class="nd">@domain</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span><span class="p">:</span>
+<span class="n">Recipient</span> <span class="n">address</span> <span class="n">rejected</span><span class="p">:</span> <span class="n">Quota</span> <span class="n">per</span> <span class="n">hour</span> <span class="n">exceeded</span><span class="p">;</span>
+<span class="n">from</span><span class="o">=&lt;</span><span class="n">user</span><span class="nd">@domain</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span> <span class="n">to</span><span class="o">=&lt;</span><span class="n">anotheruser</span><span class="nd">@domain</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span> <span class="n">proto</span><span class="o">=</span><span class="n">ESMTP</span> <span class="n">helo</span><span class="o">=&lt;</span><span class="n">ABCD</span><span class="o">-</span><span class="n">IR123AB</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>If the number of these reject messages from the same sender became too high
+(default 150), it is considered an anomaly.</p>
+<p>The number of rejecting messages and the reject message itself can be
+customized, see more in <a class="reference internal" href="usage.html"><span class="doc">Usage</span></a> section.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">loganom</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Processors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#postfix-sasl">Postfix SASL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quota-high">Quota High</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="install.html" title="previous chapter">Installation</a></li>
+      <li>Next: <a href="usage.html" title="next chapter">Usage</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Danilo G. Baio.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/processor.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
