@@ -1,0 +1,3 @@
+[console_scripts]
+hdhr_disk_space_monitor = hdhr_disk_space_monitor.core:main
+
