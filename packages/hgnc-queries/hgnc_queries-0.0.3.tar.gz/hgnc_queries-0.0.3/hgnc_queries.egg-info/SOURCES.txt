@@ -1,0 +1,10 @@
+README.md
+setup.py
+hgnc_queries/__init__.py
+hgnc_queries/api.py
+hgnc_queries/queries.py
+hgnc_queries.egg-info/PKG-INFO
+hgnc_queries.egg-info/SOURCES.txt
+hgnc_queries.egg-info/dependency_links.txt
+hgnc_queries.egg-info/top_level.txt
+test/test_hgnc_queries.py
