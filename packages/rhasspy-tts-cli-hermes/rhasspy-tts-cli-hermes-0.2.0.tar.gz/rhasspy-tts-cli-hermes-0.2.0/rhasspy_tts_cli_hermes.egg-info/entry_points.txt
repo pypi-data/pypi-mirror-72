@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-tts-cli-hermes = rhasspytts_cli_hermes.__main__:main
+

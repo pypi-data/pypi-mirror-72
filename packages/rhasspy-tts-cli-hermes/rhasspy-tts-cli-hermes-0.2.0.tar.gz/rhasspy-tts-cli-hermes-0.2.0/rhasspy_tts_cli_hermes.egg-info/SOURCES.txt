@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+rhasspy_tts_cli_hermes.egg-info/PKG-INFO
+rhasspy_tts_cli_hermes.egg-info/SOURCES.txt
+rhasspy_tts_cli_hermes.egg-info/dependency_links.txt
+rhasspy_tts_cli_hermes.egg-info/entry_points.txt
+rhasspy_tts_cli_hermes.egg-info/requires.txt
+rhasspy_tts_cli_hermes.egg-info/top_level.txt
+rhasspytts_cli_hermes/__init__.py
+rhasspytts_cli_hermes/__main__.py
+rhasspytts_cli_hermes/utils.py
