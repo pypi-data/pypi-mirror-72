@@ -1,0 +1,4 @@
+[console_scripts]
+pylabnet = pylabnet.launchers.launch_control:main
+pylabnet_proxy = pylabnet.launchers.launch_control:main_proxy
+
