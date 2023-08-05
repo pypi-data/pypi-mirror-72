@@ -1,0 +1,3 @@
+[console_scripts]
+filediffs = filediffs.filediffs_script:main
+
