@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-microphone-pyaudio-hermes = rhasspymicrophone_pyaudio_hermes.__main__:main
+
