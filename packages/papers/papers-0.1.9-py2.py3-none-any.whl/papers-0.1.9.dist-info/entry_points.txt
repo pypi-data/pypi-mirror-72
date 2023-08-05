@@ -1,0 +1,5 @@
+[console_scripts]
+papers = papers.cli:cli_papers
+papers-export = papers.cli:cli_export
+papers-import = papers.cli:cli_import
+
