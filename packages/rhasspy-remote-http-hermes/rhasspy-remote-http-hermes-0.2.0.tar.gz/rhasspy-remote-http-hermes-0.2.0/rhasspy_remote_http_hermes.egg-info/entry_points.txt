@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-remote-http-hermes = rhasspyremote_http_hermes.__main__:main
+

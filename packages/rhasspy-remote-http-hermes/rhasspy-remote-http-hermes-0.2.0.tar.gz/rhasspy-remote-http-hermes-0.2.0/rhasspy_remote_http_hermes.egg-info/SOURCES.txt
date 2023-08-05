@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+rhasspy_remote_http_hermes.egg-info/PKG-INFO
+rhasspy_remote_http_hermes.egg-info/SOURCES.txt
+rhasspy_remote_http_hermes.egg-info/dependency_links.txt
+rhasspy_remote_http_hermes.egg-info/entry_points.txt
+rhasspy_remote_http_hermes.egg-info/requires.txt
+rhasspy_remote_http_hermes.egg-info/top_level.txt
+rhasspyremote_http_hermes/__init__.py
+rhasspyremote_http_hermes/__main__.py
