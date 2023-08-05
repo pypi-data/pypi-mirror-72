@@ -1,0 +1,13 @@
+torchtrace/__init__.py,sha256=HwWMNCC3Ezpvevc1sAPqaaGXQb0SVGZcI6cBAG8laeM,391
+torchtrace/__main__.py,sha256=j64QUpPdRb_jLiRCxA2F0HVhQqdmepAIptpf5-avuzc,3618
+torchtrace/base.py,sha256=VcXZ9M4wbmGQ4FMna625MSxpV-CzRzy7BpizRzt0h_M,7926
+torchtrace/init.py,sha256=GdRK4DrOy-mg1I0dNekUoRQalAeYODKRH0K_G-D5S2s,1007
+torchtrace/nn.py,sha256=wHut5DEiAfNaHZKkjD4-zgXHBNyoZae7EoRkvvZ2zK8,9027
+torchtrace/optim.py,sha256=ZkmUWo-DICmu7FTrd50sQe4_ZVIe60aTSc9X62cO1vU,6437
+torchtrace/test.py,sha256=K5xStgJkQGc2ifRHTiI54UCeFmV7U3cSYx8zkqNfZs8,6701
+torchtrace/tracer.py,sha256=l4gDZP0RoooI7QSodoIqYHOSYp3w_lPSJxeziUjkbQE,1067
+torchtrace/utils.py,sha256=hY-4-evR9rGTGP1zVdn8T8-mHGnnaCEPjnyK5JiDwRA,4058
+torchtrace-0.2.dist-info/METADATA,sha256=E1QquRSRkYOX1kwHQEnOzNa8ATCVIppOCwEx1Q3DE4g,269
+torchtrace-0.2.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+torchtrace-0.2.dist-info/top_level.txt,sha256=IsoHrDFIO0EI1N6UoKIb9DNJCrqu2ZyvGfRO5KMgLQA,11
+torchtrace-0.2.dist-info/RECORD,,
