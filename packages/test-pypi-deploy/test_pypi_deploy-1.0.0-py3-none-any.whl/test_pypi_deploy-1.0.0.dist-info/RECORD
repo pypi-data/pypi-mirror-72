@@ -1,0 +1,5 @@
+test_pypi_deploy-1.0.0.data/scripts/hello_world.py,sha256=QN1HtldAXULZft-2k2FO9LrXAZR3kB-5pAVe7M0Szc8,47
+test_pypi_deploy-1.0.0.dist-info/METADATA,sha256=1j5P5LZeUIX6eDwNRgBltBlSGfKw4ZIZ9E1TQDhLHI4,180
+test_pypi_deploy-1.0.0.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+test_pypi_deploy-1.0.0.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+test_pypi_deploy-1.0.0.dist-info/RECORD,,
