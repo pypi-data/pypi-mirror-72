@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: forest-utils
+Version: 0.0.8
+Summary: Package for Smoketrees model zoo
+Home-page: https://github.com/smoke-trees/forest-utils
+Author: Smoketrees
+Author-email: info@smoketrees.dev
+Maintainer: Ubaid Usmani
+Maintainer-email: usmaniubaid@gmail.com
+License: UNKNOWN
+Project-URL: Documentation, https://github.com/smoke-trees/forest-utils
+Project-URL: Code, https://github.com/smoke-trees/forest-utils
+Project-URL: Issue tracker, https://github.com/smoke-trees/forest-utils/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: gdown (==3.11.1)
+Requires-Dist: requests (==2.24.0)
+Requires-Dist: tensorflow
+Requires-Dist: spacy
+Requires-Dist: pandas
+Requires-Dist: click
+
+## Forest Utils package for smoketrees model zoo
+
+This package will be useful for carrying out all the utilities of the SmokeTrees Model Zoo lovingly called SmokeTrees Forest.`
+
+## Features
+
+- [X] Pull down HDF5 (.h5) models from the zoo and load with keras
+- [X] Pull down the spacy model from the zoo
+
+> Package is under test before being published to PyPI
+
+## Steps to install the package from source code
+
+- Clone the repo by the following command
+    ``` bash
+        git clone https://github.com/smoke-trees/forest-utils.git
+    ```
+- Change the directory to the package 
+    ``` bash
+        cd forest-utils
+    ```
+- Execute the following command
+    ``` bash
+        pip install -e .
+    ```
+
+## Example Usage 
+
+- Load Model using Tensorflow
+
+``` Python
+    from forest_utils import export_keras
+
+    model = export_keras.ModelFromH5().load_model()
+```
+
+- Load Dataset
+
+``` Python
+    from forest_utils import datasets
+
+    tweets = datasets.Dataset().get_emo_tweets()
+```
+
+After pulling down the model use it for predictions and other evalutaion functionalities.
+
