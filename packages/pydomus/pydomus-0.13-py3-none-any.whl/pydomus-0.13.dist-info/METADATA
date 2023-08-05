@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pydomus
+Version: 0.13
+Summary: Unofficial interface to LifeDomus
+Home-page: UNKNOWN
+Author: Philippe Biondi
+Author-email: phil@secdev.org
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: typer[all]
+Requires-Dist: xlrd
+Requires-Dist: zeep
+
+UNKNOWN
+
+

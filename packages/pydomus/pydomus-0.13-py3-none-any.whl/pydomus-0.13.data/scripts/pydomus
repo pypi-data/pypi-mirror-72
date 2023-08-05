@@ -1,0 +1,5 @@
+#!python
+
+from pydomus import cli
+
+cli.main()
