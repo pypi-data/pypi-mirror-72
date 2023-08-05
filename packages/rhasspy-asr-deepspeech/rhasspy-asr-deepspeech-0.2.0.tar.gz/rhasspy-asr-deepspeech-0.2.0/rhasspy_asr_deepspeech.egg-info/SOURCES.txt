@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+rhasspy_asr_deepspeech.egg-info/PKG-INFO
+rhasspy_asr_deepspeech.egg-info/SOURCES.txt
+rhasspy_asr_deepspeech.egg-info/dependency_links.txt
+rhasspy_asr_deepspeech.egg-info/requires.txt
+rhasspy_asr_deepspeech.egg-info/top_level.txt
+rhasspyasr_deepspeech/__init__.py
+rhasspyasr_deepspeech/py.typed
+rhasspyasr_deepspeech/train.py
+rhasspyasr_deepspeech/transcribe.py

@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: rhasspy-asr-deepspeech
+Version: 0.2.0
+Summary: UNKNOWN
+Home-page: https://github.com/rhasspy/rhasspy-asr-deepspeech
+Author: Michael Hansen
+Author-email: mike@rhasspy.org
+License: UNKNOWN
+Description: # Rhasspy ASR DeepSpeech
+        
+        Rhasspy ASR library that uses Mozilla's DeepSpeech 0.6.
+        
+        ## Requirements
+        
+        * Python 3.7
+        * [Mozilla DeepSpeech 0.6.1](https://github.com/mozilla/DeepSpeech/releases/tag/v0.6.1)
+        * `generate_trie` in `$PATH` from [native client](https://github.com/mozilla/DeepSpeech/releases/download/v0.6.1/native_client.amd64.cpu.linux.tar.xz)
+        * `build_binary` in `$PATH` from [KenLM](https://github.com/kpu/kenlm)
+            * [Pre-built binaries](https://github.com/synesthesiam/prebuilt-apps)
+            
+        ## Installation
+        
+        ```bash
+        $ git clone https://github.com/rhasspy/rhasspy-asr-deepspeech
+        $ cd rhasspy-asr-deepspeech
+        $ ./configure
+        $ make
+        $ make install
+        ```
+        
+        ## Deployment
+        
+        ```bash
+        $ make dist
+        ```
+        
+        See `dist/` directory for `.tar.gz` file.
+        
+        ## Running
+        
+        ```bash
+        $ bin/rhasspy-asr-deepspeech <ARGS>
+        ```
+        
+Platform: UNKNOWN
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
