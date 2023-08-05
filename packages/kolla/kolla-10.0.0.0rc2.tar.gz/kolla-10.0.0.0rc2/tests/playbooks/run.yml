@@ -1,0 +1,24 @@
+---
+- hosts: all
+  vars_files:
+    - ../vars/zuul.yml
+  tasks:
+    - name: Ensure /etc/kolla exists
+      file:
+        path: /etc/kolla
+        state: directory
+        mode: 0777
+      become: true
+
+    - name: Template kolla-build.conf
+      template:
+        src: "{{ zuul.executor.work_root }}/{{ zuul.project.src_dir }}/tests/templates/kolla-build.conf.j2"
+        dest: /etc/kolla/kolla-build.conf
+
+    - name: Template template_overrides.j2
+      template:
+        src: "{{ zuul.executor.work_root }}/{{ zuul.project.src_dir }}/tests/templates/template_overrides.j2"
+        dest: /etc/kolla/template_overrides.j2
+
+    - name: Run kolla-build
+      command: "{{ virtualenv_path }}/bin/kolla-build"
