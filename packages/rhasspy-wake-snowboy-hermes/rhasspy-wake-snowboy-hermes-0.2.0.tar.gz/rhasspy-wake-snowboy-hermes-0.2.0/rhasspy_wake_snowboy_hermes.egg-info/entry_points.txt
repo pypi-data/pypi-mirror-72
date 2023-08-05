@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-wake-snowboy-hermes = rhasspywake_snowboy_hermes.__main__:main
+
