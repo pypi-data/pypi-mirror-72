@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+__init__.py
+pyxml2dict.py
+setup.py
+pyxml2dict.egg-info/PKG-INFO
+pyxml2dict.egg-info/SOURCES.txt
+pyxml2dict.egg-info/dependency_links.txt
+pyxml2dict.egg-info/top_level.txt
