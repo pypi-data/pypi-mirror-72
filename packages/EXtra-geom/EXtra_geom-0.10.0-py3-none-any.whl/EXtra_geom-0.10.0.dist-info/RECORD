@@ -1,0 +1,17 @@
+extra_geom/__init__.py,sha256=ogQ_fS5Lz5WKE-fQAaMqHP7xOaaf1mwG2-gqqvLenPE,1993
+extra_geom/crystfel_fmt.py,sha256=zvdePttZ_764A0y_ch1wry-Tor2FU179B-qH0QxNOws,5573
+extra_geom/detectors.py,sha256=CYPMpQLCHSQbd-MMhIUpZk9J5pBVCCuLEuXaGptEmq8,64937
+extra_geom/lpd_old.py,sha256=1z3Zks8XZICh5QAPm7GAhKQyewKFv87E6M_N4dc1bHk,8695
+extra_geom/snapped.py,sha256=8o4atSCOz92Zxkzztj2ZaBts5CxdDjUCNnqwq7gX1-c,6454
+extra_geom/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+extra_geom/tests/dssc_geo_june19.h5,sha256=Hse3nDdZtqspR5-7a-ipJWAK-A21bHplJWhXVRyVNCY,63752
+extra_geom/tests/lpd_mar_18.h5,sha256=jHt2dELXkj6EU9SCzVkUwYO65pDIQxmUov7XmBFJl7c,425808
+extra_geom/tests/test_agipd_geometry.py,sha256=Z84Q18n-hy6p_X9WyqUGimYGPdOe90QyPsT-WDUGBjc,5819
+extra_geom/tests/test_dssc_geometry.py,sha256=cUfbKDr2lhs6ru0pDmOJb-3RZNjnNhIz1TXTIDthI8s,2050
+extra_geom/tests/test_geometry_old.py,sha256=NHauHar7N89oWfOGXwzl9EeuwQY-rjJA7F3FmtQLQNU,1141
+extra_geom/tests/test_lpd_geometry.py,sha256=vely5z_PSgNwMD_ljL3gJR5T2ZMPN0n8Te-pBiDjS3o,4700
+EXtra_geom-0.10.0.dist-info/LICENSE,sha256=wD9X3a6eMFMQ8txT7iGhTho80ybSVPPCAZWuaZ_5QlI,1548
+EXtra_geom-0.10.0.dist-info/METADATA,sha256=Av2IdFKofY2UPspGK7zyBmlusHiDZTYDiKQ-g-JtDXc,2384
+EXtra_geom-0.10.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+EXtra_geom-0.10.0.dist-info/top_level.txt,sha256=X3HmYyr-WSG4XLgJvl5EY-gBQhNLrqJk3VedzKrvM_E,11
+EXtra_geom-0.10.0.dist-info/RECORD,,
