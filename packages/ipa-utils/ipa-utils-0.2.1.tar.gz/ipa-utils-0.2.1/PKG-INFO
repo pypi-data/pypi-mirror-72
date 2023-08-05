@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: ipa-utils
+Version: 0.2.1
+Summary: Freeipa command line utils. Use sub-command to do real work.
+Home-page: https://github.com/zencore-cn/zencore-issues
+Author: zencore
+Author-email: dobetter@zencore.cn
+License: MIT
+Description: # ipa-utils
+        
+        Freeipa command line utils. Use sub-command to do real work.
+        
+        ## Install
+        
+        ```
+        pip install ipa-utils
+        ```
+        
+        ## Installed Commands
+        
+        - ipa-utils
+        
+        ## Sub-commands of ipa-utils
+        
+        - `add-user` Create a new user entry.
+        - `delete-user` Delete a user entry.
+        - `get-user-details` Get user entry information.
+        - `get-users` Export all users to a csv file.
+        - `update-user` Update user attributes.
+        
+        ## Usage and Examples
+        
+        ```
+        C:\Workspace\ipa-utils>ipa-utils --help
+        Usage: ipa-utils [OPTIONS] COMMAND [ARGS]...
+        
+          Freeipa command line utils. Use sub-command to do real work.
+        
+        Options:
+          -h, --host TEXT      Server address, default to 127.0.0.1.
+          -p, --port INTEGER   Server port, default 389.
+          -u, --username TEXT  Usesname to binding. Different user may have different
+                               field permissions. If no username provides, bind with
+                               anonymous user.
+          -P, --password TEXT  Password for the user.
+          -b, --base-dn TEXT   BaseDN of the ldap server. If no BaseDN provides, try
+                               to search it automatically.
+          --help               Show this message and exit.
+        
+        Commands:
+          add-user         Create a new user entry.
+          delete-user      Delete a user entry.
+          get-user-detail  Get user entry information.
+          get-users        Export all users to a csv file.
+          update-user      Update user attributes.
+        ```
+        
+        ## Bug Report
+        
+        Please report any issues at https://github.com/zencore-cn/zencore-issues.
+        
+        ## Releases
+        
+        ### v0.2.1 2020-06-24
+        
+        - Doc update.
+        
+        ### v0.2.0 2020-06-24
+        
+        - Add add-user sub-command.
+        - Add update-user sub-command.
+        - Add delete-user sub-command.
+        
+        ### v0.1.7 2019-08-18
+        
+        - Old release.
+        - Support get-user-detail and get-users.
+Keywords: ipa-utils
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown

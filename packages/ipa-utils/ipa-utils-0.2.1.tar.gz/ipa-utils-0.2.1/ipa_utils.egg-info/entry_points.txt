@@ -1,0 +1,3 @@
+[console_scripts]
+ipa-utils = ipa_utils:ipa
+
