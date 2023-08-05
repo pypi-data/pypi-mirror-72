@@ -1,0 +1,15 @@
+README.md
+setup.py
+slidingwindow/ArrayUtils.py
+slidingwindow/Batching.py
+slidingwindow/Merging.py
+slidingwindow/RectangleUtils.py
+slidingwindow/SlidingWindow.py
+slidingwindow/WindowDistance.py
+slidingwindow/__init__.py
+slidingwindow.egg-info/PKG-INFO
+slidingwindow.egg-info/SOURCES.txt
+slidingwindow.egg-info/dependency_links.txt
+slidingwindow.egg-info/requires.txt
+slidingwindow.egg-info/top_level.txt
+slidingwindow.egg-info/zip-safe
