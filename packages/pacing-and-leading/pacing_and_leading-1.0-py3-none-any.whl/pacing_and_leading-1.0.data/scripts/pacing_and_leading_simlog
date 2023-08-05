@@ -1,0 +1,16 @@
+#!python
+
+import sys
+import matplotlib.pyplot as plt
+from pacing_and_leading.log import Log
+
+
+log = Log.load()
+
+start_time = log.data[0].time
+
+x = [float(l.time) for l in log.data]
+y = [float(l.similarity) for l in log.data]
+
+plt.plot(x,y)
+plt.show()
