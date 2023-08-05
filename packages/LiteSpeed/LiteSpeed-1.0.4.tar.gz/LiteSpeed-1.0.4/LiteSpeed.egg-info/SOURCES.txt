@@ -1,0 +1,11 @@
+README.md
+setup.py
+LiteSpeed.egg-info/PKG-INFO
+LiteSpeed.egg-info/SOURCES.txt
+LiteSpeed.egg-info/dependency_links.txt
+LiteSpeed.egg-info/top_level.txt
+litespeed/__init__.py
+litespeed/helpers.py
+litespeed/mail.py
+litespeed/server.py
+litespeed/utils.py
