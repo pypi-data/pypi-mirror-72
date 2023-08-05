@@ -1,0 +1,24 @@
+Metadata-Version: 1.2
+Name: helianthus-tools
+Version: 1.7.5
+Summary: HeliantHuS-Tools ~ wow awesome!Change AWD plugin BUG(input host error.)self use tools `﹀`γ
+Home-page: https://github.com/L-HeliantHuS/helianthus-tools
+Author: HeliantHuS
+Author-email: 1984441370@qq.com
+Maintainer: HeliantHuS
+Maintainer-email: 1984441370@qq.com
+License: MIT License
+Description: HeliantHuS-Tools
+        
+        BiliBili: https://space.bilibili.com/178530124
+Platform: all
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
