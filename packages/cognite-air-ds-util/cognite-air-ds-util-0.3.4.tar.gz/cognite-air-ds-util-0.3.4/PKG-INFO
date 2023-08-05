@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: cognite-air-ds-util
+Version: 0.3.4
+Summary: Data science utilities used in the AIR project
+Author: cognite
+Author-email: support@cognite.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: cognite-sdk (>=1,<2)
+Requires-Dist: cognite-sdk-experimental (>=0,<1)
+Requires-Dist: numpy (>=1.18.4,<2.0.0)
+Requires-Dist: pandas (>=1.0.3,<2.0.0)
+Requires-Dist: ruamel.yaml (>=0.16.10,<0.17.0)
