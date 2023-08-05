@@ -1,0 +1,34 @@
+---
+- name: Create local .pip directory for {{ user }}
+  file:
+    path: "~{{ user }}/.pip"
+    state: directory
+  become: True
+  become_user: "{{ user }}"
+
+- name: Create pip.conf for {{ user }}
+  copy:
+    content: |
+      [global]
+      index-url = {{ pip_index_url }}
+      {% if pip_trusted_hosts | length > 0 -%}
+      trusted-host =
+        {% for host in pip_trusted_hosts | unique -%}
+        {{ host }}
+        {% endfor -%}
+      {% endif -%}
+      {% if pip_proxy | length > 0 -%}
+      proxy = {{ pip_proxy }}
+      {% endif -%}
+    dest: "~{{ user}}/.pip/pip.conf"
+  become: True
+  become_user: "{{ user }}"
+
+- name: Create .pydistutils.cfg for {{ user }}
+  copy:
+    content: |
+      [easy_install]
+      index-url = {{ pip_index_url }}
+    dest: "~{{ user}}/.pydistutils.cfg"
+  become: True
+  become_user: "{{ user }}"
