@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: ccfwidget
+Version: 0.5.0
+Summary: A Jupyter widget for the Allen Common Coordinate Framework (CCF) Mouse Brain Atlas.
+Home-page: https://github.com/NeurodataWithoutBorders/ccf-widget
+Author: Matt McCormick
+Author-email: matt.mccormick@kitware.com
