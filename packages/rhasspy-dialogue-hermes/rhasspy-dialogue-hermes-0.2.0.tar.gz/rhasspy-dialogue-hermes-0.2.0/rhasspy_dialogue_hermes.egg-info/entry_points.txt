@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-dialogue-hermes = rhasspydialogue_hermes.__main__:main
+

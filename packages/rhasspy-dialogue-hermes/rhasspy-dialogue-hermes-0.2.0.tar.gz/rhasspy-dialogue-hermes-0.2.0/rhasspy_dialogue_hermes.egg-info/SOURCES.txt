@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+rhasspy_dialogue_hermes.egg-info/PKG-INFO
+rhasspy_dialogue_hermes.egg-info/SOURCES.txt
+rhasspy_dialogue_hermes.egg-info/dependency_links.txt
+rhasspy_dialogue_hermes.egg-info/entry_points.txt
+rhasspy_dialogue_hermes.egg-info/requires.txt
+rhasspy_dialogue_hermes.egg-info/top_level.txt
+rhasspydialogue_hermes/__init__.py
+rhasspydialogue_hermes/__main__.py
+rhasspydialogue_hermes/utils.py
