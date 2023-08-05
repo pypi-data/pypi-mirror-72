@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: key_generator
+Version: 1.0.0
+Summary: A Simple python package to generate customizable keys.
+Home-page: https://github.com/Sahith02/key_generator
+Author: Sahith Kurapati
+Author-email: sahith02@gmail.com
+License: MIT
+Description: # key_generator
+        A simple python package to generate customizable keys.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
