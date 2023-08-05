@@ -1,0 +1,3 @@
+[flake8.extension]
+C20 = flake8_multiline_conditionals_comprehensions.mcc_checker:MCCChecker
+
