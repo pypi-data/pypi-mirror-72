@@ -1,0 +1,3 @@
+[console_scripts]
+easyspider = easyspider.crawler.easyspider.core.cmdline:execute
+
