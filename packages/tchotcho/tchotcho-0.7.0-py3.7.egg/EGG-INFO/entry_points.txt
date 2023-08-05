@@ -1,0 +1,3 @@
+[console_scripts]
+tchotcho = tchotcho.__main__:cli
+
