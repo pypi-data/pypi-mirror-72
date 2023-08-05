@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: koreanWikiExtractor_test2
+Version: 0.1
+Summary: convert MediaWiki to plain text
+Home-page: https://github.com/Kim-Jaehun/Korean-WikiExtractor
+Author: Kim Jaehun
+Author-email: wogjs217@gmail.com
+License: MIT
+Description: # Korean-WikiExtractor
+        
+        convert MediaWiki to plain text
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
