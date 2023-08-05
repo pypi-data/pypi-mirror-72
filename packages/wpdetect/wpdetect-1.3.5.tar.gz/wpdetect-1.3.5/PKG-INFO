@@ -1,0 +1,75 @@
+Metadata-Version: 1.1
+Name: wpdetect
+Version: 1.3.5
+Summary: A WordPress detection tool, detects if a website is running WordPress
+Home-page: https://iamlizu.com/tools/wpdetect/
+Author: S M Mahmudul Hasan
+Author-email: thegeek@iamlizu.com
+License: MIT
+Download-URL: https://github.com/IamLizu/wpdetect/archive/v_1_3_3.tar.gz
+Description: WP Detect
+        =========
+        
+        A WordPress detection tool, detects if a website is running
+        WordPress. wpdetect is a great tool when you just want to check
+        WordPress' presence but do not want to scan the site for vulnerabilities
+        or issues.
+        
+        Installation
+        ~~~~~~~~~~~~
+        
+        You can install wpdetect using pip,
+        
+        .. code:: sh
+        
+            pip install wpdetect
+        
+        wpdetect requires Python 3 or above to run. If you have Python 2
+        installed too, make sure to use the right pip.
+        
+        Usage
+        ~~~~~
+        
+        Syntax
+        
+        .. code:: sh
+        
+        	wpdetect <website_url>
+        
+        Example
+        
+        .. code:: sh
+        
+                wpdetect https://iamlizu.com/
+        
+        Or feed a text file with a list of domains, each domain should be separated with new lines.
+        
+        .. code:: sh
+        
+                wpdetect -f sites.txt
+        
+        Where sites.txt will contain domains like this,
+        
+        .. code:: sh
+        
+               https://iamlizu.com/
+               https://www.newyorker.com/
+               http://www.techcrunch.com/
+        
+        Please note that, it is not always possible to detect the presence of WordPress, website admins can take extra measures to remove sign of WordPress.
+        
+        What's new in version 1.3.5
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        * Check with a list of domains 
+Keywords: WordPress,Detect,wpdetect
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
