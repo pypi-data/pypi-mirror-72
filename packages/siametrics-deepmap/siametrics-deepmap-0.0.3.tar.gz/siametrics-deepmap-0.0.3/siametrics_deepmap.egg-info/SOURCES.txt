@@ -1,0 +1,15 @@
+MANIFEST.in
+requirements.txt
+setup.py
+siametrics/__init__.py
+siametrics/deepmap/__init__.py
+siametrics/deepmap/client.py
+siametrics/deepmap/util.py
+siametrics/deepmap/dataset/__init__.py
+siametrics/deepmap/dataset/dataset.py
+siametrics/deepmap/dataset/param.py
+siametrics_deepmap.egg-info/PKG-INFO
+siametrics_deepmap.egg-info/SOURCES.txt
+siametrics_deepmap.egg-info/dependency_links.txt
+siametrics_deepmap.egg-info/requires.txt
+siametrics_deepmap.egg-info/top_level.txt
