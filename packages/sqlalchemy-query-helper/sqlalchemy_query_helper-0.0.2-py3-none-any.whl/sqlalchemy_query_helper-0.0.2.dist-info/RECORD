@@ -1,0 +1,9 @@
+sqlalchemy_query_helper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlalchemy_query_helper/query_generator.py,sha256=ksY4NjlJ0bRxbHtQMuCUbVeLO18ThxD-TA57wTZxsKY,1318
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/model.py,sha256=6IhaUF3FL5vNf8dskoMa0nY5lzYfK6BYVIKgIBhR0JQ,648
+tests/test_query_generator.py,sha256=F23IUB_I7dOlTLNfjRHUEe2q8tzS9JdDhmtM-VzTjWA,2354
+sqlalchemy_query_helper-0.0.2.dist-info/METADATA,sha256=J6tq-NbJ_Lw0QO5xG2tuDbWUMHgi8JNTuQJJfmYvgc4,683
+sqlalchemy_query_helper-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sqlalchemy_query_helper-0.0.2.dist-info/top_level.txt,sha256=hX0_we5_yh4MHowem1xyFvnVkHg2Jt2qBsKiKFhCM4E,30
+sqlalchemy_query_helper-0.0.2.dist-info/RECORD,,
