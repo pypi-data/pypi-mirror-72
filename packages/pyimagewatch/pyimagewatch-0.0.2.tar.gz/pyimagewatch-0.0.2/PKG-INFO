@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pyimagewatch
+Version: 0.0.2
+Summary: Image processing debugger similar to Image Watch for Visual Studio.
+Home-page: https://github.com/blakeNaccarato/pyimagewatch
+Author: Blake Naccarato
+License: UNKNOWN
+Description: pyimagewatch
+        ============
+        
+        Image processing debugger similar to Image Watch for Visual Studio.
+        
+        Installation
+        ------------
+        
+            pip install pyimagewatch
+        
+        Requirements
+        ------------
+        
+        Details
+        -------
+        
+        Example
+        -------
+        
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev

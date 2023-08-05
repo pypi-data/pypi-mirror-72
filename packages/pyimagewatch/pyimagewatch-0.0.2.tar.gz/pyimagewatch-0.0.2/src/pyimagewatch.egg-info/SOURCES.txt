@@ -1,0 +1,8 @@
+setup.py
+src/pyimagewatch/__init__.py
+src/pyimagewatch/pyimagewatch.py
+src/pyimagewatch.egg-info/PKG-INFO
+src/pyimagewatch.egg-info/SOURCES.txt
+src/pyimagewatch.egg-info/dependency_links.txt
+src/pyimagewatch.egg-info/requires.txt
+src/pyimagewatch.egg-info/top_level.txt

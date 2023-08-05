@@ -1,0 +1,17 @@
+numpy
+scikit-image
+confuse
+
+[dev]
+setuptools
+wheel
+twine
+doc8
+jupyter
+black
+flake8
+mypy
+pylint
+matplotlib
+PyQt5
+rope
