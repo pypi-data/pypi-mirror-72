@@ -1,0 +1,3 @@
+[console_scripts]
+ibsec = ibsec.__main__:main
+
