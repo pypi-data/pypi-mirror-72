@@ -1,0 +1,7 @@
+ecommerce-job:
+    image: {{ DOCKER_REGISTRY }}{{ ECOMMERCE_DOCKER_IMAGE }}
+    environment:
+      DJANGO_SETTINGS_MODULE: ecommerce.settings.grvlms.production
+    volumes:
+      - ../plugins/ecommerce/apps/ecommerce/settings:/openedx/ecommerce/ecommerce/settings/grvlms:ro
+    depends_on: {{ [("mysql", ACTIVATE_MYSQL)]|list_if }}

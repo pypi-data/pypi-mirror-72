@@ -1,0 +1,44 @@
+Metadata-Version: 1.2
+Name: grvlms-ecommerce
+Version: 0.1.1
+Summary: Ecommerce plugin for Grvlms
+Home-page: https://docs.grvlms.groove.education/
+Author: GrooveTechnology
+Author-email: thuan.ha@groovetechnology.com
+License: AGPLv3
+Project-URL: Documentation, https://docs.grvlms.groove.education
+Project-URL: Code, https://github.com/groovetch/grvlms-ecommerce
+Project-URL: Issue tracker, https://github.com/groovetch/grvlms-ecommerce/issues
+Project-URL: Community, https://groove.education
+Description: ecommerce plugin for `Grvlms <https://docs.grvlms.groove.education>`__
+        ===================================================================================
+        
+        Installation
+        ------------
+        
+        ::
+        
+            pip install git+https://github.com/groovetch/grvlms-ecommerce
+        
+        Usage
+        -----
+        
+        ::
+        
+            grvlms plugins enable ecommerce
+            
+        
+        License
+        -------
+        
+        This software is licensed under the terms of the AGPLv3.
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
