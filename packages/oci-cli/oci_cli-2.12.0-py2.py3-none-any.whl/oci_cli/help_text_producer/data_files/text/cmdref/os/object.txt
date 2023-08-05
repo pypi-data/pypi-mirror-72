@@ -1,0 +1,38 @@
+object
+******
+
+
+Description
+===========
+
+
+Available Commands
+==================
+
+* bulk-delete
+
+* bulk-download
+
+* bulk-upload
+
+* copy
+
+* delete
+
+* get
+
+* head
+
+* list
+
+* list-object-versions
+
+* put
+
+* rename
+
+* restore
+
+* restore-status
+
+* resume-put
