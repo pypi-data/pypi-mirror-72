@@ -1,0 +1,92 @@
+The Plugin Tool Execution Framework
+-----------------------------------
+
+The Plugin Class
+~~~~~~~~~~~~~~~~
+
+The Plugin Class is the basis for all *Ayx Plugin Tools* in the new Core
+SDK. The abstract Plugin class provides the required abstract methods
+that need to be implemented in order for a tool to interact with he
+Designer Application. These interactions are mediated by the Providers,
+which provide simplified interfaces for Designer functionality and drive
+the execution of the *Ayx Plugin Tools*. For more information on the
+execution flow, see the `Plugin Lifecycle
+Documentation <../../PluginLifecycle>`__.
+
+Registering the Plugin
+~~~~~~~~~~~~~~~~~~~~~~
+
+Every plugin must be registered with the Core SDK after the new *Ayx
+Plugin Tool* class is defined. The *Ayx Plugin Tool* must implement the
+base Plugin class in order to for the Core SDK to accept the registered
+plugin. The registration process indicates to the Core SDK that the
+Plugin exists, what the name of the class is, and provides a means of
+driving the *Ayx Plugin Tool*'s execution.
+
+The Initialization Method
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The init method in the *Ayx Plugin Tool* class initializes relevant
+properties. It is also the access point for the BaseProvider object to
+all of the Plugin methods, so the provider is typically stored as a
+class variable in the init method. The init is also the point when
+anchors are set from the provider.
+
+The on\_input\_connection\_opened Method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``on_input_connection_opened`` method is called when a connection is
+established with a plugin's input anchor. This method receives the
+``InputConnectionBase`` object, which contains the metadata information
+regarding the input connection. This includes what the fields of the
+connection are, the name of the connection, and the max packet size.
+This method should only deal with meta-information regarding the input
+anchor and input connection (and setting any metadata on the output
+anchors if it is known from the Input Connection's metadata).
+
+The on\_record\_packet Method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``on_record_packet`` method is called for each input connection when
+the number of records the connection has received reaches the
+``max_packet_size`` defined for that connection. If ``None`` is set for
+``max_packet_size`` then all records will be accumulated before
+``on_record_packet`` is called. This method takes in an
+``InputConnectionBase`` which is the connection which has received it's
+maximum number of records. In this method you would call the
+``InputConnectionBase.read()`` function, which would return the
+RecordPacket with ``max_packet_size`` number of records. The
+``RecordPacket`` contains the metadata information and to/from dataframe
+methods. The ``to_dataframe`` method is used on Input Connections to
+convert the records contained in the ``RecordPacket`` object to a
+`Pandas DataFrame <https://pandas.pydata.org/>`__. The
+``from_dataframe`` method is used to convert the processed data back to
+records which are then pushed to the Output Anchor.
+
+on\_complete
+~~~~~~~~~~~~
+
+The ``on_complete`` method is called at the end of the runtime
+execution. This typically does any cleanup required for the *Ayx Plugin
+Tool* or if the plugin is an Input tool-type, this method would be used
+to read in the data from the datasource and push it to the Output
+Anchor, since an Input tool-type has no Input Anchors or connections and
+therefore ``on_input_connection_opened`` and ``on_record_packet`` are
+not called.
+
+Localizing engine messages
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+We recommend using python's
+`gettext <https://docs.python.org/3/library/gettext.html>`__ module if
+you need to localize engine messages (info, warning, error). Our
+`AyxSdkInput <../../ayx_plugin_sdk/examples/AyxSdkInput>`__ example tool
+uses gettext for translating these messages. Alteryx's currently
+selected locale can be grabbed from the provider:
+``self.provider.environment.alteryx_locale``. This locale is grabbed
+from the ``HelpLanguage`` tag in ``UserSettings.xml`` which is usually
+located in
+``C:\Users\{USER}\AppData\Roaming\Alteryx\Engine\{DESIGNER_VERSION}``.
+Switching locale in designer will update this tag to the currently
+selected locale. The AyxSdkInput example is only translated in spanish
+for the purposes of demonstrating this feature.

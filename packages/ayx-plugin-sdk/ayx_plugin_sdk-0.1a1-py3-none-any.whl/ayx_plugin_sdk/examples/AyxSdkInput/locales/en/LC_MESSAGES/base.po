@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-06-10 14:08-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=cp1252\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: main.py:51
+msgid "Values greater than 0.5 are not allowed."
+msgstr "Values greater than 0.5 are not allowed."
+
+#: main.py:55
+msgid "Plugin initialized."
+msgstr "Plugin initialized."
+
+#: main.py:59
+msgid "Input tools don't have input connections."
+msgstr "Input tools don't have input connections."
+
+#: main.py:63
+msgid "Input tools don't receive packets."
+msgstr "Input tools don't receive packets."
+
+#: main.py:82
+msgid "Completed processing records."
+msgstr "Completed processing records."
+

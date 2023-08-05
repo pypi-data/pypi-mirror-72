@@ -1,0 +1,62 @@
+Differences Between the New and Old Python SDKs
+===============================================
+
+Packaging
+---------
+
+The original `Alteryx Python
+SDK <https://help.alteryx.com/developer/current/Python/Overview.htm>`__
+was built around a python package called ``AlteryxPythonSDK``. This
+package is available at runtime inside of Designer, and can be accessed
+via import.
+
+The new Python SDK is a standalone Python ``pip`` package that can be
+installed via ``pip install``. It doesn't depend on any special
+libraries that only ship with Designer. Given that it is now standalone,
+measures have been taken to allow tool development outside of Designer,
+via the ``FileProvider``.
+
+Getting Started
+---------------
+
+Getting started in the old SDK typically meant looking at an example
+plugin, copying the code and file structure, and then modifying it to
+suit your own needs. The new SDK provides a new command line interface
+that provides functionality to take care of all of this project setup.
+
+Development
+-----------
+
+The way the backend of a tool was developed in the original Python SDK
+was via a class definition that satisfied the interface described
+`here <https://help.alteryx.com/developer/current/Python/use/AyxPluginClass.htm?tocpath=SDKs%7CBuild%20Custom%20Tools%7CPython%20SDK%7CClasses%7CAyxPlugin%7C_____0>`__.
+
+This class implements certain methods such as ``pi_init``,
+``pi_add_incoming_connection``, etc. This paradigm leads to lots of
+boilerplate code, making plugin development a burden on the developer.
+This typically lead to the "meat" of the plugin being only a few lines
+of Python, but the overall tool definition being hundreds of lines.
+
+The new SDK has alleviated this problem by simplifying the interface
+that must be satisfied to a bare minimum set of requirements.
+
+Similarly to the old SDK, in the new SDK a developer must write a
+``Plugin`` class. In the new SDK, a base class definition of ``Plugin``
+is defined to be used as a parent. This gives the developer a level of
+comfort that they have implemented all necessary methods to be a valid
+Alteryx Designer Plugin.
+
+Additionally, in the old SDK, a class called ``IncomingInterface`` was
+required. This requirement has been removed in the new SDK, as incoming
+interfaces/connections are handled behind the scenes by the SDK, and
+made available to the developer via the new ``Provider`` concept.
+
+Deployment
+----------
+
+Once plugin development is complete, it is often distributed via the YXI
+file format. The instructions for packaging a YXI in the old SDK can be
+found
+`here <https://help.alteryx.com/developer/current/PackageTool.htm?tocpath=SDKs%7CBuild%20Custom%20Tools%7C_____7>`__.
+However, this packaging process has been significantly simplified by the
+new SDK CLI, described in the Getting Started guide.
