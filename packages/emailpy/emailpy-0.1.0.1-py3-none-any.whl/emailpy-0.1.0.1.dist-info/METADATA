@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: emailpy
+Version: 0.1.0.1
+Summary: A Python interface to interact with gmail. 
+Home-page: https://pypi.org/project/emailpy
+Author: Sandra Mattar
+Author-email: sandrawmattar1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Communications :: Email
+Description-Content-Type: text/markdown
+Requires-Dist: ospy
+
+
+<p>
+A Python interface for sending, reading, and deleting emails <br />
+<br />
+Functions: 
+<ul>
+    <li>readmail - read an email</li>
+    <li>sendmail - send an email</li>
+    <li>sendmailobj - send an EmailMessage object with changable specs. </li>
+    <li>forward - forward an EmailMessage object with changable specs. </li>
+</ul>
+<br />
+Updates:
+<ul>
+    <li>support for .jpg and .png image filetypes (this package used to write an invalid file format for some image file types. )</li>
+</ul>
+To be released in next release:
+<ul>
+    <li>support for more image filetypes (currently only supports .jpg and .png)</li>
+</ul><br />
+Usage: <br /></p>
+<pre>    >>> import emailpy
+    >>> sent = emailpy.sendmail("fromemail@gmail.com", "fromemail_password",
+                    toemails = ["toemail1@gmail.com", "toemail2@gmail.com")
+                    subject = 'Subject', body = 'Body',
+                    attachments = ['file.txt', 'picture.png'])
+    >>> # send an email from
+    >>> # "fromemail@gmail.com" and password "fromemail_password" to
+    >>> # "toemail1@gmail.com" and "toemail2@gmail.com" with subject
+    >>> # "Subject" and body "Body" and retreive the message into the variable
+    >>> # "sent". 
+    >>> data = emailpy.readmail("toemail1@gmail.com", "toemail1_password") # read
+    >>> # email "toemail1@gmail.com" with password "toemail1_password"
+    >>> data = data[0] # get first email from EmailMessageList object
+    >>> data.body # "Body"
+    >>> data.subject # "Subject"
+    >>> data.html # "Body"
+    >>> data.sender # "fromemail@gmail.com"
+    >>> data.recvers # ["toemail1@gmail.com", "toemail2@gmail.com"]
+    >>> data.show() # <showing in selenium chrome>
+    >>> data.attachments # <EmailAttachment Object filenames=["file.txt",
+    >>> # "picture.png"]>
+    >>> data.attachments.download() # save attached files to computer
+    >>> data.attachments.show() # show attached files
+    >>> # WARNING: when using data.attachments.show(), you must first call
+    >>> # data.attachments.download()
+    >>> data.is_attachment # True
+    >>> data.delete() # delete email
+    >>> emailpy.sendmailobj(sent, attachments = ['file2.txt']) # send the sent
+    >>> # variable as an email, but replacing the attachments list with
+    >>> # ['file2.txt'].
+    >>> emailpy.forward(data, 'forwardtome@yahoo.com', body = 'hi') # forward
+    >>> # the read email to "forwardtome@yahoo.com", but replacing the body
+    >>> # with "hi". NOTE that this only works on read emails. So, you cannot
+    >>> # use the emailpy.forward() method on sent or forwarded emails. </pre>
+
+
