@@ -1,0 +1,76 @@
+[build-system]
+requires = [
+  # Essentials
+  "Cython",  # needed by in-tree build backend `bin/pep517_backend.py`
+  "setuptools>=44; python_version <= '2.7'",  # needed by in-tree build backend `bin/pep517_backend.py`
+  "setuptools>=45; python_version > '2.7'",  # needed by in-tree build backend `bin/pep517_backend.py`
+  "toml",  # needed by in-tree build backend `bin/pep517_backend.py`
+  "wheel",
+  "expandvars",  # needed by in-tree build backend for env vars interpolation
+
+  # Plugins
+  "setuptools_scm[toml]>=3.5",
+  "setuptools_scm_git_archive>=1.1",
+]
+backend-path = ["bin"]  # requires 'Pip>=20' or 'pep517>=0.6.0'
+build-backend = "pep517_backend"
+
+[tool.local.cythonize]
+# This attr can contain multiple globs
+src = ["src/**/*.pyx"]
+
+[tool.local.cythonize.env]
+# Env vars provisioned during cythonize call
+#ANSIBLE_PYLIBSSH_TRACING = "1"
+#CFLAGS = "-DCYTHON_TRACE=1 ${CFLAGS}"
+LDFLAGS = "-lssh ${LDFLAGS}"
+
+[tool.local.cythonize.flags]
+# This section can contain the following booleans:
+# * annotate — generate annotated HTML page for source files
+# * build — build extension modules using distutils
+# * inplace — build extension modules in place using distutils (implies -b)
+# * force — force recompilation
+# * quiet — be less verbose during compilation
+# * lenient — increase Python compat by ignoring some compile time errors
+# * keep-going — compile as much as possible, ignore compilation failures
+annotate = false
+build = false
+inplace = true
+force = true
+quiet = false
+lenient = false
+keep-going = false
+
+[tool.local.cythonize.kwargs]
+# This section can contain args tha have values:
+# * exclude=PATTERN      exclude certain file patterns from the compilation
+# * parallel=N    run builds in N parallel jobs (default: calculated per system)
+# exclude = "**.py"
+# parallel = 12
+
+[tool.local.cythonize.kwargs.directive]
+# This section can contain compiler directives
+# Ref: https://github.com/cython/cython/blob/d6e6de9/Cython/Compiler/Options.py#L170-L242
+embedsignature = "True"
+emit_code_comments = "True"
+linetrace = "True"
+profile = "True"
+
+[tool.local.cythonize.kwargs.compile-time-env]
+# This section can contain compile time env vars
+
+[tool.local.cythonize.kwargs.option]
+# This section can contain cythonize options
+# Ref: https://github.com/cython/cython/blob/d6e6de9/Cython/Compiler/Options.py#L694-L730
+#docstrings = "True"
+#embed_pos_in_docstring = "True"
+#warning_errors = "True"
+#error_on_unknown_names = "True"
+#error_on_uninitialized = "True"
+
+# ATTENTION: the following section must be kept last in
+# `pyproject.toml` because the CI appends one line in
+# the end when publishing non-tagged versions.
+[tool.setuptools_scm]
+write_to = "src/pylibsshext/_scm_version.py"
