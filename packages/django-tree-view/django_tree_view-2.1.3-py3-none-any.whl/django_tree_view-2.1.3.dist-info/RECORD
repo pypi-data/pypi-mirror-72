@@ -1,0 +1,16 @@
+django_tree_view/README.md,sha256=Y0Ri9HSMnsY2y3OGor1BXDyDNOixAlLLQCeFKI46lZM,2210
+django_tree_view/RELEASE_NOTES.md,sha256=alnVaLQU5ePMfoLriz8B7CH_tltmUNaSQOkV6463O4U,806
+django_tree_view/VERSION,sha256=BuGd6tadzBa8VzzJ8ktotpkH9M_Ur7nXA3LMa0YqmGI,5
+django_tree_view/__init__.py,sha256=f5T9yY2TETr_51cm_iyZHR8C1cHu6QubJB-VYAG08tw,537
+django_tree_view/path_resolver.py,sha256=pZEzLaqZw3sVGybAjNJb6bdO-Vv74N0fff5FrGutkqE,4275
+django_tree_view/view.py,sha256=uejLZ8zeuRq36aJMcv7w1elV2gup0Gxa5TwfPSSo54A,4462
+django_tree_view/view_tree.py,sha256=AhGfycYhX8bBRc8dAuuygQF5th3-kvYjBHL6DAgCzXY,2342
+django_tree_view/__pycache__/__init__.cpython-36.pyc,sha256=1u5MikaEkfT5KdtYZ4Fy5ldl6BtyjVTTU_Qcyja7dxI,787
+django_tree_view/__pycache__/path_resolver.cpython-36.pyc,sha256=QUCPYsxdERfseY8DmwvMtRGfY5OKNhf6K_BVXIhhle4,2171
+django_tree_view/__pycache__/view.cpython-36.pyc,sha256=_P95V3r851HexqRqJxR7cWKmqyk5jtLxJbZvvtAsfL0,2483
+django_tree_view/__pycache__/view_tree.cpython-36.pyc,sha256=WWrttlc4RH1rR0qcz15mSFXJ6zkTKnW1GpxN-ufKF2M,2462
+django_tree_view-2.1.3.dist-info/LICENSE,sha256=3zadg6RilfqcoXgQ6j6BXFbJBGZbjlpiAxtVboyrBQk,1072
+django_tree_view-2.1.3.dist-info/METADATA,sha256=lcvXYg8uRdcWVBsUXjnosSFl9ctD0LfOV4N_lmu1DOk,2872
+django_tree_view-2.1.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_tree_view-2.1.3.dist-info/top_level.txt,sha256=E1TG9sIk4SHY8bT-N9Chmm77LjfaVu6wYrVThiTlkCI,17
+django_tree_view-2.1.3.dist-info/RECORD,,
