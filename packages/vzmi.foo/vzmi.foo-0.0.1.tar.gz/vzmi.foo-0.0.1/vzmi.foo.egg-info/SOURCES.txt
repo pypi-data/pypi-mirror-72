@@ -1,0 +1,7 @@
+setup.py
+vzmi/__init__.py
+vzmi.foo.egg-info/PKG-INFO
+vzmi.foo.egg-info/SOURCES.txt
+vzmi.foo.egg-info/dependency_links.txt
+vzmi.foo.egg-info/top_level.txt
+vzmi/foo/__init__.py
