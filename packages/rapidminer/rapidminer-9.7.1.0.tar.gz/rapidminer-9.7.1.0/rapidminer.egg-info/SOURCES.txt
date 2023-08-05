@@ -1,0 +1,17 @@
+setup.py
+rapidminer/__init__.py
+rapidminer.egg-info/PKG-INFO
+rapidminer.egg-info/SOURCES.txt
+rapidminer.egg-info/dependency_links.txt
+rapidminer.egg-info/not-zip-safe
+rapidminer.egg-info/requires.txt
+rapidminer.egg-info/top_level.txt
+rapidminer/core/__init__.py
+rapidminer/core/connector.py
+rapidminer/core/project.py
+rapidminer/core/resources.py
+rapidminer/core/scoring.py
+rapidminer/core/serdeutils.py
+rapidminer/core/server.py
+rapidminer/core/studio.py
+rapidminer/core/utilities.py
