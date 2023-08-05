@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+pip_readme.md
+setup.cfg
+setup.py
+smear/__init__.py
+smear/file_identifier.py
+smear/runner.py
+smear/smearing.py
+smear/uiterm.py
+smear/version.py
+smear.egg-info/PKG-INFO
+smear.egg-info/SOURCES.txt
+smear.egg-info/dependency_links.txt
+smear.egg-info/entry_points.txt
+smear.egg-info/requires.txt
+smear.egg-info/top_level.txt
