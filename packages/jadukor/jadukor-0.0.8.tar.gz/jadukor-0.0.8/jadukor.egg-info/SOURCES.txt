@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+jadukor/__init__.py
+jadukor.egg-info/PKG-INFO
+jadukor.egg-info/SOURCES.txt
+jadukor.egg-info/dependency_links.txt
+jadukor.egg-info/not-zip-safe
+jadukor.egg-info/requires.txt
+jadukor.egg-info/top_level.txt
