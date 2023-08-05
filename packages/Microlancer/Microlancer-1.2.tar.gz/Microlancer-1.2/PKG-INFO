@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: Microlancer
+Version: 1.2
+Summary: Microlancer SDK
+Home-page: https://github.com/Zenitsudeck/Microlancer
+Author: Zenitsudeck
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: 
+        Microlancer.io is a freelancer site that uses the Bitcoin lightnetwork as a way to paidmaneto, this library was made so that you can interact with the platform API in an easy and simple way.
+        
+        Documentation: https://github.com/Zenitsudeck/Microlancer
+        
+Platform: UNKNOWN
