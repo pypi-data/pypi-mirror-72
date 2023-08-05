@@ -1,0 +1,26 @@
+dataclasses-json
+numpy
+click
+click_default_group
+sklearn
+torch
+tqdm
+requests
+optuna<1.2.0,>=1.0.0
+pandas>=1.0.0
+tabulate
+
+[:python_version < "3.7"]
+dataclasses
+
+[docs]
+sphinx
+sphinx-rtd-theme
+sphinx-click
+sphinx-autodoc-typehints
+
+[mlflow]
+mlflow==1.7.0
+
+[templating]
+jinja2
