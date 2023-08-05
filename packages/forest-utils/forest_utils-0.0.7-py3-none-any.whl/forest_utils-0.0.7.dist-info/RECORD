@@ -1,0 +1,12 @@
+forest_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forest_utils/cli.py,sha256=PjwzAr2V8RCaYf4vONCFMiI6bvVXk9X5vL9uo7XQ5bg,816
+forest_utils/export_keras.py,sha256=vCrA7t3TOVrlUCcRAuiGskh6h7YQ_wngLOFj8oPM_TM,1465
+forest_utils/export_spacy.py,sha256=N-pcEgLzLdIP0S8h4laRLhGfuBUqZGXbf21P-dFDNqs,917
+forest_utils/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forest_utils/utils/create.py,sha256=hFvgEjAaM3PoW3QqEcc2l_PIhsGyCn4DJgGaNayi0jY,2493
+forest_utils/utils/pull.py,sha256=gJUarw2dw96eAkBzG0-64i4xI4leLod7iZlQqdmSXUc,19
+forest_utils-0.0.7.dist-info/METADATA,sha256=BPTuOBOCwc-ns3ivwa2PFgd_18NoMPli8_tHd9Jdais,2355
+forest_utils-0.0.7.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+forest_utils-0.0.7.dist-info/entry_points.txt,sha256=Q-NrXUFJf00ucipH8bSeOnhqg6IyxqMDwvEBBtjMCAI,50
+forest_utils-0.0.7.dist-info/top_level.txt,sha256=JwJtdeDFzFvfK_i_8KEcTYI8hTFPUE1kKWkMkSQEDSY,13
+forest_utils-0.0.7.dist-info/RECORD,,
