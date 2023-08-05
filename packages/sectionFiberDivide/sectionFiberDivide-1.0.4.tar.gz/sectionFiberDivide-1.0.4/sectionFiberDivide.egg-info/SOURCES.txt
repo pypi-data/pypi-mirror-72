@@ -1,0 +1,13 @@
+setup.py
+sectionFiberDivide/__init__.py
+sectionFiberDivide/fiberGenerate.py
+sectionFiberDivide/gmsh.exe
+sectionFiberDivide/pointInPolygon.py
+sectionFiberDivide/sectionFiberMain.py
+sectionFiberDivide/test.py
+sectionFiberDivide.egg-info/PKG-INFO
+sectionFiberDivide.egg-info/SOURCES.txt
+sectionFiberDivide.egg-info/dependency_links.txt
+sectionFiberDivide.egg-info/not-zip-safe
+sectionFiberDivide.egg-info/requires.txt
+sectionFiberDivide.egg-info/top_level.txt
