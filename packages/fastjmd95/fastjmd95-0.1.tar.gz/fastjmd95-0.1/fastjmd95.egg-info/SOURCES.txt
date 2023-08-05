@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+versioneer.py
+fastjmd95/__init__.py
+fastjmd95/_version.py
+fastjmd95/jmd95numba.py
+fastjmd95.egg-info/PKG-INFO
+fastjmd95.egg-info/SOURCES.txt
+fastjmd95.egg-info/dependency_links.txt
+fastjmd95.egg-info/requires.txt
+fastjmd95.egg-info/top_level.txt
+fastjmd95/test/__init__.py
+fastjmd95/test/reference_values.py
+fastjmd95/test/test_jmd95.py
