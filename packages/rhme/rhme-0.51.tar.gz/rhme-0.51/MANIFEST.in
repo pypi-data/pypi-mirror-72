@@ -1,0 +1,7 @@
+include rhme/docs/config/config.json
+include rhme/docs/config/config_all.json
+recursive-include rhme/images/ *
+recursive-include rhme/tratamento/treated_data_all *
+recursive-include rhme/treinamento/charts_all *
+recursive-include rhme/treinamento/model_all *
+recursive-include rhme/treinamento/history_all *
