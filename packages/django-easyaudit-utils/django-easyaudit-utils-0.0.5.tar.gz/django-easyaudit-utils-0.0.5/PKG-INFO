@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: django-easyaudit-utils
+Version: 0.0.5
+Summary: A Django app to provide handy tools for django-easy-audit.
+Home-page: https://github.com/ubuviz/django-easyaudit-utils
+Author: UbuViz
+Author-email: info@ubuviz.com
+License: MIT
+Description: Django EasyAudit Utils
+        ======================
+        
+        This is a simple Django app to provide hand views, analytics and tools for better handling data from easyaudit_.
+        
+        
+        Detailed documentation is in the "docs" directory.
+        
+        Quick start
+        -----------
+        1. Install the package using::
+        
+            pip install django-easyaudit-utils
+        
+        2. Add "easyaudit_utils" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'easyaudit',
+                'easyaudit_utils',
+                ...
+            ]
+        
+        3. Include the polls URLconf in your project urls.py like this::
+        
+            path("easyaudit/", include("easyaudit_utils.urls", namespace="easyaudit_utils")),
+        
+        
+        .. _easyaudit: https://github.com/soynatan/django-easy-audit
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Description-Content-Type: text/x-rst

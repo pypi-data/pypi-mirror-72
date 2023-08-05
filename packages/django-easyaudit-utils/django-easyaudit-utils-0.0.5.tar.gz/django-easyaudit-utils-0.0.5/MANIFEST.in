@@ -1,0 +1,4 @@
+include LICENSE
+include README.rst
+recursive-include easyaudit_utils/templates *
+recursive-include docs *
