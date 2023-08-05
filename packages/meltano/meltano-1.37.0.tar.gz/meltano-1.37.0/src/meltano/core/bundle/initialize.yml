@@ -1,0 +1,17 @@
+meltano.yml: |
+  version: 1
+  send_anonymous_usage_stats: true
+README.md: ""
+requirements.txt: ""
+.gitignore: |
+  /venv
+  /.meltano
+  .env
+  ui.cfg
+model/.gitkeep: ""
+extract/.gitkeep: ""
+load/.gitkeep: ""
+transform/.gitkeep: ""
+analyze/.gitkeep: ""
+notebook/.gitkeep: ""
+orchestrate/.gitkeep: ""
