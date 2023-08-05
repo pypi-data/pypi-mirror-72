@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: stbpy
+Version: 0.0.2
+Summary: Cython wrapper for nothings/stb
+Home-page: https://github.com/aforren1/stbpy
+Author: Alex Forrence
+Author-email: alex.forrence@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+![Build](https://github.com/aforren1/stbpy/workflows/Build/badge.svg?branch=master)
+
+Python interface to https://github.com/nothings/stb/.
+
+Currently wraps stb_image, stb_image_resize, and stb_write (though not completely in any case)
+
+Install with `pip install stbpy`, and see test.py for usage examples.
+
+git clone --recurse-submodules git://github.com/aforren1/stbpy.git
+
+
