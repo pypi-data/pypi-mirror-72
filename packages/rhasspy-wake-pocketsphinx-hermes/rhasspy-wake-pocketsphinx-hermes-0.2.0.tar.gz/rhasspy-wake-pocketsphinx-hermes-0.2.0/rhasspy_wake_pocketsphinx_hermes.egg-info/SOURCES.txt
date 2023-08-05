@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+rhasspy_wake_pocketsphinx_hermes.egg-info/PKG-INFO
+rhasspy_wake_pocketsphinx_hermes.egg-info/SOURCES.txt
+rhasspy_wake_pocketsphinx_hermes.egg-info/dependency_links.txt
+rhasspy_wake_pocketsphinx_hermes.egg-info/entry_points.txt
+rhasspy_wake_pocketsphinx_hermes.egg-info/requires.txt
+rhasspy_wake_pocketsphinx_hermes.egg-info/top_level.txt
+rhasspywake_pocketsphinx_hermes/__init__.py
+rhasspywake_pocketsphinx_hermes/__main__.py

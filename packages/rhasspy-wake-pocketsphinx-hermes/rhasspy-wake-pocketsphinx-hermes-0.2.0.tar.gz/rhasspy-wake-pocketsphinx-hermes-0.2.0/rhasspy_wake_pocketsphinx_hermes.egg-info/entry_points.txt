@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-wake-pocketsphinx-hermes = rhasspywake_pocketsphinx_hermes.__main__:main
+
