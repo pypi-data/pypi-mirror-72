@@ -1,0 +1,14 @@
+README.md
+setup.py
+test/test_add_argument.py
+test/test_append.py
+test/test_args.py
+test/test_list.py
+test/test_optional.py
+test/test_pickle.py
+typed_args/__init__.py
+typed_args/utils.py
+typed_args.egg-info/PKG-INFO
+typed_args.egg-info/SOURCES.txt
+typed_args.egg-info/dependency_links.txt
+typed_args.egg-info/top_level.txt
