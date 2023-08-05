@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: appixer-metadata
+Version: 1.0.2
+Summary: Audio metadata manipulation.
+Home-page: https://gitlab.com/appixer/metadata
+Author: Joshua Avalon
+Author-email: git@avalon.sh
+License: UNKNOWN
+Keywords: audio,metadata
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: mutagen (<=2.0.0,>=1.44.0)
+Requires-Dist: Pillow (<=8.0.0,>=7.1.2)
+
+# appixer-metadata
+
+**appixer-metadata** is a python package for updating metadata of FLAC and MPC. It is a wrapper of [mutagen].
+
+## Getting Started
+
+```
+pip install appixer-metadata
+```
+
+[mutagen]: https://pypi.org/project/mutagen/
+
+
