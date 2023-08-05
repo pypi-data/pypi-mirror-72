@@ -1,0 +1,30 @@
+Metadata-Version: 1.0
+Name: mongoengine-pagination
+Version: 0.1.5
+Summary: =======you can use this toll to paginate your querysets=======
+Home-page: UNKNOWN
+Author: yangqi
+Author-email: geekpaul@outlook.com
+License: MIT Licence
+Description: ============how to use?===========
+        
+        ----example
+        
+        class User(DocumentPro):   
+            user_id = IntField() 
+            
+            name = StringField()
+            
+        page_index = 2
+        
+        page_size = 20
+        
+        user_list = User.objects().paginate(page_index, page_size)
+        
+        result_list = result.items
+        
+        total_items = result.total 
+        
+        total_page = result.pages,
+Keywords: mongoengine,pagination,mongodb,fastapi,nosql
+Platform: any
