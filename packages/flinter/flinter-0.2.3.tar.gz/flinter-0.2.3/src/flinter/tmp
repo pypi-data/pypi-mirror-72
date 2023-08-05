@@ -1,0 +1,3175 @@
+************* Module .Users.erraiya.incubator.incubator.erraiya.flint.old.projeteur.f90
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:14:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:30:31: Missing space after ponctuation :
+	 ***   CHARACTER(LEN=4) :: bufferin,argument                                 ! Argument buffer and string ( cre or gen )
+	                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:30:3: Types should be lowercased :
+	 ***   CHARACTER(LEN=4) :: bufferin,argument                                 ! Argument buffer and string ( cre or gen )
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:30:16: Missing spaces around "=" :
+	 ***   CHARACTER(LEN=4) :: bufferin,argument                                 ! Argument buffer and string ( cre or gen )
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:31:3: Types should be lowercased :
+	 ***   CHARACTER(LEN=strl) :: choicesfile
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:31:16: Missing spaces around "=" :
+	 ***   CHARACTER(LEN=strl) :: choicesfile
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:32:3: Types should be lowercased :
+	 ***   CHARACTER(LEN=strl) :: asciiBname                                     ! asciiBound name (for check purposes)
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:32:16: Missing spaces around "=" :
+	 ***   CHARACTER(LEN=strl) :: asciiBname                                     ! asciiBound name (for check purposes)
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:33:3: Types should be lowercased :
+	 ***   CHARACTER(LEN=strl) :: asciiBname2                                    ! asciiBound name (for check purposes)
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:33:16: Missing spaces around "=" :
+	 ***   CHARACTER(LEN=strl) :: asciiBname2                                    ! asciiBound name (for check purposes)
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:34:3: Types should be lowercased :
+	 ***   CHARACTER(LEN=strl) :: allocname                                      ! Used to build the name of an array (for deallocation)
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:34:16: Missing spaces around "=" :
+	 ***   CHARACTER(LEN=strl) :: allocname                                      ! Used to build the name of an array (for deallocation)
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:36:3: Types should be lowercased :
+	 ***   LOGICAL :: itexists
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:37:16: Missing space after ponctuation :
+	 ***   INTEGER :: np,npp, i, j, neq, ieq, nset, bnd_nnode, solbnd_neq
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:37:3: Types should be lowercased :
+	 ***   INTEGER :: np,npp, i, j, neq, ieq, nset, bnd_nnode, solbnd_neq
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:38:3: Types should be lowercased :
+	 ***   INTEGER :: k, n, m, n1, n2
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:40:41: Missing space after separator :
+	 ***   REAL(pr), DIMENSION(:,:), ALLOCATABLE ::coorbound,bnd_flow,bnd_data,patch_data
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:40:52: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(:,:), ALLOCATABLE ::coorbound,bnd_flow,bnd_data,patch_data
+	                                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:40:61: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(:,:), ALLOCATABLE ::coorbound,bnd_flow,bnd_data,patch_data
+	                                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:40:70: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(:,:), ALLOCATABLE ::coorbound,bnd_flow,bnd_data,patch_data
+	                                                                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:40:3: Types should be lowercased :
+	 ***   REAL(pr), DIMENSION(:,:), ALLOCATABLE ::coorbound,bnd_flow,bnd_data,patch_data
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:41:3: Types should be lowercased :
+	 ***   REAL(pr), DIMENSION(:), ALLOCATABLE :: bnd_flux
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:42:3: Types should be lowercased :
+	 ***   REAL(pr), DIMENSION(:), ALLOCATABLE :: bnd_area
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:43:50: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(:), ALLOCATABLE :: bnd_mask,bnd_mask_global,bnd_mask_ref
+	                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:43:66: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(:), ALLOCATABLE :: bnd_mask,bnd_mask_global,bnd_mask_ref
+	                                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:43:3: Types should be lowercased :
+	 ***   REAL(pr), DIMENSION(:), ALLOCATABLE :: bnd_mask,bnd_mask_global,bnd_mask_ref
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:44:53: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(:), ALLOCATABLE :: bnd_invdist,bnd_invdist_global
+	                                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:44:3: Types should be lowercased :
+	 ***   REAL(pr), DIMENSION(:), ALLOCATABLE :: bnd_invdist,bnd_invdist_global
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:45:3: Types should be lowercased :
+	 ***   REAL(pr), DIMENSION(:), ALLOCATABLE :: hole2node_dist
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:46:3: Types should be lowercased :
+	 ***   INTEGER, DIMENSION(:), ALLOCATABLE :: bnd_per_id
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:50:3: Types should be lowercased :
+	 ***   LOGICAL :: debug = .FALSE.
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:51:3: Types should be lowercased :
+	 ***   INTEGER :: local_debug_level = 2
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:52:3: Types should be lowercased :
+	 ***   CHARACTER(LEN=strl) :: message
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:52:16: Missing spaces around "=" :
+	 ***   CHARACTER(LEN=strl) :: message
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:53:3: Types should be lowercased :
+	 ***   CHARACTER(LEN=strl) :: routine = "projeteur"
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:53:16: Missing spaces around "=" :
+	 ***   CHARACTER(LEN=strl) :: routine = "projeteur"
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:54:43: Missing space after ponctuation :
+	 ***   INTEGER :: t1, t2, clock_rate, clock_max,last_pct
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:54:3: Types should be lowercased :
+	 ***   INTEGER :: t1, t2, clock_rate, clock_max,last_pct
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:56:20: Missing space after ponctuation :
+	 ***   INTEGER :: iperio,inspec
+	                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:56:3: Types should be lowercased :
+	 ***   INTEGER :: iperio,inspec
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:57:3: Types should be lowercased :
+	 ***   REAL(pr) :: dperio
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:58:20: Missing space after ponctuation :
+	 ***   REAL(pr) :: Thick,Slope,Cq,Tcold,tol,proj_mask, intensive_weight
+	                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:58:26: Missing space after ponctuation :
+	 ***   REAL(pr) :: Thick,Slope,Cq,Tcold,tol,proj_mask, intensive_weight
+	                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:58:29: Missing space after ponctuation :
+	 ***   REAL(pr) :: Thick,Slope,Cq,Tcold,tol,proj_mask, intensive_weight
+	                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:58:35: Missing space after ponctuation :
+	 ***   REAL(pr) :: Thick,Slope,Cq,Tcold,tol,proj_mask, intensive_weight
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:58:39: Missing space after ponctuation :
+	 ***   REAL(pr) :: Thick,Slope,Cq,Tcold,tol,proj_mask, intensive_weight
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:58:3: Types should be lowercased :
+	 ***   REAL(pr) :: Thick,Slope,Cq,Tcold,tol,proj_mask, intensive_weight
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:59:3: Types should be lowercased :
+	 ***   REAL(pr), DIMENSION(:), ALLOCATABLE :: inputspec_value
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:60:3: Types should be lowercased :
+	 ***   CHARACTER(LEN=strl), DIMENSION(:), ALLOCATABLE :: inputspec_name
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:60:16: Missing spaces around "=" :
+	 ***   CHARACTER(LEN=strl), DIMENSION(:), ALLOCATABLE :: inputspec_name
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:62:41: Missing space after ponctuation :
+	 ***   INTEGER :: npatch_mpt, npatch_mpt_succ,npatch_mpt_blow,typelaw
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:62:57: Missing space after ponctuation :
+	 ***   INTEGER :: npatch_mpt, npatch_mpt_succ,npatch_mpt_blow,typelaw
+	                                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:62:3: Types should be lowercased :
+	 ***   INTEGER :: npatch_mpt, npatch_mpt_succ,npatch_mpt_blow,typelaw
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:63:3: Types should be lowercased :
+	 ***   INTEGER, DIMENSION(:), ALLOCATABLE :: patch_mpt_type(:)
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:64:3: Types should be lowercased :
+	 ***   INTEGER, DIMENSION(:), ALLOCATABLE :: patch_mpt_np(:)
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:65:3: Types should be lowercased :
+	 ***   CHARACTER(LEN=99), DIMENSION(:), ALLOCATABLE :: patch_mpt_name(:)
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:65:16: Missing spaces around "=" :
+	 ***   CHARACTER(LEN=99), DIMENSION(:), ALLOCATABLE :: patch_mpt_name(:)
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:66:3: Types should be lowercased :
+	 ***   REAL(pr), DIMENSION(:), ALLOCATABLE :: patch_mpt_flowrate(:)
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:67:11: Missing space after ponctuation :
+	 ***   REAL(pr),DIMENSION(-1:1) :: mask_sum,new_poro
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:67:39: Missing space after ponctuation :
+	 ***   REAL(pr),DIMENSION(-1:1) :: mask_sum,new_poro
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:67:3: Types should be lowercased :
+	 ***   REAL(pr),DIMENSION(-1:1) :: mask_sum,new_poro
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:69:22: Missing space after ponctuation :
+	 ***   INTEGER :: npercage,ipercage,mpt_type,node
+	                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:69:31: Missing space after ponctuation :
+	 ***   INTEGER :: npercage,ipercage,mpt_type,node
+	                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:69:40: Missing space after ponctuation :
+	 ***   INTEGER :: npercage,ipercage,mpt_type,node
+	                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:69:3: Types should be lowercased :
+	 ***   INTEGER :: npercage,ipercage,mpt_type,node
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:70:3: Types should be lowercased :
+	 ***   CHARACTER(LEN=strl) :: per_name
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:70:16: Missing spaces around "=" :
+	 ***   CHARACTER(LEN=strl) :: per_name
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:71:35: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:4) :: quat,quatx,quatmx
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:71:41: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:4) :: quat,quatx,quatmx
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:71:3: Types should be lowercased :
+	 ***   REAL(pr), DIMENSION(1:4) :: quat,quatx,quatmx
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:72:36: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3) :: per_x,per_nx,per_jx,per_tx,per_x_moved,node_projected
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:72:43: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3) :: per_x,per_nx,per_jx,per_tx,per_x_moved,node_projected
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:72:50: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3) :: per_x,per_nx,per_jx,per_tx,per_x_moved,node_projected
+	                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:72:57: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3) :: per_x,per_nx,per_jx,per_tx,per_x_moved,node_projected
+	                                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:72:69: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3) :: per_x,per_nx,per_jx,per_tx,per_x_moved,node_projected
+	                                                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:72:3: Types should be lowercased :
+	 ***   REAL(pr), DIMENSION(1:3) :: per_x,per_nx,per_jx,per_tx,per_x_moved,node_projected
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:73:39: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3) :: per_x_p1,per_jx_p1,per_x_m1, per_jx_m1, per_tx_m1, per_tx_p1,per_nx_m1,per_nx_p1
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:73:49: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3) :: per_x_p1,per_jx_p1,per_x_m1, per_jx_m1, per_tx_m1, per_tx_p1,per_nx_m1,per_nx_p1
+	                                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:73:91: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3) :: per_x_p1,per_jx_p1,per_x_m1, per_jx_m1, per_tx_m1, per_tx_p1,per_nx_m1,per_nx_p1
+	                                                                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:73:101: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3) :: per_x_p1,per_jx_p1,per_x_m1, per_jx_m1, per_tx_m1, per_tx_p1,per_nx_m1,per_nx_p1
+	                                                                                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:73:3: Types should be lowercased :
+	 ***   REAL(pr), DIMENSION(1:3) :: per_x_p1,per_jx_p1,per_x_m1, per_jx_m1, per_tx_m1, per_tx_p1,per_nx_m1,per_nx_p1
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:74:42: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3,-1:1) :: per_x3,per_nx3,per_tx3,per_jx3
+	                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:74:50: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3,-1:1) :: per_x3,per_nx3,per_tx3,per_jx3
+	                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:74:58: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3,-1:1) :: per_x3,per_nx3,per_tx3,per_jx3
+	                                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:74:3: Types should be lowercased :
+	 ***   REAL(pr), DIMENSION(1:3,-1:1) :: per_x3,per_nx3,per_tx3,per_jx3
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:75:40: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3) :: wall_node,wall_normal,wall_tangent,origin,xaxis,mxaxis
+	                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:75:52: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3) :: wall_node,wall_normal,wall_tangent,origin,xaxis,mxaxis
+	                                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:75:65: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3) :: wall_node,wall_normal,wall_tangent,origin,xaxis,mxaxis
+	                                                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:75:72: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3) :: wall_node,wall_normal,wall_tangent,origin,xaxis,mxaxis
+	                                                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:75:78: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:3) :: wall_node,wall_normal,wall_tangent,origin,xaxis,mxaxis
+	                                                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:75:3: Types should be lowercased :
+	 ***   REAL(pr), DIMENSION(1:3) :: wall_node,wall_normal,wall_tangent,origin,xaxis,mxaxis
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:76:23: Missing space after ponctuation :
+	 ***   REAL(pr) :: per_diam,per_temp,per_alpha,per_beta,per_flowrate
+	                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:76:32: Missing space after ponctuation :
+	 ***   REAL(pr) :: per_diam,per_temp,per_alpha,per_beta,per_flowrate
+	                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:76:42: Missing space after ponctuation :
+	 ***   REAL(pr) :: per_diam,per_temp,per_alpha,per_beta,per_flowrate
+	                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:76:51: Missing space after ponctuation :
+	 ***   REAL(pr) :: per_diam,per_temp,per_alpha,per_beta,per_flowrate
+	                                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:76:3: Types should be lowercased :
+	 ***   REAL(pr) :: per_diam,per_temp,per_alpha,per_beta,per_flowrate
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:77:17: Missing space after ponctuation :
+	 ***   REAL(pr) :: dx,per_x_deltax,dist,norm
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:77:30: Missing space after ponctuation :
+	 ***   REAL(pr) :: dx,per_x_deltax,dist,norm
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:77:35: Missing space after ponctuation :
+	 ***   REAL(pr) :: dx,per_x_deltax,dist,norm
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:77:3: Types should be lowercased :
+	 ***   REAL(pr) :: dx,per_x_deltax,dist,norm
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:78:25: Missing space after ponctuation :
+	 ***   REAL(pr) :: dist_axial,dist_radial,per_final_diam,pscal,comp_dist
+	                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:78:37: Missing space after ponctuation :
+	 ***   REAL(pr) :: dist_axial,dist_radial,per_final_diam,pscal,comp_dist
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:78:52: Missing space after ponctuation :
+	 ***   REAL(pr) :: dist_axial,dist_radial,per_final_diam,pscal,comp_dist
+	                                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:78:58: Missing space after ponctuation :
+	 ***   REAL(pr) :: dist_axial,dist_radial,per_final_diam,pscal,comp_dist
+	                                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:78:3: Types should be lowercased :
+	 ***   REAL(pr) :: dist_axial,dist_radial,per_final_diam,pscal,comp_dist
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:79:23: Missing space after ponctuation :
+	 ***   REAL(pr) :: old_poro,proj_dist,alpha_rad,tan_alpha,inv_sin_alpha,cqdamp,beta_rad
+	                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:79:33: Missing space after ponctuation :
+	 ***   REAL(pr) :: old_poro,proj_dist,alpha_rad,tan_alpha,inv_sin_alpha,cqdamp,beta_rad
+	                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:79:43: Missing space after ponctuation :
+	 ***   REAL(pr) :: old_poro,proj_dist,alpha_rad,tan_alpha,inv_sin_alpha,cqdamp,beta_rad
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:79:53: Missing space after ponctuation :
+	 ***   REAL(pr) :: old_poro,proj_dist,alpha_rad,tan_alpha,inv_sin_alpha,cqdamp,beta_rad
+	                                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:79:67: Missing space after ponctuation :
+	 ***   REAL(pr) :: old_poro,proj_dist,alpha_rad,tan_alpha,inv_sin_alpha,cqdamp,beta_rad
+	                                                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:79:74: Missing space after ponctuation :
+	 ***   REAL(pr) :: old_poro,proj_dist,alpha_rad,tan_alpha,inv_sin_alpha,cqdamp,beta_rad
+	                                                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:79:3: Types should be lowercased :
+	 ***   REAL(pr) :: old_poro,proj_dist,alpha_rad,tan_alpha,inv_sin_alpha,cqdamp,beta_rad
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:80:50: Missing space after ponctuation :
+	 ***   REAL(pr) :: sum_all_fluxes, sum_positive_fluxes,sum_negative_fluxes,sum_hole_fluxes,sum_mask,hole_init_area
+	                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:80:70: Missing space after ponctuation :
+	 ***   REAL(pr) :: sum_all_fluxes, sum_positive_fluxes,sum_negative_fluxes,sum_hole_fluxes,sum_mask,hole_init_area
+	                                                                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:80:86: Missing space after ponctuation :
+	 ***   REAL(pr) :: sum_all_fluxes, sum_positive_fluxes,sum_negative_fluxes,sum_hole_fluxes,sum_mask,hole_init_area
+	                                                                                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:80:95: Missing space after ponctuation :
+	 ***   REAL(pr) :: sum_all_fluxes, sum_positive_fluxes,sum_negative_fluxes,sum_hole_fluxes,sum_mask,hole_init_area
+	                                                                                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:80:3: Types should be lowercased :
+	 ***   REAL(pr) :: sum_all_fluxes, sum_positive_fluxes,sum_negative_fluxes,sum_hole_fluxes,sum_mask,hole_init_area
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:93:11: Missing space after ponctuation :
+	 ***   OPEN (20,file="holes_stats.log",form="formatted")
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:93:34: Missing space after ponctuation :
+	 ***   OPEN (20,file="holes_stats.log",form="formatted")
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:93:16: Missing spaces around "=" :
+	 ***   OPEN (20,file="holes_stats.log",form="formatted")
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:93:39: Missing spaces around "=" :
+	 ***   OPEN (20,file="holes_stats.log",form="formatted")
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:96:11: Missing space after ponctuation :
+	 ***   OPEN (30,file="patch_stats.log",form="formatted")
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:96:34: Missing space after ponctuation :
+	 ***   OPEN (30,file="patch_stats.log",form="formatted")
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:96:16: Missing spaces around "=" :
+	 ***   OPEN (30,file="patch_stats.log",form="formatted")
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:96:39: Missing spaces around "=" :
+	 ***   OPEN (30,file="patch_stats.log",form="formatted")
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:99:11: Missing space after ponctuation :
+	 ***   OPEN (70,file="missing_holes.log",form="formatted")
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:99:36: Missing space after ponctuation :
+	 ***   OPEN (70,file="missing_holes.log",form="formatted")
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:99:16: Missing spaces around "=" :
+	 ***   OPEN (70,file="missing_holes.log",form="formatted")
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:99:41: Missing spaces around "=" :
+	 ***   OPEN (70,file="missing_holes.log",form="formatted")
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:103:66: Missing spaces around "=" :
+	 ***   CALL print_debug ( local_debug_level, debug_proc, debug_routine=routine, debug_message=message )
+	                                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:103:89: Missing spaces around "=" :
+	 ***   CALL print_debug ( local_debug_level, debug_proc, debug_routine=routine, debug_message=message )
+	                                                                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:115:17: Missing spaces around "=" :
+	 ***   INQUIRE ( file=choicesfile, exist=itexists )
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:115:36: Missing spaces around "=" :
+	 ***   INQUIRE ( file=choicesfile, exist=itexists )
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:125:17: Missing spaces around "=" :
+	 ***   OPEN (18, file=choicesfile, form='formatted' )
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:125:35: Missing spaces around "=" :
+	 ***   OPEN (18, file=choicesfile, form='formatted' )
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:131:13: Missing spaces around operator :
+	 ***   IF ( iperio==1 ) THEN
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:131:15: Missing spaces around "=" :
+	 ***   IF ( iperio==1 ) THEN
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:132:33: Missing space after ponctuation :
+	 ***     CALL axisangle_to_quat(xaxis,dperio/180*pi,quatx)
+	                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:132:47: Missing space after ponctuation :
+	 ***     CALL axisangle_to_quat(xaxis,dperio/180*pi,quatx)
+	                                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:133:34: Missing space after ponctuation :
+	 ***     CALL axisangle_to_quat(mxaxis,dperio/180*pi,quatmx)
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:133:48: Missing space after ponctuation :
+	 ***     CALL axisangle_to_quat(mxaxis,dperio/180*pi,quatmx)
+	                                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:144:9: Missing space after ponctuation :
+	 ***   DO k=1,inspec
+	             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:144:7: Missing spaces around "=" :
+	 ***   DO k=1,inspec
+	           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:157:11: Missing space after ponctuation :
+	 ***   DO i = 1,npatch_mpt_blow
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:161:27: Missing space after ponctuation :
+	 ***   DO i = npatch_mpt_blow+1,npatch_mpt
+	                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:177:11: Missing spaces around operator :
+	 ***   IF ( ndim==3 ) THEN
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:177:13: Missing spaces around "=" :
+	 ***   IF ( ndim==3 ) THEN
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:181:14: Missing spaces around operator :
+	 ***   IF ( npbound/=npbound_asciibound ) THEN
+	                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:181:16: Missing spaces around "=" :
+	 ***   IF ( npbound/=npbound_asciibound ) THEN
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:183:34: Missing space after ponctuation :
+	 ***     WRITE (*,*) 'ERROR: npbound=',npbound
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:183:32: Missing spaces around "=" :
+	 ***     WRITE (*,*) 'ERROR: npbound=',npbound
+	                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:184:42: Missing space after ponctuation :
+	 ***     WRITE (*,*) 'but npbound_asciibound=',npbound_asciibound
+	                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:184:40: Missing spaces around "=" :
+	 ***     WRITE (*,*) 'but npbound_asciibound=',npbound_asciibound
+	                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:197:1: Line length > 132 characters :
+	 ***   bnd_nnode = nbound                                                    ! warning : number of nodes of the BOUNDARIESi (must be verified !!!).
+	     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:203:30: Missing space after ponctuation :
+	 ***   ALLOCATE ( coorbound(1:ndim,1:bnd_nnode))
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:204:9: Missing space after ponctuation :
+	 ***   DO j=1,bnd_nnode
+	             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:204:7: Missing spaces around "=" :
+	 ***   DO j=1,bnd_nnode
+	           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:205:11: Missing space after ponctuation :
+	 ***     DO i=1,ndim
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:205:9: Missing spaces around "=" :
+	 ***     DO i=1,ndim
+	             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:207:18: Missing space after ponctuation :
+	 ***       coorbound(i,j) = x(i,k)
+	                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:207:27: Missing space after ponctuation :
+	 ***       coorbound(i,j) = x(i,k)
+	                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:216:26: Missing space after ponctuation :
+	 ***   ALLOCATE ( bnd_flow(0:6,1:bnd_nnode))
+	                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:219:34: Missing space after ponctuation :
+	 ***   ALLOCATE ( bnd_data(0:10+inspec,1:bnd_nnode))
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:236:28: Missing space after ponctuation :
+	 ***   ALLOCATE ( patch_data(0:2,1:npbound))
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:266:15: Missing space after ponctuation :
+	 ***     DO npp = 1,npatch_mpt
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:271:39: Missing space after ponctuation :
+	 ***         CALL compute_patch_area ( ndim,bnd_nnode,n1,n2,snbound,bnd_area(np) )
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:271:49: Missing space after ponctuation :
+	 ***         CALL compute_patch_area ( ndim,bnd_nnode,n1,n2,snbound,bnd_area(np) )
+	                                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:271:52: Missing space after ponctuation :
+	 ***         CALL compute_patch_area ( ndim,bnd_nnode,n1,n2,snbound,bnd_area(np) )
+	                                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:271:55: Missing space after ponctuation :
+	 ***         CALL compute_patch_area ( ndim,bnd_nnode,n1,n2,snbound,bnd_area(np) )
+	                                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:271:63: Missing space after ponctuation :
+	 ***         CALL compute_patch_area ( ndim,bnd_nnode,n1,n2,snbound,bnd_area(np) )
+	                                                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:272:23: Missing space after ponctuation :
+	 ***         WRITE (*,'(A30,A,e16.8,A3)') TRIM(patch_name(np)),":",bnd_area(np)," m2"
+	                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:272:25: Missing space after ponctuation :
+	 ***         WRITE (*,'(A30,A,e16.8,A3)') TRIM(patch_name(np)),":",bnd_area(np)," m2"
+	                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:272:31: Missing space after ponctuation :
+	 ***         WRITE (*,'(A30,A,e16.8,A3)') TRIM(patch_name(np)),":",bnd_area(np)," m2"
+	                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:272:62: Missing space after ponctuation :
+	 ***         WRITE (*,'(A30,A,e16.8,A3)') TRIM(patch_name(np)),":",bnd_area(np)," m2"
+	                                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:282:11: Missing space after ponctuation :
+	 ***   DO i = 1,npercage
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:287:25: Missing space after ponctuation :
+	 ***     READ (18,*) per_name,ipercage
+	                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:289:34: Missing spaces around operator :
+	 ***     IF ( 100.0_pr*i/npercage-10_pr>last_pct*one ) THEN
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:290:37: Missing space after ponctuation :
+	 ***       WRITE (*,*) "Processing hole ",ipercage," of group",TRIM(per_name), last_pct,"%"
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:290:58: Missing space after ponctuation :
+	 ***       WRITE (*,*) "Processing hole ",ipercage," of group",TRIM(per_name), last_pct,"%"
+	                                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:295:20: Missing space after ponctuation :
+	 ***     WRITE (20,'(A20,A,I4,A)',ADVANCE="no") TRIM(per_name),":",ipercage,":"
+	                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:295:22: Missing space after ponctuation :
+	 ***     WRITE (20,'(A20,A,I4,A)',ADVANCE="no") TRIM(per_name),":",ipercage,":"
+	                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:295:25: Missing space after ponctuation :
+	 ***     WRITE (20,'(A20,A,I4,A)',ADVANCE="no") TRIM(per_name),":",ipercage,":"
+	                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:295:29: Missing space after ponctuation :
+	 ***     WRITE (20,'(A20,A,I4,A)',ADVANCE="no") TRIM(per_name),":",ipercage,":"
+	                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:295:62: Missing space after ponctuation :
+	 ***     WRITE (20,'(A20,A,I4,A)',ADVANCE="no") TRIM(per_name),":",ipercage,":"
+	                                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:295:37: Missing spaces around "=" :
+	 ***     WRITE (20,'(A20,A,I4,A)',ADVANCE="no") TRIM(per_name),":",ipercage,":"
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:296:13: Missing space after ponctuation :
+	 ***     DO j = 1,3
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:299:13: Missing space after ponctuation :
+	 ***     DO j = 1,3
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:302:29: Missing space after ponctuation :
+	 ***     CALL make_unit_vect(ndim,per_nx)
+	                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:303:13: Missing space after ponctuation :
+	 ***     DO j = 1,3
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:306:29: Missing space after ponctuation :
+	 ***     CALL make_unit_vect(ndim,per_jx)
+	                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:307:13: Missing space after ponctuation :
+	 ***     DO j = 1,3
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:310:29: Missing space after ponctuation :
+	 ***     CALL make_unit_vect(ndim,per_tx)
+	                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:312:28: Missing space after ponctuation :
+	 ***     old_poro = MAX(old_poro,one/999)
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:335:13: Missing space after ponctuation :
+	 ***     DO j = 1,3
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:342:15: Missing space after ponctuation :
+	 ***     DO npp = 1,npatch_mpt
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:344:30: Missing spaces around operator :
+	 ***       IF ( patch_mpt_type(npp)>0 ) THEN
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:347:18: Missing space after ponctuation :
+	 ***         DO n = n1,n2
+	                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:348:17: Missing space after ponctuation :
+	 ***           DO j=1,ndim
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:348:15: Missing spaces around "=" :
+	 ***           DO j=1,ndim
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:349:39: Missing space after ponctuation :
+	 ***             wall_node(j) = coorbound(j,n)
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:350:39: Missing space after ponctuation :
+	 ***             wall_normal(j) = snbound(j,n)
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:352:32: Missing space after ponctuation :
+	 ***           CALL comp_norm ( ndim,wall_normal,norm )
+	                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:352:44: Missing space after ponctuation :
+	 ***           CALL comp_norm ( ndim,wall_normal,norm )
+	                                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:354:37: Missing space after ponctuation :
+	 ***           CALL make_unit_vect ( ndim,wall_normal )
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:355:21: Missing spaces around operator :
+	 ***           IF ( iperio>=2 ) THEN
+	                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:355:23: Missing spaces around "=" :
+	 ***           IF ( iperio>=2 ) THEN
+	                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:356:41: Missing space after ponctuation :
+	 ***             CALL make_radial_vect ( ndim,wall_node,wall_normal )
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:356:51: Missing space after ponctuation :
+	 ***             CALL make_radial_vect ( ndim,wall_node,wall_normal )
+	                                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:358:35: Missing space after ponctuation :
+	 ***           CALL project_node ( ndim,per_x,wall_normal,wall_node,dist_axial,dist_radial,node_projected )
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:358:41: Missing space after ponctuation :
+	 ***           CALL project_node ( ndim,per_x,wall_normal,wall_node,dist_axial,dist_radial,node_projected )
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:358:53: Missing space after ponctuation :
+	 ***           CALL project_node ( ndim,per_x,wall_normal,wall_node,dist_axial,dist_radial,node_projected )
+	                                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:358:63: Missing space after ponctuation :
+	 ***           CALL project_node ( ndim,per_x,wall_normal,wall_node,dist_axial,dist_radial,node_projected )
+	                                                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:358:74: Missing space after ponctuation :
+	 ***           CALL project_node ( ndim,per_x,wall_normal,wall_node,dist_axial,dist_radial,node_projected )
+	                                                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:358:86: Missing space after ponctuation :
+	 ***           CALL project_node ( ndim,per_x,wall_normal,wall_node,dist_axial,dist_radial,node_projected )
+	                                                                                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:360:24: Missing spaces around operator :
+	 ***           IF ( comp_dist<dist ) THEN
+	                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:371:11: Missing space after ponctuation :
+	 ***     DO j=1,ndim
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:371:9: Missing spaces around "=" :
+	 ***     DO j=1,ndim
+	             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:375:22: Missing space after ponctuation :
+	 ***     WRITE (20,'(F10.6,A)',ADVANCE="no") sqrt(dist)*1000.0_pr,":"
+	                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:375:26: Missing space after ponctuation :
+	 ***     WRITE (20,'(F10.6,A)',ADVANCE="no") sqrt(dist)*1000.0_pr,":"
+	                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:375:34: Missing spaces around "=" :
+	 ***     WRITE (20,'(F10.6,A)',ADVANCE="no") sqrt(dist)*1000.0_pr,":"
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:377:34: Missing space after ponctuation :
+	 ***     per_final_diam = MAX(per_diam,per_x_deltax*slope,per_x_deltax*thick)
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:377:53: Missing space after ponctuation :
+	 ***     per_final_diam = MAX(per_diam,per_x_deltax*slope,per_x_deltax*thick)
+	                                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:379:40: Missing space after ponctuation :
+	 *** !   per_final_diam = min(per_final_diam,per_diam / sqrt(old_poro*0.5))
+	                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:381:22: Missing space after ponctuation :
+	 ***     WRITE (20,'(F10.6,A)',ADVANCE="no") per_final_diam/per_diam,":"
+	                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:381:26: Missing space after ponctuation :
+	 ***     WRITE (20,'(F10.6,A)',ADVANCE="no") per_final_diam/per_diam,":"
+	                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:381:34: Missing spaces around "=" :
+	 ***     WRITE (20,'(F10.6,A)',ADVANCE="no") per_final_diam/per_diam,":"
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:384:11: Missing space after ponctuation :
+	 ***     DO j=1,ndim
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:384:9: Missing spaces around "=" :
+	 ***     DO j=1,ndim
+	             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:385:33: Missing space after ponctuation :
+	 ***       wall_node(j) = coorbound(j,node)
+	                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:386:33: Missing space after ponctuation :
+	 ***       wall_normal(j) = snbound(j,node)
+	                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:388:31: Missing space after ponctuation :
+	 ***     CALL make_unit_vect ( ndim,wall_normal )
+	                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:389:15: Missing spaces around operator :
+	 ***     IF ( iperio>=2 ) THEN
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:389:17: Missing spaces around "=" :
+	 ***     IF ( iperio>=2 ) THEN
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:390:35: Missing space after ponctuation :
+	 ***       CALL make_radial_vect ( ndim,wall_node,wall_normal )
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:390:45: Missing space after ponctuation :
+	 ***       CALL make_radial_vect ( ndim,wall_node,wall_normal )
+	                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:392:32: Missing space after ponctuation :
+	 ***     CALL pvect_to_quat ( per_nx,wall_normal,quat )
+	                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:392:44: Missing space after ponctuation :
+	 ***     CALL pvect_to_quat ( per_nx,wall_normal,quat )
+	                                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:393:30: Missing space after ponctuation :
+	 ***     CALL quatvect_mult ( quat,per_nx )
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:394:30: Missing space after ponctuation :
+	 ***     CALL quatvect_mult ( quat,per_tx )
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:395:30: Missing space after ponctuation :
+	 ***     CALL quatvect_mult ( quat,per_jx )
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:397:13: Missing space after ponctuation :
+	 ***     DO j = 1,ndim
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:398:15: Missing space after ponctuation :
+	 ***       per_x3(j,0) = per_x(j)
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:399:16: Missing space after ponctuation :
+	 ***       per_nx3(j,0) = per_nx(j)
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:400:16: Missing space after ponctuation :
+	 ***       per_tx3(j,0) = per_tx(j)
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:401:16: Missing space after ponctuation :
+	 ***       per_jx3(j,0) = per_jx(j)
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:406:15: Missing space after ponctuation :
+	 ***     DO npp = 1,npatch_mpt
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:411:16: Missing space after ponctuation :
+	 ***       DO n = n1,n2
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:412:15: Missing space after ponctuation :
+	 ***         DO j=1,ndim
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:412:13: Missing spaces around "=" :
+	 ***         DO j=1,ndim
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:413:37: Missing space after ponctuation :
+	 ***           wall_node(j) = coorbound(j,n)
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:414:37: Missing space after ponctuation :
+	 ***           wall_normal(j) = snbound(j,n)
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:416:28: Missing space after ponctuation :
+	 ***         CALL comp_pscal ( 3,per_jx,wall_normal,norm )
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:416:35: Missing space after ponctuation :
+	 ***         CALL comp_pscal ( 3,per_jx,wall_normal,norm )
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:416:47: Missing space after ponctuation :
+	 ***         CALL comp_pscal ( 3,per_jx,wall_normal,norm )
+	                                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:418:35: Missing space after ponctuation :
+	 ***           CALL project_node ( ndim,per_x_moved,per_jx,wall_node,dist_axial,dist_radial,node_projected )
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:418:47: Missing space after ponctuation :
+	 ***           CALL project_node ( ndim,per_x_moved,per_jx,wall_node,dist_axial,dist_radial,node_projected )
+	                                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:418:54: Missing space after ponctuation :
+	 ***           CALL project_node ( ndim,per_x_moved,per_jx,wall_node,dist_axial,dist_radial,node_projected )
+	                                                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:418:64: Missing space after ponctuation :
+	 ***           CALL project_node ( ndim,per_x_moved,per_jx,wall_node,dist_axial,dist_radial,node_projected )
+	                                                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:418:75: Missing space after ponctuation :
+	 ***           CALL project_node ( ndim,per_x_moved,per_jx,wall_node,dist_axial,dist_radial,node_projected )
+	                                                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:418:87: Missing space after ponctuation :
+	 ***           CALL project_node ( ndim,per_x_moved,per_jx,wall_node,dist_axial,dist_radial,node_projected )
+	                                                                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:419:30: Missing spaces around operator :
+	 ***           IF ( ABS(dist_axial)<tol ) THEN
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:427:15: Missing spaces around operator :
+	 ***     IF ( iperio>0 ) THEN
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:438:17: Missing spaces around operator :
+	 ***       IF ( iperio==1 ) THEN
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:438:19: Missing spaces around "=" :
+	 ***       IF ( iperio==1 ) THEN
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:439:35: Missing space after ponctuation :
+	 ***         CALL quatvect_mult ( quatx,per_nx_p1 )
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:440:35: Missing space after ponctuation :
+	 ***         CALL quatvect_mult ( quatx,per_tx_p1 )
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:441:35: Missing space after ponctuation :
+	 ***         CALL quatvect_mult ( quatx,per_jx_p1 )
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:442:35: Missing space after ponctuation :
+	 ***         CALL quatvect_mult ( quatx,per_x_p1 )
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:443:36: Missing space after ponctuation :
+	 ***         CALL quatvect_mult ( quatmx,per_nx_m1 )
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:444:36: Missing space after ponctuation :
+	 ***         CALL quatvect_mult ( quatmx,per_tx_m1 )
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:445:36: Missing space after ponctuation :
+	 ***         CALL quatvect_mult ( quatmx,per_jx_m1 )
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:446:36: Missing space after ponctuation :
+	 ***         CALL quatvect_mult ( quatmx,per_x_m1 )
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:449:17: Missing spaces around operator :
+	 ***       IF ( iperio>=2 ) THEN
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:449:19: Missing spaces around "=" :
+	 ***       IF ( iperio>=2 ) THEN
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:455:15: Missing space after ponctuation :
+	 ***       DO j = 1,ndim
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:460:17: Missing space after ponctuation :
+	 ***         per_x3(j,1) = per_x_p1(j)
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:461:18: Missing space after ponctuation :
+	 ***         per_nx3(j,1) = per_nx_p1(j)
+	                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:462:18: Missing space after ponctuation :
+	 ***         per_tx3(j,1) = per_tx_p1(j)
+	                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:463:18: Missing space after ponctuation :
+	 ***         per_jx3(j,1) = per_jx_p1(j)
+	                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:466:17: Missing space after ponctuation :
+	 ***       DO npp = 1,npatch_mpt
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:471:18: Missing space after ponctuation :
+	 ***         DO n = n1,n2
+	                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:472:17: Missing space after ponctuation :
+	 ***           DO j=1,ndim
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:472:15: Missing spaces around "=" :
+	 ***           DO j=1,ndim
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:473:39: Missing space after ponctuation :
+	 ***             wall_node(j) = coorbound(j,n)
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:474:39: Missing space after ponctuation :
+	 ***             wall_normal(j) = snbound(j,n)
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:477:30: Missing space after ponctuation :
+	 ***           CALL comp_pscal ( 3,per_jx_p1,wall_normal,norm )
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:477:40: Missing space after ponctuation :
+	 ***           CALL comp_pscal ( 3,per_jx_p1,wall_normal,norm )
+	                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:477:52: Missing space after ponctuation :
+	 ***           CALL comp_pscal ( 3,per_jx_p1,wall_normal,norm )
+	                                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:478:28: Missing spaces around operator :
+	 ***           IF ( norm*mpt_type>zero ) THEN
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:479:37: Missing space after ponctuation :
+	 ***             CALL project_node ( ndim,per_x_p1,per_jx_p1,wall_node,dist_axial,dist_radial,node_projected )
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:479:46: Missing space after ponctuation :
+	 ***             CALL project_node ( ndim,per_x_p1,per_jx_p1,wall_node,dist_axial,dist_radial,node_projected )
+	                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:479:56: Missing space after ponctuation :
+	 ***             CALL project_node ( ndim,per_x_p1,per_jx_p1,wall_node,dist_axial,dist_radial,node_projected )
+	                                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:479:66: Missing space after ponctuation :
+	 ***             CALL project_node ( ndim,per_x_p1,per_jx_p1,wall_node,dist_axial,dist_radial,node_projected )
+	                                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:479:77: Missing space after ponctuation :
+	 ***             CALL project_node ( ndim,per_x_p1,per_jx_p1,wall_node,dist_axial,dist_radial,node_projected )
+	                                                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:479:89: Missing space after ponctuation :
+	 ***             CALL project_node ( ndim,per_x_p1,per_jx_p1,wall_node,dist_axial,dist_radial,node_projected )
+	                                                                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:480:32: Missing spaces around operator :
+	 ***             IF ( ABS(dist_axial)<tol ) THEN
+	                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:481:30: Missing spaces around operator :
+	 ***               IF ( dist_radial<hole2node_dist(n) ) THEN
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:488:30: Missing space after ponctuation :
+	 ***           CALL comp_pscal ( 3,per_jx_m1,wall_normal,norm )
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:488:40: Missing space after ponctuation :
+	 ***           CALL comp_pscal ( 3,per_jx_m1,wall_normal,norm )
+	                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:488:52: Missing space after ponctuation :
+	 ***           CALL comp_pscal ( 3,per_jx_m1,wall_normal,norm )
+	                                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:489:28: Missing spaces around operator :
+	 ***           IF ( norm*mpt_type>zero ) THEN
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:490:37: Missing space after ponctuation :
+	 ***             CALL project_node ( ndim,per_x_m1,per_jx_m1,wall_node,dist_axial,dist_radial,node_projected )
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:490:46: Missing space after ponctuation :
+	 ***             CALL project_node ( ndim,per_x_m1,per_jx_m1,wall_node,dist_axial,dist_radial,node_projected )
+	                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:490:56: Missing space after ponctuation :
+	 ***             CALL project_node ( ndim,per_x_m1,per_jx_m1,wall_node,dist_axial,dist_radial,node_projected )
+	                                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:490:66: Missing space after ponctuation :
+	 ***             CALL project_node ( ndim,per_x_m1,per_jx_m1,wall_node,dist_axial,dist_radial,node_projected )
+	                                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:490:77: Missing space after ponctuation :
+	 ***             CALL project_node ( ndim,per_x_m1,per_jx_m1,wall_node,dist_axial,dist_radial,node_projected )
+	                                                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:490:89: Missing space after ponctuation :
+	 ***             CALL project_node ( ndim,per_x_m1,per_jx_m1,wall_node,dist_axial,dist_radial,node_projected )
+	                                                                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:491:32: Missing spaces around operator :
+	 ***             IF ( ABS(dist_axial)<tol ) THEN
+	                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:492:30: Missing spaces around operator :
+	 ***               IF ( dist_radial<hole2node_dist(n)) THEN
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:505:15: Missing space after ponctuation :
+	 ***     DO npp = 1,npatch_mpt
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:510:16: Missing space after ponctuation :
+	 ***       DO n = n1,n2
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:511:15: Missing space after ponctuation :
+	 ***         DO j=1,ndim
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:511:13: Missing spaces around "=" :
+	 ***         DO j=1,ndim
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:512:37: Missing space after ponctuation :
+	 ***           wall_node(j) = coorbound(j,n)
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:513:37: Missing space after ponctuation :
+	 ***           wall_normal(j) = snbound(j,n)
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:515:30: Missing space after ponctuation :
+	 ***         CALL comp_norm ( ndim,wall_normal,norm )
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:515:42: Missing space after ponctuation :
+	 ***         CALL comp_norm ( ndim,wall_normal,norm )
+	                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:516:35: Missing space after ponctuation :
+	 ***         CALL make_unit_vect ( ndim,wall_normal )
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:517:19: Missing spaces around operator :
+	 ***         IF ( iperio>=2 ) THEN
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:517:21: Missing spaces around "=" :
+	 ***         IF ( iperio>=2 ) THEN
+	                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:518:39: Missing space after ponctuation :
+	 ***           CALL make_radial_vect ( ndim,wall_node,wall_normal )
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:518:49: Missing space after ponctuation :
+	 ***           CALL make_radial_vect ( ndim,wall_node,wall_normal )
+	                                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:520:31: Missing space after ponctuation :
+	 ***         CALL comp_pscal ( ndim,wall_normal,per_jx,pscal )
+	                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:520:43: Missing space after ponctuation :
+	 ***         CALL comp_pscal ( ndim,wall_normal,per_jx,pscal )
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:520:50: Missing space after ponctuation :
+	 ***         CALL comp_pscal ( ndim,wall_normal,per_jx,pscal )
+	                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:542:22: Missing space after ponctuation :
+	 ***     WRITE (20,'(F10.6,A)',ADVANCE="no") 1/old_poro,":"
+	                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:542:26: Missing space after ponctuation :
+	 ***     WRITE (20,'(F10.6,A)',ADVANCE="no") 1/old_poro,":"
+	                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:542:34: Missing spaces around "=" :
+	 ***     WRITE (20,'(F10.6,A)',ADVANCE="no") 1/old_poro,":"
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:545:20: Missing spaces around operator :
+	 ***     IF ( mask_sum(1)<hole_init_area ) THEN
+	                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:22: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:24: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:27: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:29: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:32: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:34: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:40: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:42: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:48: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:50: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:56: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:80: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:93: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:99: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                                                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:112: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                                                                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:125: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                                                                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:546:1: Line length > 132 characters :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",1,":",per_x(1),":",per_x(2),":",per_x(3)
+	     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:548:24: Missing space after ponctuation :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one,":"
+	                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:548:28: Missing space after ponctuation :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one,":"
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:548:42: Missing space after ponctuation :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one,":"
+	                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:548:36: Missing spaces around "=" :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one,":"
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:551:24: Missing space after ponctuation :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one/new_poro(1),":"
+	                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:551:28: Missing space after ponctuation :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one/new_poro(1),":"
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:551:42: Missing space after ponctuation :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one/new_poro(1),":"
+	                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:551:36: Missing spaces around "=" :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one/new_poro(1),":"
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:554:21: Missing spaces around operator :
+	 ***     IF ( mask_sum(-1)<hole_init_area ) THEN
+	                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:22: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:24: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:27: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:29: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:32: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:34: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:40: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:42: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:48: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:50: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:56: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:80: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:100: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                                                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:113: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                                                                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:126: Missing space after ponctuation :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	                                                                                                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:555:1: Line length > 132 characters :
+	 ***       WRITE (70,'(A20,A,I4,A,I4,A,E16.8,A,E16.8,A,E16.8,A)') TRIM(per_name),":",ipercage,":",-1,":",per_x(1),":",per_x(2),":",per_x(3)
+	     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:557:24: Missing space after ponctuation :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one,":"
+	                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:557:28: Missing space after ponctuation :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one,":"
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:557:42: Missing space after ponctuation :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one,":"
+	                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:557:36: Missing spaces around "=" :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one,":"
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:559:53: Missing space after ponctuation :
+	 ***       new_poro(-1) = MAX(hole_init_area/mask_sum(-1),old_poro)
+	                                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:560:24: Missing space after ponctuation :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one/new_poro(-1),":"
+	                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:560:28: Missing space after ponctuation :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one/new_poro(-1),":"
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:560:42: Missing space after ponctuation :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one/new_poro(-1),":"
+	                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:560:36: Missing spaces around "=" :
+	 ***       WRITE (20,'(F10.6,A)',ADVANCE="no"),one/new_poro(-1),":"
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:565:38: Missing space after ponctuation :
+	 ***     OPEN (unit = 40, status='replace',file='holes_data.bin',form='unformatted')!create a new file, or overwrite an existing on
+	                                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:565:60: Missing space after ponctuation :
+	 ***     OPEN (unit = 40, status='replace',file='holes_data.bin',form='unformatted')!create a new file, or overwrite an existing on
+	                                                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:565:80: Exactly one space after comment :
+	 ***     OPEN (unit = 40, status='replace',file='holes_data.bin',form='unformatted')!create a new file, or overwrite an existing on
+	                                                                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:565:28: Missing spaces around "=" :
+	 ***     OPEN (unit = 40, status='replace',file='holes_data.bin',form='unformatted')!create a new file, or overwrite an existing on
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:565:43: Missing spaces around "=" :
+	 ***     OPEN (unit = 40, status='replace',file='holes_data.bin',form='unformatted')!create a new file, or overwrite an existing on
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:565:65: Missing spaces around "=" :
+	 ***     OPEN (unit = 40, status='replace',file='holes_data.bin',form='unformatted')!create a new file, or overwrite an existing on
+	                                                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:566:38: Missing space after ponctuation :
+	 ***     OPEN (unit = 60, status='replace',file='patch_data.bin',form='unformatted')!create a new file, or overwrite an existing on
+	                                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:566:60: Missing space after ponctuation :
+	 ***     OPEN (unit = 60, status='replace',file='patch_data.bin',form='unformatted')!create a new file, or overwrite an existing on
+	                                                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:566:80: Exactly one space after comment :
+	 ***     OPEN (unit = 60, status='replace',file='patch_data.bin',form='unformatted')!create a new file, or overwrite an existing on
+	                                                                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:566:28: Missing spaces around "=" :
+	 ***     OPEN (unit = 60, status='replace',file='patch_data.bin',form='unformatted')!create a new file, or overwrite an existing on
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:566:43: Missing spaces around "=" :
+	 ***     OPEN (unit = 60, status='replace',file='patch_data.bin',form='unformatted')!create a new file, or overwrite an existing on
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:566:65: Missing spaces around "=" :
+	 ***     OPEN (unit = 60, status='replace',file='patch_data.bin',form='unformatted')!create a new file, or overwrite an existing on
+	                                                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:567:15: Missing space after ponctuation :
+	 ***     DO npp = 1,npatch_mpt
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:573:29: Missing spaces around operator :
+	 ***       IF ( new_poro(mpt_type)==zero ) CYCLE
+	                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:573:31: Missing spaces around "=" :
+	 ***       IF ( new_poro(mpt_type)==zero ) CYCLE
+	                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:577:16: Missing space after ponctuation :
+	 ***       DO n = n1,n2
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:581:15: Missing space after ponctuation :
+	 ***         DO j=1,ndim
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:581:13: Missing spaces around "=" :
+	 ***         DO j=1,ndim
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:582:37: Missing space after ponctuation :
+	 ***           wall_node(j) = coorbound(j,n)
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:583:37: Missing space after ponctuation :
+	 ***           wall_normal(j) = snbound(j,n)
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:585:35: Missing space after ponctuation :
+	 ***         CALL make_unit_vect ( ndim,wall_normal )
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:586:18: Missing spaces around operator :
+	 ***         IF (iperio>=2) THEN
+	                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:586:20: Missing spaces around "=" :
+	 ***         IF (iperio>=2) THEN
+	                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:587:39: Missing space after ponctuation :
+	 ***           CALL make_radial_vect ( ndim,wall_node,wall_normal )
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:587:49: Missing space after ponctuation :
+	 ***           CALL make_radial_vect ( ndim,wall_node,wall_normal )
+	                                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:589:15: Missing space after ponctuation :
+	 ***         DO j=1,ndim
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:589:13: Missing spaces around "=" :
+	 ***         DO j=1,ndim
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:590:32: Missing space after ponctuation :
+	 ***           per_tx(j) = per_tx3(j,bnd_per_id(n))
+	                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:592:33: Missing space after ponctuation :
+	 ***         CALL project_node ( ndim,per_tx,wall_normal,origin,dist_axial,dist_radial,wall_tangent )
+	                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:592:40: Missing space after ponctuation :
+	 ***         CALL project_node ( ndim,per_tx,wall_normal,origin,dist_axial,dist_radial,wall_tangent )
+	                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:592:52: Missing space after ponctuation :
+	 ***         CALL project_node ( ndim,per_tx,wall_normal,origin,dist_axial,dist_radial,wall_tangent )
+	                                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:592:59: Missing space after ponctuation :
+	 ***         CALL project_node ( ndim,per_tx,wall_normal,origin,dist_axial,dist_radial,wall_tangent )
+	                                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:592:70: Missing space after ponctuation :
+	 ***         CALL project_node ( ndim,per_tx,wall_normal,origin,dist_axial,dist_radial,wall_tangent )
+	                                                                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:592:82: Missing space after ponctuation :
+	 ***         CALL project_node ( ndim,per_tx,wall_normal,origin,dist_axial,dist_radial,wall_tangent )
+	                                                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:593:35: Missing space after ponctuation :
+	 ***         CALL make_unit_vect ( ndim,wall_tangent )
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:596:37: Missing space after ponctuation :
+	 *** !       CALL make_radial_vect ( ndim,wall_node,wall_tangent )
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:596:47: Missing space after ponctuation :
+	 *** !       CALL make_radial_vect ( ndim,wall_node,wall_tangent )
+	                                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:598:19: Missing space after ponctuation :
+	 ***         bnd_data(0,n) = bnd_data(0,n)+bnd_mask(n) * per_diam
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:598:35: Missing space after ponctuation :
+	 ***         bnd_data(0,n) = bnd_data(0,n)+bnd_mask(n) * per_diam
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:599:19: Missing space after ponctuation :
+	 ***         bnd_data(1,n) = bnd_data(1,n)+bnd_mask(n) * per_flowrate
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:599:35: Missing space after ponctuation :
+	 ***         bnd_data(1,n) = bnd_data(1,n)+bnd_mask(n) * per_flowrate
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:601:19: Missing space after ponctuation :
+	 ***         bnd_data(2,n) = bnd_data(2,n)+bnd_invdist(n) * old_poro
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:601:35: Missing space after ponctuation :
+	 ***         bnd_data(2,n) = bnd_data(2,n)+bnd_invdist(n) * old_poro
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:602:19: Missing space after ponctuation :
+	 ***         bnd_data(3,n) = bnd_data(3,n)+bnd_invdist(n) * per_alpha
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:602:35: Missing space after ponctuation :
+	 ***         bnd_data(3,n) = bnd_data(3,n)+bnd_invdist(n) * per_alpha
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:603:19: Missing space after ponctuation :
+	 ***         bnd_data(4,n) = bnd_data(4,n)+bnd_invdist(n) * per_beta
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:603:35: Missing space after ponctuation :
+	 ***         bnd_data(4,n) = bnd_data(4,n)+bnd_invdist(n) * per_beta
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:606:19: Missing space after ponctuation :
+	 ***         bnd_flow(0,n) = bnd_flow(0,n) + bnd_mask(n) * per_flowrate/ mask_sum(mpt_type)
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:606:35: Missing space after ponctuation :
+	 ***         bnd_flow(0,n) = bnd_flow(0,n) + bnd_mask(n) * per_flowrate/ mask_sum(mpt_type)
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:607:15: Missing space after ponctuation :
+	 ***         DO j=1,ndim
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:607:13: Missing spaces around "=" :
+	 ***         DO j=1,ndim
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:609:21: Missing space after ponctuation :
+	 ***           bnd_flow(j,n) = bnd_flow(j,n) + bnd_mask(n) * per_flowrate/ mask_sum(mpt_type) * wall_normal(j)
+	                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:609:37: Missing space after ponctuation :
+	 ***           bnd_flow(j,n) = bnd_flow(j,n) + bnd_mask(n) * per_flowrate/ mask_sum(mpt_type) * wall_normal(j)
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:611:21: Missing space after ponctuation :
+	 ***           bnd_flow(j,n) = bnd_flow(j,n) + bnd_mask(n) * per_flowrate/ mask_sum(mpt_type) * wall_tangent(j) * tan_alpha
+	                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:611:37: Missing space after ponctuation :
+	 ***           bnd_flow(j,n) = bnd_flow(j,n) + bnd_mask(n) * per_flowrate/ mask_sum(mpt_type) * wall_tangent(j) * tan_alpha
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:613:19: Missing space after ponctuation :
+	 ***         bnd_flow(4,n) = bnd_flow(4,n) + bnd_invdist(n) * per_temp
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:613:35: Missing space after ponctuation :
+	 ***         bnd_flow(4,n) = bnd_flow(4,n) + bnd_invdist(n) * per_temp
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:615:19: Missing space after ponctuation :
+	 ***         bnd_flow(5,n) = bnd_flow(5,n) + bnd_mask(n) * new_poro(mpt_type)
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:615:35: Missing space after ponctuation :
+	 ***         bnd_flow(5,n) = bnd_flow(5,n) + bnd_mask(n) * new_poro(mpt_type)
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:617:19: Missing space after ponctuation :
+	 ***         bnd_flow(6,n) = bnd_flow(6,n) + bnd_invdist(n) * old_poro
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:617:35: Missing space after ponctuation :
+	 ***         bnd_flow(6,n) = bnd_flow(6,n) + bnd_invdist(n) * old_poro
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:621:22: Missing space after ponctuation :
+	 ***     WRITE (20,'(F10.6,A)',ADVANCE="no") per_flowrate,":"
+	                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:621:26: Missing space after ponctuation :
+	 ***     WRITE (20,'(F10.6,A)',ADVANCE="no") per_flowrate,":"
+	                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:621:34: Missing spaces around "=" :
+	 ***     WRITE (20,'(F10.6,A)',ADVANCE="no") per_flowrate,":"
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:622:20: Missing space after ponctuation :
+	 ***     WRITE (20,'(A)',ADVANCE="yes") ""
+	                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:622:28: Missing spaces around "=" :
+	 ***     WRITE (20,'(A)',ADVANCE="yes") ""
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:635:13: Missing space after ponctuation :
+	 ***   DO npp = 1,npatch_mpt
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:640:17: Missing spaces around operator :
+	 ***     IF ( mpt_type==1 ) THEN
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:640:19: Missing spaces around "=" :
+	 ***     IF ( mpt_type==1 ) THEN
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:642:28: Missing space after ponctuation :
+	 ***       WRITE ( allocname,'(A,I0)') "tempe_ref_",np
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:642:47: Missing space after ponctuation :
+	 ***       WRITE ( allocname,'(A,I0)') "tempe_ref_",np
+	                                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:645:28: Missing space after ponctuation :
+	 ***       WRITE ( allocname,'(A,I0)') "Y_ref_",np
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:645:43: Missing space after ponctuation :
+	 ***       WRITE ( allocname,'(A,I0)') "Y_ref_",np
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:646:61: Missing space after ponctuation :
+	 ***       CALL alloc ( wbnd_ref(np)%Y_ref, TRIM(allocname), neqs,ibound2(np) )
+	                                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:647:13: Missing space after ponctuation :
+	 ***       DO k=1,neqs
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:647:11: Missing spaces around "=" :
+	 ***       DO k=1,neqs
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:648:36: Missing spaces around operator :
+	 ***         IF ( TRIM(inputspec_name(k))==species(k) ) THEN
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:648:38: Missing spaces around "=" :
+	 ***         IF ( TRIM(inputspec_name(k))==species(k) ) THEN
+	                                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:652:54: Missing space after ponctuation :
+	 ***           WRITE (*,*) "Error : Species name mismatch",TRIM(inputspec_name(k)),species(k)
+	                                                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:652:78: Missing space after ponctuation :
+	 ***           WRITE (*,*) "Error : Species name mismatch",TRIM(inputspec_name(k)),species(k)
+	                                                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:656:27: Missing space after ponctuation :
+	 ***       WRITE (allocname,'(A,I0)') "rhou_ref_",np
+	                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:656:45: Missing space after ponctuation :
+	 ***       WRITE (allocname,'(A,I0)') "rhou_ref_",np
+	                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:657:56: Missing space after ponctuation :
+	 ***       CALL alloc(wbnd_ref(np)%rhou_ref, TRIM(allocname),ndim, ibound2(np))
+	                                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:659:28: Missing space after ponctuation :
+	 ***       WRITE ( allocname,'(A,I0)') "acceleration_factor_ref_",np
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:659:61: Missing space after ponctuation :
+	 ***       WRITE ( allocname,'(A,I0)') "acceleration_factor_ref_",np
+	                                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:660:73: Missing space after ponctuation :
+	 ***       CALL alloc ( wbnd_ref(np)%acceleration_factor_ref, TRIM(allocname),ibound2(np) )
+	                                                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:662:28: Missing space after ponctuation :
+	 ***       WRITE ( allocname,'(A,I0)') "plate_porosity_ref_",np
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:662:56: Missing space after ponctuation :
+	 ***       WRITE ( allocname,'(A,I0)') "plate_porosity_ref_",np
+	                                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:663:68: Missing space after ponctuation :
+	 ***       CALL alloc ( wbnd_ref(np)%plate_porosity_ref, TRIM(allocname),ibound2(np) )
+	                                                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:667:27: Missing space after ponctuation :
+	 ***       WRITE (allocname,'(A,I0)') "rhoun_ref_",np
+	                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:667:46: Missing space after ponctuation :
+	 ***       WRITE (allocname,'(A,I0)') "rhoun_ref_",np
+	                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:676:14: Missing space after ponctuation :
+	 ***     DO n = n1,n2
+	                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:677:13: Missing space after ponctuation :
+	 ***       DO i=0,1
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:677:11: Missing spaces around "=" :
+	 ***       DO i=0,1
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:678:19: Missing space after ponctuation :
+	 ***         bnd_data(i,n) = bnd_data(i,n)/bnd_mask_global(n)
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:678:35: Missing space after ponctuation :
+	 ***         bnd_data(i,n) = bnd_data(i,n)/bnd_mask_global(n)
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:680:13: Missing space after ponctuation :
+	 ***       DO i=2,3
+	                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:680:11: Missing spaces around "=" :
+	 ***       DO i=2,3
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:681:19: Missing space after ponctuation :
+	 ***         bnd_data(i,n) = bnd_data(i,n)/bnd_invdist_global(n)
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:681:35: Missing space after ponctuation :
+	 ***         bnd_data(i,n) = bnd_data(i,n)/bnd_invdist_global(n)
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:691:17: Missing spaces around operator :
+	 ***     IF ( mpt_type==1 ) THEN
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:691:19: Missing spaces around "=" :
+	 ***     IF ( mpt_type==1 ) THEN
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:693:16: Missing space after ponctuation :
+	 ***       DO n = n1,n2
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:695:61: Missing space after ponctuation :
+	 ***         new_poro(mpt_type) = new_poro(mpt_type) + bnd_flow(5,n)
+	                                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:696:41: Missing space after ponctuation :
+	 ***         old_poro = old_poro + bnd_flow(6,n)
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:698:52: Missing space after ponctuation :
+	 ***         wbnd_ref(np)%tempe_ref(n-n1+1) = bnd_flow(4,n)/bnd_invdist_global(n)
+	                                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:699:23: Missing space after ponctuation :
+	 ***         bnd_data(4+3+1,n) = wbnd_ref(np)%tempe_ref(n-n1+1)
+	                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:702:66: Missing space after ponctuation :
+	 ***         wbnd_ref(np)%acceleration_factor_ref(n-n1+1) = bnd_flow(5,n)
+	                                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:703:23: Missing space after ponctuation :
+	 ***         bnd_data(4+3+2,n) =wbnd_ref(np)%acceleration_factor_ref(n-n1+1)
+	                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:703:27: Missing spaces around "=" :
+	 ***         bnd_data(4+3+2,n) =wbnd_ref(np)%acceleration_factor_ref(n-n1+1)
+	                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:706:61: Missing space after ponctuation :
+	 ***         wbnd_ref(np)%plate_porosity_ref(n-n1+1) = bnd_flow(6,n)/bnd_invdist_global(n)
+	                                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:707:23: Missing space after ponctuation :
+	 ***         bnd_data(4+3+3,n) = wbnd_ref(np)%plate_porosity_ref(n-n1+1)
+	                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:710:17: Missing space after ponctuation :
+	 ***         DO j = 1,ndim
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:711:34: Missing space after ponctuation :
+	 ***           wbnd_ref(np)%rhou_ref(j,n-n1+1) = bnd_flow(j,n)
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:711:55: Missing space after ponctuation :
+	 ***           wbnd_ref(np)%rhou_ref(j,n-n1+1) = bnd_flow(j,n)
+	                                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:712:23: Missing space after ponctuation :
+	 ***           bnd_data(4+j,n) = bnd_flow(j,n)
+	                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:712:39: Missing space after ponctuation :
+	 ***           bnd_data(4+j,n) = bnd_flow(j,n)
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:715:37: Missing space after ponctuation :
+	 ***       CALL compute_patch_flux ( ndim,bnd_nnode,solbnd_neq,n1,n2,wbnd_ref(np)%rhou_ref(:,:),snbound, bnd_flux(np) )
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:715:47: Missing space after ponctuation :
+	 ***       CALL compute_patch_flux ( ndim,bnd_nnode,solbnd_neq,n1,n2,wbnd_ref(np)%rhou_ref(:,:),snbound, bnd_flux(np) )
+	                                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:715:58: Missing space after ponctuation :
+	 ***       CALL compute_patch_flux ( ndim,bnd_nnode,solbnd_neq,n1,n2,wbnd_ref(np)%rhou_ref(:,:),snbound, bnd_flux(np) )
+	                                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:715:61: Missing space after ponctuation :
+	 ***       CALL compute_patch_flux ( ndim,bnd_nnode,solbnd_neq,n1,n2,wbnd_ref(np)%rhou_ref(:,:),snbound, bnd_flux(np) )
+	                                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:715:64: Missing space after ponctuation :
+	 ***       CALL compute_patch_flux ( ndim,bnd_nnode,solbnd_neq,n1,n2,wbnd_ref(np)%rhou_ref(:,:),snbound, bnd_flux(np) )
+	                                                                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:715:91: Missing space after ponctuation :
+	 ***       CALL compute_patch_flux ( ndim,bnd_nnode,solbnd_neq,n1,n2,wbnd_ref(np)%rhou_ref(:,:),snbound, bnd_flux(np) )
+	                                                                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:719:16: Missing space after ponctuation :
+	 ***       DO n = n1,n2
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:721:61: Missing space after ponctuation :
+	 ***         new_poro(mpt_type) = new_poro(mpt_type) + bnd_flow(5,n)
+	                                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:722:41: Missing space after ponctuation :
+	 ***         old_poro = old_poro + bnd_flow(6,n)
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:723:53: Missing space after ponctuation :
+	 ***         wbnd_ref(np)%rhoun_ref(n-n1+1) = -bnd_flow(0,n)
+	                                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:724:21: Missing space after ponctuation :
+	 ***         bnd_data(4+1,n) = bnd_flow(0,n)
+	                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:724:37: Missing space after ponctuation :
+	 ***         bnd_data(4+1,n) = bnd_flow(0,n)
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:726:44: Missing space after ponctuation :
+	 ***       CALL compute_patch_flux_normal ( ndim,bnd_nnode,solbnd_neq,n1,n2,wbnd_ref(np)%rhoun_ref(:),snbound, bnd_flux(np) )
+	                                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:726:54: Missing space after ponctuation :
+	 ***       CALL compute_patch_flux_normal ( ndim,bnd_nnode,solbnd_neq,n1,n2,wbnd_ref(np)%rhoun_ref(:),snbound, bnd_flux(np) )
+	                                                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:726:65: Missing space after ponctuation :
+	 ***       CALL compute_patch_flux_normal ( ndim,bnd_nnode,solbnd_neq,n1,n2,wbnd_ref(np)%rhoun_ref(:),snbound, bnd_flux(np) )
+	                                                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:726:68: Missing space after ponctuation :
+	 ***       CALL compute_patch_flux_normal ( ndim,bnd_nnode,solbnd_neq,n1,n2,wbnd_ref(np)%rhoun_ref(:),snbound, bnd_flux(np) )
+	                                                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:726:71: Missing space after ponctuation :
+	 ***       CALL compute_patch_flux_normal ( ndim,bnd_nnode,solbnd_neq,n1,n2,wbnd_ref(np)%rhoun_ref(:),snbound, bnd_flux(np) )
+	                                                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:726:97: Missing space after ponctuation :
+	 ***       CALL compute_patch_flux_normal ( ndim,bnd_nnode,solbnd_neq,n1,n2,wbnd_ref(np)%rhoun_ref(:),snbound, bnd_flux(np) )
+	                                                                                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:734:19: Missing space after ponctuation :
+	 ***     WRITE (*,'(A30,A,e16.8,A7,A5)') TRIM(patch_name(np)),":"  ,bnd_flux(np)," Kg/s "
+	                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:734:21: Missing space after ponctuation :
+	 ***     WRITE (*,'(A30,A,e16.8,A7,A5)') TRIM(patch_name(np)),":"  ,bnd_flux(np)," Kg/s "
+	                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:734:27: Missing space after ponctuation :
+	 ***     WRITE (*,'(A30,A,e16.8,A7,A5)') TRIM(patch_name(np)),":"  ,bnd_flux(np)," Kg/s "
+	                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:734:30: Missing space after ponctuation :
+	 ***     WRITE (*,'(A30,A,e16.8,A7,A5)') TRIM(patch_name(np)),":"  ,bnd_flux(np)," Kg/s "
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:734:63: Missing space after ponctuation :
+	 ***     WRITE (*,'(A30,A,e16.8,A7,A5)') TRIM(patch_name(np)),":"  ,bnd_flux(np)," Kg/s "
+	                                                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:735:20: Missing spaces around operator :
+	 ***     IF (bnd_flux(np)>0.0) THEN
+	                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:743:17: Missing space after ponctuation :
+	 ***     patch_data(0,np) = bnd_flux(np)
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:744:17: Missing space after ponctuation :
+	 ***     patch_data(1,np) = old_poro
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:745:17: Missing space after ponctuation :
+	 ***     patch_data(2,np) = bnd_area(np)
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:747:20: Missing space after ponctuation :
+	 ***     WRITE (30,'(A40,A,E16.8,A,E16.8,A,F10.6,A,F10.6,A)') TRIM(patch_name(np)),":",bnd_area(np),":",bnd_flux(np),":",one/old_poro,&
+	                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:747:22: Missing space after ponctuation :
+	 ***     WRITE (30,'(A40,A,E16.8,A,E16.8,A,F10.6,A,F10.6,A)') TRIM(patch_name(np)),":",bnd_area(np),":",bnd_flux(np),":",one/old_poro,&
+	                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:747:28: Missing space after ponctuation :
+	 ***     WRITE (30,'(A40,A,E16.8,A,E16.8,A,F10.6,A,F10.6,A)') TRIM(patch_name(np)),":",bnd_area(np),":",bnd_flux(np),":",one/old_poro,&
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:747:30: Missing space after ponctuation :
+	 ***     WRITE (30,'(A40,A,E16.8,A,E16.8,A,F10.6,A,F10.6,A)') TRIM(patch_name(np)),":",bnd_area(np),":",bnd_flux(np),":",one/old_poro,&
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:747:36: Missing space after ponctuation :
+	 ***     WRITE (30,'(A40,A,E16.8,A,E16.8,A,F10.6,A,F10.6,A)') TRIM(patch_name(np)),":",bnd_area(np),":",bnd_flux(np),":",one/old_poro,&
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:747:38: Missing space after ponctuation :
+	 ***     WRITE (30,'(A40,A,E16.8,A,E16.8,A,F10.6,A,F10.6,A)') TRIM(patch_name(np)),":",bnd_area(np),":",bnd_flux(np),":",one/old_poro,&
+	                                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:747:44: Missing space after ponctuation :
+	 ***     WRITE (30,'(A40,A,E16.8,A,E16.8,A,F10.6,A,F10.6,A)') TRIM(patch_name(np)),":",bnd_area(np),":",bnd_flux(np),":",one/old_poro,&
+	                                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:747:46: Missing space after ponctuation :
+	 ***     WRITE (30,'(A40,A,E16.8,A,E16.8,A,F10.6,A,F10.6,A)') TRIM(patch_name(np)),":",bnd_area(np),":",bnd_flux(np),":",one/old_poro,&
+	                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:747:52: Missing space after ponctuation :
+	 ***     WRITE (30,'(A40,A,E16.8,A,E16.8,A,F10.6,A,F10.6,A)') TRIM(patch_name(np)),":",bnd_area(np),":",bnd_flux(np),":",one/old_poro,&
+	                                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:747:82: Missing space after ponctuation :
+	 ***     WRITE (30,'(A40,A,E16.8,A,E16.8,A,F10.6,A,F10.6,A)') TRIM(patch_name(np)),":",bnd_area(np),":",bnd_flux(np),":",one/old_poro,&
+	                                                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:747:99: Missing space after ponctuation :
+	 ***     WRITE (30,'(A40,A,E16.8,A,E16.8,A,F10.6,A,F10.6,A)') TRIM(patch_name(np)),":",bnd_area(np),":",bnd_flux(np),":",one/old_poro,&
+	                                                                                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:747:116: Missing space after ponctuation :
+	 ***     WRITE (30,'(A40,A,E16.8,A,E16.8,A,F10.6,A,F10.6,A)') TRIM(patch_name(np)),":",bnd_area(np),":",bnd_flux(np),":",one/old_poro,&
+	                                                                                                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:748:58: Missing space after ponctuation :
+	 ***                                                       ":",one/new_poro(mpt_type),":"
+	                                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:752:15: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "All hole fluxes [Kg/s]" , sum_hole_fluxes,"   (",100.0,"% )"
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:752:21: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "All hole fluxes [Kg/s]" , sum_hole_fluxes,"   (",100.0,"% )"
+	                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:752:23: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "All hole fluxes [Kg/s]" , sum_hole_fluxes,"   (",100.0,"% )"
+	                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:752:28: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "All hole fluxes [Kg/s]" , sum_hole_fluxes,"   (",100.0,"% )"
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:752:83: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "All hole fluxes [Kg/s]" , sum_hole_fluxes,"   (",100.0,"% )"
+	                                                                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:753:15: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "Positive fluxes [Kg/s]" , sum_positive_fluxes,"   (",sum_positive_fluxes/sum_hole_fluxes*100,"%)"
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:753:21: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "Positive fluxes [Kg/s]" , sum_positive_fluxes,"   (",sum_positive_fluxes/sum_hole_fluxes*100,"%)"
+	                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:753:23: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "Positive fluxes [Kg/s]" , sum_positive_fluxes,"   (",sum_positive_fluxes/sum_hole_fluxes*100,"%)"
+	                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:753:28: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "Positive fluxes [Kg/s]" , sum_positive_fluxes,"   (",sum_positive_fluxes/sum_hole_fluxes*100,"%)"
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:753:87: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "Positive fluxes [Kg/s]" , sum_positive_fluxes,"   (",sum_positive_fluxes/sum_hole_fluxes*100,"%)"
+	                                                                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:754:15: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "Negative fluxes [Kg/s]" , sum_negative_fluxes,"   (",sum_negative_fluxes/sum_hole_fluxes*100,"%)"
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:754:21: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "Negative fluxes [Kg/s]" , sum_negative_fluxes,"   (",sum_negative_fluxes/sum_hole_fluxes*100,"%)"
+	                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:754:23: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "Negative fluxes [Kg/s]" , sum_negative_fluxes,"   (",sum_negative_fluxes/sum_hole_fluxes*100,"%)"
+	                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:754:28: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "Negative fluxes [Kg/s]" , sum_negative_fluxes,"   (",sum_negative_fluxes/sum_hole_fluxes*100,"%)"
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:754:87: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') "Negative fluxes [Kg/s]" , sum_negative_fluxes,"   (",sum_negative_fluxes/sum_hole_fluxes*100,"%)"
+	                                                                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:755:15: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') " Balance fluxes [Kg/s]" , sum_all_fluxes,"   (",sum_all_fluxes/sum_hole_fluxes*100,"%)"
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:755:21: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') " Balance fluxes [Kg/s]" , sum_all_fluxes,"   (",sum_all_fluxes/sum_hole_fluxes*100,"%)"
+	                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:755:23: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') " Balance fluxes [Kg/s]" , sum_all_fluxes,"   (",sum_all_fluxes/sum_hole_fluxes*100,"%)"
+	                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:755:28: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') " Balance fluxes [Kg/s]" , sum_all_fluxes,"   (",sum_all_fluxes/sum_hole_fluxes*100,"%)"
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:755:82: Missing space after ponctuation :
+	 ***   WRITE (*,'(A,E16.8,A,F8.2,A)') " Balance fluxes [Kg/s]" , sum_all_fluxes,"   (",sum_all_fluxes/sum_hole_fluxes*100,"%)"
+	                                                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:806:42: Types should be lowercased :
+	 ***   WRITE ( *, * ) 'Elapsed real time = ', REAL ( t2 - t1 ) / REAL (clock_rate )
+	                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:806:61: Types should be lowercased :
+	 ***   WRITE ( *, * ) 'Elapsed real time = ', REAL ( t2 - t1 ) / REAL (clock_rate )
+	                                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:830:5: Exactly one space after comment :
+	 ***     !USE mod_param_defs
+	         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:832:5: Types should be lowercased :
+	 ***     REAL(pr) :: proj_mask
+	         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:833:5: Types should be lowercased :
+	 ***     REAL(pr), INTENT(IN) :: dist
+	         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:834:5: Types should be lowercased :
+	 ***     REAL(pr), INTENT(IN) :: diam
+	         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:835:5: Types should be lowercased :
+	 ***     REAL(pr), INTENT(IN) :: delta_x
+	         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:836:5: Types should be lowercased :
+	 ***     REAL(pr), INTENT(IN) :: slope
+	         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:859:5: Exactly one space after comment :
+	 ***     !USE mod_param_defs
+	         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:861:5: Types should be lowercased :
+	 ***     REAL(pr) :: intensive_weight
+	         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:862:5: Types should be lowercased :
+	 ***     REAL(pr), INTENT(IN) :: dist
+	         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:863:5: Types should be lowercased :
+	 ***     REAL(pr), INTENT(IN) :: diam
+	         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:864:5: Types should be lowercased :
+	 ***     REAL(pr), INTENT(IN) :: delta_x
+	         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:865:5: Types should be lowercased :
+	 ***     REAL(pr), INTENT(IN) :: slope
+	         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:866:5: Types should be lowercased :
+	 ***     REAL(pr) :: constant_radius
+	         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:885:37: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_area ( ndim,nnode,n1,n2,snbound,area )
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:885:43: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_area ( ndim,nnode,n1,n2,snbound,area )
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:885:46: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_area ( ndim,nnode,n1,n2,snbound,area )
+	                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:885:49: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_area ( ndim,nnode,n1,n2,snbound,area )
+	                                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:885:57: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_area ( ndim,nnode,n1,n2,snbound,area )
+	                                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:887:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:891:30: Missing space after ponctuation :
+	 ***   INTEGER, INTENT(IN) :: ndim,nnode,n1,n2
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:891:36: Missing space after ponctuation :
+	 ***   INTEGER, INTENT(IN) :: ndim,nnode,n1,n2
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:891:39: Missing space after ponctuation :
+	 ***   INTEGER, INTENT(IN) :: ndim,nnode,n1,n2
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:891:3: Types should be lowercased :
+	 ***   INTEGER, INTENT(IN) :: ndim,nnode,n1,n2
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:892:41: Missing space after ponctuation :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim,1:nnode) :: snbound
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:892:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim,1:nnode) :: snbound
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:893:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(OUT) :: area
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:894:10: Missing space before separator :
+	 ***   REAL(pr):: aera_squared
+	              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:894:3: Types should be lowercased :
+	 ***   REAL(pr):: aera_squared
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:895:15: Missing space after ponctuation :
+	 ***   INTEGER :: i,n
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:895:3: Types should be lowercased :
+	 ***   INTEGER :: i,n
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:899:10: Missing space after ponctuation :
+	 ***   DO n=n1,n2
+	              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:899:7: Missing spaces around "=" :
+	 ***   DO n=n1,n2
+	           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:901:11: Missing space after ponctuation :
+	 ***     DO i=1,ndim
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:901:9: Missing spaces around "=" :
+	 ***     DO i=1,ndim
+	             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:902:46: Missing space after ponctuation :
+	 ***       aera_squared = aera_squared + snbound(i,n)**2
+	                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:919:37: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_flux ( ndim,nnode,neq,n1,n2,rhouvw,snbound,flux )
+	                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:919:43: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_flux ( ndim,nnode,neq,n1,n2,rhouvw,snbound,flux )
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:919:47: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_flux ( ndim,nnode,neq,n1,n2,rhouvw,snbound,flux )
+	                                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:919:50: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_flux ( ndim,nnode,neq,n1,n2,rhouvw,snbound,flux )
+	                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:919:53: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_flux ( ndim,nnode,neq,n1,n2,rhouvw,snbound,flux )
+	                                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:919:60: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_flux ( ndim,nnode,neq,n1,n2,rhouvw,snbound,flux )
+	                                                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:919:68: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_flux ( ndim,nnode,neq,n1,n2,rhouvw,snbound,flux )
+	                                                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:921:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:925:30: Missing space after ponctuation :
+	 ***   INTEGER, INTENT(IN) :: ndim,nnode,neq,n1,n2
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:925:36: Missing space after ponctuation :
+	 ***   INTEGER, INTENT(IN) :: ndim,nnode,neq,n1,n2
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:925:40: Missing space after ponctuation :
+	 ***   INTEGER, INTENT(IN) :: ndim,nnode,neq,n1,n2
+	                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:925:43: Missing space after ponctuation :
+	 ***   INTEGER, INTENT(IN) :: ndim,nnode,neq,n1,n2
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:925:3: Types should be lowercased :
+	 ***   INTEGER, INTENT(IN) :: ndim,nnode,neq,n1,n2
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:926:53: Missing space after separator :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim,1:n2-n1+1) ::rhouvw
+	                                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:926:41: Missing space after ponctuation :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim,1:n2-n1+1) ::rhouvw
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:926:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim,1:n2-n1+1) ::rhouvw
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:927:51: Missing space after separator :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim,1:nnode) ::snbound
+	                                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:927:41: Missing space after ponctuation :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim,1:nnode) ::snbound
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:927:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim,1:nnode) ::snbound
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:928:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(OUT) :: flux
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:929:15: Missing space after ponctuation :
+	 ***   INTEGER :: n,i
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:929:3: Types should be lowercased :
+	 ***   INTEGER :: n,i
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:933:10: Missing space after ponctuation :
+	 ***   DO n=n1,n2
+	              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:933:7: Missing spaces around "=" :
+	 ***   DO n=n1,n2
+	           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:934:11: Missing space after ponctuation :
+	 ***     DO i=1,ndim
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:934:9: Missing spaces around "=" :
+	 ***     DO i=1,ndim
+	             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:935:30: Missing space after ponctuation :
+	 ***       flux = flux + snbound(i,n)*rhouvw(i,n-n1+1)
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:935:42: Missing space after ponctuation :
+	 ***       flux = flux + snbound(i,n)*rhouvw(i,n-n1+1)
+	                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:946:44: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_flux_normal ( ndim,nnode,neq,n1,n2,rhoun,snbound,flux )
+	                                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:946:50: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_flux_normal ( ndim,nnode,neq,n1,n2,rhoun,snbound,flux )
+	                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:946:54: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_flux_normal ( ndim,nnode,neq,n1,n2,rhoun,snbound,flux )
+	                                                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:946:57: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_flux_normal ( ndim,nnode,neq,n1,n2,rhoun,snbound,flux )
+	                                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:946:60: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_flux_normal ( ndim,nnode,neq,n1,n2,rhoun,snbound,flux )
+	                                                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:946:66: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_flux_normal ( ndim,nnode,neq,n1,n2,rhoun,snbound,flux )
+	                                                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:946:74: Missing space after ponctuation :
+	 *** SUBROUTINE compute_patch_flux_normal ( ndim,nnode,neq,n1,n2,rhoun,snbound,flux )
+	                                                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:948:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:952:30: Missing space after ponctuation :
+	 ***   INTEGER, INTENT(IN) :: ndim,nnode,neq,n1,n2
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:952:36: Missing space after ponctuation :
+	 ***   INTEGER, INTENT(IN) :: ndim,nnode,neq,n1,n2
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:952:40: Missing space after ponctuation :
+	 ***   INTEGER, INTENT(IN) :: ndim,nnode,neq,n1,n2
+	                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:952:43: Missing space after ponctuation :
+	 ***   INTEGER, INTENT(IN) :: ndim,nnode,neq,n1,n2
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:952:3: Types should be lowercased :
+	 ***   INTEGER, INTENT(IN) :: ndim,nnode,neq,n1,n2
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:953:46: Missing space after separator :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:n2-n1+1) ::rhoun
+	                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:953:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:n2-n1+1) ::rhoun
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:954:51: Missing space after separator :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim,1:nnode) ::snbound
+	                                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:954:41: Missing space after ponctuation :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim,1:nnode) ::snbound
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:954:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim,1:nnode) ::snbound
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:955:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(OUT) :: flux
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:956:3: Types should be lowercased :
+	 ***   REAL(pr) :: aera_squared
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:957:15: Missing space after ponctuation :
+	 ***   INTEGER :: n,i
+	                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:957:3: Types should be lowercased :
+	 ***   INTEGER :: n,i
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:961:10: Missing space after ponctuation :
+	 ***   DO n=n1,n2
+	              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:961:7: Missing spaces around "=" :
+	 ***   DO n=n1,n2
+	           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:963:11: Missing space after ponctuation :
+	 ***     DO i=1,ndim
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:963:9: Missing spaces around "=" :
+	 ***     DO i=1,ndim
+	             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:964:46: Missing space after ponctuation :
+	 ***       aera_squared = aera_squared + snbound(i,n)**2
+	                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:979:27: Missing space after ponctuation :
+	 *** !!    @param [in]    pos X,Y,Z position of the node
+	                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:979:29: Missing space after ponctuation :
+	 *** !!    @param [in]    pos X,Y,Z position of the node
+	                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:982:35: Missing space after ponctuation :
+	 *** SUBROUTINE make_radial_vect ( ndim,pos,vect )
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:982:39: Missing space after ponctuation :
+	 *** SUBROUTINE make_radial_vect ( ndim,pos,vect )
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:984:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:988:3: Types should be lowercased :
+	 ***   INTEGER, INTENT(IN) :: ndim
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:989:43: Missing space after separator :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim) ::pos
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:989:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim) ::pos
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:990:46: Missing space after separator :
+	 ***   REAL(pr), INTENT(INOUT), DIMENSION(1:ndim) ::vect
+	                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:990:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(INOUT), DIMENSION(1:ndim) ::vect
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:991:17: Missing space after ponctuation :
+	 ***   REAL(pr) :: bb,rr,Signe
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:991:20: Missing space after ponctuation :
+	 ***   REAL(pr) :: bb,rr,Signe
+	                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:991:3: Types should be lowercased :
+	 ***   REAL(pr) :: bb,rr,Signe
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:992:3: Types should be lowercased :
+	 ***   INTEGER :: i
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1014:33: Missing space after ponctuation :
+	 *** SUBROUTINE make_unit_vect ( ndim,vect )
+	                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1016:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1020:3: Types should be lowercased :
+	 ***   INTEGER, INTENT(IN) :: ndim
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1021:46: Missing space after separator :
+	 ***   REAL(pr), INTENT(INOUT), DIMENSION(1:ndim) ::vect
+	                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1021:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(INOUT), DIMENSION(1:ndim) ::vect
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1022:3: Types should be lowercased :
+	 ***   REAL(pr) :: norm
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1023:3: Types should be lowercased :
+	 ***   INTEGER :: i
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1026:24: Missing space after ponctuation :
+	 ***   CALL comp_norm ( ndim,vect,norm )
+	                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1026:29: Missing space after ponctuation :
+	 ***   CALL comp_norm ( ndim,vect,norm )
+	                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1027:11: Missing spaces around operator :
+	 ***   IF ( norm>zero ) THEN
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1028:11: Missing space after ponctuation :
+	 ***     DO i=1,ndim
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1028:9: Missing spaces around "=" :
+	 ***     DO i=1,ndim
+	             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1050:28: Missing space after ponctuation :
+	 *** SUBROUTINE comp_norm ( ndim,vect,norm )
+	                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1050:33: Missing space after ponctuation :
+	 *** SUBROUTINE comp_norm ( ndim,vect,norm )
+	                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1052:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1056:3: Types should be lowercased :
+	 ***   INTEGER, INTENT(IN) :: ndim
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1057:43: Missing space after separator :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim) ::vect
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1057:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim) ::vect
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1058:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(OUT) :: norm
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1059:3: Types should be lowercased :
+	 ***   INTEGER :: i
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1063:9: Missing space after ponctuation :
+	 ***   DO i=1,ndim
+	             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1063:7: Missing spaces around "=" :
+	 ***   DO i=1,ndim
+	           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1082:29: Missing space after ponctuation :
+	 *** SUBROUTINE comp_pscal ( ndim,vect,vect2,pscal )
+	                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1082:34: Missing space after ponctuation :
+	 *** SUBROUTINE comp_pscal ( ndim,vect,vect2,pscal )
+	                                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1082:40: Missing space after ponctuation :
+	 *** SUBROUTINE comp_pscal ( ndim,vect,vect2,pscal )
+	                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1084:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1088:3: Types should be lowercased :
+	 ***   INTEGER, INTENT(IN) :: ndim
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1089:43: Missing space after separator :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim) ::vect,vect2
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1089:49: Missing space after ponctuation :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim) ::vect,vect2
+	                                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1089:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim) ::vect,vect2
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1090:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(OUT) :: pscal
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1091:3: Types should be lowercased :
+	 ***   INTEGER :: i
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1095:9: Missing space after ponctuation :
+	 ***   DO i=1,ndim
+	             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1095:7: Missing spaces around "=" :
+	 ***   DO i=1,ndim
+	           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1106:30: Missing space after ponctuation :
+	 *** SUBROUTINE comp_pvect_3d ( v1,v2,pvect )
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1106:33: Missing space after ponctuation :
+	 *** SUBROUTINE comp_pvect_3d ( v1,v2,pvect )
+	                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1108:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1112:45: Missing space after ponctuation :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:3) :: v1,v2
+	                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1112:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:3) :: v1,v2
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1113:41: Missing space after separator :
+	 ***   REAL(pr), INTENT(OUT), DIMENSION(1:3) ::pvect
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1113:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(OUT), DIMENSION(1:3) ::pvect
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1127:30: Missing space after ponctuation :
+	 *** SUBROUTINE pvect_to_quat ( v1,v2,quat )
+	                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1127:33: Missing space after ponctuation :
+	 *** SUBROUTINE pvect_to_quat ( v1,v2,quat )
+	                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1129:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1133:45: Missing space after ponctuation :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:3) :: v1,v2
+	                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1133:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:3) :: v1,v2
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1134:41: Missing space after separator :
+	 ***   REAL(pr), INTENT(OUT), DIMENSION(1:4) ::quat
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1134:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(OUT), DIMENSION(1:4) ::quat
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1135:11: Missing space after ponctuation :
+	 ***   REAL(pr),DIMENSION(1:3) :: pvect,uv1,uv2
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1135:35: Missing space after ponctuation :
+	 ***   REAL(pr),DIMENSION(1:3) :: pvect,uv1,uv2
+	                                       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1135:39: Missing space after ponctuation :
+	 ***   REAL(pr),DIMENSION(1:3) :: pvect,uv1,uv2
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1135:3: Types should be lowercased :
+	 ***   REAL(pr),DIMENSION(1:3) :: pvect,uv1,uv2
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1136:20: Missing space after ponctuation :
+	 ***   REAL(pr) :: theta,norm
+	                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1136:3: Types should be lowercased :
+	 ***   REAL(pr) :: theta,norm
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1141:26: Missing space after ponctuation :
+	 ***   CALL make_unit_vect ( 3,uv1 )
+	                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1142:26: Missing space after ponctuation :
+	 ***   CALL make_unit_vect ( 3,uv2 )
+	                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1144:27: Missing space after ponctuation :
+	 ***   CALL comp_pvect_3d ( uv1,uv2,pvect )
+	                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1144:31: Missing space after ponctuation :
+	 ***   CALL comp_pvect_3d ( uv1,uv2,pvect )
+	                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1145:21: Missing space after ponctuation :
+	 ***   CALL comp_norm ( 3,pvect,norm)
+	                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1145:27: Missing space after ponctuation :
+	 ***   CALL comp_norm ( 3,pvect,norm)
+	                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1147:26: Missing space after ponctuation :
+	 ***   CALL make_unit_vect ( 3,pvect)
+	                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1148:33: Missing space after ponctuation :
+	 ***   CALL axisangle_to_quat ( pvect,theta,quat )
+	                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1148:39: Missing space after ponctuation :
+	 ***   CALL axisangle_to_quat ( pvect,theta,quat )
+	                                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1156:1: Line length > 132 characters :
+	 *** !>    Project a node othogonally on a plane defined by a target node and an axis. The final node, the radial and axial distances btw initial and target node are computed.
+	     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1163:31: Missing space after ponctuation :
+	 *** SUBROUTINE project_node ( ndim,node_init,axis,node_target,dist_axial,dist_radial,node_projected )
+	                                   ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1163:41: Missing space after ponctuation :
+	 *** SUBROUTINE project_node ( ndim,node_init,axis,node_target,dist_axial,dist_radial,node_projected )
+	                                             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1163:46: Missing space after ponctuation :
+	 *** SUBROUTINE project_node ( ndim,node_init,axis,node_target,dist_axial,dist_radial,node_projected )
+	                                                  ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1163:58: Missing space after ponctuation :
+	 *** SUBROUTINE project_node ( ndim,node_init,axis,node_target,dist_axial,dist_radial,node_projected )
+	                                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1163:69: Missing space after ponctuation :
+	 *** SUBROUTINE project_node ( ndim,node_init,axis,node_target,dist_axial,dist_radial,node_projected )
+	                                                                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1163:81: Missing space after ponctuation :
+	 *** SUBROUTINE project_node ( ndim,node_init,axis,node_target,dist_axial,dist_radial,node_projected )
+	                                                                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1165:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1169:3: Types should be lowercased :
+	 ***   INTEGER, INTENT(IN) :: ndim
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1170:43: Missing space after separator :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim) ::node_init,axis,node_target
+	                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1170:54: Missing space after ponctuation :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim) ::node_init,axis,node_target
+	                                                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1170:59: Missing space after ponctuation :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim) ::node_init,axis,node_target
+	                                                               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1170:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:ndim) ::node_init,axis,node_target
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1171:44: Missing space after separator :
+	 ***   REAL(pr), INTENT(OUT), DIMENSION(1:ndim) ::node_projected
+	                                                ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1171:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(OUT), DIMENSION(1:ndim) ::node_projected
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1172:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(OUT) :: dist_axial, dist_radial
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1173:3: Types should be lowercased :
+	 ***   REAL(pr) :: pscal
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1174:3: Types should be lowercased :
+	 ***   INTEGER :: i
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1180:9: Missing space after ponctuation :
+	 ***   DO i=1,ndim
+	             ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1180:7: Missing spaces around "=" :
+	 ***   DO i=1,ndim
+	           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1187:11: Missing space after ponctuation :
+	 ***   DO i = 1,ndim
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1192:11: Missing space after ponctuation :
+	 ***   DO i = 1,ndim
+	               ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1204:26: Missing space after ponctuation :
+	 *** SUBROUTINE quat_mult ( q1,q2,qm )
+	                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1204:29: Missing space after ponctuation :
+	 *** SUBROUTINE quat_mult ( q1,q2,qm )
+	                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1206:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1210:45: Missing space after ponctuation :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:4) :: q1,q2
+	                                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1210:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:4) :: q1,q2
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1211:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(OUT), DIMENSION(1:4) :: qm
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1212:17: Missing space after ponctuation :
+	 ***   REAL(pr) :: w1,x1,y1,z1
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1212:20: Missing space after ponctuation :
+	 ***   REAL(pr) :: w1,x1,y1,z1
+	                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1212:23: Missing space after ponctuation :
+	 ***   REAL(pr) :: w1,x1,y1,z1
+	                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1212:3: Types should be lowercased :
+	 ***   REAL(pr) :: w1,x1,y1,z1
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1213:17: Missing space after ponctuation :
+	 ***   REAL(pr) :: w2,x2,y2,z2
+	                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1213:20: Missing space after ponctuation :
+	 ***   REAL(pr) :: w2,x2,y2,z2
+	                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1213:23: Missing space after ponctuation :
+	 ***   REAL(pr) :: w2,x2,y2,z2
+	                           ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1213:3: Types should be lowercased :
+	 ***   REAL(pr) :: w2,x2,y2,z2
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1214:16: Missing space after ponctuation :
+	 ***   REAL(pr) :: w,x,y,z
+	                    ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1214:18: Missing space after ponctuation :
+	 ***   REAL(pr) :: w,x,y,z
+	                      ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1214:20: Missing space after ponctuation :
+	 ***   REAL(pr) :: w,x,y,z
+	                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1214:3: Types should be lowercased :
+	 ***   REAL(pr) :: w,x,y,z
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1243:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1247:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(INOUT), DIMENSION(1:4) :: q
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1250:26: Missing space after ponctuation :
+	 ***   CALL make_unit_vect ( 4,q )
+	                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1251:8: Missing spaces around "=" :
+	 ***   q(2) =-q(2)
+	            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1252:8: Missing spaces around "=" :
+	 ***   q(3) =-q(3)
+	            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1253:8: Missing spaces around "=" :
+	 ***   q(4) =-q(4)
+	            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1262:29: Missing space after ponctuation :
+	 *** SUBROUTINE quatvect_mult ( q,v )
+	                                 ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1264:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1268:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(IN), DIMENSION(1:4) :: q
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1269:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(INOUT), DIMENSION(1:3) :: v
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1270:33: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:4) :: q2,q3,q1c,q4
+	                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1270:36: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:4) :: q2,q3,q1c,q4
+	                                        ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1270:40: Missing space after ponctuation :
+	 ***   REAL(pr), DIMENSION(1:4) :: q2,q3,q1c,q4
+	                                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1270:3: Types should be lowercased :
+	 ***   REAL(pr), DIMENSION(1:4) :: q2,q3,q1c,q4
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1281:21: Missing space after ponctuation :
+	 ***   CALL quat_mult ( q,q2,q3 )
+	                         ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1281:24: Missing space after ponctuation :
+	 ***   CALL quat_mult ( q,q2,q3 )
+	                            ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1282:22: Missing space after ponctuation :
+	 ***   CALL quat_mult ( q3,q1c,q4 )
+	                          ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1282:26: Missing space after ponctuation :
+	 ***   CALL quat_mult ( q3,q1c,q4 )
+	                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1294:33: Missing space after ponctuation :
+	 *** SUBROUTINE axisangle_to_quat ( v,theta_in,q )
+	                                     ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1294:42: Missing space after ponctuation :
+	 *** SUBROUTINE axisangle_to_quat ( v,theta_in,q )
+	                                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1296:3: Exactly one space after comment :
+	 ***   !USE mod_param_defs
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1300:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(INOUT), DIMENSION(1:3) :: v
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1301:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(IN) :: theta_in
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1302:3: Types should be lowercased :
+	 ***   REAL(pr), INTENT(OUT), DIMENSION(1:4) :: q
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1303:3: Types should be lowercased :
+	 ***   REAL(pr) :: theta
+	       ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1306:26: Missing space after ponctuation :
+	 ***   CALL make_unit_vect ( 3,v )
+	                              ^
+
+/Users/erraiya/incubator/incubator/erraiya/flint/old/projeteur.f90:1308:7: Missing spaces around "=" :
+	 ***   q(1)=cos(theta)
+	           ^
+
+--------------------------------------------------
+Your code has been rated 3.96/10
