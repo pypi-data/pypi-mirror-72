@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: caspo-control
+Version: 0.90
+Summary: Python wrapper for caspo control
+Home-page: https://github.com/algorecell/caspo-control
+Author: Loïc Paulevé
+Author-email: loic.pauleve@labri.fr
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: computational systems biology
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
