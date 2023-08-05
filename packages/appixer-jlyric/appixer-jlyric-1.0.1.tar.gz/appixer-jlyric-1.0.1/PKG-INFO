@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: appixer-jlyric
+Version: 1.0.1
+Summary: Metadata scrapper for j-lyric.
+Home-page: https://gitlab.com/appixer/jlyric
+Author: Joshua Avalon
+Author-email: git@avalon.sh
+License: UNKNOWN
+Description: # appixer-jlyric
+        
+        **appixer-jlyric** is a python package for scrapping metadata scrapper from j-lyric.
+        
+        ## Getting Started
+        
+        ```
+        pip install appixer-jlyric
+        ```
+        
+Keywords: audio,metadata
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
