@@ -1,0 +1,3 @@
+vCenter,Dvs,Dvs_pg,Host,Host_pg,Fabric,Network
+172.28.10.184,DSwitchPad,DSPad-PG2,,,DEF,MyNetwork_30000
+172.28.10.184,,,172.28.11.33,Pad_Workload_Auto_Nwk,DEF,MyNetwork_60000
