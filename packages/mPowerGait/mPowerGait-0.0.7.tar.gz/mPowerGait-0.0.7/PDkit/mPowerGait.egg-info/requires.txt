@@ -1,0 +1,9 @@
+numpy
+pandas==1.0.3
+scipy
+pdkit==1.2
+scikit-learn
+tsfresh
+future
+matplotlib
+pandas_validator
