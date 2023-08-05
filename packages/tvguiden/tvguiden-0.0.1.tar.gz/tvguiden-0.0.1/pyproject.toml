@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "tvguiden"
+author = "Verdenskendte DJ Lars Vegas"
+author-email = "kool@stadigstiv.dk"
+home-page = "https://github.com/LarsVegasCPH/tvguiden"
+classifiers = ["License :: OSI Approved :: MIT License"]
+
