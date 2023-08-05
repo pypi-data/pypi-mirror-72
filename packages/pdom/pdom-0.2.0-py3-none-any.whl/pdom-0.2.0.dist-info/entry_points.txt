@@ -1,0 +1,4 @@
+[console_scripts]
+pdom = pdom.cli:simulation_main
+pdom.config = pdom.cli:config_main
+
