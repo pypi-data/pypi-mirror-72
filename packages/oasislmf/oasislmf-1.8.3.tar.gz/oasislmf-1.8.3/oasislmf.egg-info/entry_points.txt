@@ -1,0 +1,4 @@
+[console_scripts]
+complex_itemtobin = oasislmf.model_execution.complex_items_to_bin:main
+complex_itemtocsv = oasislmf.model_execution.complex_items_to_csv:main
+
