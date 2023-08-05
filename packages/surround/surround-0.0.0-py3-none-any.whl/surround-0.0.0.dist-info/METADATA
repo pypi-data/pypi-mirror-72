@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: surround
+Version: 0.0.0
+Summary: Surround is a framework for serving machine learning pipelines in Python.
+Home-page: http://github.com/dstil/surround
+Author: Scott Barnett
+Author-email: scott.barnett@deakin.edu.au
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pyaml (==17.12.1)
+Requires-Dist: doit (==0.31.1)
+Requires-Dist: pandas (==0.25.2)
+Requires-Dist: numpy (==1.17.3)
+Requires-Dist: tornado (==6.0.2)
+Requires-Dist: google-cloud-storage (==1.20.0)
+Requires-Dist: pylint (==2.4.3)
+
+UNKNOWN
+
+
