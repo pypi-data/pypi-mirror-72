@@ -1,0 +1,3 @@
+[console_scripts]
+psa-prizes=psa_prizes.main:main
+
