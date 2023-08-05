@@ -1,0 +1,7 @@
+ConfigSpace
+docutils>=0.3
+matplotlib>=1.4.2
+numpy
+pandas
+pyrfr>=0.5.0
+setuptools
