@@ -1,0 +1,6 @@
+click
+Faker
+sqlite-utils
+
+[test]
+pytest
