@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+xre/__init__.py
+xre.egg-info/PKG-INFO
+xre.egg-info/SOURCES.txt
+xre.egg-info/dependency_links.txt
+xre.egg-info/top_level.txt
