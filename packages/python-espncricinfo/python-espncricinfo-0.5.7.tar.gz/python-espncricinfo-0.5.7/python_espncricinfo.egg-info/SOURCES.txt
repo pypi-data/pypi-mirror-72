@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+espncricinfo/__init__.py
+espncricinfo/exceptions.py
+espncricinfo/match.py
+espncricinfo/player.py
+espncricinfo/series.py
+espncricinfo/summary.py
+python_espncricinfo.egg-info/PKG-INFO
+python_espncricinfo.egg-info/SOURCES.txt
+python_espncricinfo.egg-info/dependency_links.txt
+python_espncricinfo.egg-info/requires.txt
+python_espncricinfo.egg-info/top_level.txt
+python_espncricinfo.egg-info/zip-safe
