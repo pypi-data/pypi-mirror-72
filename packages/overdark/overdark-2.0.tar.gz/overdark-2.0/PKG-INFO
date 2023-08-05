@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: overdark
+Version: 2.0
+Summary: Python3 Library for OverDark API
+Home-page: https://github.com/tappo03/overdark_python
+Author: Valerio
+Author-email: info@tappo03.it
+License: UNKNOWN
+Download-URL: https://github.com/tappo03/overdark_pythonarchive/v_01.tar.gz
+Description: 
+         ## overdark
+         This is the starter text for a python package.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
