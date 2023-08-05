@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+__init__.py
+dashboard.py
+requirements.txt
+setup.cfg
+setup.py
+utilities.py
+volkswagencarnet.py
+.github/workflows/python-package.yml
+.github/workflows/python-publish.yml
+tests/dummy_test.py
+volkswagencarnet.egg-info/PKG-INFO
+volkswagencarnet.egg-info/SOURCES.txt
+volkswagencarnet.egg-info/dependency_links.txt
+volkswagencarnet.egg-info/requires.txt
+volkswagencarnet.egg-info/top_level.txt
