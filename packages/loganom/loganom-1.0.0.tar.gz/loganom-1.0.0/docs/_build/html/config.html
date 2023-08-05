@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration &#8212; loganom 0.0.8 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Changelog" href="changelog.html" />
+    <link rel="prev" title="Usage" href="usage.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<p>config.ini:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[GENERAL]</span>
+<span class="c1"># Check if the ip address can be ignored, based on a list of name patterns</span>
+<span class="na">pattern_ip</span> <span class="o">=</span> <span class="s">amazonaws.com</span>
+<span class="s">  google</span>
+<span class="s">  .net.br</span>
+<span class="s">  .com.br</span>
+
+<span class="c1"># Check if the ip address can be ignored based on it&#39;s ASN</span>
+<span class="na">pattern_org</span> <span class="o">=</span> <span class="s">AS8075</span>
+<span class="s">  AS36351</span>
+<span class="c1"># AS8075   Microsoft Corporation</span>
+<span class="c1"># AS36351  SoftLayer Technologies Inc</span>
+
+<span class="c1"># country_ignore can be a list</span>
+<span class="na">country_ignore</span> <span class="o">=</span> <span class="s">BR</span>
+
+<span class="na">ipinfo_token</span> <span class="o">=</span> <span class="s">XXXXXXXX</span>
+
+<span class="k">[SMTP]</span>
+<span class="na">enabled</span> <span class="o">=</span> <span class="s">False</span>
+<span class="na">from</span> <span class="o">=</span> <span class="s">your_mail@from</span>
+<span class="na">to</span> <span class="o">=</span> <span class="s">your_mail@to</span>
+<span class="na">host</span> <span class="o">=</span> <span class="s">localhost</span>
+<span class="na">port</span> <span class="o">=</span> <span class="s">587</span>
+<span class="na">ssl</span> <span class="o">=</span> <span class="s">False</span>
+<span class="na">user</span> <span class="o">=</span> <span class="s">username</span>
+<span class="na">pass</span> <span class="o">=</span> <span class="s">password</span>
+<span class="na">subject</span> <span class="o">=</span> <span class="s">SMTP authentication, anomalies found...</span>
+
+<span class="k">[MATTERMOST]</span>
+<span class="na">enabled</span> <span class="o">=</span> <span class="s">False</span>
+<span class="na">url</span> <span class="o">=</span> <span class="s">https://your_mm_url</span>
+<span class="na">api_key</span> <span class="o">=</span> <span class="s">XXXXXXXX</span>
+<span class="na">channel</span> <span class="o">=</span> <span class="s">channel</span>
+<span class="na">icon_url</span> <span class="o">=</span> <span class="s">https://your_icon_logo_url</span>
+<span class="na">username</span> <span class="o">=</span> <span class="s">username</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">loganom</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processor.html">Processors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="usage.html" title="previous chapter">Usage</a></li>
+      <li>Next: <a href="changelog.html" title="next chapter">Changelog</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Danilo G. Baio.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/config.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
