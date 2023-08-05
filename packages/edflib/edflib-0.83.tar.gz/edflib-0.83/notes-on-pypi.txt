@@ -1,0 +1,38 @@
+Fiddled around with ~/.pypirc quite a bit
+- added tokens for testpypi and pypi
+- put old wheels and src in dist-archive/
+
+```
+conda activate py38
+python setup.py build sdist
+python -m twine upload --repository testpypi dist/*
+
+# now test the upload
+cd ..
+pip install --index-url https://test.pypi.org/simple/ --no-deps edflib
+# if that works
+pip uninstall edflib
+```
+
+now repeat for different python versions
+```
+cd python-edf
+
+conda deactivate
+
+conda activate pytorch  # currently on py37
+python setup.py build bdist_wheel
+conda deactivate
+
+conda activate py36torch04c91
+python setup.py build bdist_wheel
+conda deactivate
+
+conda activate py36tor04c91
+python setup.py build bdist_wheel
+conda deactivate
+
+conda activate py27
+python setup.py build bdist_wheel
+conda deactivate
+```
