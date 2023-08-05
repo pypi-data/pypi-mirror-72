@@ -1,0 +1,39 @@
+{% load i18n %}
+<form action="" class="form" method="GET">
+  <div class="row">
+    <div class="col-lg-11">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="">
+            <label for="user">{% trans "User" %}</label>
+            <input type="text" name="user" id="user" class="form-control" value="{{ request.GET.user }}">
+            <small class="text-muted">{% trans "User identifier" %}</small>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="">
+            <label for="date">{% trans "Date begin" %}</label>
+            <input type="text" name="date" id="date" class="form-control" value="{{ request.GET.date }}">
+            <small class="text-muted">{% trans "Format YYYY-MM-DD" %}</small>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="">
+            <label for="date2">{% trans "Date end" %}</label>
+            <input type="text" name="date2" id="date2" class="form-control"  value="{{ request.GET.date2 }}">
+            <small class="text-muted">{% trans "Format YYYY-MM-DD. This will be checked if there is a date begin" %}</small>
+          </div>
+        </div>
+        <div class="col-lg-3">
+
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-1">
+      <button type="submit" class="btn btn-info btn-sm">
+        <i class="fas fa-search"></i>
+        {% trans "Filter" %}
+      </button>
+    </div>
+  </div>
+</form>
