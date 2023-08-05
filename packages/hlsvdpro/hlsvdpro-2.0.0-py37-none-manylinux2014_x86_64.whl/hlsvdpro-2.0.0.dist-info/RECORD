@@ -1,0 +1,14 @@
+hlsvdpro/__init__.py,sha256=1zi9OzPt_Re2bnHwQvp2kkvtfP8SjaMo-RPH5XHMN3s,248
+hlsvdpro/_cpropack.so,sha256=JnBNtxgvfu71vz6SxRr28KiAyxzZSLqpUeXY4A0S7ms,752312
+hlsvdpro/_dpropack.so,sha256=F1nEiQoqQg1gsfX0D7GgtrZmnOr9cFkJmgfhRKUMoTs,684240
+hlsvdpro/_spropack.so,sha256=5KZNvtybsAJdcESRG97yhC9xTEqGvyuV2d5T-565qjA,682176
+hlsvdpro/_zpropack.so,sha256=W-6JEv9ogf0Fqvlzo2d6Js3i3TduQgmlgojDLBtWv6w,759600
+hlsvdpro/hlsvd.py,sha256=NtrzecbxZ8jEUxGRQesvIdkF0UalGZ7XShHCRvttHeI,36029
+hlsvdpro/libgfortran.so.3,sha256=T8dgoST16Fhhgqpu96D6Lox6kQZDVBL74oAVp4qu1ek,1186168
+hlsvdpro/propack.py,sha256=m9b0joI8tJRd24d1POaZlqhu252Bykc1_T_RxB_5LL8,24356
+hlsvdpro/simple_test.py,sha256=wiN6IXAFGRjPqyaZpX86KHP5nsNiC5RxVR171TWX3Z0,5317
+hlsvdpro-2.0.0.dist-info/LICENSE,sha256=SooVGZztuicaCkutjdGBqFd89wHO5U29lbYB9SExqIU,7262
+hlsvdpro-2.0.0.dist-info/METADATA,sha256=RSJxYrlagcm6m-SNkeJ4dmozsWrrgew3spGdi95wzT8,7186
+hlsvdpro-2.0.0.dist-info/WHEEL,sha256=YbMNnLXHWP6IQalpD8wunyZhT-oURh24wsWCgy0nOao,110
+hlsvdpro-2.0.0.dist-info/top_level.txt,sha256=y1zNrKIB0C2m8R4r_Y32UF8XjXqRK8l8DDhtM4Y0spo,9
+hlsvdpro-2.0.0.dist-info/RECORD,,
