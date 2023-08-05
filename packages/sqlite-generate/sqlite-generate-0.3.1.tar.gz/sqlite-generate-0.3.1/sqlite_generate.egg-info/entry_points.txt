@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        sqlite-generate=sqlite_generate.cli:cli
+    
