@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Bitcoin_Price_Notifications/bitcoin_price_notify.py
+Bitcoinprice_notifications.egg-info/PKG-INFO
+Bitcoinprice_notifications.egg-info/SOURCES.txt
+Bitcoinprice_notifications.egg-info/dependency_links.txt
+Bitcoinprice_notifications.egg-info/entry_points.txt
+Bitcoinprice_notifications.egg-info/requires.txt
+Bitcoinprice_notifications.egg-info/top_level.txt

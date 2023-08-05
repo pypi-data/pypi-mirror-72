@@ -1,0 +1,3 @@
+[console_scripts]
+Bitcoin-Price-Notification = Bitcoin_Price_Notifications.bitcoin_price_notify:main
+
