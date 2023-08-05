@@ -1,0 +1,213 @@
+Metadata-Version: 2.1
+Name: pymcuprog
+Version: 3.1.3.60
+Summary: Tools for programming of MCUs using Microchip CMSIS-DAP based debuggers
+Home-page: http://www.microchip.com
+Author: Microchip Technology
+Author-email: support@microchip.com
+License: Microchip Technology Inc. Proprietary License
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Description-Content-Type: text/markdown
+Requires-Dist: pyedbglib (>=2.4)
+Requires-Dist: pyserial
+Requires-Dist: intelhex
+Provides-Extra: dev
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: mock ; extra == 'dev'
+
+# pymcuprog
+pymcuprog is a utility for programming various Microchip MCU devices using Microchip CMSIS-DAP based debuggers
+
+## Usage
+pmcuprog can be used as a command-line interface or a library
+
+### Command-line programming
+for help, use:
+```
+pymcuprog --help
+```
+
+#### Action: ping 
+checks connectivity by reading the device identity
+
+Example:
+```
+pymcuprog ping
+```
+#### Action: erase
+erases device memories
+* use -m to erase only a specified memory region (if available)
+
+Example: chip erase the device
+```
+pymcuprog erase
+```
+#### Action: write
+writes device memories
+* use -f for writing from a file, or
+* use -l for writing literal values
+* use -m to specify memory type for literal writing
+* use -o to specify offset for literal writing
+
+Example: writes the content of app.hex to the appropriate memory areas on the device
+```
+pymcuprog write -f app.hex
+```
+
+#### Action: read
+reads device memories
+* use -m to specify memory type
+* use -o to specify offset to read from
+* use -b to specify number of bytes to read
+* use -f to read to a file
+
+Example: reads 64 bytes of flash memory from offset 0x1000
+```
+pymcuprog read -m flash -o 0x1000 -b 64
+```
+
+#### Action: reset_target
+resets the target device
+
+Example:
+```
+pymcuprog reset_target
+```
+
+### Command-line board utilities
+
+#### Action: getvoltage
+reads the actual target operating voltage
+
+Example:
+```
+pymcuprog getvoltage
+```
+
+#### Action: getsupplyvoltage
+reads the supply voltage (set-point)
+
+Example:
+```
+pymcuprog getsupplyvoltage
+```
+
+#### Action: getusbvoltage
+reads the USB voltage (Vbus)
+
+Example:
+```
+pymcuprog getusbvoltage
+```
+
+#### Action: setsupplyvoltage
+sets the target supply voltage
+* use -l to specify a literal supply voltage value
+
+Example: sets the target supply voltage on a Curiosity Nano kit to 3.3V
+```
+pymcuprog setsupplyvoltage -l 3.3
+```
+
+#### Action: reboot
+reboots the debugger
+
+Example: reboots a Curiosity Nano kit
+```
+pymcuprog reboot
+```
+
+### Command-line switches
+Many of these switches are optional, and many parameters are automatically set when using a Curiosity Nano or Xplained Pro kit.
+* -t TOOL to select which tool to use.  Optional if only one is connected.
+* -s SERIAL_NUMBER to select which tool instance to use.  Optional if only one is connected.
+* -d DEVICE to specify the device to program.  Optional when using a kit.
+* -i INTERFACE to specify the target communication interface.  Optional.
+* -p PACKPATH to specify the path to the DFP for PIC devices
+* -c CLK to specify the programming interface clock speed.  Optional.
+* --verify to verify after programming
+* -u UART to use native host serial port UART for UPDI instead of a USB-based tool.
+* --options OPTIONS for special functions like 'hvpulse' or 'chip_erase_by_key'
+* -v for verbose output
+* -vv for verbose debug output
+
+### Library
+pymcuprog can be used as a library using its "backend API".  For example:
+```
+# Configure the session
+from pymcuprog.backend import SessionConfig
+sessionconfig = SessionConfig("atmega4808")
+
+# Instantiate USB transport (only 1 tool connected)
+from pymcuprog.toolconnection import ToolUsbHidConnection
+transport = ToolUsbHidConnection()
+
+# Instantiate backend
+from pymcuprog.backend import Backend
+backend = Backend()
+
+# Connect to tool using transport
+backend.connect_to_tool(transport)
+
+# Start the session
+backend.start_session(sessionconfig)
+
+# Read the target device_id
+device_id = backend.read_device_id()
+print ("Device ID is {0:06X}".format(int.from_bytes(d, byteorder="little")))
+```
+
+## Dependencies
+pymcuprog depends on pyedbglib for its transport protocol.
+pyedbglib requires a USB transport library like libusb.  See pyedbglib package for more information.
+
+## Versioning
+pymcuprog version can be determined using the CLI:
+```
+pymcuprog -V
+```
+or using the library:
+```
+from pymcuprog.version import VERSION as pymcuprog_version
+print("pymcuprog version {}".format(pymcuprog_version))
+```
+In addition, the CLI-backend API is versioned for convenience:
+```
+from pymcuprog.backend import Backend
+backend = Backend()
+print("pymcuprog backend API version: {}".format(backend.get_api_version()))
+```
+
+## Supported devices and tools
+Note: pymcuprog is primarily intended for use with PKoB nano (nEDBG) debuggers which are found on Curiosity Nano kits and other development boards.  This means that it is continuously tested with a selection of AVR devices with UPDI interface as well as a selection of PIC devices.  However since the protocol is compatible between all EDBG-based debuggers (pyedbglib) it is possible to use pymcuprog with a wide range of debuggers and devices, although not all device families/interfaces have been implemented.
+
+### Debuggers / Tools
+The following Atmel/Microchip debuggers are supported:
+* JTAGICE3 (only firmware version 3.x)
+* Atmel-ICE
+* Power Debugger
+* EDBG
+* mEDBG
+* nEDBG / PKoB nano
+* MPLAB PICkit 4 ICD (only when in 'AVR mode')
+* MPLAB Snap ICD (only when in 'AVR mode')
+Although not all functionality is provided on all boards.  See device support section below.
+
+### Devices
+The following device-types are supported:
+* All UPDI devices, whether mounted on kits or standalone
+* PIC devices mounted on Curiosity Nano kits, or similar board with PKoB nano / nEDBG debugger
+* Other devices (eg ATmega328P, ATsamd21e18a) may be partially supported for experimental purposes
+
+
