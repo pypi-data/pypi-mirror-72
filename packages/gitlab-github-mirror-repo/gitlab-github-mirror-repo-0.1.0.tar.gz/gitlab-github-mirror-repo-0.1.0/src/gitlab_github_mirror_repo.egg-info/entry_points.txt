@@ -1,0 +1,3 @@
+[console_scripts]
+gitlab_github_mirror_repo = gitlab_github_mirror_repo.cli:cli
+

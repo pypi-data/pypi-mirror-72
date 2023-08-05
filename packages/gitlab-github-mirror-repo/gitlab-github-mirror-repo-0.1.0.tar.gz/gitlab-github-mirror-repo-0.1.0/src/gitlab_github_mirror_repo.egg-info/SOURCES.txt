@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+src/gitlab_github_mirror_repo/__init__.py
+src/gitlab_github_mirror_repo/cli.py
+src/gitlab_github_mirror_repo.egg-info/PKG-INFO
+src/gitlab_github_mirror_repo.egg-info/SOURCES.txt
+src/gitlab_github_mirror_repo.egg-info/dependency_links.txt
+src/gitlab_github_mirror_repo.egg-info/entry_points.txt
+src/gitlab_github_mirror_repo.egg-info/not-zip-safe
+src/gitlab_github_mirror_repo.egg-info/requires.txt
+src/gitlab_github_mirror_repo.egg-info/top_level.txt
