@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: tensorfn
+Version: 0.1.4
+Summary: Non-opionated utility library for PyTorch
+Home-page: https://github.com/rosinality/tensorfn
+Author: Kim Seonghyeon
+Author-email: kim.seonghyeon@navercorp.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: torch (>=1.1)
+Requires-Dist: pydantic (>=1.5)
+Requires-Dist: pyhocon (>=0.3.54)
+
+UNKNOWN
+
+
