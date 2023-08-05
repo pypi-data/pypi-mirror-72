@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: arcane-google-analytics
+Version: 0.1.0
+Summary: A package to use Google Analytics API
+Author: Arcane
+Author-email: product@arcane.run
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: arcane-core (>=1.0.3,<2.0.0)
+Requires-Dist: google-api-python-client (==1.7.8)
+Requires-Dist: google-auth-httplib2 (==0.0.3)
+Description-Content-Type: text/markdown
+
+# Arcane google-analytics
+
+This package helps us to interact with Google Analytics API
+
