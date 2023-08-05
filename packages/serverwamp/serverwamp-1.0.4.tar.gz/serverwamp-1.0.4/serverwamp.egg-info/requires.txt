@@ -1,0 +1,7 @@
+msgpack~=1.0.0
+
+[:python_version < "3.7"]
+dataclasses~=0.6
+
+[docs]
+Sphinx==3.0.3
