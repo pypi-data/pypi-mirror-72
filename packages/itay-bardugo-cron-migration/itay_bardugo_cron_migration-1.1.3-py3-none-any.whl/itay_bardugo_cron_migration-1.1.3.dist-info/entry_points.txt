@@ -1,0 +1,4 @@
+[console_scripts]
+cronmig = cron_migration.cli.commands:cronmig
+cronmig-revision = cron_migration.cli.commands:revision
+
