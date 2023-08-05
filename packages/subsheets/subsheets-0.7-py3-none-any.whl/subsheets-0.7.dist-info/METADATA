@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: subsheets
+Version: 0.7
+Summary: utility to create subsheets in excel file
+Home-page: https://github.com/CruiseDevice/subsheets
+Author: Akash Chavan
+Author-email: achavan1211@gmail.com
+License: UNKNOWN
+Keywords: subsheets sheets
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: xlrd
+Requires-Dist: XlsxWriter
+
+# subsheets
+
+> Utility to create subsheets in excel file.
+
+## Usage
+
+### Install
+`
+    pip install subsheets
+`
+
+and then
+`
+    subsheets <new_file_name>
+`
+
+the program will ask for the source directory where the files are present. The
+new file will be created in the same directory.
+
+## Contribute
+
+### Clone the source
+`
+    https://github.com/CruiseDevice/subsheets
+`
+
+### Navigate inside the subsheets folder
+`
+    cd subsheets/
+`
+
+### Install the dependencies
+`
+    pip install -r requirements.txt
+`
+
+### Navigate inside the src/ folder
+`
+    cd src/
+`
+
+### Usage
+`
+    python subsheets.py <new-file_name>
+`
+
+#### Note: Make the changes in the different branch and send the PR.
+
