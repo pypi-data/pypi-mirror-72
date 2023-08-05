@@ -1,0 +1,15 @@
+psycopg2>=2.7
+python-json-logger
+slacker-log-handler
+zc.lockfile
+
+[dev]
+flake8
+pytest
+
+[docs]
+recommonmark
+sphinx
+sphinx-paramlinks
+sphinx-rtd-theme
+wheel
