@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: match-pattern
+Version: 0.1.1
+Summary: An integrated glob and regex pattern matcher, with file and folder scan capabilities.
+Home-page: https://github.com/LamaAni/MatchPattern
+Author: Zav Shotan
+Author-email: 
+License: LICENSE
+Platform: any
+Requires-Python: >=3.6
+
+Please see the github repo and help @ https://github.com/LamaAni/MatchPattern
+
+
