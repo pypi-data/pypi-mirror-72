@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pyPreservica
+Version: 0.3.1
+Summary: Python library for the Preservica Rest API
+Home-page: https://github.com/carj/pyPreservica
+Author: James Carr
+Author-email: james.carr@preservica.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: System :: Archiving
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: certifi
+
+# pyPreservica
+Python language binding for the Preservica API
+
+This library provides a Python class for working with the Preservica Entity Rest API
+
+https://us.preservica.com/api/entity/documentation.html
+
+
+The full documentation is available at: https://pypreservica.readthedocs.io/
+
+
