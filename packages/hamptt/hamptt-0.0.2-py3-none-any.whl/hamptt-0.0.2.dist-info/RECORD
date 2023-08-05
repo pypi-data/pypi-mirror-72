@@ -1,0 +1,12 @@
+hamptt/__init__.py,sha256=28uD4hHbAVAXquNh2v0ywmEVlPTuqIdRnSLVD-N4084,403
+hamptt/pttchooser.py,sha256=O8Cb7v4NGzKd0dFW9npnPSOK7ZC4D8o23lnzhFv_nNQ,1158
+hamptt/boards/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hamptt/boards/abstptt.py,sha256=7J-gvW4Z7pB-HWqF86Qohfd817x2EZHA3gXkRZxhRPM,242
+hamptt/boards/btptt.py,sha256=ckH8Xueenb_mMXkmJMwA1seS-3r-ukfP3JMDuH2qNso,1147
+hamptt/boards/gpiobtt.py,sha256=07VeGLh2yKU4mB_SUMS895ZDEdd63glRofXgzl2cJT0,319
+hamptt-0.0.2.dist-info/DESCRIPTION.rst,sha256=gESIBtigHY7J3UfrMhzQOq9H2A8lYm3CDKvcXeE0R1M,1629
+hamptt-0.0.2.dist-info/METADATA,sha256=o08ZVkwCv9C_QlDz-vm-MwHQIVmRnR0wt2v-jZIPokE,2649
+hamptt-0.0.2.dist-info/RECORD,,
+hamptt-0.0.2.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+hamptt-0.0.2.dist-info/metadata.json,sha256=ZSw-7rCfb_LyPOrqIBM5BZ1E9_bQ54oYti3JEqhsoz0,1107
+hamptt-0.0.2.dist-info/top_level.txt,sha256=PVW8NuDt2Sl8LCzwTLjW9le3EjrPC0MBv_Ozz8vaLlY,7
