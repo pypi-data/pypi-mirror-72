@@ -1,0 +1,234 @@
+---
+stages:
+  - check
+  - test
+  - build
+  - publish
+
+check code smells:
+  image: python:3.6
+  script:
+    - pip install tox
+    - tox -e system-lint
+  cache:
+    paths:
+      - .tox
+    key: $CI_JOB_NAME
+  stage: check
+  only:
+    refs:
+      - master
+      - merge_requests
+    changes:
+      - setup.cfg
+      - xotless/*.py
+      - xotless/**/*.py
+
+.run_tox_tests: &run_tox_tests
+  image: python:$PYTHON
+  stage: test
+  cache:
+    paths:
+      - .tox
+    key: $CI_JOB_NAME
+  script:
+    - pip install tox
+    - tox -e system-unit
+
+.run_tox_staticcheck: &run_tox_staticcheck
+  image: python:3.6
+  stage: check
+  cache:
+    paths:
+      - .tox
+    key: $CI_JOB_NAME
+  script:
+    - pip install tox
+    - tox -e 3.6-staticcheck
+
+.run_tox_doctest: &run_tox_doctest
+  image: python:3.6
+  cache:
+    paths:
+      - .tox
+    key: $CI_JOB_NAME
+  stage: check
+  script:
+    - pip install tox
+    - tox -e 3.6-doctest
+
+
+run tests with Python 3.6:
+  <<: *run_tox_tests
+  needs:
+    - check code smells
+    - run static checks
+  variables:
+    PYTHON: "3.6"
+  only:
+    refs:
+      - master
+      - merge_requests
+    changes:
+      - setup.cfg
+      - xotless/*.py
+      - xotless/**/*.py
+
+run tests with Python 3.7:
+  <<: *run_tox_tests
+  needs:
+    - check code smells
+    - run static checks
+  variables:
+    PYTHON: "3.7"
+  only:
+    refs:
+      - master
+      - merge_requests
+    changes:
+      - setup.cfg
+      - xotless/*.py
+      - xotless/**/*.py
+
+
+run tests with Python 3.8:
+  <<: *run_tox_tests
+  needs:
+    - check code smells
+    - run static checks
+  variables:
+    PYTHON: "3.8"
+  only:
+    refs:
+      - master
+      - merge_requests
+    changes:
+      - setup.cfg
+      - xotless/*.py
+      - xotless/**/*.py
+
+run tests with Python 3.9-rc:
+  <<: *run_tox_tests
+  needs:
+    - check code smells
+    - run static checks
+  variables:
+    PYTHON: "3.9-rc"
+  only:
+    refs:
+      - master
+      - merge_requests
+    changes:
+      - setup.cfg
+      - xotless/*.py
+      - xotless/**/*.py
+
+
+run static checks:
+  <<: *run_tox_staticcheck
+  only:
+    refs:
+      - master
+      - merge_requests
+    changes:
+      - setup.cfg
+      - xotless/*.py
+      - xotless/**/*.py
+
+
+run doctests:
+  <<: *run_tox_doctest
+  only:
+    refs:
+      - master
+      - merge_requests
+    changes:
+      - docs/source/conf.py
+      - docs/**/*.rst
+      - setup.cfg
+      - xotless/*.py
+      - xotless/**/*.py
+
+
+run coverage tests:
+  needs:
+    - check code smells
+    - run static checks
+  image: python:3.6
+  stage: test
+  script:
+    - pip install tox
+    - tox -e 3.6-coverage
+  only:
+    refs:
+      - master
+      - merge_requests
+    changes:
+      - setup.cfg
+      - xotless/*.py
+      - xotless/**/*.py
+
+
+check signature of tag:
+  image: alpine
+  stage: check
+  script:
+    - apk add git gnupg
+    - gpg --recv-key $GNUPG_KEY
+    - git verify-tag $CI_COMMIT_REF_NAME
+  only:
+    refs:
+      - tags
+    variables:
+      - $CI_COMMIT_TAG =~ /^\d+(\.\d+)*(\.post\d+)*$/
+
+build source distribution:
+  image: python:3.6-alpine
+  stage: build
+  script:
+    - rm -f dist/*
+    - apk add git
+    - python setup.py sdist
+  artifacts:
+    paths:
+      - dist/
+  only:
+    refs:
+      - tags
+    variables:
+      - $CI_COMMIT_TAG =~ /^\d+(\.\d+)*(\.post\d+|rc\d+)?$/
+
+build binary distribution:
+  image: python:3.6-alpine
+  stage: build
+  script:
+    - pip install wheel
+    - apk add git
+    - python setup.py bdist_wheel
+  artifacts:
+    paths:
+      - dist/
+  only:
+    refs:
+      - tags
+    variables:
+      - $CI_COMMIT_TAG =~ /^\d+(\.\d+)*(\.post\d+)?$/
+
+publish_pypi:
+  image: python:3.6
+  stage: publish
+  script:
+    - pip install twine
+    - twine upload -u "$PYPI_USERNAME" -p "$PYPI_PASSWORD" dist/*
+  only:
+    refs:
+      - tags
+    variables:
+      - $CI_COMMIT_TAG =~ /^\d+(\.\d+)*(\.post\d+|rc\d+)?$/
+  dependencies:
+    - check signature of tag
+    - build source distribution
+    - build binary distribution
+  environment:
+    name: pypi
+    url: https://pypi.org/project/$CI_PROJECT_NAME

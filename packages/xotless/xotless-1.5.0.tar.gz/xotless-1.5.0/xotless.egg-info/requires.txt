@@ -1,0 +1,9 @@
+xoutil<2.2,>=2.1.8
+immutables
+typing_extensions
+
+[:python_version < "3.7"]
+dataclasses
+
+[test]
+hypothesis>=4.51.1
