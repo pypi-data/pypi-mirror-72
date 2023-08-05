@@ -1,0 +1,3 @@
+[console_scripts]
+diffsettings=django_settings_diff.cli:main
+
