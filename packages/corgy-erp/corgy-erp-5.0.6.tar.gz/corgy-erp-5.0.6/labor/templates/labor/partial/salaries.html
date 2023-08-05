@@ -1,0 +1,30 @@
+{% load i18n material_frontend humanize %}
+
+{% if query.count > 0 %}
+    <div class="card">
+        <div class="card-content">
+            <div class="card-title">{% trans 'Bérek' %}</div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>{% trans 'Dátum' %}</td>
+                        <td>{% trans 'Bér' %}</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for salary in query.all|slice:":10" %}
+                    <tr>
+                        <td>{{ salary.begin.year }}/{{ salary.begin.month }}</td>
+                        <td>${{ salary.salary|intcomma }}</td>
+                        <td>
+                            <a href="{% url 'labor:salary_detail' salary.pk %}" alt="{% trans 'Részletek' %}">
+                                <i class="material-icons">details</i>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endif %}
