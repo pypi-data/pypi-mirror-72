@@ -1,0 +1,17 @@
+spor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spor/alignment/__init__.py,sha256=mM8WmOwwKWhFjw3QkFRzFIbF2BTM1KUvCmPIZ6q6F8o,34
+spor/alignment/matrix.py,sha256=DTcFYstwyHe5Lxt94OD046Z1Nx7w7v_9TB6aLGJKWdQ,1447
+spor/alignment/smith_waterman.py,sha256=H7zEXABSoYpwdUmYnnZmu6JSc27NCnqrkTw4np4qFos,6085
+spor/anchor.py,sha256=RpgQznDYEe-vHwLGIxm02tciECS4xI8lO2Z3CUM0yZU,7336
+spor/cli.py,sha256=LzpJCYM9fQXCu4elc0l9wxoAq9bjm4QYzCjThHsailY,7091
+spor/diff.py,sha256=mycn-Ryeq9DJ1h9P28rKbseyqAZL7rdoeZ6lLv7TVSA,1329
+spor/repository/__init__.py,sha256=MQ9o8n1UEaqWddJ-iutyMsExuTeED5Gm9ko-i6YAB2A,82
+spor/repository/persistence.py,sha256=4q3lbGKpH7gpDg8-0t5qO3YpB6XsxixAgBHY_ks2bPQ,971
+spor/repository/repository.py,sha256=grK84Lg0a3DTJ3QJ25bWUXGxooEwWvNGWFRm2SZYXl8,4888
+spor/updating.py,sha256=136SLDxbexkmpscVSvTzOsQzmSStOkn6qBMutCs8Lig,2249
+spor/version.py,sha256=64s-eAPuhlag4HQroJsaZ_4VsGo78k7Ox5AcfZsw-9o,106
+spor-1.1.6.dist-info/entry_points.txt,sha256=76AdytV7gxB7kWyAgxpGT7lKZgvJpPfvuGeSsRaTYSg,38
+spor-1.1.6.dist-info/LICENSE,sha256=CfMr2grzOByA9hoPrLaIbiCpP98gxKobHhrqJWmmoag,1053
+spor-1.1.6.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+spor-1.1.6.dist-info/METADATA,sha256=dPu9H-Z78P3xgq7xoH8hmvuSAYrWHSywK0o6jSCj1OA,5666
+spor-1.1.6.dist-info/RECORD,,
