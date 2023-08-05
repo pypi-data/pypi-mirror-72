@@ -1,0 +1,12 @@
+README.md
+setup.py
+zoomconnect_sdk/__init__.py
+zoomconnect_sdk/_test.py
+zoomconnect_sdk/base_client.py
+zoomconnect_sdk/client.py
+zoomconnect_sdk/error.py
+zoomconnect_sdk.egg-info/PKG-INFO
+zoomconnect_sdk.egg-info/SOURCES.txt
+zoomconnect_sdk.egg-info/dependency_links.txt
+zoomconnect_sdk.egg-info/requires.txt
+zoomconnect_sdk.egg-info/top_level.txt
