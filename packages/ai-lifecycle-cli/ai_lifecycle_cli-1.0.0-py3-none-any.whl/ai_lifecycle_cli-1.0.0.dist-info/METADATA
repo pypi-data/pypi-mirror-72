@@ -1,0 +1,211 @@
+Metadata-Version: 2.1
+Name: ai-lifecycle-cli
+Version: 1.0.0
+Summary: CLI library for importing, exporting and managing IBM Watson Machine Learning assets.
+Home-page: https://www.ibm.com/cloud/machine-learning
+Author: IBM Corp
+Author-email: daniel.ryszka@pl.ibm.com
+License: Apache-2.0
+Keywords: watson-machine-learning,watson-studio,ibm-watson
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3 (==1.25.8)
+Requires-Dist: jmespath (==0.9.4)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: flatten-dict (==0.2.0)
+Requires-Dist: PyGithub (==1.46)
+Requires-Dist: PyJWT (==1.7.1)
+
+# AI Lifecycle CLI
+CLI allows to export and import assets from Watson Machine Learning service on Cloud Pack for Data and move them between different spaces.
+It also allows to manage your WML resources such as spaces, assets and deployments.
+In general, CLI performs import/export jobs in respective APIs and poll the status of the job, until it's completed (regardless of status).
+We are supporting scenarios, where we can export assets from WML installed on either CPD version 2.5 or 3.0 and import them back to WML installed on CPD version 3.0. During the export, we can choose if either we'd like to export all assets, all assets of given type or just selected assets.
+
+## How to install
+```bash
+    pip install ai-lifecycle-cli -U
+```
+
+## How to run CLI
+
+### Example
+```
+ai-lifecycle-cli export --url=https://<CP4D_HOST> --user=<CP4D_USER> --pass=<CP4D_PASS> --output_dir=./ --export_json_file=./sources.json
+```
+```
+ai-lifecycle-cli import --url=https://<CP4D_HOST> --user=<CP4D_USER> --pass=<CP4D_PASS> --input_file=./archive.zip --import_timeout=1200
+```
+
+### Export
+You can export assets only from Watson Machine Learning service on CP4D in versions:
+- 2.5.0
+- 3.0.0
+
+Usage of `export` command is shown here:
+```
+usage: ai-lifecycle-cli export [-h] --url CPD_URL --user CPD_USER --pass
+                               CPD_PASS --output_dir OUTPUT_DIR
+                               --export_json_file EXPORT_JSON_FILE
+                               [--archive_all] [--export_version {2.5,3.0}]
+                               [--export_timeout EXPORT_TIMEOUT]
+                               [--temp_dir TEMP_DIR]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --url CPD_URL         URL to CP4D
+  --user CPD_USER       Username used for CP4D login
+  --pass CPD_PASS       Password used for CP4D login
+  --output_dir OUTPUT_DIR
+                        Directory, where exported content should be saved
+  --export_json_file EXPORT_JSON_FILE
+                        JSON file, specifying which assets to export from
+                        which projects/spaces
+  --archive_all         Archive all exported content into single ZIP archive
+  --export_version {2.5,3.0}
+                        Version of exported environment - if not provided,
+                        it'll be auto-detected
+  --export_timeout EXPORT_TIMEOUT
+                        Set timeout for export job in seconds
+  --temp_dir TEMP_DIR   Directory for temporary files
+```
+
+#### List of supported assets
+
+List with supported assets for export with their respective names in API:
+- Models: `wml_model`
+- Python Functions: `wml_function`
+- Pipelines: `wml_pipeline`
+- Model Definitions: `wml_model_definitions`
+- Experiments: `wml_experiment`
+- Python Scripts: `script`
+- Shiny Apps: `shiny_asset`
+
+#### How to specify, which assets do you want to export
+Flag `--export_json_file EXPORT_JSON_FILE` is responsible for passing the file with specification of which aasets should be exported from which spaces in source environment.
+Syntax of such file looks like this:
+```
+{
+  "space": [
+    {
+      "guid": "<space_guid_1>"
+    },
+    ...
+    {
+      "guid": "<space_guid_2>",
+      "assets": {
+        "<asset_type_1>": "all",
+        "<asset_type_2>": ["asset_guid_1", ...]
+      }
+    },
+    ...
+  ]
+}
+```
+You need to provivde JSON file with key named `space` - under this key you specify array of space items, which can be defined in few ways:
+1. To specify that you want to export all assets from given space (i.e. `<space_guid_1>`), space item in array would look like this:
+```
+  {
+    "guid": "<space_guid_1>"
+  }
+```
+2. To specify that you want to export all assets of given type (i.e. `<asset_type_1>` from given space (i.e. `<space_guid_2>`), space item in array would look like this:
+```
+  {
+    "guid": "<space_guid_2>",
+    "assets": {
+      "<asset_type_1>": "all"
+    }
+  }
+```
+3. To specify that you want to export specified assets (i.e. `"asset_guid_1"` and `"asset_guid_2"` of given type (i.e. `<asset_type_2>` from given space (i.e. `<space_guid_3>`), space item in array would look like this:
+```
+  {
+    "guid": "<space_guid_3>",
+    "assets": {
+      "<asset_type_2>": ["asset_guid_1", "asset_guid_2"]
+    }
+  }
+```
+
+Sample files to use for `--export_json_file` are under `samples` directory.
+
+### Import
+You can import assets only to Watson Machine Learning service on CP4D in versions:
+- 3.0.0
+
+Usage of `import` command is shown here:
+```
+usage: ai-lifecycle-cli import [-h] --url CPD_URL --user CPD_USER --pass
+                               CPD_PASS --input_file INPUT_FILE
+                               [--import_version {2.5,3.0}]
+                               [--import_name IMPORT_NAME]
+                               [--import_desc IMPORT_DESC]
+                               [--import_timeout IMPORT_TIMEOUT]
+                               [--temp_dir TEMP_DIR]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --url CPD_URL         URL to CP4D (default: None)
+  --user CPD_USER       Username used for CP4D login (default: None)
+  --pass CPD_PASS       Password used for CP4D login (default: None)
+  --input_file INPUT_FILE
+                        Path to exported archive file to be imported (default:
+                        None)
+  --import_version {2.5,3.0}
+                        Version of imported environment - if not provided,
+                        it'll be auto-detected (default: 3.0)
+  --import_name IMPORT_NAME
+                        Name of created container (e.g. space) during import
+                        (default: None)
+  --import_desc IMPORT_DESC
+                        Description of created container (e.g. space) during
+                        import (default: None)
+  --import_timeout IMPORT_TIMEOUT
+                        Set timeout for export job in seconds (default: 600)
+  --temp_dir TEMP_DIR   Directory for temporary files (default: /var/tmp/ai-
+                        lifecycle-cli)
+```
+
+### Managing WML resources
+AI Lifecycle CLI also supports simple management for WML assets and deployments.
+In sections below, there's a list of supported commands for WML asset and deployment management.
+To get more information on the commands, use `-h/--help` flag with the command.
+
+#### Assets
+You can perform the following operations:
+- `asset list` - list all assets persisted in the deployment space
+
+#### Deployments
+You can perform the following operations:
+- `deployment list` - list all deployments persisted in the deployment space
+- `deployment create` - create new deployment in the deployment space
+- `deployment delete` - delete deployment from the deployment space
+
+#### Spaces
+You can perform the following operations:
+- `space list` - list all deployment spaces
+- `space delete` - delete deployment space
+
+#### Deployment jobs
+You can perform the following operations:
+- `deployment-job list` - list all deployment jobs in the deployment space
+- `deployment-job create` - create new deployment job in the deployment space
+- `deployment-job cancel` - cancel running deployment job in the deployment space
+
+## Notes & Limitations
+
+Supporting for now only:
+- export from CP4D version 2.5 and 3.0
+- import to CP4D version 3.0
+
+Flag `--export-timeout` is not applicable for exports from CP4D version 2.5.
+

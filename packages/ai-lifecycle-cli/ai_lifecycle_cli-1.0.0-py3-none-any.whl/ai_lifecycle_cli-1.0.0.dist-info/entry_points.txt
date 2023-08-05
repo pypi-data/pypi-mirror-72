@@ -1,0 +1,3 @@
+[console_scripts]
+ai-lifecycle-cli = ai_lifecycle_cli.main:main
+
