@@ -1,0 +1,12 @@
+pytcp_message/TcpClient.py,sha256=ACDzGFWVvhOubR791QEWGcgoTqogjBQPCAabaPi22rk,2654
+pytcp_message/TcpServer.py,sha256=WDlJG8_wk3wgryYXhrcIks6VGmNSrI9vm-FfyOy5ras,2891
+pytcp_message/_RequestHandler.py,sha256=n9a9XJuCtyOVj0JDLcC5tdgsOiRxoX1bs83SnmPKwog,1225
+pytcp_message/__init__.py,sha256=UzZjRGETSSt1mZlfqQsWs0wVvyq1yY2la9jCSmQp_To,66
+pytcp_message/message/TcpMessage.py,sha256=iOFAfTuIBvzJj8Hu8cZdctmOe2wzFamOGok5zU7yuck,3098
+pytcp_message/message/TcpRequest.py,sha256=oQWx4kuMmQuL7W-EMv1duaZ365XCxmfF5Uxz7yysulY,1347
+pytcp_message/message/__init__.py,sha256=6OkOH2oh7LLRPqAV-omyMhB_bmAo8eAZERnfXl172uE,70
+pytcp_message-0.1.7.dist-info/LICENSE,sha256=q4bZGfhvA62LUia5nbwPH3b5aHULWFksHMvPwG8buaI,1051
+pytcp_message-0.1.7.dist-info/METADATA,sha256=JKA27atbB-PHiqE7nf00r0as_bEzOSgVvJQL599x6yk,5834
+pytcp_message-0.1.7.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pytcp_message-0.1.7.dist-info/top_level.txt,sha256=cXWF9gHI35CyVBKJ3pQwEgH25NYQzRxTLBNhpPKpsGs,14
+pytcp_message-0.1.7.dist-info/RECORD,,
