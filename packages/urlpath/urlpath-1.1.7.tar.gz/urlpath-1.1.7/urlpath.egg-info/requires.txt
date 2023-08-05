@@ -1,0 +1,8 @@
+requests
+
+[json]
+jmespath
+
+[test]
+WebOb
+jmespath
