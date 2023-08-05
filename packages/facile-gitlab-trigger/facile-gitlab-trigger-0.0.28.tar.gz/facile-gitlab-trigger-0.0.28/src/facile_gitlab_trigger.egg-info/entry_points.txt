@@ -1,0 +1,3 @@
+[console_scripts]
+facile-trigger = facile_trigger_helper.facile_trigger_helper:run_cli
+
