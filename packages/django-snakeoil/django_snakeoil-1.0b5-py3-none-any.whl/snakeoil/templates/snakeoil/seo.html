@@ -1,0 +1,3 @@
+{% for tag in meta_tags %}
+  <meta {{ tag.attribute }}="{{ tag.name }}" content="{{ tag.content }}">
+{% endfor %}
