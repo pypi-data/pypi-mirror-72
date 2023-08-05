@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: webbpsf
+Version: 0.9.1
+Summary: 'Creates simulated point spread functions for the James Webb Space Telescope'
+Home-page: http://webbpsf.readthedocs.io/
+Author: Association of Universities for Research in Astronomy
+Author-email: help@stsci.edu
+License: BSD
+Description: (this placeholder string will be replaced automatically with webbpsf's top-level docstring.)
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Provides-Extra: test
+Provides-Extra: docs
