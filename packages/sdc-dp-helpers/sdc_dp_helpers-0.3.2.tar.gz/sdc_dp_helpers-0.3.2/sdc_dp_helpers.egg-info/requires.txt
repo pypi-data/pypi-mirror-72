@@ -1,0 +1,7 @@
+boto3
+google-api-python-client
+httplib2
+pathlib
+oauth2client
+numpy
+pandas
