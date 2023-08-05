@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: supervisor-react
+Version: 0.1.5
+Summary: A web interface for supervisor
+Home-page: UNKNOWN
+License: GPL-3.0-only
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: tornado (<6)
+
+supervisor-react
+================
+
+A web interface for supervisor made with React.
+
+```
+usage: supervisor-react [-h] [-d] [-p PORT] [-s SUPERVISOR] [-v]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d, --debug
+  -p PORT, --port PORT
+  -s SUPERVISOR, --supervisor SUPERVISOR
+  -v, --verbose
+```
+
+
