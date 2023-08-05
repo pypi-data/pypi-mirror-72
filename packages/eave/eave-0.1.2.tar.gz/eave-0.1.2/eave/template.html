@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{doc.title}}</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- <link rel="stylesheet" href="https://docs.konghq.com/assets/styles.css" /> -->
+  <style>
+    {{resource['style']}}
+  </style>
+
+  <style>
+    {{resource['highlight_css']}}
+  </style>
+
+  <style>
+    .main-content {
+      padding: 0 50px;
+    }
+    .content {
+      padding: 20px;
+    }
+    .min-width-2 {
+      min-width: 30px;
+    }
+    .min-width-3 {
+      min-width: 45px;
+    }
+    .print-tips{
+      float: left;
+      text-align: center;
+      text-decoration:none;
+      padding: 10px;
+      line-height: 1;
+      border-radius: 50px;
+      background-color: #ecf5ff;
+      color: #419dff;
+      cursor: pointer;
+    }
+    @media print {
+      pre{
+        white-space:pre-wrap;
+        word-wrap: break-word;
+      }
+      pre>code{
+        white-space:pre-wrap;
+        word-wrap: break-word;
+      }
+      .main-content {
+        padding: 0 5px;
+      }
+      .content {
+        padding: 5px;
+      }
+      footer {
+        display: none;
+      }
+
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+  <div class="main-content">
+
+    <div class="page-content content">
+
+
+      <h1>{{doc.title}}</h1>
+
+      <ul>
+        <li>Version: <code>{{doc.version}}</code></li>
+        <li>Host: <code>{{doc.host}}</code></li>
+      </ul>
+
+      %if doc.description:
+        <div class="alert alert-info">{{markdown(doc.description, escape=False)}}</div>
+      %endif
+
+      <!-- 
+      <div class="alert alert-ee"></div>
+      <div class="alert alert-info"></div>
+      <div class="alert alert-warning"></div>
+      <div class="alert alert-success"></div>
+      -->
+
+      <p>
+        %if language == 'zh':
+          目录:
+        %else:
+          Contents
+        %endif
+      </p>
+
+      <ul>
+        %for api in doc.apis:
+          <li><a href="#{{api.id}}" class="scroll-to">{{api.title}}</a></li>
+        %endfor
+      </ul>
+
+      <hr>
+
+      %for note in doc.notes:
+        <div>
+          %if note.title:
+            <h3>{{note.title}}</h3>
+          %endif
+          <p>{{markdown(note.content, escape=False)}}</p>
+        </div>
+      %endfor
+
+      %if doc.notes:
+        <hr>
+      %endif
+
+      %for api in doc.apis:
+
+        <h1 id="{{api.id}}">{{api.title}}</h1>
+
+        %if api.url:
+          <div class="endpoint {{api.method.lower()}}">
+            <a href="{{api.url_escape}}" target="_blank" style="color: inherit">{{api.url_escape}}</a>
+          </div>
+        %endif
+
+        %if api.from_md:
+
+          <div>
+            {{markdown(api.from_md, escape=False)}}
+          </div>
+
+        %else:
+
+          %if api.description:
+            <div class="alert alert-ee">{{markdown(api.description, escape=False)}}</div>
+          %endif
+
+          %if api.path_params:
+            <table>
+              <thead>
+                <tr>
+                  %if language == 'zh':
+                    <th>Path 参数</th>
+                    <th>类型</th>
+                    <th>描述</th>
+                    <th class="min-width-2">必须</th>
+                    <th class="min-width-3">默认值</th>
+                    <th class="min-width-2">示例</th>
+                  %else:
+                    <th>Path Parameters</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Required</th>
+                    <th>Default</th>
+                    <th>Example</th>
+                  %endif
+                </tr>
+              </thead>
+              <tbody>
+                %for param in api.path_params:
+                  <tr>
+                    <td><code>{{param.name}}</code></td>
+                    <td><em>{{param.type}}</em></td>
+                    <td>{{param.description}}</td>
+                    <td>{{param.required_svg}}</td>
+                    <td>{{param.default}}</td>
+                    <td>{{param.example}}</td>
+                  </tr>
+                %endfor
+              </tbody>
+            </table>
+          %endif
+
+          %if api.query_params:
+            <table>
+              <thead>
+                <tr>
+                  %if language == 'zh':
+                    <th>Query 参数</th>
+                    <th>类型</th>
+                    <th>描述</th>
+                    <th class="min-width-2">必须</th>
+                    <th class="min-width-3">默认值</th>
+                    <th class="min-width-2">示例</th>
+                  %else:
+                    <th>Query Parameters</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Required</th>
+                    <th>Default</th>
+                    <th>Example</th>
+                  %endif
+                </tr>
+              </thead>
+              <tbody>
+                %for param in api.query_params:
+                  <tr>
+                    <td><code>{{param.name}}</code></td>
+                    <td><em>{{param.type}}</em></td>
+                    <td>{{param.description}}</td>
+                    <td>{{param.required_svg}}</td>
+                    <td>{{param.default}}</td>
+                    <td>{{param.example}}</td>
+                  </tr>
+                %endfor
+              </tbody>
+            </table>
+          %endif
+
+          %if api.body_params:
+            <table>
+              <thead>
+                <tr>
+                  %if language == 'zh':
+                    <th>Body 参数</th>
+                    <th>类型</th>
+                    <th>描述</th>
+                    <th class="min-width-2">必须</th>
+                    <th class="min-width-3">默认值</th>
+                    <th class="min-width-2">示例</th>
+                  %else:
+                    <th>Body Parameters</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Required</th>
+                    <th>Default</th>
+                    <th>Example</th>
+                  %endif
+                </tr>
+              </thead>
+              <tbody>
+                %for param in api.body_params:
+                  <tr>
+                    <td><code>{{param.name}}</code></td>
+                    <td><em>{{param.type}}</em></td>
+                    <td>{{param.description}}</td>
+                    <td>{{param.required_svg}}</td>
+                    <td>{{param.default}}</td>
+                    <td>{{param.example}}</td>
+                  </tr>
+                %endfor
+              </tbody>
+            </table>
+
+            %if api.content_types:
+              <p>
+                %if language == 'zh':
+                  传参使用
+                %else:
+                  Accept 
+                %endif
+                <code>Content-Type</code>:
+                %for t in api.content_types:
+                  &nbsp;
+                  <em>{{t}}</em>
+                %endfor
+              </p>
+            %endif
+
+          %endif
+
+          %if api.body_example:
+            <p>
+              %if language == 'zh':
+                请求数据示例:
+              %else:
+                Request Body Example:
+              %endif
+            </p>
+            <pre><code>{{api.body_example.strip()}}</code></pre>
+          %endif
+
+          %if api.response_example:
+            <p>
+              %if language == 'zh':
+                响应结果示例:
+              %else:
+                Response Example:
+              %endif
+            </p>
+            <pre><code class="lang-json">{{api.response_example.strip()}}</code></pre>
+          %endif
+
+          %if api.response_description:
+            <p>
+              %if language == 'zh':
+                响应结果说明:
+              %else:
+                Response Description:
+              %endif
+            </p>
+            {{markdown(api.response_description, escape=False)}}
+          %endif
+      
+          %if api.tips:
+            <div class="alert alert-warning">
+              {{markdown(api.tips, escape=False)}}
+            </div>
+          %endif
+
+        %endif
+
+        <hr>
+
+      %endfor
+
+      %if doc.ending:
+        <p>{{markdown(doc.ending, escape=False)}}</p>
+        <hr>
+      %endif
+
+
+      <footer>
+        <div class="print-tips" onclick="alert(
+            %if language == 'zh':
+              '推荐在 Chrome 浏览器中打印，请在设置选项中勾选中 `背景图形`，并取消勾选 `页眉和页脚`。'
+            %else:
+              'We recommend printing in Chrome, please check `Background Graphics` in the settings options and uncheck ` Headers and footers `.'
+            %endif
+        );window.print()">
+            %if language == 'zh':
+              打印本文档
+            %else:
+              Print This Document
+            %endif
+        </div>
+        <div class="power-by" style="font-weight: bold; float: right">
+            Power By <a href="https://github.com/taojy123/eave" target="_blank">Eave</a>
+        </div>
+        <div style="clear: both; height: 20px"></div>
+      </footer>
+
+    </div>
+
+
+  </div>
+
+
+  <script>
+      {{resource['highlight_js']}}
+  </script>
+  <script>
+      hljs.initHighlightingOnLoad()
+  </script>
+
+</body>
+
+
+</html>
