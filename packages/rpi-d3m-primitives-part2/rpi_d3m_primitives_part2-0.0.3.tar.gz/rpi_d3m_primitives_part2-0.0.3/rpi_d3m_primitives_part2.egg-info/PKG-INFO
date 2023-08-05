@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: rpi-d3m-primitives-part2
+Version: 0.0.3
+Summary: partial RPI primitives for D3M. Includes structured classifier and global causal discovery.
+Home-page: https://gitlab.com/N.Yin/rpi-d3m-part2.git
+Author: Naiyu Yin, Zijun Cui, Yuru Wang, Qiang Ji
+Author-email: yinn2@rpi.edu
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: d3m_primitive
+Platform: Linux
+Platform: MacOS

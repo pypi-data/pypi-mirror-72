@@ -1,0 +1,12 @@
+d3m
+pgmpy==0.1.9
+pydot
+networkx
+numpy
+scipy
+pandas
+torch
+pyparsing
+statsmodels
+tqdm
+joblib
