@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: gravityai
+Version: 0.0.1
+Summary: The gravity-ai.com helper package
+Home-page: https://github.com/GravityAI/gravityai
+Author: Jon Huss
+Author-email: jon@gravity-ai.com
+License: UNKNOWN
+Description: # Gravity-ai.com
+        
+        This package includes helper scripts for interfacing your machine learning code with the Gravity-ai.com containerization code.
+        
+        To build from source:
+        
+        python3 setup.py install
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
