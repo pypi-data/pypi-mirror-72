@@ -1,0 +1,6 @@
+[console_scripts]
+sagecipher = sagecipher.__main__:cli
+
+[keyring.backends]
+sagecipher = sagecipher.keyring
+
