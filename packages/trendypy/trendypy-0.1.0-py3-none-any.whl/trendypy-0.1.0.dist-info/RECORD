@@ -1,0 +1,13 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_doctests.py,sha256=HwEn0qYRF2GEQcu-P7p9gAvvGaJkxeHjBoUzTuZ5Q58,397
+tests/test_trendypy.py,sha256=bvIB_lWP-1phtL5DvvV1tm0He6JgpOcLLNWKcZE7bHs,2221
+trendypy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+trendypy/algos.py,sha256=UMOYpnq60yQm1AknYtiuNIXS_DFHCJ5mEgtDlfBIQV4,2357
+trendypy/sandbox_.py,sha256=mak-glPwqI2tqbN9OKj1cvGxlL-h0u1M_25AUcXTkGM,1375
+trendypy/trendy.py,sha256=CKtZ7iUcmoYEl8cRY1Q5bbKikRhL08akdceiPM1490o,5238
+trendypy/utils.py,sha256=dJe8VK3rylPtSvpNWT4YAJ_ZqF1rrDej5WNvEoPNjdM,1302
+trendypy-0.1.0.dist-info/LICENSE,sha256=79QVULYKJH7aNU6zUoq6olp4QBwBe4kxduoi0iJItrk,1068
+trendypy-0.1.0.dist-info/METADATA,sha256=WvTh52vP35XSuujAxCTKg3LQQIVrR2prDVJWNPojreE,2219
+trendypy-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+trendypy-0.1.0.dist-info/top_level.txt,sha256=tBy8-siGgzuGbVXxXxuZCmr2If_j8cRCxYjnjmF75rk,15
+trendypy-0.1.0.dist-info/RECORD,,
