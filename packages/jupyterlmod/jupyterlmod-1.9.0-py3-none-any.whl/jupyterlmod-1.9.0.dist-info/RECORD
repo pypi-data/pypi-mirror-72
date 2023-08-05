@@ -1,0 +1,12 @@
+jupyterlmod/__init__.py,sha256=ABuQfKR8ewMDCxBn2OxCikWR7iXTTX0iG9tA6pJOyQI,810
+jupyterlmod/handler.py,sha256=euTyLHRTUEIkyxrK7Sx_ev2sGtQhh3xmnkDxZ793zUQ,1725
+jupyterlmod-1.9.0.data/data/etc/jupyter/jupyter_notebook_config.d/jupyterlmod_serverextension.json,sha256=azg0QIBexarBsMiQaf3JDVeSI7Z-4kynosruw_9eZgQ,104
+jupyterlmod-1.9.0.data/data/etc/jupyter/nbconfig/tree.d/jupyterlmod_nbextension.json,sha256=za_Ok9jkuCrMAVOgBoC4L90fiNqLlBzMO7t3YYCwduY,67
+jupyterlmod-1.9.0.data/data/share/jupyter/nbextensions/jupyterlmod/lmod.js,sha256=Xw9s5E2Atca2UXTFdKFDulq-iAYiRTrs_kVQxBfJRmI,1944
+jupyterlmod-1.9.0.data/data/share/jupyter/nbextensions/jupyterlmod/main.js,sha256=8tuhaPqUNSzjtDQ3_AfjpTCoAzuio7V78V7qdxsYBm8,9176
+lmod/__init__.py,sha256=iuvBjEpXo2eD2teX_WBIZU_s0-c2m56FVK8TUdib1SA,3613
+jupyterlmod-1.9.0.dist-info/LICENSE,sha256=PqWfljCq3NiHHFUYlWE844Hm4mgSPdI-8MYhrfnuTDY,1078
+jupyterlmod-1.9.0.dist-info/METADATA,sha256=AFUAJfutAOSGGpqmxo0BDz154Gf58w0ROFkmjDLt_6g,810
+jupyterlmod-1.9.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+jupyterlmod-1.9.0.dist-info/top_level.txt,sha256=H-DN7F7bbp74HIKGe9qqurhHRepKJRt6-Bill_EznmE,17
+jupyterlmod-1.9.0.dist-info/RECORD,,
