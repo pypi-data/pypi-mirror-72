@@ -1,0 +1,16 @@
+README.md
+setup.py
+bftool/ArgumentConstructor.py
+bftool/MainHandler.py
+bftool/Modes.py
+bftool/ProcessHandler.py
+bftool/ThreadHandler.py
+bftool/Types.py
+bftool/WordlistHandler.py
+bftool/__init__.py
+bftool/__main__.py
+bftool/useful_functions.py
+bftool_pkg_sulcud.egg-info/PKG-INFO
+bftool_pkg_sulcud.egg-info/SOURCES.txt
+bftool_pkg_sulcud.egg-info/dependency_links.txt
+bftool_pkg_sulcud.egg-info/top_level.txt
