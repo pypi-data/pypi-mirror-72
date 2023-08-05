@@ -1,0 +1,3 @@
+[console_scripts]
+permtools = permuta.cli:main
+
