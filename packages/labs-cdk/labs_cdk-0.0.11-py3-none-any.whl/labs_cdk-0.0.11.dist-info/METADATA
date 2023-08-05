@@ -1,0 +1,125 @@
+Metadata-Version: 2.1
+Name: labs-cdk
+Version: 0.0.11
+Summary: GIC Labs AWS CDK constructs
+Home-page: https://github.com/GICLabs/labs-cdk
+Author: Vaibhav Bansal
+Author-email: vaibhavbansal@gic.com.sg
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: attrs (==19.3.0)
+Requires-Dist: aws-cdk.assets (==1.41.0)
+Requires-Dist: aws-cdk.aws-apigateway (==1.41.0)
+Requires-Dist: aws-cdk.aws-applicationautoscaling (==1.41.0)
+Requires-Dist: aws-cdk.aws-autoscaling (==1.41.0)
+Requires-Dist: aws-cdk.aws-autoscaling-common (==1.41.0)
+Requires-Dist: aws-cdk.aws-autoscaling-hooktargets (==1.41.0)
+Requires-Dist: aws-cdk.aws-batch (==1.41.0)
+Requires-Dist: aws-cdk.aws-certificatemanager (==1.41.0)
+Requires-Dist: aws-cdk.aws-cloudformation (==1.41.0)
+Requires-Dist: aws-cdk.aws-cloudfront (==1.41.0)
+Requires-Dist: aws-cdk.aws-cloudwatch (==1.41.0)
+Requires-Dist: aws-cdk.aws-codebuild (==1.41.0)
+Requires-Dist: aws-cdk.aws-codecommit (==1.41.0)
+Requires-Dist: aws-cdk.aws-codepipeline (==1.41.0)
+Requires-Dist: aws-cdk.aws-cognito (==1.41.0)
+Requires-Dist: aws-cdk.aws-ec2 (==1.41.0)
+Requires-Dist: aws-cdk.aws-ecr (==1.41.0)
+Requires-Dist: aws-cdk.aws-ecr-assets (==1.41.0)
+Requires-Dist: aws-cdk.aws-ecs (==1.41.0)
+Requires-Dist: aws-cdk.aws-ecs-patterns (==1.41.0)
+Requires-Dist: aws-cdk.aws-elasticache (==1.41.0)
+Requires-Dist: aws-cdk.aws-elasticloadbalancing (==1.41.0)
+Requires-Dist: aws-cdk.aws-elasticloadbalancingv2 (==1.41.0)
+Requires-Dist: aws-cdk.aws-events (==1.41.0)
+Requires-Dist: aws-cdk.aws-events-targets (==1.41.0)
+Requires-Dist: aws-cdk.aws-iam (==1.41.0)
+Requires-Dist: aws-cdk.aws-kms (==1.41.0)
+Requires-Dist: aws-cdk.aws-lambda (==1.41.0)
+Requires-Dist: aws-cdk.aws-logs (==1.41.0)
+Requires-Dist: aws-cdk.aws-rds (==1.41.0)
+Requires-Dist: aws-cdk.aws-route53 (==1.41.0)
+Requires-Dist: aws-cdk.aws-route53-targets (==1.41.0)
+Requires-Dist: aws-cdk.aws-s3 (==1.41.0)
+Requires-Dist: aws-cdk.aws-s3-assets (==1.41.0)
+Requires-Dist: aws-cdk.aws-sam (==1.41.0)
+Requires-Dist: aws-cdk.aws-secretsmanager (==1.41.0)
+Requires-Dist: aws-cdk.aws-servicediscovery (==1.41.0)
+Requires-Dist: aws-cdk.aws-sns (==1.41.0)
+Requires-Dist: aws-cdk.aws-sns-subscriptions (==1.41.0)
+Requires-Dist: aws-cdk.aws-sqs (==1.41.0)
+Requires-Dist: aws-cdk.aws-ssm (==1.41.0)
+Requires-Dist: aws-cdk.aws-stepfunctions (==1.41.0)
+Requires-Dist: aws-cdk.cloud-assembly-schema (==1.41.0)
+Requires-Dist: aws-cdk.core (==1.41.0)
+Requires-Dist: aws-cdk.custom-resources (==1.41.0)
+Requires-Dist: aws-cdk.cx-api (==1.41.0)
+Requires-Dist: aws-cdk.region-info (==1.41.0)
+Requires-Dist: cattrs (==1.0.0)
+Requires-Dist: constructs (==3.0.3)
+Requires-Dist: jsii (==1.5.0)
+Requires-Dist: publication (==0.0.3)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: six (==1.14.0)
+Requires-Dist: typing-extensions (==3.7.4.2)
+
+
+# Labs CDK!
+
+This project is used to define aws cdk constructs which can be used by labs as building 
+blocks for creating applications.
+
+### Set up
+Install python3
+```
+$ brew install python3
+```
+
+Create a virtualenv.
+
+```
+$ pip install virtualenvwrapper
+$ mkvirtualenv labs-cdk --python=python3
+```
+
+Once the virtualenv is activated, you can install the required dependencies.
+
+```
+$ pip install -r requirements.txt
+$ pip install twine
+```
+
+Install nodejs from https://nodejs.org/en/download/
+
+Install aws cdk npm package
+
+```
+$ npm install
+```
+
+
+### Build and upload to PyPI
+Update the version number in setup.py
+
+Build the package
+```
+$ python setup.py sdist bdist_wheel
+```
+
+Deploy to PyPi
+```
+$ twine upload -r pypi dist/labs_cdk-{version-number}*
+```
+
+To add additional dependencies, for example other CDK libraries, just add
+them to your `setup.py` file and rerun the `pip install -r requirements.txt`
+command.
+
+
