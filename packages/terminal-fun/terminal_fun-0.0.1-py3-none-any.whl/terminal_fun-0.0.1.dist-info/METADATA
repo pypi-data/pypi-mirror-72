@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: terminal-fun
+Version: 0.0.1
+Summary: Various Fun Terminal Commands!
+Home-page: https://github.com/himanshujain171/terminal-fun
+Author: Himanshu Jain
+Author-email: nhimanshujain@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: cowsay (>=2.0.3)
+Provides-Extra: dev
+Requires-Dist: pytest (==5.4.3) ; extra == 'dev'
+
+# Terminal Fun
+
+This project invloves the usage of terminal commands to produces beautiful outputs
+
+## Installation
+
+Run the following to install:
+
+```python
+pip install terminal-fun
+```
+
+## Usage
+
+```python
+from terminalfun import *
+cowsay()
+```
+
+## Developing terminal-fun
+
+To install terminal-fun along with the tools you need to develop and run tests, run the following command:
+
+```bash
+pip install -e .[dev]
+```
+
