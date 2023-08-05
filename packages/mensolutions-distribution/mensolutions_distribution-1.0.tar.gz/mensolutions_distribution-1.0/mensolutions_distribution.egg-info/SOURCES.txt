@@ -1,0 +1,10 @@
+setup.py
+mensolutions_distribution/Binomialdistribution.py
+mensolutions_distribution/Gaussiandistribution.py
+mensolutions_distribution/Generaldistribution.py
+mensolutions_distribution/__init__.py
+mensolutions_distribution.egg-info/PKG-INFO
+mensolutions_distribution.egg-info/SOURCES.txt
+mensolutions_distribution.egg-info/dependency_links.txt
+mensolutions_distribution.egg-info/not-zip-safe
+mensolutions_distribution.egg-info/top_level.txt
