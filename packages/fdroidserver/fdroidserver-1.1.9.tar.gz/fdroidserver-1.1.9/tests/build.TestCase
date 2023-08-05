@@ -1,0 +1,135 @@
+#!/usr/bin/env python3
+
+# http://www.drdobbs.com/testing/unit-testing-with-python/240165163
+
+import inspect
+import logging
+import optparse
+import os
+import re
+import shutil
+import sys
+import tempfile
+import unittest
+
+localmodule = os.path.realpath(
+    os.path.join(os.path.dirname(inspect.getfile(inspect.currentframe())), '..'))
+print('localmodule: ' + localmodule)
+if localmodule not in sys.path:
+    sys.path.insert(0, localmodule)
+
+import fdroidserver.build
+import fdroidserver.common
+import fdroidserver.metadata
+
+
+class BuildTest(unittest.TestCase):
+    '''fdroidserver/build.py'''
+
+    def _set_build_tools(self):
+        build_tools = os.path.join(fdroidserver.common.config['sdk_path'], 'build-tools')
+        if os.path.exists(build_tools):
+            fdroidserver.common.config['build_tools'] = ''
+            for f in sorted(os.listdir(build_tools), reverse=True):
+                versioned = os.path.join(build_tools, f)
+                if os.path.isdir(versioned) \
+                        and os.path.isfile(os.path.join(versioned, 'aapt')):
+                    fdroidserver.common.config['build_tools'] = versioned
+                    break
+            return True
+        else:
+            print('no build-tools found: ' + build_tools)
+            return False
+
+    def _find_all(self):
+        for cmd in ('aapt', 'adb', 'android', 'zipalign'):
+            path = fdroidserver.common.find_sdk_tools_cmd(cmd)
+            if path is not None:
+                self.assertTrue(os.path.exists(path))
+                self.assertTrue(os.path.isfile(path))
+
+    def setUp(self):
+        logging.basicConfig(level=logging.DEBUG)
+        self.basedir = os.path.join(localmodule, 'tests')
+        self.tmpdir = os.path.abspath(os.path.join(self.basedir, '..', '.testfiles'))
+        if not os.path.exists(self.tmpdir):
+            os.makedirs(self.tmpdir)
+        os.chdir(self.basedir)
+
+    def test_force_gradle_build_tools(self):
+        testdir = tempfile.mkdtemp(prefix=inspect.currentframe().f_code.co_name, dir=self.tmpdir)
+        shutil.copytree(os.path.join('source-files'),
+                        os.path.join(testdir, 'source-files'))
+        teststring = 'FAKE_VERSION_FOR_TESTING'
+        fdroidserver.build.force_gradle_build_tools(testdir, teststring)
+        pattern = re.compile(r"buildToolsVersion[\s=]+'%s'\s+" % teststring)
+        for p in ('source-files/fdroid/fdroidclient/build.gradle',
+                  'source-files/Zillode/syncthing-silk/build.gradle',
+                  'source-files/open-keychain/open-keychain/build.gradle',
+                  'source-files/osmandapp/osmand/build.gradle',
+                  'source-files/open-keychain/open-keychain/OpenKeychain/build.gradle'):
+            with open(os.path.join(testdir, p), 'r') as f:
+                filedata = f.read()
+            self.assertIsNotNone(pattern.search(filedata))
+
+    def test_get_apk_metadata(self):
+        config = dict()
+        fdroidserver.common.fill_config_defaults(config)
+        fdroidserver.common.config = config
+        fdroidserver.build.config = config
+        self._set_build_tools()
+        try:
+            config['aapt'] = fdroidserver.common.find_sdk_tools_cmd('aapt')
+        except fdroidserver.exception.FDroidException:
+            pass  # aapt is not required if androguard is present
+
+        testcases = [
+            ('repo/obb.main.twoversions_1101613.apk', 'obb.main.twoversions', '1101613', '0.1', None),
+            ('org.bitbucket.tickytacky.mirrormirror_1.apk', 'org.bitbucket.tickytacky.mirrormirror', '1', '1.0', None),
+            ('org.bitbucket.tickytacky.mirrormirror_2.apk', 'org.bitbucket.tickytacky.mirrormirror', '2', '1.0.1', None),
+            ('org.bitbucket.tickytacky.mirrormirror_3.apk', 'org.bitbucket.tickytacky.mirrormirror', '3', '1.0.2', None),
+            ('org.bitbucket.tickytacky.mirrormirror_4.apk', 'org.bitbucket.tickytacky.mirrormirror', '4', '1.0.3', None),
+            ('org.dyndns.fules.ck_20.apk', 'org.dyndns.fules.ck', '20', 'v1.6pre2',
+             ['arm64-v8a', 'armeabi', 'armeabi-v7a', 'mips', 'mips64', 'x86', 'x86_64']),
+            ('urzip.apk', 'info.guardianproject.urzip', '100', '0.1', None),
+            ('urzip-badcert.apk', 'info.guardianproject.urzip', '100', '0.1', None),
+            ('urzip-badsig.apk', 'info.guardianproject.urzip', '100', '0.1', None),
+            ('urzip-release.apk', 'info.guardianproject.urzip', '100', '0.1', None),
+            ('urzip-release-unsigned.apk', 'info.guardianproject.urzip', '100', '0.1', None),
+            ('repo/com.politedroid_3.apk', 'com.politedroid', '3', '1.2', None),
+            ('repo/com.politedroid_4.apk', 'com.politedroid', '4', '1.3', None),
+            ('repo/com.politedroid_5.apk', 'com.politedroid', '5', '1.4', None),
+            ('repo/com.politedroid_6.apk', 'com.politedroid', '6', '1.5', None),
+            ('repo/duplicate.permisssions_9999999.apk', 'duplicate.permisssions', '9999999', '', None),
+            ('repo/info.zwanenburg.caffeinetile_4.apk', 'info.zwanenburg.caffeinetile', '4', '1.3', None),
+            ('repo/obb.main.oldversion_1444412523.apk', 'obb.main.oldversion', '1444412523', '0.1', None),
+            ('repo/obb.mainpatch.current_1619_another-release-key.apk', 'obb.mainpatch.current', '1619', '0.1', None),
+            ('repo/obb.mainpatch.current_1619.apk', 'obb.mainpatch.current', '1619', '0.1', None),
+            ('repo/obb.main.twoversions_1101613.apk', 'obb.main.twoversions', '1101613', '0.1', None),
+            ('repo/obb.main.twoversions_1101615.apk', 'obb.main.twoversions', '1101615', '0.1', None),
+            ('repo/obb.main.twoversions_1101617.apk', 'obb.main.twoversions', '1101617', '0.1', None),
+            ('repo/urzip-; Рахма́, [rɐxˈmanʲɪnəf] سيرجي_رخمانينوف 谢·.apk', 'info.guardianproject.urzip', '100', '0.1', None),
+        ]
+        for apkfilename, appid, versionCode, versionName, nativecode in testcases:
+            app = fdroidserver.metadata.App()
+            app.id = appid
+            build = fdroidserver.metadata.Build()
+            build.buildjni = ['yes'] if nativecode else build.buildjni
+            build.versionCode = versionCode
+            build.versionName = versionName
+            vc, vn = fdroidserver.build.get_metadata_from_apk(app, build, apkfilename)
+            self.assertEqual(versionCode, vc)
+            self.assertEqual(versionName, vn)
+
+
+if __name__ == "__main__":
+    os.chdir(os.path.dirname(__file__))
+
+    parser = optparse.OptionParser()
+    parser.add_option("-v", "--verbose", action="store_true", default=False,
+                      help="Spew out even more information than normal")
+    (fdroidserver.common.options, args) = parser.parse_args(['--verbose'])
+
+    newSuite = unittest.TestSuite()
+    newSuite.addTest(unittest.makeSuite(BuildTest))
+    unittest.main(failfast=False)
