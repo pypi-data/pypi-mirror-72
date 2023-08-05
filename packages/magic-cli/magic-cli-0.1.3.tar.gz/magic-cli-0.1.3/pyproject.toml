@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "magic-cli"
+version = "0.1.3"
+description = ""
+authors = ["Jeremy Berman <jerber@sas.upenn.edu>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+magic = "magic_cli.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+typer = {extras = ["all"], version = "^0.2.1"}
+requests = "^2.24.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
