@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: rhasspy-snips-nlu
+Version: 0.2.0
+Summary: UNKNOWN
+Home-page: https://github.com/rhasspy/rhasspy-snips-nlu
+Author: Michael Hansen
+Author-email: hansen.mike@gmail.com
+License: UNKNOWN
+Description: # Rhasspy Snips NLU
+        
+        Rhasspy wrapper for [Snips NLU](https://snips-nlu.readthedocs.io/en/latest/).
+        
+        ## Requirements
+        
+        * Python 3.7
+        * [Snips NLU](https://snips-nlu.readthedocs.io/en/latest/)
+        
+        ## Installation
+        
+        ```bash
+        $ git clone https://github.com/rhasspy/rhasspy-snips-nlu
+        $ cd rhasspy-snips-nlu
+        $ ./configure
+        $ make
+        $ make install
+        ```
+        
+        ## Running
+        
+        ```bash
+        $ bin/rhasspy-snips-nlu <ARGS>
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

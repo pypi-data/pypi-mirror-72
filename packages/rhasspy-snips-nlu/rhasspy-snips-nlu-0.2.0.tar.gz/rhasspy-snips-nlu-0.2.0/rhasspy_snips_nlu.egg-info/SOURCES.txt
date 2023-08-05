@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+rhasspy_snips_nlu.egg-info/PKG-INFO
+rhasspy_snips_nlu.egg-info/SOURCES.txt
+rhasspy_snips_nlu.egg-info/dependency_links.txt
+rhasspy_snips_nlu.egg-info/requires.txt
+rhasspy_snips_nlu.egg-info/top_level.txt
+rhasspysnips_nlu/__init__.py
+rhasspysnips_nlu/__main__.py
+rhasspysnips_nlu/py.typed
