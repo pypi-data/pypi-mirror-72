@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: aiadv
+Version: 0.0.4
+Summary: Python library, from AiAdventures, providing utility functions for downloading datasets, etc.
+Home-page: https://github.com/ai-adventures/aiadv/tree/master/
+Author: Ankur Singh
+Author-email: as.ankursingh3.1@gmail.com
+License: Apache Software License 2.0
+Description: # aiadv
+        > A small helper library to download the datasets that are used in our training programs at AiAdventures.
+        
+        
+        ## Install
+        
+        `pip install aiadv`
+        
+        ## How to use
+        
+        There is only two things that you need to know
+        
+        ### `URLs` class
+        
+        This class saves the id and file name of all the available datasets
+        
+        ```python
+        URLs.MOVIE_LENS_SAMPLE
+        ```
+        
+        
+        
+        
+            {'id': '1k2y0qC0E3oHeGA5a427hRgfbW7hnQBgF', 'fname': 'movie_lens_sample.zip'}
+        
+        
+        
+        ### `untar_data` function
+        
+        This function will download the dataset for you and will return the path.
+        
+        ```python
+        untar_data(URLs.YELP_REIVEWS)
+        ```
+        
+        That's it!
+        
+Keywords: python
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
