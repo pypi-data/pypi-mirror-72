@@ -1,0 +1,7 @@
+wheel
+PyYAML==5.3.1
+snowflake-sqlalchemy
+numpy
+pandas
+nltk
+versioneer
