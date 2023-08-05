@@ -1,0 +1,15 @@
+wch341/__init__.py,sha256=BztM5FGmUdZtQQ8UQjxJ4yIpz_0aBr7I31TshUm1phg,804
+wch341/driver/CH341PT.DLL,sha256=epBaj8KdQ2I8Gn7sMs83OStsDewAICIimtCaoVsWAtQ,15320
+wch341/driver/CH341S64.SYS,sha256=ab0iS8yHeSqVzO990gktGsHrv5i51ahH7irrQkzVzns,69016
+wch341/driver/CH341S98.SYS,sha256=GV_ytly2KDD9E9tTD2GMB4qZsWNAVqQcIcSU6bVdOD0,28288
+wch341/driver/CH341SER.CAT,sha256=Zclfrul3fkwuZY99zvuPbvSE03Rz8WmgT15atn2JXx4,10935
+wch341/driver/CH341SER.INF,sha256=EbAmQUwq9QztXc5rV0nyDhQy19zesZ9Le9jcFNJy30s,7405
+wch341/driver/CH341SER.SYS,sha256=WTpRaeLx54UFvliOPVf3YAPX4xgRfQkyuhODCL_IgBw,50464
+wch341/driver/CH341SER.VXD,sha256=KpRvMW7dfhGF3ur9wt5SstKEMZi-CYpyQjPBL5zNDa4,20089
+wch341/driver/ch34x_install.exe,sha256=EbJMbPAqaMyqBwYbISjeGjwHHDwW98UI3Rxf2oiTkXk,111336
+wch341/driver/ch34x_install.pkg,sha256=IdKPPqClYl0TrOYffacVcEv_zij7V6CSS5RDuNPtYTk,26237
+wch341/driver/DRVSETUP64/DRVSETUP64.exe,sha256=MLfNvhrC4Lp_ilMtnpJCnotrUi2SLegcifqbra9q-pI,58088
+wch341-0.1.7.dist-info/METADATA,sha256=Bf6Pi9o9LIGq1CA8Di40JdxSUDbpcu0-LjiGr1gAFC4,215
+wch341-0.1.7.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+wch341-0.1.7.dist-info/top_level.txt,sha256=9YNlZ3hFbiUduS_5zYyKPEo13Neh49ZD-1RsI47gs80,7
+wch341-0.1.7.dist-info/RECORD,,
