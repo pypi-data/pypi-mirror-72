@@ -1,0 +1,13 @@
+b2sdk<1.2.0,>=1.1.0
+class-registry==2.1.2
+six>=1.13
+
+[:python_version <= "3.4"]
+arrow<0.13.1,>=0.8.0
+
+[:python_version > "3.4"]
+arrow>=0.8.0
+
+[dev]
+
+[test]
