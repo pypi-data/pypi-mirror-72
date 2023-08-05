@@ -1,0 +1,2 @@
+include versioneer.py
+include tornado_rest_easy/_version.py
