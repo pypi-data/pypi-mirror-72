@@ -1,0 +1,10 @@
+setup.py
+rushed_distributions/Binomialdistribution.py
+rushed_distributions/Gaussiandistribution.py
+rushed_distributions/Generaldistribution.py
+rushed_distributions/__init__.py
+rushed_distributions.egg-info/PKG-INFO
+rushed_distributions.egg-info/SOURCES.txt
+rushed_distributions.egg-info/dependency_links.txt
+rushed_distributions.egg-info/not-zip-safe
+rushed_distributions.egg-info/top_level.txt
