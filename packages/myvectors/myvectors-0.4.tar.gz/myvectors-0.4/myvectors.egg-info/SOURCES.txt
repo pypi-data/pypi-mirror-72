@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+myvectors/myvectors.py
+myvectors.egg-info/PKG-INFO
+myvectors.egg-info/SOURCES.txt
+myvectors.egg-info/dependency_links.txt
+myvectors.egg-info/top_level.txt
