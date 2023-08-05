@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: starcli
+Version: 2.2.0
+Summary: Browse popular repos on github by star trends from your command line!
+Home-page: https://github.com/hedythedev/starcli
+Author: Hedy Li
+Author-email: hedyhyry@gmail.com
+License: MIT
+Description: long description wip
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
