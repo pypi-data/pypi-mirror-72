@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-wake-precise-hermes = rhasspywake_precise_hermes.__main__:main
+
