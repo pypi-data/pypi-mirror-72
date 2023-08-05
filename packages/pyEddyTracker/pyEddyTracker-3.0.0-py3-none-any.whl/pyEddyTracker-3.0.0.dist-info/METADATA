@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pyEddyTracker
+Version: 3.0.0
+Summary: Py-Eddy-Tracker libraries
+Home-page: UNKNOWN
+Author: emason
+Author-email: emason@imedea.uib-csic.es
+License: UNKNOWN
+Keywords: eddy science,eddy tracking,eddy tracker
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Programming Language :: Python
+Requires-Dist: matplotlib
+Requires-Dist: netCDF4 (>=1.1.0)
+Requires-Dist: numba
+Requires-Dist: numpy (>=1.14)
+Requires-Dist: opencv-python
+Requires-Dist: pint
+Requires-Dist: polygon3
+Requires-Dist: pyproj
+Requires-Dist: pyyaml
+Requires-Dist: scipy (>=0.15.1)
+Requires-Dist: zarr
+
+UNKNOWN
+
+
