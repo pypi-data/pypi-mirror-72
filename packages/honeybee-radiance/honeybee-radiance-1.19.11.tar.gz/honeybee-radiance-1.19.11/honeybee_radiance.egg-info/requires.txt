@@ -1,0 +1,7 @@
+honeybee-core==1.32.5
+honeybee-radiance-folder==2.0.1
+honeybee-radiance-command==1.0.0
+
+[cli]
+click==7.1.2
+honeybee-core[cli]==1.32.3
