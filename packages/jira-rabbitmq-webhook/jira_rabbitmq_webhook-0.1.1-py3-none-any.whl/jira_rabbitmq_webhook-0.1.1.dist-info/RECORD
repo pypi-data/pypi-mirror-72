@@ -1,0 +1,11 @@
+jira_rabbitmq_webhook/__init__.py,sha256=ls1camlIoMxEZz9gSkZ1OJo-MXqHWwKPtdPbZJmwp7E,22
+jira_rabbitmq_webhook/amqp.py,sha256=HqtHrbHiy7FGbnOoSB7ONGs2eRvShSM0HR-YdX9dhTM,2419
+jira_rabbitmq_webhook/application.py,sha256=bsjsCpBSceOW1JgOJ2MBs7Af18l0MywVibS5Q8uG66g,2472
+jira_rabbitmq_webhook/config.py,sha256=nDV53WecJbk965rZt4pjev_S7bLCUIWFqmRLSszNJIw,197
+jira_rabbitmq_webhook/errors.py,sha256=BT2RGuwVuwypwypj5P8WaCiKqhwP-UNidjPx0L4locU,155
+jira_rabbitmq_webhook-0.1.1.data/data/config/jira_rabbitmq_webhook.json.example,sha256=a8bN3Whu6IO_TGlDfpf-VI_BRkYpL3FmIHYTTo_Y7aU,532
+jira_rabbitmq_webhook-0.1.1.dist-info/LICENSE,sha256=GmjUCLq9xzKISdu-lupBN9A_Ob579Whg6dHwVJ71UBg,1069
+jira_rabbitmq_webhook-0.1.1.dist-info/METADATA,sha256=CXgYX9gkfOKvKRnU7R9CUU0GYveAQsOxIufoVfNW3DU,2448
+jira_rabbitmq_webhook-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+jira_rabbitmq_webhook-0.1.1.dist-info/top_level.txt,sha256=DJTNS2wfQaEj56S3n6_Bt5kRNYGN81EMZSnfgNi7rA0,22
+jira_rabbitmq_webhook-0.1.1.dist-info/RECORD,,

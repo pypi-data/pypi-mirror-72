@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: jira-rabbitmq-webhook
+Version: 0.1.1
+Summary: A microservice for retranslating Jira webhooks to a RabbitMQ server
+Home-page: https://github.com/GrayAn/jira_rabbitmq_webhook
+Author: Sergey Shubin
+Author-email: greyan@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Bug Tracking
+Requires-Python: >=3.5
+Requires-Dist: aioamqp (<1.0)
+Requires-Dist: aiohttp (<4.0,>=3.0)
+
+Jira RabbitMQ WebHook
+=====================
+
+This service works as a bridge between a Jira and a RabbitMQ instances:
+
+* receives HTTP requests from the Jira server;
+* sends them to the MQ server via AMQP protocol.
+
+Installation
+------------
+
+The service requires Python 3.5 or newer.
+Install and update using `pip`_.
+`Gunicorn`_ is also required:
+
+.. code-block:: text
+
+    pip install jira_rabbitmq_webhook gunicorn
+
+Configuration
+-------------
+
+You need to create a configuration file for the service.
+Sample file can be found in ``config`` directory (it is copied to the
+``config`` directory of your python environment after installation). Available settings:
+
+* web
+
+  * url - URL used for receiving HTTP requests from the Jira instance
+
+* amqp
+
+  * host - RabbitMQ host
+  * port - RabbitMQ port
+  * login - RabbitMQ login
+  * password - RabbitMQ login
+  * virtualhost - RabbitMQ virtual host to use
+  * timeout - How many seconds the service tries to connect to the RabbitMQ server
+  * ssl - Whether to use SSL for AMQP connection
+  * default_queue - Queue to send messages to
+  * custom_queues - Queues to send messages for specific events
+
+Running
+-------
+
+The jira_rabbitmq_webhook service can be launched with the Gunicorn:
+
+.. code-block:: text
+
+    gunicorn "jira_rabbitmq_webhook.application:get_application('path/to/the/jira_rabbitmq_webhook.json')" --worker-class aiohttp.GunicornWebWorker
+
+.. _Gunicorn: https://gunicorn.org/
+.. _pip: https://pip.pypa.io/en/stable/quickstart/
+
+
