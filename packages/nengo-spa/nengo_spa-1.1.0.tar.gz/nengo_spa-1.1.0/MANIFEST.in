@@ -1,0 +1,29 @@
+global-include *.py
+include *.rst
+global-include *.sh
+include *.yml
+
+# Include this file, to ensure we can recreate source distributions
+include MANIFEST.in
+
+# Include CI files
+include .gitlint
+include *.txt
+
+# Directories to include
+graft docs
+
+# Subdirectories to exclude, if they exist
+prune docs/_build
+prune dist
+prune examples
+prune .*
+
+# Patterns to exclude from any directory
+global-exclude *-checkpoint.ipynb
+
+# Exclude all bytecode
+global-exclude *.pyc *.pyo *.pyd
+
+# Exclude VIM swp files
+global-exclude *.swp
