@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: multi-task-nmt-lawhy
+Version: 0.1.3
+Summary: Pytorch Implementation of the Multi-task Neural Machine Transliteration System
+Home-page: https://github.com/Lawhy/Multi-task-NMT
+Author: Yuan (Lawrence) He
+Author-email: lawhy0729@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: torchtext (>=0.5.0)
+Requires-Dist: torchvision (>=0.5.0)
+Requires-Dist: python-Levenshtein (>=0.12.0)
+Requires-Dist: pandas (>=1.0.3)
+
+# Multi-task-NMT
+The Pytorch-based implementation of the Multi-task Neural Machine Transliteration system initially built for the undegraduate thesis at University of Edinburgh.
+
+------------
+1. Requirements
+```
+torchtext>=0.5.0
+torchvision>=0.5.0
+python-Levenshtein>=0.12.0  # for Minimum Edit Distance
+pandas>=1.0.3
+```
+2. Install package
+```
+pip install multi-nmt-lawhy
+```
+
+
