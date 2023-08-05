@@ -1,0 +1,6 @@
+urllib3==1.25.8
+jmespath==0.9.4
+requests==2.22.0
+flatten_dict==0.2.0
+PyGithub==1.46
+PyJWT==1.7.1

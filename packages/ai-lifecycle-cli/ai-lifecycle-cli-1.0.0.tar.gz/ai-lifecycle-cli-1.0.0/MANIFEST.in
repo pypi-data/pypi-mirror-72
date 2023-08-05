@@ -1,0 +1,8 @@
+include README.md
+include VERSION
+
+recursive-include ai_lifecycle_cli *.py *.md *.json
+global-exclude .DS_Store
+global-exclude *.pyc
+global-exclude tmp
+global-exclude *.zip
