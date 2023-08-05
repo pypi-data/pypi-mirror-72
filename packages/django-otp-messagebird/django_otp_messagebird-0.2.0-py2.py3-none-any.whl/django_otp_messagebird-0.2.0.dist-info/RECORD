@@ -1,0 +1,15 @@
+otp_messagebird/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+otp_messagebird/admin.py,sha256=867tELSsmw_LhG1f4yM3mVYbIfog8F2Lmrq02Ea_6t4,1308
+otp_messagebird/conf.py,sha256=_GY9EDqV3CsSDLKY-0G5WoY7cFLEahVtGW2vm-xqyIU,1151
+otp_messagebird/models.py,sha256=XMAvGn7JTmGdzuK7Jp81uiRMO4QtLum9Tb2LJpgzrr4,6136
+otp_messagebird/tests.py,sha256=_DUwRaiJPUpXPBTLBIJi9MYxnaVGX_Zq8V3hmSzwCvI,4083
+otp_messagebird/migrations/0001_initial.py,sha256=-fhx3NYRFV_LdgaPmf1jiWrrkqjiuDNHqPhiY2PCDFE,1628
+otp_messagebird/migrations/0002_sidechanneldevice.py,sha256=b5weZB1lFLQtn55atcTieJl8TQ4AKBlZkl3-G5woktw,942
+otp_messagebird/migrations/0003_messagebirdvoicedevice.py,sha256=tiZrfqzLtBWASFhvD1KL8B3SeRwtD79F1ORjBA9DWVI,1528
+otp_messagebird/migrations/0004_messagebirdvoicedevice_language.py,sha256=UitOsQHB5niV0Zwt8ZQpY7Qn4X-sAj7o88eDVKA07BI,628
+otp_messagebird/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_otp_messagebird-0.2.0.dist-info/LICENSE,sha256=krUCb1iuczIHo6wX97OhJJC7En20hU-m6V2PekicBl0,1333
+django_otp_messagebird-0.2.0.dist-info/METADATA,sha256=TVQYxX4HHo7nq4A04kv7REe8burK1QiOEP37gM9-ZVk,1575
+django_otp_messagebird-0.2.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+django_otp_messagebird-0.2.0.dist-info/top_level.txt,sha256=4o5xXNWOR0vpNg2_ILBxP8KovOA5O1TmDG36mZhQSW4,16
+django_otp_messagebird-0.2.0.dist-info/RECORD,,
