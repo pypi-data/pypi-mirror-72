@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: datavillage-sdk
+Version: 0.1.1
+Summary: This sdk allows you to connect to Datavillage API
+Author: Datavillage
+Author-email: developer@datavillage.me
+Requires-Python: >=3.6
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: requests (>=2.23.0,<3.0.0)
