@@ -1,0 +1,3 @@
+[console_scripts]
+testhttp = testhttp:cmd
+
