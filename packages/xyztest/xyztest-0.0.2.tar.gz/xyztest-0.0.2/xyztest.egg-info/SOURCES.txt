@@ -1,0 +1,9 @@
+README.md
+setup.py
+xyztest/__init__.py
+xyztest.egg-info/PKG-INFO
+xyztest.egg-info/SOURCES.txt
+xyztest.egg-info/dependency_links.txt
+xyztest.egg-info/top_level.txt
+xyztest/test_folder/TestClass.py
+xyztest/test_folder/__init__.py
