@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: filebase-api
+Version: 0.1.0
+Summary: A simple web api builder for python apps. Integrates Jinja templates, fileserver and websockets.
+Home-page: https://github.com/LamaAni/zthreading.py
+Author: Zav Shotan
+Author-email: 
+License: LICENSE
+Platform: any
+Requires-Python: >=3.6
+Requires-Dist: match-pattern
+Requires-Dist: zthreading
+Requires-Dist: TicTocTimer
+Requires-Dist: zcommon
+Requires-Dist: jinja2
+Requires-Dist: sanic
+
+Please see the github repo and help @ https://github.com/LamaAni/FilebaseAPI
+
+
