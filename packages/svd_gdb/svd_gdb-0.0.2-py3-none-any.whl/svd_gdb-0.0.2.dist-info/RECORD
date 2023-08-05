@@ -1,0 +1,14 @@
+svd_gdb/__init__.py,sha256=k1jbBZUfZ8AV0bPB75CEfX6Z78k6rTfU2s7zbvB9JPU,178
+svd_gdb/gdb.py,sha256=lM_dg8Dhg_d9SnKHNsJd7mi5lOtasstLIkpXtdFAHSo,19655
+svd_gdb/make_stub.py,sha256=-1mrKQ8Nlv-Z6hntunbi3vYXqwQ5UZZCcJBhmMqt29w,6082
+svd_gdb/mutable_number.py,sha256=OgUeRMBdPLyoyCZsYNYU4WuaMI3PAFKqG0Ounvx-jAU,5766
+svd_gdb/svd_gdb.py,sha256=iqpcn5qX97tAeFkIrJ1KGow-Lqreyy8PKLA1Ra1ixyg,18877
+svd_gdb/drivers/base.py,sha256=_FEI7PF6Q01lpzMTHEq-N_WeY6W0cQW-tm7F0MjvDb0,1473
+svd_gdb/drivers/nrf5x.py,sha256=Qq6s2BcdOzJgnEQ9t4ry2_2M1-4RwRwGOcb2d73lBgI,3639
+svd_gdb/drivers/stm32.py,sha256=EIc3K7EV3YYxuYRiqI3ifjsegoAG8-9L49OuevHSF08,9727
+svd_gdb-0.0.2.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+svd_gdb-0.0.2.dist-info/METADATA,sha256=rephLy8ggND4YxJr2NUD34PC6j2V7qPKjiy0WitHqjM,552
+svd_gdb-0.0.2.dist-info/RECORD,,
+svd_gdb-0.0.2.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+svd_gdb-0.0.2.dist-info/metadata.json,sha256=z3c3RvkFzAPJf8CC9-6h84Zyx78u9JMRBfqj49CRbGU,711
+svd_gdb-0.0.2.dist-info/top_level.txt,sha256=3gUeZPI967Su7eYUgK4H4mm-KTVYU23g50lUe8y2P7k,12
