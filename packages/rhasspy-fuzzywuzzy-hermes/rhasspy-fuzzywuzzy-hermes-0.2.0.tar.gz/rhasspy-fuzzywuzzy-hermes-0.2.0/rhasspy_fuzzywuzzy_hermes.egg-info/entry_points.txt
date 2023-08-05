@@ -1,0 +1,3 @@
+[console_scripts]
+rhasspy-fuzzywuzzy-hermes = rhasspyfuzzywuzzy_hermes.__main__:main
+

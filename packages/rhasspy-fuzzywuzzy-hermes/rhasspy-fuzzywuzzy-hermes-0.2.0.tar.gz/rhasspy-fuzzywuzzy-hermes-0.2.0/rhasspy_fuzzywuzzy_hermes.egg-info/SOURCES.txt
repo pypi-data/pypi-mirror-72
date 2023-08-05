@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+rhasspy_fuzzywuzzy_hermes.egg-info/PKG-INFO
+rhasspy_fuzzywuzzy_hermes.egg-info/SOURCES.txt
+rhasspy_fuzzywuzzy_hermes.egg-info/dependency_links.txt
+rhasspy_fuzzywuzzy_hermes.egg-info/entry_points.txt
+rhasspy_fuzzywuzzy_hermes.egg-info/requires.txt
+rhasspy_fuzzywuzzy_hermes.egg-info/top_level.txt
+rhasspyfuzzywuzzy_hermes/__init__.py
+rhasspyfuzzywuzzy_hermes/__main__.py
+tests/__init__.py
+tests/test_rhasspyfuzzywuzzy_hermes.py
