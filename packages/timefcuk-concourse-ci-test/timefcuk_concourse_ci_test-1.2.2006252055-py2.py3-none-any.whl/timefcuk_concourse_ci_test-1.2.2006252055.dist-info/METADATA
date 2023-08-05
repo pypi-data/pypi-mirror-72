@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: timefcuk-concourse-ci-test
+Version: 1.2.2006252055
+Summary: Concourse CI testing package.
+Home-page: https://github.com/timefcuk/setup.py
+Author: timefcuk
+Author-email: me@example.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+
+Concourse CI testing package.
+
+
