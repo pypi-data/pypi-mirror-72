@@ -1,0 +1,15 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.py
+augmentdata/__init__.py
+augmentdata/data_augment.py
+augmentdata/test_nn.py
+augmentdata.egg-info/PKG-INFO
+augmentdata.egg-info/SOURCES.txt
+augmentdata.egg-info/dependency_links.txt
+augmentdata.egg-info/not-zip-safe
+augmentdata.egg-info/requires.txt
+augmentdata.egg-info/top_level.txt
+augmentdata/tests/__init__.py
+augmentdata/tests/test_augmented.py

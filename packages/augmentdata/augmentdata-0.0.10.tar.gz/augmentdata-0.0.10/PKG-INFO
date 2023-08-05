@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: augmentdata
+Version: 0.0.10
+Summary: Generic python library to perform augmentation of data
+Home-page: UNKNOWN
+Author: Sameer Brahim Belhaouari, Ashhadul Islam
+Author-email: samir.brahim@gmail.com, ashhadulislam@gmail.com
+License: MIT
+Description: A generic package to help data scientists balance their dataset by increasing the datapoints for an imbalanced class.
+Keywords: Binary Classification,Data Augmentation,Imabalnced Data
+Platform: UNKNOWN
