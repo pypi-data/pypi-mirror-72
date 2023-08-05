@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "toggl_python"
+version = "0.1.0"
+description = "Python wraper for Toggl API."
+authors = ["Ivlev Denis <me@dierz.pro>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+httpx = "^0.13.3"
+pydantic = {extras = ["email"], version = "^1.5.1"}
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+respx = "^0.11.1"
+black = "^19.10b0"
+ipython = "^7.15.0"
+
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
