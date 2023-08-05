@@ -1,0 +1,12 @@
+README.md
+setup.py
+BMI160_i2c/__init__.py
+BMI160_i2c/commands.py
+BMI160_i2c/definitions.py
+BMI160_i2c/registers.py
+BMI160_i2c/sleep.py
+BMI160_i2c.egg-info/PKG-INFO
+BMI160_i2c.egg-info/SOURCES.txt
+BMI160_i2c.egg-info/dependency_links.txt
+BMI160_i2c.egg-info/requires.txt
+BMI160_i2c.egg-info/top_level.txt
