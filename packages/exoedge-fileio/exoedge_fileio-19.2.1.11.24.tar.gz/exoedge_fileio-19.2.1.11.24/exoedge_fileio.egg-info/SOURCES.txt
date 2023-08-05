@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+exoedge_fileio/__init__.py
+exoedge_fileio/__version__.py
+exoedge_fileio/fileio.py
+exoedge_fileio.egg-info/PKG-INFO
+exoedge_fileio.egg-info/SOURCES.txt
+exoedge_fileio.egg-info/dependency_links.txt
+exoedge_fileio.egg-info/requires.txt
+exoedge_fileio.egg-info/top_level.txt
