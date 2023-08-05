@@ -1,0 +1,13 @@
+README.md
+setup.py
+TakeConfusionMatrix.egg-info/PKG-INFO
+TakeConfusionMatrix.egg-info/SOURCES.txt
+TakeConfusionMatrix.egg-info/dependency_links.txt
+TakeConfusionMatrix.egg-info/requires.txt
+TakeConfusionMatrix.egg-info/top_level.txt
+take_confusion_matrix/__init__.py
+take_confusion_matrix/calculation.py
+take_confusion_matrix/validation.py
+take_confusion_matrix/tests/__init__.py
+take_confusion_matrix/tests/test_calculation.py
+take_confusion_matrix/tests/test_validation.py
