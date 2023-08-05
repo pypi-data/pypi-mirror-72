@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pyimagewatch
+Version: 0.0.2
+Summary: Image processing debugger similar to Image Watch for Visual Studio.
+Home-page: https://github.com/blakeNaccarato/pyimagewatch
+Author: Blake Naccarato
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scikit-image
+Requires-Dist: confuse
+Provides-Extra: dev
+Requires-Dist: setuptools ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: doc8 ; extra == 'dev'
+Requires-Dist: jupyter ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: matplotlib ; extra == 'dev'
+Requires-Dist: PyQt5 ; extra == 'dev'
+Requires-Dist: rope ; extra == 'dev'
+
+pyimagewatch
+============
+
+Image processing debugger similar to Image Watch for Visual Studio.
+
+Installation
+------------
+
+    pip install pyimagewatch
+
+Requirements
+------------
+
+Details
+-------
+
+Example
+-------
+
+
