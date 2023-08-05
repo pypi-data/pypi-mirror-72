@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ajenti.plugin.network
+Version: 0.24
+Summary: Network
+Home-page: https://ajenti.org
+Author: Ajenti project
+Author-email: e@ajenti.org
+License: UNKNOWN
+Description: A Network plugin for Ajenti panel
+Platform: UNKNOWN
+Requires-Python: >=3
