@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: pyplatform-database
+Version: 0.0.0
+Summary: Microsoft Azure SQL functions
+Home-page: https://github.com/mhadi813/pyplatform
+Author: Muhammad Hadi
+Author-email: mhadi813@gmail.com
+License: BSD
+Keywords: google bigquery cloud functions storage jupyterlab python SQL
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Office/Business
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pyodbc
+Requires-Dist: sqlalchemy
+Requires-Dist: xlrd
+Requires-Dist: XlsxWriter
+Requires-Dist: openpyxl
+Requires-Dist: pandas (>=1.0.0)
+Requires-Dist: pytz
+
+UNKNOWN
+
+
