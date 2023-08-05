@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pyecon
+Version: 0.1.2
+Summary: 
+Author: Fan Wang
+Author-email: wangfanbsg75@live.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: pyfan (>=0.1.37,<0.2.0)
