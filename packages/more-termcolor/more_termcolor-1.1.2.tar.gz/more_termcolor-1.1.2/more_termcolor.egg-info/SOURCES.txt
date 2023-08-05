@@ -1,0 +1,14 @@
+README.md
+README.rst
+setup.py
+more_termcolor/__init__.py
+more_termcolor/colors.py
+more_termcolor/convert.py
+more_termcolor/core.py
+more_termcolor/main.py
+more_termcolor/util.py
+more_termcolor.egg-info/PKG-INFO
+more_termcolor.egg-info/SOURCES.txt
+more_termcolor.egg-info/dependency_links.txt
+more_termcolor.egg-info/requires.txt
+more_termcolor.egg-info/top_level.txt
