@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+Pipfile
+Pipfile.lock
+README.md
+setup.py
+src/strapi.py
+src/strapi.egg-info/PKG-INFO
+src/strapi.egg-info/SOURCES.txt
+src/strapi.egg-info/dependency_links.txt
+src/strapi.egg-info/top_level.txt
