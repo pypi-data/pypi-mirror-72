@@ -1,0 +1,10 @@
+MANIFEST.in
+setup.py
+notipy_osx/__init__.py
+notipy_osx/dialog.py
+notipy_osx/notification.py
+notipy_osx/result.py
+notipy_osx.egg-info/PKG-INFO
+notipy_osx.egg-info/SOURCES.txt
+notipy_osx.egg-info/dependency_links.txt
+notipy_osx.egg-info/top_level.txt
