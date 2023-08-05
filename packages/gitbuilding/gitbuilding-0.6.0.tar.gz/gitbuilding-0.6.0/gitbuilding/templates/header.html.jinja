@@ -1,0 +1,11 @@
+<div class=header-text>
+{% if title is not none %}   
+    <a class="site-title" href="{{root}}">{{title}}</a>
+{%endif %}
+{% if authors is not none %}   
+    <p class="author">by {{authors}}</p>
+{%endif %}
+{% if affiliation is not none %}
+    <p class="affiliation">{{affiliation}}</p>
+{%endif %}
+</div>

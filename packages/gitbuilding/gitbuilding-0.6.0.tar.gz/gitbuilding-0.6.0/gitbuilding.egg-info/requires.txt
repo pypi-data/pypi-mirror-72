@@ -1,0 +1,9 @@
+argparse
+colorama
+flask
+flask_cors
+jinja2
+markdown
+marshmallow
+pyyaml>=5.1
+requests
