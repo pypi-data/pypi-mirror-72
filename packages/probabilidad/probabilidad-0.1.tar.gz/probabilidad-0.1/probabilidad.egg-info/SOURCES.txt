@@ -1,0 +1,11 @@
+README.md
+setup.py
+probabilidad/DistribucionBinomial.py
+probabilidad/DistribucionGauss.py
+probabilidad/DistribucionGeneral.py
+probabilidad/__init__.py
+probabilidad.egg-info/PKG-INFO
+probabilidad.egg-info/SOURCES.txt
+probabilidad.egg-info/dependency_links.txt
+probabilidad.egg-info/not-zip-safe
+probabilidad.egg-info/top_level.txt
