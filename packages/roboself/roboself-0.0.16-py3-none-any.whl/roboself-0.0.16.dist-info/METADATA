@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: roboself
+Version: 0.0.16
+Summary: The roboself python client.
+Home-page: https://github.com/roboself/roboself-python
+Author: Razvan Dinu
+Author-email: razvan@roboself.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: redis
+Requires-Dist: requests
+Requires-Dist: python-socketio[client]
+Requires-Dist: pyyaml
+
+The roboself python client.
+
+
