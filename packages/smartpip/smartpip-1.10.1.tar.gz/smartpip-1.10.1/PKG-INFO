@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: smartpip
+Version: 1.10.1
+Summary: Programmatically author, schedule and monitor data pipelines
+Home-page: https://www.smartchart.cn/
+Author: JohnYan
+Author-email: 84345999@qq.com
+License: Apache License 2.0
+Download-URL: https://dist.apache.org/repos/dist/release/incubator/airflow/1.10.1
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: System :: Monitoring
+Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*
+Provides-Extra: devel_ci
+Provides-Extra: mysql
+Provides-Extra: elasticsearch
+Provides-Extra: docker
+Provides-Extra: cloudant
+Provides-Extra: all_dbs
+Provides-Extra: kerberos
+Provides-Extra: snowflake
+Provides-Extra: azure_blob_storage
+Provides-Extra: ssh
+Provides-Extra: qds
+Provides-Extra: statsd
+Provides-Extra: cassandra
+Provides-Extra: jira
+Provides-Extra: druid
+Provides-Extra: doc
+Provides-Extra: celery
+Provides-Extra: devel
+Provides-Extra: s3
+Provides-Extra: hive
+Provides-Extra: sendgrid
+Provides-Extra: password
+Provides-Extra: pinot
+Provides-Extra: atlas
+Provides-Extra: dask
+Provides-Extra: slack
+Provides-Extra: databricks
+Provides-Extra: emr
+Provides-Extra: salesforce
+Provides-Extra: winrm
+Provides-Extra: jdbc
+Provides-Extra: github_enterprise
+Provides-Extra: hdfs
+Provides-Extra: mongo
+Provides-Extra: devel_hadoop
+Provides-Extra: rabbitmq
+Provides-Extra: ldap
+Provides-Extra: azure_data_lake
+Provides-Extra: cgroups
+Provides-Extra: gcp_api
+Provides-Extra: webhdfs
+Provides-Extra: vertica
+Provides-Extra: redis
+Provides-Extra: all
+Provides-Extra: kubernetes
+Provides-Extra: samba
+Provides-Extra: mssql
+Provides-Extra: datadog
+Provides-Extra: oracle
+Provides-Extra: segment
+Provides-Extra: async
+Provides-Extra: crypto
+Provides-Extra: postgres
