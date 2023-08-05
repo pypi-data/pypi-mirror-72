@@ -1,0 +1,21 @@
+{{ cron_logrotate_rotation_interval }}
+
+rotate {{ cron_logrotate_rotation_count }}
+
+copytruncate
+
+compress
+
+delaycompress
+
+notifempty
+
+missingok
+
+minsize 30M
+
+maxsize 100M
+
+su root kolla
+
+include /etc/logrotate.d
