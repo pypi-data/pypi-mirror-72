@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: capanno-utils
+Version: 0.1.0a1
+Summary: Tool for managing bioinformatics content repositories.
+Home-page: https://github.com/truwl/capanno-utils
+Author: Karl Sebby
+Author-email: karl.sebby@truwl.com
+License: Apache 2.0
+Description: Tools actively under development. Documentation will be updated when ready for outside use!
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3
+Description-Content-Type: text/markdown
