@@ -1,0 +1,14 @@
+2020-06-10.20-39-35 wget "https://raw.githubusercontent.com/tensorflow/tensorflow/r1.15/tensorflow/contrib/graph_editor/__init__.py"
+2020-06-10.20-39-40 wget "https://raw.githubusercontent.com/tensorflow/tensorflow/r1.15/tensorflow/contrib/graph_editor/README.md"
+2020-06-10.20-39-59 wget "https://raw.githubusercontent.com/tensorflow/tensorflow/r1.15/tensorflow/contrib/graph_editor/edit.py"
+2020-06-10.20-40-10 wget "https://raw.githubusercontent.com/tensorflow/tensorflow/r1.15/tensorflow/contrib/graph_editor/reroute.py"
+2020-06-10.20-40-15 wget "https://raw.githubusercontent.com/tensorflow/tensorflow/r1.15/tensorflow/contrib/graph_editor/select.py"
+2020-06-10.20-40-21 wget "https://raw.githubusercontent.com/tensorflow/tensorflow/r1.15/tensorflow/contrib/graph_editor/subgraph.py"
+2020-06-10.20-40-26 wget "https://raw.githubusercontent.com/tensorflow/tensorflow/r1.15/tensorflow/contrib/graph_editor/transform.py"
+2020-06-10.20-40-30 wget "https://raw.githubusercontent.com/tensorflow/tensorflow/r1.15/tensorflow/contrib/graph_editor/util.py"
+2020-06-10.20-40-32 git status
+2020-06-10.20-40-37 git add .
+2020-06-10.20-40-38 git status
+2020-06-10.20-40-39 git commit .
+2020-06-10.20-41-06 git status
+2020-06-11.09-32-02 cd ..

@@ -1,0 +1,15 @@
+2020-06-11.10-11-05 python3 demo-returnn-as-framework.py 
+2020-06-11.10-16-16 cd ..
+2020-06-11.10-17-01 python3 demo-returnn-as-framework.py 
+2020-06-11.10-17-20 pip3 uninstall returnn
+2020-06-11.10-17-27 python3 demo-returnn-as-framework.py 
+2020-06-11.10-18-06 pip3 uninstall returnn
+2020-06-11.10-18-28 rm -r /usr/local/lib/python3.7/site-packages/returnn*
+2020-06-11.10-18-30 cd ..
+2020-06-11.10-19-21 python3 demo-returnn-as-framework.py 
+2020-06-11.10-19-53 python3 demo-returnn-as-framework.py 
+2020-06-11.10-36-43 cd ..
+2020-06-11.10-37-02 python3 demo-returnn-as-framework.py 
+2020-06-11.10-37-29 ipython3
+2020-06-11.10-41-33 python3 demo-returnn-as-framework.py 
+2020-06-11.11-52-21 cd ..
