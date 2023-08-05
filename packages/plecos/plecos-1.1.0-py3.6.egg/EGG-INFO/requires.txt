@@ -1,0 +1,9 @@
+jsonschema==3.0.0b3
+
+[dev]
+bumpversion
+twine
+pytest
+
+[test]
+pytest
