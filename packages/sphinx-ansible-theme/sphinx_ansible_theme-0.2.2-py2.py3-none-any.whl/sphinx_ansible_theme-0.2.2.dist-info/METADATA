@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: sphinx-ansible-theme
+Version: 0.2.2
+Summary: Ansible Sphinx Theme
+Home-page: https://github.com/ansible-community/sphinx_ansible_theme
+Author: Ansible by Red Hat
+Author-email: info@ansible.com
+Maintainer: Ansible by Red Hat
+Maintainer-email: info@ansible.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/ansible-community/sphinx_ansible_theme/issues
+Project-URL: Documentation, https://sphinx-ansible-theme.readthedocs.io/en/latest/
+Project-URL: Release Management, https://github.com/ansible-community/sphinx_ansible_theme/releases
+Project-URL: Source Code, https://github.com/ansible-community/sphinx_ansible_theme
+Keywords: ansible,sphinx,theme
+Platform: UNKNOWN
+Classifier: Framework :: Sphinx
+Classifier: Framework :: Sphinx :: Theme
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Documentation
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: sphinx-rtd-theme
+Requires-Dist: sphinx-notfound-page
+
+UNKNOWN
+
+
