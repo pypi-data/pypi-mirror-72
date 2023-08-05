@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+geodn/__init__.py
+geodn.egg-info/PKG-INFO
+geodn.egg-info/SOURCES.txt
+geodn.egg-info/dependency_links.txt
+geodn.egg-info/requires.txt
+geodn.egg-info/top_level.txt
+geodn/GeoLite2-Country_20200616/COPYRIGHT.txt
+geodn/GeoLite2-Country_20200616/GeoLite2-Country.mmdb
+geodn/GeoLite2-Country_20200616/LICENSE.txt
