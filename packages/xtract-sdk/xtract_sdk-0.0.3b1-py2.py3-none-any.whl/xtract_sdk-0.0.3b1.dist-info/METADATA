@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: xtract-sdk
+Version: 0.0.3b1
+Summary: A package used for downloading and processing files from multiple habitats.
+Home-page: https://github.com/xtracthub/xtract-sdk
+Author: Tyler J. Skluzacek
+Author-email: skluzacek@uchicago.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Xtract SDK
+
+Coming soon: Instructions on how to actually use things.
+
+
