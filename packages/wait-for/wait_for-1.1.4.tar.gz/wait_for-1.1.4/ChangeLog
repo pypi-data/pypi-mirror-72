@@ -1,0 +1,100 @@
+CHANGES
+=======
+
+1.1.4
+-----
+
+* Removed support for python3.5
+* Allow builtin / C module functions (#29)
+* parsedatetime has been updated, remove the pin and set a minimal version (#30)
+
+1.1.3
+-----
+
+* Change travis deploy config to use \_\_token\_\_ username
+* Add deployment token for pypi
+* Fix formatting InvocationError (#26)
+* Add some unit tests for exception handling
+
+1.1.2
+-----
+
+
+1.1.1
+-----
+
+* Pinned parsedatetime back due to breakage
+* wrong logging debug formatter fix
+
+1.1.0
+-----
+
+* num\_sec is passed as str in some cases. it was auto converted to int in py2 but it doesn't work in py3. let's add intentional float conversion
+* Drop py27 and py33/34 support
+* Convert logger formatters to the proper ones (fixes #13)
+* Use time.monotonic instead of time.time when possible
+* Add Python 3.6 and 3.7 into the testing matrix
+
+1.0.14
+------
+
+* silent\_failure also returns the result
+
+1.0.13
+------
+
+* Fix message when lambda defined in interactive shell (#15)
+* Show the source of the lambda funciton on failure. (#14)
+* Lint fix
+* Add log\_on\_loop option, put quotes around message in logs for better readability
+* Removed py3.3
+
+1.0.11
+------
+
+* Fixed tests
+
+1.0.10
+------
+
+* Removed pytest plugin
+
+1.0.9
+-----
+
+* move wait\_for parameter parsing to own functions (#8)
+
+1.0.8
+-----
+
+* Updating compatibility
+
+1.0.6
+-----
+
+* Added a very\_quiet= keyword param (#7)
+
+1.0.5
+-----
+
+* remove the null logger wrapper
+* add gitignore
+* Updated docs
+* Updated docs
+
+1.0.4
+-----
+
+* Fixup the func\_name -> \_\_name\_\_
+* Better Python 3 compatibility
+* Added unittests
+
+1.0.3
+-----
+
+* Added Exception handling logging
+* License update
+* Add explicit license
+* Better partial support
+* Initial Import
+* Initial commit
