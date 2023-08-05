@@ -1,0 +1,55 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+
+[tool.flit.metadata]
+module = "sidekick"
+author = "Fábio Macêdo Mendes"
+author-email = "fabiomacedomendes@gmail.com"
+home-page = "http://github.com/fabiommendes/sidekick/"
+requires-python = ">=3.6"
+description-file = "README.rst"
+classifiers = [
+  "Intended Audience :: Developers",
+	"Development Status :: 4 - Beta",
+	"License :: OSI Approved :: MIT License",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3.6",
+	"Programming Language :: Python :: 3.7",
+	"Programming Language :: Python :: 3.8",
+	"Topic :: Software Development :: Libraries",
+]
+requires = [ "toolz >= 0.10.0" ]
+
+
+[tool.flit.metadata.requires-extra]
+test = [ "pytest", "pytest-cov", "mock", "hypothesis" ]
+doc = [ "sphinx", "sphinx_rtd_theme" ]
+dev = [ "flake8", "black", "readme_renderer" ]
+hypothesis = [ "hypothesis" ]
+
+
+[tool.flit.metadata.urls]
+Documentation = "https://sidekick.readthedocs.io/en/latest/"
+
+
+[tool.black]
+line-length = 88
+target_version = ['py36']
+include = 'sidekick|tests'
+exclude = '''
+(
+  /(
+      _?build      # exclude a few common directories in the
+    | dist         # root of the project
+    | .*__pycache__.*
+    | htmlcov
+    | \.?venv
+    | \.(eggs|git|tox|idea|vscode)
+    | \.(pyc|html|iml)$
+  )/
+)
+'''
