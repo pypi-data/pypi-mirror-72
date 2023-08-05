@@ -1,0 +1,37 @@
+sf-python:
+  description: "Python 3 development on PyCharm" 
+  imageUrl: sf-python
+  default_paths:
+    - /home/sf/.PyCharmCE2019.1
+    #- /home/sf/exercise/app/.idea
+sf-dotnet:
+  description: ".NET development on VSCode"
+  imageUrl: sf-dotnet
+  default_paths: []
+sf-java:
+  description: "Java development on Eclipse"
+  imageUrl: sf-java
+  default_paths: []
+sf-php:
+  description: "PHP development on Atom"
+  imageUrl: sf-php
+  default_paths: []
+sf-ruby:
+  description: "Ruby development on Atom"
+  imageUrl: sf-ruby
+  default_paths:
+    - /home/sf/.atom/storage
+    - /home/sf/.config/Atom
+    - /home/sf/.profile
+sf-golang:
+  description: "Go development on VSCode"
+  imageUrl: sf-golang
+  default_paths: []
+sf-solidity:
+  description: "Solidity development on Atom"
+  imageUrl: sf-solidity
+  default_paths: []
+sf-nodejs:
+  description: "NodeJS development on VSCode"
+  imageUrl: sf-nodejs
+  default_paths: []

@@ -1,0 +1,31 @@
+image: python:3-alpine
+
+stages:
+  - build
+  - pypi-release
+
+wheel:
+  stage: build
+  script:
+    - apk update && apk add git
+    - echo "Building version $(python3 setup.py --version)"
+    - python3 setup.py sdist bdist_wheel
+  artifacts:
+    paths:
+      - dist/sfsdk*whl
+  only:
+    - tags
+
+release:
+  stage: pypi-release
+  script:
+    - apk update && apk add --update git alpine-sdk libffi-dev openssl-dev
+    - pip3 install setuptools-scm twine
+    - TAG_VERSION=$(python3 setup.py --version)
+    - echo "Deploying $TAG_VERSION"
+    - python3 setup.py sdist
+    - twine upload "dist/sfsdk-$TAG_VERSION.tar.gz"
+  only:
+    - tags
+  allow_failure: false
+  when: manual

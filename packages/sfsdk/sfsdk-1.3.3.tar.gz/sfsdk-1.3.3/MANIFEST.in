@@ -1,0 +1,5 @@
+include sfsdk/technologies.yml
+include sfsdk/dockerfiles/*.tpl
+recursive-include sfsdk/templates/ *
+recursive-include sfsdk/static/ *
+include LICENSE.txt

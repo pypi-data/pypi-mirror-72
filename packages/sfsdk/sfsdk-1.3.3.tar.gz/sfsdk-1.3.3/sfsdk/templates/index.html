@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SecureFlag">
+    <title>SecureFlag - Exercise SDK</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/assets/img/favicon-96x96.png">
+    <link href="/static/assets/css/lib.css" rel="stylesheet">
+    <link href="/static/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div ng-app="sfNg">
+        <div ng-controller="navigation">
+            <div class="navbar navbar-default navbar-fixed-top sfNavbarN" role="navigation">
+                <div>
+                    <div class="navbar-header width100P">
+                        <li class="pull-left marginLeft1P hideUncollapsed"><img src="/static/assets/img/sfhn.png" class="sfNavbarLogo floatLeft" /> <a class="navbar-brand navbarI exerciseHubLogo" href="">Exercise SDK</a>
+                        </li>
+                        <button type="button" class="navbar-toggle mgmtCollapse" data-toggle="collapse" data-target="#sfNavbar" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse-mgmtCollapse collapse" id="sfNavbar">
+                        <ul class="nav navbar-nav collapsedMgmtOverflow right">
+                            <li class="pull-left marginLeft1P hideCollapsed"><img src="/static/assets/img/sfhn.png" class="sfNavbarLogo floatLeft" /> <a class="navbar-brand navbarI exerciseHubLogo" href="">Exercise SDK</a>
+                            </li>
+                            <li ng-class="{'active' : visibility.kb }" class="ng-cloak"><a class="navbarA" href="#kb">KBs</a>
+                            </li>
+                            <li ng-class="{'active' : visibility.availableExercises }" class="ng-cloak marginRight20"><a class="navbarA" href="#available-exercises">EXERCISE</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="widget-main-header-mgmt"></div>
+            </div>
+            <div class="standalone ng-cloak" id="available-exercises" ng-show="visibility.availableExercises" ng-controller="availableExercises">
+
+                <div class="container" ng-show="showExerciseList">
+
+                    <div class="row">
+                        <button ng-click="showAddExerciseModal()" class="backToUsers btn btn-info btn-lg marginTop15">Add Exercise
+                        </button>
+                        <h2 class="marginLeft11P eblue centered">Exercises</h2>
+                        <div ng-show="masterAvailableExercisesList.length>0">
+                            <div class="tableFilter">
+                                <p class="lead inlineBlock">Filter:</p>
+                                <input placeholder="Type to filter..." ng-change="updateAvailableExercisesFilteredList()" ng-model="queryAvailableExercises" class="queryInput">
+                            </div>
+                            <table class="table table-hover font12" at-table at-paginated at-list="filteredAvailableExercisesList" at-config="availableExercisestableconfig">
+                                <thead>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td at-attribute="title" at-initial-sorting="asc" at-sortable at-title="Title">{{item.title}}</td>
+                                        <td at-attribute="technology" at-sortable at-title="Technology">{{item.technology}}</td>
+                                        <td at-attribute="framework" at-sortable at-title="Framework">{{item.framework}}</td>
+                                        <td at-attribute="difficulty" at-sortable at-title="Difficulty">{{item.difficulty}}</td>
+                                        <td at-attribute="duration" width="70" class="right" at-sortable at-title="Duration (min)">{{item.duration}}</td>
+                                        <td at-attribute="lastUpdate" at-sortable at-title="Last Update">{{getDateInCurrentTimezone(item.lastUpdate,'D/MM/YY HH:mm')}}</td>
+                                        <td at-attribute="localName" at-sortable at-title="ID">{{item.localName}}</td>
+                                        <td class="center" width="16%" at-title="">
+                                            <button ng-click="getExerciseDetails(item.uuid)" class="btn btn-primary btn-sm outline">Details</button>
+                                            <button ng-click="removeExerciseModal(item.id,item.title)" class="marginLeft10 btn btn-sm btn-danger outline">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <at-pagination at-list="filteredAvailableExercisesList" at-config="availableExercisestableconfig"></at-pagination>
+                            <p class="lead tableFilterResults">Showing {{filteredAvailableExercisesList.length}} out of {{masterAvailableExercisesList.length}} {{ masterAvailableExercisesList.length==1 && 'exercise' || 'exercises'}}.
+                            </p>
+                        </div>
+
+
+                    </div>
+                    <div class="centered marginTop20" ng-show="masterAvailableExercisesList.length==0">
+                        <img class="emptyExercises" src="/static/assets/img/emptyExercises.png" />
+                        <p>There are no saved exercises.</p>
+                    </div>
+                </div>
+                <div ng-show="showExerciseDetails" class="container standalone">
+                    <a ng-click="backToList()" class="backToUsers btn outline btn-info btn-lg">Back</a>
+                    <h2 class="eblue">Exercise</h2>
+                    <div class="card paddingBottom10">
+                        <div class="card-header">{{exerciseDetails.technology}}</div>
+                        <div class="row marginLeft0">
+                            <div class="col-md-10">
+                                <h4 class="card-title">{{exerciseDetails.title}}</h4>
+                                <h6 class="card-subtitle text-muted">{{exerciseDetails.subtitle}}</h6>
+                                <div class="">
+                                    <p class="card-text">{{exerciseDetails.description}}</p>
+                                    <p class="card-text">
+                                        <small class="text-muted">Duration:
+											{{exerciseDetails.duration}} minutes</small><small class="text-muted">
+											| Difficulty: {{exerciseDetails.difficulty}} </small><small class="text-muted"> | Author:
+											{{exerciseDetails.author}} </small><small class="text-muted">
+											| Automated Scoring: <span
+											ng-show="exerciseDetails.supportsAutomatedScoring">Supported</span><span
+											ng-show="!exerciseDetails.supportsAutomatedScoring">Not
+												Supported</span>
+										</small>
+                                    </p>
+                                   
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-md-2 centered">
+                                <button ng-click="editExercise(item.id)" class="btn btn-primary outline marginTop10">Edit Exercise
+                                </button>
+                                <br />
+
+                                <div class="centered marginTop10">
+                                    <h4 class="marginBottom0">Max Score</h4>
+
+                                    <small class="text-muted"> {{exerciseDetails.score}}
+										points</small>
+                                </div>
+                                <div class="centered marginTop10">
+                                    <h4 class="marginBottom0">Trophy</h4>
+
+                                    <small class="text-muted">{{exerciseDetails.trophyName}}</small>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="exerciseInfo">
+                        <ul id="exerciseTabs" class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a data-target="#exercise-info" href="#available-exercises/details/{{exerciseDetails.id}}/info" aria-controls="available-exercises/details/{{exerciseDetails.id}}/info" role="tab" data-toggle="tab">General Information</a>
+                            </li>
+                            <li role="presentation"><a data-target="#exercise-flags" href="#available-exercises/details/{{exerciseDetails.id}}/flags" aria-controls="available-exercises/details/{{exerciseDetails.id}}/flags" role="tab" data-toggle="tab">Exercise Flags</a>
+                            </li>
+                            <li role="presentation"><a data-target="#exercise-solution" href="#available-exercises/details/{{exerciseDetails.id}}/solution" aria-controls="available-exercises/details/{{exerciseDetails.id}}/solution" role="tab" data-toggle="tab">Exercise Solution</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="exercise-info">
+                                <div ng-show="exerciseKbs.length>0" class="marginTop20">
+                                    <div ng-repeat="kb in exerciseKbs" class="marginBottom10">
+                                        <h5><i
+													class="fa fa-graduation-cap marginRight5"></i><a class="font14" href=""
+													ng-click="openVulnKB(kb,exerciseDetails.technology)">Click here</a> to know more
+													about this vulnerability.</h5>
+
+                                    </div>
+                                </div>
+
+                                <div id="exerciseInfoMD"></div>
+                                <div id="exerciseStackMD"></div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="exercise-flags">
+                                <div class="panel-group " id="accordion">
+                                    <div ng-repeat="flag in exerciseDetails.flags" class="panel panel-default marginTop10">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+												<a data-toggle="collapse" data-target="#fg-{{$index}}" href="">
+													{{flag.title}} </a><small>Click to expand.</small>
+											</h4>
+                                        </div>
+                                        <div id="fg-{{$index}}" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <table>
+                                                    <thead class="theadSpace">
+                                                        <tr>
+
+                                                            <th>Instructions</th>
+                                                            <th class="center">Type</th>
+                                                            <th class="center">Score</th>
+                                                            <th class="center">Hint</th>
+                                                            <th class="center">Auto Checker</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="f in flag.flagList" class="spaceUnder">
+                                                            <td class="w70">
+                                                                <div id="fe{{$index}}-md" ng-init="triggerFlagsMarkdown(f,$index)"></div>
+                                                            </td>
+                                                            <td class="center verticalAlignTop">{{f.type}}</td>
+
+                                                            <td class="center verticalAlignTop">{{f.maxScore || 'Optional'}}
+                                                            </td>
+                                                            <td class="center verticalAlignTop">{{f.hintAvailable && 'Yes' || 'No'}}</td>
+                                                            <td class="center verticalAlignTop">{{f.selfCheck.name && 'Yes' || 'No'}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="exercise-solution">
+                                <div id="solutionMDViewer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="kbModal" class="modal fade" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title">Vulnerability Info</h4>
+                            </div>
+                            <div class="modal-body paddingTop0">
+                                <div id="kbMD"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="removeExerciseModal" class="modal fade" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title">Delete Exercise</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p class="lead">
+                                    You are about to delete the <strong>{{tmpExerciseToBeRemovedName}}</strong> exercise. This action is not reversible.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button ng-click="removeExercise()" type="button" class="btn btn-danger" data-dismiss="modal">Delete Exercise
+                                </button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="modal fade" id="addNewExerciseModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog scrollDialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h3 ng-show="!saveFlow" class="modal-title modalHeader">Add
+									Exercise</h3>
+                                <h3 ng-show="saveFlow" class="modal-title modalHeader">Update
+									Exercise</h3>
+
+                            </div>
+                            <div class="modal-body scrollModalBody exerciseModal">
+                                <ul id="exerciseTabs" class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a data-target="#new-exercise-description" href="#available-exercises/new/description" aria-controls="available-exercises/new/description" role="tab" data-toggle="tab">Description</a>
+                                    </li>
+
+                                    <li role="presentation"><a data-target="#new-exercise-info" href="#available-exercises/new/info" aria-controls="available-exercises/new/info" role="tab" data-toggle="tab">Info</a>
+                                    </li>
+                                    <li role="presentation"><a data-target="#new-exercise-flags" href="#available-exercises/new/flags" aria-controls="available-exercises/new/flags" role="tab" data-toggle="tab">Flags</a>
+                                    </li>
+                                    <li role="presentation"><a data-target="#new-exercise-solution" href="#available-exercises/new/solution" aria-controls="available-exercises/new/solution" role="tab" data-toggle="tab">Solution</a>
+                                    </li>
+                                    <li role="presentation"><a data-target="#new-exercise-score" href="#available-exercises/new/score" aria-controls="available-exercises/new/score" role="tab" data-toggle="tab">Trophy</a>
+                                    </li>
+                                    <li role="presentation"><a data-target="#new-exercise-tags" href="#available-exercises/new/tags" aria-controls="available-exercises/new/tags" role="tab" data-toggle="tab">Tags</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                  
+                                    <div role="tabpanel" class="tab-pane sectionModal active" id="new-exercise-description">
+                                        <form name="exerciseDescriptionForm">
+                                            <div class="row">
+                                                <div class="col-md-9">
+                                                    <h5 class="inlineBlock">Title</h5>
+
+                                                    <input placeholder="Cross-Site Scripting Exercise 1" class="fInput" required type="text" ng-model="tmpNewExercise.title">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <h5 class="inlineBlock">Topics</h5>
+
+                                                    <input placeholder="Reflected XSS, Stored XSS, and DOM-based XSS" class="fInput" required type="text" ng-model="tmpNewExercise.subtitle">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <h5 class="inlineBlock">Author</h5>
+
+                                                    <input placeholder="SecureFlag" class="fInput" required type="text" ng-model="tmpNewExercise.author">
+                                                </div>
+                                               
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h5 class="inlineBlock">Description</h5>
+
+                                                    <textarea rows="4" placeholder="Exploit and remediate Reflected and Stored Cross-Site Scripting (XSS) exposures. XSS attacks affect web applications that do not neutralize user input before it is placed in output as a web page. This could result in the attacker stealing sensitive information or performing actions on behalf of the victim on the vulnerable site." class="fInput" required type="text" ng-model="tmpNewExercise.description"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-2 marginRight30">
+                                                    <h5 class="inlineBlock">Max Duration (minutes)</h5>
+
+                                                    <input placeholder="40" min="10" max="360" class="fInput right" required type="number" ng-model="tmpNewExercise.duration">
+                                                </div>
+                                                <div class="col-md-2 marginRight30">
+                                                    <h5 class="inlineBlock">Difficulty</h5>
+
+                                                    <br />
+                                                    <ol class="nya-bs-select" required ng-model="tmpNewExercise.difficulty" data-size="20">
+                                                        <li nya-bs-option="d in difficultyLevelList">
+                                                            <a>
+                                                                <small>{{d}}</small> <span class="glyphicon glyphicon-ok check-mark"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                                <div class="col-md-2 marginRight30">
+                                                    <h5 class="inlineBlock">Technology</h5>
+
+                                                    <br />
+                                                    <ol class="nya-bs-select" required ng-change="updateDefaultStackInfoMD()" ng-model="tmpNewExercise.technology" data-size="20">
+                                                        <li nya-bs-option="t in technologyList">
+                                                            <a> <small>{{t}}</small>
+                                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                              
+                                                <div class="col-md-2 marginRight30">
+                                                    <h5 class="inlineBlock">Variant</h5>
+
+                                                    <br />
+                                                    <ol class="nya-bs-select" required ng-change="updateStackInfoAndVariant()" ng-model="tmpNewExercise.variant" data-size="20">
+                                                        <li nya-bs-option="t in variantList">
+                                                            <a> <small>{{t}}</small>
+                                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                                  <div class="col-md-2 marginRight30">
+                                                    <h5>Exercise Framework</h5>
+                                                    <ol class="nya-bs-select" ng-model="tmpNewExercise.framework" required data-size="10">
+                                                        <li nya-bs-option="f in exerciseFrameworksList">
+                                                            <a>
+                                                                <small>{{f | capitalize}}</small> <span class="glyphicon glyphicon-ok check-mark"></span>
+                                                            </a>
+                                                        </li>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane sectionModal" id="new-exercise-tags">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5 class="inlineBlock">Tags</h5>
+                                                <i class="fa fa-info-circle inlineBlock marginLeft5" tooltips tooltip-template="Add tags in the format tag:value (e.g. curriculum:java web developer)" tooltip-side="right"></i>
+                                                <tags-input add-from-autocomplete-only="false" allow-leftover-text="false" text="text" ng-blur="text=''" class="bootstrap" ng-model="tmpNewExercise.tags" replace-spaces-with-dashes="false">
+                                                    <auto-complete source="loadTags($query)" min-length="1" highlight-matched-text="false"></auto-complete>
+                                                </tags-input>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane sectionModal" id="new-exercise-score">
+                                        <form name="exerciseScoreForm">
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h5 class="inlineBlock">Trophy Title</h5>
+                                                    <i class="fa fa-info-circle inlineBlock marginLeft5" tooltips tooltip-template="Title for the trophy that can be awarded for this exercise" tooltip-side="top"></i>
+                                                    <input placeholder="Cross-Site Scripting Trophy" class="fInput" required type="text" ng-model="tmpNewExercise.trophyName">
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane sectionModal" id="new-exercise-solution">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5 class="inlineBlock">Exercise Solution</h5>
+                                                <i class="fa fa-info-circle inlineBlock marginLeft5 left" tooltips tooltip-side="top" tooltip-template="Provide step-by-step guide to the exercise's solution."></i>
+
+                                                <div id="solutionMDEditor"></div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div role="tabpanel" class="tab-pane sectionModal" id="new-exercise-flags">
+
+                                        <div class="row">
+
+                                            <div class="col-md-12 flagModalQuestion" ng-show="!newExerciseFlagList">
+                                                <form name="newFlagForm">
+                                                    <div class="row">
+
+                                                        <div class="col-md-6">
+                                                            <h6 class="marginBottom2 inlineBlock">Flag Title</h6>
+                                                            <i class="fa fa-info-circle inlineBlock marginLeft5" tooltips tooltip-template="Choose a name that describes the name of the flag (e.g. Reflected XSS - User Parameter)" tooltip-side="top"></i>
+                                                            <input placeholder="Reflected XSS (user parameter)" class="fInput " required type="text" ng-model="tmpFlag.title">
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <h6 class="marginBottom2 inlineBlock">Vulnerability</h6>
+                                                            <i class="fa fa-info-circle inlineBlock marginLeft5" tooltips tooltip-template="Provide the category for the security issue of this flag (e.g. Cross-Site Scripting) " tooltip-side="top"></i>
+                                                            <br />
+                                                            <ol class="nya-bs-select" required ng-model="tmpFlag.KBItem">
+                                                                <li nya-bs-option="c in kbItems">
+                                                                    <a> <small>{{c.vulnerability}}
+																			({{c.technology || "Agnostic"}})</small> <span class="glyphicon glyphicon-ok check-mark"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <h6 class="marginBottom2 inlineBlock">Flag Type</h6>
+                                                            <br />
+                                                            <ol class="nya-bs-select" required ng-model="tmpFlag.type" data-size="4">
+                                                                <li nya-bs-option="t in flagTypes">
+                                                                    <a> <small>{{t
+																			| capitalize}}</small> <span class="glyphicon glyphicon-ok check-mark"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+
+                                                        <div class="col-md-10">
+                                                            <h6 class="marginBottom2">Instructions</h6>
+                                                            <div id="tmpFlagInstructions"></div>
+
+                                                        </div>
+                                                        <div class="col-md-2">
+
+                                                            <h6 class="marginBottom2">Optional</h6>
+
+                                                            <toggle class="exerciseToggle" onstyle="btn-success" ng-model="tmpFlag.optional" on="Optional" off="Required"></toggle>
+                                                            <h6 class="marginBottom2"></h6>
+
+                                                            <h6 class="marginBottom2">Max Score</h6>
+
+                                                            <div class="input-group">
+                                                                <input class="fInput" type="number" min="0" placeholder="25" ng-disabled="tmpFlag.optional" ng-model="tmpFlag.maxScore"> <span class="input-group-addon" id="basic-addon2">
+																	points </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+
+                                                            <h6 class="marginBottom2">Hint Available</h6>
+
+                                                            <toggle class="exerciseToggle" onstyle="btn-success" ng-model="tmpFlag.hintAvailable" on="Available" off="Not Available"></toggle>
+                                                        </div>
+
+                                                        <div class="col-md-7">
+                                                            <h6 class="marginBottom2">Hint</h6>
+                                                            <div id="tmpFlagHint"></div>
+                                                        </div>
+                                                        <div class="col-md-2">
+
+                                                            <h6 class="marginBottom2">Hint Score Reduction</h6>
+
+                                                            <div class="input-group">
+                                                                <input class="fInput" type="number" min="0" value="0" ng-disabled="!tmpFlag.hintAvailable" ng-model="tmpFlag.hint.scoreReducePercentage">
+                                                                <span class="input-group-addon" id="basic-addon2">
+																	% </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+
+                                                        <div class="col-md-2">
+                                                            <h6 class="marginBottom2">Self-Check Available</h6>
+
+                                                            <toggle class="exerciseToggle" onstyle="btn-success" ng-model="tmpFlag.selfCheckAvailable" on="Available" off="Not Available"></toggle>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <h6 class="marginBottom2 inlineBlock">Self-Check
+																Identifier</h6>
+                                                            <i class="fa fa-info-circle inlineBlock marginLeft5" tooltips tooltip-template="Provide the name of the selfcheck identifier for the exploition flag." tooltip-side="top"></i>
+                                                            <input placeholder="xss-reflected-user-exploitation-1" ng-disabled="!tmpFlag.selfCheckAvailable" class="fInput" type="text" ng-model="tmpFlag.selfCheck.name">
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row">
+
+                                                        <div class="col-md-10 col-md-offset-2">
+                                                            <h6 class="inlineBlock">Self-Check Status List</h6>
+
+                                                            <table ng-show="tmpSelfCheckMappings.length>0" class="table table-hover">
+                                                                <tr ng-repeat="s in tmpSelfCheckMappings">
+                                                                    <td>{{s.status}}</td>
+                                                                    <td>{{s.mapping.name}}</td>
+                                                                    <td>
+                                                                        <div id="m{{s.status}}{{s.mapping.id}}" ng-init="loadMarkdown('m'+s.status+s.mapping.id,s.message)"></div>
+                                                                    </td>
+
+                                                                    <td>
+                                                                        <button ng-click=deleteTmpSelfCheckMapping(s) class="btn btn-sm outline btn-danger">Delete</button>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+
+                                                            <p ng-show="tmpSelfCheckMappings.length<=0">There are currently no Self-Check status mappings. Please add mappings below.
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row">
+
+                                                        <div class="col-md-12">
+
+                                                            <div class="row marginBottom5">
+                                                                <form name="newSelfcheckStatus">
+                                                                    <div class="col-md-2 titleColumn">
+                                                                        <h6 class="inlineBlock">Self-Check Status</h6>
+
+                                                                        <i class="fa fa-info-circle inlineBlock marginLeft5 left" tooltips tooltip-side="top" tooltip-template="Value returned by Checker"></i>
+                                                                        <input placeholder="Checker Result" class="fInput " ng-disabled="!tmpFlag.selfCheckAvailable" type="text" ng-model="tmpCheckerStatus">
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <h6 class="inlineBlock">Self-Check Mapping</h6>
+
+                                                                        <i class="fa fa-info-circle inlineBlock marginLeft5 left" tooltips tooltip-side="top" tooltip-template="Mapping between the result of the Checker and default SecureFlag Exercise Status."></i>
+
+                                                                        <ol class="nya-bs-select" ng-disabled="!tmpFlag.selfCheckAvailable" ng-change="updateDefaultMessage()" ng-model="tmpCheckerMapping" data-size="6">
+                                                                            <li nya-bs-option="t in vulnerabilityStatus">
+                                                                                <a>
+                                                                                    <small>{{t.name}}</small> <span class="glyphicon glyphicon-ok check-mark"></span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ol>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <h6 class="inlineBlock">Self-Check Message</h6>
+
+                                                                        <i class="fa fa-info-circle inlineBlock marginLeft5 left" tooltips tooltip-side="top" tooltip-template="Message displayed to User when this status is returned by Checker"></i>
+
+                                                                        <div id="tmpCheckerMessage"></div>
+                                                                    </div>
+                                                                    <div class="col-md-1">
+                                                                        <h6 class="inlineBlock">&nbsp;</h6>
+                                                                        <button ng-disabled="!tmpFlag.selfCheckAvailable" ng-click="addTmpSelfCheckMapping()" class="btn btn-secondary marginBottom5">Add</button>
+                                                                    </div>
+
+                                                                </form>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="row center marginTop15">
+                                                        <button ng-click="addNewFlagDialog()" ng-show="flagSaveFlow" class="btn btn btn-secondary marginRigh10">Cancel changes
+                                                        </button>
+                                                        <button ng-disabled="newFlagForm.$error.required" ng-show="flagSaveFlow" ng-click="updateNewFlag()" class="btn btn btn-success">Update Flag</button>
+                                                        <button ng-click="addNewFlagDialog()" ng-show="!flagSaveFlow" class="btn btn btn-secondary marginRigh10">Back to Flag List</button>
+                                                        <button ng-disabled="newFlagForm.$error.required" ng-show="!flagSaveFlow" ng-click="addNewFlag()" class="btn btn btn-success">Add Flag</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="row" ng-show="newExerciseFlagList">
+                                                <div class="col-md-12">
+                                                    <div class="col-md-12 ">
+                                                        <h4>
+															Flag List
+															</h5>
+															<p ng-show="tmpNewExercise.flags.length==0">There are
+																no flags defined.</p>
+													</div>
+
+													<div class="col-md-12 ">
+
+														<div id="newFlagsTable"
+															ng-show="tmpNewExercise.flags.length>0">
+															<div ng-repeat="f in tmpNewExercise.flags">
+
+																<p class="inlineBlock">
+																	<strong>Flag:&nbsp;&nbsp;</strong>
+																</p>
+																<p class="inlineBlock">{{f.title}}</p>
+																<button ng-click="editNewFlagDialog(f)"
+																	class="btn btn-xs outline marginLeft10 btn-primary">Edit</button>
+																<button ng-click="removeNewFlag(f.title,f.category)"
+																	class="btn btn-xs outline marginLeft10 btn-danger">Delete</button>
+
+																<table class="table table-hover">
+																	<thead>
+																		<tr>
+																			<th class="exerciseFlagsTh">Type</th>
+																			<th class="exerciseFlagsTh">Instructions</th>
+																			<th class="exerciseFlagsTh">Hint Available</th>
+																			<th class="exerciseFlagsTh">Self-Check</th>
+																			<th class="exerciseFlagsTh">Max Score</th>
+																			<th class="exerciseFlagsTh">Optional</th>
+
+
+																		</tr>
+																	</thead>
+																	<tbody>
+
+																		<tr ng-repeat="q in f.flagList">
+																			<td>{{q.type }}</td>
+																			<td><div
+																					id="fl-{{hashCode(q.md.text)}}-{{$index}}"
+																					ng-init="loadMarkdown('fl-'+hashCode(q.md.text)+'-'+$index,q.md.text)"></div></td>
+																			<td>{{q.hintAvailable && 'Yes' || 'No'}}</td>
+																			<td>{{q.selfCheckAvailable && 'Yes' || 'No'}}</td>
+																			<td>{{q.optional == false ? q.maxScore : "N/A"}}</td>
+																			<td>{{q.optional == true && "Yes" || "No"}}</td>
+																		</tr>
+
+																	</tbody>
+																</table>
+															</div>
+														</div>
+														<div class="center">
+															<button ng-click="addNewFlagDialog()"
+																class="btn btn-success outline btn-lg marginTop10">Add
+																New Flag</button>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane sectionModal"
+										id="new-exercise-info">
+
+										<div id="addExerciseInfoForm">
+											<div class="row">
+
+												<div class="col-md-12">
+													<div class="col-md-12 paddingLeft0">
+														<h5>Default {{tmpNewExercise.technology}} stack
+															information:</h5>
+														<div ng-show="!tmpNewExercise.technology">
+															<p>There are no default technology stack information.
+																Please select a technology for this exercise in the
+																first tab.</p>
+
+														</div>
+														<div ng-show="tmpNewExercise.technology && emptyStack">
+															<p>There are no default technology stack information.</p>
+														</div>
+														<div ng-show="tmpNewExercise.technology">
+															<blockquote class="blockquote paddingTop0 paddingBottom0">
+																<div
+																	ng-class="{'disabledOpacity': tmpNewExercise.ignoreDefaultStack == true}"
+																	id="EDStackMDViewer"></div>
+															</blockquote>
+															<input ng-model="tmpNewExercise.ignoreDefaultStack"
+																type="checkbox" name="noDefaultStackInfo"> <label
+																for="noDefaultStackInfo">Don't use default</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+
+													<h5 class="inlineBlock">Add Extra Exercise Info</h5>
+													<i class="fa fa-info-circle inlineBlock marginLeft5"
+														tooltips
+														tooltip-template="Add information for the user to start the exercise (e.g. start the application server, navigate to the home page, credentials to login, etc.)"
+														tooltip-side="top"></i>
+													<div id="EDInfoMDEditor"></div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+
+								<button ng-show="!saveFlow" type="button"
+									class="btn btn-primary pull-left outline"
+									ng-click="clearExerciseModal()">Clear</button>
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								<button type="button" ng-click="addNewExercise()"
+									ng-show="!saveFlow"
+									ng-disabled="exerciseScoreForm.$error.required || exerciseDescriptionForm.$error.required"
+									class="btn btn-primary">Add Exercise</button>
+								<button type="button" ng-show="saveFlow"
+									ng-click="updateExercise()"
+									ng-disabled="exerciseScoreForm.$error.required || exerciseDescriptionForm.$error.required"
+									class="btn btn-primary">Save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="standalone ng-cloak" id="kb" ng-show="visibility.kb"
+				ng-controller="kb">
+				<div class="container">
+
+					<div class="row ">
+						<button ng-click="addVulnerabilityModal()"
+							class="backToOrgs btn btn-info btn-lg">Add Vulnerability</button>
+						<h2 class="eblue centered marginLeft11P">Vulnerability KB</h2>
+						<div>
+							<div ng-show="kbItems.length>0">
+								<div class="tableFilter">
+
+									<p class="lead inlineBlock">Filter:</p>
+									<input placeholder="Type to filter..."
+										ng-change="updateFilteredList()" ng-model="query"
+										class="queryInput">
+								</div>
+
+								<table at-table at-paginated at-list="filteredKBsList"
+									at-config="kbstableconfig" class="table table-hover font12">
+									<thead>
+									</thead>
+									<tbody>
+										<tr ng-class="{active: $index===selectedKBRow}">
+											<td at-attribute="vulnerability" at-sortable at-title="Name">{{item.vulnerability}}</td>
+											<td at-attribute="category" at-sortable at-title="Category">{{item.category}}</td>
+
+											<td at-attribute="technology" at-sortable at-title="Tech">{{item.technology
+												|| "Agnostic"}}</td>
+											<td at-attribute="lastUpdate" at-sortable
+												at-title="Last Update">{{getDateInCurrentTimezone(item.lastUpdate,
+												'MMM D YYYY HH:mm') || 'N/A'}}</td>
+											<td at-attribute="text" at-title="Text"><a href=""
+												ng-click="openVulnKB(item)">View Text</a></td>
+
+											<td>
+
+
+												<button ng-class="item.fromHub == true ? 'visibilityHidden' : '' " ng-click="editVulnerabilityModal(item)" class="btn btn-info btn-sm outline marginLeft10">Edit</button>
+												<button ng-class="item.fromHub == true ? 'visibilityHidden' : '' " ng-click="deleteVulnerabilityModal(item)"
+													class="marginLeft10 btn btn-sm btn-danger outline">Delete</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<at-pagination class="inlineBlock" at-list="filteredKBsList"
+									at-config="kbstableconfig"></at-pagination>
+								<p class="lead tableFilterResultsPending">Showing
+									{{filteredKBsList.length}} out of {{kbItems.length}} {{
+									kbItems.length==1 && 'Vulnerability KB item' || 'Vulnerability
+									KB items'}}.</p>
+							</div>
+							<div class="centered marginTop20" ng-show="kbItems.length==0">
+								<p>There are no Vulnerability KB items.</p>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="row ">
+						<button ng-click="addTechnologyModal()"
+							class="backToOrgs btn btn-info btn-lg">Add Technology</button>
+						<h2 class="eblue centered marginLeft11P">Technology Stacks</h2>
+						<div>
+							<div ng-show="stackItems.length>0">
+								<div class="tableFilter">
+
+									<p class="lead inlineBlock">Filter:</p>
+									<input placeholder="Type to filter..."
+										ng-change="updateStackFilteredList()" ng-model="queryStack"
+										class="queryInput">
+								</div>
+
+								<table at-table at-paginated at-list="filteredStacksList"
+									at-config="stackstableconfig" class="table table-hover font12">
+									<thead>
+									</thead>
+									<tbody>
+										<tr ng-class="{active: $index===selectedStackRow}">
+
+											<td at-attribute="technology" at-sortable at-title="Tech">{{item.technology
+												|| "Agnostic"}}</td>
+											<td at-attribute="variant" at-sortable at-title="Variant">{{item.variant
+												|| "None"}}</td>
+											<td at-attribute="lastUpdate" at-sortable
+												at-title="Last Update">{{getDateInCurrentTimezone(item.lastUpdate,
+												'MMM D YYYY HH:mm') || 'N/A'}}</td>
+											<td at-attribute="text" at-title="Text"><a href=""
+												ng-click="openStackKB(item)">View Text</a></td>
+
+											<td>
+
+
+												<button ng-class="item.fromHub == true ? 'visibilityHidden' : '' "  ng-click="editTechnologyModal(item)"
+													class="btn btn-info btn-sm outline marginLeft10">Edit</button>
+												<button ng-class="item.fromHub == true ? 'visibilityHidden' : '' "  ng-click="deleteTechnologyModal(item)"
+													class="marginLeft10 btn btn-sm btn-danger outline">Delete</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<at-pagination class="inlineBlock" at-list="filteredStacksList"
+									at-config="stackstableconfig"></at-pagination>
+								<p class="lead tableFilterResultsPending">Showing
+									{{filteredStacksList.length}} out of {{stackItems.length}} {{
+									stackItems.length==1 && 'Technology Stack KB item' ||
+									'Technology Stack KB items'}}.</p>
+							</div>
+							<div class="centered marginTop20" ng-show="stackItems.length==0">
+								<p>There are no Technology Stack KB items.</p>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="row marginBottom20">
+						<h2 class="eblue centered">Frameworks</h2>
+						<div class="col-md-10 marginTop10">
+							<div class="col-md-2 frameworkDiv"
+								ng-repeat="f in exerciseFrameworksObjs">
+								<p>{{f.name}}</p>
+<a href="" ng-show="f.name != 'Default' && f.local != undefined && f.local == true"
+                                    ng-click="removeFramework(f.name)"
+                                    class="btn btn-danger outline btn-xs marginTop5">Remove</a>
+							</div>
+						</div>
+						<div class="col-md-2 center addFrameworkDiv">
+							<p class="lead">Add Framework</p>
+							<input ng-model="newFrameworkName" class="" type="text"
+								placeholder="Spring" /> <a href="" ng-click="addFramework()"
+								class="btn btn-success outline btn-sm marginTop5">Add</a>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="deleteTechnologyModal" tabindex="-1"
+					role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h3 class="modal-title modalHeader">Delete Technology Stack</h3>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-12">
+										<h4>Confirm removal from Technology Stacks of:</h4>
+										<p class="lead">{{tmpTechDeleteItem.technology}}</p>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								<button type="button" ng-click="deleteTechnology()"
+									class="btn btn-danger">Delete</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="deleteVulnerabilityModal" tabindex="-1"
+					role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h3 class="modal-title modalHeader">Delete Vulnerability</h3>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-12">
+										<h4>Confirm removal from Vulnerability KB of:</h4>
+										<p class="lead">{{tmpVulnDeleteItem.vulnerability}}</p>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								<button type="button" ng-click="deleteVulnerability()"
+									class="btn btn-danger">Delete</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="addStackModal" class="modal fade" tabindex="-1"
+					role="dialog">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 ng-show="!stackSaveFlow" class="modal-title">New
+									Technology Stack</h4>
+								<h4 ng-show="stackSaveFlow" class="modal-title">Update
+									Technology Stack</h4>
+
+							</div>
+							<div class="modal-body paddingTop0">
+								<div class="row">
+									<form name="newStackForm">
+										<div class="col-md-3">
+											<h5 class="inlineBlock">Name</h5>
+
+											<input placeholder="Java" class="fInput" required type="text"
+												ng-model="tmpTech.technology">
+										</div>
+										<div class="col-md-3">
+											<h5 class="inlineBlock">Variant</h5>
+
+											<input placeholder="Spring" class="fInput" required
+												type="text" ng-model="tmpTech.variant">
+										</div>
+										<div class="col-md-6">
+											<h5 class="inlineBlock">Image URL</h5>
+
+											<input
+												placeholder="123456789012.dkr.ecr.eu-west-1.amazonaws.com/secureflag-exercises/sf-vapp"
+												class="fInput" required type="text"
+												ng-model="tmpTech.imageUrl">
+										</div>
+									</form>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<h5 class="inlineBlock">Text</h5>
+
+
+										<div id="stackEditorMD"></div>
+									</div>
+								</div>
+
+							</div>
+							<div class="modal-footer marginTop0">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								<button ng-show="stackSaveFlow" ng-click="updateTechnology()"
+									type="button" class="btn btn-success">Update Stack</button>
+
+								<button ng-click="addTechnology()" ng-show="!stackSaveFlow"
+									type="button" class="btn btn-success">Add Stack</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="addVulnerabilityModal" class="modal fade" tabindex="-1"
+					role="dialog">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 ng-show="!vulnSaveFlow" class="modal-title">New
+									Vulnerability</h4>
+								<h4 ng-show="vulnSaveFlow" class="modal-title">Update
+									Vulnerability</h4>
+
+							</div>
+							<div class="modal-body paddingTop0">
+								<div class="row">
+									<form name="newStackForm">
+										<div class="col-md-6">
+											<h5 class="inlineBlock">Name</h5>
+
+											<input placeholder="Cross-Site Scripting" class="fInput"
+												required type="text" ng-model="tmpVuln.vulnerability">
+										</div>
+										<div class="col-md-3">
+											<h5 class="">Category</h5>
+
+											<ol class="nya-bs-select" required
+												ng-model="tmpVuln.category" data-size="20">
+												<li nya-bs-option="c in vulnerabilityCategories"><a>
+														<small>{{c}}</small> <span
+														class="glyphicon glyphicon-ok check-mark"></span>
+												</a></li>
+											</ol>
+										</div>
+										<div class="col-md-3">
+											<h5 class="">Agnostic</h5>
+
+											<toggle class="agnosticToggle" onstyle="btn-success"
+												ng-model="tmpVuln.isAgnostic" on="Yes" off="No"></toggle>
+
+										</div>
+										<div class="col-md-3" ng-show="!tmpVuln.isAgnostic">
+											<h5 class="">Technology</h5>
+
+											<ol class="nya-bs-select" ng-model="tmpVuln.technology"
+												data-size="20">
+												<li nya-bs-option="s in technologyList"><a> <small>{{s}}</small>
+														<span class="glyphicon glyphicon-ok check-mark"></span>
+												</a></li>
+
+											</ol>
+										</div>
+									</form>
+								</div>
+								<div class="row vulnerabilityMapping"
+									ng-show="tmpVuln.isAgnostic">
+									<div class="">
+										<h4 class="marginLeft15">Technology-specific Mapping</h4>
+										<div class="col-md-7">
+
+											<div class=" marginBottom5">
+
+												<form name="newSelfcheckStatus">
+													<div class="col-md-5 titleColumn">
+														<h6 class="inlineBlock">Technology</h6>
+
+														<i class="fa fa-info-circle inlineBlock marginLeft5 left"
+															tooltips tooltip-side="top"
+															tooltip-template="Mapping between the result of the Checker and default SF Exercise Status."></i>
+
+														<ol class="nya-bs-select"
+															ng-model="tmpVulnMapping.technology"
+															ng-change="updateTmpVulnByTech()"
+															ng-disabled="tmpVuln.isAgnostic" data-size="20">
+															<li nya-bs-option="s in technologyList"><a> <small>{{s}}</small>
+																	<span class="glyphicon glyphicon-ok check-mark"></span>
+															</a></li>
+
+														</ol>
+													</div>
+													<div class="col-md-5 paddingRight0">
+														<h6 class="inlineBlock">Vulnerability Details</h6>
+
+														<i class="fa fa-info-circle inlineBlock marginLeft5 left"
+															tooltips tooltip-side="top"
+															tooltip-template="Mapping between the result of the Checker and default SF Exercise Status."></i>
+
+														<ol class="nya-bs-select"
+															ng-model="tmpVulnMapping.vulnerability" data-size="20"
+															data-live-search="true">
+															<li nya-bs-option="t in nonAgnosticKbItems"><a>
+																	<small>{{t.vulnerability}} ({{t.technology}})</small> <span
+																	class="glyphicon glyphicon-ok check-mark"></span>
+															</a></li>
+														</ol>
+													</div>
+
+													<div class="col-md-1 paddingLeft0">
+														<h6 class="inlineBlock">&nbsp;</h6>
+														<button ng-click="addTmpVulnMapping()"
+															class="btn btn-primary outline marginBottom5">Add</button>
+													</div>
+
+												</form>
+											</div>
+
+										</div>
+
+										<div class="col-md-5">
+											<h5>
+												<strong>Current Mappings</strong>
+											</h5>
+
+											<table ng-show="tmpVulnMappings.length>0"
+												class="table table-hover font12">
+												<thead>
+													<tr>
+														<th>Technology</th>
+														<th>Vulnerability</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr ng-repeat="item in tmpVulnMappings">
+														<td>{{item.technology}}</td>
+														<td>{{item.vulnerability.vulnerability}}<small>({{item.vulnerability.technology}})</small></td>
+														<td><button ng-click=deleteTmpVulnMapping(item)
+																class="btn btn-xs outline btn-danger">Delete</button></td>
+													</tr>
+												</tbody>
+											</table>
+
+											<p ng-show="tmpVulnMappings.length <= 0">There are
+												currently no mappings.
+										</div>
+
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<h5 class="inlineBlock">Text</h5>
+
+
+										<div id="vulnEditorMD"></div>
+									</div>
+								</div>
+
+							</div>
+							<div class="modal-footer marginTop0">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								<button ng-show="!vulnSaveFlow" ng-click="addVulnerability()"
+									type="button" class="btn btn-success">Add
+									Vulnerability</button>
+								<button ng-show="vulnSaveFlow" ng-click="updateVulnerability()"
+									type="button" class="btn btn-success">Update
+									Vulnerability</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="stackViewModal" class="modal fade" tabindex="-1"
+					role="dialog">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title">Technology Stack Info</h4>
+							</div>
+							<div class="modal-body paddingTop0">
+								<div id="stackViewMD"></div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="kbViewModal" class="modal fade" tabindex="-1" role="dialog">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title">Vulnerability Info</h4>
+							</div>
+							<div class="modal-body paddingTop0">
+								<div id="kbViewMD"></div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</div>
+		<!-- *****************************************************************************************************************
+	 FOOTER
+	 ***************************************************************************************************************** -->
+		<div id="sffooter" class="sfFooterN">
+			<div class="marginLeft10">
+				<a class="sfFooterLink" href="mailto:support@secureflag.com">support@secureflag.com</a>
+			</div>
+			<div class="marginRight10">
+				<p class="sfFooterLink">© 2020 SecureFlag</p>
+			</div>
+
+		</div>
+		<div class="waitLoader"></div>
+		<script src="/static/assets/js/libm.min.js"></script>
+		<script src="/static/assets/js/management.js"></script>
+</body>
+</html>

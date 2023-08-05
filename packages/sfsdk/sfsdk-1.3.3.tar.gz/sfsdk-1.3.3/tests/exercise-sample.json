@@ -1,0 +1,176 @@
+{
+    "author": "TEST",
+    "authorizedUsers": [
+        {
+            "defaultOrganization": {
+                "id": 1,
+                "name": "SecureFlag"
+            },
+            "idUser": 3,
+            "organizations": [],
+            "r": "1",
+            "status": "ACTIVE",
+            "user": "427354328093"
+        }
+    ],
+    "clipboardAllowed": false,
+    "defaultScoring": "0",
+    "description": "TEST",
+    "difficulty": "Moderate",
+    "duration": 30,
+    "exerciseType": "BOTH",
+    "flags": [
+        {
+            "category": "Use of Dangerous Function",
+            "flagList": [
+                {
+                    "hint": {
+                        "id": 1682,
+                        "md": {
+                            "id": 3393
+                        }
+                    },
+                    "hintAvailable": false,
+                    "id": 1682,
+                    "maxScore": 0,
+                    "md": {
+                        "id": 3394,
+                        "text": "T"
+                    },
+                    "optional": true,
+                    "selfCheckAvailable": false,
+                    "type": "EXPLOITATION"
+                }
+            ],
+            "id": 1682,
+            "kb": {
+                "category": "Use of Dangerous Function",
+                "fromHub": true,
+                "isAgnostic": true,
+                "id": 85,
+                "lastUpdate": "Feb 28, 2020 9:01:41 AM",
+                "md": {
+                    "id": 2898,
+                    "text": "!skip"
+                },
+                "status": "0",
+                "technology": "Solidity (Ethereum)",
+                "uuid": "d06d6608-e018-4e46-9b08-aa349a8a8f5f",
+                "vulnerability": "Reentrancy"
+            },
+            "title": "Exploit Reentrancy"
+        },
+        {
+            "category": "Use of Dangerous Function",
+            "flagList": [
+                {
+                    "hint": {
+                        "id": 1681,
+                        "md": {
+                            "id": 3391,
+                            "text": "Use `msg.sender.transfer()` instead of `msg.sender.call.value()()` to securely pay the salaries.\n"
+                        },
+                        "scoreReducePercentage": 30,
+                        "type": "REMEDIATION"
+                    },
+                    "hintAvailable": true,
+                    "id": 1681,
+                    "maxScore": 50,
+                    "md": {
+                        "id": 3392,
+                        "text": "The `giveSalaries"
+                    },
+                    "optional": false,
+                    "selfCheck": {
+                        "id": 844,
+                        "messageMappings": {
+                            "broken-functionality": "<span style=\"color:#e11d21\">**Oops!**</span> The functionality is not working anymore, fix the code or restart the exercise to restore its initial state.",
+                            "fixed": "<span style=\"color:#3c763d\">**Congratulations!**</span> Your answer is correct. The vulnerability has been fixed!",
+                            "vulnerable": "<span style=\"color:#e11d21\">**Oops!** </span> Your answer is not correct. Please try again."
+                        },
+                        "name": "reentrancy-payday",
+                        "statusMapping": {
+                            "broken-functionality": "2",
+                            "fixed": "0",
+                            "vulnerable": "1"
+                        }
+                    },
+                    "selfCheckAvailable": true,
+                    "type": "REMEDIATION"
+                }
+            ],
+            "id": 1681,
+            "kb": {
+                "category": "Use of Dangerous Function",
+                "isAgnostic": true,
+                "fromHub": true,
+                "id": 85,
+                "lastUpdate": "Feb 28, 2020 9:01:41 AM",
+                "md": {
+                    "id": 2898,
+                    "text": "!skip"
+                },
+                "status": "0",
+                "technology": "Solidity (Ethereum)",
+                "uuid": "d06d6608-e018-4e46-9b08-aa349a8a8f5f",
+                "vulnerability": "Reentrancy"
+            },
+            "title": "Remediate Reentrancy"
+        }
+    ],
+    "framework": "Default",
+    "fromHub": true,
+    "id": 823,
+    "ignoreDefaultStack": false,
+    "image": {
+        "containerName": "vulnerableeth-10",
+        "hardMemory": 3500,
+        "imageUrl": "427354328093.dkr.ecr.eu-central-1.amazonaws.com/secureflag-exercises/sf-solidity-vulnerableeth",
+        "softMemory": 2200,
+        "taskDefinitionName": "sf-solidity-vulnerableeth-reentrancy-1",
+        "updateDate": "Mar 13, 2020 6:19:57 PM"
+    },
+    "information": {
+        "id": 823,
+        "text": ""
+    },
+    "internetOutboundAllowed": false,
+    "lastUpdate": "Mar 16, 2020 7:21:05 PM",
+    "privateExercise": true,
+    "quality": "2",
+    "score": 50,
+    "solution": {
+        "id": 823,
+        "text": "Rewrite `giveSalaries()` to use `addr.transfer()`.\n\n```\n  function giveSalaries() public {\n\n    if(address(this).balance < accountantSalary) return;\n\n    msg.sender.transfer(accountantSalary);\n\n    if(address(this).balance < directorSalary) return;\n\n    directorAddress.transfer(directorSalary);\n\n  }\n```\n"
+    },
+    "stack": {
+        "fromHub": true,
+        "id": 21,
+        "imageUrl": "427354328093.dkr.ecr.eu-central-1.amazonaws.com/secureflag-exercises/sf-solidity",
+        "lastUpdate": "Mar 11, 2020 11:28:12 AM",
+        "md": {
+            "id": 412,
+            "text": "!skip"
+        },
+        "status": "0",
+        "technology": "Solidity (Ethereum)",
+        "uuid": "09d588dc-fc61-4ec7-bad1-999a91cc2bdf",
+        "variant": "Default"
+    },
+    "status": "0",
+    "subtitle": "TEST",
+    "supportsAutomatedScoring": true,
+    "tags": [
+        "technology:ethereum",
+        "vulnerability:reentracy",
+        "curriculum:solidity developer",
+        "technology:solidity"
+    ],
+    "technology": "Solidity (Ethereum)",
+    "title": "TEST (to be deleted)",
+    "trophyName": "Reentrancy Trophy",
+    "uuid": "e35b2606-55bf-4665-8186-268e450f2138",
+    "version": 0,
+    "action": "updateExercise",
+    "ctoken": "2603858404104985371"
+}
