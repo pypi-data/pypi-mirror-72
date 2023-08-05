@@ -1,0 +1,9 @@
+README.md
+setup.py
+annapdf/__init__.py
+annapdf/pdf2image.py
+annapdf/pdf2text.py
+annapdf.egg-info/PKG-INFO
+annapdf.egg-info/SOURCES.txt
+annapdf.egg-info/dependency_links.txt
+annapdf.egg-info/top_level.txt
