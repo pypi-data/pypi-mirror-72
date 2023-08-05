@@ -1,0 +1,8 @@
+README.md
+setup.py
+example_pkg_marinonigrande.egg-info/PKG-INFO
+example_pkg_marinonigrande.egg-info/SOURCES.txt
+example_pkg_marinonigrande.egg-info/dependency_links.txt
+example_pkg_marinonigrande.egg-info/top_level.txt
+nico/__init__.py
+nico/modelos.py
