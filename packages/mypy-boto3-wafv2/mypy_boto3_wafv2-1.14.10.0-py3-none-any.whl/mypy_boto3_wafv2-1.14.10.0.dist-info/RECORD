@@ -1,0 +1,10 @@
+mypy_boto3_wafv2/__init__.py,sha256=5KEE5KVgh5dwWC-4HueAXCEQHPMU7fWDSg2inkwTW9k,415
+mypy_boto3_wafv2/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_wafv2/client.py,sha256=1L8cZppKenC04YfK1wh0Y4JaCBgjStbIW5cO9zeJaMQ,18636
+mypy_boto3_wafv2/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_wafv2/type_defs.py,sha256=4lTVP7dAZuI86sRmFlPxYGrOgjKm7nmWWpG9Kjf1RQw,24459
+mypy_boto3_wafv2/version.py,sha256=AagMQQdVt6IqYiMU_fphBiz72mqZMDooehTvQuGfvK4,57
+mypy_boto3_wafv2-1.14.10.0.dist-info/METADATA,sha256=Fb824ao1KJrym6PoN2_BndRquiHpTBWcFsbIIFlpyrs,4153
+mypy_boto3_wafv2-1.14.10.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_wafv2-1.14.10.0.dist-info/top_level.txt,sha256=8nrZosZqt4OSYHciZoKsoG_UMUUT_akvMN5oN-bylIU,17
+mypy_boto3_wafv2-1.14.10.0.dist-info/RECORD,,
