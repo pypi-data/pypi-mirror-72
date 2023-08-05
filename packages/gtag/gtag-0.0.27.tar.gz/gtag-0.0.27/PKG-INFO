@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: gtag
+Version: 0.0.27
+Summary: GUI toolkit for building beautiful applications for mobile, web, and desktop from a single python3 codebase
+Home-page: https://github.com/manatlan/guy
+License: Apache-2.0
+Keywords: gui,electron,asyncio,guy,desktop,web,mobile
+Author: manatlan
+Author-email: manatlan@gmail.com
+Requires-Python: >=3.5,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: guy (>=0.7.2,<0.8.0)
+Project-URL: Documentation, https://github.com/manatlan/guy
+Project-URL: Repository, https://github.com/manatlan/guy
+Description-Content-Type: text/markdown
+
+# gtag
+
+**GTag** is a GUI toolkit for building beautiful applications for mobile, web, and desktop from a single python3 codebase.
+
+[Official docs](https://gtag-docs.glitch.me/)
+
