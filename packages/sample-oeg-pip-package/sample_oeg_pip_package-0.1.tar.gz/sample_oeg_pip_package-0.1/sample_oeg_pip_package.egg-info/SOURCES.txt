@@ -1,0 +1,7 @@
+setup.py
+sample_oeg_pip_package/__init__.py
+sample_oeg_pip_package.egg-info/PKG-INFO
+sample_oeg_pip_package.egg-info/SOURCES.txt
+sample_oeg_pip_package.egg-info/dependency_links.txt
+sample_oeg_pip_package.egg-info/not-zip-safe
+sample_oeg_pip_package.egg-info/top_level.txt
