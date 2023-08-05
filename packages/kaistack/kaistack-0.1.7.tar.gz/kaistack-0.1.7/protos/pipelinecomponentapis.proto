@@ -1,0 +1,111 @@
+syntax = "proto3";
+package codegen;
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+message PipelineComponent {
+    string id = 1;
+    string name = 2;
+    string description =3;
+    string image = 4;
+    string creator = 5;
+    string version = 6;
+    string helpLink = 7;
+    string spec = 8;
+}
+
+message GetComponentRequest {
+    string id = 1;
+}
+
+message GetComponentResponse {
+    PipelineComponent component = 1;
+    string error = 2;
+}
+
+message ListComponentsRequest {
+    string id = 1;
+}
+
+message ListComponentsResponse {
+    repeated PipelineComponent components = 1;
+    string error = 2;
+}
+
+message CreateComponentRequest{
+    PipelineComponent component = 1;
+}
+
+message CreateComponentResponse{
+    PipelineComponent component = 1;
+    string error = 2;
+}
+
+message UpdateComponentRequest{
+    PipelineComponent component = 1;
+}
+
+message UpdateComponentResponse{
+    PipelineComponent component = 1;
+    string error = 2;
+}
+
+message ListComponentVersionsRequest{
+    string id = 1;
+}
+
+message ListComponentVersionsResponse{
+    repeated PipelineComponent components = 1;
+    string error = 2;
+}
+
+message DeleteComponentRequest{
+    string id = 1;
+}
+
+message DeleteComponentResponse{
+    bool success = 1;
+    string error = 2;
+}
+
+service PipelineComponentService {
+    rpc ListComponents(google.protobuf.Empty) returns (ListComponentsResponse){
+        option (google.api.http) = {
+            get: "/v1/pipeline/components"
+      };
+    }
+
+    rpc GetComponents(GetComponentRequest) returns (GetComponentResponse){
+        option (google.api.http) = {
+            get: "/v1/pipeline/components/{id}"
+      };
+    }
+
+    rpc CreateComponent(CreateComponentRequest) returns (CreateComponentResponse){
+        option (google.api.http) = {
+            post: "/v1/pipeline/components"
+            body: "component"
+      };
+    }
+
+    rpc UpdateComponent(UpdateComponentRequest) returns (UpdateComponentResponse){
+        option (google.api.http) = {
+            put: "/v1/pipeline/components"
+            body: "component"
+      };
+    }
+
+    rpc ListComponentVersions(ListComponentVersionsRequest) returns (ListComponentVersionsResponse){
+        option (google.api.http) = {
+            get: "/v1/pipeline/components/verions/{id}"
+      };
+    }
+
+    rpc DeleteComponent(DeleteComponentRequest) returns (DeleteComponentResponse){
+        option (google.api.http) = {
+            delete: "/v1/pipeline/components/{id}"
+      };
+    }
+}

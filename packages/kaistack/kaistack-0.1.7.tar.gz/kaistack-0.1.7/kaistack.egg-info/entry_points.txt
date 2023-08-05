@@ -1,0 +1,4 @@
+[console_scripts]
+kaistack = kaistack.cli.cli:main
+run_notebook = kaistack.tools.run_notebook:main
+

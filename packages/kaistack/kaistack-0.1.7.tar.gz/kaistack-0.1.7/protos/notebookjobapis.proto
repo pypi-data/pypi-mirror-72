@@ -1,0 +1,274 @@
+syntax = "proto3";
+package codegen;
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+
+message Parameter {
+    string name = 1;
+    string value = 2;
+}
+
+message NotebookJob {
+    string name = 1;
+    string notebookUri = 2;
+    string currentVersion = 3;
+    repeated Parameter parameters = 4;
+    string image = 5;
+    string schedule = 6;
+    string creator = 7;
+    repeated string slacks = 8;
+    repeated string emails = 9;
+    string outputformat = 10;
+    google.protobuf.Timestamp lastRunTime = 11;
+    string lastRunResult = 12;
+    string cpuLimit = 13;
+    string memoryLimit =14;
+    string gpuLimit = 15;
+    int64 timeoutInSec=16;
+    string crdName=17;
+    string storageUri = 18;
+    int64 lastRunDurationInSeconds = 19;
+    string state = 20;
+}
+
+message NotebookSnapshot {
+    string reportName = 1;
+    string version = 2;
+    string content = 3;
+    string uri = 4;
+    google.protobuf.Timestamp createTime = 5;
+}
+
+message NotebookJobInfo {
+    string jobName = 1;
+    string notebookUri = 2;
+}
+
+message NotebookRun {
+    string runId = 1;
+    string jobName = 2;
+    string jobVersion = 3;
+    google.protobuf.Timestamp startTime = 4;
+    google.protobuf.Timestamp endTime = 5;
+    bool succeed = 6;
+    string outputLocation = 7;
+    bool logSaved = 8;
+}
+
+message NotebookJobVersion{
+    string jobName = 1;
+    string JobVersion = 2;
+    string NotebookUri = 3;
+    string SnapshotVersion = 4;
+    string jobSpec = 5;
+    string crdName = 6;
+}
+
+message FileInfo {
+    string name = 1;
+    repeated FileInfo children = 2;
+    bool isDir = 3;
+}
+
+message CreateNotebookSnapshotRequest {
+    NotebookJobInfo info = 1;
+}
+
+message GetNotebookJobResponse{
+    repeated NotebookJob items = 1;
+}
+
+message CreateNotebookJobRequest {
+    NotebookJob job = 1;
+}
+
+message CreateNotebookJobResponse {
+    bool succeed = 1;
+    string error = 2;
+}
+
+message GetNotebookSnapshotsForJobRequest {
+    string jobName = 1;
+}
+
+message GetNotebookSnapshotsForJobResponse {
+    repeated string snapshotVersions = 1;
+    string error = 2;
+}
+
+message GetNotebookSnapshotVersionForJobRequest {
+    string jobName = 1;
+    string version = 2;
+}
+
+message GetNotebookSnapshotVersionForJobResponse {
+    NotebookSnapshot snapshot = 1;
+    string error = 2;
+}
+
+message CreateNotebookSnapshotResponse {
+    NotebookSnapshot snapshot = 1;
+    string error = 2;
+}
+
+message UpdateNotebookJobRequest{
+    NotebookJob job = 1;
+}
+
+message UpdateNotebookJobResponse{
+    bool succeed = 1;
+    string error = 2;
+}
+
+message DeleteNotebookJobRequest {
+    string name = 1;
+}
+
+message DeleteNotebookJobResponse {
+    bool succeed = 1;
+    string error = 2;
+}
+
+message GetNotebookRunsRequest {
+    string jobName = 1;
+    int32 limit = 2;
+}
+
+message GetNotebookRunsResponse {
+    repeated NotebookRun runs = 1;
+    string error = 2;
+}
+
+message GetNotebookJobVersionsRequest {
+    string jobName = 1;
+    int32 limit = 2;
+}
+
+message GetNotebookJobVersionsResponse {
+    repeated NotebookJobVersion jobVersions = 1;
+    string error = 2;
+}
+
+message GetNotebookJobVersionRequest {
+    string jobName = 1;
+    string version = 2;
+}
+
+message GetNotebookJobVersionResponse {
+    NotebookJobVersion jobVersion = 1;
+    string error = 2;
+}
+
+message GetNotebookRunOutputsRequest {
+    int64 runId = 1;
+}
+
+message GetNotebookRunOutputsResponse {
+    repeated string fileNames = 1;
+    string error = 2;
+}
+
+message GetNotebookRunOutputContentRequest {
+    int64 runId = 1;
+    string fileName = 2;
+    string outputFormat = 3;
+    int64 maxSize = 4;
+}
+
+message GetNotebookRunOutputContentResponse {
+    string content = 1;
+    string error = 2;
+}
+
+message GetAvailableNotebookFilesResponse{
+    repeated FileInfo notebookFiles = 1;
+    string error = 2;
+}
+
+
+
+service NotebookJobService {
+
+    rpc GetNotebookJobs(google.protobuf.Empty) returns (GetNotebookJobResponse){
+        option (google.api.http) = {
+            get: "/v1/notebookjobs"
+      };
+    }
+    rpc CreateNotebookJob (CreateNotebookJobRequest) returns (CreateNotebookJobResponse){
+        option (google.api.http) = {
+            post: "/v1/notebookjobs"
+            body: "job"
+      };
+    }
+
+    rpc UpdateNotebookJob (UpdateNotebookJobRequest) returns (UpdateNotebookJobResponse){
+        option (google.api.http) = {
+            put: "/v1/notebookjobs"
+            body: "job"
+      };
+    }
+
+    rpc DeleteNotebookJob (DeleteNotebookJobRequest) returns (DeleteNotebookJobResponse) {
+        option (google.api.http) = {
+            delete: "/v1/notebookjobs/{name}"
+        };
+    }
+
+    rpc CreateNotebookSnapshot (CreateNotebookSnapshotRequest) returns (CreateNotebookSnapshotResponse){
+        option (google.api.http) = {
+            post: "/v1/notebooksnapshots"
+            body: "info"
+      };
+    }
+
+    rpc GetNotebookSnapshotsForJob (GetNotebookSnapshotsForJobRequest) returns (GetNotebookSnapshotsForJobResponse){
+        option (google.api.http) = {
+            get: "/v1/notebooksnapshots/{jobName}"
+      };
+    }
+
+    rpc GetNotebookSnapshotVersionForJob (GetNotebookSnapshotVersionForJobRequest) returns (GetNotebookSnapshotVersionForJobResponse){
+        option (google.api.http) = {
+            get: "/v1/notebooksnapshots/{jobName}/{version}"
+      };
+    }
+
+    rpc GetNotebookRuns (GetNotebookRunsRequest) returns (GetNotebookRunsResponse){
+        option (google.api.http) = {
+            get: "/v1/notebookjobs/{jobName}/runs"
+      };
+    }
+
+    rpc GetNotebookRunOutputs (GetNotebookRunOutputsRequest) returns (GetNotebookRunOutputsResponse){
+        option (google.api.http) = {
+            get: "/v1/notebookruns/{runId}/outputs"
+      };
+    }
+
+    rpc GetNotebookRunOutputContent (GetNotebookRunOutputContentRequest) returns (GetNotebookRunOutputContentResponse){
+        option (google.api.http) = {
+            get: "/v1/notebookruns/{runId}/outputs/{fileName}"
+      };
+    }
+
+    rpc GetNotebookJobVersions (GetNotebookJobVersionsRequest) returns (GetNotebookJobVersionsResponse){
+        option (google.api.http) = {
+            get: "/v1/notebookjobversions/{jobName}"
+      };
+    }
+
+    rpc GetNotebookJobVersion (GetNotebookJobVersionRequest) returns (GetNotebookJobVersionResponse){
+        option (google.api.http) = {
+            get: "/v1/notebookjobversions/{jobName}/{version}"
+      };
+    }
+
+    rpc GetAvailableNotebookFiles(google.protobuf.Empty) returns (GetAvailableNotebookFilesResponse){
+        option (google.api.http) = {
+            get: "/v1/notebookfiles"
+      };
+    }
+}

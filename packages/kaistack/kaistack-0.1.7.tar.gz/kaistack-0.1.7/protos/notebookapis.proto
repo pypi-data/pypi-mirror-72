@@ -1,0 +1,133 @@
+syntax = "proto3";
+package codegen;
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+message DataVolume {
+    string name = 1;
+    int64 sizeInGB = 2;
+}
+
+message Notebook {
+    string name = 1;
+    string namespace = 2;
+    string image = 3;
+    string vCPU = 4;
+    int32 memInMB = 5;
+    bool  useGPU = 7;
+    string status = 8;
+    google.protobuf.Timestamp createdTime = 9;
+    string crdName = 10;
+}
+
+message NotebookImage{
+    string name = 1;
+    string image = 2;
+    bool  gpu = 3;
+}
+
+
+message GetNotebookResponse{
+    repeated Notebook items = 1;
+}
+
+message GetNotebookImageResponse{
+    repeated NotebookImage items = 1;
+}
+
+
+
+message CreateNotebookRequest{
+    Notebook notebook = 1;
+}
+
+message CreateNotebookImageRequest{
+    NotebookImage image = 1;
+}
+
+
+
+message UpdateNotebookRequest{
+    Notebook notebook = 1;
+}
+
+message CreateNotebookResponse {
+    bool succeed = 1;
+    string error = 2;
+}
+
+message CreateNotebookImageResponse {
+    bool succeed = 1;
+    string error = 2;
+}
+
+message UpdateNotebookResponse{
+    bool succeed = 1;
+    string error = 2;
+}
+
+
+message DeleteNotebookRequest {
+    string name = 1;
+    string namespace = 2;
+}
+
+message DeleteNotebookResponse {
+    bool succeed = 1;
+    string error = 2;
+}
+
+message DeleteNotebookImageRequest {
+    string name = 1;
+}
+
+message DeleteNotebookImageResponse {
+    bool succeed = 1;
+    string error = 2;
+}
+
+
+service NotebookService {
+    rpc GetNotebooks(google.protobuf.Empty) returns (GetNotebookResponse){
+        option (google.api.http) = {
+            get: "/v1/notebooks"
+      };
+    }
+    rpc CreateNotebook (CreateNotebookRequest) returns (CreateNotebookResponse){
+        option (google.api.http) = {
+            post: "/v1/notebooks"
+            body: "notebook"
+      };
+    }
+
+    rpc UpdateNotebook (UpdateNotebookRequest) returns (UpdateNotebookResponse){
+        option (google.api.http) = {
+            put: "/v1/notebooks"
+            body: "notebook"
+      };
+    }
+
+    rpc DeleteNotebook (DeleteNotebookRequest) returns (DeleteNotebookResponse) {
+        option (google.api.http) = {
+            delete: "/v1/notebooks/{namespace}/{name}"
+        };
+    }
+    rpc GetNotebookImages(google.protobuf.Empty) returns (GetNotebookImageResponse){
+        option (google.api.http) = {
+            get: "/v1/notebooks/images"
+      };
+    }
+    rpc DeleteNotebookImage(DeleteNotebookImageRequest) returns (DeleteNotebookImageResponse){
+        option (google.api.http) = {
+            delete: "/v1/notebookimage/{name}"
+      };
+    }
+    rpc CreateNotebookImage(CreateNotebookImageRequest) returns (CreateNotebookImageResponse){
+        option (google.api.http) = {
+            post: "/v1/notebooks/images"
+            body: "image"
+      };
+    }
+}
