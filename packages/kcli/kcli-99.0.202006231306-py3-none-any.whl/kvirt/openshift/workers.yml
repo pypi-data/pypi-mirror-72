@@ -1,0 +1,50 @@
+{% for num in range(0, workers) %}
+{% if worker_macs and worker_macs|length >= workers %}
+ {% set net0 = {"name": network, "mac": worker_macs[num]} %}
+{% elif config_type == 'packet' %}
+ {% set net0 = {"name": network, "ip": "192.168.122.20" + num|string, "mask": "255.255.255.0", "gateway": "192.168.122.1"} %}
+{% else %}
+ {% set net0 = network %}
+{% endif %}
+{{ cluster }}-worker-{{ num }}:
+ domain: {{ domain }} 
+ image: {{ image }}
+ keys: {{ keys }}
+ enableroot: false 
+ numcpus: {{ numcpus }}
+ memory: {{ worker_memory }}
+ rng: {{ worker_rng }}
+ tpm: {{ worker_tpm }}
+ autostart: {{ autostart }}
+ nets: {{ [net0] + extra_networks }}
+ disks: {{ [disk_size] + extra_disks }}
+ files:
+  - path: /etc/NetworkManager/dispatcher.d/99-forcedns
+    origin: 99-forcedns
+    mode: 755
+  - path: /etc/kubernetes/manifests/coredns.yml
+    origin: staticpods/coredns.yml
+  - path: /etc/kubernetes/Corefile
+    origin: Corefile
+  - path: /etc/kubernetes/manifests/mdns.yml
+    origin: staticpods/mdns.yml
+  - path: /etc/kubernetes/config.hcl.templ
+    origin: config.hcl.templ
+  - path: /etc/kubernetes/apps.db
+    origin: apps.db
+{% if numa != None %}
+ numa: {{ numa }}
+{% endif %}
+{% if numamode != None %}
+ numamode: {{ numamode }}
+{% endif %}
+{% if cpupinning != None %}
+ cpupinning: {{ cpupinning }}
+{% endif %}
+{% if pcidevices != None and num == 0 %}
+ pcidevices: {{ pcidevices }}
+{% endif %}
+{% if cloud_tag != None %}
+ tags: [{{ cloud_tag }}]
+{% endif %}
+{% endfor %}
