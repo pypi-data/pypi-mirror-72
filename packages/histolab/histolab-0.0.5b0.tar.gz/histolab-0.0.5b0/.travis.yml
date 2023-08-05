@@ -1,0 +1,33 @@
+# Wire up travis
+language: python
+sudo: false
+
+python:
+  - "3.6"
+  - "3.7"
+
+before_install:
+  - sudo apt-get install openslide-tools
+
+# command to install dependencies
+install:
+  - pip install -e .[testing]
+  - pip install flake8
+
+services:
+  - xvfb
+
+before_script:
+  - export DISPLAY=:99.0
+  - sleep 3 # give xvfb some time to start
+
+# command to run tests
+script:
+  - flake8 .
+  - pytest --cov=histolab
+
+after_success:
+  - coveralls
+
+notifications:
+  slack: mpba:fBrjUWlUSa3XKeCA8zFsTFu2
