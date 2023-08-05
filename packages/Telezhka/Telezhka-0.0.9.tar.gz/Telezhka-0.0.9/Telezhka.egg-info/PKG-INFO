@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: Telezhka
+Version: 0.0.9
+Summary: Telegram api library in python
+Home-page: https://github.com/dmitrijkotov634/Telezhka
+Author: dmitrijkotov
+Author-email: dmitrijkotov634@mail.ru
+License: MIT
+Description: # Telezhka
+        ![pypi](https://badge.fury.io/py/Telezhka.svg)
+        
+        Telegram api library in python
+        
+        *Installation*:
+        
+        `pip install --upgrade Telezhka`
+        
+        *Simple bot*:
+        ```python
+        from Telezhka import *
+        api = Telegram("883304628:ONTB4H2SAMPLEtext9m0g")
+        
+        for event in api.listen():
+        	if "message" in event and "text" in event["message"]:
+        		if event["message"]["text"] == "/hello":
+        			api.sendMessage(text="Hello", chat_id=event["message"]["chat"]["id"])
+        ```
+        
+        
+Keywords: Telegram
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
