@@ -1,0 +1,8 @@
+recursive-exclude randomgen  *.c
+include versioneer.py
+include randomgen/_version.py
+include requirements.txt
+include README.md
+include LICENSE.md
+recursive-include randomgen  *.py *.pyx *.px[di] *.h *.in *.csv *.md
+graft randomgen/src
