@@ -1,0 +1,13 @@
+spotmax_agent/__init__.py,sha256=e_UjAW-FeVkQxA98wAnvUJG4lGHARIrYIlYj9AW5Z_0,2171
+spotmax_agent/agent.py,sha256=XX-h6de_01wV4_oQv42-Nxv9Fq-RHTvfkeXydFYenXc,1379
+spotmax_agent/basemodule.py,sha256=pfSg1ExTkEnPC5INQ97-5bcFe87Fi1WquqR4IFxyyXY,1129
+spotmax_agent/maxgroup_cmd.py,sha256=u9rd2RrcD0gnjJ1DDUXosGiT6ggnoCv8Ejbk2xZeh3w,10293
+spotmax_agent/scheduler.py,sha256=BsW0T4D3g2hTRZZ-VOVuVLAmwzOe010mpNyOSzVh13w,21667
+spotmax_agent/taskmanager.py,sha256=EJN44wm7X7l8NtDb7gwf9RiJuMK1azl52FOKrjuUTCM,4029
+spotmax_agent/utils.py,sha256=RrGSN3BMcyLRVYAA3HpZATpPCby-4Nu2MxljhUDEm8E,8571
+spotmax_agent-0.0.8.dist-info/LICENSE,sha256=GFJROGYeLDMb7UsdvUO0vooMQk-8GONo3skMrXpWqF4,1068
+spotmax_agent-0.0.8.dist-info/METADATA,sha256=G9qFo-WPs2BivkxzQHNU3VYbxA1C4hV8_3PXNgHqUoE,563
+spotmax_agent-0.0.8.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+spotmax_agent-0.0.8.dist-info/entry_points.txt,sha256=kBchYrERFkdC2x11sAL0btdIG-8h7N_YHg6SPWgwVek,54
+spotmax_agent-0.0.8.dist-info/top_level.txt,sha256=mje5_8ucThI7OODqp4GUC03tb-zUbp05BRseVFObXpg,14
+spotmax_agent-0.0.8.dist-info/RECORD,,
