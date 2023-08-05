@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: mPowerGait
+Version: 0.0.7
+Summary: python package wrapper for mpower data pipeline
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas (==1.0.3)
+Requires-Dist: scipy
+Requires-Dist: pdkit (==1.2)
+Requires-Dist: scikit-learn
+Requires-Dist: tsfresh
+Requires-Dist: future
+Requires-Dist: matplotlib
+Requires-Dist: pandas-validator
+
+UNKNOWN
+
+
