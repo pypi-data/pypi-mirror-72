@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "pass": {
+      "type": "array",
+      "items": {
+        "properties": {}
+      },
+      "wholeListMerge": true
+    },
+    "array": {
+      "type": "array",
+      "wholeListMerge": true
+    },
+    "omitWhenMergedFalse": {
+      "omitWhenMerged": false
+    },
+    "wholeListMergeFalse": {
+      "wholeListMerge": false
+    },
+    "both": {
+      "type": "array",
+      "items": {
+        "properties": {}
+      },
+      "wholeListMerge": true,
+      "omitWhenMerged": true
+    }
+  }
+}
