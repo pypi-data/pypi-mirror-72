@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pyback
+Version: 0.0.2
+Summary: An event-driven algorithmic trading framework
+Home-page: https://github.com/shawnlinxl/pyback
+Author: Shawn Lin
+Author-email: shawn.lin@gatech.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# pyback
+
+![Python package](https://github.com/shawnlinxl/pyback/workflows/Python%20package/badge.svg)![Upload Python Package](https://github.com/shawnlinxl/pyback/workflows/Upload%20Python%20Package/badge.svg)[![codecov](https://codecov.io/gh/shawnlinxl/pyback/branch/master/graph/badge.svg)](https://codecov.io/gh/shawnlinxl/pyback)
+
+An Event-Driven Algorithm Trading framework.
+
+
