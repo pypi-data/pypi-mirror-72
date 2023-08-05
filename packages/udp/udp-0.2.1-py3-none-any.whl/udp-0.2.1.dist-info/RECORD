@@ -1,0 +1,15 @@
+udp/__init__.py,sha256=4j6sLDf1KX20yCLz-ddWHL0mUZYEDYBjmOwWxFmvst4,1730
+udp/connection.py,sha256=eqy-dTnIeudmiyprk4-aFIJzgT-C7bQkXi0q2dfs3z0,5914
+udp/hub.py,sha256=fVn9OGJuzvi4B-Qta1grlbhgjmdLv_thJNUAz70TCL0,14255
+udp/socket.py,sha256=Gxhq4pE_H8zIpHwm0iNYN4KD_fUD1e9H-M2_0gGmC-o,11890
+udp/tlv.py,sha256=TbavvRisX407l3OPaqM4EP7KB7xWg1haCzeIivc2wPE,4950
+udp/mtp/__init__.py,sha256=42kwvP1FcweoMpVYOlN53jqETorYZXdbqBH9mLcVnWc,1861
+udp/mtp/data.py,sha256=XvnyZBatWDT9uBiS4Ohyrte4E_YUPE0ZZqtHIoKfSgc,6280
+udp/mtp/peer.py,sha256=GLbMV0oAvSA8bekqu9tbcdnRPneqVm16PAM5k9p-5GU,13821
+udp/mtp/pool.py,sha256=UrpVQzhTGYDUR9Zy7MtPkz63bx7YSqurXPcZ_TyAffw,12915
+udp/mtp/protocol.py,sha256=lQUzkP1UEEAmBYbE5f510gaYsnpvD7xApFWwdk8a5cA,13859
+udp/mtp/task.py,sha256=LhelXv7lRKjVcftg6YHb6mgBrlj_eLQL1SU2eAb-8PY,4767
+udp-0.2.1.dist-info/METADATA,sha256=Zwt-3yYxgjAmM5uuxLKL7-TtfBaUVrhMvs6Wpyo8X-o,419
+udp-0.2.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+udp-0.2.1.dist-info/top_level.txt,sha256=yFUB6ASUbIR0DLyv7VcdbYGwBmgKs_Q2E22Lmezvi80,4
+udp-0.2.1.dist-info/RECORD,,
