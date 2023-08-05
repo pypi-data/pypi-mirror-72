@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: magic-cli
+Version: 0.1.8
+Summary: 
+Author: Jeremy Berman
+Author-email: jerber@sas.upenn.edu
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: requests (>=2.24.0,<3.0.0)
+Requires-Dist: typer[all] (>=0.2.1,<0.3.0)
+Description-Content-Type: text/markdown
+
+# Magic CLI
+
+The best server maker.
