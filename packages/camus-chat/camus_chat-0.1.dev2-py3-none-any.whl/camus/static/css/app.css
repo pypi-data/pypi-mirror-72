@@ -1,0 +1,114 @@
+video {
+    width: 100%;
+    max-height: 750px;
+}
+
+video:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    transition-delay: 0.2s;
+    transition-timing-function: ease;
+}
+
+.video-box {
+    position: relative;
+}
+
+.video-box:hover .video-tag {
+    display: inline;
+    text-shadow: 2px 2px 5px floralwhite;
+    text-overflow: ellipsis;
+}
+
+.video-tag {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    z-index: 9;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    color: darkslategray;
+}
+
+a {
+    color: darkslategray;
+}
+
+a:hover {
+    color: darkslategray;
+    text-shadow: 0.5px 0.5px 0px slategray;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #eeeeee;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn:active {
+    background-color: #dddddd;
+}
+
+#video-stage {
+    min-height: 500px;
+}
+
+#video-thumbs {
+    max-height: 600;
+    overflow-y: auto;
+
+    text-overflow: ellipsis;
+}
+
+#message-bar {
+    width: 100%;
+    height: 100%;
+}
+
+#message-log {
+    min-height: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.message-time {
+    display: inline-block;
+    font-size: small;
+    font-style: italic;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    float: right;
+}
+
+.message-from {
+    display: inline-block;
+    font-variant-caps: all-small-caps;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.message-text {
+    margin-top: 0px;
+}
+
+p.tech-info {
+    font-variant-caps: all-small-caps;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+p.tech-info > span {
+    font-variant-caps: normal;
+    font-weight: normal;
+    font-size: small;
+    font-style: italic;
+}
+
+#control-bar {
+    margin: 0 auto;
+}
