@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: privex-iota
+Version: 0.7.0
+Summary: Privex's Random IOTA Tools
+Home-page: https://github.com/Privex/iota-tools
+Author: Chris (Someguy123) @ Privex
+Author-email: chris@privex.io
+License: MIT
+Description: Privex's Random IOTA Tools
+        ==========================
+        
+        [![Build Status](https://travis-ci.com/Privex/iota-tools.svg?branch=master)](https://travis-ci.com/Privex/iota-tools) 
+        [![Codecov](https://img.shields.io/codecov/c/github/Privex/iota-tools)](https://codecov.io/gh/Privex/iota-tools)  
+        [![PyPi Version](https://img.shields.io/pypi/v/privex-iota.svg)](https://pypi.org/project/privex-iota/)
+        ![License Button](https://img.shields.io/pypi/l/privex-iota) 
+        ![PyPI - Downloads](https://img.shields.io/pypi/dm/privex-iota)
+        ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/privex-iota) 
+        ![GitHub last commit](https://img.shields.io/github/last-commit/Privex/iota-tools)
+        
+        IOTA library and command line tools for interacting with IOTA Hornet server API
+        
+        WARNING: Still under construction
+        
+        ```
+        +===================================================+
+        |                 © 2020 Privex Inc.                |
+        |               https://www.privex.io               |
+        +===================================================+
+        |                                                   |
+        |        Privex's Random IOTA Tools                 |
+        |        License: X11/MIT                           |
+        |                                                   |
+        |        Core Developer(s):                         |
+        |                                                   |
+        |          (+)  Chris (@someguy123) [Privex]        |
+        |                                                   |
+        +===================================================+
+        
+        Privex's Random IOTA Tools
+        Copyright (c) 2020    Privex Inc. ( https://www.privex.io )
+        
+        ```
+        
+        Install
+        =======
+        
+        
+        ```sh
+        # Install/Upgrade privex-iota using pip3 as root
+        sudo -H python3.8 -m pip install -U privex-iota
+        ```
+        
+        Usage
+        
+        ```
+        # Show status information for local IOTA node at http://localhost:14265
+        iota-status
+        
+        # Show status information for a remote IOTA node
+        iota-status https://iota.se1.privex.cc
+        
+        # Show status information as raw JSON instead of colourful human output
+        iota-status --raw
+        iota-status --raw https://iota.se1.privex.cc
+        
+        # Show help
+        iota-status --help
+        iota-status -h
+        
+        ####
+        # Alternatively invoke as a python module (works the same as iota-status executable)
+        ####
+        
+        # Show status information for local IOTA node at http://localhost:14265
+        python3.8 -m privex.iota
+        # Show status information for a remote IOTA node
+        python3.8 -m privex.iota https://iota.se1.privex.cc
+        
+        ```
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown

@@ -1,0 +1,5 @@
+privex-helpers>=2.13.0
+pytz
+colorama
+PyOTA
+requests
