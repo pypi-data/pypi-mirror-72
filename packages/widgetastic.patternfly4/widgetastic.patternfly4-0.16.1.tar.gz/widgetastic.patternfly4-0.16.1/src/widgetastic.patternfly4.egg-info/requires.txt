@@ -1,0 +1,12 @@
+selenium==3.141.0
+widgetastic.core>=0.37
+
+[dev]
+pre-commit
+pytest
+pytest-cov
+codecov
+tox
+
+[doc]
+sphinx
