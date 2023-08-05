@@ -1,0 +1,9 @@
+django_tokko_rpc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_tokko_rpc/apps.py,sha256=A0Ji6Sz8yEgah69me3xk6F_DPhwEYeAYLtPYyqqNB5I,108
+django_tokko_rpc/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_tokko_rpc/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_tokko_rpc/management/commands/run_rpc_server.py,sha256=B-4PFwC-63jla45bwLha3OJDHGMf5cIKfMDDVCcl6o8,828
+django_tokko_rpc-0.0.6.dist-info/METADATA,sha256=_ACqq7hzN9MRF6wXwS-2piPN3GLfmrneWExibfKU698,1262
+django_tokko_rpc-0.0.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_tokko_rpc-0.0.6.dist-info/top_level.txt,sha256=2Fh4p9R9xJ1ReGuC9p-5xDJvm54KEDRbuVwbEVsU88M,17
+django_tokko_rpc-0.0.6.dist-info/RECORD,,

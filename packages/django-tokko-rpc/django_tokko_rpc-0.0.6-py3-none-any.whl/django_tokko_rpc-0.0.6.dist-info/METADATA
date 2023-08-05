@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: django-tokko-rpc
+Version: 0.0.6
+Summary: Tokko Django services RPC interface.
+Home-page: https://github.com/TokkoLabs/services-tokkobroker/libraries/rpc-plugin/django-tokko-rpc
+Author: Jose Salgado
+Author-email: jsalgado@navent.com
+License: BSD License
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Description-Content-Type: text/markdown
+Requires-Dist: Django (==3.0.7)
+Requires-Dist: tokko-rpc (==0.0.2)
+
+# Install
+```bash
+# Virtual Environment
+(venv) pip install django_tokko_rpc
+# Main Python3 environment
+sudo -H pip3 install django_tokko_rpc
+```
+
+# Usage
+Add to {your-project}/settings.py
+```python
+INSTALLED_APPS = [
+    "other-apps",
+    "...",
+    "django-tokko-rpc" # <- Django TokkoRPC Plugin
+]
+```
+
+# Testing
+```bash
+python ./manage.py test django_tokko_rpc
+```
+
+---
+[goBack](../../../README.md)
+
+
