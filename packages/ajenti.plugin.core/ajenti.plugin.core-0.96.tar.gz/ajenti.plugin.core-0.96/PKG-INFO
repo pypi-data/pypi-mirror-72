@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ajenti.plugin.core
+Version: 0.96
+Summary: Core
+Home-page: https://ajenti.org
+Author: Ajenti project
+Author-email: e@ajenti.org
+License: UNKNOWN
+Description: A Core plugin for Ajenti panel
+Platform: UNKNOWN
+Requires-Python: >=3
