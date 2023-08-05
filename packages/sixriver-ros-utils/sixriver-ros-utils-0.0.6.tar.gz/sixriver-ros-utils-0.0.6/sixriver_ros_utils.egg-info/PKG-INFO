@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: sixriver-ros-utils
+Version: 0.0.6
+Summary: Ros util for python
+Home-page: https://github.com/6RiverSystems/mfp_tools
+Author: sixriver
+Author-email: dniktopoulos@6river.com
+License: UNKNOWN
+Description: # sixriver_ros_utils
+        
+        To upload to cloud....
+        up the version (manual right now)
+        
+        cd sixriver_ros_utils
+        rm -rf dist/
+        python3 setup.py sdist bdist_wheel
+        python -m twine upload  dist/*
+Platform: UNKNOWN
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
