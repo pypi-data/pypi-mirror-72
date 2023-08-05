@@ -1,0 +1,72 @@
+sz.bendibao.com:
+  source_name: 本地宝
+  title_xpath_list:
+  - //div[@class="title daoyu"]/h1/strong/text()
+  author_xpath_list:
+  - //span[@class="form"]/a/text()
+  - //div[@class="article-info"]/span[2]/a/text()
+  publish_time_xpath_list:
+  - //div[@class="article-info"]/span[1]/text()
+  source_xpath_list:
+  - []
+  content_xpath_list:
+  - //div[@class="content"]//text()
+  content_html_xpath_list:
+    - //div[@class="content"]
+  img_xpath_list:
+  - //div[@class="content"]//img/@src
+  is_skip: false
+
+blog.csdn.net:
+  source_name: CSDN博客
+  title_xpath_list:
+  - //h1[@class="title-article"]/text()
+  author_xpath_list:
+  - //a[@class="follow-nickName"]/text()
+  publish_time_xpath_list:
+  - //div[@class="bar-content"]/span[@class="time"]/text()
+  source_xpath_list:
+  - []
+  content_xpath_list:
+  - //div[@class="markdown_views prism-atom-one-dark"]//text()
+  content_html_xpath_list:
+  - //div[@class="markdown_views prism-atom-one-dark"]
+  img_xpath_list:
+  - //div[@class="markdown_views prism-atom-one-dark"]//img/@src
+  is_skip: false
+
+www.jianshu.com:
+  source_name: 简书
+  title_xpath_list:
+  - //h1[@class="_1RuRku"]/text()
+  author_xpath_list:
+  - //span[@class="FxYr8x"]/a/text()
+  publish_time_xpath_list:
+  - //div[@class="s-dsoj"]/time/text()
+  source_xpath_list:
+  - []
+  content_xpath_list:
+  - //article[@class="_2rhmJa"]//text()
+  content_html_xpath_list:
+  - //article[@class="_2rhmJa"]
+  img_xpath_list:
+  - //article[@class="_2rhmJa"]//img/@data-original-src
+  is_skip: false
+
+www.cnpharm.com:
+  source_name: 中国食品药品网
+  title_xpath_list:
+  - //p[@id="Ti"]/text()
+  author_xpath_list:
+  - //ul[@id="Inf"]/li[2]/text()
+  publish_time_xpath_list:
+  - //ul[@id="Inf"]/li[1]/text()
+  source_xpath_list:
+  - //ul[@id="Inf"]/li[3]/text()
+  content_xpath_list:
+  - //div[@id="Written"]//text()
+  content_html_xpath_list:
+  - //div[@id="Written"]
+  img_xpath_list:
+  - //div[@id="Written"]//img/@rc
+  is_skip: false
