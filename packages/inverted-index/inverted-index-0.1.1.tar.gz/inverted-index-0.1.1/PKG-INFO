@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: inverted-index
+Version: 0.1.1
+Summary: Inverted Index
+Home-page: https://github.com/blester125/inverted-index
+Author: blester125
+Author-email: blester125@gmail.com
+License: MIT
+Download-URL: https://github.com/blester125/inverted-index/archive/0.1.1.tar.gz
+Description: # Inverted Index
+        
+        [![PyPi Version](https://img.shields.io/pypi/v/inverted-index)](https://pypi.org/project/inverted-index/) [![Actions Status](https://github.com/blester125/inverted-index/workflows/Unit%20Test/badge.svg)](https://github.com/blester125/inverted-index/actions) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+        
+        A small extensiable python inverted index. It supports retevial by boolean `AND`s and ranking of the returned results. The point is a skeleton to add
+        quick and dirty search to a script.
+        
+        It also includes a `prompt_toolkit` completer that can each the inverted index as you type. When you select a auto-suggest option it will replace your prompt.
+        The best way I have found to use this is to set it up to trigger only when you ask by hitting tab like so:
+        
+        ```python
+        from prompt_toolkit import prompt
+        from inverted_index.prompt import SearchCompleter
+        from inverted_index.inverted_index import InvertedIndex
+        
+        
+        # Create your index
+        ii = InvertedIndex(...)
+        ii.index(my_documents)
+        
+        user_input = prompt("> ", completer=SearchCompleter(ii), complete_while_typing=False)
+        # Do things with user_input
+        print(user_input)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: prompt
+Provides-Extra: test
