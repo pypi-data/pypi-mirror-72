@@ -1,0 +1,3 @@
+[console_scripts]
+good_bot_encrypt = good_bot_encrypt.__main__:main
+

@@ -1,0 +1,10 @@
+README.md
+setup.py
+app/__init__.py
+app/__main__.py
+app/funcmodule.py
+good_bot_encrypt.egg-info/PKG-INFO
+good_bot_encrypt.egg-info/SOURCES.txt
+good_bot_encrypt.egg-info/dependency_links.txt
+good_bot_encrypt.egg-info/entry_points.txt
+good_bot_encrypt.egg-info/top_level.txt
