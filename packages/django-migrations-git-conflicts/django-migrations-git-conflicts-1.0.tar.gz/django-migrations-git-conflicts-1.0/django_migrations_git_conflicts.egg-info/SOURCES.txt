@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+django_migrations_git_conflicts.egg-info/PKG-INFO
+django_migrations_git_conflicts.egg-info/SOURCES.txt
+django_migrations_git_conflicts.egg-info/dependency_links.txt
+django_migrations_git_conflicts.egg-info/requires.txt
+django_migrations_git_conflicts.egg-info/top_level.txt
+migrations_git_conflicts/__init__.py
+migrations_git_conflicts/apps.py
+migrations_git_conflicts/management/__init__.py
+migrations_git_conflicts/management/commands/__init__.py
+migrations_git_conflicts/management/commands/makemigrations.py
