@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: Bioplots
+Version: 0.1.6.6
+Summary: A data visualization package for bioinformatians and computational biologist
+Home-page: https://jingxinfu.github.io/Bioplots
+Author: Jingxin Fu
+Author-email: jingxinfu.tj@gmail.com
+License: UNKNOWN
+Keywords: Data Visualization,Bioinformatics,Genomics,Computational Biologist
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >=3, <4
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (>=0.24)
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: adjustText
+
+# Bioplots: A Bioinformatics Toolkit
+[![PyPI](https://img.shields.io/pypi/v/Bioplots?color=blue)](https://pypi.org/project/Bioplots/) ![PyPI - Format](https://img.shields.io/pypi/format/Bioplots?style=flat-square) ![PyPI - License](https://img.shields.io/pypi/l/Bioplots?color=red) [![Build Status](https://travis-ci.org/jingxinfu/Bioplots.svg?branch=master)](https://travis-ci.org/jingxinfu/Bioplots) [![PyPI - Downloads](https://img.shields.io/pypi/dm/Bioplots?color=green&label=pypi%20download&logoColor=green&style=flat-square)](https://pypi.org/project/Bioplots/) 
+
+This package provides visualization functions that are frequently used by bioinformaticians. 
+
+[Document](https://jingxinfu.github.io/Bioplots)
+
+
+
