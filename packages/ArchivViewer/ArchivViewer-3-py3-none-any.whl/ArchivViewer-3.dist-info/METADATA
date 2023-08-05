@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: ArchivViewer
+Version: 3
+Summary: Archive viewer for use with Medical Office AIS by Indamed
+Home-page: https://github.com/crispinus2/archivviewer/
+Author: Julian Hartig
+Author-email: julian@whisper-net.de
+License: GPLv3
+Download-URL: https://github.com/crispinus2/archivviewer/archive/v_03.tar.gz
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: lhafile (>=0.2.2)
+Requires-Dist: PyPDF2 (>=1.26.0)
+Requires-Dist: img2pdf (>=0.3.6)
+Requires-Dist: PyQt5 (>=5.15.0)
+Requires-Dist: watchdog (>=0.10.2)
+Requires-Dist: pyqt-distutils
+Requires-Dist: fdb
+
+UNKNOWN
+
+
