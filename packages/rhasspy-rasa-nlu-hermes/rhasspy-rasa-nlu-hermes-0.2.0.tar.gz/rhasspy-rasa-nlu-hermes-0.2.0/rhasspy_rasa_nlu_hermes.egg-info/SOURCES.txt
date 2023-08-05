@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+rhasspy_rasa_nlu_hermes.egg-info/PKG-INFO
+rhasspy_rasa_nlu_hermes.egg-info/SOURCES.txt
+rhasspy_rasa_nlu_hermes.egg-info/dependency_links.txt
+rhasspy_rasa_nlu_hermes.egg-info/requires.txt
+rhasspy_rasa_nlu_hermes.egg-info/top_level.txt
+rhasspyrasa_nlu_hermes/__init__.py
+rhasspyrasa_nlu_hermes/__main__.py
