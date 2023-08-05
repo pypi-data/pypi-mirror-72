@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+scache/__init__.py
+scache.egg-info/PKG-INFO
+scache.egg-info/SOURCES.txt
+scache.egg-info/dependency_links.txt
+scache.egg-info/requires.txt
+scache.egg-info/top_level.txt
