@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyorcy.py
+setup.cfg
+setup.py
+fastlogging/fastlogging.cpp
+fastlogging/fastlogging.pyx
+fastlogging/network.cpp
+fastlogging/network.pyx
+fastlogging.egg-info/PKG-INFO
+fastlogging.egg-info/SOURCES.txt
+fastlogging.egg-info/dependency_links.txt
+fastlogging.egg-info/requires.txt
+fastlogging.egg-info/top_level.txt
