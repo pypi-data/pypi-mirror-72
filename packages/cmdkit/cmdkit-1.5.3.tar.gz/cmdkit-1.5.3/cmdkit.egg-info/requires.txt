@@ -1,0 +1,7 @@
+logalpha>=2.0.2
+
+[toml]
+toml
+
+[yaml]
+pyyaml
