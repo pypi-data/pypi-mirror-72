@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: c7m
+Version: 0.1.1
+Summary: Module for analysis of high-throughput, fluorescence, wide-field microscopy images.
+Home-page: https://github.com/mlippeve/c7m
+Author: Maxim Lippeveld
+Author-email: maxim.lippeveld@ugent.be
+License: Apache Software License 2.0
+Description: # Project name here
+        > Summary description here.
+        
+        
+        This file will become your README and also the index of your documentation.
+        
+        ## Install
+        
+        `pip install your_project_name`
+        
+        ## How to use
+        
+        Fill me in please! Don't forget code examples:
+        
+        ```
+        1+1
+        ```
+        
+        
+        
+        
+            2
+        
+        
+        
+Keywords: microscopy,segmentation,classification
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

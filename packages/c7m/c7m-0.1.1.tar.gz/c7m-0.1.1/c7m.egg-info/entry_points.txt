@@ -1,0 +1,3 @@
+[console_scripts]
+c7m_post_process_segmentations = c7m.batch_process_segmentation:process_experiment_command
+
