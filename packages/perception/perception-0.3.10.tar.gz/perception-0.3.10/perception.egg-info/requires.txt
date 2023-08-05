@@ -1,0 +1,15 @@
+pdqhash
+pywavelets
+numpy
+scipy
+validators>=0.12.4
+
+[benchmarking]
+tqdm
+pandas
+matplotlib
+scipy
+imgaug
+tabulate
+scikit-learn
+ffmpeg-python
