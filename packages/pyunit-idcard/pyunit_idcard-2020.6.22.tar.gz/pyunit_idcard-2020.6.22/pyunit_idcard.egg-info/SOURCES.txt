@@ -1,0 +1,10 @@
+README.md
+setup.py
+pyunit_idcard/__init__.py
+pyunit_idcard/idCard.json
+pyunit_idcard/idcard.py
+pyunit_idcard.egg-info/PKG-INFO
+pyunit_idcard.egg-info/SOURCES.txt
+pyunit_idcard.egg-info/dependency_links.txt
+pyunit_idcard.egg-info/not-zip-safe
+pyunit_idcard.egg-info/top_level.txt
