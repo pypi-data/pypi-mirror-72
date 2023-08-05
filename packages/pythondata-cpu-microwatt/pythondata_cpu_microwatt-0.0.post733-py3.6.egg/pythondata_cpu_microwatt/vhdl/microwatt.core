@@ -1,0 +1,296 @@
+CAPI=2:
+
+name : ::microwatt:0
+
+filesets:
+  core:
+    files:
+      - decode_types.vhdl
+      - wishbone_types.vhdl
+      - common.vhdl
+      - fetch1.vhdl
+      - decode1.vhdl
+      - helpers.vhdl
+      - decode2.vhdl
+      - register_file.vhdl
+      - cr_file.vhdl
+      - crhelpers.vhdl
+      - ppc_fx_insns.vhdl
+      - sim_console.vhdl
+      - logical.vhdl
+      - countzero.vhdl
+      - gpr_hazard.vhdl
+      - cr_hazard.vhdl
+      - control.vhdl
+      - execute1.vhdl
+      - loadstore1.vhdl
+      - mmu.vhdl
+      - dcache.vhdl
+      - divider.vhdl
+      - rotator.vhdl
+      - writeback.vhdl
+      - insn_helpers.vhdl
+      - core.vhdl
+      - icache.vhdl
+      - plru.vhdl
+      - cache_ram.vhdl
+      - core_debug.vhdl
+      - utils.vhdl
+    file_type : vhdlSource-2008
+
+  soc:
+    files:
+      - wishbone_arbiter.vhdl
+      - wishbone_debug_master.vhdl
+      - wishbone_bram_wrapper.vhdl
+      - soc.vhdl
+      - xics.vhdl
+      - syscon.vhdl
+      - sync_fifo.vhdl
+      - spi_rxtx.vhdl
+      - spi_flash_ctrl.vhdl
+    file_type : vhdlSource-2008
+
+  fpga:
+    files:
+      - fpga/main_bram.vhdl
+      - fpga/soc_reset.vhdl
+      - fpga/pp_fifo.vhd
+      - fpga/pp_soc_uart.vhd
+      - fpga/pp_utilities.vhd
+      - fpga/firmware.hex : {copyto : firmware.hex, file_type : user}
+    file_type : vhdlSource-2008
+
+  xilinx_specific:
+    files:
+      - xilinx-mult.vhdl : {file_type : vhdlSource-2008}
+
+  debug_xilinx:
+    files:
+      - dmi_dtm_xilinx.vhdl : {file_type : vhdlSource-2008}
+
+  debug_dummy:
+    files:
+      - dmi_dtm_dummy.vhdl : {file_type : vhdlSource-2008}
+
+  nexys_a7:
+    files:
+      - fpga/nexys_a7.xdc : {file_type : xdc}
+      - fpga/clk_gen_plle2.vhd : {file_type : vhdlSource-2008}
+      - fpga/top-generic.vhdl : {file_type : vhdlSource-2008}
+
+  nexys_video:
+    files:
+      - fpga/nexys-video.xdc : {file_type : xdc}
+      - fpga/clk_gen_plle2.vhd : {file_type : vhdlSource-2008}
+      - fpga/top-nexys-video.vhdl : {file_type : vhdlSource-2008}
+
+  arty_a7:
+    files:
+      - fpga/arty_a7.xdc : {file_type : xdc}
+      - fpga/clk_gen_plle2.vhd : {file_type : vhdlSource-2008}
+      - fpga/top-arty.vhdl : {file_type : vhdlSource-2008}
+
+  cmod_a7-35:
+    files:
+      - fpga/cmod_a7-35.xdc : {file_type : xdc}
+      - fpga/clk_gen_mcmm.vhd : {file_type : vhdlSource-2008}
+      - fpga/top-generic.vhdl : {file_type : vhdlSource-2008}
+
+  litedram:
+      depend : [":microwatt:litedram"]
+
+targets:
+  nexys_a7:
+    default_tool: vivado
+    filesets: [core, nexys_a7, soc, fpga, debug_xilinx, xilinx_specific]
+    parameters :
+      - memory_size
+      - ram_init_file
+      - clk_input
+      - clk_frequency
+      - disable_flatten_core
+      - log_length=2048
+    tools:
+      vivado: {part : xc7a100tcsg324-1}
+    toplevel : toplevel
+
+  nexys_video-nodram:
+    default_tool: vivado
+    filesets: [core, nexys_video, soc, fpga, debug_xilinx, xilinx_specific]
+    parameters :
+      - memory_size
+      - ram_init_file
+      - clk_input
+      - clk_frequency
+      - disable_flatten_core
+      - spi_flash_offset=10485760
+      - log_length=2048
+    tools:
+      vivado: {part : xc7a200tsbg484-1}
+    toplevel : toplevel
+
+  nexys_video:
+    default_tool: vivado
+    filesets: [core, nexys_video, soc, fpga, debug_xilinx, litedram, xilinx_specific]
+    parameters:
+      - memory_size
+      - ram_init_file
+      - use_litedram=true
+      - disable_flatten_core
+      - no_bram
+      - spi_flash_offset=10485760
+      - log_length=2048
+    generate: [dram_nexys_video]
+    tools:
+      vivado: {part : xc7a200tsbg484-1}
+    toplevel : toplevel
+
+  arty_a7-35-nodram:
+    default_tool: vivado
+    filesets: [core, arty_a7, soc, fpga, debug_xilinx, xilinx_specific]
+    parameters :
+      - memory_size
+      - ram_init_file
+      - clk_input
+      - clk_frequency
+      - disable_flatten_core
+      - spi_flash_offset=3145728
+      - log_length=512
+    tools:
+      vivado: {part : xc7a35ticsg324-1L}
+    toplevel : toplevel
+
+  arty_a7-35:
+    default_tool: vivado
+    filesets: [core, arty_a7, soc, fpga, debug_xilinx, litedram, xilinx_specific]
+    parameters :
+      - memory_size
+      - ram_init_file
+      - use_litedram=true
+      - disable_flatten_core
+      - no_bram
+      - spi_flash_offset=3145728
+      - log_length=512
+    generate: [dram_arty]
+    tools:
+      vivado: {part : xc7a35ticsg324-1L}
+    toplevel : toplevel
+
+  arty_a7-100-nodram:
+    default_tool: vivado
+    filesets: [core, arty_a7, soc, fpga, debug_xilinx, xilinx_specific]
+    parameters :
+      - memory_size
+      - ram_init_file
+      - clk_input
+      - clk_frequency
+      - disable_flatten_core
+      - spi_flash_offset=4194304
+      - log_length=2048
+    tools:
+      vivado: {part : xc7a100ticsg324-1L}
+    toplevel : toplevel
+
+  arty_a7-100:
+    default_tool: vivado
+    filesets: [core, arty_a7, soc, fpga, debug_xilinx, litedram, xilinx_specific]
+    parameters:
+      - memory_size
+      - ram_init_file
+      - use_litedram=true
+      - disable_flatten_core
+      - no_bram
+      - spi_flash_offset=4194304
+      - log_length=2048
+    generate: [dram_arty]
+    tools:
+      vivado: {part : xc7a100ticsg324-1L}
+    toplevel : toplevel
+
+  cmod_a7-35:
+    default_tool: vivado
+    filesets: [core, cmod_a7-35, soc, fpga, debug_xilinx, xilinx_specific]
+    parameters :
+      - memory_size
+      - ram_init_file
+      - reset_low=false
+      - clk_input=12000000
+      - clk_frequency
+      - disable_flatten_core
+      - log_length=512
+    tools:
+      vivado: {part : xc7a35tcpg236-1}
+    toplevel : toplevel
+
+  synth:
+    filesets: [core, soc, xilinx_specific]
+    tools:
+      vivado: {pnr : none}
+    toplevel: core
+
+generate:
+  dram_arty:
+    generator: litedram_gen
+    parameters: {board : arty}
+
+  dram_nexys_video:
+    generator: litedram_gen
+    parameters: {board : nexys-video}
+
+parameters:
+  memory_size:
+    datatype    : int
+    description : On-chip memory size (bytes). If no_bram is set, this is the size carved out for the DRAM payload
+    paramtype   : generic
+    default     : 16384
+
+  ram_init_file:
+    datatype    : file
+    description : Initial on-chip RAM contents
+    paramtype   : generic
+
+  reset_low:
+    datatype    : bool
+    description : External reset button polarity
+    paramtype   : generic
+
+  clk_input:
+    datatype    : int
+    description : Clock input frequency in HZ (for top-generic based boards)
+    paramtype   : generic
+    default     : 100000000
+
+  clk_frequency:
+    datatype    : int
+    description : Generated system clock frequency in HZ (for top-generic based boards)
+    paramtype   : generic
+    default     : 100000000
+
+  disable_flatten_core:
+    datatype    : bool
+    description : Prevent Vivado from flattening the main core components
+    paramtype   : generic
+    default     : false
+
+  use_litedram:
+    datatype    : bool
+    description : Use liteDRAM
+    paramtype   : generic
+    default     : false
+
+  no_bram:
+    datatype    : bool
+    description : No internal block RAM (only DRAM and init code carrying payload)
+    paramtype   : generic
+    default     : false
+
+  spi_flash_offset:
+    datatype    : int
+    description : Offset (in bytes) in the SPI flash of the code payload to run
+    paramtype   : generic
+
+  log_length:
+    datatype    : int
+    description : Length of the core log buffer in entries (32 bytes each)
+    paramtype   : generic
