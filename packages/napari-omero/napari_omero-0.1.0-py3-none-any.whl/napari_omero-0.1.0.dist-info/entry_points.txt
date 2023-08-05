@@ -1,0 +1,6 @@
+[console_scripts]
+napari_omero = napari_omero.__main__:main
+
+[napari.plugin]
+omero = napari_omero.plugins._napari
+
