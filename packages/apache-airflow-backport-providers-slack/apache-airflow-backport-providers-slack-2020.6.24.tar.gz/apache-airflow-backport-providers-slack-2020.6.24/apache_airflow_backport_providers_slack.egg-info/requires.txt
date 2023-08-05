@@ -1,0 +1,5 @@
+apache-airflow~=1.10
+slackclient<3.0.0,>=2.0.0
+
+[http]
+apache-airflow-backport-providers-http
