@@ -1,0 +1,300 @@
+Metadata-Version: 2.1
+Name: take-forecast
+Version: 0.9.0
+Summary: This project build pipelines for time series forecast for Take BLiP Nomics
+Home-page: UNKNOWN
+Author: Gabriel Salgado
+Author-email: gabriel.salgado@take.net
+License: UNKNOWN
+Description: # TakeForecast
+        _Gabriel Cardoso Salgado_
+        
+        ## Overview
+        
+        Here is presented these content:
+        
+        * [Initializing a kedro project](#initialing-a-kedro-project)
+        * [Configuring project](#configuring-project)
+        * [Installing dependencies](#installing-dependencies)
+        * [Writing notebooks](#writing-notebooks)
+        * [Testing TakeForecast](#testing-takeforecast)
+        * [Visualizing pipelines](#visualizing-pipelines)
+        * [Running TakeForecast](#running-takeforecast)
+        * [Packaging TakeForecast](#packaging-takeforecast)
+        * [Building documentation](#building-documentation)
+        * [Uploading to PyPI](#uploading-to-pypi)
+        * [Some tips](#some-tips)
+        
+        ## Initialing a kedro project
+        
+        TakeForecast project is a kedro project.
+        It was initialized using `Kedro 0.15.9` by running:
+        ```
+        kedro new
+        ```
+        
+        If you wish, see [kedro documentation](https://kedro.readthedocs.io) to know more about.
+        
+        ## Configuring project
+        
+        Here are shown recommended practices to configure project on local.
+        
+        ### Virtual environment
+        
+        This step can be done with commands or on PyCharm.
+        
+        #### On commands
+        
+        It is recommended to use virtual environment:
+        ```
+        pip install venv
+        ```
+        
+        Create a virtual environment:
+        ```
+        python -m venv venv
+        ```
+        
+        Enter to virtual environment (Windows):
+        ```
+        ./venv/Scripts/activate
+        ```
+        
+        Enter to virtual environment (Linux):
+        ```
+        ./venv/bin/activate
+        ```
+        
+        To exit virtual environment:
+        ```
+        deactivate
+        ```
+        
+        #### On PyCharm
+        
+        Open `File/Settings...` or press `Ctrl+Alt+S`.
+        This opens settings window.
+        
+        Open `Project: TakeForecast/Project Interpreter` on left menu.
+        
+        Open `Project Interpreter` combobox and click on `Show All...`.
+        This opens a window with Python interpreters.
+        
+        Click on `+` or press `Alt+Insert`.
+        This opens a window to create a new Python interpreter.
+        
+        We will choose default options that create a new virtual environment into project.
+        Click on `Ok` button.
+        
+        Click on `Ok` button again.
+        And again.
+        
+        ### Configuring on PyCharm
+        
+        If you are using PyCharm its better show PyCharm where is source code on project.
+        Right click on `src` folder in `Project` window at left side.
+        This opens context menu.
+        
+        Choose `Mark Directory as/Sources Root` option.
+        This marks `src` as source root directory.
+        It will appears as blue folder on `Project` navigator.
+        
+        ## Installing dependencies
+        
+        All dependencies are declared in `src/requirements.txt`.
+        
+        Install dependencies can be done on command or on PyCharm.
+        
+        ### On command
+        
+        To install them, run:
+        ```
+        kedro install
+        ```
+        
+        Installing `take_forecast` with pip also installs dependencies:
+        ```
+        pip install take_forecast
+        ```
+        
+        But if you are working on project, prefer do not install `take_forecast`.
+        
+        ### On PyCharm
+        
+        After you created virtual environment or on open PyCharm, it will ask if you want to install requirements.
+        Choose `Install`.
+        
+        ## Writing notebooks
+        
+        Start local notebook server:
+        ```
+        kedro jupyter notebook
+        ```
+        
+        Or if you prefer, you can also use JupyterLab:
+        
+        ```
+        kedro jupyter lab
+        ```
+        
+        Or if you want just an IPython session:
+        ```
+        kedro ipython
+        ```
+        
+        On any of these cases, notebook or IPython session has the following variables in scope:
+        * `context`: Instance of `take_forecast.run.ProjectContext`. See it help.
+        * `startup_error`: Error on startup if any or None.
+        
+        You can update changes on project to session using:
+        ```
+        %reload_kedro
+        ```
+        
+        ## Testing TakeForecast
+        
+        You can test on commands or on PyCharm.
+        
+        ### On commands
+        
+        First enter to virtual environment.
+        Then run kedro tests:
+        ```
+        kedro test
+        ```
+        
+        See coverage results at `htmlcov/index.html`.
+        
+        ### On PyCharm
+        
+        Click on `Edit Configurations...` beside `Run` icon.
+        This opens Run/Debug Configurations window.
+        
+        Click on `+` or press `Alt+Insert`.
+        
+        Choose `Python tests/pytest` option.
+        
+        Fill `Target` field with path to tests folder as `<path to project>/src/tests`.
+        
+        Click on `Ok` button.
+        
+        Click on `Run` icon.
+        This run the tests.
+        
+        Open `Terminal` window and run command to generate HTML report:
+        ```
+        coverage html
+        ```
+        
+        See coverage results at `htmlcov/index.html`.
+        
+        ## Visualizing pipelines
+        
+        First enter to virtual environment.
+        To visualize pipelines as graphs:
+        ```
+        kedro viz
+        ```
+        
+        Or visualizing just a specific pipeline:
+        ```
+        kedro viz --pipeline specific_pipeline
+        ```
+        
+        ## Running TakeForecast
+        
+        You can run on command or on PyCharm.
+        
+        ### On command
+        
+        First enter to virtual environment.
+        Running all pipelines:
+        ```
+        kedron run
+        ```
+        
+        Or running just a specific pipeline:
+        ```
+        kedro run --pipeline specific_pipeline
+        ```
+        
+        ### On PyCharm
+        
+        Click on `Edit Configurations...` beside `Run` icon.
+        This opens Run/Debug Configurations window.
+        
+        Click on `+` or press `Alt+Insert`.
+        
+        Choose `Python` option.
+        
+        Fill `Script path` field with run file as `<path to project>/src/take_forecast/run.py`.
+        
+        Click on `Ok` button.
+        
+        Click on `Run` icon.
+        This run all pipelines.
+        
+        ## Packaging TakeForecast
+        
+        First enter to virtual environment.
+        To package TakeForecast into `.egg` and `.whell`:
+        ```
+        kedro package
+        ```
+        
+        Generated packages will be in folder `src/dist`.
+        
+        ## Building documentation
+        
+        To build API docs with Sphinx:
+        ```
+        kedro build-docs
+        ```
+        
+        Generated documentation will be in `docs/build/html/index.html`.
+        
+        ## Uploading to PyPI
+        
+        To upload build package to PyPI:
+        ```
+        kedro upload
+        ```
+        
+        This upload the latest build version.
+        After, package can be downloaded and installed by pip in any place with python and pip:
+        
+        ```
+        pip install take_forecast
+        ```
+        
+        ## Some tips
+        
+        In order to maintain the project:
+         * Do not remove or change any lines from the `.gitignore` unless you know what are you doing.
+         * When developing experiments and production, follow [kedro data engineering convention](https://kedro.readthedocs.io/en/stable/06_resources/01_faq.html#what-is-data-engineering-convention).
+         * When developing experiments, put them into notebooks, following [code policies](https://docs.google.com/document/d/17EeKpq3svANefmZNwWM4uV2FKEnqxCyFYzkI04l4P38).
+         * Organize notebooks into particular folder in folder `notebooks` and commit them.
+         * Do not commit any data.
+         * Do not commit any log file.
+         * Do not commit any credentials or local configuration.
+         * Keep all credentials or local configuration in folder `conf/local/`.
+         * Do not commit any generated file on testing or building processes.
+         * Run test before pull request to make sure that has no bug.
+         * Follow git flow practices:
+           * Create feature branch for new feature from `dev` branch.
+           Work on this branch with commits and pushes.
+           Send a pull request to `dev` branch when terminate the work.
+           * When terminate a set of features to release, merge `dev` branch to `test` branch.
+           Apply several and strict tests to be sure that all are fine.
+           On find errors, fix all and apply tests again.
+           When all are ok, merge from `test` to `master` increasing `setup` version and uploading to pipy.
+           * If some bug is found on production, `master` branch, create hotfix branch from `master`.
+           Correct all errors and apply tests like in `test` branch.
+           When all are ok, merge from hotfix branch to `master` and then, merge from `master` to `dev`.
+        
+Keywords: time series,forecast
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: docs
