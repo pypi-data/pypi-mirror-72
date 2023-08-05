@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: pytest_covid
+Version: 0.0.2
+Summary: Too many faillure, less tests.
+Home-page: https://pypi.org/project/pytest_covid/
+License: UNKNOWN
+Author: Matthias Bussonnier
+Author-email: bussonniermatthias@gmail.com
+Requires-Python: >=3.6
+Classifier: License :: OSI Approved :: MIT License
