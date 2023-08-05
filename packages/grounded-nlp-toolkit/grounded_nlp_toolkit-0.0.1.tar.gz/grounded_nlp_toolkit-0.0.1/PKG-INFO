@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: grounded-nlp-toolkit
+Version: 0.0.1
+Summary: This is the alpha version of a library for NLP, especially Image Captioning, Information Retrieval and Text Analysis.
+License: MIT
+Keywords: nlp,ai,computational linguistics,text analysis,dialogue
+Author: Robin
+Author-email: rojowiec@hotmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: nltk (>=3.5,<4.0)
+Requires-Dist: spacy (>=2.3.0,<3.0.0)

@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "grounded_nlp_toolkit"
+version = "0.0.1"
+description = "This is the alpha version of a library for NLP, especially Image Captioning, Information Retrieval and Text Analysis."
+authors = ["Robin <rojowiec@hotmail.com>"]
+license = "MIT"
+keywords = ["nlp", "ai", "computational linguistics", "text analysis", "dialogue"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+spacy = "^2.3.0"
+nltk = "^3.5"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
