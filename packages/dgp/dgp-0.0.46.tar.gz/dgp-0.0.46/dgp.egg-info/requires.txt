@@ -1,0 +1,6 @@
+dataflows>=0.1.2
+PyYAML
+
+[develop]
+pylama
+tox
