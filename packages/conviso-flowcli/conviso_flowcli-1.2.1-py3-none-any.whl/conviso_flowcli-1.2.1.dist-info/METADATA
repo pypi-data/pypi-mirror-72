@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: conviso-flowcli
+Version: 1.2.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Jean Carlos Sales Pantoja
+Author-email: jpantoja@convisoappsec.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.4
+Requires-Dist: GitPython (<4,>=3.1.2)
+Requires-Dist: click (<8,>=7.1.2)
+Requires-Dist: requests (<3,>=2.23.0)
+Requires-Dist: semantic-version (<3,>=2.8.5)
+Requires-Dist: docker (<5,>=4.2.1)
+
+UNKNOWN
+
+
