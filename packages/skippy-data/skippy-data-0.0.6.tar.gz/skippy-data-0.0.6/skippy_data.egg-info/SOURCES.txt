@@ -1,0 +1,13 @@
+README.md
+setup.py
+skippy/__init__.py
+skippy/data/__init__.py
+skippy/data/decorator.py
+skippy/data/helper.py
+skippy/data/minio.py
+skippy/data/utils.py
+skippy_data.egg-info/PKG-INFO
+skippy_data.egg-info/SOURCES.txt
+skippy_data.egg-info/dependency_links.txt
+skippy_data.egg-info/requires.txt
+skippy_data.egg-info/top_level.txt
