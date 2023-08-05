@@ -1,0 +1,11 @@
+README.md
+setup.py
+sidemash_sdk/Auth.py
+sidemash_sdk/SidemashClient.py
+sidemash_sdk/__init__.py
+sidemash_sdk.egg-info/PKG-INFO
+sidemash_sdk.egg-info/SOURCES.txt
+sidemash_sdk.egg-info/dependency_links.txt
+sidemash_sdk.egg-info/top_level.txt
+sidemash_sdk/example/__init__.py
+sidemash_sdk/example/example.py
