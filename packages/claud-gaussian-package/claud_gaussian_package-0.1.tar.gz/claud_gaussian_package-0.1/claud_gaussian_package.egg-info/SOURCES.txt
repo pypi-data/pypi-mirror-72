@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+claud_gaussian_package/Binomialdistribution.py
+claud_gaussian_package/Gaussiandistribution.py
+claud_gaussian_package/Generaldistribution.py
+claud_gaussian_package/__init__.py
+claud_gaussian_package.egg-info/PKG-INFO
+claud_gaussian_package.egg-info/SOURCES.txt
+claud_gaussian_package.egg-info/dependency_links.txt
+claud_gaussian_package.egg-info/not-zip-safe
+claud_gaussian_package.egg-info/top_level.txt
