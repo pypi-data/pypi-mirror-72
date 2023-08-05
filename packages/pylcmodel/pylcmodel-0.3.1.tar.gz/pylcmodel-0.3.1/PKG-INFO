@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pylcmodel
+Version: 0.3.1
+Summary: Local CLI to forward lcmodel commands to remote machine
+Home-page: https://github.com/openmrslab/pylcmodel.git
+Author: bennyrowland
+Author-email: bennyrowland@mac.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: test

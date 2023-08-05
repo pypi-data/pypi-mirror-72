@@ -1,0 +1,13 @@
+README.rst
+setup.py
+pylcmodel/__init__.py
+pylcmodel/_lcmodel.py
+pylcmodel/_version.py
+pylcmodel/cli.py
+pylcmodel/namelist.py
+pylcmodel.egg-info/PKG-INFO
+pylcmodel.egg-info/SOURCES.txt
+pylcmodel.egg-info/dependency_links.txt
+pylcmodel.egg-info/entry_points.txt
+pylcmodel.egg-info/requires.txt
+pylcmodel.egg-info/top_level.txt
