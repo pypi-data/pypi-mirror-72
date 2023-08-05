@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ArchivViewer.egg-info/PKG-INFO
+ArchivViewer.egg-info/SOURCES.txt
+ArchivViewer.egg-info/dependency_links.txt
+ArchivViewer.egg-info/entry_points.txt
+ArchivViewer.egg-info/requires.txt
+ArchivViewer.egg-info/top_level.txt
+archivviewer/__init__.py
+archivviewer/archivviewer.py
+archivviewer/forms/__init__.py
+archivviewer/forms/archivviewer_ui.py
+archivviewer/forms/avconfig_ui.py
+forms/archivviewer.ui
+forms/avconfig.ui

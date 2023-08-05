@@ -1,0 +1,7 @@
+lhafile>=0.2.2
+PyPDF2>=1.26.0
+img2pdf>=0.3.6
+PyQt5>=5.15.0
+watchdog>=0.10.2
+pyqt-distutils
+fdb
