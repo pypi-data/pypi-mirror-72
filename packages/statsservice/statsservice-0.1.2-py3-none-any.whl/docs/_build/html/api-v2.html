@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API v2 &mdash; MONARC Stats API 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Blueprint stats" href="stats.html" />
+    <link rel="prev" title="API v1" href="api-v1.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MONARC Stats API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="api-v1.html">API v1</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API v2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#endpoints">Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#authentication">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simple-examples">Simple Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#more-advanced-usage">More advanced usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#stats">Stats</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="stats.html">Blueprint stats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line-interface.html">Command Line Interface</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MONARC Stats API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API v2</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api-v2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-v2">
+<h1>API v2<a class="headerlink" href="#api-v2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="endpoints">
+<h2>Endpoints<a class="headerlink" href="#endpoints" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>/api/v2/organizations/  <code class="docutils literal notranslate"><span class="pre">(will</span> <span class="pre">be</span> <span class="pre">removed)</span></code></p></li>
+<li><p>/api/v2/stats/</p></li>
+</ul>
+</div>
+<div class="section" id="authentication">
+<span id="section-authentication"></span><h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h2>
+<p>When the authentication is enabled, the client must send a token in the headers
+of the request with the key <code class="docutils literal notranslate"><span class="pre">X-API-KEY</span></code>. Here is an example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -H <span class="s2">&quot;X-API-KEY: SylsDTZTBk2zAkg016vW_aCuO1XQDXPsxrLuI1TG7z5sYvUfRlVf5R4g6kDnLI_o-c5iqrswrWzPANDKXmtV7Q&quot;</span>  http://127.0.0.1:5000/api/v2/stats/
+<span class="o">{</span><span class="s2">&quot;data&quot;</span>: <span class="o">[{</span><span class="s2">&quot;uuid&quot;</span>: <span class="s2">&quot;76a3999f-ab22-4008-a540-f68082f44cb2&quot;</span>, <span class="s2">&quot;anr&quot;</span>: <span class="m">2</span>, <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;risk&quot;</span>, <span class="s2">&quot;day&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;week&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;month&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;data&quot;</span>: <span class="o">{</span><span class="s2">&quot;what&quot;</span>: <span class="s2">&quot;you want&quot;</span>, <span class="s2">&quot;super&quot;</span>: <span class="s2">&quot;cool&quot;</span><span class="o">}</span>, <span class="s2">&quot;created_at&quot;</span>: <span class="s2">&quot;2020-05-11T21:56:49.584000&quot;</span>, <span class="s2">&quot;updated_at&quot;</span>: <span class="s2">&quot;2020-05-11T21:56:49.584000&quot;</span>, <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;5eb9ca210381f6f321022ae6&quot;</span><span class="o">}</span>, <span class="o">{</span><span class="s2">&quot;uuid&quot;</span>: <span class="s2">&quot;66f20692-b627-41e6-8d11-030bd84ee479&quot;</span>, <span class="s2">&quot;organization&quot;</span>: <span class="s2">&quot;CASES&quot;</span>, <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;risk&quot;</span>, <span class="s2">&quot;day&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;week&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;month&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;data&quot;</span>: <span class="o">{</span><span class="s2">&quot;what&quot;</span>: <span class="s2">&quot;you want&quot;</span>, <span class="s2">&quot;super&quot;</span>: <span class="s2">&quot;cool&quot;</span><span class="o">}</span>, <span class="s2">&quot;created_at&quot;</span>: <span class="s2">&quot;2020-05-11T21:57:20.531000&quot;</span>, <span class="s2">&quot;updated_at&quot;</span>: <span class="s2">&quot;2020-05-11T21:57:20.531000&quot;</span>, <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;5eb9ca400381f6f321022ae7&quot;</span><span class="o">}</span>, <span class="o">{</span><span class="s2">&quot;uuid&quot;</span>: <span class="s2">&quot;e52bbd60-6a99-4e02-bcfd-e454553230f8&quot;</span>, <span class="s2">&quot;organization&quot;</span>: <span class="s2">&quot;CASES&quot;</span>, <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;risk&quot;</span>, <span class="s2">&quot;day&quot;</span>: <span class="m">2</span>, <span class="s2">&quot;week&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;month&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;data&quot;</span>: <span class="o">{</span><span class="s2">&quot;what&quot;</span>: <span class="s2">&quot;you want&quot;</span>, <span class="s2">&quot;super&quot;</span>: <span class="s2">&quot;cool&quot;</span><span class="o">}</span>, <span class="s2">&quot;created_at&quot;</span>: <span class="s2">&quot;2020-05-11T21:57:43.293000&quot;</span>, <span class="s2">&quot;updated_at&quot;</span>: <span class="s2">&quot;2020-05-11T21:57:43.293000&quot;</span>, <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;5eb9ca570381f6f321022ae8&quot;</span><span class="o">}</span>, <span class="o">{</span><span class="s2">&quot;uuid&quot;</span>: <span class="s2">&quot;b23f081e-e142-4cca-9f43-1e11b4368c9d&quot;</span>, <span class="s2">&quot;organization&quot;</span>: <span class="s2">&quot;CASES&quot;</span>, <span class="s2">&quot;anr&quot;</span>: <span class="m">2</span>, <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;risk&quot;</span>, <span class="s2">&quot;day&quot;</span>: <span class="m">2</span>, <span class="s2">&quot;week&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;month&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;data&quot;</span>: <span class="o">{</span><span class="s2">&quot;what&quot;</span>: <span class="s2">&quot;you want&quot;</span>, <span class="s2">&quot;super&quot;</span>: <span class="s2">&quot;cool&quot;</span><span class="o">}</span>, <span class="s2">&quot;created_at&quot;</span>: <span class="s2">&quot;2020-05-11T22:00:55.584000&quot;</span>, <span class="s2">&quot;updated_at&quot;</span>: <span class="s2">&quot;2020-05-11T22:00:55.584000&quot;</span>, <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;5eb9cb170381f6f321022ae9&quot;</span><span class="o">}]</span>, <span class="s2">&quot;has_more&quot;</span>: false<span class="o">}</span>
+</pre></div>
+</div>
+<p>This token enable to identify an organization.
+By default when creating a new organization
+(<a class="reference internal" href="command-line-interface.html#section-creating-an-organization"><span class="std std-ref">Creating an organization</span></a>) Stats API will use the
+<a class="reference external" href="https://docs.python.org/3/library/secrets.html#secrets.token_urlsafe">secrets.token_urlsafe</a>
+function to generate a token. It is possible to specify it manually.</p>
+<p>Example of a failed authentication:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -H <span class="s2">&quot;X-API-KEY: BAD-TOKEN&quot;</span>  http://127.0.0.1:5000/api/v2/stats/
+<span class="o">{</span><span class="s2">&quot;error&quot;</span>: <span class="s2">&quot;Unauthorized&quot;</span><span class="o">}</span>
+
+$ curl -i -H <span class="s2">&quot;X-API-KEY: BAD-TOKEN&quot;</span>  http://127.0.0.1:5000/api/v2/stats/
+HTTP/1.0 <span class="m">401</span> Unauthorized
+Vary: Accept
+Content-Type: application/json
+Content-Length: <span class="m">25</span>
+Server: Werkzeug/1.0.1 Python/3.8.0
+Date: Tue, <span class="m">12</span> May <span class="m">2020</span> <span class="m">21</span>:52:15 GMT
+
+<span class="o">{</span><span class="s2">&quot;error&quot;</span>: <span class="s2">&quot;Unauthorized&quot;</span><span class="o">}</span>
+</pre></div>
+</div>
+<p>The authentication can be disabled via the configuration file by setting the
+value of <code class="docutils literal notranslate"><span class="pre">API_KEY_AUTHENTICATION</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>For clarity in the following documentation we will ignore the authentication.</p>
+</div>
+<div class="section" id="simple-examples">
+<h2>Simple Examples<a class="headerlink" href="#simple-examples" title="Permalink to this headline">¶</a></h2>
+<p>Get all organizations</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl http://127.0.0.1:5000/api/v2/organizations/
+<span class="o">{</span><span class="s2">&quot;data&quot;</span>: <span class="o">[]</span>, <span class="s2">&quot;has_more&quot;</span>: false<span class="o">}</span>
+</pre></div>
+</div>
+<p>Create an organization (let’s say with only a token for the moment - same token for the MONARC client/organization):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -H <span class="s2">&quot;Content-Type: application/json&quot;</span> -X POST -d <span class="se">\</span>
+<span class="s1">&#39;{&quot;name&quot;:&quot;CASES&quot;,&quot;token&quot;: &quot;oypvIaGU7uvuJbR4wgYrB7ef1HeXc9sh5g-zrH9WjmHbWHDk3L36lycYEgJevQ9wo-Wv_5PvxNlbIgZTBXVaMw&quot;}&#39;</span> http://127.0.0.1:5000/api/v2/organizations/
+</pre></div>
+</div>
+<p>This should be done via the dedicated command. This method will be probably removed.</p>
+<p>Get all stats</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl http://127.0.0.1:5000/api/v2/stats/
+<span class="o">{</span><span class="s2">&quot;data&quot;</span>: <span class="o">[]</span>, <span class="s2">&quot;has_more&quot;</span>: false<span class="o">}</span>
+</pre></div>
+</div>
+<p>Create a stat</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># data is a DynamicField</span>
+<span class="c1"># note that we are using the MongoDB id of the created org:</span>
+$ curl -H <span class="s2">&quot;Content-Type: application/json&quot;</span> -X POST -d <span class="se">\</span>
+<span class="s1">&#39;{&quot;type&quot;: &quot;risk&quot;, &quot;anr&quot;: 2, &quot;data&quot;: {&quot;what&quot;: &quot;you want&quot;, &quot;super&quot;: &quot;cool&quot;}, &quot;day&quot;:1, &quot;week&quot;:1, &quot;month&quot;:1}&#39;</span> http://127.0.0.1:5000/api/v2/stats/
+<span class="o">{</span><span class="s2">&quot;uuid&quot;</span>: <span class="s2">&quot;76a3999f-ab22-4008-a540-f68082f44cb2&quot;</span>, <span class="s2">&quot;organization&quot;</span>: <span class="s2">&quot;CASES&quot;</span>, <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;risk&quot;</span>, <span class="s2">&quot;day&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;week&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;month&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;data&quot;</span>: <span class="o">{</span><span class="s2">&quot;what&quot;</span>: <span class="s2">&quot;you want&quot;</span>, <span class="s2">&quot;super&quot;</span>: <span class="s2">&quot;cool&quot;</span><span class="o">}</span>, <span class="s2">&quot;created_at&quot;</span>: <span class="s2">&quot;2020-05-11T21:56:49.584000&quot;</span>, <span class="s2">&quot;updated_at&quot;</span>: <span class="s2">&quot;2020-05-11T21:56:49.584000&quot;</span>, <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;5eb9ca210381f6f321022ae6&quot;</span><span class="o">}</span>
+</pre></div>
+</div>
+<p>Get the last stat with the id returned previously:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl http://127.0.0.1:5000/api/v2/stats/5eb9ca210381f6f321022ae6/
+<span class="o">{</span><span class="s2">&quot;organization&quot;</span>: <span class="s2">&quot;5ea3717b0cdd5b63ad17b6ce&quot;</span>, <span class="s2">&quot;anr&quot;</span>: <span class="m">2</span>, <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;risk&quot;</span>, <span class="s2">&quot;day&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;week&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;month&quot;</span>: <span class="m">1</span>, <span class="s2">&quot;data&quot;</span>: <span class="o">{</span><span class="s2">&quot;what&quot;</span>: <span class="s2">&quot;you want&quot;</span>, <span class="s2">&quot;super&quot;</span>: <span class="s2">&quot;cool&quot;</span><span class="o">}</span>, <span class="s2">&quot;created_at&quot;</span>: <span class="s2">&quot;2020-04-24T23:38:26.326000&quot;</span>, <span class="s2">&quot;updated_at&quot;</span>: <span class="s2">&quot;2020-04-24T23:38:26.326000&quot;</span>, <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;5ea378728f826c539837436a&quot;</span><span class="o">}</span>
+</pre></div>
+</div>
+<p>You can also use pagination:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl http://127.0.0.1:5000/api/v2/stats/?_skip<span class="o">=</span><span class="m">0</span><span class="p">&amp;</span><span class="nv">_limit</span><span class="o">=</span><span class="m">10</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="more-advanced-usage">
+<h2>More advanced usage<a class="headerlink" href="#more-advanced-usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="stats">
+<span id="section-stats-api"></span><h3>Stats<a class="headerlink" href="#stats" title="Permalink to this headline">¶</a></h3>
+<p>Filtering on attributes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl http://127.0.0.1:5000/api/v2/stats/?day<span class="o">=</span><span class="m">1</span><span class="p">&amp;</span><span class="nv">month</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+<p>You must be warned that this is a shortcut, the more precise query is:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl http://127.0.0.1:5000/api/v2/stats/?day__exact<span class="o">=</span><span class="m">1</span><span class="p">&amp;</span><span class="nv">month__exact</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+<p>Getting all stats from the month of February of type <em>risk</em> for an organization:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl http://127.0.0.1:5000/api/v2/stats/?organization<span class="o">=</span>CASES<span class="p">&amp;</span><span class="nv">type</span><span class="o">=</span>risk<span class="p">&amp;</span><span class="nv">month</span><span class="o">=</span><span class="m">2</span>
+</pre></div>
+</div>
+<p>Filtering on attributes with methods:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl http://127.0.0.1:5000/api/v2/stats/?created_at__gt<span class="o">=</span><span class="m">2020</span>-05-12T22:29:42.362000
+</pre></div>
+</div>
+<p>Of course not only <code class="docutils literal notranslate"><span class="pre">`__gt`</span></code> is available. Available methods are:</p>
+<ul class="simple">
+<li><p>todo :-)</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl http://127.0.0.1:5000/api/v2/stats/?type<span class="o">=</span>risk<span class="p">&amp;</span><span class="nv">month__gt</span><span class="o">=</span><span class="m">2</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl http://127.0.0.1:5000/api/v2/stats/?type<span class="o">=</span>risk<span class="p">&amp;</span><span class="nv">month__gt</span><span class="o">=</span><span class="m">2</span><span class="p">&amp;</span><span class="nv">month__lt</span><span class="o">=</span><span class="m">8</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="stats.html" class="btn btn-neutral float-right" title="Blueprint stats" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api-v1.html" class="btn btn-neutral float-left" title="API v1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Cédric Bonhomme &lt;cedric@cedricbonhomme.org&gt;
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
