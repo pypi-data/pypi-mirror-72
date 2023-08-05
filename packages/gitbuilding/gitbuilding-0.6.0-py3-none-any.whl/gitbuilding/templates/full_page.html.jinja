@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ favicon_html | safe }}
+    <link href="{{root}}static/style.css" rel="stylesheet">
+    {% for sheet in custom_stylesheets %}
+        <link href="{{root}}{{sheet}}" rel="stylesheet">
+    {% endfor %}
+    <script type="text/javascript" src="{{root}}static/3d-viewer.js"></script>
+    
+</head>
+<body>
+{% include 'body.html.jinja' %}
+</body>
+</html>
