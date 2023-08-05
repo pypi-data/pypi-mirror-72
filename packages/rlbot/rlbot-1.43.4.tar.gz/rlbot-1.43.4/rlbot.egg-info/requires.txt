@@ -1,0 +1,8 @@
+psutil==5.6.6
+inputs
+PyQt5
+py4j
+websockets
+dataclasses
+webdriver_manager
+requirements-parser
