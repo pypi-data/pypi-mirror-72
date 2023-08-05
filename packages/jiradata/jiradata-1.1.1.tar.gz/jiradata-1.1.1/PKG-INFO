@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: jiradata
+Version: 1.1.1
+Summary: Simple JIRA data manipulation
+Author: Khalid
+Author-email: khalidck@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: pandas (>=1.0.5,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Jira data
+
+> Cause sometimes you need to sort out your issues
+
+Programmatic way to pull out your issues.
+
+## Install
+
+`pip install jiradata`
+
+## How to use ?
+
+Write a csv report
+
+```shell
+cat response.json | jiradata myreport.csv
+```
+
+With some 'Epic' and issue related to it :
+
+```shell
+cat response.json |jiradata --epic-field customfield_10000 report.csv
+```
+
+## Hold up what is this `reponse.json` ?
+
+Issues in json format from the JIRA REST API.
+
+What I found convenient is to use the [search API](https://developer.atlassian.com/cloud/jira/platform/rest/v2/#api-rest-api-2-search-post)) with JQL.
+
+You can chain unix style arguments using [httpie](https://httpie.org/)
+
+config.json
+
+```json
+{
+  "jql": "project = QA",
+  "startAt": 0,
+  "maxResults": 2,
+  "fields": ["id", "key"]
+}
+```
+
+Command line (redirect stdout to the right location)
+
+```sh
+cat config.json|http -a myusername post 'https://<site-url>/rest/api/2/search'
+```
+
+## Related
+
+- Built in jira : [Export results to microsoft Excel](https://confluence.atlassian.com/jira061/jira-user-s-guide/searching-for-issues/working-with-search-result-data/exporting-search-results-to-microsoft-excel)
+- https://github.com/pycontribs/jira
