@@ -1,0 +1,10 @@
+README.md
+setup.py
+rctf/golf/__init__.py
+rctf/golf/exceptions.py
+rctf/golf/util.py
+rctf_golf.egg-info/PKG-INFO
+rctf_golf.egg-info/SOURCES.txt
+rctf_golf.egg-info/dependency_links.txt
+rctf_golf.egg-info/requires.txt
+rctf_golf.egg-info/top_level.txt
