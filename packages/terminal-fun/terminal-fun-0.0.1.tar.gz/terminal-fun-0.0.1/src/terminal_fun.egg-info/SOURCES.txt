@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+test_terminalfun.py
+src/terminalfun.py
+src/terminal_fun.egg-info/PKG-INFO
+src/terminal_fun.egg-info/SOURCES.txt
+src/terminal_fun.egg-info/dependency_links.txt
+src/terminal_fun.egg-info/requires.txt
+src/terminal_fun.egg-info/top_level.txt
