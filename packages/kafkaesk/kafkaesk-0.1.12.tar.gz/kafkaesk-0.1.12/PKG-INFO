@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: kafkaesk
+Version: 0.1.12
+Summary: This project is meant to help facilitate easily publishing and subscribing to events with python and Kafka.
+Author: vangheem
+Author-email: vangheem@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: aiokafka (>=0.6.0,<0.7.0)
+Requires-Dist: jsonschema (>=3.2.0,<4.0.0)
+Requires-Dist: kafka-python (>=2.0.1,<3.0.0)
+Requires-Dist: orjson (>=3.0.0,<4.0.0)
+Requires-Dist: pydantic (>=1.5.1,<2.0.0)
+Project-URL: GitHub, https://github.com/onna/kafkaesk
