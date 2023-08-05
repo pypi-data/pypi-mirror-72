@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/__init__.py
+src/subsheets.py
+subsheets.egg-info/PKG-INFO
+subsheets.egg-info/SOURCES.txt
+subsheets.egg-info/dependency_links.txt
+subsheets.egg-info/entry_points.txt
+subsheets.egg-info/requires.txt
+subsheets.egg-info/top_level.txt
