@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+{% block body %}
+    <section class="contact-block">
+        <div class="wrapper">
+            <div class="contact-block__form">
+                <h1>Send us a message</h1>
+                <form method="POST" class="post-form">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        <fieldset>
+                            {{ field.label_tag }}
+                            {{ field }}
+                            {{ field.errors }}
+                        </fieldset>
+                    {% endfor %}
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock body %}
