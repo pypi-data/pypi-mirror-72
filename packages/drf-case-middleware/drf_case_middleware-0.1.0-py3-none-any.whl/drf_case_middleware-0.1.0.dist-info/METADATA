@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: drf-case-middleware
+Version: 0.1.0
+Summary: Camel case to snake case and snake case to camel case for Django REST framework
+Home-page: https://github.com/django-breaker/drf-case-middleware
+Author: Jiyoon Ha
+Author-email: punkkid001@gmail.com
+License: MIT
+Keywords: drf-case-middleware
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+
+UNKNOWN
+
+
