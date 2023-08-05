@@ -1,0 +1,7 @@
+PyYAML>=3.1.0
+dogpile.cache
+pbr!=2.1.0,>=2.0.0
+python-slugify
+requests
+six>=1.6.0
+voluptuous<=0.10.5
