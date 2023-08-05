@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: walnuts
+Version: 0.0.3
+Summary: api test tools
+Home-page: https://github.com/sunhetao/walnuts
+Author: sunhetao
+Author-email: s13183036086@gmail.com
+License: UNKNOWN
+Keywords: api test,automation,testing,walnut
+Platform: any
+Requires-Dist: requests
+Requires-Dist: configobj
+Requires-Dist: pyyaml
+Requires-Dist: click
+Requires-Dist: jinja2
+
+simplify api testing
+
+
