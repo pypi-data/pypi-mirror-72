@@ -1,0 +1,12 @@
+README.md
+setup.py
+StockerMake/Stocker.py
+StockerMake/StockerMake.py
+StockerMake/__init__.py
+StockerMake/helpers.py
+StockerMake.egg-info/PKG-INFO
+StockerMake.egg-info/SOURCES.txt
+StockerMake.egg-info/dependency_links.txt
+StockerMake.egg-info/entry_points.txt
+StockerMake.egg-info/requires.txt
+StockerMake.egg-info/top_level.txt
