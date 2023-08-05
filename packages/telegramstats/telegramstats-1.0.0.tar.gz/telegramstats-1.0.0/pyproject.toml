@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "telegramstats"
+version = "1.0.0"
+description = "Parse GDPR-exported Telegram data and print stats to the console"
+authors = ["Stefano Pigozzi <ste.pigozzi@gmail.com>"]
+license = "AGPL-3.0-or-later"
+repository = "https://github.com/Steffo99/telegramstats"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^7.1.2"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+    telegramstats = 'telegramstats.__main__:main'
+
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

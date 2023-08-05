@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: telegramstats
+Version: 1.0.0
+Summary: Parse GDPR-exported Telegram data and print stats to the console
+Home-page: https://github.com/Steffo99/telegramstats
+License: AGPL-3.0-or-later
+Author: Stefano Pigozzi
+Author-email: ste.pigozzi@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Project-URL: Repository, https://github.com/Steffo99/telegramstats
+Description-Content-Type: text/markdown
+
+# `telegramstats`
+
+Parse GDPR-exported Telegram data and print stats to the console
+
+## Installation
+
+```
+pip install telegramstats
+```
+
+## Exporting Telegram data
+
+[Video](https://telegram.org/resources/video/ExDataBlog.mp4)
+
+## Commands
+
+### Count messages sent by chat actors
+
+```
+telegramstats count -c DataExport/
+```
+
