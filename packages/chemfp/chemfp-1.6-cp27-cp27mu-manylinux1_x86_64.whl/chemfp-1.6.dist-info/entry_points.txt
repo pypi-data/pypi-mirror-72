@@ -1,0 +1,8 @@
+[console_scripts]
+fpcat = chemfp.commandline:run_fpcat
+ob2fps = chemfp.commandline:run_ob2fps
+oe2fps = chemfp.commandline:run_oe2fps
+rdkit2fps = chemfp.commandline:run_rdkit2fps
+sdf2fps = chemfp.commandline:run_sdf2fps
+simsearch = chemfp.commandline:run_simsearch
+
