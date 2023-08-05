@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: prime-gen
+Version: 1.0
+Summary: A prime generator and checker
+Home-page: UNKNOWN
+Author: Makonede
+Author-email: antony@drop-of-ink.com
+License: MIT
+Keywords: python prime math
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: ~=3.8
+
+A package for generating and checking prime numbers.
+
+# Installation
+You can install `prime-gen` via the command line by using:
+
+```
+python -m pip install --user prime-gen
+```
+
+# Example Usage
+
+```py
+>>> import prime_gen
+>>> prime_gen.p(100)
+False
+>>> prime_gen.p(97)
+True
+>>> prime_gen.p(93)
+False
+>>> prime_gen.p(5)
+True
+>>> prime_gen.p(13)
+True
+>>> prime_gen.g(100)
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+>>> prime_gen.g(20)
+[2, 3, 5, 7, 11, 13, 17, 19]
+```
+
