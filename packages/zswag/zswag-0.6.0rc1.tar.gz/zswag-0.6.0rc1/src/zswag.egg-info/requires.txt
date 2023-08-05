@@ -1,0 +1,4 @@
+connexion
+requests
+zserio>=2.0.0rc3
+pyyaml
