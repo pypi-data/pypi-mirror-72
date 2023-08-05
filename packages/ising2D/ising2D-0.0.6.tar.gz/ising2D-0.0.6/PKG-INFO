@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: ising2D
+Version: 0.0.6
+Summary: A package to simulate the behaviour of an Ising model system.
+Home-page: https://github.com/nikhilkmr300/ising2D
+Author: Nikhil Kumar
+Author-email: nikhilkmr300@gmail.com
+License: UNKNOWN
+Description: Refer https://github.com/nikhilkmr300/ising2D/blob/master/README.md for description.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
