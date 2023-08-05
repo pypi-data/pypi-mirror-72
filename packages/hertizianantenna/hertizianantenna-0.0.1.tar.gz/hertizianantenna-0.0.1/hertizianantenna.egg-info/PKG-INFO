@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: hertizianantenna
+Version: 0.0.1
+Summary: this is a simple hertizian dipole antenna calculator
+Home-page: UNKNOWN
+Author: Desalegn Kassaw
+Author-email: dessalegnlove143@gmail.com
+License: MIT
+Description: 
+        
+        
+Keywords: antenna
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
