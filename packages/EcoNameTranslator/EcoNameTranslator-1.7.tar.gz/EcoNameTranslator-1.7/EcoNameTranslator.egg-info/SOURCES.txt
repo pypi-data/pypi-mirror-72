@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+EcoNameTranslator/EcoNameTranslator.py
+EcoNameTranslator/ReverseTranslator.py
+EcoNameTranslator/__init__.py
+EcoNameTranslator/commonNameAPI.py
+EcoNameTranslator/dataCleaning.py
+EcoNameTranslator/higherLevelAPI.py
+EcoNameTranslator/reverse.py
+EcoNameTranslator/taxonomyAPI.py
+EcoNameTranslator.egg-info/PKG-INFO
+EcoNameTranslator.egg-info/SOURCES.txt
+EcoNameTranslator.egg-info/dependency_links.txt
+EcoNameTranslator.egg-info/requires.txt
+EcoNameTranslator.egg-info/top_level.txt
