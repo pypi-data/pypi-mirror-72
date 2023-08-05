@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+sgpv/__init__.py
+sgpv/data.py
+sgpv/leukstats.csv
+sgpv/sgpv.py
+sgpv.egg-info/PKG-INFO
+sgpv.egg-info/SOURCES.txt
+sgpv.egg-info/dependency_links.txt
+sgpv.egg-info/requires.txt
+sgpv.egg-info/top_level.txt
