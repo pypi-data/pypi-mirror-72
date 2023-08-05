@@ -1,0 +1,18 @@
+<server lobbyname="Lobby" boot="">
+  <service port="6774" address="hostname/address" />
+  <map file="Lobby_map.xml" />
+  <message file="LobbyMessage.html" />
+  <room_defaults>
+    <passwords allow="yes"/>
+    <map file=""/>
+    <message file="LobbyMessage.html"/>
+  </room_defaults>
+  <room name="Example Persistant #1" password="password" boot="password">
+    <map file="Lobby_map.xml" />
+    <message file="LobbyMessage.html" />
+  </room>
+  <room name="Example Persistant #2" password="" boot="password">
+    <map file="Lobby_map.xml" />
+    <message file="LobbyMessage.html" />
+  </room>
+</server>

@@ -1,0 +1,4 @@
+[console_scripts]
+flexirpg = orpg.main:run_client
+flexirpg-server = orpg.server_cli:run_server
+

@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: flexirpg
+Version: 1.97.3
+Summary: Flexible RPG virtual tabletop application
+Home-page: https://gitlab.com/flexirpg/flexirpg
+Author: David Vrabel
+Author-email: dvrabel@cantab.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Topic :: Games/Entertainment :: Board Games
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Pillow
+Requires-Dist: cmd2
+Requires-Dist: importlib-metadata
+Requires-Dist: ply (>=3.11)
+Requires-Dist: setuptools
+Requires-Dist: wxPython (>=4)
+
+# FlexiRPG
+
+## Introduction
+
+FlexiRPG is a virtual tabletop for pen and paper role playing games.
+
+It aims to be rule system agnostic by providing flexible tools and
+features.
+
+FlexiRPG was originally derived from [OpenRPG](http://www.rpgobjects.com/index.php?c=orpg).
+
+## Requirements
+
+* [Python](http://www.python.org/) (3.7 or later).
+* [wxPython](http://www.wxpython.org/) 4.0.6 or later.
+* [PLY](http://www.dabeaz.com/ply/) 3.11 or later.
+
+## Installing dependencies.
+
+### pip
+
+    sudo apt-get install python3-pip
+
+### PLY
+
+    pip3 install --user -U ply
+
+### wxPython
+
+Install a pre-built package for your OS or Linux distribution.
+
+If there is no suitable pre-built package it will need to be built
+from source using `pip install`.
+
+1. Remove `libwebkit2gtk-3.0-dev` (as the wxWidgets will build with
+   this but wxPython expects a built with WebKit 1):
+
+       sudo apt-get remove libwebkit2gtk-3.0-dev
+
+2. Install dependencies:
+
+       sudo apt-get install g++ libjpeg-dev libgtk-3-dev libgl1-mesa-dev \
+           libglu1-mesa-dev libgstreamer1.0-dev \
+           libgstreamer-plugins-base1.0-dev libgstreamer-plugins-bad1.0-dev \
+           python-dev libwebkitgtk-3.0-dev`
+
+3. Install with pip:
+
+       pip3 install --user -U wxpython
+
+4- Troubleshooting
+
+If you get an error on while trying to fire up flexi.rpg
+`ImportError: libpng12.so.0: cannot open shared object file: No such file or directory`
+
+Follow instructions at: 
+
+[text](https://www.linuxuprising.com/2018/05/fix-libpng12-0-missing-in-ubuntu-1804.html)
+
+to install libpeng12-0 on your system
+
+## Upgrading from Releases before 1.96.2
+
+Nodes using the auto-reset feature and __reset magic variable should
+be updated to use the new, simpler method by:
+
+1. Replacing expression that update `__name` to set the `__name`
+   variable directly. (e.g., `update_hp = __name = "HP [hp] / [total_hp]"`
+   should be `__name = "HP [hp] / [total_hp]`).
+
+2. Removing any dice rolls used to trigger name, or icon updates.
+
+3. Using `__roll` in expressions instead of reading `__reset` in a
+   reset action (e.g., a damage node could have a
+   `__name = "Take [__roll] damage"` expression).
+
+4. Clearing the "Auto reset" checkbox and removing any reset action.
+
+## Upgrading from Releases before 1.95.0
+
+Maps saved in versions prior to 1.95.0 are not compatible and may not
+load correctly.
+
+If you manually added miniatures to the `~/.flexirpg/miniatures.xml`
+configuration file, these will need to be re-added to the library
+using the new menu option (Map -> Add Miniature to Library...).
+
+## New Icons
+
+A set of tree icons for use with 4e D&D powers is now included.  The
+following convention for 4e D&D powers is suggested:
+
+* yellow: basic attacks, green: at-will, blue: encounter, red: daily.
+
+* square: standard action; circle: move action; hexagon: minor action;
+  triangle: free/immediate action.
+
+* sword: melee; bow: ranged; square: close blast; circle: close burst;
+  circle+arrow: area burst; open square: utility/other.
+
+
