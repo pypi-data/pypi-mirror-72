@@ -1,0 +1,3 @@
+[console_scripts]
+git-power-ext = powerext.git_power_ext:cli
+
