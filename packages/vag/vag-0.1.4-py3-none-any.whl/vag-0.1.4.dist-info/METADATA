@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: vag
+Version: 0.1.4
+Summary: vagrant utility cli tool
+License: MIT
+Author: Seven Tella
+Author-email: 7onetella@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: Click (>=7.1.2,<8.0.0)
+Requires-Dist: jinja2 (>=2.11.2,<3.0.0)
+Requires-Dist: untangle (>=1.1.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Documentation
+[read the docs](https://vag.readthedocs.io/en/latest/index.html)
