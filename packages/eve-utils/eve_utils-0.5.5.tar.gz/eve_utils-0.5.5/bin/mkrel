@@ -1,0 +1,30 @@
+#!/usr/bin/env python
+
+import os
+import argparse
+import itertools
+from libcst import *
+
+
+class DomainDefinitionInserter(CSTTransformer):
+    def __init__(self, parent, child):
+        self.parent = parent
+        self.child = child
+
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('resource', help='The name of the resource to create.')
+    parser.add_argument('-c', '--no_common', help='Do not add common fields to this resource', action='store_true', default=False)
+
+    args = parser.parse_args()
+    resource = args.resource  # TODO: validate, safe name, etc.
+    add_common = not args.no_common 
+
+    if os.path.exists('eve_service.py') and os.path.exists('domain'):
+        print(f'Creating link rel from {child} (child) to {parent} (parent)')
+
+
+if __name__ == '__main__':
+    main()
