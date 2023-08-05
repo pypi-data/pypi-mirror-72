@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: converge4
+Version: 0.0.2
+Summary: A small package that merges two spreadsheets based on user input
+Home-page: https://github.com/ambottum/converge
+Author: Anna B
+Author-email: ambottum@gmail.com
+License: UNKNOWN
+Description: this is fun
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
