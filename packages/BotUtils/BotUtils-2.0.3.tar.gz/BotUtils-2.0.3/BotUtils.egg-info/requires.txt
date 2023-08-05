@@ -1,0 +1,8 @@
+colorlog
+credmgr
+praw
+psycopg2_binary
+sentry_sdk
+
+[tunnel]
+sshtunnel
