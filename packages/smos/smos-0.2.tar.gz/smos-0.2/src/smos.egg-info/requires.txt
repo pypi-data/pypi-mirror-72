@@ -1,0 +1,16 @@
+numpy>=1.13.0
+scipy
+pandas
+netcdf4
+repurpose
+pyresample
+pynetcf
+pygeobase
+ease_grid
+trollsift
+more_itertools
+
+[testing]
+pytest-cov<=2.9
+coverage==4.5.2
+pytest==3.8.2
