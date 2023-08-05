@@ -1,0 +1,14 @@
+pydantic_cli/__init__.py,sha256=DPJ3aVjWeqX_7bWS3PF4l3HGlASyHhgUvsx4pfiTgek,17730
+pydantic_cli/examples/__init__.py,sha256=6E5VupiS6Zl8Aa7lE4jpzKMTvowQBDIarkdy5bfG2bg,956
+pydantic_cli/examples/simple.py,sha256=uy81NDtreotNtTDGFieN8jIhPpC8dE7xyuY7wuJ_p_0,489
+pydantic_cli/examples/simple_schema.py,sha256=MdffCWSYwNdq8EoTTYl_AM2BRgMA7kKbDEiKMUQffe4,1647
+pydantic_cli/examples/simple_with_boolean.py,sha256=MsUJTvtAkDwfmLBUBN6J8sFtZrEIc-wpe-x9emMTlyI,516
+pydantic_cli/examples/simple_with_custom.py,sha256=RFNQyapzU-EeCtNFrUBLTyqmw-qdgNJFGlDQ_eUWhac,1040
+pydantic_cli/examples/simple_with_custom_and_setup_log.py,sha256=iSMDJJS88UjjE1msNZgBbz1miO9n7X91zNln8mdaG6g,1914
+pydantic_cli/examples/simple_with_json_config.py,sha256=tVlmk--0EZpBd2s_CYMjJxsp9LLPI8MKbCTx5YEPS7U,836
+pydantic_cli/examples/subparser.py,sha256=KCsNkwq1uSaRaSCR5nNSSxQ1rDceAKAkJfNdf24vIUE,2064
+pydantic_cli-2.0.0.dist-info/LICENSE,sha256=E_I86VxLcvYAqhYNt4ARvGI4o9Vk8usTH5_BipLlT54,1064
+pydantic_cli-2.0.0.dist-info/METADATA,sha256=NuqAKP04IcM1Lkgham7qnQHobWUFWFF4TRkHwqpNyzw,11556
+pydantic_cli-2.0.0.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+pydantic_cli-2.0.0.dist-info/top_level.txt,sha256=xenjaqr7sWn2SY9JFDHh0_PEXKCvsS4PmUCAINO9p8I,13
+pydantic_cli-2.0.0.dist-info/RECORD,,
