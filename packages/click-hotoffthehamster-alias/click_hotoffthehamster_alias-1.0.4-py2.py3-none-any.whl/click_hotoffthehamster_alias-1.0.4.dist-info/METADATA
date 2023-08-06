@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: click-hotoffthehamster-alias
+Version: 1.0.4
+Summary: Add aliases to click-hotoffthehamster commands
+Home-page: https://github.com/hotoffthehamster/click-hotoffthehamster-alias
+Author: Hot Off The Hamster
+Author-email: hotoffthehamster@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: click-hotoffthehamster (<8,>=7.1.1)
+Provides-Extra: dev
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: flake8-import-order ; extra == 'dev'
+Requires-Dist: tox-travis ; extra == 'dev'
+Requires-Dist: pytest (>=5.4.3) ; extra == 'dev'
+Requires-Dist: pytest-cov (>=2.10.0) ; extra == 'dev'
+Requires-Dist: coveralls ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+
+# click-hotoffthehamster-alias
+
+[![build](https://travis-ci.com/hotoffthehamster/click-hotoffthehamster-alias.svg?branch=release)](https://travis-ci.com/hotoffthehamster/click-hotoffthehamster-alias)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/hotoffthehamster/click-hotoffthehamster-alias/release/LICENSE)
+[![coverage](https://coveralls.io/repos/github/hotoffthehamster/click-hotoffthehamster-alias/badge.svg?branch=release)](https://coveralls.io/github/hotoffthehamster/click-hotoffthehamster-alias?branch=release)
+
+Add (multiple) aliases to a click_ group or command.
+
+In your [click](http://click.pocoo.org/) app:
+
+```python
+import click_hotoffthehamster as click
+from click_hotoffthehamster import ClickAliasedGroup
+
+@click.group(cls=ClickAliasedGroup)
+def cli():
+    pass
+
+@cli.command(aliases=['bar', 'baz', 'qux'])
+def foo():
+    """Run a command."""
+    click.echo('foo')
+```
+
+Will result in:
+```
+Usage: cli [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  foo (bar,baz,qux)  Run a command.
+```
+
+
