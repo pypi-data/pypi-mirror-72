@@ -1,0 +1,10 @@
+lxml
+six
+coloredlogs
+path.py
+minio
+cwltool
+rdflib
+keyring
+keyrings.cryptfile
+rdflib-jsonld
