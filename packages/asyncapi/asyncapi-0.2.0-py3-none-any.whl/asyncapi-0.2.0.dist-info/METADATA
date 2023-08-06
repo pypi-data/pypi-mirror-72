@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: asyncapi
+Version: 0.2.0
+Summary: asyncapi
+Home-page: https://github.com/dutradda/asyncapi
+License: UNKNOWN
+Author: Diogo Dutra
+Author-email: diogodutradamata@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Database
+Requires-Dist: circuitbreaker
+Requires-Dist: cachetools
+Requires-Dist: broadcaster
+Requires-Dist: mkdocs ; extra == "doc"
+Requires-Dist: mkdocs-material ; extra == "doc"
+Requires-Dist: markdown-include ; extra == "doc"
+Requires-Dist: requests ; extra == "http"
+Requires-Dist: broadcaster[kafka] ; extra == "kafka"
+Requires-Dist: broadcaster[postgres] ; extra == "postgres"
+Requires-Dist: broadcaster[redis] ; extra == "redis"
+Requires-Dist: black ; extra == "test"
+Requires-Dist: isort ; extra == "test"
+Requires-Dist: ipython ; extra == "test"
+Requires-Dist: mypy ; extra == "test"
+Requires-Dist: pytest-asyncio ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Requires-Dist: pytest-mock ; extra == "test"
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: flake8 ; extra == "test"
+Requires-Dist: bumpversion ; extra == "test"
+Requires-Dist: jsonschema ; extra == "test"
+Requires-Dist: asynctest ; extra == "test"
+Requires-Dist: pyyaml ; extra == "yaml"
+Project-URL: Documentation, https://dutradda.github.io/asyncapi/
+Provides-Extra: doc
+Provides-Extra: http
+Provides-Extra: kafka
+Provides-Extra: postgres
+Provides-Extra: redis
+Provides-Extra: test
+Provides-Extra: yaml
+
+# asyncapi
+Publish events using broadcaster lib from asyncapi specification
+
