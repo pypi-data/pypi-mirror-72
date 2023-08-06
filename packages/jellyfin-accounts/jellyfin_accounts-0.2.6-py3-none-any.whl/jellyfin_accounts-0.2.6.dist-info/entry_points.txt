@@ -1,0 +1,3 @@
+[console_scripts]
+jf-accounts=jellyfin_accounts:main
+
