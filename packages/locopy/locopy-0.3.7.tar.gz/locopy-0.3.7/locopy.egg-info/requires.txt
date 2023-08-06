@@ -1,0 +1,12 @@
+boto3>=1.9.92
+PyYAML>=5.1
+pandas>=0.25.2
+
+[pg8000]
+pg8000>=1.13.1
+
+[psycopg2]
+psycopg2>=2.7.7
+
+[snowflake]
+snowflake-connector-python[pandas]>=2.1.2
