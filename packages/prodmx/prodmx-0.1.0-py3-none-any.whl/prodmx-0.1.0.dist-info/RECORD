@@ -1,0 +1,14 @@
+prodmx/__init__.py,sha256=C-zf9pv10pi_CMa39qFq2bSz_FV4QF_koKN2On6r0Dw,76
+prodmx/build.py,sha256=rAMtYzrOLw4pvKBq12eOkuBUCevgwwVVt_ipFrDg_5w,946
+prodmx/build_pro_arc.py,sha256=HWkTGBWyZ5K4tGp5ZXmbrwuwP_Ar0skzjRnyXe6EF44,6395
+prodmx/build_pro_dom.py,sha256=abpLciCoDC32PfN1zBFDy4PXTdSDaaVay9CI6ZTCV0w,6330
+prodmx/config.ini,sha256=UOLtHSJWuKpltpdv5TBqTrqgTjbwqchCxex0D1Ck36U,1532
+prodmx/matrix.py,sha256=D0toTsZVq13wpC9Zq4jl5fpfdLnJ7xkeZCDRJ5MCMts,6905
+prodmx/pfam_filter.py,sha256=agcpwZxLXziYNsJg1_5uK2kiOxJQR2_OBpl8Kto3nRA,2383
+prodmx/util.py,sha256=6XIzmDVfUrvWxO41XO2Fh874LrrAAlFIowLy5h8oGT4,1815
+prodmx-0.1.0.dist-info/LICENSE,sha256=GGBX7pJiXTreusofuaD8z-myb8ClocoyOpgqOyjpAQs,1071
+prodmx-0.1.0.dist-info/METADATA,sha256=0d0FIpSFgKUVd_Cf8CQWDJ471KLTEIvCVqhi-jKH6H4,2086
+prodmx-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+prodmx-0.1.0.dist-info/entry_points.txt,sha256=9p5RoTnZZ_gTdbtwrnwo24jRuICXNbAbUfN16Ta37mE,119
+prodmx-0.1.0.dist-info/top_level.txt,sha256=Hbn1gDCMkoTzBIzAJHm6X_mGkV_KZwX5bwuzgiBnGlg,7
+prodmx-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,4 @@
+[console_scripts]
+prodmx-buildArchitecture = prodmx.build_pro_arc:main
+prodmx-buildDomain = prodmx.build_pro_dom:main
+
