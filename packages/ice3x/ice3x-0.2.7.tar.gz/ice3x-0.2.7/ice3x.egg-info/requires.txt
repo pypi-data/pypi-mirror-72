@@ -1,0 +1,14 @@
+requests
+
+[async]
+treq
+
+[dev]
+treq
+pytest_twisted
+bumpversion
+pytest
+pytest-mock
+pytest-twisted
+pytest-cov
+twine
