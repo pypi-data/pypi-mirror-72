@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: jigbot
+Version: 0.0.2
+Summary: Install essential Libraries to create Chatbot
+Home-page: UNKNOWN
+Author: Jiganesh Patil
+Author-email: jiganeshpatil01071999@gmail.com
+License: MIT
+Description: Install essential Libraries to create Chatbot and get user data
+Keywords: chatbot
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
