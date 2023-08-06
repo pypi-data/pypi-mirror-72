@@ -1,0 +1,12 @@
+.gitignore
+CHANGELOG.md
+LICENSE
+README.md
+setup.py
+pymccorrelation/__init__.py
+pymccorrelation/pymccorrelation.py
+pymccorrelation.egg-info/PKG-INFO
+pymccorrelation.egg-info/SOURCES.txt
+pymccorrelation.egg-info/dependency_links.txt
+pymccorrelation.egg-info/requires.txt
+pymccorrelation.egg-info/top_level.txt
