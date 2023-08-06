@@ -1,0 +1,13 @@
+requirements.txt
+setup.py
+mac_afk/__init__.py
+mac_afk/days.py
+mac_afk/hours.py
+mac_afk/minutes.py
+mac_afk/seconds.py
+mac_afk.egg-info/PKG-INFO
+mac_afk.egg-info/SOURCES.txt
+mac_afk.egg-info/dependency_links.txt
+mac_afk.egg-info/requires.txt
+mac_afk.egg-info/top_level.txt
+scripts/afk
