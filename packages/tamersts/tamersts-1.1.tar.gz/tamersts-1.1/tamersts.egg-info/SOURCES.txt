@@ -1,0 +1,10 @@
+setup.py
+tamersts/Binomialdistribution.py
+tamersts/Gaussiandistribution.py
+tamersts/Generaldistribution.py
+tamersts/__init__.py
+tamersts.egg-info/PKG-INFO
+tamersts.egg-info/SOURCES.txt
+tamersts.egg-info/dependency_links.txt
+tamersts.egg-info/not-zip-safe
+tamersts.egg-info/top_level.txt
