@@ -1,0 +1,12 @@
+genn/__init__.py,sha256=2lYuccz7j1KoUhjZzGlHiNWvct98WduF51asoAHTOFY,171
+genn/embedding.py,sha256=zC6jLAUy0_4ol_UgF18ttl8dA2l8tnbYxHsJ91JlNxg,6316
+genn/generator.py,sha256=hQv-_nWopvmRsvGE3ihh2srRpgEOaETBS9igzaoLN1I,11971
+genn/gpt2.py,sha256=-Z0DG8m2ofcVAaMDLRxyJaGndW4TfGPsogDelFQW9Rc,10417
+genn/gru.py,sha256=jiNja6iGD-VfOQ78L63snOw2eDQhAS8TQaW3DMp7-mY,7251
+genn/importers.py,sha256=rfQOCx1UKTAvFzy8U2xWyvCuOKe24AkFdv7cO_56vaQ,554
+genn/lstm.py,sha256=MO-5mcGLBHo5FS5INrWCSIJ-_JOFu-rYOjZxi5YUEjg,7433
+genn/preprocessing.py,sha256=VbHzTA5OGjegQx14_n4793A-zVjCQ3hqqTXX8vbY3Xs,9467
+genn-0.5.dist-info/METADATA,sha256=QZp6xcIXB94bRCR_K2kLKMNuZ0oQvmjbm7GuKPyeMBA,3047
+genn-0.5.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+genn-0.5.dist-info/top_level.txt,sha256=H22rOtDc7lnaKccWkKemX44IzOvCzjT4P3r3BXeKorY,5
+genn-0.5.dist-info/RECORD,,
