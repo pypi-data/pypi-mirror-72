@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: jmeter-metrics
+Version: 1.0.6
+Summary: Custom dashboard report for Jmeter
+Home-page: https://github.com/adiralashiva8/jmeter-metrics
+Author: Shiva Prasad Adirala
+Author-email: adiralashiva8@gmail.com
+License: MIT
+Description: Dashboard view of jmeter results created by parsing .jtl or .csv file
+Keywords: Jmeter report
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing
