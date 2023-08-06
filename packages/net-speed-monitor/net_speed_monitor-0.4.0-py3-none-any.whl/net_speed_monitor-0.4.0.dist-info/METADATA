@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: net-speed-monitor
+Version: 0.4.0
+Summary: A tool for monitoring Internet connection speed
+Home-page: https://github.com/allanlewis/net-speed-monitor
+Author: Allan Lewis
+Author-email: allanlewis99@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: bitmath (==1.3.*)
+Requires-Dist: click (==7.*)
+Requires-Dist: humanize (==2.*)
+Requires-Dist: python-dateutil (==2.*)
+Requires-Dist: systemd-python
+Requires-Dist: tabulate (==0.8.*)
+
+# net-speed-monitor
+A tool for monitoring Internet connection speed.
+
+
