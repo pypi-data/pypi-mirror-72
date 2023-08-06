@@ -1,0 +1,10 @@
+requests>=2.22
+click
+click-aliases
+click-option-group
+colorama
+pyotp
+requests
+tqdm
+tabulate
+pyjwt
