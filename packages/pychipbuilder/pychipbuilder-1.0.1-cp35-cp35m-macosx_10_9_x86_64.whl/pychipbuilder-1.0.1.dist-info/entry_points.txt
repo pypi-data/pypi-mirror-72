@@ -1,0 +1,3 @@
+[console_scripts]
+sfabric = chipbuilder.smartfabric.scripts.sfabric:main
+

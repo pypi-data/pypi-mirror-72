@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: pychipbuilder
+Version: 1.0.1
+Summary: ChipBuilder Python package for creating, designing, and interfacing with zGlue ZIPs.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: matplotlib
+Requires-Dist: pyvisa
+
+PyChipBuilder
+*************
+
+Version: 1.0.0
+
+Author(s): Jorge L. Rojas
+
+zGlue Inc, 883 N Shoreline Blvd, C200, Mountain View, CA 94043, USA
+
+Contact: jorge@zglue.com
+
+*Released under zOH License v. 1.0 for distribution and open-source development*
+
+
+Documentation
+=============
+
+PyChipBuilder documentation is available from https://zglue.com/oci/pychipbuilder
+
+
+Overview
+========
+
+PyChipBuilder is a Python implementation of zGlue's ChipBuilder tool. For now, the only supported functions are bring-up, debug, and testing. The package does this by using FTDI's D2XX drivers to communicate with zGlue's Smart Fabric. The installation comes with a command line interface script called ``sfabric``. zGlue Inc is distributing this library in the Python Package Index (PyPI) under zGlue Open Hardware V1 license.
+
+Supported FTDI devices include:
+
+* UART, GPIO and Multi-Protocol Synchronous Engine bridges:
+
+	* FT232H (single port, clock up to 30 MHz)
+	* FT2232H (dual port, clock up to 30 MHz)
+	* FT4232H (quad port, clock up to 30 MHz)
+
+
+Features
+========
+
+PyChipBuilder currently supports the following features:
+
+* Programming routing files to registers and/or OTP memory
+* Reading/Configuring SmartFabric's integrated peripherals
+
+
+Supported OSes
+==============
+
+* Windows
+* MacOS
+* Linux
+
+
+What's Included?
+================
+
+* PyChipBuilder source code
+* FTDI D2XX drivers
+* zGlue Open Hardware License V1 (zOH License V1)
+
+
