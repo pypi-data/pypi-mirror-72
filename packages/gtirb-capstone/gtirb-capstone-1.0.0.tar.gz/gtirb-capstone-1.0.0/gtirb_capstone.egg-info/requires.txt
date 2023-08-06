@@ -1,0 +1,13 @@
+capstone
+dataclasses
+gtirb
+keystone-engine
+
+[test]
+flake8
+isort
+pytest
+pytest-cov
+tox
+tox-wheel
+pre-commit

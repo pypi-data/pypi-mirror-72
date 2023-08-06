@@ -1,0 +1,11 @@
+README.md
+setup.py
+gtirb_capstone/__init__.py
+gtirb_capstone/instructions.py
+gtirb_capstone/rewriting.py
+gtirb_capstone/version.py
+gtirb_capstone.egg-info/PKG-INFO
+gtirb_capstone.egg-info/SOURCES.txt
+gtirb_capstone.egg-info/dependency_links.txt
+gtirb_capstone.egg-info/requires.txt
+gtirb_capstone.egg-info/top_level.txt
