@@ -1,0 +1,5 @@
+indexes:
+  - kind: Job
+    properties:
+    - name: batch_id
+    - name: status
