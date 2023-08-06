@@ -1,0 +1,16 @@
+almdrlib/__init__.py,sha256=dbdfsZS66i2_ZTj-XvKpDkIy1dlA2cLIiOwHNjSZy68,2222
+almdrlib/client.py,sha256=L882lFd0ZItJqof83g3MlUroDLg8UwgtmX4PyNA7Ohk,28780
+almdrlib/config.py,sha256=bj9wEFK-rg0t1Q0Ov3s8m0bkFXxXGVyjLDCkBEMv3Ak,7589
+almdrlib/constants.py,sha256=DgfnAEr3MmiKZU3LYTJwprbkZ1bSGPOSmSwDEATm_5M,352
+almdrlib/exceptions.py,sha256=pSmRPgWyGg-eyiHCgaxBD4AJxoN9ipj6VluhYFhWoTY,507
+almdrlib/region.py,sha256=cb5wd5apoHyGzEVWv0ah2VnZj8YQihXTbxsEk17Rg2c,1396
+almdrlib/session.py,sha256=QfD3fD2-4E0gfGPU0ayM4u3AREJJKkJdRYAuZEuHxf4,12152
+almdrlib/version.py,sha256=mghPuVISzUvDnGlUdOfohTgw5wc8Opdh7Xl9fQ_fvLs,117
+almdrlib/docs/__init__.py,sha256=t2Yd43bvoyOWqYZfImyblwKbdZ68o1HXyugSOOWdwmY,978
+almdrlib/docs/service.py,sha256=6afrHXVeLCQuLctRnX61yOSgdRPsIIT4tyQzWl3Itjs,12304
+alertlogic_sdk_python-1.0.29.dist-info/AUTHORS.rst,sha256=avwD1APR8ks8pUPY-pdqfUDii1Pj7Ne347WC7um6VMc,168
+alertlogic_sdk_python-1.0.29.dist-info/LICENSE,sha256=ilVPENu2JmctbUXAW8ddL0lKWFGlHihXb-Y8z6-1QMU,1076
+alertlogic_sdk_python-1.0.29.dist-info/METADATA,sha256=GTdqyFTV3KtgiaO4wE7LA3gx_mx3HNYBzZAZLpQfJYQ,3818
+alertlogic_sdk_python-1.0.29.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+alertlogic_sdk_python-1.0.29.dist-info/top_level.txt,sha256=LevbszFLSqdS3yOClOap4s8tc9OvBWCcPxnLaiN41PQ,9
+alertlogic_sdk_python-1.0.29.dist-info/RECORD,,
