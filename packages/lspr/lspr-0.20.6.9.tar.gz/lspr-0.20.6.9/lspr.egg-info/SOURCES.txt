@@ -1,0 +1,12 @@
+README.md
+setup.py
+lspr/Nanoparticle.py
+lspr/OpticalMaterial.py
+lspr/Sellmeier.py
+lspr/SpectralMeasurement.py
+lspr/__init__.py
+lspr.egg-info/PKG-INFO
+lspr.egg-info/SOURCES.txt
+lspr.egg-info/dependency_links.txt
+lspr.egg-info/requires.txt
+lspr.egg-info/top_level.txt
