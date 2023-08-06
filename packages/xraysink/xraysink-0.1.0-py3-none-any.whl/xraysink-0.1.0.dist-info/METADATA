@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: xraysink
+Version: 0.1.0
+Summary: Extra integrations for AWS X-RAY and asyncio Python.
+Home-page: https://github.com/garyd203/xraysink
+Keywords: AWS,XRay,python,asyncio
+Author: Gary Donovan
+Author-email: gazza@gazza.id.au
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: System :: Monitoring
+Project-URL: Documentation, https://github.com/garyd203/xraysink
+Project-URL: Repository, https://github.com/garyd203/xraysink
+Description-Content-Type: text/markdown
+
+# xraysink
+Extra integrations for AWS X-RAY and asyncio Python.
+
+
+## Licence
+This project uses the Apache 2.0 licence, to make it compatible with the primary
+[aws_xray_sdk](https://github.com/aws/aws-xray-sdk-python) library.
