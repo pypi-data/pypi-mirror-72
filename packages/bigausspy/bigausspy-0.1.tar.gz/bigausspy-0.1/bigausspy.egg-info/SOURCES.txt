@@ -1,0 +1,10 @@
+setup.py
+bigausspy/Binomialdistribution.py
+bigausspy/Gaussiandistribution.py
+bigausspy/Generaldistribution.py
+bigausspy/__init__.py
+bigausspy.egg-info/PKG-INFO
+bigausspy.egg-info/SOURCES.txt
+bigausspy.egg-info/dependency_links.txt
+bigausspy.egg-info/not-zip-safe
+bigausspy.egg-info/top_level.txt
