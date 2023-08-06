@@ -1,0 +1,6 @@
+__title__ = 'SECFE'
+__description__ = 'A Python package for downloading and extracting information from SEC Filings. As a note, this package requires lxml functions that may not run on Mac OS. '
+__url__ = 'https://github.com/arechiga-code/SECFE' # 'https://code.inva.in/'
+__github_url__ = 'https://github.com/arechiga-code/SECFE'
+__version__ = '0.1.1'
+__license__ = 'MIT'
