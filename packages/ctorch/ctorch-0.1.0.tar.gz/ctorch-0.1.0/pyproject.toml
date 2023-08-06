@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ctorch"
+version = "0.1.0"
+description = "Complex Neural Networks for PyTorch"
+authors = ["Miller Wilt <miller@pyriteai.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+torch = "^1.5.1"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+flake8 = "^3.8.3"
+flake8-bugbear = "^20.1.4"
+pytest = "^5.4.3"
+pyre-check = "^0.0.46"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
