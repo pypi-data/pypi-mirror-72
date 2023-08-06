@@ -1,0 +1,36 @@
+Metadata-Version: 1.1
+Name: lino-amici
+Version: 20.6.0
+Summary: A Lino application for managing family contacts
+Home-page: http://amici.lino-framework.org
+Author: Luc Saffre
+Author-email: luc@lino-framework.org
+License: BSD-2-Clause
+Description: 
+        Lino Amici is a customizable Lino application for managing family
+        contacts.  It is currently a submarine project, used only by its
+        author and therefore poorly documented.
+        
+        - The central project homepage is http://amici.lino-framework.org
+        
+        - For *introductions* and *commercial information* about Lino Amici
+          please see `www.saffre-rumma.net
+          <http://www.saffre-rumma.net>`__.
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Customer Service
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Bug Tracking
+Classifier: Topic :: Communications :: Email :: Address Book
+Classifier: Topic :: Office/Business :: Groupware
