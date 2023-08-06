@@ -1,0 +1,11 @@
+toil_container==1.1.6
+more-itertools<6.0.0
+
+[test]
+pytest==3.7.4
+coverage==4.4.2
+pydocstyle==2.1.1
+pytest-cov==2.5.1
+pytest-env==0.6.2
+pytest-sugar==0.9.1
+pylint==1.8.1

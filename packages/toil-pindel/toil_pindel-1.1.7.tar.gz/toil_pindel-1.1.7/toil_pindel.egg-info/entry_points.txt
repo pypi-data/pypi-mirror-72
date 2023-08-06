@@ -1,0 +1,3 @@
+[console_scripts]
+toil_pindel = toil_pindel.cli:main
+
