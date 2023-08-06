@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: sethealth
+Version: 1.5.1
+Summary: Backend for sethealth authentication in python.
+Home-page: https://github.com/sethealth/py-client
+Author: Pablo Eliseo
+Author-email: pabloeliseo@set.health
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: API,authentication,sethealth
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
