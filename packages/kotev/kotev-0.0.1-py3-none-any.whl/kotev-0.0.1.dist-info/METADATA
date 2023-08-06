@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: kotev
+Version: 0.0.1
+Summary: Tool for working with the Hebrew alphabet
+Home-page: https://www.github.com/bnext-iqt/corona-dashboard
+Author: JJ Ben-Joseph
+Author-email: jj@memoriesofzion.com
+License: Apache
+Keywords: natural_language
+Platform: UNKNOWN
+Classifier: Natural Language :: Hebrew
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: fire
+
+Kotev
+~~~~~
+
+All this does right now is convert Hebrew text from the Assyrian alphabet to the Phonencian alphabet.
+
+
+Installation
+~~~~~~~~~~~~
+
+:: 
+
+    pip install kotev
+
+
+Usage
+~~~~~
+
+::
+
+    kotev to_phoenician 'אם אין אני לי מי לי וכשאני לעצמי מה אני ואם לא עכשיו אימתי' 
+
+Outputs 𐤀𐤌 𐤀𐤉𐤍 𐤀𐤍𐤉 𐤋𐤉 𐤌𐤉 𐤋𐤉 𐤅𐤊𐤔𐤀𐤍𐤉 𐤋𐤏𐤑𐤌𐤉 𐤌𐤄 𐤀𐤍𐤉 𐤅𐤀𐤌 𐤋𐤀 𐤏𐤊𐤔𐤉𐤅 𐤀𐤉𐤌𐤕𐤉
+
+

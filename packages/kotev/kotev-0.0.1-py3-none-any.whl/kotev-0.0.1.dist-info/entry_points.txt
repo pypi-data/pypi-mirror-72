@@ -1,0 +1,3 @@
+[console_scripts]
+kotev = kotev.__main__:main
+
