@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pyfmu
+Version: 0.0.4
+Summary: A set of tools for developing functional-mockup-units (FMUs) using the full capabilities of Python.
+Home-page: https://github.com/INTO-CPS-Association/pyfmu
+Author: INTO-CPS Association
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/INTO-CPS-Association/pyfmu/issues
+Project-URL: Documentation, https://into-cps-application.readthedocs.io/en/latest/submodules/pyfmu/docs/index.html
+Project-URL: Source Code, https://github.com/INTO-CPS-Association/pyfmu
+Description: 
+        # PyFMU
+        PyFMU is a set of tools for developing functional-mockup-units (FMUs) using the full power of Python.
+        
+        ## Documentation
+        See the online documentation on how to use to tool and FMI in general see the INTO-CPS online documentation:
+        
+        https://into-cps-application.readthedocs.io
+        
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: docs
+Provides-Extra: tests
+Provides-Extra: gui
+Provides-Extra: dev
