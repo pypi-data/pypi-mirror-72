@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: global-logger
+Version: 0.2.9
+Summary: Global Logger
+Home-page: https://github.com/alertua/global_logger
+Author: Alexey Rubasheff
+Author-email: alexey.rubasheff@gmail.com
+License: MIT license
+Keywords: global_logger
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=2.7
+Requires-Dist: pendulum
+Requires-Dist: pathlib
+Requires-Dist: colorama
+Requires-Dist: colorlog
+Requires-Dist: future
+
+======================
+Global Logger
+======================
+
+
+.. image:: https://img.shields.io/pypi/v/global_logger.svg
+        :target: https://pypi.python.org/pypi/global_logger
+
+.. image:: https://readthedocs.org/projects/global-logger/badge/?version=latest
+        :target: https://global-logger.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+.. image:: https://github.com/ALERTua/global_logger/workflows/Python%20Package/badge.svg?branch=master
+        :target: https://github.com/ALERTua/global_logger/actions?query=workflow%3A%22Python+Package%22
+
+
+
+
+Global Logger
+
+Based on Python built-in logger, expands it and provides global logger to your system.
+
+* Free software: MIT license
+* Documentation: https://global-logger.readthedocs.io.
+
+
+Features
+--------
+
+* Python 2 and 3 compatible
+* Warning! Python2 files have to have 'from __future__ import print_function, unicode_literals' at the top
+
+
+=======
+History
+=======
+
+
+0.2.9 (2020-06-28)
+------------------
+
+* Refactoring
+* Bugfix
+
+
+0.2.6 (2020-06-27)
+------------------
+
+* GitHub Actions stabilized.
+
+
+0.1.0 (2020-06-23)
+------------------
+
+* First release on PyPI.
+
+
