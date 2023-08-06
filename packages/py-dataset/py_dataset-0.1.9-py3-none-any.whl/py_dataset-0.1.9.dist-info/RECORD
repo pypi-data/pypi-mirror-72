@@ -1,0 +1,12 @@
+py_dataset/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_dataset/dataset.py,sha256=tx0NWpu3oel524C-xgYZzl7zhjxGBzjCw-nZ_AKrl6s,21031
+py_dataset/libdataset.py,sha256=XYYL8zSxf3L9o-1zrMpDS-VlIL79212eDLq2X4MLGCg,19456
+py_dataset/lib/libdataset.dll,sha256=MDqEj_RkA2M64j-iyErP-JredRaJ_-Leyl1WVIsccMA,8536848
+py_dataset/lib/libdataset.dylib,sha256=lSsKK2jbsq1pvdloCG1KbrR6XYQZHjzvC9IGrgI3ABk,5886176
+py_dataset/lib/libdataset.h,sha256=ZJbu9fH0fW9h49MAfDGopw9LpDxcEAxNlgCtdn22V_g,12100
+py_dataset/lib/libdataset.so,sha256=QmIuTKyYehmMV0xmV_CxUryOwlStOexpw_xkNG4K4TA,6044592
+py_dataset-0.1.9.dist-info/LICENSE,sha256=vIpp6BDNOCkAFYR32KbiTLpCqKUeLfrIjthnNaOSWEg,1523
+py_dataset-0.1.9.dist-info/METADATA,sha256=cCbKPsl2liXytG9DjKM1cM09ITC_QBI5zb9Azvax4-I,5819
+py_dataset-0.1.9.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+py_dataset-0.1.9.dist-info/top_level.txt,sha256=3R4kkPxfjf0LmM0JU3hOAQ9wmp-x84caE8jB9-jKjUo,11
+py_dataset-0.1.9.dist-info/RECORD,,
