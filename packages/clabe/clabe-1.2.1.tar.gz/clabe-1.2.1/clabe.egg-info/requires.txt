@@ -1,0 +1,10 @@
+pydantic<2.0,>=1.4
+
+[test]
+pytest
+coverage<5
+pytest-cov
+black
+isort[pipfile]
+flake8
+mypy
