@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: commodutil
+Version: 1.0.2
+Summary: common commodity/oil analytics utils
+Home-page: UNKNOWN
+Author: aeorxc
+Author-email: author@example.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
