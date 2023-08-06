@@ -1,0 +1,15 @@
+{
+    "name": "Math",
+    "version": "1.0.0",
+    "author": "Emile Clark-Boman",
+    "description": "Kara Base Math Library",
+    "long-description": "",
+    "main": "main.py",
+    "commands": {
+        "math": {
+            "target": "generalMaths",
+            "keywords": ["+", "-", "x", "/", "^", "squared", "sign", "cosine", 
+                         "tangent", "root", "square root", "cube root"]
+        }
+    }
+}
