@@ -1,0 +1,29 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "GeneLearn"
+author = "Fitti"
+author-email = "dev@fitti.io"
+home-page = "https://github.com/Fittiboy/GeneLearn"
+description-file = "README.md"
+classifiers = [
+        "License :: OSI Approved :: Apache Software License",
+        "Development Status :: 1 - Planning",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Financial and Insurance Industry",
+        "Intended Audience :: Healthcare Industry",
+        "Intended Audience :: Information Technology",
+        "Intended Audience :: Legal Industry",
+        "Intended Audience :: Manufacturing",
+        "Intended Audience :: Other Audience",
+        "Intended Audience :: Science/Research",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+keywords = "AI, Artificial Intelilgence, Genetic Algorith, Evolutionary Algorithm, Evolution, Machine Learning, Gene, Learn"
+
+[tool.flit.metadata.urls]
+Documentation = "https://docs.genelearn.ai"
+Bugtracker = "https://github.com/Fittiboy/GeneLearn/issues"
+
