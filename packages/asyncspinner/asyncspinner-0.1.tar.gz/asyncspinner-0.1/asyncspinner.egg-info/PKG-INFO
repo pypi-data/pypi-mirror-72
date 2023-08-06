@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: asyncspinner
+Version: 0.1
+Summary: Little graphic to show user that something is waited for when a progress bar is overkill, or the progress is unknown.
+Home-page: UNKNOWN
+License: UNKNOWN
+Project-URL: Source Code, https://github.com/Hegdahl/asyncspinner
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
