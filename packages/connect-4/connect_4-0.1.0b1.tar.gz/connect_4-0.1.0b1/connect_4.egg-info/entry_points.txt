@@ -1,0 +1,3 @@
+[console_scripts]
+connect_4 = connect_4.game_engine:main
+
