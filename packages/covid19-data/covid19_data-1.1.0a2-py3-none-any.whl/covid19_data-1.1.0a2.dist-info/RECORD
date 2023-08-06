@@ -1,0 +1,11 @@
+covid19_data/__init__.py,sha256=YgAq6CBA6xaAhb4v2ww7qpUXPgbylT7xDWIrkSdxVTs,2579
+covid19_data/get_data.py,sha256=zCUAZRWRqMKmyE9vJta9P2YsPKe19ibJ64WLc5-jV8c,1187
+covid19_data/get_object.py,sha256=HxLmqr5lWzTjrzbQYFE7UZNyUYEVFjUEJ9YlhZJQJ58,3700
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_get_data.py,sha256=FVt-NulSrGlFlsHVCjqv3ciR7jHBok7QmLV0o18tuTs,2023
+tests/test_get_object.py,sha256=HNDEjrUJmMi7G-8pipMYKv4mEPgIlrj9J_P2eoc44xI,3710
+tests/test_main.py,sha256=C4-knAqbZhuVQnUobn2hFVIBWDJn8Bhpfa-h2oKhsJU,5353
+covid19_data-1.1.0a2.dist-info/METADATA,sha256=t25nfVG0ySJwn6eQm-KR9Ji1iV3rRM3nd7LFwvatb9I,8738
+covid19_data-1.1.0a2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+covid19_data-1.1.0a2.dist-info/top_level.txt,sha256=ToAgwqJE9N7GQkU1vIyvoMjOWTQCKiEdxGgXPVNSals,19
+covid19_data-1.1.0a2.dist-info/RECORD,,
