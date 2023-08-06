@@ -1,0 +1,27 @@
+{
+  "attachments": [
+    {
+      "fallback": "Required plain-text summary of the attachment.",
+      "color": "#34ebe2",
+      "pretext": "API Automation Full Suite - by Deepika",
+      "author_name": "Deepika Ramasamy",
+      "author_link": "http://flickr.com/bobby/",
+      "author_icon": "http://flickr.com/icons/bobby.jpg",
+      "title": "API Test Automation Report",
+      "title_link": "http://localhost:63342/python-api-testing/report/target/index.html?_ijt=3bh2lbqqgtkm8r1unt9iu02d09",
+      "text": "Attached HTML Report after the actual Execution",
+      "fields": [
+        {
+          "title": "Priority",
+          "value": "High",
+          "short": false
+        }
+      ],
+      "image_url": "http://my-website.com/path/to/image.jpg",
+      "thumb_url": "http://example.com/path/to/thumb.png",
+      "footer": "Slack API",
+      "footer_icon": "https://platform.slack-edge.com/img/default_application_icon.png",
+      "ts": 123456789
+    }
+  ]
+}

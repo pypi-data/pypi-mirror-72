@@ -1,0 +1,6 @@
+include README.md
+include pytest.ini
+include .gitignore
+include requirement.txt
+include pythondeeprestassured/report/logs
+include pythondeeprestassured/payload/*.json

@@ -1,0 +1,643 @@
+2020-06-08 18:43:54,014 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-08 18:43:54,015 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-08 18:43:54,090 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-08 18:43:54,091 — TestAPI — INFO — Fetched Json Value in Get Request [{'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'}] 
+2020-06-08 18:43:54,093 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-08 18:43:54,603 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-08 18:43:54,603 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-08 18:43:54,606 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-08 18:43:54,608 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-08 18:43:54,610 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'leader'} 
+2020-06-08 18:43:54,610 — APIMethods — INFO — post_request
+2020-06-08 18:43:55,115 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-08 18:43:55,116 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-08 18:43:55,118 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-08 18:43:55,118 — TestAPI — INFO — Fetched Json Value - name - in Post Request ['morpheus'] 
+2020-06-08 18:43:55,119 — TestAPI — INFO — Fetched Json Value - ID - in Post Request ['900'] 
+2020-06-08 18:43:55,121 — TestAPI — INFO — Test test_post_body_json_no_header passed.
+2020-06-08 18:43:55,123 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-08 18:43:55,123 — APIMethods — INFO — post_request
+2020-06-08 18:43:55,736 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-08 18:43:55,737 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-08 18:43:55,739 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-08 18:43:55,740 — TestAPI — INFO — Fetched Json Value - name - in Put Request ['morpheus'] 
+2020-06-08 18:43:55,740 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request ['2020-06-08T10:46:07.961Z'] 
+2020-06-08 20:03:02,284 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-08 20:03:02,285 — APIMethods — INFO — post_request
+2020-06-08 20:03:02,761 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-08 20:03:02,761 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-08 20:03:02,854 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-08 20:03:02,854 — TestAPI — INFO — Fetched Json Value - name - in Put Request ['morpheus'] 
+2020-06-08 20:03:02,855 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request ['2020-06-08T12:05:15.267Z'] 
+2020-06-08 20:03:20,184 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-08 20:03:20,184 — APIMethods — INFO — post_request
+2020-06-08 20:03:20,642 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-08 20:03:20,643 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-08 20:03:20,733 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-08 20:03:20,734 — TestAPI — INFO — Fetched Json Value - name - in Put Request ['morpheus'] 
+2020-06-08 20:03:20,734 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request ['2020-06-08T12:05:33.142Z'] 
+2020-06-08 20:03:34,046 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-08 20:03:34,046 — APIMethods — INFO — post_request
+2020-06-08 20:03:34,541 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-08 20:03:34,542 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-08 20:05:35,297 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-08 20:05:35,299 — APIMethods — INFO — post_request
+2020-06-08 20:05:37,704 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-08 20:05:37,706 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-08 20:05:38,035 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-08 20:05:38,037 — TestAPI — INFO — Fetched Json Value - name - in Put Request ['morpheus'] 
+2020-06-08 20:05:38,037 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request ['2020-06-08T12:07:50.218Z'] 
+2020-06-08 20:05:43,517 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-08 20:05:43,518 — APIMethods — INFO — post_request
+2020-06-08 20:08:05,949 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request http://api.openweathermap.org/data/2.5/weather?q=London&appid=WEATHER_API_KEY 
+2020-06-08 20:08:05,949 — APIMethods — INFO — post_request
+2020-06-08 20:08:06,087 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-08 20:18:08,312 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:34:37,543 — APIMethods — INFO — post_request
+2020-06-23 11:34:37,989 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:34:37,994 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:34:38,065 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:34:38,880 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 11:34:38,881 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 11:34:38,888 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 11:34:38,893 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 11:37:09,318 — APIMethods — INFO — post_request
+2020-06-23 11:37:09,446 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:37:09,448 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:37:09,522 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:37:09,999 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 11:37:09,999 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 11:37:10,005 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 11:37:10,008 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 11:38:05,506 — APIMethods — INFO — post_request
+2020-06-23 11:38:05,560 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:38:05,561 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:38:05,621 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:38:06,063 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 11:38:06,064 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 11:38:06,069 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 11:38:06,072 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 11:38:06,076 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'leader'} 
+2020-06-23 11:38:06,076 — APIMethods — INFO — post_request
+2020-06-23 11:38:06,492 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 11:38:06,493 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 11:38:06,495 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 11:38:06,504 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 11:38:06,504 — APIMethods — INFO — post_request
+2020-06-23 11:38:06,903 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 11:38:06,904 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:38:06,909 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:38:56,482 — APIMethods — INFO — post_request
+2020-06-23 11:38:56,539 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:38:56,541 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:38:56,604 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:44:10,178 — APIMethods — INFO — post_request
+2020-06-23 11:44:10,257 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:44:10,257 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:44:10,324 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:47:00,333 — APIMethods — INFO — post_request
+2020-06-23 11:47:00,413 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:47:00,414 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:47:00,488 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:47:00,488 — TestAPI — INFO — Fetched Json Value in Get Request [{'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'}] 
+2020-06-23 11:47:00,488 — TestAPI — INFO — Fetched Json Value in Get Request [{'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'}] 
+2020-06-23 11:47:00,488 — TestAPI — INFO — Fetched Json Value in Get Request [{'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'}] 
+2020-06-23 11:47:00,488 — TestAPI — INFO — Fetched Json Value in Get Request [{'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'}] 
+2020-06-23 11:47:00,490 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 11:47:00,490 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 11:47:00,490 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 11:47:00,490 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 11:47:00,764 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request http://api.openweathermap.org/data/2.5/weather?q=London&appid=WEATHER_API_KEY 
+2020-06-23 11:47:00,764 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request http://api.openweathermap.org/data/2.5/weather?q=London&appid=WEATHER_API_KEY 
+2020-06-23 11:47:00,764 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request http://api.openweathermap.org/data/2.5/weather?q=London&appid=WEATHER_API_KEY 
+2020-06-23 11:47:00,764 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request http://api.openweathermap.org/data/2.5/weather?q=London&appid=WEATHER_API_KEY 
+2020-06-23 11:47:00,765 — APIMethods — INFO — post_request
+2020-06-23 11:47:00,802 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:47:00,807 — APIMethods — INFO — post_request
+2020-06-23 11:47:03,438 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:47:03,439 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 11:47:06,779 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 11:47:06,779 — APIMethods — INFO — post_request
+2020-06-23 11:47:08,604 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 11:47:08,605 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 11:47:08,608 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 11:47:08,608 — TestAPI — INFO — Fetched Json Value - id - in Put Request 47 
+2020-06-23 11:47:08,608 — TestAPI — INFO — Fetched Json Value - id - in Put Request 47 
+2020-06-23 11:47:08,608 — TestAPI — INFO — Fetched Json Value - id - in Put Request 47 
+2020-06-23 11:47:08,608 — TestAPI — INFO — Fetched Json Value - id - in Put Request 47 
+2020-06-23 11:47:08,610 — CommonMethods — INFO —  Requesting Payload in Put Request {'id': 269735, 'language': ['Java', 'Python', 'c#'], 'yearexp': '5', 'lastused': '2020', 'st_id': '269740'} 
+2020-06-23 11:47:08,610 — TestAPI — INFO — Updated req_payload in End to End {'id': 47, 'language': ['Java', 'Python', 'c#'], 'yearexp': '5', 'lastused': '2020', 'st_id': 47} 
+2020-06-23 11:47:08,610 — TestAPI — INFO — Updated req_payload in End to End {'id': 47, 'language': ['Java', 'Python', 'c#'], 'yearexp': '5', 'lastused': '2020', 'st_id': 47} 
+2020-06-23 11:47:08,610 — TestAPI — INFO — Updated req_payload in End to End {'id': 47, 'language': ['Java', 'Python', 'c#'], 'yearexp': '5', 'lastused': '2020', 'st_id': 47} 
+2020-06-23 11:47:08,610 — TestAPI — INFO — Updated req_payload in End to End {'id': 47, 'language': ['Java', 'Python', 'c#'], 'yearexp': '5', 'lastused': '2020', 'st_id': 47} 
+2020-06-23 11:47:08,611 — APIMethods — INFO — post_request
+2020-06-23 11:47:08,776 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 11:47:08,777 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:47:08,781 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:47:08,782 — CommonMethods — INFO —  Requesting Payload in Put Request {'Permanent_Address': {'House_Number': 'sample string 1', 'City': 'sample string 2', 'State': 'sample string 3', 'Country': 'sample string 4', 'PhoneNumber': [{'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}, {'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}]}, 'Current_Address': {'House_Number': 'sample string 1', 'City': 'sample string 2', 'State': 'sample string 3', 'Country': 'sample string 4', 'PhoneNumber': [{'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}, {'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}]}, 'stId': '269740'} 
+2020-06-23 11:47:08,783 — APIMethods — INFO — post_request
+2020-06-23 11:47:08,918 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 11:47:08,926 — APIMethods — INFO — post_request
+2020-06-23 11:48:06,014 — APIMethods — INFO — post_request
+2020-06-23 11:48:06,066 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:48:06,067 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:48:06,130 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:48:06,131 — TestAPI — INFO — Fetched Json Value in Get Request [{'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'}] 
+2020-06-23 11:48:06,133 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 11:48:26,883 — APIMethods — INFO — post_request
+2020-06-23 11:48:26,943 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:48:26,947 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:48:27,140 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:49:23,284 — TestAPI — INFO — Fetched Json Value in Get Request [{'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'}] 
+2020-06-23 11:50:26,073 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 11:50:33,907 — APIMethods — INFO — post_request
+2020-06-23 11:50:33,984 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:50:33,985 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:50:34,060 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:51:31,771 — APIMethods — INFO — post_request
+2020-06-23 11:51:31,818 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:51:31,821 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:51:31,893 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:51:59,349 — APIMethods — INFO — post_request
+2020-06-23 11:51:59,402 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:51:59,404 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:51:59,469 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:52:24,701 — APIMethods — INFO — post_request
+2020-06-23 11:52:24,748 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:52:24,749 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:52:24,809 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:53:13,892 — APIMethods — INFO — post_request
+2020-06-23 11:53:13,942 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 11:53:13,943 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:53:14,011 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 11:54:19,088 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 11:54:19,088 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 11:54:19,159 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 11:54:19,160 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 11:54:32,983 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'leader'} 
+2020-06-23 11:54:32,983 — APIMethods — INFO — post_request
+2020-06-23 11:54:33,432 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 11:54:33,433 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 11:54:33,505 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 11:54:50,641 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 11:54:50,641 — APIMethods — INFO — post_request
+2020-06-23 11:54:51,041 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 11:54:51,042 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 11:54:51,115 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:00:44,417 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 12:00:44,417 — APIMethods — INFO — post_request
+2020-06-23 12:00:45,170 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 12:00:45,171 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:00:45,255 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:00:45,256 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:01:15,726 — APIMethods — INFO — post_request
+2020-06-23 12:01:15,804 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:01:15,806 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:01:15,885 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:01:15,886 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:01:15,886 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:01:15,888 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:01:28,891 — APIMethods — INFO — post_request
+2020-06-23 12:01:28,936 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:01:28,937 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:01:28,996 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:01:28,996 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:01:28,997 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:01:28,998 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:01:29,437 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 12:01:29,438 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 12:01:29,441 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 12:01:29,444 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 12:02:36,416 — APIMethods — INFO — post_request
+2020-06-23 12:02:36,461 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:02:36,463 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:02:36,527 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:02:36,527 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:02:36,527 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:02:36,529 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:02:36,954 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 12:02:36,955 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 12:02:36,959 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 12:02:36,961 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 12:02:36,965 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'leader'} 
+2020-06-23 12:02:36,965 — APIMethods — INFO — post_request
+2020-06-23 12:02:37,382 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:02:37,383 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:02:37,387 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:02:37,387 — TestAPI — INFO — Fetched Json Value - name - in Post Request morpheus 
+2020-06-23 12:02:37,387 — TestAPI — INFO — Fetched Json Value - ID - in Post Request 100 
+2020-06-23 12:02:37,391 — TestAPI — INFO — Test test_post_body_json_no_header passed.
+2020-06-23 12:02:52,868 — APIMethods — INFO — post_request
+2020-06-23 12:02:52,914 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:02:52,918 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:02:52,991 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:02:52,991 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:02:52,991 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:02:52,993 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:02:53,414 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 12:02:53,415 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 12:02:53,418 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 12:02:53,422 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 12:02:53,425 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'leader'} 
+2020-06-23 12:02:53,425 — APIMethods — INFO — post_request
+2020-06-23 12:02:53,838 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:02:53,839 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:02:53,843 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:02:53,844 — TestAPI — INFO — Fetched Json Value - name - in Post Request morpheus 
+2020-06-23 12:02:53,844 — TestAPI — INFO — Fetched Json Value - ID - in Post Request 887 
+2020-06-23 12:02:53,847 — TestAPI — INFO — Test test_post_body_json_no_header passed.
+2020-06-23 12:02:53,851 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 12:02:53,851 — APIMethods — INFO — post_request
+2020-06-23 12:02:54,300 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 12:02:54,300 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:02:54,304 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:02:54,305 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:06:24,609 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 12:06:24,610 — APIMethods — INFO — post_request
+2020-06-23 12:06:26,104 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 12:06:26,105 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:06:26,190 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:06:26,191 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:07:58,647 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 12:07:58,647 — APIMethods — INFO — post_request
+2020-06-23 12:07:59,187 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 12:07:59,188 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:07:59,263 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:07:59,263 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:08:44,493 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 12:08:44,493 — APIMethods — INFO — post_request
+2020-06-23 12:08:44,965 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 12:08:44,965 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:08:45,041 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:08:45,041 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:09:45,523 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 12:09:45,523 — APIMethods — INFO — post_request
+2020-06-23 12:09:45,954 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 12:09:45,954 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:09:46,032 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:09:46,032 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:09:46,032 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request 2020-06-23T04:09:45.823Z 
+2020-06-23 12:10:12,988 — APIMethods — INFO — post_request
+2020-06-23 12:10:13,047 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:10:13,048 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:10:13,116 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:10:13,116 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:10:13,116 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:10:13,117 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:10:13,538 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 12:10:13,538 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 12:10:13,540 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 12:10:13,542 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 12:10:13,544 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'leader'} 
+2020-06-23 12:10:13,545 — APIMethods — INFO — post_request
+2020-06-23 12:10:14,053 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:10:14,054 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:10:14,058 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:10:14,058 — TestAPI — INFO — Fetched Json Value - name - in Post Request morpheus 
+2020-06-23 12:10:14,059 — TestAPI — INFO — Fetched Json Value - ID - in Post Request 391 
+2020-06-23 12:10:14,062 — TestAPI — INFO — Test test_post_body_json_no_header passed.
+2020-06-23 12:10:14,065 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 12:10:14,065 — APIMethods — INFO — post_request
+2020-06-23 12:10:14,458 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 12:10:14,459 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:10:14,462 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:10:14,463 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:10:14,463 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request 2020-06-23T04:10:14.337Z 
+2020-06-23 12:12:52,452 — APIMethods — INFO — post_request
+2020-06-23 12:12:52,511 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:12:52,513 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:12:52,581 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:12:52,582 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:12:52,582 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:12:52,583 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:12:52,991 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 12:12:52,992 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 12:12:52,996 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 12:12:52,999 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 12:12:53,003 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'leader'} 
+2020-06-23 12:12:53,004 — APIMethods — INFO — post_request
+2020-06-23 12:12:53,429 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:12:53,429 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:12:53,433 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:12:53,434 — TestAPI — INFO — Fetched Json Value - name - in Post Request morpheus 
+2020-06-23 12:12:53,434 — TestAPI — INFO — Fetched Json Value - ID - in Post Request 489 
+2020-06-23 12:12:53,437 — TestAPI — INFO — Test test_post_body_json_no_header passed.
+2020-06-23 12:12:53,441 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 12:12:53,441 — APIMethods — INFO — post_request
+2020-06-23 12:12:53,845 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 12:12:53,845 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:12:53,849 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:12:53,850 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:12:53,850 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request 2020-06-23T04:12:53.720Z 
+2020-06-23 12:15:13,496 — APIMethods — INFO — post_request
+2020-06-23 12:15:13,576 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:15:13,577 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:15:13,645 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:15:13,646 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:15:13,646 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:15:13,648 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:15:14,077 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 12:15:14,077 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 12:15:14,081 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 12:15:14,085 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 12:15:14,089 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'leader'} 
+2020-06-23 12:15:14,089 — APIMethods — INFO — post_request
+2020-06-23 12:15:14,504 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:15:14,505 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:15:14,509 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:15:14,509 — TestAPI — INFO — Fetched Json Value - name - in Post Request morpheus 
+2020-06-23 12:15:14,509 — TestAPI — INFO — Fetched Json Value - ID - in Post Request 54 
+2020-06-23 12:15:14,512 — TestAPI — INFO — Test test_post_body_json_no_header passed.
+2020-06-23 12:15:14,516 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 12:15:14,516 — APIMethods — INFO — post_request
+2020-06-23 12:15:14,923 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 12:15:14,924 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:15:14,927 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:15:14,928 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:15:14,928 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request 2020-06-23T04:15:14.786Z 
+2020-06-23 12:16:13,758 — APIMethods — INFO — post_request
+2020-06-23 12:16:13,832 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:16:13,832 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:16:13,892 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:16:13,892 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:16:13,892 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:16:13,893 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:16:14,337 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 12:16:14,338 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 12:16:14,341 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 12:16:14,344 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 12:16:14,347 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'leader'} 
+2020-06-23 12:16:14,348 — APIMethods — INFO — post_request
+2020-06-23 12:16:14,831 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:16:14,832 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:16:14,836 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:16:14,836 — TestAPI — INFO — Fetched Json Value - name - in Post Request morpheus 
+2020-06-23 12:16:14,836 — TestAPI — INFO — Fetched Json Value - ID - in Post Request 92 
+2020-06-23 12:16:14,839 — TestAPI — INFO — Test test_post_body_json_no_header passed.
+2020-06-23 12:16:14,843 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 12:16:14,843 — APIMethods — INFO — post_request
+2020-06-23 12:16:15,252 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 12:16:15,253 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:16:15,257 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:16:15,257 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:16:15,257 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request 2020-06-23T04:16:15.120Z 
+2020-06-23 12:16:27,238 — APIMethods — INFO — post_request
+2020-06-23 12:16:27,301 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:16:27,304 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:16:27,374 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:16:27,374 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:16:27,374 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:16:27,376 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:16:27,813 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 12:16:27,813 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 12:16:27,816 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 12:16:27,819 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 12:16:27,821 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'leader'} 
+2020-06-23 12:16:27,821 — APIMethods — INFO — post_request
+2020-06-23 12:16:28,243 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:16:28,244 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:16:28,253 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:16:28,254 — TestAPI — INFO — Fetched Json Value - name - in Post Request morpheus 
+2020-06-23 12:16:28,254 — TestAPI — INFO — Fetched Json Value - ID - in Post Request 350 
+2020-06-23 12:16:28,261 — TestAPI — INFO — Test test_post_body_json_no_header passed.
+2020-06-23 12:16:28,265 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 12:16:28,266 — APIMethods — INFO — post_request
+2020-06-23 12:16:28,657 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 12:16:28,658 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:16:28,661 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:16:28,662 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:16:28,662 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request 2020-06-23T04:16:28.523Z 
+2020-06-23 12:17:14,558 — APIMethods — INFO — post_request
+2020-06-23 12:17:14,608 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:17:14,609 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:17:14,678 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:17:14,678 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:17:14,678 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:17:14,680 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:17:15,136 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 12:17:15,136 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 12:17:15,139 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 12:17:15,141 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 12:17:15,143 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'leader'} 
+2020-06-23 12:17:15,143 — APIMethods — INFO — post_request
+2020-06-23 12:17:15,686 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:17:15,687 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:17:15,691 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:17:15,691 — TestAPI — INFO — Fetched Json Value - name - in Post Request morpheus 
+2020-06-23 12:17:15,692 — TestAPI — INFO — Fetched Json Value - ID - in Post Request 732 
+2020-06-23 12:17:15,696 — TestAPI — INFO — Test test_post_body_json_no_header passed.
+2020-06-23 12:17:15,699 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 12:17:15,699 — APIMethods — INFO — post_request
+2020-06-23 12:17:16,186 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 12:17:16,186 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:17:16,190 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:17:16,190 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:17:16,191 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request 2020-06-23T04:17:16.020Z 
+2020-06-23 12:17:53,046 — APIMethods — INFO — post_request
+2020-06-23 12:17:53,535 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:17:53,537 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:17:53,612 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:17:53,613 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:17:53,613 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:17:53,614 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:17:54,108 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 12:17:54,109 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 12:17:54,112 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 12:17:54,115 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 12:17:54,119 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'leader'} 
+2020-06-23 12:17:54,119 — APIMethods — INFO — post_request
+2020-06-23 12:17:54,582 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:17:54,583 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:17:54,584 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:17:54,584 — TestAPI — INFO — Fetched Json Value - name - in Post Request morpheus 
+2020-06-23 12:17:54,584 — TestAPI — INFO — Fetched Json Value - ID - in Post Request 691 
+2020-06-23 12:17:54,586 — TestAPI — INFO — Test test_post_body_json_no_header passed.
+2020-06-23 12:17:54,588 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 12:17:54,588 — APIMethods — INFO — post_request
+2020-06-23 12:17:55,075 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 12:17:55,076 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:17:55,080 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:17:55,080 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:17:55,080 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request 2020-06-23T04:17:54.852Z 
+2020-06-23 12:18:17,958 — APIMethods — INFO — post_request
+2020-06-23 12:18:18,043 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:18:18,045 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:18:18,115 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:18:18,116 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:18:18,116 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:18:18,116 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:18:18,116 — TestAPI — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:18:18,116 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:18:18,116 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:18:18,116 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:18:18,116 — TestAPI — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-06-23 12:18:18,119 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:18:18,119 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:18:18,119 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:18:18,119 — TestAPI — INFO — Test test_get_reqre_api passed.
+2020-06-23 12:18:18,548 — PrettyFormat — INFO — -----------Request-----------> Method = DELETE 
+2020-06-23 12:18:18,549 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-06-23 12:18:18,553 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-06-23 12:18:18,557 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 12:18:18,557 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 12:18:18,557 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 12:18:18,557 — TestAPI — INFO — Test test_delete_reqre_api passed.
+2020-06-23 12:18:18,560 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'leader'} 
+2020-06-23 12:18:18,560 — APIMethods — INFO — post_request
+2020-06-23 12:18:19,043 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:18:19,044 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:18:19,048 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:18:19,048 — TestAPI — INFO — Fetched Json Value - name - in Post Request morpheus 
+2020-06-23 12:18:19,048 — TestAPI — INFO — Fetched Json Value - name - in Post Request morpheus 
+2020-06-23 12:18:19,048 — TestAPI — INFO — Fetched Json Value - name - in Post Request morpheus 
+2020-06-23 12:18:19,048 — TestAPI — INFO — Fetched Json Value - name - in Post Request morpheus 
+2020-06-23 12:18:19,049 — TestAPI — INFO — Fetched Json Value - ID - in Post Request 891 
+2020-06-23 12:18:19,049 — TestAPI — INFO — Fetched Json Value - ID - in Post Request 891 
+2020-06-23 12:18:19,049 — TestAPI — INFO — Fetched Json Value - ID - in Post Request 891 
+2020-06-23 12:18:19,049 — TestAPI — INFO — Fetched Json Value - ID - in Post Request 891 
+2020-06-23 12:18:19,052 — TestAPI — INFO — Test test_post_body_json_no_header passed.
+2020-06-23 12:18:19,052 — TestAPI — INFO — Test test_post_body_json_no_header passed.
+2020-06-23 12:18:19,052 — TestAPI — INFO — Test test_post_body_json_no_header passed.
+2020-06-23 12:18:19,052 — TestAPI — INFO — Test test_post_body_json_no_header passed.
+2020-06-23 12:18:19,056 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-06-23 12:18:19,056 — APIMethods — INFO — post_request
+2020-06-23 12:18:19,492 — PrettyFormat — INFO — -----------Request-----------> Method = PUT 
+2020-06-23 12:18:19,493 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:18:19,497 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:18:19,497 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:18:19,497 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:18:19,497 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:18:19,497 — TestAPI — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-06-23 12:18:19,497 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request 2020-06-23T04:18:19.345Z 
+2020-06-23 12:18:19,497 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request 2020-06-23T04:18:19.345Z 
+2020-06-23 12:18:19,497 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request 2020-06-23T04:18:19.345Z 
+2020-06-23 12:18:19,497 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request 2020-06-23T04:18:19.345Z 
+2020-06-23 12:18:19,870 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request http://api.openweathermap.org/data/2.5/weather?q=London&appid=WEATHER_API_KEY 
+2020-06-23 12:18:19,870 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request http://api.openweathermap.org/data/2.5/weather?q=London&appid=WEATHER_API_KEY 
+2020-06-23 12:18:19,870 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request http://api.openweathermap.org/data/2.5/weather?q=London&appid=WEATHER_API_KEY 
+2020-06-23 12:18:19,870 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request http://api.openweathermap.org/data/2.5/weather?q=London&appid=WEATHER_API_KEY 
+2020-06-23 12:18:19,871 — APIMethods — INFO — post_request
+2020-06-23 12:18:19,897 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:18:19,899 — APIMethods — INFO — post_request
+2020-06-23 12:18:22,423 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:18:22,429 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:18:24,328 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:18:24,328 — APIMethods — INFO — post_request
+2020-06-23 12:18:25,558 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:18:25,559 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:18:25,563 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:18:25,574 — APIMethods — INFO — post_request
+2020-06-23 12:18:40,562 — TestAPI — INFO — Fetched Json Value - updatedAt - in Put Request http://api.openweathermap.org/data/2.5/weather?q=London&appid=WEATHER_API_KEY 
+2020-06-23 12:18:40,562 — APIMethods — INFO — post_request
+2020-06-23 12:18:40,577 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:18:40,579 — APIMethods — INFO — post_request
+2020-06-23 12:18:42,000 — PrettyFormat — INFO — -----------Request-----------> Method = GET 
+2020-06-23 12:18:42,009 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:18:52,961 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:18:52,961 — APIMethods — INFO — post_request
+2020-06-23 12:18:53,287 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:18:53,288 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:18:53,360 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:19:16,358 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:19:16,359 — APIMethods — INFO — post_request
+2020-06-23 12:19:16,483 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:19:16,484 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:19:16,557 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:20:06,326 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:20:06,326 — APIMethods — INFO — post_request
+2020-06-23 12:20:06,433 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:20:06,434 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:20:06,505 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:21:33,276 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:21:33,276 — APIMethods — INFO — post_request
+2020-06-23 12:21:33,450 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:21:33,451 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:21:33,524 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:21:45,275 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:21:45,275 — APIMethods — INFO — post_request
+2020-06-23 12:21:45,412 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:21:45,413 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:21:45,486 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:22:03,098 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:22:03,098 — APIMethods — INFO — post_request
+2020-06-23 12:22:03,321 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:22:03,322 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:22:03,394 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:22:40,880 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:22:40,881 — APIMethods — INFO — post_request
+2020-06-23 12:22:40,993 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:22:40,993 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:22:41,068 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:22:55,355 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:22:55,355 — APIMethods — INFO — post_request
+2020-06-23 12:22:55,540 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:22:55,540 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:22:55,612 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:23:55,625 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:23:55,625 — APIMethods — INFO — post_request
+2020-06-23 12:23:55,762 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:23:55,763 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:23:55,836 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:36:34,376 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:36:34,376 — APIMethods — INFO — post_request
+2020-06-23 12:36:34,509 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:36:34,510 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:36:34,583 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:36:34,583 — TestAPI — INFO — Fetched Json Value - id - in Put Request 68 
+2020-06-23 12:36:41,799 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:36:41,799 — APIMethods — INFO — post_request
+2020-06-23 12:36:41,971 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:36:41,972 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:36:42,046 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:36:42,046 — TestAPI — INFO — Fetched Json Value - id - in Put Request 69 
+2020-06-23 12:36:42,046 — CommonMethods — INFO —  Requesting Payload in Put Request {'id': 269735, 'language': ['Java', 'Python', 'c#'], 'yearexp': '5', 'lastused': '2020', 'st_id': '269740'} 
+2020-06-23 12:36:42,046 — TestAPI — INFO — Updated req_payload in End to End {'id': 69, 'language': ['Java', 'Python', 'c#'], 'yearexp': '5', 'lastused': '2020', 'st_id': 69} 
+2020-06-23 12:36:42,047 — APIMethods — INFO — post_request
+2020-06-23 12:36:42,154 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:36:42,155 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:36:42,159 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:36:42,160 — CommonMethods — INFO —  Requesting Payload in Put Request {'Permanent_Address': {'House_Number': 'sample string 1', 'City': 'sample string 2', 'State': 'sample string 3', 'Country': 'sample string 4', 'PhoneNumber': [{'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}, {'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}]}, 'Current_Address': {'House_Number': 'sample string 1', 'City': 'sample string 2', 'State': 'sample string 3', 'Country': 'sample string 4', 'PhoneNumber': [{'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}, {'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}]}, 'stId': '269740'} 
+2020-06-23 12:36:51,897 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:36:51,897 — APIMethods — INFO — post_request
+2020-06-23 12:36:52,014 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:36:52,015 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:36:52,087 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:36:52,087 — TestAPI — INFO — Fetched Json Value - id - in Put Request 70 
+2020-06-23 12:36:52,087 — CommonMethods — INFO —  Requesting Payload in Put Request {'id': 269735, 'language': ['Java', 'Python', 'c#'], 'yearexp': '5', 'lastused': '2020', 'st_id': '269740'} 
+2020-06-23 12:36:52,088 — TestAPI — INFO — Updated req_payload in End to End {'id': 70, 'language': ['Java', 'Python', 'c#'], 'yearexp': '5', 'lastused': '2020', 'st_id': 70} 
+2020-06-23 12:36:52,088 — APIMethods — INFO — post_request
+2020-06-23 12:36:52,190 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:36:52,191 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:36:52,194 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:36:52,195 — CommonMethods — INFO —  Requesting Payload in Put Request {'Permanent_Address': {'House_Number': 'sample string 1', 'City': 'sample string 2', 'State': 'sample string 3', 'Country': 'sample string 4', 'PhoneNumber': [{'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}, {'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}]}, 'Current_Address': {'House_Number': 'sample string 1', 'City': 'sample string 2', 'State': 'sample string 3', 'Country': 'sample string 4', 'PhoneNumber': [{'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}, {'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}]}, 'stId': '269740'} 
+2020-06-23 12:37:02,462 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:37:02,462 — APIMethods — INFO — post_request
+2020-06-23 12:37:02,571 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:37:02,571 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:37:02,641 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:37:02,641 — TestAPI — INFO — Fetched Json Value - id - in Put Request 71 
+2020-06-23 12:37:02,641 — CommonMethods — INFO —  Requesting Payload in Put Request {'id': 269735, 'language': ['Java', 'Python', 'c#'], 'yearexp': '5', 'lastused': '2020', 'st_id': '269740'} 
+2020-06-23 12:37:02,641 — TestAPI — INFO — Updated req_payload in End to End {'id': 71, 'language': ['Java', 'Python', 'c#'], 'yearexp': '5', 'lastused': '2020', 'st_id': 71} 
+2020-06-23 12:37:02,641 — APIMethods — INFO — post_request
+2020-06-23 12:37:02,771 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:37:02,773 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:37:02,779 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:37:02,780 — CommonMethods — INFO —  Requesting Payload in Put Request {'Permanent_Address': {'House_Number': 'sample string 1', 'City': 'sample string 2', 'State': 'sample string 3', 'Country': 'sample string 4', 'PhoneNumber': [{'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}, {'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}]}, 'Current_Address': {'House_Number': 'sample string 1', 'City': 'sample string 2', 'State': 'sample string 3', 'Country': 'sample string 4', 'PhoneNumber': [{'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}, {'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}]}, 'stId': '269740'} 
+2020-06-23 12:37:02,781 — APIMethods — INFO — post_request
+2020-06-23 12:37:02,903 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:37:14,193 — CommonMethods — INFO —  Requesting Payload in Put Request {'first_name': 'Testing', 'middle_name': 'New', 'last_name': 'API Rest', 'date_of_birth': '12/12/1990'} 
+2020-06-23 12:37:14,193 — APIMethods — INFO — post_request
+2020-06-23 12:37:14,367 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:37:14,367 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-06-23 12:37:14,439 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-06-23 12:37:14,440 — TestAPI — INFO — Fetched Json Value - id - in Put Request 72 
+2020-06-23 12:37:14,440 — CommonMethods — INFO —  Requesting Payload in Put Request {'id': 269735, 'language': ['Java', 'Python', 'c#'], 'yearexp': '5', 'lastused': '2020', 'st_id': '269740'} 
+2020-06-23 12:37:14,440 — TestAPI — INFO — Updated req_payload in End to End {'id': 72, 'language': ['Java', 'Python', 'c#'], 'yearexp': '5', 'lastused': '2020', 'st_id': 72} 
+2020-06-23 12:37:14,440 — APIMethods — INFO — post_request
+2020-06-23 12:37:14,541 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:37:14,542 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-06-23 12:37:14,546 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-06-23 12:37:14,547 — CommonMethods — INFO —  Requesting Payload in Put Request {'Permanent_Address': {'House_Number': 'sample string 1', 'City': 'sample string 2', 'State': 'sample string 3', 'Country': 'sample string 4', 'PhoneNumber': [{'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}, {'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}]}, 'Current_Address': {'House_Number': 'sample string 1', 'City': 'sample string 2', 'State': 'sample string 3', 'Country': 'sample string 4', 'PhoneNumber': [{'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}, {'Std_Code': 'sample string 1', 'Home': 'sample string 2', 'Mobile': 'sample string 3'}]}, 'stId': '269740'} 
+2020-06-23 12:37:14,547 — APIMethods — INFO — post_request
+2020-06-23 12:37:14,668 — PrettyFormat — INFO — -----------Request-----------> Method = POST 
+2020-06-23 12:37:14,669 — APIMethods — INFO —  -------- Checking the Expected Status 200 
