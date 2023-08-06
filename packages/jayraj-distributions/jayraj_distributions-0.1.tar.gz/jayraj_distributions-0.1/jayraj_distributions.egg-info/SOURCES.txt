@@ -1,0 +1,10 @@
+setup.py
+jayraj_distributions/Binomialdistribution.py
+jayraj_distributions/Gaussiandistribution.py
+jayraj_distributions/Generaldistribution.py
+jayraj_distributions/__init__.py
+jayraj_distributions.egg-info/PKG-INFO
+jayraj_distributions.egg-info/SOURCES.txt
+jayraj_distributions.egg-info/dependency_links.txt
+jayraj_distributions.egg-info/not-zip-safe
+jayraj_distributions.egg-info/top_level.txt
