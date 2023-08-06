@@ -1,0 +1,4 @@
+[console_scripts]
+align = preprocess_corpora.alignment.align:sentence_align
+preprocess = preprocess_corpora.preprocessing.process:process_folder
+
