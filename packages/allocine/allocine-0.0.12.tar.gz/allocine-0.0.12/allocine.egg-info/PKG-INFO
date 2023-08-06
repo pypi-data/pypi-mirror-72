@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: allocine
+Version: 0.0.12
+Summary: Non official Python wrapper for allocine.fr
+Home-page: https://github.com/tducret/allocine-python
+Author: Thibault Ducret
+Author-email: hello@tducret.com
+License: MIT license
+Download-URL: https://github.com/tducret/allocine-python/tarball/0.0.12
+Description: Non official Python wrapper for allocine.fr
+Keywords: api,allocine,parsing,python-wrapper,scraping,scraper,parser
+Platform: Posix; MacOS X
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7

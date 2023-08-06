@@ -1,0 +1,5 @@
+backoff==1.10.0
+Click==7.0
+jmespath==0.9.5
+PTableUnicode==0.9.3
+requests==2.21.0

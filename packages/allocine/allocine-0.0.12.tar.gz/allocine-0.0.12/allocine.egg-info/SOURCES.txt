@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+seances.py
+setup.cfg
+setup.py
+allocine/__init__.py
+allocine/nationalities.py
+allocine.egg-info/PKG-INFO
+allocine.egg-info/SOURCES.txt
+allocine.egg-info/dependency_links.txt
+allocine.egg-info/requires.txt
+allocine.egg-info/top_level.txt
+tests/test_allocine.py
+tests/test_programoscope.py
