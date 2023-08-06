@@ -1,0 +1,269 @@
+CHANGES
+=======
+
+1.9.47
+------
+
+* Update dependency sphinx\_rtd\_theme to v0.5.0
+* Update dependency pytype to v2020.6.26
+* Update prom/prometheus Docker tag to v2.19.2
+* Update grafana/grafana Docker tag to v7.0.4
+* Set is\_dp\_stack\_root on stack root change
+* Peephole optimization to remove redundant table-specific deletes that overlap with delete all-tables deletes
+* delete gets own func
+* Add base metric and tests
+* interface-ranges cannot overlap
+* Remove TODOs
+* Update dependency sphinx to v3.1.1
+
+1.9.46
+------
+
+* Don't hardcode python\_version for pytype
+* Coprocessor shouldn't be subject to VLAN ACL, because it's intended to directly output (eth dst or port). Update documentation and add test
+* stickler
+* Move majority of LACP implementation out of valve.py and into standalone/stack
+* Run parallel pytype for ~50% reduction in worst case run time
+* Can delete /faucet-src after we have installed faucet
+* shellcheck
+* Need to run unit tests from /faucet-src
+* Revert "Temporarily disable unit tests on package builds."
+* remove mininet requiring tests from unit tests
+* Optimize out packet modifications that are not output or goto'd afterwards. Add test coverage to ensure optimization holds
+
+1.9.45
+------
+
+* Temporarily disable unit tests on package builds
+* Cleanup unweildy switch manager args
+
+1.9.44
+------
+
+* Update debian/control for new prometheus\_client
+* Reuse ports\_delete instead of new method ports\_flush
+* Upgrade docker on integration test jobs
+* Update dependency sphinx to v3.1.0
+* Update dependency pylint to v2.5.3
+* missing flowrule fix
+* Update GA versions to v2 and v3
+* Change description
+* fix stickler & batch large generative tests
+* revert changes to runtests
+* Add now to send\_flows
+* Remove time dependency from valve.py
+* Add FakeOFNetwork; connecting multiple FakeOFTables together with a Faucet stack topology
+* Update grafana/grafana Docker tag to v7.0.3
+* Fix logic for detecting history rewrites
+* Don't need to clean up the base image
+* shellcheck
+* Handle $TRAVIS\_COMMIT\_RANGE edge cases
+* Run pylint/pytype outside of docker
+* Flush ports post datapath disconnect
+* Support multiple tunnel ACL rules to same destination, using the same tunnel ID
+* Run unit tests on python3.8
+* Update dependency exabgp to v4.2.10
+* Update dependency pytype to v2020.6.1
+* More efficient suppression of unnecessary deletes
+* Config messages must go first to avoid spurious packet ins during cold start. Highest tables should be added first to minimize gotos with missing target tables
+* Update dependency exabgp to v4.2.9
+* Update faucet/python3 Docker tag to v5.0.1
+* Make sphinx warnings, errors and fix errors
+* Prevent possible regressions where flow generators (e.g. flood rules) could generate a lot of duplicate flows
+* Fix python3.8 warning
+* pytype workaround
+* Update dependency sphinx to v3.0.4
+* stickler
+* Test mirror of another port on a copro port
+* Coprocessor ports can accept ACLs
+* stickler
+* Should test tunneling with output only destination to make sure VLAN isn't carrying the traffic for us
+* spurious pytype
+* Update grafana/grafana Docker tag to v7.0.1
+* Update dependency prometheus\_client to v0.8.0
+* Move tunnel implementation and next stack state to stacking class
+* Tidy up msgpack requirement
+* Fix dot1x enable check
+* neg numbers, TODO
+* Stickler
+* placate pylint 2.5.2
+
+1.9.43
+------
+
+* Update dependency exabgp to v4.2.8
+* Don't take down stack ports on config restart, unless topology change
+* Update dependency exabgp to v4.2.7
+* Update grafana/grafana Docker tag to v7
+* Update dependency pytype to v2020.5.13
+
+1.9.42
+------
+
+* minor prom var refactoring
+* fix LACP untagged test
+* Config generator
+* Don't mark deleted files as modified
+* Update dependency pytype to v2020.5.7
+* None test
+* Change port id in tests
+* Modify test to check for most recent event
+* Add lacp port role to LAG\_CHANGE event in addition to actor state
+* Make default value -1
+* Add lacp\_port\_id to test config
+* Make lacp\_port\_id configurable and add varz to track it
+* Update prom/prometheus Docker tag to v2.18.1
+* Downgrade pylint
+* Fix STATIC\_TABLE\_IDS feature
+* Use a calculated combination of dp\_id and port number for lacp port id instead of the port number
+
+1.9.41
+------
+
+* Split release workflow
+* Strictly preserve order of operations on flow add/mods
+
+1.9.40
+------
+
+* Lint fixes
+* Test to validate graph object in STACK\_TOPO\_CHANGE
+* Move docker builds to github actions
+* Add verification config changes can be reverted
+* Replace gitlab CI with github actions
+* Add stack info to learn message
+* include linux-headers for grpcio
+
+1.9.39
+------
+
+* Invert flow match order
+* Fix warm starting with tagged ports, where the tagged ports didn't change but lost their VLAN table matches
+* Update dependency sphinx to v3.0.3
+* pylint
+* pylint
+* Revert back to serialisable form of stack graph
+* pylint
+* Update grafana/grafana Docker tag to v6.7.3
+* Update dependency pytype to v2020.4.22
+* Use regular influxdb image for both amd64/arm
+* Update influxdb Docker tag to v1.8
+* Update prom/prometheus Docker tag to v2.17.2
+* Empty commit
+* Adjusting tests
+* Fixing some tests
+* add\_port
+* Order/dependent
+* Default edge\_learn stack\_root to True
+* Add TODO
+* dot1x manager pattern
+* Bump python3-yaml version in debian/control
+* Update dependency sphinx to v3
+
+1.9.38
+------
+
+* stickler
+* Smarter 8021x Identity test
+* Simplify 8021x VLAN reassignment
+* Remove stack ref from standalone
+* Learn once from echo if host didn't ARP/ND for VIP first
+* Flush arp cache before pinging faucet VIP
+* Increase timeout so unit tests can run on machines with less CPU
+* stickler
+* Migrate to valve manager pattern
+* Ignore LACP churn metric
+* Improve shared BGP speaker VLAN error message
+* consolidate valve\_host and valve\_flood in valve\_switch
+* lint fix
+* Use LACP port priority in LACP packets. Add to integration test
+* Add lacp\_port\_priority
+* Add test for port\_lacp\_role
+* Add lacp\_port\_role metric
+* images now have multi-arch for x64\_64/arm
+* Update grafana/grafana Docker tag to v6.7.2
+* Update dependency pytype to v2020.4.1
+* removing duplicate data
+* make suggested changes
+* Add direct link to supported hardware
+
+1.9.37
+------
+
+* Only remove delete ofmsgs that have a global delete of the same type
+* lacp\_standby
+* Update dependency pytype to v2020.3.19
+* Update dependency pyyaml to v5.3.1
+* fix typography
+* Fix pytype error
+* port option for integration test start port
+
+1.9.36
+------
+
+* dynamic tunnel ID fix
+* Add -Z root
+* Don't do complex stack config change comparison
+* FaucetUntaggedExpireIPv4InterVLANRouteTest could use wrong test host
+* pylint
+* Test mirror/unmirror operation
+* pylint
+* Also tunnel IDs not deterministic
+* Make tunnel\_ids deterministic
+* Test unmirroring
+* Detect mirror changes
+* Wait for config to be applied after a cold start
+* force cold start on VLAN involving routing
+* Fix changes to DP level only config are not detected. Don't pollute stack config structure with graph. Explicitly check for port VLAN moves
+* Ordered ACL output actions and tunnel improvements
+* drop\_bpdu no longer exists
+
+1.9.35
+------
+
+* When adding a link fault, check that the controller sees the same fault on the same link. Apart from being yet another check that the test suite is correct, it also reduces the test suite's load sensitivity (by not trying to verify connectivity until we are certain the controller knows the desired link state)
+* Description only change is not an DP impactful change
+* Remove requirement for drop\_spoofed\_faucet\_mac workaround
+* Consolidate common MACs in MAC spoofing
+* When stacking is enabled, only FAUCET MAC spoofing should only affect non-stack ports
+* placate pytype
+
+1.9.34
+------
+
+* Modify LACP state machine
+* Update dependency pytype to v2020.2.20
+* stickler
+* Should continue to switch even after receiving non Ethernet II/DTP frame
+* Improve no response error message
+* update() -> \_update() for prom pollers
+
+1.9.33
+------
+
+* Update prom/prometheus-pi Docker tag to v2.16.0
+* Revert to actor state NONE if no phys is up
+* port attr
+* config
+* count\_untag\_vlan\_miss
+* Update prom/prometheus Docker tag to v2.16.0
+* Install lacp flowrules on cold-start
+* Flood to stack ports for inter-VLAN routing
+* Update dependency pytype to v2020.2.6
+* Add unit tests
+* Iterate through modules when expanding tests
+* Update grafana/grafana Docker tag to v6.6.1
+* Update grafana/grafana-arm32v7-linux Docker tag to v6.6.1
+* Update dependency exabgp to v4.2.6
+* added slowpath\_meter and fixed meterdel
+* Delete changelog
+* Add config check for invalid meter\_ids
+* Only have some LACP links sync, collecting & distributing for a LAG, this is based on the DPID
+* Add multidp LAG tests
+
+1.9.32
+------
+
+* add metering warm reloads
+* metering tests
+* Should check version in old logfile, if it exists
