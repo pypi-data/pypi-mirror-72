@@ -1,0 +1,10 @@
+setup.py
+smn20_dist_probability/Binomialdistribution.py
+smn20_dist_probability/Gaussiandistribution.py
+smn20_dist_probability/Generaldistribution.py
+smn20_dist_probability/__init__.py
+smn20_dist_probability.egg-info/PKG-INFO
+smn20_dist_probability.egg-info/SOURCES.txt
+smn20_dist_probability.egg-info/dependency_links.txt
+smn20_dist_probability.egg-info/not-zip-safe
+smn20_dist_probability.egg-info/top_level.txt
