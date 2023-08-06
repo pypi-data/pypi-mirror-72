@@ -1,0 +1,27 @@
+{
+    "name": "Weather",
+    "version": "1.0.0",
+    "author": "Emile Clark-Boman",
+    "description": "Kara Base Weather Library",
+    "long-description": "",
+    "main": "main.py",
+    "requirements": "requirements.txt",
+    "commands": {
+        "weather": {
+            "target": "weather",
+            "keywords": ["weather"]
+        },
+        "sun-rise": {
+            "target": "sunrise",
+            "keywords": ["when sun rise"]
+        },
+        "sun-set": {
+            "target": "sunset",
+            "keywords": ["when sun set"]
+        },
+        "air-pressure": {
+            "target": "airPressure",
+            "keywords": ["what air pressure"]
+        }
+    }
+}
