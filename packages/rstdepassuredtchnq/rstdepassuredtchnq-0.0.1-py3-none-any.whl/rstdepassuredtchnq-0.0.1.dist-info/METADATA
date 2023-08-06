@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: rstdepassuredtchnq
+Version: 0.0.1
+Summary: A Demo Dummy package to check for pypi upload
+Home-page: https://google.com
+Author: Deepika
+Author-email: deepirms2619@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pytest
+Requires-Dist: pytest-html
+Requires-Dist: requests
+Requires-Dist: Flask
+Requires-Dist: jsonpath
+Requires-Dist: oauth2
+Requires-Dist: bs4
+Requires-Dist: mock
+Requires-Dist: selenium
+Requires-Dist: slack
+Requires-Dist: slackclient
+Requires-Dist: twine
+
+This is a Long Description - A Demo Dummy package to check for pypi upload.
+
+
