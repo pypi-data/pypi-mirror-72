@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+faster_fifo.cpp
+faster_fifo.pyx
+faster_fifo_def.pxd
+setup.py
+cpp_faster_fifo/cpp_lib/faster_fifo.cpp
+cpp_faster_fifo/cpp_lib/faster_fifo.hpp
+faster_fifo.egg-info/PKG-INFO
+faster_fifo.egg-info/SOURCES.txt
+faster_fifo.egg-info/dependency_links.txt
+faster_fifo.egg-info/top_level.txt
