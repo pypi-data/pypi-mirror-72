@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: binaryai
+Version: 0.2.1
+Summary: UNKNOWN
+Home-page: https://github.com/binaryai/sdk
+Author: binaryai
+Author-email: binaryai@tencent.com
+License: GPLv3
+Project-URL: Documentation, https://binaryai.readthedocs.io/
+Project-URL: Source, https://github.com/binaryai/sdk
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
