@@ -1,0 +1,13 @@
+#
+# Requirements for wger during development
+#
+
+# Production packages
+-r requirements.txt
+
+# Development packages
+coverage
+django-debug-toolbar
+tblib
+transifex-client
+isort
