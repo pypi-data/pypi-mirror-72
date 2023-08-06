@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Root>
+	<Node kind="Project" name="333224">
+		<Props>
+			<Prop key="key1" value="abc" />
+		</Props>
+		<Children>
+			<Node kind="Group" name="44455">
+				<Props>
+					<Prop key="key2" value="group" />
+				</Props>
+				<Children>
+					<Node kind="Group" name="67544">
+						<Props>
+							<Prop key="key2" value="group" />
+						</Props>
+						<Children />
+					</Node>
+				</Children>
+			</Node>
+			<Node kind="Group" name="6667">
+				<Props>
+					<Prop key="key2" value="group" />
+				</Props>
+				<Children />
+			</Node>
+		</Children>
+	</Node>
+</Root>

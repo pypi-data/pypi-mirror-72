@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: PythonPluginFramework
+Version: 0.0.12
+Summary: Python plugin framework based QT
+Home-page: https://gitee.com/imlaji/PythonPluginFW
+Author: bobo.yang
+Author-email: ybb_y1b1b1@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+Requires-Dist: certifi (==2018.8.24)
+Requires-Dist: PyQt5 (==5.15.0)
+Requires-Dist: PyQt5-sip (==12.8.0)
+Requires-Dist: QScintilla (==2.11.5)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: wincertstore (==0.2)
+
+Python plugin framework based QT
+
+
