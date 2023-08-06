@@ -1,0 +1,17 @@
+numpy
+cmake
+pybind11
+matplotlib
+
+[dev]
+numpy
+cmake
+pybind11
+matplotlib
+black
+setuptools
+matplotlib
+versioneer
+sphinx
+sphinx_rtd_theme
+breathe
