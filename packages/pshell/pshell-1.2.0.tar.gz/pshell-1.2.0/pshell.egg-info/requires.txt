@@ -1,0 +1,5 @@
+setuptools
+psutil>=5.3
+
+[:python_version < "3.7"]
+contextvars>=2.0

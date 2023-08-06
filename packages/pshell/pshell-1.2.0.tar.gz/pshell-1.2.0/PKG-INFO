@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: pshell
+Version: 1.2.0
+Summary: An alternative to bash scripts
+Home-page: https://github.com/crusaderky/pshell
+Author: Guido Imperiale
+Author-email: crusaderky@gmail.com
+License: Apache
+Description: UNKNOWN
+Keywords: bash,shell
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Information Technology
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: System :: System Shells
+Requires-Python: >=3.6
