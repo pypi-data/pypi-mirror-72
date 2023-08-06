@@ -1,0 +1,35 @@
+Metadata-Version: 2.0
+Name: botm
+Version: 0.1.dev0
+Summary: Automatize your bots
+Home-page: https://github.com/hearot/botm
+Author: Hearot
+Author-email: gabriel@hearot.it
+License: LGPLv3+
+Project-URL: Tracker, https://github.com/hearot/botm/issues
+Project-URL: Source, https://github.com/hearot/botm
+Keywords: bot bots botmanager bot-manager chatbot chatbots managing
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Typing :: Typed
+Requires-Python: >=3.6.*
+Requires-Dist: attrs
+Requires-Dist: telegram-me
+
+botm
+====
+
+Automatize your bots. Work in progress.
+

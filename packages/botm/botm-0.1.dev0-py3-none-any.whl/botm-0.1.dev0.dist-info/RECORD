@@ -1,0 +1,16 @@
+botm/__init__.py,sha256=jLw9v_a1zBvt0-0Yme35H1QomAE-4UIL0-robFcjNBQ,1069
+botm/errors/__init__.py,sha256=vrqtaCuMoApYxsdQy12Pjmeaa62_24UMrVN-GJEKJCg,842
+botm/errors/already_running_error.py,sha256=ZAh6eJCWp3xhkTOPnZ7l-x1TmpDM730AYGGdpsfayS0,847
+botm/errors/not_running_error.py,sha256=7z-T6ll8SsskalBZvx8FTr1X2pFe1HUrt-mzDDayfXs,841
+botm/models/__init__.py,sha256=u0_9nzsyYp7z5YluN24Chl9314_dgw6P5Z3b6lbCX78,765
+botm/models/bot_script.py,sha256=DbXNBslXR19RONaD0enaiXqNfA9FDCR_-wNOZh3du0k,2299
+botm/models/abc/__init__.py,sha256=Z-ot0sGdazoHGCv88KYZI437fwcUBvIrd4YhMFa85-I,767
+botm/models/abc/bot_process.py,sha256=2TgO3709ALWi59mAPvagqNVlFzlX8e6dgR-76uuVeNg,1227
+botm/models/dataclasses/__init__.py,sha256=FT9k9-7DlMkFb0aCcNeoOZFE6YcN_jF5rFJVPOFWyws,720
+botm/models/dataclasses/bot_information.py,sha256=p3RNzCqIlgkR3zuTHYAolCXKyl_UJz_hxGJweXtfaZQ,1001
+botm-0.1.dev0.dist-info/DESCRIPTION.rst,sha256=FGd0DNMcOkM2gW8dKHrcTmb6vS79M_rBfQl6QudkwK4,52
+botm-0.1.dev0.dist-info/METADATA,sha256=qacBxYbBYD4yTbqUajGY2Cr7Fvc5pbkh4_NIyXEWWBI,1255
+botm-0.1.dev0.dist-info/RECORD,,
+botm-0.1.dev0.dist-info/WHEEL,sha256=Ds0ba8WsPJtjBPzEMyPOBG3qfPa6B4mlzB-vhzorIZs,97
+botm-0.1.dev0.dist-info/metadata.json,sha256=9cj9KPdMB8bDwyjq0k8kGfxubf-gqRw-a-G3dpvqAp8,1287
+botm-0.1.dev0.dist-info/top_level.txt,sha256=Lw_0b0e90a0YaEIweptLOC-aQ9r5kKwQMnTYfN4OiBY,5
