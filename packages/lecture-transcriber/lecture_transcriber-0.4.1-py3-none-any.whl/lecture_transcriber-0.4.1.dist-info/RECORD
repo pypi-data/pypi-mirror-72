@@ -1,0 +1,9 @@
+lecture_transcriber/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lecture_transcriber/__main__.py,sha256=QlgQjrpDc0rkgDEENu6tbeZf27QuOPllcZCkE4GfPtE,2427
+lecture_transcriber/preprocess_audio.py,sha256=F7oaXakAjEY3OPkR0IPH_hmHqhZIY3OX25b_RKuyGW8,1506
+lecture_transcriber/transcribe.py,sha256=oLHCc4C08vNLdsZuJIdO6_lUEH9SoCeEf_v3n7555Uk,1931
+lecture_transcriber/utils.py,sha256=QIQz8dtjp6eeWllLHerxj8oMsQFXGa-5tpCzUBqmqj0,2103
+lecture_transcriber-0.4.1.dist-info/LICENSE,sha256=xcg1IgIXiWPAH92cmyN4k5lsnGJLVURivYO3QahSous,1460
+lecture_transcriber-0.4.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+lecture_transcriber-0.4.1.dist-info/METADATA,sha256=JRfYMt5XINXLuAXLF69US-JODbg14Me9yui1Q-vpwsM,693
+lecture_transcriber-0.4.1.dist-info/RECORD,,
