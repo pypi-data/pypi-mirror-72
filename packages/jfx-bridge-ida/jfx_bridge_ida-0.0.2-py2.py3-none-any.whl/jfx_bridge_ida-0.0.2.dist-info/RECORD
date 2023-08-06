@@ -1,0 +1,12 @@
+jfx_bridge_ida/__init__.py,sha256=1ISBenP7z-hL6KiQGbAGz7o7KI35V1N4CpKVmF60C5w,38
+jfx_bridge_ida/install_server.py,sha256=QsjNUi9SGjide7trJzArXlezjQldg8z_T6KRNc9motg,1622
+jfx_bridge_ida/jfx_bridge_ida.py,sha256=5RKw2yJ4i6eU7Z6sOytBKYKmU15MjQWRoQoCazOXZWk,3194
+jfx_bridge_ida/server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jfx_bridge_ida/server/jfx_bridge_ida_port.py,sha256=8XNRqgfVR3xr0RjZ7xXYEl0sONqrFTpgVvilRgLDWj0,28
+jfx_bridge_ida/server/jfx_bridge_ida_server.py,sha256=cVfqq31iXzl99tKusjH5OSLDKrITMsjPtGs_wpGFCBU,5371
+jfx_bridge_ida/server/jfx_bridge_ida_server_shutdown.py,sha256=YDD8ooVghsIs_Hmj8r-Bzkix1pGmH_TDuUdsYl66XpA,358
+jfx_bridge_ida-0.0.2.dist-info/LICENSE,sha256=kwXPAT5HekwFxiNba67J-6jiPfEz_461nwcXhXyVDr8,1067
+jfx_bridge_ida-0.0.2.dist-info/METADATA,sha256=361eEvgKOmpt9dfBMQE7f0v_5rAYjs-uPEdY39ZfYcY,5620
+jfx_bridge_ida-0.0.2.dist-info/WHEEL,sha256=HX-v9-noUkyUoxyZ1PMSuS7auUxDAR4VBdoYLqD0xws,110
+jfx_bridge_ida-0.0.2.dist-info/top_level.txt,sha256=5zAddRPN7dV4xU2Fkx86w0oMYAzEITwfx9vlMEG6woA,15
+jfx_bridge_ida-0.0.2.dist-info/RECORD,,
