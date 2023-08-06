@@ -1,0 +1,141 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Amplitude Event",
+  "properties": {
+    "api_key": {
+      "type": "string"
+    },
+    "events": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "user_id": {
+              "type": "string"
+            },
+            "device_id": {
+              "type": "string"
+            },
+            "event_type": {
+              "type": "string"
+            },
+            "time": {
+              "type": "integer"
+            },
+            "event_properties": {
+              "type": "object",
+              "properties": {}
+            },
+            "user_properties": {
+              "type": "object",
+              "properties": {}
+            },
+            "groups": {}
+          },
+          "app_version": {
+            "type": "string"
+          },
+          "platform": {
+            "type": "string"
+          },
+          "os_name": {
+            "type": "string"
+          },
+          "os_version": {
+            "type": "string"
+          },
+          "device_brand": {
+            "type": "string"
+          },
+          "device_manufacturer": {
+            "type": "string"
+          },
+          "device_model": {
+            "type": "string"
+          },
+          "carrier": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "dma": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "revenue": {
+            "type": "number"
+          },
+          "productId": {
+            "type": "string"
+          },
+          "revenueType": {
+            "type": "string"
+          },
+          "location_lat": {
+            "type": "number"
+          },
+          "location_lng": {
+            "type": "number"
+          },
+          "ip": {
+            "type": "string"
+          },
+          "idfa": {
+            "type": "string"
+          },
+          "idfv": {
+            "type": "string"
+          },
+          "adid": {
+            "type": "string"
+          },
+          "android_id": {
+            "type": "string"
+          },
+          "event_id": {
+            "type": "integer"
+          },
+          "session_id": {
+            "type": "integer"
+          },
+          "insert_id": {
+            "type": "string"
+          },
+          "anyOf": [
+            {
+              "required": [
+                "user_id"
+              ]
+            },
+            {
+              "required": [
+                "device_id"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "api_key",
+    "events"
+  ]
+}
