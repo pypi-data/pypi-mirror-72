@@ -1,0 +1,105 @@
+Metadata-Version: 1.2
+Name: telegram-me
+Version: 1.0.1
+Summary: A simple scraper for getting information from t.me links
+Home-page: https://github.com/hearot/telegram_me
+Author: Hearot
+Author-email: gabriel@hearot.it
+License: MIT
+Project-URL: Tracker, https://github.com/hearot/telegram_me/issues
+Project-URL: Source, https://github.com/hearot/telegram_me
+Description: 
+        telegram_me
+        ===========
+        
+        
+        .. image:: https://img.shields.io/badge/License-MIT-red.svg
+           :target: https://github.com/hearot/telegram_me/blob/v1.0.1/LICENSE
+           :alt: License: MIT
+         
+        .. image:: https://img.shields.io/badge/Developer-@hearot-blue.svg
+           :target: https://t.me/hearot
+           :alt: Developer: @hearot
+        
+        
+        A simple scraper for getting information from https://t.me links.
+        
+        Example
+        ^^^^^^^
+        
+        .. code-block:: python
+        
+           from telegram_me import Link
+        
+           link = Link.from_username("Wikisource_Bot")
+        
+           print(link.bio)  # Output: A @wiki version for wikisource.org. [...]
+           print(link.image)  # Output: https://cdn4.telesco.pe/file/...
+           print(link.name)  # Output: Wikisource Search
+           print(link.username)  # Output: Wikisource_bot
+        
+        Installation
+        ^^^^^^^^^^^^
+        
+        You can install this package by simply using ``pip``\ :
+        
+        .. code-block::
+        
+           pip install telegram_me
+        
+        
+        Changelog
+        ^^^^^^^^^
+        
+        ..
+        
+           See `CHANGELOG.md <https://github.com/hearot/telegram_me/blob/v1.0.1/CHANGELOG.md>`_.
+           Find new features in `FEATURES.md <https://github.com/hearot/telegram_me/blob/v1.0.1/FEATURES.md>`_.
+        
+        
+        Commit messages
+        ^^^^^^^^^^^^^^^
+        
+        ..
+        
+           See `Conventional Commits <https://www.conventionalcommits.org>`_.
+        
+        
+        Versioning
+        ^^^^^^^^^^
+        
+        ..
+        
+           See `PEP 440 <https://www.python.org/dev/peps/pep-0440/>`_.
+        
+        
+        Copyright & License
+        ^^^^^^^^^^^^^^^^^^^
+        
+        
+        * Copyright (C) 2020 `Hearot <https://github.com/hearot>`_.
+        * Licensed under the terms of the `MIT License <https://github.com/hearot/telegram_me/blob/v1.0.1/LICENSE>`_.
+        
+Keywords: bot bots chat messenger mtproto python telegram telegram_me me telegramme scraping
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Communications
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.6.*
