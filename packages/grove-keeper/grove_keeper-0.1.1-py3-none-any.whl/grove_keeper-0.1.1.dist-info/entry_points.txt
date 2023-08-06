@@ -1,0 +1,3 @@
+[console_scripts]
+groveKeeper=grove_keeper.cli:main
+
