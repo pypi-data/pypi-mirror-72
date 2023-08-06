@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: gqlbff-postgres
+Version: 0.0.1
+Summary: The web framework
+Home-page: https://github.com/PonomarevMaksim/bff-graphql-postgres-client
+Author: Max Ponomarev
+Author-email: ponomarev1802@mail.ru
+License: BSD
+Description: # bff-graphql-postgres-client
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

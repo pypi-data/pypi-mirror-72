@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+bffpostgres/__init__.py
+bffpostgres/client.py
+bffpostgres/utils.py
+gqlbff_postgres.egg-info/PKG-INFO
+gqlbff_postgres.egg-info/SOURCES.txt
+gqlbff_postgres.egg-info/dependency_links.txt
+gqlbff_postgres.egg-info/not-zip-safe
+gqlbff_postgres.egg-info/requires.txt
+gqlbff_postgres.egg-info/top_level.txt
