@@ -1,0 +1,11 @@
+reader/__init__.py,sha256=GcgQIYMOlVaOSIVe2K-svWmp_H7-BYAWy_LTlDTxnRc,701
+reader/__main__.py,sha256=K-CTEt4CNus9wnwDQha8Ga_7xfsXX1AmTtAomiIWe5I,1620
+reader/config.cfg,sha256=m7yDayr3BufhROgMAcwwsgVASRBia1Ds8awL1ZDLuAo,45
+reader/feed.py,sha256=cjHUZa7_ByfKGEEqmdVOCWJ6zFxdTe9dEs_vGUy31R0,1605
+reader/viewer.py,sha256=HwDQNGKuMmCHWBIrwQSb5nUkk1X-2O8y95NXQbuoz0g,514
+test_reader_AlexisDougherty-1.0.0.dist-info/LICENSE,sha256=lVXG7TZJTjE8Q3ZSrxuk5jfzukuDbQe6wRce2Iq3h94,1068
+test_reader_AlexisDougherty-1.0.0.dist-info/METADATA,sha256=hufUTCoJEu9f9KSDepSjWicRam6v8euvKlP1MPaD_wI,3652
+test_reader_AlexisDougherty-1.0.0.dist-info/WHEEL,sha256=umevUEtYglx3BsmRdkbeexA0ajsvOK25YhJUBycYWFg,97
+test_reader_AlexisDougherty-1.0.0.dist-info/entry_points.txt,sha256=mDtq5fbYTdTDXA-CdbL8J4uUGDm5_js9Ys2qp_8k3q4,53
+test_reader_AlexisDougherty-1.0.0.dist-info/top_level.txt,sha256=zVRv6FulXZWKf9Gycz9vjxul5OCZ3fCq2Attdwsu7Z4,7
+test_reader_AlexisDougherty-1.0.0.dist-info/RECORD,,
