@@ -1,0 +1,10 @@
+requirements.txt
+setup.py
+django_github_colors/__init__.py
+django_github_colors.egg-info/PKG-INFO
+django_github_colors.egg-info/SOURCES.txt
+django_github_colors.egg-info/dependency_links.txt
+django_github_colors.egg-info/requires.txt
+django_github_colors.egg-info/top_level.txt
+django_github_colors/templatetags/__init__.py
+django_github_colors/templatetags/github_colors.py
