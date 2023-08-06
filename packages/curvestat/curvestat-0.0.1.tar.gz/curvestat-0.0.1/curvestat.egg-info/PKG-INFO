@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: curvestat
+Version: 0.0.1
+Summary: Get and plot descriptive statistics for ensembles of curves.
+Home-page: https://github.com/jonassjuul/curvestat
+Author: In alphabetical order: Jonas L. Juul
+Author-email: jlju@dtu.dk
+License: MIT
+Project-URL: Contributing Statement, https://github.com/jonassjuul/curvestat/blob/master/CONTRIBUTING.md
+Project-URL: Bug Reports, https://github.com/jonassjuul/curvestat/issues
+Project-URL: Source, https://github.com/jonassjuul/curvestat
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6

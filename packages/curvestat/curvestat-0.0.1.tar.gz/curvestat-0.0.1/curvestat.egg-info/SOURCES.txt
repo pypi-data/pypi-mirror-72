@@ -1,0 +1,13 @@
+README.md
+setup.py
+curvestat/__init__.py
+curvestat/metadata.py
+curvestat/stats.py
+curvestat.egg-info/PKG-INFO
+curvestat.egg-info/SOURCES.txt
+curvestat.egg-info/dependency_links.txt
+curvestat.egg-info/not-zip-safe
+curvestat.egg-info/requires.txt
+curvestat.egg-info/top_level.txt
+curvestat/tests/__init__.py
+curvestat/tests/curvestat_tests.py
