@@ -1,0 +1,5 @@
+include CHANGELOG.rst
+include LICENSE
+include README.md
+recursive-include flask8_sql *.py
+recursive-include tests *.py
