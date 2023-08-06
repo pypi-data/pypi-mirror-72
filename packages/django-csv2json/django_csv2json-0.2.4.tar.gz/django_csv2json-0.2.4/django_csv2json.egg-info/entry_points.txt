@@ -1,0 +1,3 @@
+[console_scripts]
+csv2json = django_csv2json.scripts.csv2json:csv2json
+
