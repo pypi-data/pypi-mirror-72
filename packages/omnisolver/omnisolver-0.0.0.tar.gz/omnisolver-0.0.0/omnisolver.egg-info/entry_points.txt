@@ -1,0 +1,6 @@
+[console_scripts]
+omnisolver = omnisolver.cmd:main
+
+[omnisolver]
+random = omnisolver.random
+
