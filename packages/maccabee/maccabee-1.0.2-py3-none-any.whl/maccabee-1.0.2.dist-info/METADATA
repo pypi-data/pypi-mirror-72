@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: maccabee
+Version: 1.0.2
+Summary: Causal ML benchmarking and development tools
+Home-page: https://github.com/JoshBroomberg/capstone/tree/master/DataGeneration/CauseML
+Author: Josh Broomberg
+Author-email: joshbroomberg@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: sympy
+Requires-Dist: scikit-learn
+Requires-Dist: POT
+Requires-Dist: pyyaml
+Requires-Dist: threadpoolctl
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-autobuild ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: nbsphinx ; extra == 'docs'
+Provides-Extra: r
+Requires-Dist: rpy2 ; extra == 'r'
+
+# Maccabee ReadMe
+
+
