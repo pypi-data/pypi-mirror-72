@@ -1,0 +1,9 @@
+requirements.txt
+setup.py
+env2json/__init__.py
+env2json/__main__.py
+env2json.egg-info/PKG-INFO
+env2json.egg-info/SOURCES.txt
+env2json.egg-info/dependency_links.txt
+env2json.egg-info/requires.txt
+env2json.egg-info/top_level.txt
