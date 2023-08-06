@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: qipype
+Version: 0.2
+Summary: nipype interfaces to QUantitative Imaging Tools
+Home-page: https://github.com/spinicist/quit
+Author: Tobias Wood
+Author-email: tobias@spinicist.org.uk
+License: MPL
+Description: Python wrappers for QUIT
+Keywords: neuroimaging mri
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Description-Content-Type: text/markdown
