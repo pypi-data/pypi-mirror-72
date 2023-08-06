@@ -1,0 +1,3 @@
+[console_scripts]
+shear = shear.__init__:main
+
