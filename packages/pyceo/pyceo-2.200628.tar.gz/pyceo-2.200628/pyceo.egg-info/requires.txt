@@ -1,0 +1,11 @@
+colorama~=0.4
+
+[dev]
+pytest
+pytest-cov
+tox
+flake8
+
+[testing]
+pytest
+pytest-cov
