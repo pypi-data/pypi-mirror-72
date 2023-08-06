@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+danksearch/__init__.py
+danksearch/backupcode.py
+danksearch/safesearchfilter.txt
+danksearch.egg-info/PKG-INFO
+danksearch.egg-info/SOURCES.txt
+danksearch.egg-info/dependency_links.txt
+danksearch.egg-info/requires.txt
+danksearch.egg-info/top_level.txt
