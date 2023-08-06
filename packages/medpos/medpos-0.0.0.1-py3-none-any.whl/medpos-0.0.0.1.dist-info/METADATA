@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: medpos
+Version: 0.0.0.1
+Summary: medical part-of-speech tagging
+Home-page: UNKNOWN
+Author: junjieluo
+Author-email: floydjjluo@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Requires-Dist: jieba (==0.42.1)
+Requires-Dist: nltk (==3.5)
+Requires-Dist: numpy (==1.19.0)
+Requires-Dist: pandas (==1.0.5)
+Requires-Dist: Pyphen (==0.9.5)
+Requires-Dist: smart-open (==2.0.0)
+Requires-Dist: tabulate (==0.8.7)
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pylint ; extra == 'test'
+
+# Medical Part-Of-Speech
+
+
