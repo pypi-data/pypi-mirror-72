@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "bbrest"
+version = "0.4.0"
+description = "Blackboard REST API for Humans"
+authors = ["Matt Deakyne <m.d@ku.edu>"]
+readme = 'README.md'
+
+[tool.poetry.dependencies]
+python = "^3.6"
+maya = "*"
+requests = "*"
+aiohttp = "*"
+
+[tool.poetry.dev-dependencies]
+jupyterlab = "*"
+ipython = "^7.2"
+requests-oauthlib = "^1.2"
+helium = '*'
+
+
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
