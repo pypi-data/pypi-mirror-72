@@ -1,0 +1,4 @@
+pyyaml>=3.5.0
+paho-mqtt>=1.5.0
+pymodbus>=2.3.0
+click>=6.7
