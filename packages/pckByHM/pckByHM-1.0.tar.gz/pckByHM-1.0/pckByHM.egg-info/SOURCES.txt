@@ -1,0 +1,10 @@
+setup.py
+pckByHM/Binomialdistribution.py
+pckByHM/Gaussiandistribution.py
+pckByHM/Generaldistribution.py
+pckByHM/__init__.py
+pckByHM.egg-info/PKG-INFO
+pckByHM.egg-info/SOURCES.txt
+pckByHM.egg-info/dependency_links.txt
+pckByHM.egg-info/not-zip-safe
+pckByHM.egg-info/top_level.txt
