@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: taskseq
+Version: 0.1.0
+Summary: Script to quickly sequence taskwarrior tasks
+Home-page: https://github.com/voidcase/{NAME}
+Author: Isak Lindhé
+Author-email: isak.e.lindhe@gmail.com
+License: MIT
+Download-URL: https://github.com/voidcase/taskseq/archive/v0.1.0.tar.gz
+Description: # taskseq
+        
+        (WARNING: This package is pre-release and does not promise to work the same way in further releases until 1.0.0)
+        
+        Make taskwarrior tasks sequential easily
+        
+        like this:
+        
+        	taskseq 1,2,3--4,5--6--7
+        
+        In  this example, task 4 and 5 will both depend on 1, 2 and 3.
+        task 6 will depend on 4 and 5
+        task 7 will depend on 6
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
