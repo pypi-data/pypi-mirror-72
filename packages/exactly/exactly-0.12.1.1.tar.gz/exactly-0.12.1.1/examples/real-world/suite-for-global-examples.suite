@@ -1,0 +1,7 @@
+[cases]
+
+sql-scripts/test.case
+
+[suites]
+
+git-hook

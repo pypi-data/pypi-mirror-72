@@ -1,0 +1,11 @@
+[suites]
+
+builtin-help
+
+readme-file-examples/exactly.suite
+
+intro/exactly.suite
+
+wiki/exactly.suite
+
+real-world/suite-for-global-examples.suite
