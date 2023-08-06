@@ -1,0 +1,4 @@
+[console_scripts]
+initmyserver = finder.init:main
+runmyserver = finder.run:main
+
