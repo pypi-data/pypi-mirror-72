@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: cr-analysis
+Version: 3.0.0
+Summary: Visualization tool by Python for circadian analysis.
+Home-page: https://github.com/TOOOOOOMY/Pyhton-for-Circadian-Analysis
+Author: TOOOOOOMY
+Author-email: 10talatgi@gmail.com
+License: MIT
+
+This is the tool to make a graph. Peak detection and period determination will be available Detect the peaks, and detemine the periods.
+
+
