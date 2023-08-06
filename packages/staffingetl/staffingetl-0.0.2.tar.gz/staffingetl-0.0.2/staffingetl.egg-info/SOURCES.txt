@@ -1,0 +1,10 @@
+README.md
+setup.py
+staffingetl/__init__.py
+staffingetl/doctools.py
+staffingetl/indextools.py
+staffingetl.egg-info/PKG-INFO
+staffingetl.egg-info/SOURCES.txt
+staffingetl.egg-info/dependency_links.txt
+staffingetl.egg-info/requires.txt
+staffingetl.egg-info/top_level.txt
