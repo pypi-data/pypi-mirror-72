@@ -1,0 +1,7 @@
+matplotlib>=2.2
+amuse-framework>=13.2.0
+amuse-bhtree>=13.2.0
+amuse-hermite>=13.2.0
+amuse-seba>=13.2.0
+amuse-sphray>=13.2.0
+notebook
