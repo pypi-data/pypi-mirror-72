@@ -1,0 +1,3 @@
+[console_scripts]
+zeptron = script.zeptron:main
+
