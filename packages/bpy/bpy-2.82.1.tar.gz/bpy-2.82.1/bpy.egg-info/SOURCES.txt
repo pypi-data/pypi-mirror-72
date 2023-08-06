@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+blenderpy/__init__.py
+blenderpy/post_install.py
+blenderpy/pre_uninstall.py
+bpy.egg-info/PKG-INFO
+bpy.egg-info/SOURCES.txt
+bpy.egg-info/dependency_links.txt
+bpy.egg-info/entry_points.txt
+bpy.egg-info/top_level.txt
