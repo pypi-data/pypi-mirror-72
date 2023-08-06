@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: proxy-extractor
+Version: 0.0.3b0
+Summary: Package to extract free proxies from various free proxy listings
+Home-page: https://github.com/Ganofins/proxy-extractor
+Author: Ganofins
+Author-email: bagariaganesh@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
