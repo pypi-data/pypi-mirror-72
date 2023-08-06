@@ -1,0 +1,6 @@
+notebook
+nbdime
+
+[test]
+pytest
+asynctest
