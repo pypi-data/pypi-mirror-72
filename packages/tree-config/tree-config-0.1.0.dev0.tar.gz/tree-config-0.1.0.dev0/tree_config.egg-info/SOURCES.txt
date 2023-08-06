@@ -1,0 +1,14 @@
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+tree_config/__init__.py
+tree_config/doc_gen.py
+tree_config/utils.py
+tree_config.egg-info/PKG-INFO
+tree_config.egg-info/SOURCES.txt
+tree_config.egg-info/dependency_links.txt
+tree_config.egg-info/requires.txt
+tree_config.egg-info/top_level.txt
+tree_config/tests/__init__.py
+tree_config/tests/test_config_props.py

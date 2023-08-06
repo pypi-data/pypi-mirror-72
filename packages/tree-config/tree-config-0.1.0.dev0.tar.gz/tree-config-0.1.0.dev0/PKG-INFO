@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: tree-config
+Version: 0.1.0.dev0
+Summary: Configuration of objects that are nested in a tree-like fashion.
+Home-page: https://github.com/matham/tree-config
+Author: Matthew Einhorn
+Author-email: moiein2000@gmail.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/matham/tree-config/issues
+Project-URL: Source, https://github.com/matham/tree-config
+Description: # tree-config
+        
+        Configuration of objects that are nested in a tree-like fashion.
+        
+        For more information: http://matham.github.io/tree_config/index.html
+        
+        
+        .. image:: https://github.com/matham/tree_config/workflows/Python%20application/badge.svg
+            :target: https://github.com/matham/tree_config/actions
+            :alt: Github action status
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: dev
