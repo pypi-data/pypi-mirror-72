@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: BaybayinPy
+Version: 0.1
+Summary: A Library that converts regular tagalog text to font-friendly text for baybayin!
+Home-page: https://github.com/user/BaybayinPy
+Author: Unirises
+Author-email: 2004jamvillarosa@gmail.com
+License: MIT
+Download-URL: https://github.com/JamTheDev/BaybayinPy/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: SOME,MEANINGFULL,KEYWORDS
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
