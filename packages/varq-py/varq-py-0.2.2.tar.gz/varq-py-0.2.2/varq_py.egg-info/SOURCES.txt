@@ -1,0 +1,12 @@
+README.md
+setup.py
+varq/__init__.py
+varq/job.py
+varq/structure.py
+varq/uniprot.py
+varq/varq.py
+varq_py.egg-info/PKG-INFO
+varq_py.egg-info/SOURCES.txt
+varq_py.egg-info/dependency_links.txt
+varq_py.egg-info/requires.txt
+varq_py.egg-info/top_level.txt
