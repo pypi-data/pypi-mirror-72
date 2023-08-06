@@ -1,0 +1,14 @@
+client_render-0.35.data/scripts/render.ps1,sha256=54-oJkNQe2NdJUw3v4kAl6_id9DM2n89_G5fTKp682Q,1362
+render/__init__.py,sha256=Gj5IV6Rbx8frH8ZCUOw5FCiBiw-sJfClPdRptpzMaWI,93
+render/aws.py,sha256=67Um_5UBa5rjH2wohE6P-AfwROm83xSt2Zri2J99s4o,1302
+render/celery.py,sha256=mbzMrwEUyE9K4pnmi-ltc9uUUcSPHo-gkfR3fe1f1Lw,6367
+render/celeryconfig.py,sha256=5cfZlG_1HeuUCl_oXseu0KK3KavY03LBkkyKqXZ8Dcg,589
+render/logger.py,sha256=9oQYuK-FVsfmRwBDy06hZAH-t6GZVOdlN5nM-xZq5oM,1499
+render/screen.py,sha256=BqJTSNBBT-DbdS7kXHSFux8ssQ1fiX9rH4M1VNMdoqI,554
+render/sync.py,sha256=bfFcf4TBzbebJDHwCr2iTthlKcypt6Ueo8O9iGTthRc,1038
+render/util.py,sha256=_AHvKwlMnglfw9RE3ilus8p0ZQ-ychK23iHLjgoqPBk,227
+client_render-0.35.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+client_render-0.35.dist-info/METADATA,sha256=kmkLjoMjH-gfLs12fun4p0T2rwKkBEAwug9hwHsQOaw,925
+client_render-0.35.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+client_render-0.35.dist-info/top_level.txt,sha256=6T42ztcabovaVbwltBs49EDQnZk-R6s23VDMqol8mUc,7
+client_render-0.35.dist-info/RECORD,,
