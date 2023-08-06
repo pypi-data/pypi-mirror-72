@@ -1,0 +1,3 @@
+[console_scripts]
+hypermodern-python-vb=hypermodern_python_vb.console:main
+

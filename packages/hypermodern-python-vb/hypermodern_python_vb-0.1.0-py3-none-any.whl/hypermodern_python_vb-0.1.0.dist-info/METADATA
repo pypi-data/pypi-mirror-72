@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: hypermodern-python-vb
+Version: 0.1.0
+Summary: The hypermodern Python project
+Home-page: https://github.com/vinceatbluelabs/hypermodern-python-vb
+License: MIT
+Keywords: hypermodern
+Author: Vince Broz
+Author-email: vince.broz@bluelabs.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: desert (>=2020.1.6,<2021.0.0)
+Requires-Dist: marshmallow (>=3.6.1,<4.0.0)
+Requires-Dist: requests (>=2.24.0,<3.0.0)
+Project-URL: Repository, https://github.com/vinceatbluelabs/hypermodern-python-vb
+Description-Content-Type: text/markdown
+
+# hypermodern-python-vb
+
+[![Tests](https://github.com/vinceatbluelabs/hypermodern-python-vb/workflows/Tests/badge.svg)](https://github.com/<your-username>/hypermodern-python/actions?workflow=Tests)
+
+Runthrough of https://cjolowicz.github.io/posts/hypermodern-python-01-setup/
+
