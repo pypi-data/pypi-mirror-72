@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: kegg_viewer
+Version: 1.0.5
+Summary: View/Highlight KEGG Pathway
+Home-page: https://github.com/suqingdong/kegg_viewer
+Author: suqingdong
+Author-email: suqingdong@novogene.com
+License: BSD License
+Description: # Generate Highlighted SVG/PNG for KEGG Pathway
+        
+        ## Installation
+        ```bash
+        pip install kegg_viewer
+        ```
+        
+        
+        ## Examples
+        ```bash
+        kegg_viewer -h
+        kegg_viewer -p ko00196
+        kegg_viewer -p ko00196,ko00197
+        kegg_viewer -p path.list
+        kegg_viewer -p path.list -g gene.list -c ./cache -O output
+        kegg_viewer -p path.list -g gene.list -m online
+        kegg_viewer -p path.list -g gene.list -t png
+        kegg_viewer -p path.list -g gene.list -t both
+        ```
+        
+        ### genelist examples
+        ```
+        K08913	red
+        K08912	blue
+        LAMA2	blue
+        K02289	red
+        K20713	blue
+        K08910	#FF1188
+        ```
+        
+        ### example results
+        **png mode**
+        ![png](examples/ko00196.png)
+        **svg mode**
+        ![svg](examples/ko00196.svg)
+        
+        ### SVG Mode:
+        - `local`    # use local image as background
+        - `online`   # use online image as background
+        - `base64`   # convert background to base64, ***default and recommend!***
+        
+        ## TODOs
+        - add list, link method for KEGGRest
+        - prepare cache data(png/conf) for input organism
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
