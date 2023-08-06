@@ -1,0 +1,5 @@
+[console_scripts]
+nexusformat = nexusformat.scripts.nexusformat:main
+nxduplicate = nexusformat.scripts.nxduplicate:main
+nxstack = nexusformat.scripts.nxstack:main
+
