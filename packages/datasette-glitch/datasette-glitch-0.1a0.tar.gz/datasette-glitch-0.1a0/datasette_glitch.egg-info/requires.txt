@@ -1,0 +1,6 @@
+datasette==0.45a3
+
+[test]
+pytest
+pytest-asyncio
+httpx
