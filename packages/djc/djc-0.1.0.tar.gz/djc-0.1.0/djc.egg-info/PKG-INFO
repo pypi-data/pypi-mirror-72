@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: djc
+Version: 0.1.0
+Summary: Command Line Interface for Django with Nifty Scripts
+Home-page: https://github.com/DanielJDufour/djc
+Author: Daniel J. Dufour
+Author-email: daniel.j.dufour@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/DanielJDufour/djc/tarball/download
+Description: # djc
+        Command Line Interface for Django with Nifty Scripts
+        
+        # usage
+        Install djc in the same environment as your Django project
+        ## create a new user
+        ```bash
+        djc create-user --project="$PWD/test/mysite" --username="daniel" --email="example@gmail.com" --password="password" --debug="true"
+        ```
+        
+Keywords: cli,django,python
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
