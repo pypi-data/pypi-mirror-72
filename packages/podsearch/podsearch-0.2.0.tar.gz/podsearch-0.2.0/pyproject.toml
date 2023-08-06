@@ -1,0 +1,18 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "podsearch"
+author = "Anton Zhiyanov"
+author-email = "m@antonz.ru"
+home-page = "https://github.com/nalgeon/podsearch-py"
+requires-python = ">=3.7"
+description-file = "README.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+
+[tool.black]
+line-length = 100
