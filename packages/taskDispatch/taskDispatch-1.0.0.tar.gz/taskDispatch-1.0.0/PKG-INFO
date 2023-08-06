@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: taskDispatch
+Version: 1.0.0
+Summary: task dispatch
+Home-page: https://github.com/wudizhangzhi/django-params-validator
+Author: wudizhangzhi
+Author-email: yueyatianchong@qq.com
+License: MIT
+Description: # 任务调度中心
+Keywords: redis,task
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
