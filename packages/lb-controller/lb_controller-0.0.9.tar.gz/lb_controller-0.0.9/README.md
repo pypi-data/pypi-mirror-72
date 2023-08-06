@@ -1,0 +1,46 @@
+# What's that thing?
+
+`lb-controller` is kubernetes operator that can handle dynamic reconfiguration
+of an external load balancer, *e.g* haproxy, it aims to allow the use of the
+`LoadBalancer` or `NodePort` service type with on premise clusters.
+
+This operator is not deployed in the K8s cluster but on the load balancers and
+is a subscriber of the cluster events to know when it has to wake up and do its
+thing.
+
+We thought of 3 scenarios while building this app:
+
+  - HAProxy + keepalived
+  - Envoy + keepalived
+  - keepalived only
+
+The advantage of this implementation compared to [MetalLB](https://metallb.universe.tf/)
+is that you gain the ability to completely master the LB configuration, for
+example ipv6 to ipv4 or specific SSL configurations.
+
+LB-controller doesn't allocate IP addresses for LB. They must be specified:
+  - for *LoadBalancer* services, using `spec.loadBalancerIP` field
+  - for *NodePort* services, using an annotation nammed `external-lb/ip-address`
+
+# How should I integrate `lb-controller`?
+
+* Install haproxy and keepalived
+* pip install lb-controller
+* add the configurations in /etc/lb-controller/
+* Define a dedicated service account to consume only the appropriate resources
+  from the cluster API server
+* set this identity in the `/root/.kube/config` file on the HAProxy hosts.
+
+You can find an ansible role at this address... as an example.
+
+# Metrics
+
+This app exposes two metrics in the openmetrics format to be scrape by
+prometheus for example:
+- number of valid managed services
+- number of invalid managed services
+
+# Developers
+
+In order to contribute to lb-controller, you should have `Pipenv` installed
+Install the virtualenv and all dependencies with `pipenv install --dev`, then run unit tests with `pytest`
