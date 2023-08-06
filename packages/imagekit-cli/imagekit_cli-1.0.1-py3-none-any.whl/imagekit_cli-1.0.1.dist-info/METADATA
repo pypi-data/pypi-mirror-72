@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: imagekit-cli
+Version: 1.0.1
+Summary: Tool to migrate Cloudinary storage to Imagekit.io
+Home-page: https://github.com/cloudmeteor/imagekit-cli
+Author: cloudmeteor
+Author-email: developer@imagekit.io
+License: MIT
+Keywords: imagekit imagekitio cloudinary cli migration storage
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: certifi (==2020.6.20)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: cloudinary (==1.21.1)
+Requires-Dist: idna (==2.8)
+Requires-Dist: imagekitio (==2.2.4)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: urllib3 (==1.25.9)
+
+UNKNOWN
+
+
