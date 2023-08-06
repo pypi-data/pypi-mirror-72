@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: geodatahub
+Version: 2020.2
+Summary: Official GeoDataHub API client
+Home-page: https://geodatahub.dk
+Author: GeoDataHub
+Author-email: info@geodatahub.dk
+License: Apache License v2
+Project-URL: Documentation, https://geodatahub.dk/docs/
+Project-URL: Bug Reports, https://gitlab.com/GeoDataHub/geodatahublib/issues
+Project-URL: Source, https://gitlab.com/GeoDataHub/geodatahublib/
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.16.2)
+Requires-Dist: geojson
+
+# GeoDataHub Python client library
+This library allows for two-way communication with the [GeoDataHub] backend.
+
+## License
+Apache License version 2, see `LICENSE.txt`
+
+## Installing
+The latest release of the geodatahub python module can be installed with the 
+command:
+
+    pip install geodatahub
+
+## Authors
+The [GeoDataHub] team, [info@geodatahub.dk](mailto:info@geodatahub.dk).
+
+[GeoDataHub]: https://geodatahub.dk
+
+
