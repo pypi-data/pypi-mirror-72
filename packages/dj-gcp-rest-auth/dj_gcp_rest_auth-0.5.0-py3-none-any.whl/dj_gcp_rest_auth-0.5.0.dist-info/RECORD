@@ -1,0 +1,13 @@
+dj_gcp_rest_auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dj_gcp_rest_auth/authentication.py,sha256=a42-qfElG34tSa-XE28ZAE3ndz9LrYShayci3QAoRNA,1258
+dj_gcp_rest_auth/permissions.py,sha256=QdTeJRmevsyJTS5DcnzVPobG9l-PwMQebcAVt9BLkq8,505
+dj_gcp_rest_auth/serializers.py,sha256=ozkqGbWU_nyGlwHi5EHYCF4Phk45pmmI4QVyyecs_fo,739
+dj_gcp_rest_auth/settings.py,sha256=qCd516qaj59TmoEAAEw5MhGoi2uVZVWzGs03wiV1fIs,1165
+dj_gcp_rest_auth/tokens.py,sha256=FZHhJ-6bmORm62vZcFWtpF3LXlBPUiO-txhgUZLX7M4,1087
+dj_gcp_rest_auth/urls.py,sha256=WR5qL24lYQHt3Sax2l0TQ1QvMvrz8Z7Tn3f_WzqVfjM,273
+dj_gcp_rest_auth/utils.py,sha256=5K22cjyZHlsmrPTLCv-S0uMOO5KnjDfnEEq9dx8-fcE,878
+dj_gcp_rest_auth/views.py,sha256=hfiY_ZUeRkNBpRVcAVtQdj1Xy9Qm0ItmDmcRrXSAB3g,871
+dj_gcp_rest_auth-0.5.0.dist-info/METADATA,sha256=TYoz26XlrRnPrbmVL_usmqN9ZSPump55X5jbOLYws4c,4763
+dj_gcp_rest_auth-0.5.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+dj_gcp_rest_auth-0.5.0.dist-info/top_level.txt,sha256=hg6mefRhwh_Z0sjIQm1DEroTl4nqny2AGib1dQUPHas,17
+dj_gcp_rest_auth-0.5.0.dist-info/RECORD,,
