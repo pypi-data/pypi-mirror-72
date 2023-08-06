@@ -1,0 +1,9 @@
+README.md
+setup.py
+sophize_datamodel/__init__.py
+sophize_datamodel/resource_utils.py
+sophize_datamodel/resources.py
+sophize_datamodel.egg-info/PKG-INFO
+sophize_datamodel.egg-info/SOURCES.txt
+sophize_datamodel.egg-info/dependency_links.txt
+sophize_datamodel.egg-info/top_level.txt

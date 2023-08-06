@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sophize-datamodel
+Version: 0.2.4
+Summary: Classes for data can be ingested by Sophize.
+Home-page: https://github.com/Sophize/datamodel-python
+Author: Abhishek Chugh
+Author-email: achugh89@gmail.com
+License: MIT
+Description: # datamodel-python
+        This package contains the classes that model data that can be ingested by Sophize. Also contains utility functions to read and write these classes as json.
+        
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
