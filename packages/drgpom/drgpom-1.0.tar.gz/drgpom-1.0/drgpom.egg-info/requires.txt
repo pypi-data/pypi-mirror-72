@@ -1,0 +1,6 @@
+nose2
+numpy<1.16.3
+pandas
+pyDOE
+matplotlib
+seaborn
