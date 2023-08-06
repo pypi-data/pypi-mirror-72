@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: pepperonai
+Version: 0.12.0
+Summary: Like scikit-learn - but worse
+Home-page: https://github.com/JonWiggins/pepperon.ai
+Author: Jon Wiggins
+Author-email: contact@pepperon.ai
+License: MIT
+Download-URL: https://github.com/JonWiggins/pepperon.ai/archive/0.12.0.tar.gz
+Description: UNKNOWN
+Keywords: ML,NLP,AI,pepperonai,pepperon.ai
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
