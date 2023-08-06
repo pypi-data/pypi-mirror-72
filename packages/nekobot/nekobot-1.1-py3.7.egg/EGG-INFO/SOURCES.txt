@@ -1,0 +1,9 @@
+README.md
+setup.py
+nekobot/__init__.py
+nekobot/async_client.py
+nekobot/client.py
+nekobot.egg-info/PKG-INFO
+nekobot.egg-info/SOURCES.txt
+nekobot.egg-info/dependency_links.txt
+nekobot.egg-info/top_level.txt
