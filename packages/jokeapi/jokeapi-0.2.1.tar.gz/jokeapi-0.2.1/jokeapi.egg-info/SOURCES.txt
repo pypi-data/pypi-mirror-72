@@ -1,0 +1,16 @@
+.gitignore
+LICENSE.txt
+MANIFEST
+README.md
+requirements.txt
+setup.cfg
+setup.py
+test_main.py
+.circleci/config.yml
+jokeapi/__init__.py
+jokeapi/main.py
+jokeapi.egg-info/PKG-INFO
+jokeapi.egg-info/SOURCES.txt
+jokeapi.egg-info/dependency_links.txt
+jokeapi.egg-info/requires.txt
+jokeapi.egg-info/top_level.txt
