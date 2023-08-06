@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: getpw
+Version: 0.3
+Summary: A better way to get passwords from users in python
+Home-page: https://github.com/n0x1s/getpw
+Author: n0x1s
+Author-email: n0x1s0x01@gmail.com
+License: MIT
+Download-URL: https://github.com/N0x1s/getpw/archive/0.3.tar.gz
+Description: UNKNOWN
+Keywords: getpass,get password,mask password
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
