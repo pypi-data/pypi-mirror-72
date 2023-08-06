@@ -1,0 +1,184 @@
+{
+    "@context": [ "base",
+        {
+            "@version": 1.1,
+            "@language": "en",
+            "description": {
+                "@id": "schema:description",
+                "@container": "@language"
+            },
+            "name": {
+                "@id": "schema:name",
+                "@container": "@language"
+            },
+            "value": {
+                "@id": "schema:value",
+                "@container": "@language"
+            },
+            "image": {
+                "@id": "schema:image",
+                "@type": "@vocab"
+            },
+            "citation": {
+                "@id": "schema:citation",
+                "@container": "@language"
+            },
+            "version": {
+                "@id": "schema:version",
+                "@container": "@language"
+            },
+            "schemaVersion": {
+                "@id": "schema:schemaVersion",
+                "@container": "@language"
+            },
+            "prefLabel": {
+                "@id": "skos:prefLabel",
+                "@container": "@language"
+            },
+            "altLabel": {
+                "@id": "skos:altLabel",
+                "@container": "@language"
+            },
+            "preamble": {
+                "@id": "reproschema:preamble",
+                "@container": "@language"
+            },
+            "valueType": {
+                "@id": "reproschema:valueType",
+                "@type": "@vocab"
+            },
+            "landingPage": {
+                "@id": "reproschema:landingPage",
+                "@container": "@set"
+            },
+            "question": {
+                "@id": "schema:question",
+                "@container": "@language"
+            },
+            "choices": {
+                "@id": "schema:itemListElement"
+            },
+            "valueRequired": "https://schema.org/valueRequired",
+            "multipleChoice": {
+                "@id": "reproschema:multipleChoice",
+                "@type": "schema:Boolean"
+            },
+            "responseOptions": {
+                "@id": "reproschema:responseOptions",
+                "@type": "@vocab"
+            },
+            "dataType": {
+                "@id": "schema:DataType",
+                "@type": "@id"
+            },
+            "minValue": {
+                "@id": "schema:minValue"
+            },
+            "maxValue": {
+                "@id": "schema:maxValue"
+            },
+            "ui" : "@nest",
+            "order": {
+                "@id": "reproschema:order",
+                "@container": "@list",
+                "@type": "@id",
+                "@nest": "ui"
+            },
+            "addProperties": {
+                "@id": "reproschema:addProperties",
+                "@type": "reproschema:AdditionalProperty",
+                "@container": "@set",
+                "@nest": "ui"
+            },
+            "shuffle": {
+                "@id": "reproschema:shuffle",
+                "@type": "schema:Boolean",
+                "@nest": "ui"
+            },
+            "inputOptions": {
+                "@id": "reproschema:inputs",
+                "@container": "@index",
+                "@nest": "ui"
+            },
+            "inputType": {
+                "@id": "reproschema:inputType",
+                "@type": "xsd:string",
+                "@nest": "ui"
+            },
+            "readonlyValue": {
+                "@id": "https://schema.org/readonlyValue",
+                "@nest": "ui"
+            },
+            "scoringLogic": {
+                "@id": "reproschema:scoringLogic",
+                "@container": "@index"
+            },
+            "jsExpression": {
+                "@id": "reproschema:jsExpression"
+            },
+            "isVis": {
+                "@id": "reproschema:isVis"
+            },
+            "variableName": "reproschema:variableName",
+            "isAbout": {
+                "@id": "reproschema:isAbout",
+                "@type": "@id"
+            },
+            "allow": {
+                "@id": "reproschema:allow",
+                "@container": "@set",
+                "@type": "@id",
+                "@nest": "ui"
+            },
+            "reproschema:Skipped": {"@id": "reproschema:Skipped"},
+            "reproschema:DontKnow": {"@id": "reproschema:DontKnow"},
+            "reproschema:TimedOut": {"@id": "reproschema:TimedOut"},
+            "reproschema:AutoAdvance": {"@id": "reproschema:AutoAdvance"},
+            "reproschema:DisableBack": {"@id": "reproschema:DisableBack"},
+            "reproschema:AllowExport": {"@id": "reproschema:AllowExport"},
+            "reproschema:AllowReplay": {"@id": "reproschema:AllowReplay"},
+            "timer": {
+                "@id": "reproschema:timer",
+                "@type": "@id",
+                "@nest": "ui"
+            },
+            "delay": {
+                "@id": "reproschema:delay",
+                "@type": "@id",
+                "@nest": "ui"
+            },
+            "importedFrom": {
+                "@id": "pav:importedFrom",
+                "@type": "@id"
+            },
+            "importedBy": {
+                "@id": "pav:importedBy",
+                "@type": "@id"
+            },
+            "createdWith": {
+                "@id": "pav:createdWith",
+                "@type": "@id"
+            },
+            "createdBy": {
+                "@id": "pav:createdBy",
+                "@type": "@id"
+            },
+            "createdOn": {
+                "@id": "pav:createdOn",
+                "@type": "xsd:dateTime"
+            },
+            "previousVersion": {
+                "@id": "pav:previousVersion",
+                "@type": "@id"
+            },
+            "lastUpdateOn": {
+                "@id": "pav:lastUpdateOn",
+                "@type": "xsd:dateTime"
+            },
+            "derivedFrom": {
+                "@id": "prov:wasDerivedFrom",
+                "@type": "@id"
+            }
+        }
+    ]
+}
