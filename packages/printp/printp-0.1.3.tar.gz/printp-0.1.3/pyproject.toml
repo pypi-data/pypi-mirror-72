@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "printp"
+version = "0.1.3"
+description = ""
+authors = ["Eyal Levin <eyalev@gmail.com>"]
+repository = "https://github.com/eyalev/printp"
+readme = "README.md"
+
+[tool.poetry.scripts]
+printp = "printp.cli:cli"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+print-dict = "^0.1.5"
+click = "^7.1.2"
+input-util = "^0.1.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
