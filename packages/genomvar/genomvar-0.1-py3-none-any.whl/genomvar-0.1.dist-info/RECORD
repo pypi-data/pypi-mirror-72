@@ -1,0 +1,17 @@
+genomvar/__init__.py,sha256=hy7drZ_BPK5hAleax58ESL9em41f-OCW7j9mz3cj_Fo,3192
+genomvar/__main__.py,sha256=DxoRoSw3ENkYAJwz0j6GvSduJTo1BXdmwzTzmZLEO3U,1722
+genomvar/cmdutils.py,sha256=zyu7htRma6EeNkeF6r1nnYyNxs8j2DEwzmSlP3Rn6KE,2756
+genomvar/utils.py,sha256=i-13r67C6CKa0pGeUnUp46IdR3T-LYN4X80zSc8S13Q,3614
+genomvar/variant.py,sha256=Au8WYrhdV6OYt0T9fLPdkXgWV-FfbCwgkVuzNMrAxlU,26952
+genomvar/variantops.py,sha256=cLosCvIHVMFjknLf8UZhVtJzjnjS7AZLZipTAQ8L8LA,16015
+genomvar/varset.py,sha256=jltEqO3SnVHW8RW7Z-BQu0hBF2hlk6v4_Tujjv4KPc0,57929
+genomvar/vcf.py,sha256=OikGgl17m079XF0LxH8zMgAJGQFP3pbRqBPGa5ehKDA,33807
+genomvar/tmpl/vcf_head_base.tmpl,sha256=Qjq-TZoT-V9pYrQ0oY5395uSepEmV4ac461VkUARGQQ,331
+genomvar/tmpl/vcf_head_info.tmpl,sha256=ebvT7McQljLN0JMpV5HQ9-vbpTXH93OxKQ2xso2JkQU,211
+genomvar/tmpl/vcf_head_simple.tmpl,sha256=Zdkq3-YtNojaH_ZA-LppbX80MyCeVDRV933ErNMM5Xc,159
+genomvar/tmpl/vcf_row.tmpl,sha256=qMN-oy03edPI93b57CRZ8xKhT3ehfTirHzPbEqr5ASQ,111
+genomvar-0.1.dist-info/LICENSE,sha256=lWEax4eKHNrVB4rB6AQtFBGX4sJnL8-rLov5GHWkT9A,1490
+genomvar-0.1.dist-info/METADATA,sha256=D8vMWYN6UX5dfyyJ5kyBz_4nNftaZwp6qysyiTCpGpk,3334
+genomvar-0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+genomvar-0.1.dist-info/top_level.txt,sha256=-sQC0PniTQdOiTsIHO40LjGtCeyw8c5KcMQyfv8lhMw,9
+genomvar-0.1.dist-info/RECORD,,
