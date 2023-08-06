@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: django-kms-field
+Version: 0.1
+Summary: Add Amazon KMS encrypted database fields
+Home-page: https://github.com/skruger/django-kms-field
+Author: Shaun Kruger
+Author-email: shaun.kruger@gmail.com
+License: The MIT License: http://www.opensource.org/licenses/mit-license.php
+Description: # django-kms-field
+        [![Build Status](https://travis-ci.org/skruger/django-kms-field.svg?branch=master)](https://travis-ci.org/skruger/django-kms-field)
+        
+        KMS encrypted database fields for Django
+        
+Platform: all
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Framework :: Django
