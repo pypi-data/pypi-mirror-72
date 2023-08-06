@@ -1,0 +1,13 @@
+journal/__init__.py,sha256=CmFrJlTpDr8JN2VT5e7z5ZxYWA1g9o0WFRbQtpn8Fiw,75
+journal/cli.py,sha256=Ppy1GzjlUp4w-KIStUZw73mYrUG_6yI5cKpUT3ANYj0,297
+journal/version.py,sha256=xdZwl5RpSR6P__wUi_rqARFaTFAKgRBFRZ27JOHnPCI,92
+journal/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+journal/commands/append.py,sha256=TYvBwvQUIFSJbVW2dVqhn_yKwSr2x9g79zGW-kqvp8o,1191
+journal/commands/end.py,sha256=sAA-t5-UuKwcyt8syWuiqcXv6VOFI32RjCXiCKQ52uE,998
+journal/commands/version.py,sha256=iGNIcQHrbkfVum9FAQOlMtFm9EApeu8ACTt9EH8rDFs,68
+journalists-0.0.1.dist-info/LICENSE,sha256=VJVcyeUBhpIZ7lZ38xj6ubFDYp9IMWf6C1lXupEKZlU,1071
+journalists-0.0.1.dist-info/METADATA,sha256=nb27-wEWyrncqjCtQVbyptrwY5N_iSyBkFmiiCQPTxk,1691
+journalists-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+journalists-0.0.1.dist-info/entry_points.txt,sha256=_c3458LOQkr1as-op1iK7Bd8CaGxCJQcbCf92K-sXu4,59
+journalists-0.0.1.dist-info/top_level.txt,sha256=euCAUwM1MnMQMjOrkPCOMjyyitlUXuEKJjg-uan4EtU,8
+journalists-0.0.1.dist-info/RECORD,,
