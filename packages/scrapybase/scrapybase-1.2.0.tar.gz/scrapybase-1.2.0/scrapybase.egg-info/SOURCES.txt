@@ -1,0 +1,12 @@
+README.md
+setup.py
+scrapybase/__init__.py
+scrapybase/exporters.py
+scrapybase/items.py
+scrapybase/pipelines.py
+scrapybase/settings.py
+scrapybase.egg-info/PKG-INFO
+scrapybase.egg-info/SOURCES.txt
+scrapybase.egg-info/dependency_links.txt
+scrapybase.egg-info/requires.txt
+scrapybase.egg-info/top_level.txt
