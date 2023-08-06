@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: greenviz
+Version: 0.0.6
+Summary: welcome
+Home-page: https://github.com/RRajaSubramanian/Greenviz
+Author: R.raja subramanian
+Author-email: rajasubramanian.r1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pillow
+Requires-Dist: matplotlib
+Requires-Dist: sklearn
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: IPython
+Requires-Dist: graphviz
+
+UNKNOWN
+
+
