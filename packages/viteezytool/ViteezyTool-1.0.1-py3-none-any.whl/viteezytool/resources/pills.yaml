@@ -1,0 +1,197 @@
+---
+'1':
+  name: IJzer
+  type: Tablet
+  pakcode: 5567801
+  is_a_flavour: no
+  is_pil: yes
+  description: IJzer is een essentieel mineraal voor de productie van rode bloedcellen.
+  components:
+  - name: IJzer Citraat
+    amount: 14mg
+    perc: 100%
+  excepients: Microkristallijne cellulose, magnesium stearaat, CMC-Na
+  coating: HPMC, titanium dioxide
+'2':
+  name: Vitamine B12
+  type: Tablet
+  pakcode: 5567802
+  is_a_flavour: no
+  is_pil: yes
+  description: Vitamine B12 van Viteezy ondersteunt het energieniveau, het immuunsysteem en het concentratievermogen.
+  components:
+  - name: Vitamine B12
+    amount: 1000mcg
+    perc: 40000%
+  excepients: Isomalt, mannitol, crospovidon, magnesium stearaat, siliciumdioxide, aardbeiensmaak, steviosides
+  coating:
+'3':
+  name: Vitamine C
+  type: Tablet
+  pakcode: 5567813
+  is_a_flavour: no
+  is_pil: yes
+  description: Vitamine C is een krachtig antioxidant dat een rol speelt bij de gezondheid van het immuunsysteem.
+  components:
+  - name: Vitamine C
+    amount: 1000mg
+    perc: 1250%
+  - name: Citrusbioflavonoiden
+    amount: 25mg
+    perc: "**"
+  - name: Rozenbottelpoeder
+    amount: 20mg
+    perc: "**"
+  excepients: Microkristallijne cellulose, Natriumcroscarmellose, crospovidon, Siliciumdioxide, Magnesium stearaat
+  coating: Hypromellose-6CP, Polyvinylalcohol, Talk
+'4':
+  name: Vitamine D3
+  type: Softgel
+  pakcode: 5567804
+  is_a_flavour: no
+  is_pil: yes
+  description: Vitamine D3 ondersteunt het immuunsysteem, draagt bij aan een sterk gebit en is goed voor het behoud van sterke botten.
+  components:
+  - name: Vitamine D3
+    amount: 75mcg
+    perc: 1500%
+  - name: Virgin olijfolie
+    amount: 99,92mg
+    perc: "**"
+  excepients:
+  coating: Gelatine (runderbot), glycerine, water
+'5':
+  name: Magnesium
+  type: Tablet
+  pakcode: 5567805
+  is_a_flavour: no
+  is_pil: yes
+  description: Onze magnesium bestaat uit het organische magnesiumcitraat. Deze vorm is goed opneembaar in het lichaam.
+  components:
+  - name: Magnesium
+    amount: 200mg
+    perc: 53%
+  excepients: Microkristallijne cellulose, magnesium stearaat, CMS-NA
+  coating: HPMC
+'6':
+  name: Zink
+  type: Tablet
+  pakcode: 5567806
+  is_a_flavour: no
+  is_pil: yes
+  description: Zink is ondermeer nodig bij de opbouw van eiwitten, de groei en ontwikkeling van weefsel en een goede werking van het afweer- en immuunsysteem.
+  components:
+  - name: Zink
+    amount: 25mg
+    perc: 250%
+  excepients: Calciumcarbonaat, microkristallijne cellulose, calciumfosfaat (dibasisch, watervrij), stearinezuur, magnesium stearaat, siliciumdioxide, natriumcarboxylmethylcellulose
+  coating: Hypromellose, glycerine, carnaubawas
+'8':
+  name: Groene thee extract
+  type: Tablet
+  pakcode: 5567807
+  is_a_flavour: no
+  is_pil: yes
+  description: Groene thee extract stimuleert vetverbranding, is goed voor het hart en het gezichtsvermogen.
+  components:
+  - name: Groene thee extract
+    amount: 450mg
+    perc: "**"
+  excepients: Calciumfosfaat (dibasisch, watervrij), microkristallijne cellulose, croscarmellose-natrium, magnesium stearaat
+  coating: Hypromellose, polyvinylalcohol
+'17':
+  name: Kurkuma
+  type: Capsule
+  pakcode: 5567808
+  is_a_flavour: no
+  is_pil: yes
+  description: Recente onderzoeken suggereren dat kurkuma een positief effect kan hebben op de stemming en de reactie op stress.
+  components:
+  - name: Curcumine
+    amount: 600mg
+    perc: "**"
+  - name: Zwarte peper
+    amount: 5mg
+    perc: "**"
+  excepients:
+  coating: HPMC
+'19':
+  name: Visolie
+  type: Softgel
+  pakcode: 5567819
+  is_a_flavour: no
+  is_pil: yes
+  description: Visolie is een gezonde en effectieve bron om je essentiële omega-3-vetzuren (DHA en EPA) binnen te krijgen.
+  components:
+  - name: Visolie
+    amount: 515mg
+    perc: "**"
+  - name: Vitamine E
+    amount: 5mg
+    perc: 42%
+  - name:
+    amount:
+    perc:
+  - name: "waarvan:"
+    amount:
+    perc:
+  - name: DHA
+    amount: 125mg
+    perc: "**"
+  - name: EPA
+    amount: 165mg
+    perc: "**"
+  excepients:
+  coating: Gelatine, glycerine, gezuiverd water
+'20':
+  name: Algenolie
+  type: Softgel
+  pakcode: 5567810
+  is_a_flavour: no
+  is_pil: yes
+  description: Algenolie heeft een positieve invloed op de hersenen, ogen, onze stemming en het geheugen.
+  components:
+  - name: Algenolie
+    amount: 500mg
+    perc: "**"
+  - name: Vitamine E
+    amount: 3mg
+    perc: "**"
+  - name:
+    amount:
+    perc:
+  - name: "waarvan:"
+    amount:
+    perc:
+  - name: DHA
+    amount: 150mg
+    perc: "**"
+  - name: EPA
+    amount: 75mg
+    perc: "**"
+  excepients:
+  coating: Glycerine (RSPO), gemodificeerd zetmeel, carrageen, water
+'21':
+  name: Cranberry
+  type: Tablet
+  pakcode: 5567811
+  is_a_flavour: no
+  is_pil: yes
+  description: Dit cranberry tablet bevat vitamine C en zorgt tevens voor een goede weerstand.
+  components:
+  - name: Cranberry extract 35:1
+    amount: 250mg
+    perc: "**"
+  - name: D-mannose
+    amount: 250mg
+    perc: "**"
+  - name: Calciumascorbaat
+    amount: 65mg
+    perc: "**"
+  - name: Uva ursi 10:1
+    amount: 50mg
+    perc:  "**"
+  excepients: 'Microkristallijne cellulose, CMS - Na, magnesium stearaat, HPMC, rode ijzeroxide, zwarte ijzeroxide, titaandioxide'
+  coating:
+
+
