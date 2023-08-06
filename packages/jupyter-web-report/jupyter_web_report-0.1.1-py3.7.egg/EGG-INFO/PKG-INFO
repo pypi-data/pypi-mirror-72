@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: jupyter-web-report
+Version: 0.1.1
+Summary: jupyter web report
+Home-page: https://github.com/JaylanLiu/jupyter-web-report
+Author: JaylanLiu
+Author-email: liujilong@outlook.com
+License: UNKNOWN
+Description: # jupyter-web-report
+        jwr, short for jupyter-web-report, is a command line interface tool for using jupyter`s ipynb file as a reusable template to generate analysis report with new data source. It provides properties such as passing command line parameters, executing, and  jupyter cell level output controlling.
+        
+        ## Usage 
+        ```
+        $python jupyter-web-report.py -h
+        usage: jupyter-web-report.py [-h] -i IPYNB [-c CLINICAL] -m MUTATION [-n CNV]
+                                     [-s SV]
+        
+        jupyter-web-report
+        
+        optional arguments:
+          -h, --help            show this help message and exit
+          -i IPYNB, --ipynb IPYNB
+                                path to ipynb template
+          -c CLINICAL, --clinical CLINICAL
+                                path to clinical info file.
+          -m MUTATION, --mutation MUTATION
+                                path to mutation info file.
+          -n CNV, --cnv CNV     path to cnv info file
+          -s SV, --sv SV        path to sv info file
+        ```
+        The output goes to stdout.
+        
+        ## Example
+        ```
+        $python jupyter-web-report.py -i model.ipynb -m data_mutation.txt >out.html
+        ```
+        
+        
+        ## Documentation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
