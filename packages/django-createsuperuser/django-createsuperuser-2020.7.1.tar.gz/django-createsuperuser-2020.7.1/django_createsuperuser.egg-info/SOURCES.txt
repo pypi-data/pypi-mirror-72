@@ -1,0 +1,13 @@
+requirements.txt
+setup.py
+django_createsuperuser/__init__.py
+django_createsuperuser/__main__.py
+django_createsuperuser/apps.py
+django_createsuperuser.egg-info/PKG-INFO
+django_createsuperuser.egg-info/SOURCES.txt
+django_createsuperuser.egg-info/dependency_links.txt
+django_createsuperuser.egg-info/requires.txt
+django_createsuperuser.egg-info/top_level.txt
+django_createsuperuser/management/__init__.py
+django_createsuperuser/management/commands/__init__.py
+django_createsuperuser/management/commands/createsuperuser.py
