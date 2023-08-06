@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: jem
+Version: 0.3.9
+Summary: Python package for MRI and electrophysiology analysis.
+Home-page: https://github.com/inatilab/jem
+Author: Inati Lab, NINDS, NIH
+Author-email: souheil.inati@gmail.com
+License: Public Domain
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: click
+Requires-Dist: nibabel
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+===============================
+JEM
+===============================
+
+.. image:: https://img.shields.io/travis/InatiLab/jem.svg
+        :target: https://travis-ci.org/InatiLab/jem
+
+.. image:: https://img.shields.io/pypi/v/jem.svg
+        :target: https://pypi.python.org/pypi/jem
+
+
+Python package for MRI and electrophysiology analysis.
+
+* Free software: Public Domain
+* Documentation: https://inatilab.github.io/jem.
+
+Features
+--------
+
+* TODO
+
+
