@@ -1,0 +1,3 @@
+[console_scripts]
+devo-faker = devoutils.faker.scripts.faker_cli:cli
+
