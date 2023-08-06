@@ -1,0 +1,27 @@
+# Relay pagination types
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+  count: Int # non-standard relay field, returns full count of pageable items
+}
+
+interface ListPageInfo {
+  pageInfo: PageInfo
+}
+
+type Connection implements ListPageInfo {
+  pageInfo: PageInfo
+  edges: [Edge]
+}
+
+type Edge {
+  cursor: String
+  node: Node
+}
+
+interface Node {
+  id: ID!
+}
