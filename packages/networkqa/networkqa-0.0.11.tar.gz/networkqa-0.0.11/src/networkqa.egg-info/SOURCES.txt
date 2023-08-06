@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+networkqa.toml
+setup.py
+src/networkqa/__init__.py
+src/networkqa/networkqa.py
+src/networkqa.egg-info/PKG-INFO
+src/networkqa.egg-info/SOURCES.txt
+src/networkqa.egg-info/dependency_links.txt
+src/networkqa.egg-info/requires.txt
+src/networkqa.egg-info/top_level.txt
