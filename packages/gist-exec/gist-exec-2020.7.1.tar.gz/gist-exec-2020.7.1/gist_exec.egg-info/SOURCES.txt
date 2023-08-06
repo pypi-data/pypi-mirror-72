@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+gist_exec.egg-info/PKG-INFO
+gist_exec.egg-info/SOURCES.txt
+gist_exec.egg-info/dependency_links.txt
+gist_exec.egg-info/top_level.txt
+scripts/gist-exec
