@@ -1,0 +1,14 @@
+A python3 tool for data analysis and fitting.
+
+Install from https://pypi.org/project/fepydas/ with "pip install fepydas".
+View repository at https://bitbucket.org/_felix_/fepydas
+Find usage examples at https://bitbucket.org/_felix_/fepydas/src/default/examples/
+
+Requirements:
+Python3
+numpy
+scipy
+matplotlib
+lmfit
+scikit-learn
+pyamg
