@@ -1,0 +1,11 @@
+ocrd>=2.10.4
+click
+scipy
+numpy>=1.17.0
+pillow>=7.1.2
+shapely
+scikit-image
+opencv-python-headless
+matplotlib>3.0.0
+python-Levenshtein
+calamari_ocr==0.3.5
