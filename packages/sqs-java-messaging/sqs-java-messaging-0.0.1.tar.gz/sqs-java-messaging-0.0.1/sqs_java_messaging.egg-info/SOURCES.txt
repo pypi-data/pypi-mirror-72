@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+sqs_java_messaging.egg-info/PKG-INFO
+sqs_java_messaging.egg-info/SOURCES.txt
+sqs_java_messaging.egg-info/dependency_links.txt
+sqs_java_messaging.egg-info/top_level.txt
+src/sqs_java_messaging/__init__.py
+src/sqs_java_messaging/client.py
+src/sqs_java_messaging/constants.py
+src/sqs_java_messaging/message.py
+src/sqs_java_messaging/resource.py
