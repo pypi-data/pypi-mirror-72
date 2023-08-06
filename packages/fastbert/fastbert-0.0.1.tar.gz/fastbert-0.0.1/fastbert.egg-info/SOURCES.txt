@@ -1,0 +1,9 @@
+README.md
+setup.py
+fastbert/__init__.py
+fastbert/config.py
+fastbert/utils.py
+fastbert.egg-info/PKG-INFO
+fastbert.egg-info/SOURCES.txt
+fastbert.egg-info/dependency_links.txt
+fastbert.egg-info/top_level.txt

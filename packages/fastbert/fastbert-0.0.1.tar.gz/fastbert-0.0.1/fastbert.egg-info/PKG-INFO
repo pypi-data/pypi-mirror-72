@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: fastbert
+Version: 0.0.1
+Summary: The pipy version of FastBERT
+Home-page: https://github.com/autoliuweijie/FastBERT_pypi
+Author: Weijie Liu
+Author-email: autoliuweijie@example.com
+License: UNKNOWN
+Description: # FastBERT_pypi
+        The pypi version of FastBERT
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
