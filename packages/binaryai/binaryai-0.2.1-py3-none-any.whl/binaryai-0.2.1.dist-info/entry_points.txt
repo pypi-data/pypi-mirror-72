@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        binaryai=binaryai.binaryai_cli:main
+    
