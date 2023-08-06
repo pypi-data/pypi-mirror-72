@@ -1,0 +1,10 @@
+setup.py
+gode/Bianomaldistributions.py
+gode/Gaussiandistributions.py
+gode/Generaldistributions.py
+gode/__init__.py
+gode.egg-info/PKG-INFO
+gode.egg-info/SOURCES.txt
+gode.egg-info/dependency_links.txt
+gode.egg-info/not-zip-safe
+gode.egg-info/top_level.txt
