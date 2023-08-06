@@ -1,0 +1,3 @@
+[console_scripts]
+labelpoints = labelpoints.__main__:main
+
