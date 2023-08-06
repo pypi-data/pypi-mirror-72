@@ -1,0 +1,7 @@
+._*.py
+solo_sc.egg-info/
+dist/
+solo.egg-info*
+solo/__pycache_*
+.ipynb_checkpoints
+*/.ipynb_checkpoints
