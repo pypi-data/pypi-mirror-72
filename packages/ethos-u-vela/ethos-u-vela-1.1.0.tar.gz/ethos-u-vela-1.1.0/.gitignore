@@ -1,0 +1,5 @@
+.eggs/
+build/
+ethos_u_vela.egg-info/
+ethosu/*.so
+.coverage
