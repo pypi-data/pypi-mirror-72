@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: robotframework-testrail-reporter
+Version: 0.0.8
+Summary: robotframework-testrail-reporter
+Home-page: UNKNOWN
+Author: Vincenzo Gasparo
+Author-email: vincenzo.gasparo@gmail.it
+Maintainer: Vincenzo Gasparo
+Maintainer-email: vincenzo.gasparo@gmail.it
+License: MIT
+Description: Library used to update TestRail test run status from RobotFramework output.xml
+Keywords: robotframework testrail test  testing automation
+Platform: any
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing
