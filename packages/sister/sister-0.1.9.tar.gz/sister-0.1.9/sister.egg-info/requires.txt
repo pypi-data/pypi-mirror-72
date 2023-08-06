@@ -1,0 +1,10 @@
+fasttext
+numpy
+Janome
+gensim
+joblib
+
+[bert]
+transformers
+torch
+mecab-python3
