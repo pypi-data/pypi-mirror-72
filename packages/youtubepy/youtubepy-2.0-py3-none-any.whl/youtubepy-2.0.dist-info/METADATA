@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: youtubepy
+Version: 2.0
+Summary: youtubepy is a package to search for youtube videos with python
+Home-page: https://github.com/toxicrecker/youtubepy
+Author: toxicrecker
+Author-email: reck.channel.mainlead@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# youtubepy
+youtubepy is a package to search for youtube videos through python code.
+
+# Usage
+```python
+from youtubepy import Video
+video = Video("me at the zoo")
+result = video.search()
+print(result)
+> https://www.youtube.com/watch?v=A8AlbaDmaec
+```
+
+Attributes available for Video
+```
+search()
+title()
+channel_url()
+thumbnail()
+duration()
+view_count()
+like_count()
+dislike_count()
+average_rating()
+```
+
+Note - This package is currently under development
+
