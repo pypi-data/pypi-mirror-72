@@ -1,0 +1,12 @@
+README.md
+setup.py
+herborist/__init__.py
+herborist/_version.py
+herborist/herborist.py
+herborist.egg-info/PKG-INFO
+herborist.egg-info/SOURCES.txt
+herborist.egg-info/dependency_links.txt
+herborist.egg-info/entry_points.txt
+herborist.egg-info/not-zip-safe
+herborist.egg-info/requires.txt
+herborist.egg-info/top_level.txt
