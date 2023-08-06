@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: colorgrab
+Version: 0.0.1
+Summary: gets a pixel from your screen and spits out the hex value (e.g #0A0EFE)
+Home-page: https://github.com/julianPescobar/colorgrab
+Author: xepha
+Author-email: magneticrex@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# colorgrab
+gets a pixel from your screen and spits out the hex value (e.g #0A0EFE)
+
+# Examples:
+![ejemplo1](https://github.com/julianPescobar/colorgrab/blob/master/example1.png)
+
+
+![ejemplo2](https://github.com/julianPescobar/colorgrab/blob/master/example2.png)
+
+
