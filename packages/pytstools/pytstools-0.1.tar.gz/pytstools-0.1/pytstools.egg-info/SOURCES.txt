@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+mypackage/__init__.py
+mypackage/mymodule.py
+mypackage/template.txt
+pytstools.egg-info/PKG-INFO
+pytstools.egg-info/SOURCES.txt
+pytstools.egg-info/dependency_links.txt
+pytstools.egg-info/entry_points.txt
+pytstools.egg-info/requires.txt
+pytstools.egg-info/top_level.txt
