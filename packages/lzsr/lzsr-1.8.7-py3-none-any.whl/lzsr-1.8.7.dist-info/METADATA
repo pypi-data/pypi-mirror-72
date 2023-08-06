@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: lzsr
+Version: 1.8.7
+Summary: This Python packages can help you simplify some code in programming.
+Home-page: https://github.com/lzsr/lzsr
+Author: lzsr
+Author-email: y15305083929@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+The Python package can undertake some mathematical calculations, and some string encryption and decryption,Can help you to simplify the programming code.
+
+
