@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: python-picnic-api
+Version: 0.1.0
+Summary: 
+Home-page: https://github.com/MikeBrink/python-picnic-api
+License: Apache-2.0
+Author: Mike Brink
+Author-email: mjh.brink@icloud.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: requests (>=2.24.0,<3.0.0)
+Project-URL: Repository, https://github.com/MikeBrink/python-picnic-api
+Description-Content-Type: text/x-rst
+
+python_picnic_api
+=================
+
+python wrapper around the Picnic API
