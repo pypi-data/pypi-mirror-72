@@ -1,0 +1,8 @@
+algoutils
+requests
+urllib
+hmac
+hashlib
+
+[dev]
+pytest>=3.7
