@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: pysecurityspy
+Version: 0.1.0
+Summary: Python Wrapper for SecuritySpy API
+Home-page: https://github.com/briis/pysecurityspy
+Author: Bjarne Riis
+Author-email: bjarne@briis.com
+License: MIT
+Description: UNKNOWN
+Keywords: SecuritySpy,Surveillance,Python,Home-Assistant
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
