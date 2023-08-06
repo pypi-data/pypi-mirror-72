@@ -1,0 +1,12 @@
+pycloud_client/__init__.py,sha256=wBtQ_NVrU85qs3z-T-0WyJRcI9Sp-ENqliSCxueOGRU,687
+pycloud_client/client.py,sha256=MqiREi-nEr4yHhIaZXTLVetFlWWv3ETDEzqf5GxO0LI,4273
+pycloud_client/utils.py,sha256=ILwmhOE61aHAooncxJdYYaX-vCjUrSD9vCAOSR53jqg,908
+pycloud_client/proto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pycloud_client/proto/pycloud.proto,sha256=TtAxG6O44VR5nRus6j3Vp8RMW8-uEI0tb48FMOqOzzs,315
+pycloud_client/proto/pycloud_pb2.py,sha256=okEyoQ29tMcnAKCrv_XR336SSp7PvYDPR2kMNyXvRcA,5497
+pycloud_client/proto/pycloud_pb2_grpc.py,sha256=u53phWKJo_dJRCKpAB3Cytw89ZgHZtCjzSTaXTynwpE,2049
+pycloud_client-0.7.1.dist-info/LICENSE.txt,sha256=HwcZKJGR2gXVsJIFo1P_PDOyGY8NvuuK9xjm8fMyTAw,603
+pycloud_client-0.7.1.dist-info/METADATA,sha256=jJ_LQxR1BE0deFQZKxjfvk39t4GZQsydaIgdkabsksY,490
+pycloud_client-0.7.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pycloud_client-0.7.1.dist-info/top_level.txt,sha256=DPwmA78vj2EuzdaalYwzbamENNaqiArQhmqbzbhU77Y,15
+pycloud_client-0.7.1.dist-info/RECORD,,
