@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: path-util
+Version: 0.1.1
+Summary: 
+Home-page: https://github.com/eyalev/path-util
+Author: Eyal Levin
+Author-email: eyalev@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Project-URL: Repository, https://github.com/eyalev/path-util
+Description-Content-Type: text/markdown
+
+
+# path-util
+
