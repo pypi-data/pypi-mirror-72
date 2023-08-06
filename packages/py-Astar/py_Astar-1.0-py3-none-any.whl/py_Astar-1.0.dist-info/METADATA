@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: py-Astar
+Version: 1.0
+Summary: Implementation of Astar algorithm in python using matplotlib.
+Home-page: https://github.com/addy1997/py-Astar
+Author: Adwait Naik
+Author-email: adwaitnaik2@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+Astar is an algorithm based on heuristics for finding shortest collision-free path between two points.
+
+
