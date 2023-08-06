@@ -1,0 +1,11 @@
+annotell_input_api-0.2.8-nspkg.pth,sha256=QpBPPgWNKzm0ysnHOq_yHjdpWnH3BJrz1TQeNgOzolw,549
+annotell/input_api/__init__.py,sha256=uSIeRHiFQy4GW9bGi4irKIgswOroHfh72K95z40lsF4,125
+annotell/input_api/annoutil.py,sha256=00-2Zj9CYqlRZeOPfRxVraJBGKzTOcPvCcBiCYdCFmU,8461
+annotell/input_api/input_api_client.py,sha256=7515bu7PqWjkcZv5KY6RNnqypz_z6pnjtKhJxGO4Dvc,27595
+annotell/input_api/input_api_model.py,sha256=jUdAUkWjAizFnPRTDyu0i6umDAzTHKj_wNDv94J29tI,19236
+annotell_input_api-0.2.8.data/scripts/annoutil,sha256=Ezjx3i9kMdizegOOoaFxjZogt4clTnNsvAJvF-Sgz6s,103
+annotell_input_api-0.2.8.dist-info/METADATA,sha256=I_VxPY0SafCmzuBrgYcir7NTbtDgYPrwUICz_XPeTmo,3650
+annotell_input_api-0.2.8.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+annotell_input_api-0.2.8.dist-info/namespace_packages.txt,sha256=ovwDyo5ajMsAZxqAovd0d4s8ZFftRtmvbKk1zN8Z0go,9
+annotell_input_api-0.2.8.dist-info/top_level.txt,sha256=ovwDyo5ajMsAZxqAovd0d4s8ZFftRtmvbKk1zN8Z0go,9
+annotell_input_api-0.2.8.dist-info/RECORD,,
