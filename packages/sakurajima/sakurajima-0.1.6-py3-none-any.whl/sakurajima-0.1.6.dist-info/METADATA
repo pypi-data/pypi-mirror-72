@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: sakurajima
+Version: 0.1.6
+Summary: AniWatch.me API wrapper
+Home-page: https://github.com/veselysps/Sakurajima
+Author: Not Marek
+Author-email: notmarek@animex.tech
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Sakurajima
+Sakurajima is a Python 3 API wrapper for AniWatch.me and contains most endpoints.
+## Usage
+1. Install the package `pip install sakurajima`
+2. Use it.
+
+
