@@ -1,0 +1,3 @@
+[console_scripts]
+cbc-binary-analysis = cbc_binary_toolkit_examples.tools.analysis_util:main
+
