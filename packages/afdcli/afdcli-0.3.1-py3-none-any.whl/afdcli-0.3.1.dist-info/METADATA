@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: afdcli
+Version: 0.3.1
+Summary: Seismic waveform downloading client
+Home-page: https://github.com/maratumba/afdcli
+Author: Yaman Özakin
+Author-email: 
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Physics
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: numpy
+Requires-Dist: obspy
+
+# Client to download continous waveforms
+
+Usage:
+```py
+to install:
+```sh
+pip install numpy
+pip install afdcli
+```
+
+downloading waveforms:
+```
+from afdcli.client import Client
+c = Client()
+c.get_waveforms('*','BO*', '2020-06-25T17:19:16Z', '2020-06-26T17:20:16Z')
+```
+
+downloading stations with instrument response
+```
+from afdcli.client import Client
+c = Client()
+c.get_stations('*','BO*', '2020-06-25T17:19:16Z', '2020-06-26T17:20:16Z', instrument_response=True)
+```
+
+
