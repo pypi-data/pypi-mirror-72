@@ -1,0 +1,3 @@
+[console_scripts]
+eatwhat = EatWhat.cli:main
+
