@@ -1,0 +1,3 @@
+[console_scripts]
+vimvaldi = vimvaldi.__init__:run
+
