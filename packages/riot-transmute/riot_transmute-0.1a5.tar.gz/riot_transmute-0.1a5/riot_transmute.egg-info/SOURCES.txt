@@ -1,0 +1,10 @@
+README.md
+setup.py
+riot_transmute/__init__.py
+riot_transmute/match_timeline_to_game.py
+riot_transmute/match_to_game.py
+riot_transmute.egg-info/PKG-INFO
+riot_transmute.egg-info/SOURCES.txt
+riot_transmute.egg-info/dependency_links.txt
+riot_transmute.egg-info/requires.txt
+riot_transmute.egg-info/top_level.txt
