@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+gist_description.egg-info/PKG-INFO
+gist_description.egg-info/SOURCES.txt
+gist_description.egg-info/dependency_links.txt
+gist_description.egg-info/top_level.txt
+scripts/gist-description
