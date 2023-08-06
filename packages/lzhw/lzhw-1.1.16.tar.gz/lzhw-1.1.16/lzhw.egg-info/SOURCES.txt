@@ -1,0 +1,34 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+test_lzhw.py
+tox.ini
+examples/german_credit.xlsx
+img/lzhw duration.png
+img/lzhw size.png
+img/lzhw_duration2.jpg
+img/lzhw_logo.jpg
+img/lzhw_size2.jpg
+lzhw/__init__.py
+lzhw/compress_util.py
+lzhw/huffman_coding.py
+lzhw/lz20c.c
+lzhw/lz20c.pyx
+lzhw/lz77c.c
+lzhw/lz77c.pyx
+lzhw/lz78.py
+lzhw/lzhw_alg.py
+lzhw/lzhw_df.py
+lzhw/lzw_c.c
+lzhw/lzw_c.pyx
+lzhw/para_util.py
+lzhw/pq.py
+lzhw/util.py
+lzhw.egg-info/PKG-INFO
+lzhw.egg-info/SOURCES.txt
+lzhw.egg-info/dependency_links.txt
+lzhw.egg-info/requires.txt
+lzhw.egg-info/top_level.txt
+lzhw_cli/lzhw_cli.py
