@@ -1,0 +1,10 @@
+coverage
+GitPython==1.0.1
+alabaster
+ipython
+watchdog
+pylint
+nose
+Sphinx
+nosexcover
+twine
