@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: coref
+Version: 0.0.2
+Summary: Functional, Namespace-based application CORE
+Home-page: https://github.com/vulogov/coref
+Author: Vladimir Ulogov
+Author-email: vladimir.ulogov@me.com
+License: GPL3
+Description: # core.F
+        Functional Python Application Framework
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
