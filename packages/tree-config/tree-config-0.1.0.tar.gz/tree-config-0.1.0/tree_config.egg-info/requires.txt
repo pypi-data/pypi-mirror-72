@@ -1,0 +1,10 @@
+ruamel.yaml
+
+[dev]
+pytest>=3.6
+pytest-cov
+sphinx-rtd-theme
+coveralls
+sphinx
+flake8
+wheel
