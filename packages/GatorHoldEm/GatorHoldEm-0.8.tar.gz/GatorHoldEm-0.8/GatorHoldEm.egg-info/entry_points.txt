@@ -1,0 +1,3 @@
+[console_scripts]
+gatorholdem = GatorHoldEm.SocketIOClient:main
+
