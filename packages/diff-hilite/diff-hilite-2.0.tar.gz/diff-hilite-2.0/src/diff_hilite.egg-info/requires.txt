@@ -1,0 +1,6 @@
+
+[testing]
+nose
+flake8
+mock
+six
