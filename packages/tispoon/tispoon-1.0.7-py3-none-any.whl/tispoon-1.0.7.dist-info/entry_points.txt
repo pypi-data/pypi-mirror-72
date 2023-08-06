@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        tispoon=tispoon.core:main
+    
