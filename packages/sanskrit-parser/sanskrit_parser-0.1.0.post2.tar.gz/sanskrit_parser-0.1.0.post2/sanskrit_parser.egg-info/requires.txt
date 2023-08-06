@@ -1,0 +1,14 @@
+indic_transliteration
+lxml
+networkx
+tinydb
+requests
+six
+flask
+flask_restx
+jsonpickle
+sanskrit_util
+sqlalchemy
+sentencepiece
+gensim
+pydot
