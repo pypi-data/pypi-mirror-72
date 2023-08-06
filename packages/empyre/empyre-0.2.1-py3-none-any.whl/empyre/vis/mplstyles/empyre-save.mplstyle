@@ -1,0 +1,17 @@
+### MATPLOTLIB STYLESHEET FOR SAVING EMPYRE IMAGES AND PLOTS
+
+text.usetex          : True      ## use TeX to render text
+
+font.family          : serif     ## default font family (use serifs)
+font.serif           : cm        ## Computer Modern (LaTeX font)
+
+savefig.dpi          : 200       ## figure dots per inch or 'figure'
+savefig.facecolor    : white     ## figure facecolor when saving
+savefig.edgecolor    : white     ## figure edgecolor when saving
+savefig.format       : pdf       ## png, ps, pdf, svg
+savefig.bbox         : tight     ## 'tight' or 'standard'.
+savefig.pad_inches   : 0.01      ## Padding to be used when bbox is set to 'tight'
+savefig.jpeg_quality : 95        ## when a jpeg is saved, the default quality parameter.
+savefig.directory    : ~         ## default directory in savefig dialog box, leave empty to always use cwd
+savefig.transparent  : False     ## controls whether figures are saved with transp. background by default
+savefig.orientation  : portrait  ## Orientation of saved figure

@@ -1,0 +1,11 @@
+### MATPLOTLIB STYLESHEET FOR EMPYRE PLOTS
+
+text.usetex                   : True      ## use TeX to render text
+
+font.family                   : serif     ## default font family (use serifs)
+font.serif                    : cm        ## Computer Modern (LaTeX font)
+
+figure.figsize                : 3.6, 2.2  ## figure size in inches
+figure.dpi                    : 200       ## figure dots per inch
+
+figure.constrained_layout.use : True      ## use constrained layout
