@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: pyfmu
+Version: 0.0.4
+Summary: A set of tools for developing functional-mockup-units (FMUs) using the full capabilities of Python.
+Home-page: https://github.com/INTO-CPS-Association/pyfmu
+Author: INTO-CPS Association
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/INTO-CPS-Association/pyfmu/issues
+Project-URL: Documentation, https://into-cps-application.readthedocs.io/en/latest/submodules/pyfmu/docs/index.html
+Project-URL: Source Code, https://github.com/INTO-CPS-Association/pyfmu
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: Jinja2
+Requires-Dist: lxml
+Requires-Dist: tqdm
+Provides-Extra: dev
+Requires-Dist: Sphinx ; extra == 'dev'
+Requires-Dist: recommonmark ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: sphinx-autoapi ; extra == 'dev'
+Requires-Dist: numpy ; extra == 'dev'
+Requires-Dist: pandas ; extra == 'dev'
+Requires-Dist: OOModellingPython ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: fmpy ; extra == 'dev'
+Requires-Dist: pyqtgraph ; extra == 'dev'
+Requires-Dist: scipy ; extra == 'dev'
+Requires-Dist: PyQt5 ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: Sphinx ; extra == 'docs'
+Requires-Dist: recommonmark ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: sphinx-autoapi ; extra == 'docs'
+Provides-Extra: gui
+Provides-Extra: tests
+Requires-Dist: numpy ; extra == 'tests'
+Requires-Dist: pandas ; extra == 'tests'
+Requires-Dist: OOModellingPython ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: tox ; extra == 'tests'
+Requires-Dist: fmpy ; extra == 'tests'
+Requires-Dist: pyqtgraph ; extra == 'tests'
+Requires-Dist: scipy ; extra == 'tests'
+Requires-Dist: PyQt5 ; extra == 'tests'
+
+
+# PyFMU
+PyFMU is a set of tools for developing functional-mockup-units (FMUs) using the full power of Python.
+
+## Documentation
+See the online documentation on how to use to tool and FMI in general see the INTO-CPS online documentation:
+
+https://into-cps-application.readthedocs.io
+
+

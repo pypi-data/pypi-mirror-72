@@ -1,0 +1,3 @@
+[console_scripts]
+pyfmu = pyfmu.pyfmu_cli:main
+
