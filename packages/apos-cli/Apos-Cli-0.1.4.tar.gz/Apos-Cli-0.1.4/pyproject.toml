@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "Apos-Cli"
+version = "0.1.4"
+description = "A command line interface for APOS the Agile Pizza Ordering Service."
+authors = ["Florian Vahl <florian@flova.de>",]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+argparse = "^1.4.0"
+datetime = "^4.3"
+requests = "^2.23.0"
+pyyaml = "^5.3.1"
+tabulate = "^0.8.7"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.extras]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry.scripts]
+apos = "apos_cli.apos:run"
