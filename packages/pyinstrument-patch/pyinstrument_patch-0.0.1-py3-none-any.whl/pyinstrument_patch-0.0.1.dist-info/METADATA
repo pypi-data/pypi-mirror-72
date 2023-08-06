@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: pyinstrument-patch
+Version: 0.0.1
+Summary: Patch for fix pyinstrument root_frame exception
+Home-page: https://github.com/PhuongTMR/pyinstrument_patch.git
+Author: PhuongTMR
+Author-email: phuong@paradox.ai
+License: MIT
+Download-URL: https://github.com/PhuongTMR/pyinstrument_patch/archive/master.zip
+Keywords: Pyinstrument Patch
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: pyinstrument (>=3.1.3)
+
+UNKNOWN
+
+
