@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: nuvla-api
+Version: 3.0.2
+Summary: A wrapper to use Nuvla from Python programs.
+Home-page: http://sixsq.com/nuvla
+Author: SixSq Sarl
+Author-email: support@sixsq.com
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Keywords: nuvla devops api
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development
