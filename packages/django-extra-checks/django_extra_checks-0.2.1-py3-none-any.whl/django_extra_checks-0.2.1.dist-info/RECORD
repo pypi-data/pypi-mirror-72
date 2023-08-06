@@ -1,0 +1,15 @@
+extra_checks/__init__.py,sha256=TbG7102SyOwqEobhtodeAe-p7RJgIrgN-zpwFE-GWtE,858
+extra_checks/apps.py,sha256=tMfBkJv3UEjXgNNjyvTRgn34Jg1BGufBN8OmOPdCc6s,280
+extra_checks/ast.py,sha256=deIQDgMxJAkC6gq2NFBgPJ6hQUbjg0sp9Y3ncAZiRlI,3928
+extra_checks/controller.py,sha256=f_giN3o3mNyNQqQB1GUCUm77-NbPHDJ2-pgCis24wZY,4989
+extra_checks/forms.py,sha256=iuq837fOmXt02rReh2v_Z7F1n9s1V5Y8Do7q_mzRD94,5404
+extra_checks/checks/__init__.py,sha256=KvSp1bW2BGqWkRdbPfgeLc27FO_88WNp6q89bXmOT1s,113
+extra_checks/checks/base_checks.py,sha256=v7kL5AYG7JnS8QIgXsdFQmdIY3arBkTt8TKH-OGsSwI,1490
+extra_checks/checks/model_checks.py,sha256=UwgDxhhT-kVuT7kE2QxWwebqG3NKQlUn7_EGgmt4tyc,2418
+extra_checks/checks/model_field_checks.py,sha256=sraiNvg67elGisGAJJygQuDpOzCfsqjtFWFVkaWzUbA,7159
+extra_checks/checks/self_checks.py,sha256=SddmYLpYY9xaLsAxJborocFGdXRQJIkhv_pXCAgLrho,1178
+django_extra_checks-0.2.1.dist-info/LICENSE,sha256=Y6xEbNH-RCaxl7ZIFlkEBhDKuDXixNq7MJ4pn9mEz3w,1086
+django_extra_checks-0.2.1.dist-info/METADATA,sha256=-rQmtfS0Kju3T_Ix9p1Fm8iWVZ9EE3cjD4XvitGJNwY,3736
+django_extra_checks-0.2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_extra_checks-0.2.1.dist-info/top_level.txt,sha256=OJ5_4kRIpNvGNphmGYt68luZwnw7rXJGoO9arSXR5w0,13
+django_extra_checks-0.2.1.dist-info/RECORD,,
