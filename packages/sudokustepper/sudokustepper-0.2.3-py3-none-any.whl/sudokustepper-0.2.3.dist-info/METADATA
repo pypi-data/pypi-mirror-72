@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: sudokustepper
+Version: 0.2.3
+Summary: A tool for stepping through, and visualising Sudoku solving algorithms
+Home-page: https://github.com/dougfinl/sudokustepper
+Author: Douglas Finlay
+Author-email: douglas@douglasfinlay.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Games/Entertainment :: Puzzle Games
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: PyQt5
+
+# Sudoku Stepper
+
+A tool for stepping through and visualising sudoku solving algorithms.
+
+![Animated Playback Demo](https://github.com/dougfinl/sudokustepper/raw/master/screenshots/backtracing-playback.gif)
+
+
+## License
+
+[GPLv3](https://choosealicense.com/licenses/gpl-3.0)
+
