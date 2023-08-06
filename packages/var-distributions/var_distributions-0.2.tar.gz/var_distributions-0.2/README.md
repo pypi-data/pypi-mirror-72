@@ -1,0 +1,23 @@
+# var-distributions package
+
+Summary of package
+
+#Explanation of files in the package
+
+Here comes the explanation
+
+#Installation
+
+pip install var-distributions
+  
+#Example
+  from var_distributions import Binomial, Gaussian
+  
+  g1 = Gaussian(10, 20)
+  print(g1)
+  
+  b1 = Binomial(0.3, 14)
+  print(b1.mean)
+  print(b1.stdev)
+  print(b1.p)
+  print(b1.n)
