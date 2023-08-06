@@ -1,0 +1,16 @@
+civipy/__init__.py,sha256=3CzomuLOVw2kuGo0MkA11yiJRppgXKXrOgJxc-BIVWw,805
+civipy/address.py,sha256=4Vuj0CxXzr8wHFYChL6LmQ1DwKKclt3uQF-x_3sdE9U,2654
+civipy/base.py,sha256=URdshKazp1T5RcQFrwRFEZDaoC8cZ6Zj1KfBfZDhCqQ,10453
+civipy/config.py,sha256=WbDD91ZWb2_JJAfJ4Zo1xQVAlAkCxV9iIvhnNg5u7rM,643
+civipy/contact.py,sha256=1XalUOM_laBuzDcyzgNLIHMCJVPYf8xYYhc_8Np8Qn0,4136
+civipy/custom_field.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+civipy/event.py,sha256=LpZ795cNW8gX1oHfgBxREOYPUCgHRg6AzdVvCJZLe1A,122
+civipy/exceptions.py,sha256=1MoO-bYsHiPhgeYDA_39wOMfjYdvxNonui_56aHVOZA,101
+civipy/note.py,sha256=4AKHBIPOt-vFCh9YqGtuVHH2TSwIVuKhP3VrqC25uXQ,704
+civipy/option_group.py,sha256=ca5eCr6JO5qSUfKv6-MFOyqr9R5U9YQBX3Hm5SJNZJ4,1711
+civipy/order.py,sha256=EBG89AXhhQvgSSQRZGPen2YjaxUAWV_AYB52Q0M6uV0,224
+civipy-0.0.1.dist-info/COPYING.md,sha256=M7wm1EmMGDtwPRdg7kW4d00h1uAXjKOT3HFScYQMeiE,34916
+civipy-0.0.1.dist-info/METADATA,sha256=_th-tABQaCF2dgUVaQ6CjvU5HYY3eDTguMhMhPj5jRc,315
+civipy-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+civipy-0.0.1.dist-info/top_level.txt,sha256=TTdp0dPrWGkEExlP9Qph8KTVPG1jvEr3UhquuSEcLoo,7
+civipy-0.0.1.dist-info/RECORD,,
