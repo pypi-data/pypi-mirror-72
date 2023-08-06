@@ -1,0 +1,4 @@
+
+            [console_scripts]
+            urduhack=urduhack.command.cli:cli
+        
