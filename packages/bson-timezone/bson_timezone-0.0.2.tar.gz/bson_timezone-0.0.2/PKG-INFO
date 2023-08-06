@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: bson_timezone
+Version: 0.0.2
+Summary: Provides timezone support for bson.json_util.dumps and bson.json_util.loads
+Home-page: UNKNOWN
+Author: AgileTek Engineering
+License: UNKNOWN
+Description: # bson_timezone #
+        
+        
+        A package that provides timezone support for MongoDB bson -> https://api.mongodb.com/python/current/api/bson/index.html
+        
+        
+        MongoDB bson is great - but it doens't allow for timezone support.  This package rectifies that.
+        
+        This package provides a new `dumps` and `loads` method that overrides the `~bson.json_util.dumps` and `~bson.json_util.load` functions
+        in a few key places to support timezones - everything else works in the same way as in the core package.
+        
+        
+        ### Installation ###
+        
+        ```
+        pip install bson_timezone
+        ```
+        
+        
+        ### Usage ###
+        
+        `bson_timezone` handle timezone aware and timezone naive datetimes.  
+        `bson_timezone` retains all existing functionality of `~bson.json_util.dumps` - meaning you can provide `json_options` to configure the output
+        as required. 
+        
+        #### Dumping a timezone aware datetime #### 
+        ```python
+        >>> from datetime import datetime
+        >>> from bson_timezone import bson_tz_dumps
+        >>> import pytz
+        
+        >>> timezone = pytz.timezone("America/New_York")
+        >>> dt = datetime(2020,6,20,12,30,45).astimezone(timezone)
+        
+        >>> bson_tz_dumps(dt)
+        '{"$date": 1592652645000, "$zone": "America/New_York", "$offset": {"total_seconds": -14400.0}}'
+        ```
+        
+        
+        #### Loading a timezone aware datetime #### 
+        ```python
+        >>> from datetime import datetime
+        >>> from bson_timezone import bson_tz_loads
+        
+        >>> dumped_data = '{"$date": 1592652645000, "$zone": "America/New_York", "$offset": {"total_seconds": -14400.0}}'
+        >>> bson_tz_loads(dumped_data)
+        datetime.datetime(2020, 6, 20, 7, 30, 45, tzinfo=<DstTzInfo 'America/New_York' EDT-1 day, 20:00:00 DST>)
+        ```
+           
+        #### Dumping a timezone naive datetime #### 
+        ```python
+        >>> from datetime import datetime
+        >>> from bson_timezone import bson_tz_dumps
+        
+        >>> dt = datetime(2020,6,20,12,30,45)
+        
+        >>> bson_tz_dumps(dt)
+        '{"$date": 1592656245000, "$zone": null, "$offset": null}'
+        ```
+        
+        
+        #### Loading a timezone naive datetime #### 
+        ```python
+        >>> from datetime import datetime
+        >>> from bson_timezone import bson_tz_loads
+        
+        >>> dumped_data = '{"$date": 1592656245000, "$zone": null, "$offset": null}'
+        >>> bson_tz_loads(dumped_data)
+        datetime.datetime(2020, 6, 20, 7, 30, 45)
+        ```
+        
+        ### Running the tests ###
+        
+        ```
+        python setup.py test
+        ```
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: pre-commit
+Provides-Extra: flake8
+Provides-Extra: black

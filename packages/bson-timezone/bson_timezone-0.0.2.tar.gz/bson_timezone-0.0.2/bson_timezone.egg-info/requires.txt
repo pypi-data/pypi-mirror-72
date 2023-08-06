@@ -1,0 +1,11 @@
+pymongo
+pytz
+
+[black]
+black
+
+[flake8]
+flake8
+
+[pre-commit]
+pre-commit
