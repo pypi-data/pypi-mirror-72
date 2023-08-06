@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: gtool3
+Version: 0.6a
+Summary: gtool io sub module of coreFrame
+Home-page: https://github.com/hyungjun/gtool3
+Author: Hyungjun Kim
+Author-email: hyungjun@gmail.com
+License: MIT
+Description:  long_description to be written. 
+Keywords: gtool miroc matsiro
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
