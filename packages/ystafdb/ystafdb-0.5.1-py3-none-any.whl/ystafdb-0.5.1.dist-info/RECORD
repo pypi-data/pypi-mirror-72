@@ -1,0 +1,17 @@
+ystafdb/__init__.py,sha256=FV44O_d3cektVCOGeObUN5JCBkewVZpCHo7uTsPO3o0,362
+ystafdb/config_parser.py,sha256=KYgmm2g_ItXX8Veh8i0QH4qYE-i0k22g3R1jkB2WKzY,4790
+ystafdb/filesystem.py,sha256=oHmJ-8rmDkt4BuwkZU9DeIj8QQ7B3TTpKA0vVVEt12E,549
+ystafdb/foaf.py,sha256=LEbvu0ja60keNNuX6o3KeHpk-tFP5-avrU49TDDpvqQ,3017
+ystafdb/graph_common.py,sha256=SeVVWaoMHWZHOfD7rhku9uNrlFMthtx0SRdqmzW_gxY,6202
+ystafdb/provenance_uris.py,sha256=ubulXv7gW9e2tjon8r8vpL28-N0vrIxhdpE3TJNrm5U,4751
+ystafdb/ystafdb_metadata.py,sha256=YB2SNnQvynPbmoDZjEJGK3qME3J-cocVQrcI4uO99jE,16759
+ystafdb/bin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ystafdb/bin/ystafdb.py,sha256=GqJkGrmVuFdrnOVnHweBjXQrKLhiHxmJ7zU0m5KgVq4,1253
+ystafdb/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ystafdb/data/config.json,sha256=tZwbn_xLA0DfFGRt9NU4i8REAJzADS6HVC8CnwlfJwc,2299
+ystafdb-0.5.1.dist-info/LICENSE,sha256=8ewE0epfkk2DrhvW3FaF5U4380UKfXThLMyo29LQPM4,1516
+ystafdb-0.5.1.dist-info/METADATA,sha256=iu0km91Y1iwVRYuU8XRy3YIQght4tPBI72CCIch3HIA,4260
+ystafdb-0.5.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ystafdb-0.5.1.dist-info/entry_points.txt,sha256=G2jAmiQmiXd1lVbEsY8MfayC756wwSI0TNjfCkwXOhw,58
+ystafdb-0.5.1.dist-info/top_level.txt,sha256=mutNTQmFlhGtK8RsQUaS9l0UppUw7UMwIz7hJ9KmuVY,8
+ystafdb-0.5.1.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+ystafdb-cli = ystafdb.bin.ystafdb:main
+
