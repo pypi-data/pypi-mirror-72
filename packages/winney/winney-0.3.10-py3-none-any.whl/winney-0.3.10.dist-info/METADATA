@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: winney
+Version: 0.3.10
+Summary: Object-Oriented HTTP Request
+Home-page: https://github.com/olivetree123/winney
+Author: olivetree
+Author-email: olivetree123@163.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.18.0)
+
+# winney
+![pypi](https://img.shields.io/pypi/v/winney?color=blue) ![Codacy Badge](https://app.codacy.com/project/badge/Grade/6e1a16da7b3747e0b69440fd3826e8f3)
+
+## Install
+> pip install winney
+
+## Tutorial
+``` python
+from winney import Winney
+
+wy = Winney(host="www.baidu.com")
+wy.register(method="get", uri="/", function_name="download")
+wy.download()
+t = wy.get_bytes()
+print(t)
+```
+
+
