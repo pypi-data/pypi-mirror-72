@@ -1,0 +1,91 @@
+#!/usr/bin/env python3
+
+
+import optparse
+import sys
+import traceback
+from cfdi_admin import __version__
+
+
+def main():
+    op = optparse.OptionParser(
+        usage='usage: %prog Export [options]', version='%prog {}'.format(__version__))
+    op.add_option("-i", "--infile", dest="infile",
+                  help="CFDI's XML file path (default: %default)", default='cfdi.xml')
+    (o, args) = op.parse_args()
+
+    try:
+        print(o)
+    except Exception as e:
+        traceback.print_exc(None, sys.stderr)
+        sys.exit(2)
+
+
+if __name__ == '__main__':
+    main()
+
+
+# import sys
+# import getopt
+# import os
+# import optparse
+
+
+# commands = {}
+
+
+# class CommandType(type):
+#     def __init__(cls, name, bases, attrs):
+#         super(CommandType, cls).__init__(name, bases, attrs)
+#         name = getattr(cls, name, cls.__name__.lower())
+#         cls.name = name
+#         if name != 'command':
+#             commands[name] = cls
+
+
+# Command = CommandType('Command', (object,), {'run': lambda self, args: None})
+
+
+# class Help(Command):
+#     """Display the list of available commands"""
+
+#     def run(self, args):
+#         print("Available commands:\n")
+#         names = list(commands)
+#         padding = max([len(k) for k in names]) + 2
+#         for k in sorted(names):
+#             name = k.ljust(padding, ' ')
+#             doc = (commands[k].__doc__ or '').strip()
+#             print("    %s%s" % (name, doc))
+#         print("\nUse '%s <command> --help' for individual command help." %
+#               sys.argv[0].split(os.path.sep)[-1])
+
+
+# class Export(Command):
+#     """ Export CFDI """
+
+#     def run(self, vargs):
+#         parser = optparse.OptionParser()
+
+#         group = optparse.OptionGroup(parser, "Common Options")
+#         group.add_option("-i", "--in", dest="infile", help="XML file path")
+#         parser.add_option_group(group)
+
+#         opt, args = parser.parse_args(vargs)
+#         print(opt)
+
+
+# def main(argv):
+#     args = sys.argv[1:]
+#     command = "export"
+#     if len(args) and not args[0].startswith("-"):
+#         command = args[0]
+#         args = args[1:]
+
+#     if command in commands:
+#         o = commands[command]()
+#         o.run(args)
+
+
+# if __name__ == "__main__":
+#     main(sys.argv)
