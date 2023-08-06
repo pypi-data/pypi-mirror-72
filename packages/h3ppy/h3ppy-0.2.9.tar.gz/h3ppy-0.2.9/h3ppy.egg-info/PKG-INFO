@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: h3ppy
+Version: 0.2.9
+Summary: Model and fit H3+ spectra
+Home-page: https://github.com/henrikmelin/h3ppy
+Author: Henrik Melin
+Author-email: h.melin@gmail.com
+License: UNKNOWN
+Description: 
+        # h3ppy
+        A python package for modelling and fitting H<sub>3</sub><sup>+</sup> spectra
+        
+        ## Install via pip
+        ```
+        pip3 install h3ppy
+        ```
+        
+        Full [documentation on Github](https://github.com/henrikmelin/h3ppy).
+            
+Keywords: infrared spectroscopy H3+ modelling
+Platform: UNKNOWN
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
