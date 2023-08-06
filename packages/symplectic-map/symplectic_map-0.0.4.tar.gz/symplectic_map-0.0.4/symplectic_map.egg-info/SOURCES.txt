@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+setup.py
+symplectic_map/__init__.py
+symplectic_map/cpu_symplectic_map.py
+symplectic_map/gpu_symplectic_map.py
+symplectic_map.egg-info/PKG-INFO
+symplectic_map.egg-info/SOURCES.txt
+symplectic_map.egg-info/dependency_links.txt
+symplectic_map.egg-info/requires.txt
+symplectic_map.egg-info/top_level.txt

@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: symplectic-map
+Version: 0.0.4
+Summary: A Numba implementation of a Symplectic Map with nice python bindings
+Home-page: https://github.com/carlidel/c_symplectic_map
+Author: Carlo Emilio Montanari
+Author-email: carlidel95@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
