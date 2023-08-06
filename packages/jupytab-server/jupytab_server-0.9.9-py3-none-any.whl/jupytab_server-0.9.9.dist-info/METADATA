@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: jupytab-server
+Version: 0.9.9
+Summary: Connect Tableau to your Jupyter Notebook
+Home-page: https://github.com/CFMTech/Jupytab
+Author: Brian Tribondeau
+Author-email: brian.tribondeau@cfm.fr
+License: MIT
+Project-URL: Bug Tracker, https://github.com/CFMTech/Jupytab/issues
+Project-URL: Documentation, https://github.com/CFMTech/Jupytab
+Project-URL: Source Code, https://github.com/CFMTech/Jupytab
+Keywords: jupytab jupyter notebook wdc tableau
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: jupyter-kernel-gateway
+
+
+
+Jupytab Server allows you to **explore in Tableau data which is generated
+dynamically by a Jupyter Notebook**. You can thus create Tableau data
+sources in a very flexible way using all the power of Python.
+This is achieved by having Tableau access data through a **web
+server created by Jupytab**.
+
+Jupytab Server is built on **solid foundations**: Tableau's Web Data
+Connector and the Jupyter Kernel Gateway.
+
+Features:
+
+* **Expose multiple pandas dataframes** to Tableau from a Jupyter
+  notebook
+* Access **several notebooks** from Tableau through a **single
+  entry point** (web server)
+* Manage your notebooks using a **web interface**
+* **Secure access** to your data
+
+The full documentation is available on the project's home page.
+
+
