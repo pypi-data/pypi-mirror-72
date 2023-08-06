@@ -1,0 +1,7 @@
+better-exceptions~=0.2.2
+
+[:python_version == "3.5"]
+biopython<1.77,~=1.73
+
+[:python_version > "3.5"]
+biopython~=1.73
