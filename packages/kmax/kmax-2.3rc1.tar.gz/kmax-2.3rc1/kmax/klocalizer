@@ -1,0 +1,811 @@
+#!/usr/bin/env python
+
+import sys
+import os
+import argparse
+import z3
+import regex
+import pickle
+import random
+import kmax.about
+import subprocess
+from kmax.common import get_kmax_constraints, unpickle_kmax_file
+
+try:
+  from subprocess import DEVNULL  # Python 3.
+except ImportError:
+  DEVNULL = open(os.devnull, 'wb')
+
+def info(msg, ending="\n"):
+  if not quiet: sys.stderr.write("INFO: %s%s" % (msg, ending))
+
+def warning(msg, ending="\n"):
+  sys.stderr.write("WARNING: %s%s" % (msg, ending))
+
+def error(msg, ending="\n"):
+  sys.stderr.write("ERROR: %s%s" % (msg, ending))
+
+def get_kextract(kextract_file):
+  """Return a list of lists, where each list is a line from the kextract, currently only the config lines.  See docs/kextract_format.md.  Returns None if no file is found."""
+  if not os.path.exists(kextract_file):
+    warning("no kextract file found: %s" % (kextract_file))
+    return None
+  else:
+    lists = []
+    with open(kextract_file, 'r') as fp:
+      for line in fp:
+        line = line.strip()
+        lists.append(line.split())
+      return lists
+  
+def get_kclause_constraints(kclause_file):
+  with open(kclause_file, 'rb') as fp:
+    # kclause, defined_vars, used_vars = pickle.load(fp)
+    kclause = pickle.load(fp)
+
+    kclause_constraints = {}
+    for var in kclause.keys():
+      kclause_constraints[var] = [ z3.parse_smt2_string(clause) for clause in kclause[var] ]
+
+    constraints = []
+    for var in kclause_constraints.keys():
+      for z3_clause in kclause_constraints[var]:
+        constraints.extend(z3_clause)
+
+    return constraints
+
+def get_resolved_to_kbuild_map(kmax):
+  # resolve all kbuild paths to file names, remove ../ relative
+  # paths.  these paths are needed in the kmax formulas to preserve
+  # the conditions on each subdirectory leading to the compilation
+  # unit, which may not strictly be subdirectories.
+  resolved_to_kbuild_map = {}
+  for key in kmax.keys():
+    resolved_filename = os.path.relpath(os.path.abspath(key))
+    if key.endswith("/"):
+      # preserve the ending slash, which signals a subdirectory
+      # instead of a compilation unit in kbuild
+      resolved_filename = resolved_filename + "/"
+    if resolved_filename not in resolved_to_kbuild_map.keys():
+      resolved_to_kbuild_map[resolved_filename] = [key]
+    else:
+      resolved_to_kbuild_map[resolved_filename].append(key)
+  return resolved_to_kbuild_map
+
+def resolve_kbuild_path(kmax, compilation_unit):
+  """This is a lighter-weight version of get_resolved_to_kbuild_map() that only looks for a particular compilation unit."""
+  kbuild_paths = []
+  for key in kmax.keys():
+    resolved_filename = os.path.relpath(os.path.abspath(key))
+    if key.endswith("/"):
+      # preserve the ending slash, which signals a subdirectory
+      # instead of a compilation unit in kbuild
+      resolved_filename = resolved_filename + "/"
+    if resolved_filename == compilation_unit:
+      kbuild_paths.append(key)
+  return kbuild_paths
+
+def prefetch_kmax_constraints(kmax_cache, path):
+  # add the condition for the compilation unit and each of its parent
+  # directories.  this assumes the path is relative.
+  if '/' in path:
+    elems = path.rsplit('/')
+    current_path = elems[0] + "/"
+    for i in range(1, len(elems)):
+      elem = elems[i]
+      parent_path = current_path  # trailing / is important for kbuild
+      current_path = os.path.join(parent_path, elem)
+      if i < len(elems) - 1:
+        current_path = current_path + "/"
+      if current_path not in kmax_cache.keys():
+        # run kmax on the parent to find the constraint
+        paths_to_try = []
+        path_to_kbuild = os.path.join(parent_path, "Kbuild")
+        path_to_makefile = os.path.join(parent_path, "Makefile")
+        if os.path.exists(path_to_kbuild):
+          paths_to_try.append(path_to_kbuild)
+        if os.path.exists(path_to_makefile):
+          paths_to_try.append(path_to_makefile)
+        if len(paths_to_try) == 0:
+          warning("There is no Kbuild Makefile in %s" % (parent_path))
+        for path_to_try in paths_to_try:
+          src_path = os.path.dirname(path_to_try) # remove the kbuild file name
+          command = ['kmax', '-z', '-Dsrctree=./', ('-Dsrc=%s' % (src_path)), path_to_try]
+          info("Running kmax: %s" % (" ".join(command)))
+          output = subprocess.check_output(command, stderr=DEVNULL) # todo: save error output to a log
+          new_formulas = pickle.loads(output)
+          kmax_cache.update(new_formulas)
+      if current_path in kmax_cache.keys():
+        current_path_constraint = z3.parse_smt2_string(kmax_cache[current_path])
+      else:
+        info("%s has no kmax formula, assuming it is unconstrained." % (current_path))
+  return kmax_cache
+
+token_pattern = regex.compile("CONFIG_[A-Za-z0-9_]+")
+def print_model_as_config(model, fp=sys.stdout, kconfig_types=None, kconfig_visible=None, kconfig_has_def_nonbool=None, user_specified_option_names=None, modules=False):
+  info("Printing model as config file to \"%s\"." % ("stdout" if fp == sys.stdout else (fp.name)))
+
+  if model is not None:
+    # print the model in .config format
+    for entry in model:
+      str_entry = str(entry)
+      matches = token_pattern.match(str_entry)
+      if matches:
+        if kconfig_visible is None or str_entry in kconfig_visible:
+          # if str_entry not in kclause_constraints.keys():
+          #   sys.stderr.write("warning: %s was not defined in the kconfig spec, but may be required for this unit.\n" % (str_entry))
+          if model[entry]:
+            # todo: for non-Boolean values, these are simplistic
+            # placeholders. use defaults from kconfig instead. these
+            # have their own dependencies but are not part of
+            # constraints themselves.
+            if kconfig_types is None:
+              # if no types provided, assume all are Boolean
+              fp.write("%s=y\n" % (str_entry))
+            elif kconfig_has_def_nonbool != None and str_entry in kconfig_has_def_nonbool and str_entry not in user_specified_option_names:
+              # don't bother printing out non-Booleans that Kconfig will likely set to a default value, as long as they weren't set by the user-defined constraints
+              pass
+            elif str_entry not in kconfig_types.keys():
+              if str_entry not in architecture_configs:
+                warning("%s is not defined by Kconfig for this architecture." % (str_entry))
+            elif kconfig_types[str_entry] == "bool":
+              fp.write("%s=y\n" % (str_entry))
+            elif kconfig_types[str_entry] == "tristate":
+              fp.write("%s=%s\n" % (str_entry, "y" if not modules else "m"))
+            elif kconfig_types[str_entry] == "string":
+              fp.write("%s=\n" % (str_entry))
+            elif kconfig_types[str_entry] == "number":
+              fp.write("%s=0\n" % (str_entry))
+            elif kconfig_types[str_entry] == "hex":
+              fp.write("%s=0x0\n" % (str_entry))
+            else:
+              assert(False)
+          else:
+            if kconfig_types is None or str_entry in kconfig_types.keys():
+              fp.write("# %s is not set\n" % (str_entry))
+            else:
+              if str_entry not in architecture_configs:
+                warning("%s is not defined by Kconfig for this architecture." % (str_entry))            
+      # else:
+      #   sys.stderr.write("omitting non-config var %s\n" % (str_entry))
+  else:
+    warning("model is None.  Not printing.")
+
+def approximate_model(approximate, constraints, user_constraints=[]):
+  solver = z3.Solver()
+  solver.set(unsat_core=True)
+  for constraint in constraints:
+    solver.add(constraint)
+
+  # try to match the given .config file as much as possible.
+  # there are two approaches to try: (1) add the .config has
+  # constraints, get the unsat core and try to remove assumptions
+  # until we get something sat, (2) add the .config has soft
+  # assertions.
+
+  assumptions = get_config_file_constraints(approximate)
+
+  # (1) unsat core approach. keep removing assumptions until the formula is satisfiable
+  res = solver.check(assumptions)
+  if res == z3.sat:
+    info("Already satisfiable when constraining with given config.  No approximatation needed.")
+    return solver.model()
+  else:
+    info("Approximating via unsat core approach.")
+    total_assumptions_to_match = len(assumptions)
+    info("Total assumptions from config: %d" % (total_assumptions_to_match))
+    info("%d assumptions left to try removing." % (total_assumptions_to_match), ending="\r")
+    while res == z3.unsat:
+      core = solver.unsat_core()
+      # remove all assumptions that in the core, except those specifically given as user-constraints.  potential optmization: try randomizing this or removing only some assumptions each iteration.
+      # print(core)
+      assumptions = [ assumption for assumption in assumptions if assumption not in core or assumption in user_constraints ]
+      info(len(assumptions), ending="\r")
+      res = solver.check(assumptions)
+      core = solver.unsat_core()
+      res = solver.check(assumptions)
+    info("\r")
+    info("Found satisfying config by removing %d assumptions." % (total_assumptions_to_match - len(assumptions)))
+    return solver.model()
+  
+  # (2) soft assertion approach. (todo)
+
+on_pattern = regex.compile("^(CONFIG_[A-Za-z0-9_]+)=[ym]")
+off_pattern = regex.compile("^# (CONFIG_[A-Za-z0-9_]+) is not set")
+def get_config_file_constraints(config_file):
+  # todo: don't allow invisible defaults to be turned off (get them from kclause), reduces size of constraints
+
+  constraints = []
+  # add the .config as constraints
+  with open(config_file, 'r') as approximate_fp:
+    lines = approximate_fp.readlines()
+    for line in lines:
+      line = line.strip()
+      off = off_pattern.match(line)
+      if off:
+        constraint = z3.Not(z3.Bool(off.group(1)))
+        constraints.append(constraint)
+      else:
+        on = on_pattern.match(line)
+        if on:
+          constraint = z3.Bool(on.group(1))
+          constraints.append(constraint)
+
+    return constraints
+  
+ad_hoc_on_pattern = regex.compile("^(CONFIG_[A-Za-z0-9_]+)$")
+ad_hoc_off_pattern = regex.compile("^!(CONFIG_[A-Za-z0-9_]+)$")
+def get_ad_hoc_constraints(config_file):
+  constraints = []
+  names = set()
+  with open(config_file, 'r') as fp:
+    lines = fp.readlines()
+    for line in lines:
+      line = line.strip()
+      off = ad_hoc_off_pattern.match(line)
+      if off:
+        name = off.group(1)
+        constraint = z3.Not(z3.Bool(name))
+        constraints.append(constraint)
+        names.add(name)
+      else:
+        on = ad_hoc_on_pattern.match(line)
+        if on:
+          name = on.group(1)
+          constraint = z3.Bool(name)
+          constraints.append(constraint)
+          names.add(name)
+
+    return constraints, names
+
+# names of architectures corresponding to make and make.cross's ARCH variable
+architectures = ["i386", "x86_64", "alpha", "arc", "arm", "arm64", "c6x", "csky", "h8300", "hexagon", "ia64", "m68k", "microblaze", "mips", "nds32", "nios2", "openrisc", "parisc", "powerpc", "riscv", "s390", "sh", "sh64", "sparc", "sparc64", "um", "um32", "unicore32",  "xtensa"]
+
+# architecture-specific configs, enabled/disabled based on the architecture selected
+architecture_configs = set([ "CONFIG_ALPHA", "CONFIG_ARC", "CONFIG_ARM", "CONFIG_ARM64", "CONFIG_C6X", "CONFIG_CSKY", "CONFIG_H8300", "CONFIG_HEXAGON", "CONFIG_IA64", "CONFIG_M68K", "CONFIG_MICROBLAZE", "CONFIG_MIPS", "CONFIG_NDS32", "CONFIG_NIOS2", "CONFIG_OPENRISC", "CONFIG_PARISC", "CONFIG_PPC64", "CONFIG_PPC32", "CONFIG_PPC", "CONFIG_RISCV", "CONFIG_S390", "CONFIG_SUPERH64", "CONFIG_SUPERH32", "CONFIG_SUPERH", "CONFIG_SPARC64", "CONFIG_SPARC32", "CONFIG_SPARC", "CONFIG_UML", "CONFIG_UNICORE32", "CONFIG_X86_64", "CONFIG_X86_32", "CONFIG_X86", "CONFIG_XTENSA" ])
+
+# dependency on CONFIG_BROKEN will prevent a build, so we check for it
+config_broken = z3.Not(z3.Bool("CONFIG_BROKEN"))
+
+def get_archs_from_subdir(kbuild_path):
+  """Get the architectures associated with the given arch/ subdirectory."""
+  assert(kbuild_path.startswith("arch/"))
+  elems = kbuild_path.split("/")
+  if (len(elems) < 3):
+    warning("need at least three elements, i.e., arch/NAME/unit.o to get arch name.")
+    return []
+  else:
+    subdir = elems[1]
+    # todo: handle um archs
+    if subdir == "um" or elems[2] == "um":
+      archs = [ "um", "um32" ]
+    elif subdir == "x86":
+      archs = [ "x86_64", "i386" ]
+    elif subdir == "sh":
+      archs = [ "sh", "sh64" ]
+    elif subdir == "sparc":
+      archs = [ "sparc", "sparc64" ]
+    else:
+      # arch matches subdir name
+      archs = [ subdir ]
+    return archs
+
+def get_arch_kclause_subdir(formulas, arch):
+  if arch == "um":
+    subdir = "x86_64"
+  elif arch == "um32":
+    subdir = "i386"
+  else:
+    subdir = arch
+  return os.path.join(os.path.join(os.path.join(formulas, "kclause"), subdir))
+  
+def get_arch_kclause_file(formulas, arch):
+  return os.path.join(get_arch_kclause_subdir(formulas, arch), "kclause")
+
+def get_arch_kextract_file(formulas, arch):
+  return os.path.join(get_arch_kclause_subdir(formulas, arch), "kextract")
+
+def get_arch_specific_constraints(arch, architecture_configs):
+  if arch == "x86_64":
+    constraints = [ z3.Bool("CONFIG_X86"), z3.Bool("CONFIG_X86_64"), z3.Not(z3.Bool("CONFIG_X86_32")), z3.Bool("BITS=64"), z3.Not(z3.Bool("BITS=32")) ]
+    disabled = architecture_configs.difference(set(["CONFIG_X86", "CONFIG_X86_64", "CONFIG_X86_32"]))
+  elif arch == "i386":
+    constraints = [ z3.Bool("CONFIG_X86"), z3.Bool("CONFIG_X86_32"), z3.Not(z3.Bool("CONFIG_X86_64")), z3.Bool("BITS=32"), z3.Not(z3.Bool("BITS=64")) ]
+    disabled = architecture_configs.difference(set(["CONFIG_X86", "CONFIG_X86_64", "CONFIG_X86_32"]))
+  elif arch == "powerpc":
+    constraints = [ z3.Bool("CONFIG_PPC") ]
+    disabled = architecture_configs.difference(set(["CONFIG_PPC", "CONFIG_PPC32", "CONFIG_PPC64"]))
+  elif arch == "sh":
+    constraints = [ z3.Bool("CONFIG_SUPERH"), z3.Bool("CONFIG_SUPERH32"), z3.Not(z3.Bool("CONFIG_SUPERH64")), z3.Bool("BITS=32"), z3.Not(z3.Bool("BITS=64")) ]
+    disabled = architecture_configs.difference(set(["CONFIG_SUPERH", "CONFIG_SUPERH32", "CONFIG_SUPERH64"]))
+  elif arch == "sh64":
+    constraints = [ z3.Bool("CONFIG_SUPERH"), z3.Bool("CONFIG_SUPERH64"), z3.Not(z3.Bool("CONFIG_SUPERH32")), z3.Bool("BITS=64"), z3.Not(z3.Bool("BITS=32")) ]
+    disabled = architecture_configs.difference(set(["CONFIG_SUPERH", "CONFIG_SUPERH32", "CONFIG_SUPERH64"]))
+  elif arch == "sparc":
+    constraints = [ z3.Bool("CONFIG_SPARC"), z3.Bool("CONFIG_SPARC32"), z3.Not(z3.Bool("CONFIG_SPARC64")), z3.Bool("BITS=32"), z3.Not(z3.Bool("BITS=64")) ]
+    disabled = architecture_configs.difference(set(["CONFIG_SPARC", "CONFIG_SPARC32", "CONFIG_SPARC64"]))
+  elif arch == "sparc64":
+    constraints = [ z3.Bool("CONFIG_SPARC"), z3.Bool("CONFIG_SPARC64"), z3.Not(z3.Bool("CONFIG_SPARC32")), z3.Bool("BITS=64"), z3.Not(z3.Bool("BITS=32")) ]
+    disabled = architecture_configs.difference(set(["CONFIG_SPARC", "CONFIG_SPARC32", "CONFIG_SPARC64"]))
+  elif arch == "um":
+    constraints = [ z3.Bool("UML"), z3.Bool("CONFIG_X86"), z3.Bool("CONFIG_X86_64"), z3.Not(z3.Bool("CONFIG_X86_32")) ]
+    disabled = architecture_configs.difference(set(["CONFIG_UML", "CONFIG_X86", "CONFIG_X86_64", "CONFIG_X86_32"]))
+  elif arch == "um32":
+    constraints = [ z3.Bool("UML"), z3.Bool("CONFIG_X86"), z3.Bool("CONFIG_X86_32"), z3.Not(z3.Bool("CONFIG_X86_64")) ]
+    disabled = architecture_configs.difference(set(["CONFIG_UML", "CONFIG_X86", "CONFIG_X86_64", "CONFIG_X86_32"]))
+  else:
+    arch_var = "CONFIG_%s" % (arch.upper())
+    constraints = [ z3.Bool(arch_var) ]
+    disabled = architecture_configs.difference(set([ arch_var ]))
+  disabled_z3 = [ z3.Not(z3.Bool(var)) for var in disabled ]
+  return constraints + disabled_z3
+
+if __name__ == '__main__':    
+  argparser = argparse.ArgumentParser()
+  argparser.add_argument('--formulas',
+                         type=str,
+                         default=".kmax/",
+                         help="""Path to the formulas which contain one kmax file for all compilation units and one directory for each architecture containing kclause files.  Defaults to \".kmax/\"""")
+  argparser.add_argument('--kmax-formulas',
+                         type=str,
+                         default=None,
+                         help="""The file containing the Kbuild constraints as a pickled dictionary from compilation unit to formula.  Defaults to \"kmax\" in the --formulas directory.""")
+  argparser.add_argument('--kclause-formulas',
+                         type=str,
+                         default=None,
+                         help="""The file containing the a pickled tuple with a mapping from configuration option to its formulas and a list of additional constraints.  This overrides --arch.""")
+  argparser.add_argument('--kextract',
+                         type=str,
+                         default=None,
+                         help="""The file containing the kconfig extract.  This must be accompanied by --kclause-formulas.""")
+  argparser.add_argument('--constraints-file',
+                         type=str,
+                         help="""A text file containing ad-hoc constraints.  One configuration option name per line.  Prefix with ! to force it off; no prefix means force on.""")
+  argparser.add_argument('-a',
+                         '--arch',
+                         action="append",
+                         default=[],
+                         help="""Specify each architecture to try.  These archs will be tried first in order if --all is also given.  Defaults to all.  Available architectures: %s""" % (", ".join(architectures)))
+  argparser.add_argument('--all',
+                         '--all-architectures',
+                         action="store_true",
+                         help="""Try all architectures for a satisfying configuration.  By default, klocalizer stops when a valid configuration is found.  Use --report-all-architectures to check each architecture instead of generating a configuration.""")
+  argparser.add_argument('--report-all',
+                         '--report-all-architectures',
+                         action="store_true",
+                         help="""Report the list of architectures in which there is a satisfying configuration for the given compilation unit(s)""")
+  argparser.add_argument('-o',
+                         '--output',
+                         type=str,
+                         default=".config",
+                         help="""Name of the output .config file.  Defaults to .config.""")
+  argparser.add_argument('-m',
+                         '--approximate',
+                         '--match',
+                         type=str,
+                         help="""An existing .config file to use to try to match as closely as possible while still containing the desired objective.""")
+  argparser.add_argument('--modules',
+                         action="store_true",
+                         help="""Set tristate options to 'm' instead of 'y' to build as modules instead of built-ins.""")
+  argparser.add_argument('-u',
+                         '--show-unsat-core',
+                         action="store_true",
+                         help="""Show the unsatisfiable core if the formula is unsatisfiable.""")
+  argparser.add_argument('-D',
+                         '--define',
+                         action="append",
+                         default=[],
+                         help="""Manually set a configuration option to be enabled.""")
+  argparser.add_argument('-U',
+                         '--undefine',
+                         action="append",
+                         default=[],
+                         help="""Manually set a configuration option to be disabled.""")
+  argparser.add_argument('--allow-config-broken',
+                         action="store_true",
+                         help="""Allow CONFIG_BROKEN dependencies.""")
+  argparser.add_argument('--allow-non-visibles',
+                         action="store_true",
+                         help="""Allow non-visible Kconfig configuration options to be set in the resulting config file.  By default, they are removed.""")
+  argparser.add_argument('--view-kbuild',
+                         action="store_true",
+                         help="""Just show the Kbuild constraints for the given compilation unit.  All other arguments are ignored.""")
+  argparser.add_argument("--sample",
+                         type=int,
+                         help="""Generate the given number of configurations.  Cannot be used with --approximate and will output to --sample-prefix instead of --output-file.""")
+  argparser.add_argument("--sample-prefix",
+                         type=str,
+                         help="""The prefix of the generated configurations.  Defaults to \"config\".""")
+  argparser.add_argument("--random-seed",
+                         type=int,
+                         help="""The random seed for the solver's model generation.""")
+  argparser.add_argument("--exclude-compilation-units",
+                         action="store_true",
+                         help="""Invert the z3 formula of the compilation unit (.o file) when generating .config""")
+  argparser.add_argument('-q',
+                         '--quiet',
+                         action="store_true",
+                         help="""Quiet mode prints no messages to stderr.""")
+  argparser.add_argument('--version',
+                         action="version",
+                         version="%s %s" % (kmax.about.__title__, kmax.about.__version__),
+                         help="""Print the version number.""")
+  argparser.add_argument("compilation_units",
+                         nargs='*',
+                         help="The path of the compilation unit (.o file) to generate a .config for, relative to the top of the source tree.")
+  args = argparser.parse_args()
+  
+  formulas = args.formulas
+  kmax_file = args.kmax_formulas
+  kclause_file = args.kclause_formulas
+  kextract_file = args.kextract
+  archs = args.arch
+  allarchs = args.all
+  reportallarchs = args.report_all
+  constraints_file = args.constraints_file
+  output_file = args.output
+  show_unsat_core = args.show_unsat_core
+  approximate = args.approximate
+  modules_arg = args.modules
+  define = args.define
+  undefine = args.undefine
+  disable_config_broken = not args.allow_config_broken
+  allow_non_visibles = args.allow_non_visibles
+  view_kbuild = args.view_kbuild
+  sample = args.sample
+  sample_prefix = args.sample_prefix
+  random_seed = args.random_seed
+  compilation_units = args.compilation_units
+  dont_compile = args.exclude_compilation_units
+  quiet = args.quiet
+
+  if kextract_file and not kclause_file:
+    argparser.print_help()
+    error("--kextract can only be used with --kclause-formulas")
+    exit(12)
+
+  if kclause_file and len(archs) > 0:
+    argparser.print_help()
+    error("Cannot provide --arch arguments when already providing an explicit --kclause-formulas argument")
+    exit(12)
+
+  if kclause_file and reportallarchs:
+    argparser.print_help()
+    error("Cannot use --report-all when providing an explicit --kclause-formulas argument.")
+    exit(12)
+  
+  if sample is not None:
+    if sample_prefix is None:
+      sample_prefix="config"
+    if approximate is not None:
+      argparser.print_help()
+      error("--approximate and --sample cannot currently be used together")
+      exit(12)
+    if sample < 1:
+      argparser.print_help()
+      error("Must provide a sample size of two or more.")
+      exit(12)
+    if reportallarchs:
+      argparser.print_help()
+      error("Cannot use --report-all when requesting a sample.")
+      exit(12)
+  else:
+    if sample_prefix is not None:
+      argparser.print_help()
+      error("--sample-prefix only to be used with --sample")
+      exit(12)
+
+  if len(compilation_units) == 0 and len(archs) == 0 and not allarchs:
+    argparser.print_help()
+    error("Please specify a compilation unit or an architecture to generate a satisfying configuration.\n")
+    exit(12)
+
+  if not os.path.exists(formulas):
+    warning("No formulas found.  Generating them on demand.  They can also be downloaded from https://kmax.opentheblackbox.net/formulas/ for some Linux versions.")
+    os.makedirs(formulas)
+
+  if not kmax_file:
+    kmax_file = os.path.join(formulas, "kmax")
+  info("Kmax formula file: %s" % (kmax_file))
+    
+  if len(compilation_units) > 0 and not os.path.isfile(kmax_file):
+    info("No prebuilt kmax formulas.  Running kmax on demand.")
+    kmax_on_demand = True
+  else:
+    kmax_on_demand = False
+
+  if len(compilation_units) > 0:
+    new_compilation_units = []
+    for unit in compilation_units:
+      if not unit.endswith(".o"):
+        warning("Forcing file extension to be .o, since lookup is by compilation unit: %s" % (unit))
+        unit = os.path.splitext(unit)[0] + ".o"
+      new_compilation_units.append(unit)
+    compilation_units = new_compilation_units
+
+  if len(compilation_units) > 0:
+    if kmax_on_demand:
+      kmax_formulas = {}
+      kmax_cache_file = os.path.join(formulas, "kmax_cache")
+      if not os.path.isfile(kmax_cache_file):
+        info("Creating kmax cache file: %s" % (kmax_cache_file))
+      else:
+        kmax_formulas = unpickle_kmax_file(kmax_cache_file)
+      for unit in compilation_units:
+        kmax_formulas = prefetch_kmax_constraints(kmax_formulas, unit)
+        if unit not in kmax_formulas.keys():
+          error("No formula from kmax was found for the compilation unit: %s" % (unit))
+          exit(3)
+      with open(kmax_cache_file, 'wb') as f:
+        pickle.dump(kmax_formulas, f, 0)
+    else:
+      info("Reading kmax formulas.")
+      kmax_formulas = unpickle_kmax_file(kmax_file)
+      new_compilation_units = []
+      for unit in compilation_units:
+        if unit not in kmax_formulas.keys():
+          kbuild_paths = resolve_kbuild_path(kmax_formulas, unit)
+          if len(kbuild_paths) == 0:
+            error("No formula from kmax was found for the compilation unit: %s" % (unit))
+            exit(3)
+          elif len(kbuild_paths) > 1:
+            error("There are multiple compilation units that match %s.  Please provide one of the Kbuild paths from below." % (unit))
+            print("\n".join(kbuild_paths))
+            exit(4)
+          kbuild_path = kbuild_paths[0]
+          assert unit != kbuild_path
+          info("Using full path from Kbuild: %s" % (kbuild_path))
+          unit = kbuild_path
+        new_compilation_units.append(unit)
+      compilation_units = new_compilation_units
+  else:
+    kmax_formulas = None
+    
+  if view_kbuild:
+    if len(compilation_units) > 0:
+      for unit in compilation_units:
+        info("The Kbuild constraints for %s:" % (unit))
+        get_kmax_constraints(kmax_formulas, unit, view=True)
+      exit(0)
+    else:
+      error("Please provide a compilation unit when using --view-kbuild.")
+      exit(5)
+
+  kclause_to_try = {}
+  if kclause_file:
+    if not os.path.isfile(kclause_file):
+      error("Cannot find kclause formulas file: %s" % (kclause_file))
+      exit(6)
+    if (len(archs) > 0 or allarchs):
+      warning("--kclause-formulas overrides --arch and --all.")
+    kclause_to_try = {None : kclause_file}
+  else:
+    if len(archs) == 0:
+      # try popular ones first
+      archs = [ "x86_64", "i386", "arm", "arm64", "sparc64", "sparc", "powerpc", "mips" ]
+      allarchs = True
+    if allarchs:
+      # add those not already requested by the user
+      archs = archs + [ arch for arch in architectures if arch not in archs ]
+    # filter archs based on unit name
+    for unit in compilation_units:
+      if unit is not None:
+        if unit.startswith("arch/"):
+          # narrow the set of possible architectures
+          unit_arch = get_archs_from_subdir(unit)
+          archs = [ arch for arch in archs if arch in unit_arch ]
+          if len(archs) == 0:
+            error("Resolved compilation unit is architecture-specific, but its architecture is not available: %s" % (unit))
+            exit(9)
+    info("Trying the following architectures: %s" % (" ".join(archs)))
+    for arch in archs:
+      arch_kclause = get_arch_kclause_file(formulas, arch)
+      # if not os.path.isfile(arch_kclause):
+      #   info("Generating kclause file on demand for %s, because no kclause found at %s." % (arch, arch_kclause))
+      kclause_to_try[arch] = arch_kclause
+        
+  if len(kclause_to_try.keys()) == 0:
+    error("No kclause files found.  Please check --formulas directory or use --kclause-formula explicitly.")
+    info("Available architectures: %s""" % (", ".join(architectures)))
+    exit(7)
+  elif len(compilation_units) == 0:
+    if len(kclause_to_try.keys()) == 1:
+      info("No compilation unit given.  Generating configuration only based on kclause constraints.")
+    elif len(kclause_to_try.keys()) > 1:
+      error("Trying multiple architectures without a target compilation unit is not provided.  Give one architecture or --kclause-formula to generate a config file without providing a compilation unit.")
+      exit(8)
+    else:
+      assert(False)
+
+  # if os.path.exists(output_file):
+  #   def randstring(n):
+  #     return ''.join(random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789') for i in range(n))
+  #   tries = 0
+  #   maxtries = 5
+  #   backup_file = "%s.saved_%s" % (output_file, randstring(5))
+  #   while os.path.exists(backup_file) and tries < maxtries:
+  #     backup_file = "%s.saved_%s" % (output_file, randstring(5))
+  #     tries += 1
+  #   if tries == maxtries:
+  #     error("Output file \"%s\" already exists and cannot find a suitable backup file name.  Please delete the file manually or specify another output file." % (output_file))
+  #     exit(1)
+  #   info("Output file \"%s\" already exists.  Moving to \"%s\"." % (output_file, backup_file))
+  #   os.rename(output_file, backup_file)
+  info("Using output file \"%s\"." % (output_file))
+
+  # add kmax constraints
+  kmax_constraints = None
+  for unit in compilation_units:
+    if unit is not None:
+      if kmax_constraints == None:
+        if dont_compile:
+              kmax_constraints = [z3.Not(c) for c in get_kmax_constraints(kmax_formulas, unit)]
+        else:
+          kmax_constraints = get_kmax_constraints(kmax_formulas, unit)
+      elif dont_compile:
+        kmax_constraints.extend([z3.Not(c) for c in get_kmax_constraints(kmax_formulas, unit)])
+      else:
+        kmax_constraints.extend(get_kmax_constraints(kmax_formulas, unit))
+
+  archlist = [ arch for arch in archs if arch in kclause_to_try.keys() ]
+  if None in kclause_to_try.keys():
+    archlist = [None] + archlist
+  assert(len(archlist) > 0)
+  seen_unsat = False
+  sat_archs = []
+  for arch in archlist:
+    kclause_file = kclause_to_try[arch]
+    if arch is not None:
+      info("Trying \"%s\"" % (arch))
+    info("Kclause formulas file: %s" % (kclause_file))
+    if not os.path.exists(kclause_file):
+      kclause_file_pending = kclause_file + ".pending"
+      if not os.path.exists(os.path.dirname(kclause_file)):
+        os.makedirs(os.path.dirname(kclause_file))
+      # todo, write stderr to log
+      info("Generating kclause formulas for %s." % (arch))
+      if not os.path.exists(get_arch_kextract_file(formulas, arch)):
+        # write to a temp file first, then move if successful
+        kextract_file_pending = get_arch_kextract_file(formulas, arch) + ".pending"
+        command = [ "kextractlinux", arch, kextract_file_pending ]
+        info("Extracting Kconfig dependencies: %s" % (" ".join(command)))
+        try:
+          popen = subprocess.Popen(command)
+          popen.communicate()
+          if popen.returncode != 0:
+            error("Error running kextract: return code %d" % (popen.returncode))
+            exit(13)
+        except Exception as e:
+          error("Error running kextract: %s" % (str(e)))
+          exit(13)
+        os.rename(kextract_file_pending, get_arch_kextract_file(formulas, arch))
+      # run kclause
+      with open(kclause_file_pending, 'w') as kclause_outf:
+        with open(get_arch_kextract_file(formulas, arch), 'r') as extract_inf:
+          command = ["kclause", "--remove-orphaned-nonvisible" ]
+          if quiet: command.append("--quiet")
+          info("Running kclause: %s < %s > %s" % (" ".join(command), extract_inf.name, kclause_outf.name))
+          info("This will take several minutes...")
+          popen = subprocess.Popen(command, stdin=extract_inf, stdout=kclause_outf) #, stderr=DEVNULL)
+          popen.communicate()
+          kclause_outf.flush()
+      os.rename(kclause_file_pending, kclause_file)
+    if not os.path.exists(kclause_file):
+      error("Cannot find kclause formulas file: %s" % (kclause_file))
+    else:
+      constraints = []
+
+      if arch is not None:
+        kextract = get_kextract(get_arch_kextract_file(formulas, arch))
+      elif kextract_file is not None:
+        kextract = kextract_file
+      else:
+        kextract = None
+        
+      if kextract == None:
+        info("No kextract file available.  Assuming all configuration options are Boolean")
+        kconfig_types = None
+        kconfig_visible = None
+        kconfig_has_def_nonbool = None
+      else:
+        kconfig_types = {}
+        kconfig_visible = set()
+        kconfig_has_def_nonbool = set()
+        for kconfig_line in kextract:
+          # see docs/kextract_format.md for more info
+          if kconfig_line[0] == "config":
+            kconfig_types[kconfig_line[1]] = kconfig_line[2]
+          if kconfig_line[0] == "prompt":
+            kconfig_visible.add(kconfig_line[1])
+          if kconfig_line[0] == "def_nonbool":
+            kconfig_has_def_nonbool.add(kconfig_line[1])
+        if allow_non_visibles:
+          kconfig_visible = None
+
+      if kmax_constraints:
+        # add the kmax constraints
+        constraints.extend(kmax_constraints)
+        # disable any Boolean configuration options not defined in this architecture
+        if kconfig_types:
+          for kmax_constraint in kmax_constraints:
+            used_vars = z3.z3util.get_vars(kmax_constraint)
+            vars_not_in_arch = [ used_var for used_var in used_vars if str(used_var) not in kconfig_types.keys() and token_pattern.match(str(used_var)) ]
+            for used_var in vars_not_in_arch:
+              constraints.append(z3.Not(used_var))
+
+      user_specified_option_names = set()
+              
+      if constraints_file:
+        ad_hoc_constraints, ad_hoc_config_options = get_ad_hoc_constraints(constraints_file)
+        constraints.extend(ad_hoc_constraints)
+        user_specified_option_names.update(ad_hoc_config_options)
+
+      # add kclause constraints
+      constraints.extend(get_kclause_constraints(kclause_file))
+
+      user_constraints = []
+      
+      # add user-specified constraints
+      for user_define in define:
+        user_constraint = z3.Bool(user_define)
+        constraints.append(user_constraint)
+        user_specified_option_names.add(user_define)
+        user_constraints.append(user_constraint)
+      for user_undefine in undefine:
+        user_constraint = z3.Not(z3.Bool(user_undefine))
+        constraints.append(user_constraint)
+        user_specified_option_names.add(user_undefine)
+        user_constraints.append(user_constraint)
+
+      if arch is not None:
+        constraints.extend(get_arch_specific_constraints(arch, architecture_configs))
+
+      if disable_config_broken: constraints.append(config_broken)
+
+      solver = z3.Solver()
+      solver.set(unsat_core=True)
+      if random_seed is not None:
+        solver.set(random_seed=random_seed)
+
+      if (solver.check(constraints) == z3.unsat):
+        info("The constraints are unsatisfiable.  Either no configuration is possible or the formulas are overconstrained.")
+        if show_unsat_core:
+          info("The following constraint(s) prevented satisfiability:\n%s" % (str(solver.unsat_core())))
+        else:
+          if not seen_unsat:
+            info("Run with --show-unsat-core to see what constraints prevented satisfiability.")
+            seen_unsat = True
+        if disable_config_broken and config_broken in solver.unsat_core():
+          error("Found a dependency on CONFIG_BROKEN, so the compilation unit may not be buildable.  Stopping the search.  Run again with --allow-config-broken to search anyway.")
+          exit(10)
+      else:
+        info("The constraints are satisfiable.")
+        sat_archs.append(arch)
+        if not reportallarchs:
+          if not sample:
+            model = solver.model()
+            if approximate:
+              model = approximate_model(approximate, constraints, user_constraints)
+            if model is not None:
+              info("Writing the configuration to %s" % (output_file))
+              with open(output_file, 'w') as config_fp:
+                print_model_as_config(model, config_fp, kconfig_types, kconfig_visible, kconfig_has_def_nonbool, user_specified_option_names, modules_arg)
+              if arch is not None:
+                info("Generated configuration for %s" % (arch))
+                info("Build with \"make.cross ARCH=%s olddefconfig; make.cross ARCH=%s clean %s\"." % (arch, arch, " ".join(compilation_units)))
+                print(arch)
+              exit(0)
+          else:
+            info("Generating %s configurations with prefix %s" % (str(sample), sample_prefix))
+            for config_i in range(0, sample):
+              if config_i != 0:  # solver.check already called when checking sat above
+                solver.check(constraints)
+              config_filename = "%s%d" % (sample_prefix, config_i + 1)
+              with open(config_filename, 'w') as config_fp:
+                print_model_as_config(solver.model(), config_fp, kconfig_types, kconfig_visible, kconfig_has_def_nonbool, user_specified_option_names, modules_arg)
+            exit(0)
+  if reportallarchs and len(sat_archs) > 0:
+    print("\n".join(sat_archs))
+    exit(0)
+  error("No satisfying configuration found.")
+  exit(11)
