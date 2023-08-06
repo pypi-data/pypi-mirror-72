@@ -1,0 +1,15 @@
+pydevice/__init__.py,sha256=_mUxDXlPxeADDLE16BzbQtmLVc1fGrR-gX9NtjsBlII,38
+pydevice/auth.py,sha256=Pn0xEgWpNJxOXjWS1Jbv0CX0aLx3C9-C6d2K0iKVP-g,789
+pydevice/database.py,sha256=NVMYjZwCjytR6AuTPLH7GMvxWr8GQrcLPe0sH0OiWn4,876
+pydevice/destination.py,sha256=ckxg4CDaGtJSCoqmIDTmaGltODdLeoUwxl6EHHyv018,3659
+pydevice/device.py,sha256=xkSO3ydwOr1u0qyATbT-F5ppdBS51kYN2xcA1EPo1W8,1547
+pydevice/device_magic.py,sha256=UQcchc4mCpxSp6OZpA2mSk2NsB14Ce8GbkX5imgh0YA,1475
+pydevice/dispatch.py,sha256=32EeodAmc_kbq6M3_SPQNpzzbfL7XzRgrDza1ooaxAA,2218
+pydevice/form.py,sha256=d7a1yhtDo3L_eT0PM1fU1rVxtZ-knCwjtBuvySElQ-Q,1972
+pydevice/group.py,sha256=3CLg-uKqUtBIjOQEv5S8p3i-3sdnswIMPv5ZE_Ej0YY,1406
+pydevice/resource.py,sha256=UTh4nSJkIugeUuS_NvBvsxILUkWfLjg-u6RqN0gVGnw,3535
+pydevice-0.2.4.dist-info/LICENSE,sha256=yy7nMQ1mcEn7I3bexA2INgn-LUnBzQSnQtv1-Oj05LQ,1071
+pydevice-0.2.4.dist-info/METADATA,sha256=09KfKDGuACixqPwGm0Ub1mIiPqf_q4UXkCNXfKYOdpc,6411
+pydevice-0.2.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pydevice-0.2.4.dist-info/top_level.txt,sha256=QHEfezyZ0GHwgyjJdYMg8W3hU2a6T4rndizes2q-y7s,9
+pydevice-0.2.4.dist-info/RECORD,,
