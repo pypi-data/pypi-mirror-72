@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: clp
+Version: 0.0.0
+Summary: Container Loading Problem
+Home-page: https://github.com/rehanguha/Container-Loading-Problem
+Author: Rehan Guha
+Author-email: rehanguha29@gmail.com
+License: mit
+Description: # Container-Loading-Problem
+        
+        
+        
+        
+        ### Credit
+        
+        - https://github.com/enzoruiz/3dbinpacking
+          
+Keywords: container loading problem,bin packing problem,packing,loading
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Developers
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
