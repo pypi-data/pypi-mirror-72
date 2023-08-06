@@ -1,0 +1,30 @@
+dill
+six
+
+[:python_version < "3.5"]
+typing
+
+[dev]
+coverage
+pytest>=4.6
+tox
+wheel
+
+[dev:implementation_name == "cpython"]
+flake8
+ipdb
+mypy
+pylint
+pytest-cov
+
+[dev:implementation_name == "pypy"]
+pytest-cov==2.8.1
+
+[dev:python_version < "3.0"]
+mock
+
+[dev:python_version <= "3.7"]
+pytest-cov==2.8.1
+
+[dev:python_version > "3.5" and implementation_name == "cpython"]
+black
