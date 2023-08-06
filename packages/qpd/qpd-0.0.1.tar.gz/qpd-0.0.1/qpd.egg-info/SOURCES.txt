@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+qpd/__init__.py
+qpd.egg-info/PKG-INFO
+qpd.egg-info/SOURCES.txt
+qpd.egg-info/dependency_links.txt
+qpd.egg-info/requires.txt
+qpd.egg-info/top_level.txt
+tests/__init__.py
+tests/test_dummy.py
