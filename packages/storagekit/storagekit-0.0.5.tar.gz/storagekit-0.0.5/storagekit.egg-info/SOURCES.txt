@@ -1,0 +1,16 @@
+README.md
+requirements.txt
+setup.py
+storagekit/__init__.py
+storagekit/azure.py
+storagekit/base.py
+storagekit/es.py
+storagekit/multi.py
+storagekit/oss.py
+storagekit/s3.py
+storagekit/storage_test.py
+storagekit.egg-info/PKG-INFO
+storagekit.egg-info/SOURCES.txt
+storagekit.egg-info/dependency_links.txt
+storagekit.egg-info/requires.txt
+storagekit.egg-info/top_level.txt
