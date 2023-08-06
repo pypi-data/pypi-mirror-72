@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: code-generator
+Version: 0.0.3
+Summary: a simple code generator for all-language
+Home-page: UNKNOWN
+Author: wj-Mcat
+Author-email: 1435130236@qq.com
+License: Apache 2
+Keywords: code-gen,code-generator,python,code-snippet
+Platform: UNKNOWN
+Requires-Dist: flask
+
+full document please check the github: https://www.github.com/wj-Mcat/code-generator
+
+
