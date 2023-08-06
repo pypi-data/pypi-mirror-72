@@ -1,0 +1,3 @@
+[console_scripts]
+opportunity_scraper = opportunity_scraper:run
+

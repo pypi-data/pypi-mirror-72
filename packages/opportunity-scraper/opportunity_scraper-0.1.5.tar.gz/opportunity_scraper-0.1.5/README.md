@@ -1,0 +1,83 @@
+# opportunity_scraper
+
+`opportunity_scraper` is a Python3 script for scraping R&D competition websites and dumping the results into the SuiteCRM V8 API.
+
+## Installation
+
+Install with [pip](https://pip.pypa.io/en/stable/):
+
+```bash
+pip3 install opportunity_scraper
+```
+
+### Dependencies
+
+`opportunity_scraper` uses [chromedriver](https://chromedriver.chromium.org/), and will not work without it. Download the appropriate `chromedriver` version for your Chrome or Chromium version.
+
+## Supported resources
+
+- [UK Government Innovation Funding Service](https://apply-for-innovation-funding.service.gov.uk/competition/search)
+- [KTN Innovation Exchange](https://www.ktninnovationexchange.co.uk/challenges)
+
+## Usage
+
+### SuiteCRM OAuth2 credentials
+
+Before using the scraper, you need to create some SuiteCRM OAuth2 credentials for the script to use.
+
+- Navigate to the `OAuth2 Clients and Tokens` admin page (`https://www.your-suitecrm-instance.com/suitecrm/index.php?module=OAuth2Clients`)
+- Create a new `Client Credentials Client`
+
+The client ID and secret will be used in configuration.
+
+### Configuration
+
+Configuration is via a [YAML](https://yaml.org/) file.
+
+The default location is `~/.config/opportunity_scraper/settings.yaml`, but this can be changed with the `--config` CLI option at runtime.
+
+The following can be used as a template for the config file. All values are required.
+
+```yaml
+browser:
+    # Location of chromedriver
+    chromedriver: "/usr/bin/chromedriver"
+    # Credentials for KTN Innovation Exchange
+    ktn_username: "dummy@example.com"
+    ktn_password: "somesecretpassword"
+
+oauth:
+    # SuiteCRM OAuth2 credentials
+    token_url: "https://example.com/suitecrm/Api/access_token"
+    client_id: "some-uuid-token"
+    client_secret: "anotherpassword"
+
+suitecrm:
+    # SuiteCRM API
+    api_url: "https://example.com/suitecrm/Api"
+    # Account name / ID for .gov.uk competitions
+    govuk_account_name: "Opportunity Account Name"
+    govuk_account_id: "another-uuid"
+    # Account name / ID for KTN competitions
+    ktn_account_name: "Opportunity Account Name"
+    ktn_account_id: "another-uuid"
+    # Default user to be assigned new opportunities
+    assigned_user_name: "admin"
+    assigned_user_id: "1"
+```
+
+### Running
+
+```
+usage: opportunity_scraper [-h] [-c CONFIG]
+
+Scrape R&D competitions and push the results to the SuiteCRM API.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c CONFIG, --config CONFIG
+                        Location of config file
+```
+
+## License
+[GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
