@@ -1,0 +1,3 @@
+[console_scripts]
+drive-catalog = drive_catalog.main:main
+
