@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/RobotTestrailReporter/RobotTestrailReporter.py
+src/RobotTestrailReporter/__init__.py
+src/robotframework_testrail_reporter.egg-info/PKG-INFO
+src/robotframework_testrail_reporter.egg-info/SOURCES.txt
+src/robotframework_testrail_reporter.egg-info/dependency_links.txt
+src/robotframework_testrail_reporter.egg-info/entry_points.txt
+src/robotframework_testrail_reporter.egg-info/requires.txt
+src/robotframework_testrail_reporter.egg-info/top_level.txt
