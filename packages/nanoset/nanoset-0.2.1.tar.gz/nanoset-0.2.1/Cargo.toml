@@ -1,0 +1,41 @@
+[package]
+name = "nanoset-py"
+version = "0.2.1"
+authors = ["Martin Larralde <martin.larralde@embl.de>"]
+edition = "2018"
+license = "MIT"
+description = "A memory-optimized wrapper for Python sets likely to be empty."
+repository = "https://github.com/althonos/nanoset.py"
+homepage = "https://pypi.org/projects/nanoset"
+readme = "README.md"
+keywords = ["Python", "set", "memory", "pyo3", "optimisation"]
+categories = ["data-structures", "api-bindings"]
+build = "nanoset/build.rs"
+
+[lib]
+path = "nanoset/lib.rs"
+crate_type = ["cdylib", "rlib"]
+
+[badges.travis-ci]
+repository = "althonos/nanoset.py"
+[badges.is-it-maintained-issue-resolution]
+repository = "althonos/nanoset.py"
+[badges.maintenance]
+status     = "passively-maintained"
+
+[build-dependencies.built]
+version = "0.4.2"
+features = ["chrono"]
+
+[dependencies.pyo3]
+version = "0.11.0"
+#git = "https://github.com/pyo3/pyo3"
+[dependencies.pyo3-built]
+version = "0.4.2"
+
+[dev-dependencies.lazy_static]
+version = "1.4.0"
+
+[features]
+default = []
+extension-module = ["pyo3/extension-module"]
