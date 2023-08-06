@@ -1,0 +1,29 @@
+{% extends midtpl %}
+
+{% block content %}
+<div class="row">
+    <div class="{{bc['xs']}}12">
+        <form action="{{request.route_url('ppss:user:register')}}" method="POST" class="loginform ppssauthform">
+            
+            <input class="form-control" type="text" name="username" placeholder="username" class="form-control" required="">
+            <br/>
+            <input class="form-control" type="password" name="password" placeholder="password" class="form-control" required="">
+            <br/>
+            <input type="password" name="confirmnewpassword" placeholder="confirm new password" required="">
+            <br/>
+            <div class="text-center">
+                <input class="btn btn-success" type="submit" name="submit"/>
+            </div>
+
+
+            </br>
+            <p class="text-danger">
+                {{msg}}
+                {% if link[0]: %}
+                    <a href="{{link[1]}}">{{link[0]}}</a>
+                {% endif %}
+            </p>
+        </form>
+    </div>
+</div>
+{% endblock content %}

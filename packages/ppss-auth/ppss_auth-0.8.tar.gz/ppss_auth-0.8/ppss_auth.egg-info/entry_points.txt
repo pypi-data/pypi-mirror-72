@@ -1,0 +1,5 @@
+[console_scripts]
+initialize_ppss_auth_db = ppss_auth.scripts.initialize_db:main
+ppss_auth_upgrade_db = ppss_auth.scripts.upgrade_db:main
+sayauth = ppss_auth.scripts.sayauth:sayitnow
+
