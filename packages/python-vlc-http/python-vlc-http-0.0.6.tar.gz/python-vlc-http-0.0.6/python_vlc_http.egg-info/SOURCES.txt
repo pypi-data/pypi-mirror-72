@@ -1,0 +1,11 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+python_vlc_http/__init__.py
+python_vlc_http/vlc.py
+python_vlc_http.egg-info/PKG-INFO
+python_vlc_http.egg-info/SOURCES.txt
+python_vlc_http.egg-info/dependency_links.txt
+python_vlc_http.egg-info/requires.txt
+python_vlc_http.egg-info/top_level.txt
