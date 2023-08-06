@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: hcrystalball
+Version: 0.1a0
+Summary: A library that unifies the API for most commonly used libraries and modelling techniques for time-series forecasting in the Python ecosystem.
+Home-page: https://hcrystalball.readthedocs.io/
+Author: Data Science Team @ heidelbergCement
+Author-email: datascience@heidelbergcement.com
+License: mit
+Platform: Mac
+Platform: Linux
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy (>=1.4)
+Requires-Dist: workalendar
+Requires-Dist: scikit-learn (>=0.23)
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+
+UNKNOWN
+
+
