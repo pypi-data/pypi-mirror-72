@@ -1,0 +1,14 @@
+texturize/__init__.py,sha256=0TYRBtJ-8cKrANgiOB1Rm5kexU_wo11kigrZhBZe4Rc,113
+texturize/__main__.py,sha256=nh6NYjUc5whjl0_Ym7ygDpvAIOYsEf-XJWHDDVfhngE,4960
+texturize/api.py,sha256=Fwd03RNZJ_oucGsfFI-dn4u7exjitcN2wwpaRcGKwUE,8664
+texturize/app.py,sha256=fzyc3t9yKDZHYmXTeiIQLJc5w_ydmMxnOXC0KhL68Kc,2468
+texturize/critics.py,sha256=OoHKnU2WU8jLT7T53BTbhf9eoZ9Qq0u2v78M5Q0BQ7k,5359
+texturize/io.py,sha256=dke9C_7MCUjoza4wKAwKUUJ1YWL6489P5D7sq0hAMQg,6179
+texturize/match.py,sha256=BDkuQVXGfJwfaRGlWEQZcpoj2sm08g8_N7_RFycqNQU,16730
+texturize/patch.py,sha256=nj8I1NJ6zt5NWBtPOAbDFPZ4ll3MaqOq1KlmVTeCrX4,1217
+texturize/solvers.py,sha256=2YL6kFegtbm6n8aEyjj42yLS5EGnEMB6CH5HnUPk5gw,6003
+texturize-0.8.0.dist-info/entry_points.txt,sha256=UH5BgGa4DSpkq0QbPyx8CxrGjaWI4HZEqycCXt0txWU,53
+texturize-0.8.0.dist-info/LICENSE,sha256=baEFTu8guJSWIvKsxaicMkP_Oz16qMK7j6XATRURPAA,35181
+texturize-0.8.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+texturize-0.8.0.dist-info/METADATA,sha256=Daqsy7XHaS3-l4zdP-pzmEBfdP3dv-qt8jah5pXu6Yk,4429
+texturize-0.8.0.dist-info/RECORD,,
