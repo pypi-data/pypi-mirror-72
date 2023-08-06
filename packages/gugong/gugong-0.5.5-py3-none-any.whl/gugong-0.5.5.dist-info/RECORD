@@ -1,0 +1,12 @@
+gugong/__init__.py,sha256=HW9q8KOeEczLVuQzOrh6gr7sKia7yeAYNLme-yGdhqM,26
+gugong/gugong.py,sha256=muOciq6R9iGFF3EG_G8qH2x79I3J56wChci8PsujlEw,2718
+gugong/data/gugong.json,sha256=ZIM8X9rfOXPUBQsSA6SMSZKtDjV9adW3XeJMYAeRZ6g,15048
+gugong/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gugong/models/db.py,sha256=R_0bsWPXntR76wrlqjUMFBIhyTieslZ6vzF67BffWHw,4315
+gugong/proto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gugong/proto/gugong_pb2.py,sha256=a7idMHwZSgf7MAuseLr1Ch9YPq2YPgF1ibM7hfZfYts,25036
+gugong-0.5.5.dist-info/LICENSE,sha256=INvXBXRLaQLabmGLOEu1MxTMgWUDEsWgFf46ynbOMpM,11338
+gugong-0.5.5.dist-info/METADATA,sha256=j8ZS4CAJe5gjIMtZtPSYwGswTzIfzymHBxFjBTt2fnI,2954
+gugong-0.5.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gugong-0.5.5.dist-info/top_level.txt,sha256=HnO5c4d-GrZay_zXr8GgnozNe3vtuW2ytoG1cW-t740,7
+gugong-0.5.5.dist-info/RECORD,,

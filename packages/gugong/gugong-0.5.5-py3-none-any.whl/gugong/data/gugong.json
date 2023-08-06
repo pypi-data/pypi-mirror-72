@@ -1,0 +1,631 @@
+{
+    "profile": {
+        "name": "故宫",
+        "other_names": [
+            "紫禁城",
+            "The Palace Museum",
+            "The Forbidden City"
+        ],
+        "history": {
+            "built_start": 1406,
+            "built": 1420
+        },
+        "geometry": {
+            "orientation": "south",
+            "length": "961",
+            "width": "753",
+            "metric": "meter"
+        },
+        "location": {
+            "country": "China",
+            "city": "Beijing",
+            "latitude": "N 116-23'26.93''",
+            "longitude": "E 39-54'56.92''"
+        }
+    },
+    "empires": [
+        {
+            "name": "朱棣",
+            "temple_name": "明成祖",
+            "years_in_position": 22,
+            "dynasty": "MING",
+            "epoch_name": "永乐"
+        },
+        {
+            "name": "朱高炽",
+            "temple_name": "明仁宗",
+            "years_in_position": 1,
+            "dynasty": "MING",
+            "epoch_name": "洪熙"
+        },
+        {
+            "name": "朱瞻基",
+            "temple_name": "明宣宗",
+            "years_in_position": 10,
+            "dynasty": "MING",
+            "epoch_name": "宣德"
+        },
+        {
+            "name": "朱祁镇",
+            "temple_name": "明英宗",
+            "years_in_position": 14,
+            "dynasty": "MING",
+            "epoch_name": "正统"
+        },
+        {
+            "name": "朱祁钰",
+            "temple_name": "明景帝",
+            "years_in_position": 8,
+            "dynasty": "MING",
+            "epoch_name": "景泰"
+        },
+        {
+            "name": "朱见深",
+            "temple_name": "明宪宗",
+            "years_in_position": 23,
+            "dynasty": "MING",
+            "epoch_name": "成化"
+        },
+        {
+            "name": "朱佑樘",
+            "temple_name": "明孝宗",
+            "years_in_position": 18,
+            "dynasty": "MING",
+            "epoch_name": "弘治"
+        },
+        {
+            "name": "朱厚照",
+            "temple_name": "明武宗",
+            "years_in_position": 16,
+            "dynasty": "MING",
+            "epoch_name": "正德"
+        },
+        {
+            "name": "朱厚熜",
+            "temple_name": "明世宗",
+            "years_in_position": 45,
+            "dynasty": "MING",
+            "epoch_name": "嘉靖"
+        },
+        {
+            "name": "朱载垕",
+            "temple_name": "明穆宗",
+            "years_in_position": 6,
+            "dynasty": "MING",
+            "epoch_name": "隆庆"
+        },
+        {
+            "name": "朱翊钧",
+            "temple_name": "明神宗",
+            "years_in_position": 48,
+            "dynasty": "MING",
+            "epoch_name": "万历"
+        },
+        {
+            "name": "朱常洛",
+            "temple_name": "明光宗",
+            "years_in_position": 1,
+            "dynasty": "MING",
+            "epoch_name": "泰昌"
+        },
+        {
+            "name": "朱由校",
+            "temple_name": "明熹宗",
+            "years_in_position": 7,
+            "dynasty": "MING",
+            "epoch_name": "天启"
+        },
+        {
+            "name": "朱由检",
+            "temple_name": "明思宗",
+            "years_in_position": 17,
+            "dynasty": "MING",
+            "epoch_name": "崇祯"
+        },
+        {
+            "name": "爱新觉罗·福临",
+            "temple_name": "清世祖",
+            "years_in_position": 18,
+            "dynasty": "QING",
+            "epoch_name": "福临"
+        },
+        {
+            "name": "爱新觉罗·玄烨",
+            "temple_name": "清圣祖",
+            "years_in_position": 61,
+            "dynasty": "QING",
+            "epoch_name": "康熙"
+        },
+        {
+            "name": "爱新觉罗·胤禛",
+            "temple_name": "清世宗",
+            "years_in_position": 13,
+            "dynasty": "QING",
+            "epoch_name": "雍正"
+        },
+        {
+            "name": "爱新觉罗·弘历",
+            "temple_name": "清高宗",
+            "years_in_position": 60,
+            "dynasty": "QING",
+            "epoch_name": "乾隆"
+        },
+        {
+            "name": "爱新觉罗·顒琰",
+            "temple_name": "清仁宗",
+            "years_in_position": 25,
+            "dynasty": "QING",
+            "epoch_name": "嘉庆"
+        },
+        {
+            "name": "爱新觉罗·旻宁",
+            "temple_name": "清宣宗",
+            "years_in_position": 30,
+            "dynasty": "QING",
+            "epoch_name": "道光"
+        },
+        {
+            "name": "爱新觉罗·奕詝",
+            "temple_name": "清文宗",
+            "years_in_position": 11,
+            "dynasty": "QING",
+            "epoch_name": "咸丰"
+        },
+        {
+            "name": "爱新觉罗·载淳",
+            "temple_name": "清穆宗",
+            "years_in_position": 14,
+            "dynasty": "QING",
+            "epoch_name": "同治"
+        },
+        {
+            "name": "爱新觉罗·载湉",
+            "temple_name": "清德宗",
+            "years_in_position": 34,
+            "dynasty": "QING",
+            "epoch_name": "光绪"
+        },
+        {
+            "name": "爱新觉罗·溥仪",
+            "temple_name": "清宣统皇帝",
+            "years_in_position": 3,
+            "dynasty": "QING",
+            "epoch_name": "宣统"
+        }
+    ],
+    "architecture_types": [
+        {
+            "name": "门"
+        },
+        {
+            "name": "殿"
+        },
+        {
+            "name": "亭"
+        },
+        {
+            "name": "阁"
+        },
+        {
+            "name": "宫"
+        },
+        {
+            "name": "桥"
+        },
+        {
+            "name": "楼"
+        },
+        {
+            "name": "堂"
+        },
+        {
+            "name": "轩"
+        },
+        {
+            "name": "斋"
+        },
+        {
+            "name": "花园"
+        },
+        {
+            "name": "馆"
+        }
+    ],
+    "places": [
+        {
+            "name": "午门",
+            "orientation": "south",
+            "arch_type": "gate",
+            "dynasty": "Ming Yongle"
+        },
+        {
+            "name": "神武门",
+            "orientation": "north",
+            "arch_type": "gate",
+            "dynasty": "Ming Yongle"
+        },
+        {
+            "name": "东华门",
+            "orientation": "east",
+            "arch_type": "gate",
+            "dynasty": "Ming Yongle"
+        },
+        {
+            "name": "西华门",
+            "orientation": "west",
+            "arch_type": "gate",
+            "dynasty": "Ming Yongle"
+        },
+        {
+            "name": "太和门",
+            "arch_type": "gate",
+            "dynasty": "Qing Guangxu"
+        },
+        {
+            "name": "熙和门",
+            "arch_type": "gate",
+            "dynasty": "Ming Yongle"
+        },
+        {
+            "name": "协和门",
+            "arch_type": "gate"
+        },
+        {
+            "name": "乾清门",
+            "arch_type": "gate"
+        },
+        {
+            "name": "景运门",
+            "arch_type": "gate"
+        },
+        {
+            "name": "隆宗门",
+            "arch_type": "gate"
+        },
+        {
+            "name": "坤宁门",
+            "arch_type": "gate"
+        },
+        {
+            "name": "天一门",
+            "arch_type": "gate"
+        },
+        {
+            "name": "顺贞门",
+            "arch_type": "gate"
+        },
+        {
+            "name": "麟趾门",
+            "arch_type": "gate"
+        },
+        {
+            "name": "苍震门",
+            "arch_type": "gate"
+        },
+        {
+            "name": "螽斯门",
+            "arch_type": "gate"
+        },
+        {
+            "name": "锡庆门",
+            "arch_type": "gate"
+        },
+        {
+            "name": "皇极门",
+            "arch_type": "gate"
+        },
+        {
+            "name": "宁寿门",
+            "arch_type": "gate"
+        },
+        {
+            "name": "慈宁门",
+            "arch_type": "gate"
+        },
+        {
+            "name": "太和殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "中和殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "保和殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "保和殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "文华殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "武英殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "交泰殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "钦安殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "奉先殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "养心殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "太极殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "皇极殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "养性殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "宝华殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "宝华殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "传心殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "南薰殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "昭仁殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "弘德殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "天穹宝殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "体元殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "体和殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "英华殿",
+            "arch_type": "hall"
+        },
+        {
+            "name": "箭亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "玉翠亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "凝香亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "万香亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "千秋亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "浮碧亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "东井亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "西井亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "御景亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "澄瑞亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "禊赏亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "矩亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "耸秀亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "碧螺亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "撷芳亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "临溪亭",
+            "arch_type": "kiosk"
+        },
+        {
+            "name": "文渊阁",
+            "arch_type": "pavilion",
+            "dynasty": "Qing Qianlong"
+        },
+        {
+            "name": "雨花阁",
+            "arch_type": "pavilion",
+            "dynasty": "Qing Qianlong"
+        },
+        {
+            "name": "体仁阁",
+            "arch_type": "pavilion",
+            "dynasty": "Qing Qianlong"
+        },
+        {
+            "name": "弘义阁",
+            "arch_type": "pavilion",
+            "dynasty": "Ming Yongle"
+        },
+        {
+            "name": "延晖阁",
+            "arch_type": "pavilion",
+            "dynasty": "Ming General"
+        },
+        {
+            "name": "畅音阁",
+            "arch_type": "pavilion",
+            "dynasty": "Qing Qianlong"
+        },
+        {
+            "name": "景祺阁",
+            "arch_type": "pavilion",
+            "dynasty": "Qing Qianlong"
+        },
+        {
+            "name": "符望阁",
+            "arch_type": "pavilion",
+            "dynasty": "Qing Qianlong"
+        },
+        {
+            "name": "乾清宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "坤宁宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "斋宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "延禧宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "景仁宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "永和宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "承乾宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "景阳宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "钟粹宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "翊坤宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "长春宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "储秀宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "咸福宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "重华宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "永寿宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "宁寿宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "慈宁宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "寿康宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "咸安宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "毓庆宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "建福宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "景福宫",
+            "arch_type": "palace"
+        },
+        {
+            "name": "寿安宫",
+            "arch_type": "palace"
+        }
+    ],
+    "references": [
+        {
+            "id": 1,
+            "name": "",
+            "link": "https://www.dpm.org.cn/Home.html"
+        },
+        {
+            "id": 2,
+            "name": "website of Gugong in English",
+            "link": "https://en.dpm.org.cn"
+        },
+        {
+            "id": 3,
+            "name": "",
+            "link": "https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E6%95%85%E5%AE%AB/345415"
+        }
+    ]
+}
