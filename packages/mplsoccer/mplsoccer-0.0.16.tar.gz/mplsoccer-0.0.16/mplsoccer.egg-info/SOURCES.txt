@@ -1,0 +1,11 @@
+README.md
+setup.py
+mplsoccer/__init__.py
+mplsoccer/pitch.py
+mplsoccer/scatterutils.py
+mplsoccer/statsbomb.py
+mplsoccer.egg-info/PKG-INFO
+mplsoccer.egg-info/SOURCES.txt
+mplsoccer.egg-info/dependency_links.txt
+mplsoccer.egg-info/not-zip-safe
+mplsoccer.egg-info/top_level.txt

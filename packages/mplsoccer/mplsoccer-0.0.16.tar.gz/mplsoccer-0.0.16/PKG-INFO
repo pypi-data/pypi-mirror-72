@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: mplsoccer
+Version: 0.0.16
+Summary: mplsoccer is a Python plotting library for drawing soccer / football pitches quickly in Matplotlib.
+Home-page: https://github.com/andrewRowlinson/mplsoccer
+Author: Andrew Rowlinson
+Author-email: rowlinsonandy@gmail.com
+License: MIT
+Description: # mplsoccer
+        
+        mplsoccer is a Python library for drawing soccer/football pitches in Matplotlib and loading StatsBomb open-data.
+        
+        ## Installation
+        
+        Use the package manager [pip](https://pip.pypa.io/en/stable/) to install mplsoccer.
+        
+        ```bash
+        pip install mplsoccer
+        ```
+        
+        ## Docs
+        
+        Here are the [docs](https://mplsoccer.readthedocs.io/) for mplsoccer.
+        
+        ## Quick start
+        
+        Plot a StatsBomb pitch
+        
+        ```python
+        from mplsoccer.pitch import Pitch
+        pitch = Pitch(pitch_color='grass', line_color='white', stripe=True)
+        fig, ax = pitch.draw()
+        ```
+        ![alt text](https://github.com/andrewRowlinson/mplsoccer/blob/master/docs/quick_start.png?raw=true "statsbomb pitch")
+        
+        ## Why mplsoccer exists
+        
+        mplsoccer shares some of the tools I built for the OptaPro Analytics Forum.
+        At the time there werenâ€™t any open-sourced python tools. Now alternatives exist, such as [matplotsoccer](https://pypi.org/project/matplotsoccer/).
+        
+        By using mplsoccer, I hope that you can spend more time building insightful graphics rather than having to learn to draw pitches from scratch.
+        
+        
+        ## Advantages of mplsoccer
+        
+        mplsoccer:
+        
+        1. draws 7 different pitch types by changing a single argument, which is useful as there isnâ€™t a standardised data format
+        2. extends matplotlib to plot heatmaps, (comet) lines, footballs and rotated markers
+        3. flips the data coordinates when in a vertical orientation so you donâ€™t need to remember to flip them
+        4. creates tidy dataframes for StatsBomb data, which is useful as most of the alternatives produce nested dataframes
+        
+        ## License
+        
+        [MIT](https://choosealicense.com/licenses/mit)
+        
+        ## Contributions
+        Contributions are welcome. It would be great to add the following functionality to mplsoccer:
+        - pass maps
+        - pass sonars
+        
+        Examples to help others are also welcome for a gallery.
+        
+        Please get in touch at rowlinsonandy@gmail.com or [@numberstorm](https://twitter.com/numberstorm) on Twitter.
+        
+        ## Inspiration
+        
+        mplsoccer was inspired by other people's work:
+        - [Peter McKeever](http://petermckeever.com/2019/01/plotting-pitches-in-python/) inspired the API design
+        - [ggsoccer](https://github.com/Torvaney/ggsoccer) - a library for plotting pitches in R
+        - [lastrow](https://twitter.com/lastrowview) - often tweets animations from matches and the accompanying code
+        - [fcrstats](http://fcrstats.com/) - tutorials for using football data
+        - [fcpython](https://fcpython.com/) - Python tutorials for using football data
+        - [Karun Singh](https://twitter.com/karun1710) - tweets some interesting football analytics and visuals
+        - [StatsBomb](https://statsbomb.com/) - great visual design and free open-data
+        - John Burn-Murdoch's [tweet](https://twitter.com/jburnmurdoch/status/1057907312030085120) got me interested in football analytics
+        
+        ## Recent changes
+        
+        mplsoccer's recent changes fixed several issues with the heatmap functionality
+        - Pitch.label_heatmap(), now filters out labels outside of the pitch.
+        - Pitch.bin_statistic(), now works for a statistic argument other than 'count'.
+        - Pitch.heatmap(), now returns a mesh in horizontal orientation.
+        - Pitch.voronoi() calculates Voronoi vertices.
+        - Pitch.goal_angle(), plots the angle to the goal.
+        - Pitch.polygon(), plots polygons on the pitch (e.g. goal angle and Voronoi)
+        - add_image adds images as a new axis to matplotlib figures.
+        - fixed the statsbomb module so works when the json file is empty.
+        - changed the statsbomb module so end coordinates are summarised in end_x, end_y, end_z columns.
+        - changed the wyscout goal posts y locations to 45/ 55 for consistency with socceraction.
+        - changed the internal workings of the binned_statistics and heatmaps so the results of bin_statistic can be used elsewhere.
+        - changed Pitch so axes aren't raveled when using subplots, e.g. layout=(2, 2). So colorbar can be used with subplots.
+        - combined the StatsBomb technique columns (pass_technique, goalkeeper_technique, shot_technique) into techique_id and technique_name
+        - combined the Statsbomb type columns (pass_type, duel_type_id, goalkeeper_type, shot_type) into event_type_name and event_type_id
+        - removed some StatsBomb columns that repeat other columns
+        
+        The statsbomb module also now cleans the data faster.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
