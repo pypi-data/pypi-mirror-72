@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+gist_recreate.egg-info/PKG-INFO
+gist_recreate.egg-info/SOURCES.txt
+gist_recreate.egg-info/dependency_links.txt
+gist_recreate.egg-info/top_level.txt
+scripts/gist-recreate
