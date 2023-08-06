@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: pynetics
+Version: 0.7.0
+Summary: A simple library for experimenting with evolutionary computation
+Home-page: https://gitlab.com/blazaid/pynetics
+Author: Alberto Díaz Álvarez
+Author-email: alberto.da@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# pynetics
+
+Welcome to pynetics, a simple library for experimenting with
+evolutionary computation.
+
+## Installation
+
+Installing from pip::
+
+    pip install pynetics
+
+Installing from source::
+
+    pip install git+https://gitlab.com/blazaid/pynetics
+
+## Requirements
+
+The library actually requires Python 3.7 or greater.
+
+## Documentation
+
+WIP
+
+
