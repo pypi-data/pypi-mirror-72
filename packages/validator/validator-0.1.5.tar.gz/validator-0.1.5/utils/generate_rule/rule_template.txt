@@ -1,0 +1,23 @@
+from validator.rules_src import Rule
+
+
+class {0}(Rule):
+    """
+    <Insert Rule Documentation Here>
+
+    Examples:
+    >>> {0}().check(...)
+    True
+
+    >>> {0}().check(...)
+    False
+    """
+
+    def __init__(self):
+        Rule.__init__(self)
+
+    def check(self, arg):
+        pass
+
+    def __from_str__(self):
+        pass
