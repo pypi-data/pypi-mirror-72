@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: nester-Mark-Challender
+Version: 0.0.1
+Summary: A simple printer of nested lists
+Home-page: UNKNOWN
+Author: Mark Challender
+Author-email: mark@challenderltd.co.uk
+License: UNKNOWN
+Description: This is the 'nester.py' module, and it provides one function called
+        print_lol() which prints lists that may or may not include nested lists.
+        
+Platform: UNKNOWN
