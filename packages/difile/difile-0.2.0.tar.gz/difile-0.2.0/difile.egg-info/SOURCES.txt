@@ -1,0 +1,11 @@
+README.md
+setup.py
+difile/__init__.py
+difile/cli.py
+difile/core.py
+difile.egg-info/PKG-INFO
+difile.egg-info/SOURCES.txt
+difile.egg-info/dependency_links.txt
+difile.egg-info/entry_points.txt
+difile.egg-info/requires.txt
+difile.egg-info/top_level.txt
