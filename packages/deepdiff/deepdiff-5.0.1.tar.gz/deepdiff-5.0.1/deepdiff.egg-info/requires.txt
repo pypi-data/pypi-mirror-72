@@ -1,0 +1,4 @@
+ordered-set>=4.0.1
+
+[murmur]
+mmh3
