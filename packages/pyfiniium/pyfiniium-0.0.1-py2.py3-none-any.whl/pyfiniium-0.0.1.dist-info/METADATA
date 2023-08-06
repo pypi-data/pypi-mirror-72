@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyfiniium
+Version: 0.0.1
+Summary: Interact with Infiniium oscilloscopes
+Home-page: https://github.com/misterWiz/pyfiniium.git
+Author: trent rehberger
+Author-email: trent@medtronic.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: h5py
+Requires-Dist: pandas
+
+UNKNOWN
+
+
