@@ -1,0 +1,12 @@
+requests>=2.14.2
+six>=1.10.0
+
+[:python_version < "3.5"]
+typing
+
+[dev]
+check-manifest
+flake8
+
+[test]
+coverage
