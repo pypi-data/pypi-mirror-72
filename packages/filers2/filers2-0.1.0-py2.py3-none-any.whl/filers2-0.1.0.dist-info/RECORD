@@ -1,0 +1,17 @@
+filers2/__init__.py,sha256=GZOwEAcAXLEHuKebdTitCabHYlcxmta6hPjGk9GNwGA,591
+filers2/filers2_style.kv,sha256=Chh92QBkU6yekAUgbW4i8Kg3agyeDPM4ltRluvu4xmI,6042
+filers2/main.py,sha256=I59Zt_fFef7w6_2H85hMYOFTHbAEjTQ4p20jVlHDO_w,3461
+filers2/run_app.py,sha256=Yh8XmBpsAmew9wS5cumI549gSFJqRhzfJpUpAv-uQVs,143
+filers2/utils.py,sha256=kMiwgrsny9O-VlkDbFUK_mIgNYaVuQ3UmekuJM4gXBs,1126
+filers2/compression/__init__.py,sha256=TCDQwvDHEiC6GBozl9RmRWa9m9tNzo8zpOPD2VyKvY0,25320
+filers2/compression/compression_style.kv,sha256=iiv4NKeEGd6ZY8G5pdsYZ-Uj90AXZKla6uflqLhgGFs,12749
+filers2/recording/__init__.py,sha256=ITvjKk7SJNrgjhlphRqsE4he9eOZxY9w_yNUl390UIg,10647
+filers2/recording/player_style.kv,sha256=wJ5q1PppsH9v2CsfENarupql31jx4cywpPbtJqb42PQ,14537
+filers2/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+filers2/tests/test_recording.py,sha256=qOwesRZs7vBgVaoFAielJMjNDk1R0fwTsK9K03KuelQ,118
+filers2-0.1.0.dist-info/LICENSE,sha256=07OUEyOpRZKpzC5ogEkS8E08q8ogKAwYi7A9anbU0Pc,1063
+filers2-0.1.0.dist-info/METADATA,sha256=PZLtPAKVTnENP1YrEIpYV3bqAp67mDNqZt3PIk1XmOk,1870
+filers2-0.1.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+filers2-0.1.0.dist-info/entry_points.txt,sha256=r3N1Lv0O2djaSUbcU4BbVCm29U54W-hkjPHBM15UlBY,50
+filers2-0.1.0.dist-info/top_level.txt,sha256=kkrTl3aWWFC4Bi97_xBkcG8B4j52hB0Mj0jmh-STduw,8
+filers2-0.1.0.dist-info/RECORD,,

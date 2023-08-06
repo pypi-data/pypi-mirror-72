@@ -1,0 +1,3 @@
+[console_scripts]
+filers2 = filers2.main:run_app
+
