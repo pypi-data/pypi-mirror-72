@@ -1,0 +1,3 @@
+[console_scripts]
+flask-wow = flask_wow.cli:main
+
