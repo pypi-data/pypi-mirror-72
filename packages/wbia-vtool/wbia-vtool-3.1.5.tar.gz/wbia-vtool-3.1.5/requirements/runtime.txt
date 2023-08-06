@@ -1,0 +1,14 @@
+annoy
+networkx
+numpy >= 1.11.1
+opencv-python >= 4.2.0
+Pillow >= 5.2.0
+scikit-image
+scikit-learn
+scipy
+six >= 1.10.0
+statsmodels
+ubelt
+wbia-utool
+# wbia-pyflann
+# wbia-pyhesaff
