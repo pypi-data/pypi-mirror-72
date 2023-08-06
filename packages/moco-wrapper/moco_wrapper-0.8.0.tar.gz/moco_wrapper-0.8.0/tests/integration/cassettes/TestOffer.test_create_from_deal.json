@@ -1,0 +1,99 @@
+{
+  "http_interactions": [
+    {
+      "recorded_at": "2020-06-05T11:11:51",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"recipient_address\": \"this is the recpipient address\", \"tax\": 21.5, \"items\": [{\"title\": \"This is the title of the offer\", \"type\": \"title\"}, {\"description\": \"this is the description\", \"type\": \"description\"}, {\"type\": \"item\", \"optional\": false, \"net_total\": 400, \"unit_price\": 100.0, \"quantity\": 1, \"unit\": \"h\", \"title\": \"MailChimp Einrichtung\"}, {\"type\": \"item\", \"optional\": true, \"net_total\": 400, \"unit_price\": 20, \"quantity\": 20, \"unit\": \"h\", \"title\": \"On Site Support\"}], \"project_id\": null, \"change_address\": \"offer\", \"date\": \"2020-01-02\", \"due_date\": \"2021-01-01\", \"deal_id\": 198670, \"title\": \"offer created from deal\", \"currency\": \"EUR\"}"
+        },
+        "headers": {
+          "Accept": [
+            "*/*"
+          ],
+          "Accept-Encoding": [
+            "gzip, deflate"
+          ],
+          "Authorization": [
+            "Token token=<TOKEN>"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Length": [
+            "644"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "python-requests/2.23.0"
+          ]
+        },
+        "method": "POST",
+        "uri": "https://<DOMAIN>.mocoapp.com/api/v1/offers"
+      },
+      "response": {
+        "body": {
+          "base64_string": "H4sIAAAAAAAA/7STT4/aPBDGv4o1Z4PsQPKyvr1q91it1KWXVhWyksniKtiuPZaKKr57ZQdC2FXZU2/MH2Z+8zzObzAdqGrTrNY1B9OhJdMbDKDg/0qIZiHEA3DoNCEoqEQlFkIuRJVzCXfXvCx5CRzI0JCTru8xsDagJuxYH9yBdagH4BCwNd6gpZ3uuoAxggLam8hMZLRHFrD1YwO7NHBoUwho2yMoePzyGThYpB050gMoKcRScCD9C1QllzWHl+BinMpjrjOxdckSqNIdSVPKq8+IeYc7eG2PoGwaBg4+uB/Y0iUs9GpUTD5smv8EB6sP+dYtRnoq937MTSd+GbrTNOnWLES9lVJJqWq5lEJ8BQ7Jd/f7NtUm913mOXvTN5vwthL1kEiTKRXg0DtHxVrgYAgPEdS38ZxV3YhVU3Ggo8/3jB5evdzO3Ck55voSFJPzY8DYBuPHXaNcP5O2ZOh4ljtZMymZf+98MC2eizMvS+zKpBz2eoh44nPM1YQ53zrBXsyaAd28rts//TPK9USZpZ5p+Umb4cPeHDx7NDaYdk/JvrwnobzCwR5u2c6v/+33cJev/hvfk2XPhpA9J+9doPfIKnEHrXpNtn5NRiHh6fvpTwAAAP//qbQj74gEAAA=",
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Cache-Control": [
+            "max-age=0, private, must-revalidate"
+          ],
+          "Content-Encoding": [
+            "gzip"
+          ],
+          "Content-Length": [
+            "482"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Date": [
+            "Fri, 05 Jun 2020 11:11:51 GMT"
+          ],
+          "Etag": [
+            "W/\"4e723021fa7ca8bef80776169c6f5834\""
+          ],
+          "Referrer-Policy": [
+            "strict-origin-when-cross-origin"
+          ],
+          "Vary": [
+            "Origin",
+            "Accept-Encoding"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Download-Options": [
+            "noopen"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Permitted-Cross-Domain-Policies": [
+            "none"
+          ],
+          "X-Request-Id": [
+            "9c8037f6-1bd3-474d-bff2-8909f3269300"
+          ],
+          "X-Runtime": [
+            "0.797900"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "status": {
+          "code": 201,
+          "message": "Created"
+        },
+        "url": "https://<DOMAIN>.mocoapp.com/api/v1/offers"
+      }
+    }
+  ],
+  "recorded_with": "betamax/0.8.1"
+}
