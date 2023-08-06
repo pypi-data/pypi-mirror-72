@@ -1,0 +1,12 @@
+requirements.txt
+setup.py
+shields/__init__.py
+shields/_badge.py
+shields/abstract.py
+shields/npm.py
+shields/pypi.py
+shields.egg-info/PKG-INFO
+shields.egg-info/SOURCES.txt
+shields.egg-info/dependency_links.txt
+shields.egg-info/requires.txt
+shields.egg-info/top_level.txt
