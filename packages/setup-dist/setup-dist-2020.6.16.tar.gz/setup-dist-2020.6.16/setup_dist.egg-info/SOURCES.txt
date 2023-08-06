@@ -1,0 +1,8 @@
+requirements.txt
+setup.py
+setup_dist/__init__.py
+setup_dist/__main__.py
+setup_dist.egg-info/PKG-INFO
+setup_dist.egg-info/SOURCES.txt
+setup_dist.egg-info/dependency_links.txt
+setup_dist.egg-info/top_level.txt
