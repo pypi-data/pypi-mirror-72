@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: images-into-array
+Version: 1.0.8
+Summary: Convert Multiple images into a array and saved it into .npy file and letter user it for various task
+Home-page: https://github.com/sujitmandal/images-into-array
+Author: Sujit Mandal
+Author-email: mandals974@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+
+# Convert-Images-Into-Array:
+---------------------------
+Convert Multiple images into a array and saved it into .npy file and letter user it for various task :
+------------------------------------------------------------------------------------------------------
+This package fuction requres two argument one is path of the images folder and another is image size.
+
+# How to import the module:
+---------------------------
+
+from images_into_array.images_into_array import images
+
+images_path = ('')
+
+
+image_size = set the value [32, 64, 128] [(32*32), (64*64), (128*128)]
+
+array = images(images_path, image_size)
+
+print(array.shape)
+
+
+
+ Required package’s:
+---------------------
+
+• conda install -c conda-forge opencv=4.2.0
+
+• pip install shuffle
+
+• pip install numpy
+
+• pip install tqdm
+
+License:
+--------
+MIT Licensed
+
+Author:
+-------
+Sujit Mandal
+
+LinkedIn : https://www.linkedin.com/in/sujit-mandal-91215013a/
+
+Facebook : https://www.facebook.com/sujit.mandal.33671748
+
+Twitter : https://twitter.com/mandalsujit37
+
