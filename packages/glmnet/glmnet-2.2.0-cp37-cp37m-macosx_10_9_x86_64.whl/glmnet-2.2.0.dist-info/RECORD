@@ -1,0 +1,13 @@
+_glmnet.cpython-37m-darwin.so,sha256=RJKCAOJxi6r0bgwLXoAVfeWI4JdRbpNJ1lUK-lN4zPc,813192
+glmnet/__init__.py,sha256=BDU4WfHrP9-NP9A2lQuVYHQfzgusjl8GVwyifr7HBJQ,186
+glmnet/doc.py,sha256=pcGuWqNOrmgz0DNbdahBnpg6Zir-70UVZfhIXaK7TPI,11502
+glmnet/errors.py,sha256=HfK5wTqvFiPK4TqRyhzybgd8nVNIjoBtHiYwJsbj4FM,2232
+glmnet/linear.py,sha256=ikAdK0fmvfd8uCDfDkHP1PqvIV7QD-PlzSo3i0SheQA,17618
+glmnet/logistic.py,sha256=0QUOsY3vnj9dURV1T9WDhi0DpgrQtajjjLsdcZPfCas,23568
+glmnet/scorer.py,sha256=7h-WRxq50v_9QH76XViEAGX0lEyqT_2PStWKBqia5GU,12675
+glmnet/util.py,sha256=hS9edjJeTtTXGd022ygHJ2JPSU6WKXR20C-0BVHcsWY,6955
+glmnet-2.2.0.dist-info/LICENSE,sha256=0nIwvDXvwUMK6HxtEhuofCr3YdN6eGR3dabMOkscWEY,18396
+glmnet-2.2.0.dist-info/METADATA,sha256=pkb0LgeiMGGPgZCR31WnsIeZ9P2j4gsNiuaiaz0G8z4,4317
+glmnet-2.2.0.dist-info/WHEEL,sha256=ePSmKDYpHLRUYc6QuHiYMO-IoN8XmQMJmY2AHxzV4Bc,110
+glmnet-2.2.0.dist-info/top_level.txt,sha256=g2wHSyK5jVtLNKpfk-7fNv7JxxDaD9fUtB5djc3ozDI,15
+glmnet-2.2.0.dist-info/RECORD,,
