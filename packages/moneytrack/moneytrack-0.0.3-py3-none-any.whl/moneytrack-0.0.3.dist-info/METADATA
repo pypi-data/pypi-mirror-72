@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: moneytrack
+Version: 0.0.3
+Summary: This package helps to track personal finances spread over many accounts
+Home-page: https://github.com/samharnew/moneytrack
+Author: Sam Harnew
+Author-email: sam.harnew@gmail.com
+License: UNKNOWN
+Project-URL: Source Code, https://github.com/samharnew/moneytrack
+Keywords: personal finance tracking money
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Requires-Dist: scipy (>=1.4.1)
+Requires-Dist: numpy (>=1.18.1)
+Requires-Dist: pandas (>=0.25.3)
+Requires-Dist: matplotlib (>=3.0.0)
+Requires-Dist: xlrd (>=1.0.0)
+
+UNKNOWN
+
+
