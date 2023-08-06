@@ -1,0 +1,622 @@
+Metadata-Version: 2.0
+Name: dnn
+Version: 0.5.2
+Summary: Deep Neural Network Library
+Home-page: https://gitlab.com/hansroh/dnn
+Author: Hans Roh
+Author-email: hansroh@gmail.com
+License: MIT
+Download-URL: https://pypi.python.org/pypi/dnn
+Platform: posix
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 7 - Inactive
+Classifier: Environment :: Console
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: rs4
+Requires-Dist: numpy
+Requires-Dist: sklearn
+Requires-Dist: future
+Requires-Dist: networkx
+Requires-Dist: hyperopt
+Requires-Dist: protobuf
+
+Notification
+=====================
+
+This project is depreacted.
+
+Tensorflow2 and Keras have enough APIs.
+
+
+Deep Neural Network Library
+==============================
+
+It is for eliminating repeat jobs of machine learning. Also it can makes your code more beautifully and Pythonic.
+
+.. contents:: Table of Contents
+
+Installation
+=================
+
+.. code-block:: bash
+
+  # For tensorflow<1.13
+  pip3 install "dnn<0.5"
+
+  # For tensorflow>=1.13
+  pip3 install "dnn>=0.5"
+
+
+Building Deep Neural Network
+==============================
+
+Please see my several examples_. It contains below networks using MNIST dataset:
+
+- Logistic Regression
+- Association Learning
+- GAN: Generative Adversarial Network
+- VAE: Variational Autoencoder
+- AAE: Adversal Autoencoder
+
+.. _examples: https://gitlab.com/hansroh/dnn/tree/master/examples
+
+
+Data Normalization
+=====================
+
+Data normalization and standardization,
+
+.. code-block:: python
+
+  train_xs = net.normalize (train_xs, normalize = True, standardize = True)
+
+To show cumulative sum of explained_variance_ratio\_ of sklearn PCA.
+
+.. code-block:: python
+
+  train_xs = net.normalize (train_xs, normalize = True, standardize = True, pca_k = -1)
+
+Then you can decide n_components for PCA.
+
+.. code-block:: python
+
+  train_xs = net.normalize (train_xs, normalize = True, standardize = True, axis = 0, pca_k = 500)
+
+Test dataset will be nomalized by factors of train dataset.
+
+.. code-block:: python
+
+  test_xs = net.normalize (test_xs)
+
+This parameters will be pickled at your train directory named as *normfactors*. You can use this pickled file for serving your model.
+
+
+Export Model
+==========================
+
+
+To Saved Model
+-------------------------
+
+For serving model,
+
+.. code-block:: python
+
+  import mydnn
+
+  net = mydnn.MyDNN ()
+  net.restore ('./checkpoint')
+  version = net.to_save_model (
+    './export',
+    'predict_something',
+    inputs = {'x': net.x},
+    outputs={'label': net.label, 'logit': net.logit}
+  )
+  print ("version {} has been exported".format (version))
+
+For testing your model,
+
+.. code-block:: python
+
+  from dnn import save_model
+
+  interpreter = save_model.load (model_dir, sess, graph)
+  y = interpreter.run (x)
+
+
+You can serve the expoted model with `TensorFlow Serving`_ or this dnn.
+
+Note: If you use net.normalize (train_xs), normalizing factors (mean, std, max and etc) willl be pickled and saved to model directory with tensorflow model.
+If you can use this file for normalizing new x data at real service.
+
+.. code-block:: python
+
+  from dnn import _normalize
+
+  def normalize (x):
+    norm_file = os.path.join (model_dir, "normfactors")
+    with open (norm_file, "rb") as f:
+      norm_factor = pickle.load (f)
+    return _normalize (x, *norm_factor)
+
+
+.. _`TensorFlow Serving`: https://github.com/tensorflow/serving
+
+To Tensorflow Lite Flat Buffer Model
+-------------------------------------------------------
+
+* Required Tensorflow version 1.9*
+
+For exporting tensorflow lite you should convert your model to save model first.
+
+.. code-block:: python
+
+  net.to_tflite (
+      "model.tflite",
+      save_model_dir
+  )
+
+If you want to convert to quntized model, it will be needed additional parameters.
+
+.. code-block:: python
+
+  net.to_tflite (
+      "model.tflite",
+      save_model_dir,
+      True, # quantize
+      (128, 128), # mean/std stats of input value
+      (-1, 6) # min/max range output value of logit
+  )
+
+For testing tflite model,
+
+.. code-block:: python
+
+  from dnn import tflite
+
+  interpreter = tflite.load ("model.tflite")
+  y = interpreter.run (x)
+
+If your model is quantized, it need mean/std stats of input value,
+
+.. code-block:: python
+
+  from dnn import tflite
+
+  interpreter = tflite.load ("model.tflite", (128, 128))
+  y = interpreter.run (x)
+
+If your input value range -1.0 ~ 1.0, its will be translated into 0 - 255 for qunatized model by mean and std parameters.
+So (128, 128) means your inout value range is -1.0 ~ 1.0. Then interpreter will qunatize x to uint8 by this parameter.
+
+.. code-block:: python
+
+  unit8 = (float32 x * std) + mean
+
+And tflite will reverse this uinit8 to float value by,
+
+.. code-block:: python
+
+  float32 x = (uint8 x - mean) / std
+
+
+dnn Class  Methods & Properties
+====================================
+
+You can override or add anything. If it looks good, contribute to this project please.
+
+Predefined Operations & Creating
+---------------------------------------------------
+
+You should or could create these operations by overriding methods,
+
+- train_op: create with 'make_optimizer'
+- logit: create with 'DNN.make_logit'
+- cost: create with 'DNN.make_cost'
+- accuracy: create with 'DNN.calculate_accuracy'
+
+Predefined Place Holders
+--------------------------------
+
+- dropout_rate: if negative value, dropout rate will be selected randomly.
+- is_training
+- n_sample: Numner of x (or y) set. This value will be fed automatically, do not feed.
+
+
+Optimizers
+-----------------
+
+You can use predefined optimizers.
+
+.. code-block:: python
+
+  def make_optimizer (self):
+    return self.optimizer ("adam")
+    # Or
+    return self.optimizer ("rmsprob", mometum = 0.01)
+
+Available optimizer names are,
+
+- "adam"
+- "rmsprob"
+- "momentum"
+- "clip"
+- "grad"
+- "adagrad"
+- "adagradDA"
+- "adadelta"
+- "ftrl"
+- "proxadagrad"
+- "proxgrad"
+
+see dnn/optimizers.py
+
+
+Model
+------------
+
+- save
+- restore
+- to_save_model
+- to_tflite
+- reset_dir
+- set_train_dir
+- eval
+
+
+Tensor Board
+-----------------------
+
+- set_tensorboard_dir
+- make_writers
+- write_summary
+
+
+Tensorflow gRPC and RESTful API Server
+==========================================
+
+**dnn.tfserver** is an example for serving Tensorflow model with `Skitai App Engine`_.
+
+It can be accessed by gRPC and JSON RESTful API.
+
+This project is inspired by `issue #176`_.
+
+.. _`issue #176` : https://github.com/tensorflow/serving/issues/176
+.. _`Skitai App Engine`: https://pypi.python.org/pypi/skitai
+
+
+Saving Tensorflow Model
+------------------------------
+
+See `tf.saved_model.builder.SavedModelBuilder`_, but for example:
+
+.. code:: python
+
+  import tensorflow as tf
+
+  # your own neural network
+  class DNN:
+    ...
+
+  net = DNN (phase_train=False)
+
+  sess = tf.Session()
+  sess.run (tf.global_variables_initializer())
+
+  # restoring checkpoint
+  saver = tf.train.Saver (tf.global_variables())
+  saver.restore (sess, "./models/model.cpkt-1000")
+
+  # save model with builder
+  builder = tf.saved_model.builder.SavedModelBuilder ("exported/1/")
+
+  prediction_signature = (
+    tf.saved_model.signature_def_utils.build_signature_def(
+      inputs = {'x': tf.saved_model.utils.build_tensor_info (net.x)},
+      outputs = {'y': tf.saved_model.utils.build_tensor_info (net.predict)])},
+      method_name = tf.saved_model.signature_constants.PREDICT_METHOD_NAME)
+  )
+  # Remember 'x', 'y' for I/O
+
+  legacy_init_op = tf.group (tf.tables_initializer (), name = 'legacy_init_op')
+  builder.add_meta_graph_and_variables(
+    sess,
+    [ tf.saved_model.tag_constants.SERVING ],
+    signature_def_map = {'predict': prediction_signature},
+    legacy_init_op = legacy_init_op
+  )
+  # Remember 'signature_def_name'
+
+  builder.save()
+
+.. _`tf.saved_model.builder.SavedModelBuilder`: https://www.tensorflow.org/api_docs/python/tf/saved_model/builder/SavedModelBuilder
+
+
+Running Server
+---------------------
+
+You just setup model path and tensorflow configuration, then you can have gRPC and JSON API services.
+
+Example of api.py
+
+.. code:: python
+
+  import dnn
+  import skitai
+  from dnn import tf
+
+  pref = skitai.pref ()
+  pref.max_client_body_size = 100 * 1024 * 1024 # 100 MB
+
+  # we want to serve 2 models:
+  # alias and (model_dir, optional session config)
+  pref.config.tf_models ["model1"] = "exported/2"
+  pref.config.tf_models ["model2"] = (
+  	"exported/3",
+  	tf.ConfigProto(
+  	  gpu_options=tf.GPUOptions (per_process_gpu_memory_fraction = 0.2),
+  	  log_device_placement = False
+    )
+  )
+
+  # If you want to activate gRPC, should mount on '/'
+  skitai.mount ("/", dnn, pref = pref)
+  skitai.run (port = 5000)
+
+And run,
+
+.. code:: bash
+
+  python3 api.py
+
+
+Adding Custom APIs
+``````````````````````````````
+
+You can create your own APIs.
+
+If your APIs are located in,
+
+.. code:: bash
+
+  /api/service/loader.py
+  /api/service/apis.py
+
+For example,
+
+.. code:: python
+
+  # apis.py
+
+  from dnn import tfserver
+
+  def predict (spec_name, signature_name, **inputs):
+      result = tfserver.run (spec_name, signature_name, **inputs)
+      pred = np.argmax (result ["y"][0])
+      return dict (
+          confidence = float (result ["y"][0][pred]),
+          code = tfserver.tfsess [spec_name].labels [0].item (pred)
+      )
+
+  def __mount__ (app):
+      import os
+      from dnn import tf
+      from .helpers.unspsc import datautil
+
+      def load_latest_model (app, model_name, loc, per_process_gpu_memory_fraction = 0.03):
+          if not os.path.isdir (loc) or not os.listdir (loc):
+              return
+          version = max ([int (ver) for ver in os.listdir (loc) if ver.isdigit () and os.path.isdir (os.path.join (loc, ver))])
+          model_path = os.path.join (loc, str (version))
+          tfconfig = tf.ConfigProto(gpu_options=tf.GPUOptions (
+            per_process_gpu_memory_fraction = per_process_gpu_memory_fraction),
+            log_device_placement = False
+          )
+          app.config.tf_models [model_name] = (model_path, tfconfig)
+          return model_path
+
+      def initialize_models (app):
+          for model in os.listdir (app.config.model_root):
+              model_path = load_latest_model (app, model, os.path.join (app.config.model_root, model), 0.1)
+              if model == "f22":
+                  datautil.load_features (os.path.join (model_path, 'features.pkl'))
+
+      initialize_models (app)
+
+      @app.route ("/", methods = ["GET"])
+      def models (was):
+          return was.API (models = list (tfserver.tfsess.keys ()))
+
+      @app.route ("/unspsc", methods = ["POST"])
+      def unspsc (was, text, signature_name = "predict"):
+          x, seq_length = datautil.encode (text)
+          result = predict ("unspsc", signature_name, x = [x], seq_length = [seq_length])
+          return was.API (result = result)
+
+Then mount these services and run.
+
+.. code:: python
+
+  # serve.py
+  from dnn import tfserver
+  import dnn
+
+	pref = tfserver.preference ("/api")
+	from services import apis, loader
+
+	pref.mount ("/tfserver/apis", loader, apis)
+	pref.config.model_root = skitai.joinpath ("api/models")
+	pref.debug = True
+	pref.use_reloader = True
+	pref.access_control_allow_origin = ["*"]
+	pref.max_client_body_size = 100 * 1024 * 1024 # 100 MB
+
+	skitai.mount ("/", dnn, pref = pref)
+	skitai.run (port = 5000, name = "tfapi")
+
+
+Request Examples
+------------------------------------
+
+gRPC Client
+``````````````
+
+Using grpcio library,
+
+.. code:: python
+
+  from dnn.tfserver import cli
+  from tensorflow.python.framework import tensor_util
+  import numpy as np
+
+  stub = cli.Server ("http://localhost:5000")
+  problem = np.array ([1.0, 2.0])
+
+  resp = stub.predict (
+    'model1', #alias for model
+    'predict', #signature_def_name
+    x = tensor_util.make_tensor_proto(problem.astype('float32'), shape=problem.shape)
+  )
+  # then get 'y'
+  resp.y
+  >> np.ndarray ([-1.5, 1.6])
+
+Using aquests for async request,
+
+.. code:: python
+
+  import aquests
+  from dnn.tfserver import cli
+  from tensorflow.python.framework import tensor_util
+  import numpy as np
+
+  def print_result (resp):
+    cli.Response (resp.data).y
+    >> np.ndarray ([-1.5, 1.6])
+
+  stub = aquests.grpc ("http://localhost:5000/tensorflow.serving.PredictionService", callback = print_result)
+  problem = np.array ([1.0, 2.0])
+
+  request = cli.build_request (
+    'model1',
+    'predict',
+    x = problem
+  )
+  stub.Predict (request, 10.0)
+
+  aquests.fetchall ()
+
+
+RESTful API
+````````````````
+
+Using requests,
+
+.. code:: python
+
+  import requests
+
+  problem = np.array ([1.0, 2.0])
+  api = requests.session ()
+  resp = api.post (
+    "http://localhost:5000/predict",
+    json.dumps ({"x": problem.astype ("float32").tolist()}),
+    headers = {"Content-Type": "application/json"}
+  )
+  data = json.loads (resp.text)
+  data ["y"]
+  >> [-1.5, 1.6]
+
+Another,
+
+.. code:: python
+
+  from aquests.lib import siesta
+
+  problem = np.array ([1.0, 2.0])
+  api = siesta.API ("http://localhost:5000")
+  resp = api.predict.post ({"x": problem.astype ("float32").tolist()})
+  resp.data.y
+  >> [-1.5, 1.6]
+
+
+
+Performance Note Comparing with Proto Buffer and JSON
+------------------------------------------------------------
+
+Test Environment
+``````````````````````
+
+- Input:
+
+  - dtype: Float 32
+  - shape: Various, From (50, 1025) To (300, 1025), Prox. Average (100, 1025)
+
+- Output:
+
+  - dtype: Float 32
+  - shape: (60,)
+
+- Request Threads: 16
+- Requests Per Thread: 100
+- Total Requests: 1,600
+
+Results
+````````````
+
+Average of 3 runs,
+
+- gRPC with Proto Buffer:
+
+  - Use grpcio
+  - 11.58 seconds
+
+- RESTful API with JSON
+
+  - Use requests
+  - 216.66 seconds
+
+Proto Buffer is 20 times faster than JSON...
+
+
+History
+=========
+
+- 0.4 (2020.6.24)
+
+  - integrate tfserver into dnn.tfserver
+  - data processing utils were moved to rs4.mldp
+
+- 0.3:
+
+  - remove trainale ()
+  - add set_learning_rate ()
+  - add argument to set_train_dir () for saving chcekpoit
+  - make compatible with tf 1.12.0
+
+- 0.2
+
+  - add tensorflow lite conversion and interpreting
+
+- 0.1: project initialized
+
+
+tfserver History
+=============================
+
+- 0.3 (2020.6.24) integrated to dnn
+- 0.2 (2018. 12.1): integrated with dnn 0.3
+- 0.1b8 (2018. 4.13): fix grpc trailers, skitai upgrade is required
+- 0.1b6 (2018. 3.19): found works only grpcio 1.4.0
+- 0.1b3 (2018. 2. 4): add @app.umounted decorator for clearing resource
+- 0.1b2: remove self.tfsess.run (tf.global_variables_initializer())
+- 0.1b1 (2018. 1. 28): Beta release
+- 0.1a (2018. 1. 4): Alpha release
+
+
+
