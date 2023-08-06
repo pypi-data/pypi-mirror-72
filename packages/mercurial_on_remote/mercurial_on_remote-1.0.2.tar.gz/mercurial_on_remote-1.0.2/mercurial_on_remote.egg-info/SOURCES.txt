@@ -1,0 +1,17 @@
+.hgignore
+.hgtags
+HISTORY.rst
+README.rst
+mercurial_on_remote.py
+setup.py
+tox.ini
+mercurial_on_remote.egg-info/PKG-INFO
+mercurial_on_remote.egg-info/SOURCES.txt
+mercurial_on_remote.egg-info/dependency_links.txt
+mercurial_on_remote.egg-info/requires.txt
+mercurial_on_remote.egg-info/top_level.txt
+mercurial_on_remote.egg-info/zip-safe
+tests/basic-local.t
+tests/basic-ssh.t
+tests/support/common.sh
+tests/support/dummyssh
