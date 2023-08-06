@@ -1,0 +1,13 @@
+pgtrigger/__init__.py,sha256=XbWnS4zlxRcKi0m60T3IiiXR60XngeQdDQBd17zZc7o,1175
+pgtrigger/apps.py,sha256=L8EX8YVjwiPEmdU5UtNf3owpgL5l-vzEASL8sYze6RY,542
+pgtrigger/core.py,sha256=195t2KJF4ROOAC0Gzjlu0fl6UVBDmzvF7JU9iNLx428,15574
+pgtrigger/models.py,sha256=ngv9eg-_jGXObb_6-TtTnKLiEWclX9tZxsLgs3Cv4Sw,105
+pgtrigger/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgtrigger/tests/migrations/0001_initial.py,sha256=VsjIKh6FZ_bHtHF0L3jAD3MTGSm1keQDFCYcC0Qz5QI,3916
+pgtrigger/tests/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgtrigger/tests/models.py,sha256=yysT2D5f24rbUofoRI0Uz8yFIwa6ec6WY5pnfeuz5IU,1494
+pgtrigger/tests/test_core.py,sha256=5Zu4mTrtV5Iqpvb3Yftqf-o6dZ9bBdZ4sN0p4hOqT0k,14454
+django_pgtrigger-1.0.1.dist-info/LICENSE,sha256=ATAAz7-sFSHiH8Y6SUVs-yU0oUJjrPCZPpbYAdkc3WY,1474
+django_pgtrigger-1.0.1.dist-info/WHEEL,sha256=G_NFpzHmv_dUXgCUSAWL0-bLL-eMzYU6DzDeGXbRXUk,83
+django_pgtrigger-1.0.1.dist-info/METADATA,sha256=LaBXzfjDgkdJtobealAXJj0c9iGGDwaur5a-WC5NIb8,2638
+django_pgtrigger-1.0.1.dist-info/RECORD,,
