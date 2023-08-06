@@ -1,0 +1,8 @@
+numpy
+tqdm>=4.27
+transformers
+higher
+pandas
+
+[:python_version < "3.7"]
+dataclasses
