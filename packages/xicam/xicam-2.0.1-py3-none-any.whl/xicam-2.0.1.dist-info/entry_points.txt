@@ -1,0 +1,29 @@
+[gui_scripts]
+xicam = xicam.run_xicam:main
+
+[xicam.plugins.CatalogPlugin]
+databroker_catalog_plugin = xicam.gui.bluesky.databroker_catalog_plugin:DatabrokerCatalogPlugin
+
+[xicam.plugins.DataHandlerPlugin]
+npy = xicam.core.formats.NPYPlugin:NPYPlugin
+
+[xicam.plugins.PluginType]
+CatalogPlugin = xicam.plugins.catalogplugin:CatalogPlugin
+ControllerPlugin = xicam.plugins.controllerplugin:ControllerPlugin
+DataHandlerPlugin = xicam.plugins.datahandlerplugin:DataHandlerPlugin
+DataResourcePlugin = xicam.plugins.dataresourceplugin:DataResourcePlugin
+EZPlugin = xicam.plugins.ezplugin:_EZPlugin
+Fittable1DModelPlugin = xicam.plugins.fittablemodelplugin:Fittable1DModelPlugin
+GUIPlugin = xicam.plugins.guiplugin:GUIPlugin
+OperationPlugin = xicam.plugins.operationplugin:OperationPlugin
+QWidgetPlugin = xicam.plugins.widgetplugin:QWidgetPlugin
+SettingsPlugin = xicam.plugins.settingsplugin:SettingsPlugin
+
+[xicam.plugins.SettingsPlugin]
+appearance = xicam.gui.settings.appearance:AppearanceSettingsPlugin
+cammart = xicam.gui.cammart:CamMartSettingsPlugin
+connections = xicam.gui.connections:ConnectionSettingsPlugin
+execution = xicam.gui.settings.execution:ExecutionSettingsPlugin
+logging = xicam.gui.settings.logging:LoggingSettingsPlugin
+venvs = xicam.gui.cammart.venvs:VenvsSettingsPlugin
+
