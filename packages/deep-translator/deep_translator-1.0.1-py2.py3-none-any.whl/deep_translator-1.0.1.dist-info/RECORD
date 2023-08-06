@@ -1,0 +1,16 @@
+deep_translator/__init__.py,sha256=Wg4lHl-n-Vek90pf1wKfIsdKKmwaAvHG54H2GMv67QU,414
+deep_translator/cli.py,sha256=IdE_MGVo4G7Vqju_urV_qJb6-pNLjdoXH2yG2UmAJsQ,460
+deep_translator/constants.py,sha256=Xo7BjFj0S16LVTsFFwP7YRHORW-Hs-TWlQ4DbJvoUP4,3936
+deep_translator/exceptions.py,sha256=gKJQuyWwMX8WKMH-LmqKUthwm2oF00C0JBb6sgdZVME,1077
+deep_translator/google_trans.py,sha256=jK6OZ2ZW20-no-8ogy6ZGwXx3khyEzo56oG55IBe5XU,4307
+deep_translator/linguee.py,sha256=D2Ekct7uWx_hooEvkoZrRAS7toyTRCUT16y88Phxgng,3194
+deep_translator/mymemory.py,sha256=Bw4EQPI1D5AfDDfABWFHzLTkNdA3G0g5Ei3AbpPTzZ0,3202
+deep_translator/parent.py,sha256=ZiBCefMtAR9SR9aKbWX22P6UD4JNtkLhWhXcT518j9U,1881
+deep_translator/pons.py,sha256=vKebzrBk0oum5ZgPFHqxveVMB6tekGjnQnGg-9U4D8c,3925
+deep_translator-1.0.1.dist-info/AUTHORS.rst,sha256=071ps4AaRPYiMxjqG-sd3nD0il5cs6voEpzGC_6Gw9g,161
+deep_translator-1.0.1.dist-info/LICENSE,sha256=kMbc3iFAtRwil-cFCHKHUkHuvbV-zCuLMTGYFV2O5WA,1074
+deep_translator-1.0.1.dist-info/METADATA,sha256=JRuIwCftAqbRSEdqcD-WBtrHmVbY__rYNzs8dQYAC1E,4291
+deep_translator-1.0.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+deep_translator-1.0.1.dist-info/entry_points.txt,sha256=0pXh7WLS5T6Zt2-3ph8QH72IEEnhUt7b8vT5tIRrUJA,62
+deep_translator-1.0.1.dist-info/top_level.txt,sha256=9KdGbLw77pdS8uKBU61d_uDgZHJrEA_2Aafl68ewxm4,16
+deep_translator-1.0.1.dist-info/RECORD,,
