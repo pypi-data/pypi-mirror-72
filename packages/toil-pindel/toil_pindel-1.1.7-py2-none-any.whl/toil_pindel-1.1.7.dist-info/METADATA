@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: toil-pindel
+Version: 1.1.7
+Summary: A toil wrapper for cgp pindel.
+Home-page: https://github.com/papaemmelab/toil_pindel
+Author: Juan S. Medina
+License: BSD
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 2 :: Only
+Classifier: Topic :: Utilities
+Requires-Dist: toil-container (==1.1.6)
+Requires-Dist: more-itertools (<6.0.0)
+Provides-Extra: test
+Requires-Dist: pytest (==3.7.4) ; extra == 'test'
+Requires-Dist: coverage (==4.4.2) ; extra == 'test'
+Requires-Dist: pydocstyle (==2.1.1) ; extra == 'test'
+Requires-Dist: pytest-cov (==2.5.1) ; extra == 'test'
+Requires-Dist: pytest-env (==0.6.2) ; extra == 'test'
+Requires-Dist: pytest-sugar (==0.9.1) ; extra == 'test'
+Requires-Dist: pylint (==1.8.1) ; extra == 'test'
+
+📘 learn more on `GitHub <https://github.com/papaemmelab/toil_pindel>`_!
+
+
