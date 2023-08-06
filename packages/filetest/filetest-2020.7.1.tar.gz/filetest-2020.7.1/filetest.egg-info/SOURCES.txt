@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+filetest/__init__.py
+filetest.egg-info/PKG-INFO
+filetest.egg-info/SOURCES.txt
+filetest.egg-info/dependency_links.txt
+filetest.egg-info/top_level.txt
