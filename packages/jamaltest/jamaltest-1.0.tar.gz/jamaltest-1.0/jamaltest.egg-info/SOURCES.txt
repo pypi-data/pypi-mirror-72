@@ -1,0 +1,9 @@
+README.md
+setup.py
+jamaltest.egg-info/PKG-INFO
+jamaltest.egg-info/SOURCES.txt
+jamaltest.egg-info/dependency_links.txt
+jamaltest.egg-info/top_level.txt
+pypi/__init__.py
+pypi/pdf2image.py
+pypi/pdf2text.py
