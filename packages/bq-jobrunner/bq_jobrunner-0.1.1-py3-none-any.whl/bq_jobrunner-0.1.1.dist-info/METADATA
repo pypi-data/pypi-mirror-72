@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: bq-jobrunner
+Version: 0.1.1
+Summary: Enables to easily query multiple BigQuery queries with any dependencies.
+Home-page: UNKNOWN
+Author: Takuto Sugisaki
+Author-email: tsintermax@gmail.com
+Maintainer: JDSC
+Maintainer-email: takuto.sugisaki@jdsc.ai
+License: MIT
+Keywords: BigQuery automate query
+Platform: LinuxMac OS-X
+Platform: Unix
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Dist: graphviz
+Requires-Dist: protobuf
+Requires-Dist: setuptools
+Requires-Dist: google-cloud
+Requires-Dist: google-cloud-bigquery
+Requires-Dist: networkx
+Requires-Dist: pydotplus
+Requires-Dist: pydot
+
+UNKNOWN
+
+
