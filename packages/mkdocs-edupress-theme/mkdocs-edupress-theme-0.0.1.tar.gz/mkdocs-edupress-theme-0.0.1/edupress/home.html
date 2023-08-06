@@ -1,0 +1,98 @@
+
+<div class="site-content-wrapper clearfix">
+    <p class="widget-title">Recent Posts</p>						
+    <ul id="recent-posts" class="ilovewp-posts ilovewp-posts-archive clearfix">
+
+{% if config.theme.google_adsense %}
+<div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- links1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="{{ config.theme.google_adsense }}"
+     data-ad-slot="7398393949"
+     data-ad-format="link"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+{% endif %}							
+
+
+{% for nav_item in pages | map(attribute="page") | rejectattr("meta.homepage") | list | paginate(page=page) %}
+<li class="ilovewp-post ilovewp-post-archive ilovewp-post-1 clearfix post-2659 post type-post status-publish format-standard hentry category-uncategorized tag-biden tag-breitbart tag-daily tag-joe tag-muslim tag-news tag-president tag-surge tag-trump tag-university">
+
+
+	<article>
+
+		{% if nav_item.meta.featured_image %}
+		<div class="post-cover-wrapper">
+			<div class="post-cover">
+				<a href="{{ nav_item.url|url }}" title="{{ nav_item.title }}">
+				<img width="240" max-height="200" src="{{ nav_item.meta.featured_image }}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />
+				</a>
+			</div><!-- .post-cover -->
+		</div><!-- .post-cover-wrapper -->
+		{% endif %}
+
+		<div class="post-preview">
+			<h2 class="title-post"><a href="{{ nav_item.url|url }}" rel="bookmark">{{ nav_item.title }}</a></h2>			<p class="post-excerpt">{{ nav_item.content|truncate }}</p>
+
+			<p class="post-meta">
+                {% if nav_item.meta.author %}
+				<span class="posted-by">By <a
+                      href="{{ page.site_url }}/author/{{ nav_item.meta.author|url }}"
+                      title="Posts by {{ nav_item.meta.author }}"
+                        rel="author">{{ nav_item.meta.author }}</a></span>
+                {% endif %}
+
+                {% if nav_item.meta.date %}
+				<span class="posted-on">Published <time 
+                      class="entry-date published" datetime="{{ nav_item.file.datestamp }}"><a
+                               href="{{ nav_item.url|url }}"
+                               title="{{ nav_item.title }}">{{ nav_item.file.datestamp.strftime("%B %d, %Y") }}</a></time></span>
+                {% endif %}
+                {% if nav_item.meta.category %}
+                <span class="post-meta-category"><a href="{{ page.site_url
+                        }}/category/{{ nav_item.meta.category|url }}/"
+                            rel="category tag">{{ nav_item.meta.category }}</a></span>
+                {% endif %}
+
+            </p><!-- .post-meta -->
+		</div><!-- .post-preview -->
+	</article>
+
+</li><!-- .ilovewp-post .ilovewp-post-archive .clearfix -->
+{% endfor %}
+</ul>
+
+
+<nav class="navigation posts-navigation" role="navigation">
+    <h2 class="screen-reader-text">Posts navigation</h2>
+    <div class="nav-links">
+    {% if page.page_num %}
+        {% if not page.last_page %}
+        <div class="nav-previous">
+            <a href="{{ config.site_url|url }}page/{{ page.page_num + 1 }}/">
+                "Older posts"
+            </a>
+        </div>
+        {% endif %}
+        {% if page.page_num == 2 %}
+        <div class="nav-next">
+            <a href="{{ config.site_url|url }}">
+                "Newer posts"
+            </a>
+        </div>
+        {% elif page.page_num > 2 %}
+        <div class="nav-next">
+            <a href="{{ config.site_url|url }}page/{{ page.page_num - 1 }}/">
+                "Newer posts"
+            </a>
+        </div>
+        {% endif %}
+    {% endif %}
+    </div>
+</nav>
+
+
+</div><!-- .site-content-wrapper .clearfix -->
