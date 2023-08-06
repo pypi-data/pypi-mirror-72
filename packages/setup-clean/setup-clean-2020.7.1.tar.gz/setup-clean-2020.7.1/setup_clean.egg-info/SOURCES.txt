@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+scripts/setup-clean
+setup_clean.egg-info/PKG-INFO
+setup_clean.egg-info/SOURCES.txt
+setup_clean.egg-info/dependency_links.txt
+setup_clean.egg-info/top_level.txt
