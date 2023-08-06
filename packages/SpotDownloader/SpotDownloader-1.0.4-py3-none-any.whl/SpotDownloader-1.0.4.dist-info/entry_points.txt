@@ -1,0 +1,3 @@
+[console_scripts]
+SpotDownloader = spotdownloader.__main__:main
+
