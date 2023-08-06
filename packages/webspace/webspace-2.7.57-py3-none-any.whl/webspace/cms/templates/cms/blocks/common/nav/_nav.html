@@ -1,0 +1,10 @@
+{% load static wagtailcore_tags my my_amp %}
+<nav>
+    {% for menu in menus %}
+        {% include 'cms/blocks/common/nav/menu.html' with menu=menu %}
+    {% endfor %}
+
+    {% block extra_nav %}
+    {% endblock %}
+
+</nav>
