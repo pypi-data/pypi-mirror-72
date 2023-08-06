@@ -1,0 +1,5 @@
+include build_cython_setup.py
+include filediffs/__init__.py
+include filediffs/filediffs.py
+include filediffs/filediffs_cy.pyx
+include filediffs/filediffs_script.py
