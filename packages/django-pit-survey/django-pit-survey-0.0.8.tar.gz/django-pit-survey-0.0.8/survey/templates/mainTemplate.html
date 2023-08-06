@@ -1,0 +1,106 @@
+<html lang="en">
+
+    <style>
+        html,
+        body,
+        header,
+        .view {
+          height: 100%;
+        }
+
+        @media (max-width: 740px) {
+          html,
+          body,
+          header,
+          .view {
+            height: 100vh;
+          }
+        }
+
+        .top-nav-collapse {
+          background-color: #78909c !important;
+        }
+
+        .navbar:not(.top-nav-collapse) {
+          background: transparent !important;
+        }
+
+        .hr-light {
+          border-top: 3px solid #fff;
+          width: 80px;
+        }
+
+    </style>
+
+    <head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+
+    <title>{% block title %} {% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <body style="background-color: rgba(76,125,172,0.63)">
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+              <a class="navbar-brand" href="#"><strong>P.I.T. Count</strong></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item{% if request.path == '/' %} active{% endif %}">
+                    <a class="nav-link" href="/">Home{% if request.path == '/' %} <span class="sr-only">(current)</span>{% endif %}</a>
+                  </li>
+
+                  {% if user.is_authenticated %}
+                  <li class="nav-item {% if request.path == '/user/' %}active{% endif %}">
+                    <a class="nav-link" href="/user">Forms{% if request.path == '/user/' %} <span class="sr-only">(current)</span>{% endif %}</a>
+                  </li>
+                  {% endif %}
+
+                  <li class="nav-item{% if request.path == '/dashboard/' %} active{% endif %}">
+                    <a class="nav-link" href="/dashboard/">Charts{% if request.path == '/dashboard/' %} <span class="sr-only">(current)</span>{% endif %}</a>
+                  </li>
+
+                  <li class="nav-item {% if request.path == '/resources/' %}active{% endif %}">
+                    <a class="nav-link" href="/resources">Resources{% if request.path == '/resources/' %} <span class="sr-only">(current)</span>{% endif %}</a>
+                  </li>
+
+                  {% if user.is_authenticated %}
+                  <li class="nav-item {% if request.path == '/admin/' %}active{% endif %}">
+                    <a class="nav-link" href="/admin">Admin{% if request.path == '/admin/' %} <span class="sr-only">(current)</span>{% endif %}</a>
+                  </li>
+                  {% endif %}
+
+                  {% if user.is_authenticated == False %}
+                  <li class="nav-item {% if request.path == '/login/' %}active{% endif %}">
+                    <a class="nav-link" href="/login">Login{% if request.path == '/login/' %} <span class="sr-only">(current)</span>{% endif %}</a>
+                  </li>
+                  {% endif %}
+
+                  {% if user.is_authenticated == False %}
+                  <li class="nav-item {% if request.path == '/register/' %}active{% endif %}">
+                    <a class="nav-link" href="/register">Register{% if request.path == '/register/' %} <span class="sr-only">(current)</span>{% endif %}</a>
+                  </li>
+                  {% endif %}
+
+                  {% if user.is_authenticated %}
+                  <li>
+                     <li class="nav-item {% if request.path == '/logout/' %}active{% endif %}">
+                     <a class="nav-link" href="/logout">Logout{% if request.path == '/logout/' %} <span class="sr-only">(current)</span>{% endif %}</a>
+                  </li>
+                  {% endif %}
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          {% block content %}
+
+          {% endblock %}
+
+    </body>
+</html>
+
