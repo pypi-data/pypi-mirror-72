@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    function setActiveLink(setActive){
+    if ($("a").hasClass('active'))
+        $("a").removeClass('active');
+    if (setActive)
+        $("#"+setActive).addClass('active');
+}
+
+$(function() {
+    $("a").click(function() {
+        setActiveLink(this.id);
+    });
+});
+</script>
+<div class="navbar">
+<span class="mainHeading"><a href="/bizzbuzz/home">Bizzbuzz</a> </span>
+    <span class="subHeading"><a href="/bizzbuzz/searchchannel"> Add Channel</a></span>
+    <span class="subHeading"><a href="/bizzbuzz/login"> Logout</a></span>
+    <span class="subHeading"><a href=""> Settings</a></span>
+</div>
+<div class="container">
+<div class="sidebar">
+    <form method="post" action="">
+        <input type="search" placeholder="Filter Feeds" class="searchbox"></form>
+        <a href="#" id="link1"> <img src="{% static "images/heart.png" %}" class="favorite"></a>
+    <a href="#" id="link2"> <img src="{% static "images/channel1.png" %}" class="channel"></a>
+    <a href="#" id="link3"> <img src="{% static "images/channel2.png" %}" class="channel"></a>
+    <a href="#" id="link4"> <img src="{% static "images/channel3.png" %}" class="channel"></a>
+    <a href="#" id="link5"> <img src="{% static "images/channel4.png" %}" class="channel" style="height: 50px;"></a>
+</div>
+    <div class="feed">
+<form action="" method="post" class="searchform">
+    <input type="search" placeholder="Type website name, topic or URL">
+</form>
+        <div class="category">
+<a href=#>Business</a>
+            <a href=#>Design</a>
+            <a href=#>Development</a>
+            <a href=#>Featured</a>
+            <a href=#>Marketing</a>
+            <a href=#>News</a>
+            <a href=#>Photography</a>
+            <a href=#>Reddit</a>
+        </div>
+        <div class="news">
+             <a href="">
+<div class="newsCard">
+<img src="{% static "images/hacker.png" %}" class="channelimg">
+    <div class="textcontainer">
+        <span class="subHeading">Hacker News</span><br>
+        <span class="feedtext">A social news website focusing on computer science and entrepreneurship.</span><br>
+        <button class="addbtn">Remove</button>
+        </div>
+</div></a>
+            <a href="">
+<div class="newsCard">
+<img src="{% static "images/hacker.png" %}" class="channelimg">
+    <div class="textcontainer">
+        <span class="subHeading">Hacker News</span><br>
+        <span class="feedtext">A social news website focusing on computer science and entrepreneurship.</span><br>
+        <button class="addbtn">Add</button>
+        </div>
+</div></a>
+            <a href="">
+<div class="newsCard">
+<img src="{% static "images/hacker.png" %}" class="channelimg">
+    <div class="textcontainer">
+        <span class="subHeading">Hacker News</span><br>
+        <span class="feedtext">A social news website focusing on computer science and entrepreneurship.</span><br>
+        <button class="addbtn">Remove</button>
+        </div>
+</div></a>
+            <a href="">
+<div class="newsCard">
+<img src="{% static "images/hacker.png" %}" class="channelimg">
+    <div class="textcontainer">
+        <span class="subHeading">Hacker News</span><br>
+        <span class="feedtext">A social news website focusing on computer science and entrepreneurship.</span><br>
+        <button class="addbtn">Add</button>
+        </div>
+</div></a>
+            <a href="">
+<div class="newsCard">
+<img src="{% static "images/hacker.png" %}" class="channelimg">
+    <div class="textcontainer">
+        <span class="subHeading">Hacker News</span><br>
+        <span class="feedtext">A social news website focusing on computer science and entrepreneurship.</span><br>
+        <button class="addbtn">Remove</button>
+        </div>
+</div></a>
+            <a href="">
+<div class="newsCard">
+<img src="{% static "images/hacker.png" %}" class="channelimg">
+    <div class="textcontainer">
+        <span class="subHeading">Hacker News</span><br>
+        <span class="feedtext">A social news website focusing on computer science and entrepreneurship.</span><br>
+        <button class="addbtn">Add</button>
+        </div>
+</div></a>
+            <a href="">
+<div class="newsCard">
+<img src="{% static "images/hacker.png" %}" class="channelimg">
+    <div class="textcontainer">
+        <span class="subHeading">Hacker News</span><br>
+        <span class="feedtext">A social news website focusing on computer science and entrepreneurship.</span><br>
+        <button class="addbtn">Add</button>
+        </div>
+</div></a>
+            <a href="">
+<div class="newsCard">
+<img src="{% static "images/hacker.png" %}" class="channelimg">
+    <div class="textcontainer">
+        <span class="subHeading">Hacker News</span><br>
+        <span class="feedtext">A social news website focusing on computer science and entrepreneurship.</span><br>
+        <button class="addbtn">Remove</button>
+        </div>
+</div></a>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    function setActiveLink(setActive){
+    if ($("a").hasClass('active'))
+        $("a").removeClass('active');
+    if (setActive)
+        $("#"+setActive).addClass('active');
+}
+
+$(function() {
+    $("a").click(function() {
+        setActiveLink(this.id);
+    });
+});
+</script>
+<div class="navbar">
+<span class="mainHeading"><a href="/bizzbuzz/home">Bizzbuzz</a> </span>
+    <span class="subHeading"><a href="/bizzbuzz/selectchannel">Manage Company Subscriptions</a></span>
+    <span class="subHeading"><a href="/bizzbuzz/logout"> Logout</a></span>
+{#    <span class="subHeading"><a href=""> Settings</a></span>#}
+    <span class="subHeading" style="margin-left: 800px; color: white; text-transform:capitalize; ">Welcome <b>{{ name }}</b>!</span>
+</div>
+<div class="container">
+<div class="sidebar">
+{#    <form method="post" action="">#}
+{#        <input type="search" placeholder="" class="searchbox"></form>#}
+{#    <a href="#" id="link1"> <img src="{% static "images/heart.png" %}" class="favorite"></a>#}
+    <a href="#" id="link2"> <img src="{% static "images/channel1.png" %}" class="channel" style="margin-right: 45px;"></a>
+    <a href="#" id="link3"> <img src="{% static "images/channel2.png" %}" class="channel" style="margin-right: 45px;"></a>
+    <a href="#" id="link4"> <img src="{% static "images/channel3.png" %}" class="channel" style="margin-right: 45px;"></a>
+    <a href="#" id="link5"> <img src="{% static "images/channel4.png" %}" class="channel" style="height: 50px;margin-right: 45px;"></a>
+
+</div>
+    <div class="feed">
+    <div class="favoritebar">
+
+    </div>
+        <div class="timeheading">
+            <h1>This Week</h1>
+                <h3 style="margin-left: 27px">Click on a Card to View Article.</h3>
+
+        </div>
+        <div class="news">
+            <a href="">
+
+ {% for title, url, summary, source, index  in articles %}
+
+     <a target="_blank" rel="noopener noreferrer" href="{{ url }}">
+        <div class="newsCard">
+<button class="number" disabled >{{ index }}</button>
+
+
+    <div class="textcontainer">
+        {% if source == "FORBES" %}
+                 <a href="{{ url }}" >
+                     <img src="{% static "images/forbes-logo.png" %}" class="sourcelogo" style="height: 20px; margin-left:5px; margin-top:5px">
+                 </a>
+        {%  endif %}
+        {% if source == "BI" %}
+                 <a href="{{ url }}" >
+                     <img src="{% static "images/bi-logo.png" %}" class="sourcelogo" style="height: 20px; margin-left:5px; margin-top:5px">
+                 </a>
+        {%  endif %}
+        <span class="author" style = "margin-right:20px; margin-bottom: 15px"> {{ title }} </span>
+       <details class="summary" style = "margin-right:20px; color: #252b27;  border-style:solid; background-color: #6f9196; border-color: #6f9196">
+           <summary> <u> Article Summary </u> </summary>{{ summary }} </details>
+
+        </div>
+     </div>
+     </a>
+
+ {% endfor %}
+
+
+
+        </a>
+</div>
+</div>
+</div>
+</body>
+</html>
