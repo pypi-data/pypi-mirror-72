@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: py-stocks
+Version: 1.6.5
+Summary: py-stocks is a package for retrieving real-time stock data, historical stock data, and stock technical indicators.
+Home-page: https://github.com/pranavaddepalli/py-stocks
+Author: Pranav Addepalli
+Author-email: pranav.addepalli@gmail.com
+License: MIT
+Download-URL: https://github.com/pranavaddepalli/py-stocks/archive/v1.0.tar.gz
+Description: https://github.com/pranavaddepalli/py-stocks
+Keywords: Finance,Stocks,Python,Scraper
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
