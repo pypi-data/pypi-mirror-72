@@ -1,0 +1,10 @@
+requirements.txt
+setup.py
+pipreqs_update/__init__.py
+pipreqs_update/__main__.py
+pipreqs_update.egg-info/PKG-INFO
+pipreqs_update.egg-info/SOURCES.txt
+pipreqs_update.egg-info/dependency_links.txt
+pipreqs_update.egg-info/requires.txt
+pipreqs_update.egg-info/top_level.txt
+scripts/pipreqs-update
