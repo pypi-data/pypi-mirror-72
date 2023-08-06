@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+parserz/__init__.py
+parserz.egg-info/PKG-INFO
+parserz.egg-info/SOURCES.txt
+parserz.egg-info/dependency_links.txt
+parserz.egg-info/requires.txt
+parserz.egg-info/top_level.txt
+parserz.egg-info/zip-safe
