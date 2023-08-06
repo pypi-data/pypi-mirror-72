@@ -1,0 +1,12 @@
+include LICENSE
+include README.rst
+include HISTORY.rst
+include CODE_OF_CONDUCT.md
+include requirements-dev.txt
+include tox.ini
+include Makefile
+
+exclude tests
+recursive-exclude .circleci *
+recursive-exclude .github *
+recursive-exclude tests *
