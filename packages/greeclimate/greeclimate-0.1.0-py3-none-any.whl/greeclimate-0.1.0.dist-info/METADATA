@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: greeclimate
+Version: 0.1.0
+Summary: Discover, connect and control Gree based minisplit systems
+Home-page: https://github.com/cmroche/greeclimate
+Author: Clifford Roche
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: certifi (==2020.6.20)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: flake8 (==3.8.3)
+Requires-Dist: idna (==2.10)
+Requires-Dist: importlib-metadata (==1.7.0)
+Requires-Dist: mccabe (==0.6.1)
+Requires-Dist: Naked (==0.1.31)
+Requires-Dist: netifaces (==0.10.9)
+Requires-Dist: pycodestyle (==2.6.0)
+Requires-Dist: pycryptodome (==3.9.8)
+Requires-Dist: pyflakes (==2.2.0)
+Requires-Dist: PyYAML (==5.3.1)
+Requires-Dist: requests (==2.24.0)
+Requires-Dist: shellescape (==3.8.1)
+Requires-Dist: urllib3 (==1.25.9)
+Requires-Dist: zipp (==3.1.0)
+
+
+## Gree Climate
+Discover, connect and control Gree based mini-split systems.
+
+__greenclimat__ is a Python3 based package for controll Gree mini-split ACs and heat pumps. Gree is a common brand for minisplit systems and is licensed and resold under many product names. This module may (or may not) work for any of those system, but has been tested on
+
+- Trane mini-split heat pump (4TXK38)
+
+_If you have tested and know of others systems that work, please fork and submit a PR with the make and model_
+
+__Based on the following work__
+- [Gree Remote by tomikaa87](https://github.com/tomikaa87/gree-remote)
+
+## Getting the package
+The easiest way to grab __greeclimate__ is through PyPI
+`pip3 install greeclimate`
+
+## Use Gree Climate
+
+....
+
+WIP, more details will come once testing is completed
+
+....
+
