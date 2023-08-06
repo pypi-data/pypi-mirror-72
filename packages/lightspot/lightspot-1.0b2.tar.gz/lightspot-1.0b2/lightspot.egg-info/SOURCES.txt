@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+lightspot/__init__.py
+lightspot/macula.cpp
+lightspot/macula.f90
+lightspot/model.py
+lightspot/priors.py
+lightspot/utils.py
+lightspot.egg-info/PKG-INFO
+lightspot.egg-info/SOURCES.txt
+lightspot.egg-info/dependency_links.txt
+lightspot.egg-info/requires.txt
+lightspot.egg-info/top_level.txt

@@ -1,0 +1,14 @@
+dynesty>=1.0
+numpy
+pybind11>=2.2
+scipy>=0.19
+
+[docs]
+jupyter
+numpydoc
+pandoc
+sphinx_rtd_theme
+
+[test]
+flake8
+pytest
