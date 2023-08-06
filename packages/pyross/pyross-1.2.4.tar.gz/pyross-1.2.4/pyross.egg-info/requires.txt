@@ -1,0 +1,11 @@
+cython
+numpy
+scipy
+cma
+pandas
+matplotlib
+pathos
+nlopt
+xlrd
+sympy
+nestle
