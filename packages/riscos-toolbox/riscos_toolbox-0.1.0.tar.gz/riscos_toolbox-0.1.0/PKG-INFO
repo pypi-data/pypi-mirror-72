@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: riscos_toolbox
+Version: 0.1.0
+Summary: RISC OS Toolbox library
+Home-page: https://github.com/c-jo/riscos-toolbox
+Author: Chris Johns
+Author-email: chris@lessthan3.org.uk
+License: UNKNOWN
+Description: Library to use the RISC OS Toolbox
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: RISC OS
+Requires-Python: >=3
