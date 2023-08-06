@@ -1,0 +1,11 @@
+unidecode
+jinja2
+markdown2
+pybtex
+requests
+
+[dev]
+black
+flake8
+isort
+pytest
