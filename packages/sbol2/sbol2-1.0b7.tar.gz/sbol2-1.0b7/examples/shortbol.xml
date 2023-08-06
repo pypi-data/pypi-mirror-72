@@ -1,0 +1,25 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sbol="http://sbols.org/v2#" xmlns:ns0="http://purl.org/dc/terms/">
+  <sbol:ComponentDefinition rdf:about="http://me.name/test#/ComponentDefinition/cmp/1">
+    <sbol:persistentIdentity rdf:resource="http://me.name/test#/ComponentDefinition/cmp"/>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:version>1</sbol:version>
+    <sbol:sequence rdf:resource="http://me.name/test#/Sequence/seq/1"/>
+    <sbol:displayId>cmp</sbol:displayId>
+  </sbol:ComponentDefinition>
+  <sbol:Sequence rdf:about="http://me.name/test#/Sequence/seq/1">
+    <sbol:version>1</sbol:version>
+    <sbol:displayId>seq</sbol:displayId>
+    <sbol:persistentIdentity rdf:resource="http://me.name/test#/Sequence/seq"/>
+    <sbol:elements>agct</sbol:elements>
+    <sbol:encoding rdf:resource="http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html"/>
+  </sbol:Sequence>
+  <sbol:ComponentDefinition rdf:about="http://me.name/test#/ComponentDefinition/prom/1">
+    <sbol:displayId>p1</sbol:displayId>
+    <ns0:description>The first promoter</ns0:description>
+    <sbol:persistentIdentity rdf:resource="http://me.name/test#/ComponentDefinition/prom"/>
+    <ns0:title>Promoter 1</ns0:title>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:version>1</sbol:version>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000167"/>
+  </sbol:ComponentDefinition>
+</rdf:RDF>
