@@ -1,0 +1,9 @@
+requirements.txt
+setup.py
+rstvalidator/__init__.py
+rstvalidator/__main__.py
+rstvalidator.egg-info/PKG-INFO
+rstvalidator.egg-info/SOURCES.txt
+rstvalidator.egg-info/dependency_links.txt
+rstvalidator.egg-info/requires.txt
+rstvalidator.egg-info/top_level.txt
