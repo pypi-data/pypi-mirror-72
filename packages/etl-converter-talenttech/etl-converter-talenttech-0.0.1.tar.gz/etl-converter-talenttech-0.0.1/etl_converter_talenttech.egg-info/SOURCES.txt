@@ -1,0 +1,10 @@
+README.md
+setup.py
+converter/__init__.py
+converter/fields_converter.py
+etl_converter_talenttech.egg-info/PKG-INFO
+etl_converter_talenttech.egg-info/SOURCES.txt
+etl_converter_talenttech.egg-info/dependency_links.txt
+etl_converter_talenttech.egg-info/requires.txt
+etl_converter_talenttech.egg-info/top_level.txt
+test/test_etl-table-converter.py
