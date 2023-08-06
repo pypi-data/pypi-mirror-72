@@ -1,0 +1,17 @@
+firebird/base/buffer.py,sha256=ukxDdW_4QXT8jV4eDbW1MhZvgVZo4r06OSDft8gSUDA,12526
+firebird/base/collections.py,sha256=dR3LJEIM9jfh984XrNMQXyRTkTBn1T4hf8IDnWwUSXs,21383
+firebird/base/config.py,sha256=0f2jr2YcOVE9Jml2DFOJZamkfu0efCEz9rstxoA_RYo,77129
+firebird/base/config_pb2.py,sha256=PffmIY262wlO5PsRLrqWVo-OHsr_eCwmZuQcg6bUx5M,13199
+firebird/base/hooks.py,sha256=jtQyQklIcmh6J2XyyHcl3eba49RC2uLJfIewQbNeD8w,9749
+firebird/base/logging.py,sha256=2Wff6vnV_saiIJbM6HQpGV8jH5VKmPjWlvP2XN5zU88,12170
+firebird/base/protobuf.py,sha256=8juA7LIj4nxH-d9-4Q7_O0itlKIGL7B0jfdC0vhewGA,6722
+firebird/base/strconv.py,sha256=HcWJB5QSbxlhIDhZuQJt522eZpHtSBe1YicGX27wvXY,9205
+firebird/base/trace.py,sha256=RsLuNuMbAYShmfNGX_tUtOUbjHFZ7ygdMwyK7NSVNrg,13044
+firebird/base/types.py,sha256=KuVwZmSH9pXiUHIAovAUBBoQodZQRVljdKzVHfWxx0c,14768
+firebird_base-0.6.0.dist-info/LICENSE,sha256=H6kja5fvMc4EWjc7O7Y-KJBD3QmZE7QD0C4Qh9ncAJA,1090
+firebird_base-0.6.0.dist-info/METADATA,sha256=YlnqgXiHyDuTd9saqNNRqiQ2HwLx58sSXxxXmL6__00,2288
+firebird_base-0.6.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+firebird_base-0.6.0.dist-info/entry_points.txt,sha256=mp_ShMddU5qS21i6wSUo1j_XjT1jKBpwNVMtw5kd_cA,85
+firebird_base-0.6.0.dist-info/top_level.txt,sha256=N4Gw4cmu0RmoDDexl12jzkFggSpBGYYdf0HwZenEza4,9
+firebird_base-0.6.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+firebird_base-0.6.0.dist-info/RECORD,,
