@@ -1,0 +1,12 @@
+README.md
+setup.py
+float_on_py/__init__.py
+float_on_py.egg-info/PKG-INFO
+float_on_py.egg-info/SOURCES.txt
+float_on_py.egg-info/dependency_links.txt
+float_on_py.egg-info/requires.txt
+float_on_py.egg-info/top_level.txt
+float_on_py/config/__init__.py
+float_on_py/people/__init__.py
+float_on_py/projects/__init__.py
+float_on_py/tasks/__init__.py
