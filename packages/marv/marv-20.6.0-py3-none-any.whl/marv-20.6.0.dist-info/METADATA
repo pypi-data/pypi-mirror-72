@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: marv
+Version: 20.6.0
+Summary: MARV framework
+Home-page: https://ternaris.com/marv-robotics
+Author: Ternaris
+Author-email: team@ternaris.com
+Maintainer: Ternaris
+Maintainer-email: team@ternaris.com
+License: AGPL-3.0-only
+Project-URL: Documentation, https://ternaris.com/marv-robotics/docs/
+Project-URL: Code, https://gitlan.com/ternaris/marv-robotics
+Project-URL: Issue tracker, https://gitlab.com/ternaris/marv-robotics/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.7.1
+Requires-Dist: marv-api (==20.06.0)
+Requires-Dist: marv-cli (==20.06.0)
+Requires-Dist: PyJWT
+Requires-Dist: aiohttp
+Requires-Dist: aiosqlite
+Requires-Dist: bcrypt
+Requires-Dist: configparser
+Requires-Dist: gunicorn
+Requires-Dist: jinja2
+Requires-Dist: pendulum (!=2.1.0)
+Requires-Dist: pycapnp-for-marv (==0.6.3)
+Requires-Dist: pypika
+Requires-Dist: setproctitle
+Requires-Dist: tortoise-orm (==0.15.*)
+Requires-Dist: uvloop
+
+=============
+MARV Robotics
+=============
+
+This package is part of the MARV Robotics Community Edition.
+
+MARV Robotics is a powerful and extensible data management platform,
+featuring a rich dynamic web interface, driven by your algorithms,
+configurable to the core, and integrating well with your tools to
+supercharge your workflows.
+
+For more information please see:
+
+- MARV Robotics `website <https://ternaris.com/marv-robotics/>`_
+- MARV Robotics `documentation <https://ternaris.com/marv-robotics/docs/>`_
+- MARV Robotics `GitLab project <https://gitlab.com/ternaris/marv-robotics/>`_
+
+

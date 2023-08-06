@@ -1,0 +1,6 @@
+[marv_cli]
+marv = marv.cli
+
+[marv_stream]
+messages = marv_ros_stream:messages
+
