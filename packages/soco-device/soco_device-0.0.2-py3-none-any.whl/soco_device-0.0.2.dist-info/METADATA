@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: soco-device
+Version: 0.0.2
+Summary: Log memory usage and auto choose device for machine learning model inference
+Home-page: https://www.soco.ai
+Author: xiaopeng lu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Free for non-commercial use
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: gputil (>=1.4.0)
+
+# soco-device
+A package for logging, saving, and automatically choosing device during model inference stage.
+
+# Usage
+1. install package
+
+    pip install soco-device
+
+
+2. example usage
+```
+from soco_device.device_check import DeviceCheck
+
+dc = DeviceCheck()
+device_name = dc.get_device_by_model(model_name_or_path)
+device = torch.device(device_name)
+
+dc.log_start()
+# inference model for one time here
+dc.log_end()
+dc.save(model_name_or_path)
+```
+
+
+
