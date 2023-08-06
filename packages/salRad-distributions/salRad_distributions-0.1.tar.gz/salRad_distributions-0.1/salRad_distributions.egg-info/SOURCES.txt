@@ -1,0 +1,10 @@
+setup.py
+salRad_distributions/Binomialdistribution.py
+salRad_distributions/Gaussiandistribution.py
+salRad_distributions/Generaldistribution.py
+salRad_distributions/__init__.py
+salRad_distributions.egg-info/PKG-INFO
+salRad_distributions.egg-info/SOURCES.txt
+salRad_distributions.egg-info/dependency_links.txt
+salRad_distributions.egg-info/not-zip-safe
+salRad_distributions.egg-info/top_level.txt
