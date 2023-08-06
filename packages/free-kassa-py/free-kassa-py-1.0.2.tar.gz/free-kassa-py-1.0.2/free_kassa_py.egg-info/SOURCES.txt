@@ -1,0 +1,9 @@
+README.md
+setup.py
+free_kassa_py.egg-info/PKG-INFO
+free_kassa_py.egg-info/SOURCES.txt
+free_kassa_py.egg-info/dependency_links.txt
+free_kassa_py.egg-info/requires.txt
+free_kassa_py.egg-info/top_level.txt
+freekassa/__init__.py
+freekassa/api.py
