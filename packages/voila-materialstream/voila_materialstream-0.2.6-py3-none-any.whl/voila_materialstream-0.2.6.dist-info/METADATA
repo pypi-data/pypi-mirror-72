@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: voila-materialstream
+Version: 0.2.6
+Summary: Material design template for voila, updated for Ideonate
+Home-page: https://github.com/ideonate/voila-materialstream
+Author: Martin Renou
+Author-email: martin.renou@gmail.com
+License: UNKNOWN
+Keywords: ipython,jupyter,widgets,voila
+Platform: UNKNOWN
+Provides-Extra: voila
+Requires-Dist: voila (>=0.1.14) ; extra == 'voila'
+
+UNKNOWN
+
+
