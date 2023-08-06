@@ -1,0 +1,15 @@
+extract_todo/__init__.py,sha256=ZrNBdVH8ALkooF8gT1uiuYjMFAhXw5dspN3o-3r1wPk,150
+extract_todo/__main__.py,sha256=I3czp-TExxCTdB3OJDyNeI9Ukhvc_idlhV0X5_ReyAw,1978
+extract_todo/__version__.py,sha256=6X_VQb2Rlu0FlTFjeQTg1Q0A-XclNhxjz5_VgyeCKR4,791
+extract_todo/extractor.py,sha256=HX-mXG_9C5FVvPia0oyyfvRgZkRcI5CjbN6xkB7WDws,2137
+extract_todo/parser/__init__.py,sha256=5q-HRalUuCxyH0B4iFVZLLxc4oLvVrbYOGNvfGDbgzo,100
+extract_todo/parser/default_parser.py,sha256=bhx_p-WkB08QHdJ4WIdz-dZzKGllkEqH11Zku1ZyB2c,1713
+extract_todo/parser/latex_parser.py,sha256=amIpAkDBHRSK5T_-p4baflEj1sGsg0fxZlG99IaLCUI,1082
+extract_todo/parser/parser_factory.py,sha256=00okVohhZ24Mjj5f2hog9ZOtgQ__fTcXMPgkY30iwrg,2024
+extract_todo/parser/python_parser.py,sha256=tn04tWMT8REkdGa3Bv8aXA1bHZxv54xK9obtvvUdE6A,1085
+extract_todo-0.2.3.dist-info/LICENSE.txt,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+extract_todo-0.2.3.dist-info/METADATA,sha256=VaLpxaos3_rjG2tyUvBS70YGBpukVJNuguoTRdkhdoM,2314
+extract_todo-0.2.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+extract_todo-0.2.3.dist-info/entry_points.txt,sha256=6ij_TYLdzbOxRahv55pR5IwReJkmF3tsggx3OeIW4JI,61
+extract_todo-0.2.3.dist-info/top_level.txt,sha256=H27dEoYwqYbBxCBy5oVE0zjnte4Jyxt09IYtgZG6lpU,13
+extract_todo-0.2.3.dist-info/RECORD,,
