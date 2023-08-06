@@ -1,0 +1,392 @@
+"""
+[![NPM version](https://badge.fury.io/js/cdk-gitlab-runner.svg)](https://badge.fury.io/js/cdk-gitlab-runner)
+[![PyPI version](https://badge.fury.io/py/cdk-gitlab-runner.svg)](https://badge.fury.io/py/cdk-gitlab-runner)
+![Release](https://github.com/guan840912/cdk-gitlab-runner/workflows/Release/badge.svg)
+
+![Downloads](https://img.shields.io/badge/-DOWNLOADS:-brightgreen?color=gray)
+![npm](https://img.shields.io/npm/dt/cdk-gitlab-runner?label=npm&color=orange)
+![PyPI](https://img.shields.io/pypi/dm/cdk-gitlab-runner?label=pypi&color=blue)
+
+![](https://img.shields.io/badge/iam_role_self-enable-green=?style=plastic&logo=appveyor)
+![](https://img.shields.io/badge/vpc_self-enable-green=?style=plastic&logo=appveyor)
+![](https://img.shields.io/badge/1.47.1-stable-green=?style=plastic&logo=appveyor)
+
+# Welcome to `cdk-gitlab-runner`
+
+This repository template helps you create gitlab runner on your aws account via AWS CDK one line.
+
+## Note
+
+### Default will help you generate below services:
+
+* VPC
+
+  * Public Subnet (2)
+* EC2 (1 T3.large)
+
+## Before start you need gitlab runner token in your  `gitlab project` or   `gitlab group`
+
+### In Group
+
+Group > Settings > CI/CD
+![group](image/group_runner_page.png)
+
+### In Group
+
+Project > Settings > CI/CD > Runners
+![project](image/project_runner_page.png)
+
+## Usage
+
+Replace your gitlab runner token in `$GITLABTOKEN`
+
+```python
+# Example automatically generated without compilation. See https://github.com/aws/jsii/issues/826
+from cdk_gitlab_runner import GitlabContainerRunner
+from aws_cdk.aws_ec2 import InstanceType, InstanceClass, InstanceSize
+from aws_cdk.aws_iam import ManagedPolicy
+
+# If want change instance type to t3.large .
+GitlabContainerRunner(self, "testing", gitlabtoken="$GITLABTOKEN", ec2type=InstanceType.of(InstanceClass.T2, InstanceSize.LARGE))
+# OR
+# Just create a gitlab runner , by default instance type is t3.small .
+from cdk_gitlab_runner import GitlabContainerRunner
+from aws_cdk.aws_ec2 import InstanceType, InstanceClass, InstanceSize
+from aws_cdk.aws_iam import ManagedPolicy
+
+GitlabContainerRunner(self, "testing", gitlabtoken="$GITLABTOKEN")
+
+# If want change tags you want.
+from cdk_gitlab_runner import GitlabContainerRunner
+from aws_cdk.aws_ec2 import InstanceType, InstanceClass, InstanceSize
+from aws_cdk.aws_iam import ManagedPolicy
+
+GitlabContainerRunner(self, "testing-have-type-tag", gitlabtoken="GITLABTOKEN", tag1="aa", tag2="bb", tag3="cc")
+
+# If you want add runner other IAM Policy like s3-readonly-access.
+from cdk_gitlab_runner import GitlabContainerRunner
+from aws_cdk.aws_ec2 import InstanceType, InstanceClass, InstanceSize
+from aws_cdk.aws_iam import ManagedPolicy
+
+runner = GitlabContainerRunner(self, "testing-have-type-tag", gitlabtoken="GITLABTOKEN", tag1="aa", tag2="bb", tag3="cc")
+runner.runner_role.add_managed_policy(ManagedPolicy.from_aws_managed_policy_name("AmazonS3ReadOnlyAccess"))
+
+# If you want add runner other SG Ingress .
+from cdk_gitlab_runner import GitlabContainerRunner
+from aws_cdk.aws_ec2 import InstanceType, InstanceClass, InstanceSize, Port, Peer
+from aws_cdk.aws_iam import ManagedPolicy
+
+runner = GitlabContainerRunner(self, "testing-have-type-tag", gitlabtoken="GITLABTOKEN", tag1="aa", tag2="bb", tag3="cc")
+runner.runner_role.add_managed_policy(ManagedPolicy.from_aws_managed_policy_name("AmazonS3ReadOnlyAccess"))
+# you can add ingress in your runner SG .
+runner.runne_ec2.connections.allow_from(Peer.ipv4("0.0.0.0/0"), Port.tcp(80))
+
+# 2020/06/27 , you can use your self exist VPC or new VPC , but please check your `vpc public Subnet` Auto-assign public IPv4 address == Yes ,
+# Or `vpc private Subnet` route table associated `nat gateway` .
+from ...lib.index import GitlabContainerRunner
+from aws_cdk.core import App, Stack, CfnOutput
+from aws_cdk.aws_ec2 import InstanceType, InstanceClass, InstanceSize, Port, Peer, Vpc, SubnetType
+from aws_cdk.aws_iam import ManagedPolicy
+
+newvpc = Vpc(stack, "VPC",
+    cidr="10.1.0.0/16",
+    max_azs=2,
+    subnet_configuration=[SubnetConfiguration(
+        cidr_mask=26,
+        name="RunnerVPC",
+        subnet_type=SubnetType.PUBLIC
+    )],
+    nat_gateways=0
+)
+
+runner = GitlabContainerRunner(self, "testing", gitlabtoken="GITLABTOKEN", ec2type=InstanceType.of(InstanceClass.T3, InstanceSize.SMALL), selfvpc=newvpc)
+
+# 2020/06/27 , you can use your self exist role assign to runner
+# exmaple .
+from ...lib.index import GitlabContainerRunner
+from aws_cdk.core import App, Stack, CfnOutput
+from aws_cdk.aws_ec2 import InstanceType, InstanceClass, InstanceSize, Port, Peer
+from aws_cdk.aws_iam import ManagedPolicy, Role, ServicePrincipal
+
+role = Role(self, "runner-role",
+    assumed_by=ServicePrincipal("ec2.amazonaws.com"),
+    description="For Gitlab EC2 Runner Test Role",
+    role_name="TestRole"
+)
+
+runner = GitlabContainerRunner(stack, "testing", gitlabtoken="GITLAB_TOKEN", ec2iamrole=role)
+runner.runner_role.add_managed_policy(ManagedPolicy.from_aws_managed_policy_name("AmazonS3ReadOnlyAccess"))
+```
+
+```python
+# Example python instance type change to t3.small .
+from aws_cdk import (
+  core,
+  aws_iam as iam,
+)
+from cdk_gitlab_runner import GitlabContainerRunner
+from aws_cdk.aws_ec2 import InstanceType, InstanceClass, InstanceSize, Peer, Port
+runner = GitlabContainerRunner(self, 'gitlab-runner', gitlabtoken='$GITLABTOKEN',
+                              ec2type=InstanceType.of(
+                                  instance_class=InstanceClass.BURSTABLE3, instance_size=InstanceSize.SMALL), tag1='aa',tag2='bb',tag3='cc')
+
+runner.runner_role.add_managed_policy(iam.ManagedPolicy.from_aws_managed_policy_name("AmazonS3ReadOnlyAccess"))
+runner.runne_ec2.connections.allow_from(Peer.ipv4('0.0.0.0/0'), Port.tcp(80))
+
+
+# Example python use self VPC .
+from aws_cdk import (
+  core,
+  aws_iam as iam,
+)
+from cdk_gitlab_runner import GitlabContainerRunner
+from aws_cdk.aws_ec2 import InstanceType, InstanceClass, InstanceSize ,Vpc ,SubnetType, SubnetConfiguration
+newvpc = Vpc(
+            self, 'new-vpc',
+            cidr='10.1.0.0/16',
+            max_azs=2,
+            subnet_configuration=[SubnetConfiguration(
+            cidr_mask=26,
+            name="PublicRunnerVpc",
+            subnet_type=SubnetType.PUBLIC)],
+            nat_gateways=0
+        )
+runner = GitlabContainerRunner(self, 'gitlab-runner', gitlabtoken='$GITLABTOKEN',
+                              ec2type=InstanceType.of(
+                                  instance_class=InstanceClass.BURSTABLE3, instance_size=InstanceSize.SMALL),selfvpc=newvpc)
+
+# 2020/06/27 , you can use your self exist role assign to runner
+# exmaple .
+from aws_cdk import (
+  core,
+  aws_iam as iam,
+)
+from cdk_gitlab_runner import GitlabContainerRunner
+from aws_cdk.aws_ec2 import InstanceType, InstanceClass, InstanceSize ,Vpc ,SubnetType, SubnetConfiguration
+role = iam.Role(self, "Runner-Role", assumed_by=iam.ServicePrincipal('ec2.amazonaws.com')
+runner = GitlabContainerRunner(self, 'gitlab-runner', gitlabtoken='$GITLABTOKEN',
+                              ec2type=InstanceType.of(
+                                  instance_class=InstanceClass.BURSTABLE3, instance_size=InstanceSize.SMALL),ec2iamrole=role)
+runner.runner_role.add_managed_policy(iam.ManagedPolicy.from_aws_managed_policy_name("AmazonS3ReadOnlyAccess"))
+
+
+
+```
+
+### see more instance class and size
+
+[InstanceClass](https://docs.aws.amazon.com/cdk/api/latest/docs/@aws-cdk_aws-ec2.InstanceClass.html)
+
+[InstanceSize](https://docs.aws.amazon.com/cdk/api/latest/docs/@aws-cdk_aws-ec2.InstanceSize.html)
+
+## Wait about 6 mins , If success you will see your runner in that page .
+
+![runner](image/group_runner2.png)
+
+#### you can use tag `gitlab` , `runner` , `awscdk`  ,
+
+## Example     *`gitlab-ci.yaml`*
+
+[gitlab docs see more ...](https://docs.gitlab.com/ee/ci/yaml/README.html)
+
+```yaml
+dockerjob:
+  image: docker:18.09-dind
+  variables:
+  tags:
+    - runner
+    - awscdk
+    - gitlab
+  variables:
+    DOCKER_TLS_CERTDIR: ""
+  before_script:
+    - docker info
+  script:
+    - docker info;
+    - echo 'test 123';
+    - echo 'hello world 1228'
+```
+
+### If your want to debug you can go to aws console
+
+# `In your runner region !!!`
+
+## AWS Systems Manager  >  Session Manager  >  Start a session
+
+![system manager](image/session.png)
+
+#### click your `runner` and click `start session`
+
+#### in the brower console in put `bash`
+
+```bash
+# become to root
+sudo -i
+
+# list runner container .
+root# docker ps -a
+
+# modify gitlab-runner/config.toml
+
+root# cd /home/ec2-user/.gitlab-runner/ && ls
+config.toml
+
+```
+"""
+import abc
+import builtins
+import datetime
+import enum
+import typing
+
+import jsii
+import jsii.compat
+import publication
+
+from ._jsii import *
+
+import aws_cdk.aws_ec2
+import aws_cdk.aws_iam
+import aws_cdk.core
+
+
+class GitlabContainerRunner(aws_cdk.core.Construct, metaclass=jsii.JSIIMeta, jsii_type="cdk-gitlab-runner.GitlabContainerRunner"):
+    """
+    stability
+    :stability: experimental
+    """
+    def __init__(self, scope: aws_cdk.core.Construct, id: str, *, gitlabtoken: str, ec2iamrole: typing.Optional[aws_cdk.aws_iam.IRole]=None, ec2type: typing.Optional[aws_cdk.aws_ec2.InstanceType]=None, selfvpc: typing.Optional[aws_cdk.aws_ec2.IVpc]=None, tag1: typing.Optional[str]=None, tag2: typing.Optional[str]=None, tag3: typing.Optional[str]=None) -> None:
+        """
+        :param scope: -
+        :param id: -
+        :param gitlabtoken: 
+        :param ec2iamrole: 
+        :param ec2type: 
+        :param selfvpc: 
+        :param tag1: 
+        :param tag2: 
+        :param tag3: 
+
+        stability
+        :stability: experimental
+        """
+        props = GitlabContainerRunnerProps(gitlabtoken=gitlabtoken, ec2iamrole=ec2iamrole, ec2type=ec2type, selfvpc=selfvpc, tag1=tag1, tag2=tag2, tag3=tag3)
+
+        jsii.create(GitlabContainerRunner, self, [scope, id, props])
+
+    @builtins.property
+    @jsii.member(jsii_name="runnerEc2")
+    def runner_ec2(self) -> aws_cdk.aws_ec2.IInstance:
+        """
+        stability
+        :stability: experimental
+        """
+        return jsii.get(self, "runnerEc2")
+
+    @builtins.property
+    @jsii.member(jsii_name="runnerRole")
+    def runner_role(self) -> aws_cdk.aws_iam.IRole:
+        """
+        stability
+        :stability: experimental
+        """
+        return jsii.get(self, "runnerRole")
+
+
+@jsii.data_type(jsii_type="cdk-gitlab-runner.GitlabContainerRunnerProps", jsii_struct_bases=[], name_mapping={'gitlabtoken': 'gitlabtoken', 'ec2iamrole': 'ec2iamrole', 'ec2type': 'ec2type', 'selfvpc': 'selfvpc', 'tag1': 'tag1', 'tag2': 'tag2', 'tag3': 'tag3'})
+class GitlabContainerRunnerProps():
+    def __init__(self, *, gitlabtoken: str, ec2iamrole: typing.Optional[aws_cdk.aws_iam.IRole]=None, ec2type: typing.Optional[aws_cdk.aws_ec2.InstanceType]=None, selfvpc: typing.Optional[aws_cdk.aws_ec2.IVpc]=None, tag1: typing.Optional[str]=None, tag2: typing.Optional[str]=None, tag3: typing.Optional[str]=None) -> None:
+        """
+        :param gitlabtoken: 
+        :param ec2iamrole: 
+        :param ec2type: 
+        :param selfvpc: 
+        :param tag1: 
+        :param tag2: 
+        :param tag3: 
+
+        stability
+        :stability: experimental
+        """
+        self._values = {
+            'gitlabtoken': gitlabtoken,
+        }
+        if ec2iamrole is not None: self._values["ec2iamrole"] = ec2iamrole
+        if ec2type is not None: self._values["ec2type"] = ec2type
+        if selfvpc is not None: self._values["selfvpc"] = selfvpc
+        if tag1 is not None: self._values["tag1"] = tag1
+        if tag2 is not None: self._values["tag2"] = tag2
+        if tag3 is not None: self._values["tag3"] = tag3
+
+    @builtins.property
+    def gitlabtoken(self) -> str:
+        """
+        stability
+        :stability: experimental
+        """
+        return self._values.get('gitlabtoken')
+
+    @builtins.property
+    def ec2iamrole(self) -> typing.Optional[aws_cdk.aws_iam.IRole]:
+        """
+        stability
+        :stability: experimental
+        """
+        return self._values.get('ec2iamrole')
+
+    @builtins.property
+    def ec2type(self) -> typing.Optional[aws_cdk.aws_ec2.InstanceType]:
+        """
+        stability
+        :stability: experimental
+        """
+        return self._values.get('ec2type')
+
+    @builtins.property
+    def selfvpc(self) -> typing.Optional[aws_cdk.aws_ec2.IVpc]:
+        """
+        stability
+        :stability: experimental
+        """
+        return self._values.get('selfvpc')
+
+    @builtins.property
+    def tag1(self) -> typing.Optional[str]:
+        """
+        stability
+        :stability: experimental
+        """
+        return self._values.get('tag1')
+
+    @builtins.property
+    def tag2(self) -> typing.Optional[str]:
+        """
+        stability
+        :stability: experimental
+        """
+        return self._values.get('tag2')
+
+    @builtins.property
+    def tag3(self) -> typing.Optional[str]:
+        """
+        stability
+        :stability: experimental
+        """
+        return self._values.get('tag3')
+
+    def __eq__(self, rhs) -> bool:
+        return isinstance(rhs, self.__class__) and rhs._values == self._values
+
+    def __ne__(self, rhs) -> bool:
+        return not (rhs == self)
+
+    def __repr__(self) -> str:
+        return 'GitlabContainerRunnerProps(%s)' % ', '.join(k + '=' + repr(v) for k, v in self._values.items())
+
+
+__all__ = [
+    "GitlabContainerRunner",
+    "GitlabContainerRunnerProps",
+]
+
+publication.publish()
