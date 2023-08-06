@@ -1,0 +1,12 @@
+README.md
+setup.py
+airflow_spell/__init__.py
+airflow_spell.egg-info/PKG-INFO
+airflow_spell.egg-info/SOURCES.txt
+airflow_spell.egg-info/dependency_links.txt
+airflow_spell.egg-info/requires.txt
+airflow_spell.egg-info/top_level.txt
+airflow_spell/hooks/__init__.py
+airflow_spell/hooks/spell_client.py
+airflow_spell/operators/__init__.py
+airflow_spell/operators/spell_run.py
