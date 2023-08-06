@@ -1,0 +1,15 @@
+ipysigma/__init__.py,sha256=PZLmvoba8YqXkUF-m51e3MrgYgwGBAyDXipCa-HJMZg,250
+ipysigma/_version.py,sha256=pYUPizSpq1La1ZSrUwltm9oScL256NSV3oAdVGSVTGk,281
+ipysigma/sigma.py,sha256=qmpVv_3HnpvWpEHPvnd4QLgw8bkZ1NJsej7Cb6vx2IE,1256
+ipysigma/static/extension.js,sha256=Jw_kWkY39xCrRQrEmYvHy-pbC-d5PSVia5otYpCqSgM,3330
+ipysigma/static/index.js,sha256=luJBxJvgob_Jq5G4XSQtR617opiu3KGP3Y1a9FohVj0,937066
+ipysigma/static/index.js.map,sha256=ehFIfrBLCuVe5apauPSzmNzv8l8mtqjNgMQ0FQ2ApIs,1147379
+ipysigma-0.6.1.data/data/etc/jupyter/nbconfig/notebook.d/ipysigma.json,sha256=he4d7vYfdhGPKzYm8XuDsuy61tKC56CzMvC1xulDUS4,62
+ipysigma-0.6.1.data/data/share/jupyter/nbextensions/ipysigma/extension.js,sha256=Jw_kWkY39xCrRQrEmYvHy-pbC-d5PSVia5otYpCqSgM,3330
+ipysigma-0.6.1.data/data/share/jupyter/nbextensions/ipysigma/index.js,sha256=luJBxJvgob_Jq5G4XSQtR617opiu3KGP3Y1a9FohVj0,937066
+ipysigma-0.6.1.data/data/share/jupyter/nbextensions/ipysigma/index.js.map,sha256=ehFIfrBLCuVe5apauPSzmNzv8l8mtqjNgMQ0FQ2ApIs,1147379
+ipysigma-0.6.1.dist-info/LICENSE.txt,sha256=Ddg_PcGnl0qd2167o2dheCjE_rCZJOoBxjJnJhhOpX4,1099
+ipysigma-0.6.1.dist-info/METADATA,sha256=5JPUGeT5h7zLLvpFOeAq71CbuyxiMxzGmh4nm2bNZKU,1029
+ipysigma-0.6.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+ipysigma-0.6.1.dist-info/top_level.txt,sha256=QThgbWSsdJD2IRJByqW2DtH0iBPaR8AZ73UHCCSOp0s,9
+ipysigma-0.6.1.dist-info/RECORD,,
