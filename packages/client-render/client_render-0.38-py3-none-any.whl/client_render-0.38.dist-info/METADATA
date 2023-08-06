@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: client-render
+Version: 0.38
+Summary: UNKNOWN
+Home-page: https://github.com/telepenin/client-render/
+Author: Nikolay Telepenin
+Author-email: telepenin.nikolay@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Topic :: Multimedia :: Graphics :: 3D Rendering
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
+Requires-Dist: boto3 (==1.14.6)
+Requires-Dist: celery (==4.4.3)
+Requires-Dist: mss (==5.1.0)
+Requires-Dist: pywin32 (==228)
+
+# How to configure new Image
+
+* Choose AMI windows instance (for example, ...) with GUI
+* Boot from image by hand (for example on the t2.medium)
+* Execute script (link), why it's needed:
+    * disable antivirus (no required)
+    * disable firewall (no required)
+    * enable download files from internet (no required)
+    * set autoload with specific user (needs for the screenshots)
+        * add info to the regedit (DEFAULT_USER, DEFAULT_PASS)
+        * Disable Ctrl+Alt+Del at Configuration\Windows Settings\Security Settings\Local Policies\Security
+        * Disable Ctrl+Alt+Del from the netplwiz / Advanced
+    * add bat file in the autoload folder
+    * add ability to use user-data for the instance 
+    * additional installations:
+        * install google chrome (no required)
+        * install notepad++ (no required)
+        * install python > 3.7
+        * create virtualenv in the c:\venv\3dsmax\
+* Install necessary environment and enter license:
+    * 3DS MAX
+    * Corona renderer
+* Configure video driver for 3DS MAX 
+* Shutdown
+* Save the Image
+
