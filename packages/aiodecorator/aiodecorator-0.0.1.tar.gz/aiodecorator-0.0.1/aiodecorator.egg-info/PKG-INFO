@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: aiodecorator
+Version: 0.0.1
+Summary: Python decorators for asyncio
+Home-page: https://github.com/kaelzhang/python-aiodecorator
+Author: kaelzhang
+Author-email: 
+License: MIT
+Description: [![](https://travis-ci.org/kaelzhang/python-aiodecorator.svg?branch=master)](https://travis-ci.org/kaelzhang/python-aiodecorator)
+        [![](https://codecov.io/gh/kaelzhang/python-aiodecorator/branch/master/graph/badge.svg)](https://codecov.io/gh/kaelzhang/python-aiodecorator)
+        [![](https://img.shields.io/pypi/v/aiodecorator.svg)](https://pypi.org/project/aiodecorator/)
+        [![](https://img.shields.io/pypi/l/aiodecorator.svg)](https://github.com/kaelzhang/python-aiodecorator)
+        
+        # aiodecorator
+        
+        Python decorators for asyncio
+        
+        ## Install
+        
+        ```sh
+        $ pip install aiodecorator
+        ```
+        
+        ## Usage
+        
+        ```py
+        import aiodecorator
+        ```
+        
+        ## License
+        
+        [MIT](LICENSE)
+        
+Keywords: aiodecorator
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
