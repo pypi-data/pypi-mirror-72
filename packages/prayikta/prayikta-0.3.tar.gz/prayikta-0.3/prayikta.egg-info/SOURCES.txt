@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+prayikta/Binomialdistribution.py
+prayikta/Gaussiandistribution.py
+prayikta/Generaldistribution.py
+prayikta/__init__.py
+prayikta.egg-info/PKG-INFO
+prayikta.egg-info/SOURCES.txt
+prayikta.egg-info/dependency_links.txt
+prayikta.egg-info/not-zip-safe
+prayikta.egg-info/top_level.txt
