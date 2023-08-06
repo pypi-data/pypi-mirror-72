@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+dir_exec.egg-info/PKG-INFO
+dir_exec.egg-info/SOURCES.txt
+dir_exec.egg-info/dependency_links.txt
+dir_exec.egg-info/top_level.txt
+scripts/dir-exec
