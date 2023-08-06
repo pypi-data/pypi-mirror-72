@@ -1,0 +1,13 @@
+README.md
+setup.py
+pdftools/__init__.py
+pdftools/_cli.py
+pdftools/parseutil.py
+pdftools/pdftools.py
+pdftools.egg-info/PKG-INFO
+pdftools.egg-info/SOURCES.txt
+pdftools.egg-info/dependency_links.txt
+pdftools.egg-info/entry_points.txt
+pdftools.egg-info/requires.txt
+pdftools.egg-info/top_level.txt
+pdftools.egg-info/zip-safe

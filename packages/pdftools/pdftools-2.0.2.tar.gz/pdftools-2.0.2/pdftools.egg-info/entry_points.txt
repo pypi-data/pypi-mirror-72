@@ -1,0 +1,3 @@
+[console_scripts]
+pdftools = pdftools._cli:main
+
