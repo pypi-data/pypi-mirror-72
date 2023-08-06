@@ -1,0 +1,12 @@
+<form class="form-horizontal">
+    <div class="control-group">
+        <div class="controls">
+            {% for axis in ["X", "Y"] %}
+            <label class="checkbox">
+                <input type="checkbox" data-bind="checked: settings.plugins.swapxy.reverse.{{ axis }}">
+                {{ _("Reverse " + axis + " jog movements") }}
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+</form>
