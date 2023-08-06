@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/h_pyramid_sentry/__init__.py
+src/h_pyramid_sentry/event.py
+src/h_pyramid_sentry/event_filter.py
+src/h_pyramid_sentry/exceptions.py
+src/h_pyramid_sentry/subscribers.py
+src/h_pyramid_sentry.egg-info/PKG-INFO
+src/h_pyramid_sentry.egg-info/SOURCES.txt
+src/h_pyramid_sentry.egg-info/dependency_links.txt
+src/h_pyramid_sentry.egg-info/requires.txt
+src/h_pyramid_sentry.egg-info/top_level.txt
+src/h_pyramid_sentry/filters/__init__.py
+src/h_pyramid_sentry/filters/pyramid.py
