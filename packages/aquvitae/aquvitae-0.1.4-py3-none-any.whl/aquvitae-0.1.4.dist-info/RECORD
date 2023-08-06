@@ -1,0 +1,14 @@
+aquvitae/__init__.py,sha256=9uMNQ2oginu9dYL-73DmSnCnh6GzyQbLNN4wq-hIOKA,144
+aquvitae/dist.py,sha256=i1br0mHFzPEk05Mm0ZQLonkwPDWvMhW4HTPPwPbtbuQ,3920
+aquvitae/utils.py,sha256=ayoBBtNUYvmr4EXg8hQj1-Ed0MZwtfn6kyKOQZ4ilEM,297
+aquvitae/algo/__init__.py,sha256=lIQb09sXKIV-m4BOuNfvO3qpMhFRo8QGgmgDKx4FkFg,87
+aquvitae/algo/base.py,sha256=8lOUo2Tp9Jtj0BLHlkMwy7kgCARA3lR6J-ewKg2V6xo,922
+aquvitae/algo/base_tensorflow.py,sha256=oAjTCX2J7IO5yETbOLVYCA47IebiqduVnJ6foPbF7dg,1360
+aquvitae/algo/base_torch.py,sha256=9WYzqd-Tj04-YDEe7oYE5N4NiXliwNwdE8FGIvhlaeM,1517
+aquvitae/algo/st_tensorflow.py,sha256=uGSvjEOaKTnK3RqF4qAArmWorOsIuXOyHJx-eDnZEt4,1752
+aquvitae/algo/st_torch.py,sha256=_SKuZwchH8zf3zQMOHRICezjJwM_LTKMSXXx6Z2D9UE,1601
+aquvitae-0.1.4.dist-info/LICENSE,sha256=uoqT1W8eBn3tU5elQV7TtEuUvI8WSDHTnAaB7a09m7A,1065
+aquvitae-0.1.4.dist-info/METADATA,sha256=27uU2Ltbs03iUFOPHquFpqGrG9k5PLY0_F6xlCZh8QU,766
+aquvitae-0.1.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aquvitae-0.1.4.dist-info/top_level.txt,sha256=xtIsj7PiphVDA00z1MZMDIA0VGs6MlM_OM-B45Ump0s,9
+aquvitae-0.1.4.dist-info/RECORD,,
