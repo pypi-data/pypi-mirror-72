@@ -1,0 +1,9 @@
+README.md
+setup.py
+urlcounter/__init__.py
+urlcounter/urlcounter.py
+urlcounter.egg-info/PKG-INFO
+urlcounter.egg-info/SOURCES.txt
+urlcounter.egg-info/dependency_links.txt
+urlcounter.egg-info/requires.txt
+urlcounter.egg-info/top_level.txt
