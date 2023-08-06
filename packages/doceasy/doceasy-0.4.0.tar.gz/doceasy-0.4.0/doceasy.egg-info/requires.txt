@@ -1,0 +1,10 @@
+docopt
+schema
+
+[dev]
+flake8
+mypy
+pylint
+
+[test]
+pytest
