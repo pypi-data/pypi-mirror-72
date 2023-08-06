@@ -1,0 +1,3 @@
+[console_scripts]
+timewarrior_percentage_install=timewarrior_extensions.install:install_percentage
+
