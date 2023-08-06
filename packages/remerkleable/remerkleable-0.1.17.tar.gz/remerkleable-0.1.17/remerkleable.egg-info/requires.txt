@@ -1,0 +1,13 @@
+
+[docs]
+sphinx
+sphinx-autodoc-typehints
+pallets_sphinx_themes
+sphinx_issues
+
+[linting]
+flake8
+mypy
+
+[testing]
+pytest
