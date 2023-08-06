@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: mh-universal-functions
+Version: 2020.6.28.2
+Summary: General functions library
+Home-page: https://pypi.org/project/mh-universal-functions
+Author: MH
+Author-email: ibhmduu1721nhg11.11@o2mail.de
+License: MIT
+Description: General functions library to be used with pir.py and rha.py
+Platform: UNKNOWN
+Requires-Python: >=3.7
