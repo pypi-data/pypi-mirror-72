@@ -1,0 +1,5 @@
+mara-db>=4.2.0
+mara-pipelines>=3.0.0
+gspread>=3.1.0
+oauth2client>=1.5.0
+google_auth_oauthlib
