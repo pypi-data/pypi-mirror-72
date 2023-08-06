@@ -1,0 +1,9 @@
+README.md
+setup.py
+filoc/__init__.py
+filoc/filoc.py
+filoc.egg-info/PKG-INFO
+filoc.egg-info/SOURCES.txt
+filoc.egg-info/dependency_links.txt
+filoc.egg-info/requires.txt
+filoc.egg-info/top_level.txt
