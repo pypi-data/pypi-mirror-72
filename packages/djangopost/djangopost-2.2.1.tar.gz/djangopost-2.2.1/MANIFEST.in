@@ -1,0 +1,17 @@
+include LICENSE
+include README.md
+include requirements.txt
+recursive-include djangopost/contexts *
+recursive-include djangopost/extra *
+recursive-include djangopost/forms *
+recursive-include djangopost/managers *
+recursive-include djangopost/migrations *
+recursive-include djangopost/modeladmins *
+recursive-include djangopost/models *
+recursive-include djangopost/querysets *
+recursive-include djangopost/rest_api *
+recursive-include djangopost/rest_api/permissions *
+recursive-include djangopost/rest_api/serializers *
+recursive-include djangopost/rest_api/viewsets *
+recursive-include djangopost/templates/djangoadmin/djangopost *
+recursive-include djangopost/views *

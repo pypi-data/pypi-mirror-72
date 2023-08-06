@@ -1,0 +1,14 @@
+{% extends 'djangoadmin/base/body/index_admin.html' %}
+
+{% block body %}
+{% include "djangoadmin/widgets/alerts.html" %}
+<form method="POST" action="" class="">{% csrf_token %}
+{% include "djangoadmin/widgets/TextInput_FormField.html" with field=category_form.title cls="mb-1" %}
+{% include "djangoadmin/widgets/TextArea_FormField_Card.html" with field=category_form.description cls="mb-1" %}
+{% endblock body %}
+
+{% block sidebar_right %}
+{% include "djangoadmin/widgets/Select_FormField_Card.html" with field=category_form.status cls="mb-1" is_submit="Save" %}
+{% include "djangoadmin/widgets/NumberInput_FormField_Card.html" with field=category_form.serial cls="mb-1" %}
+</form>
+{% endblock sidebar_right %}
