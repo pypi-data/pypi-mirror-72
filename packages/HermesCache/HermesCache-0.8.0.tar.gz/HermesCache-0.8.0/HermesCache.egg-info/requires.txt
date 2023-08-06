@@ -1,0 +1,13 @@
+
+[memcached]
+python3-memcached
+
+[memcached-ext]
+pylibmc>=1.4
+
+[redis]
+redis
+
+[redis-ext]
+redis
+hiredis
