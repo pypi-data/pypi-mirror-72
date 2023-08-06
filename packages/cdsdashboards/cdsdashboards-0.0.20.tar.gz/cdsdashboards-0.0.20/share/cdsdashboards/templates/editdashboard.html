@@ -1,0 +1,99 @@
+{% extends "page.html" %}
+
+{% block main %}
+<div id="main" class="container">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+
+            <h2>
+                {% if dashboard %}
+                Editing dashboard {{ dashboard.urlname }}
+                {% else %}
+                Create new dashboard
+                {% endif %}
+            </h2>
+            
+
+            <form method="post" class="dashboard-edit-form">
+
+                <p><label for="name">Dashboard name:</label></p>
+    
+                <p><input type="text" name="name" value="{{ dashboard_name | escape }}" /></p>
+    
+                {% if errors.name %}
+    
+                <p class="error">{{ errors.name | escape }}</p>
+    
+                {% endif %}
+
+
+                <p><label for="name">Description:</label></p>
+    
+                <p><textarea name="description">{{ dashboard_description | escape }}</textarea></p>
+    
+                {% if errors.description %}
+    
+                <p class="error">{{ errors.description | escape }}</p>
+    
+                {% endif %}
+
+                <hr />
+
+
+
+                {% include "cdssource.html" %}
+
+
+                <hr />
+
+                <h3>Details</h3>
+
+                <p><label for="presentation_type">Framework:</label>
+                    <select name="presentation_type" id="presentation_type">
+                        {% for pt in presentation_types %}
+                        <option value="{{pt}}" {% if dashboard_presentation_type == pt %}selected{% endif %}>{{pt}}</option>
+                        {% endfor %}
+                    </select>
+                </p>
+
+                {% if errors.presentation_type %}
+    
+                <p class="error">{{ errors.presentation_type | escape }}</p>
+    
+                {% endif %}
+
+
+                <p><label for="start_path">Relative Path to a file or folder (optional): </label></p>
+                
+    
+                <p><input type="text" name="start_path" value="{{ dashboard_start_path | escape }}" /></p>
+                <p> <i>Relative to your Jupyter tree root</i></p>
+    
+                {% if errors.start_path %}
+    
+                <p class="error">{{ errors.start_path | escape }}</p>
+    
+                {% endif %}
+               
+                      
+                {% if errors.all %}
+    
+                <p class="error">{{ errors.all | escape }}</p>
+    
+                {% endif %}
+
+                <div class="dashboard-buttons">
+
+                    <input type="submit" value="Save" /> or <a href='{{ base_url }}hub/dashboards'>Cancel</a>
+
+                </div>
+
+                </form>
+
+
+        </div>
+    </div>
+    <a href="https://cdsdashboards.readthedocs.io/en/stable/chapters/userguide/userguide.html" 
+    id="help-floater" target="_blank" title="View ContainDS Dashboards user guide">Help</a>
+</div>
+{% endblock main %}
