@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+vest/__init__.py
+vest/cli.py
+vest.egg-info/PKG-INFO
+vest.egg-info/SOURCES.txt
+vest.egg-info/dependency_links.txt
+vest.egg-info/entry_points.txt
+vest.egg-info/requires.txt
+vest.egg-info/top_level.txt
+vest/data/__init__.py
+vest/data/config.json
