@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: django_csv2json
+Version: 0.2.1
+Summary: Data conversor from csv to json, to create the fixtures for django apps
+Home-page: http://gitlab.csn.uchile.cl/dpineda/csv2json
+Author: David Pineda Osorio
+Author-email: dpineda@csn.uchile.cl
+License: GPL3
+Description: UNKNOWN
+Platform: UNKNOWN

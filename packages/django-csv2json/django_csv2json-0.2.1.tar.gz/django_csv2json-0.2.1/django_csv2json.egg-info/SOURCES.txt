@@ -1,0 +1,15 @@
+.gitignore
+MANIFEST.in
+README.md
+requeriments.txt
+setup.py
+django_csv2json/action.py
+django_csv2json/funciones.py
+django_csv2json.egg-info/PKG-INFO
+django_csv2json.egg-info/SOURCES.txt
+django_csv2json.egg-info/dependency_links.txt
+django_csv2json.egg-info/entry_points.txt
+django_csv2json.egg-info/not-zip-safe
+django_csv2json.egg-info/requires.txt
+django_csv2json.egg-info/top_level.txt
+django_csv2json/scripts/csv2json.py
