@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+RobotFrameworkSlackNotifier.egg-info/PKG-INFO
+RobotFrameworkSlackNotifier.egg-info/SOURCES.txt
+RobotFrameworkSlackNotifier.egg-info/dependency_links.txt
+RobotFrameworkSlackNotifier.egg-info/top_level.txt
+mypackage/RobotFrameworkSlackNotifier.py
+mypackage/__init__.py
+mypackage/__version__.py
