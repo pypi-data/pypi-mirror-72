@@ -1,0 +1,16 @@
+AUTHORS.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+docs/conf.py
+docs/index.rst
+docs/qt_plotting.rst
+pyvistaqt/__init__.py
+pyvistaqt/_version.py
+pyvistaqt/plotting.py
+pyvistaqt.egg-info/PKG-INFO
+pyvistaqt.egg-info/SOURCES.txt
+pyvistaqt.egg-info/dependency_links.txt
+pyvistaqt.egg-info/requires.txt
+pyvistaqt.egg-info/top_level.txt
