@@ -1,0 +1,10 @@
+setup.py
+bithi_distributions/Binomialdistribution.py
+bithi_distributions/Gaussiandistribution.py
+bithi_distributions/Generaldistribution.py
+bithi_distributions/__init__.py
+bithi_distributions.egg-info/PKG-INFO
+bithi_distributions.egg-info/SOURCES.txt
+bithi_distributions.egg-info/dependency_links.txt
+bithi_distributions.egg-info/not-zip-safe
+bithi_distributions.egg-info/top_level.txt
