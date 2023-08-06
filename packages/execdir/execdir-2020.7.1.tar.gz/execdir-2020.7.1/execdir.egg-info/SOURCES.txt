@@ -1,0 +1,13 @@
+requirements.txt
+setup.py
+execdir.egg-info/PKG-INFO
+execdir.egg-info/SOURCES.txt
+execdir.egg-info/dependency_links.txt
+execdir.egg-info/top_level.txt
+scripts/.execdir-add
+scripts/.execdir-clear
+scripts/.execdir-get
+scripts/.execdir-rm
+scripts/.execdir-run
+scripts/.execdir-set
+scripts/execdir
