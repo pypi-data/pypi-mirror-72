@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pippi-core"
+version = "0.0.1"
+description = ""
+authors = ["Edward George <edward.george@maersk.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

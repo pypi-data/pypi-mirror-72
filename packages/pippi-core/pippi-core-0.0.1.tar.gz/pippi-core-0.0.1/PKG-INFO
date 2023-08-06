@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: pippi-core
+Version: 0.0.1
+Summary: 
+Author: Edward George
+Author-email: edward.george@maersk.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
