@@ -1,0 +1,47 @@
+CHANGES
+=======
+
+1.1.2
+-----
+
+* update nosleep.js to fix always lock on iPhone
+
+1.1.1
+-----
+
+* fix send\_message not await error
+
+1.1.0
+-----
+
+* add nosleep.js
+
+1.0.1
+-----
+
+* fix import error
+
+1.0.0
+-----
+
+* install portaudio before runtests
+* add script
+* add travis.yml
+* change to python lib
+* decrease noice
+
+0.1.0
+-----
+
+* add reconnect support
+* show delay in html
+* rewrite pcmplayer
+* change host to remote\_ip
+* disable scale
+* fix safari
+* little fix command line
+* add ui
+* fix ws
+* finish the first version
+* init commit
+* Initial commit
