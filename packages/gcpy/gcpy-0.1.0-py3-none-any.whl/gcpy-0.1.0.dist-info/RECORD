@@ -1,0 +1,13 @@
+gcpy/CloudFunction.py,sha256=g4DpKC6pKtdGlivYIORy0-bLZv6JlD3sWra3bh6Xq9M,276
+gcpy/FirestoreCollection.py,sha256=1NL21pCc9hpynP2_bV8tXDDvPkkBLWRGvGB13Yzp4fE,5606
+gcpy/FirestoreTriggerFunction.py,sha256=W2wrox9l8ltLGOx78UflAi114ocjyDxf78PW_F2y5cQ,2376
+gcpy/HTTPFunction.py,sha256=_AjVpx066ps5lrmgjEaErzks-SsbcOf-v-f1bAejguQ,636
+gcpy/PubSubTriggerFunction.py,sha256=dHquzvVOEzp5F3b0ZhQM7UPIRTe_RmwXfqJ0_BdNY8E,1127
+gcpy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gcpy/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gcpy/utils/answer.py,sha256=kxUSmUCWDyNdNtpx8gE57rF3RA92XseaTynu67ix7Iw,191
+gcpy/utils/binary.py,sha256=h3RhiuxcRXV12uAJVxlYqqWQtw84OaF1c3KJ0t-6iFQ,212
+gcpy-0.1.0.dist-info/LICENSE,sha256=iFMYVEuijqW2rBHtJggW5b5mxMUkuBp2IWJBk53VgbE,1070
+gcpy-0.1.0.dist-info/WHEEL,sha256=G_NFpzHmv_dUXgCUSAWL0-bLL-eMzYU6DzDeGXbRXUk,83
+gcpy-0.1.0.dist-info/METADATA,sha256=Q5oK0KEsIDcb421pQ5Upb0zJ8MZR1bgw8TXgn449AqY,537
+gcpy-0.1.0.dist-info/RECORD,,
