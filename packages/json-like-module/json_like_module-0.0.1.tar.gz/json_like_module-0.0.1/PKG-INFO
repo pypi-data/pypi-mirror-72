@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: json_like_module
+Version: 0.0.1
+Summary: Package to import json's like python modules
+Home-page: UNKNOWN
+Author: tourist
+Author-email: rickeyfsimple@gmail.com
+License: UNKNOWN
+Description: # Usage 
+        ```
+            import json_like_module.jsonimporter
+            import json_files.data as json_file_data
+        
+            data = json_file_data.raw_data
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

@@ -1,0 +1,8 @@
+README.md
+setup.py
+json_like_module.egg-info/PKG-INFO
+json_like_module.egg-info/SOURCES.txt
+json_like_module.egg-info/dependency_links.txt
+json_like_module.egg-info/top_level.txt
+jsonmodule/__init__.py
+jsonmodule/jsonimporter.py
