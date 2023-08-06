@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+yyyymmdd/__init__.py
+yyyymmdd/argparse.py
+yyyymmdd/date.py
+yyyymmdd/misc.py
+yyyymmdd/range.py
+yyyymmdd/tz.py
+yyyymmdd/version.py
+yyyymmdd.egg-info/PKG-INFO
+yyyymmdd.egg-info/SOURCES.txt
+yyyymmdd.egg-info/dependency_links.txt
+yyyymmdd.egg-info/top_level.txt
