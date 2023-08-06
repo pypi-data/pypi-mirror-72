@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+mal/__init__.py
+mal/anime.py
+mal/config.py
+mal/mal.py
+mal/manga.py
+mal_api.egg-info/PKG-INFO
+mal_api.egg-info/SOURCES.txt
+mal_api.egg-info/dependency_links.txt
+mal_api.egg-info/requires.txt
+mal_api.egg-info/top_level.txt
