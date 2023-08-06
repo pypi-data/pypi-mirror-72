@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+pyfiniium/__init__.py
+pyfiniium/_version.py
+pyfiniium/infiniium.py
+pyfiniium.egg-info/PKG-INFO
+pyfiniium.egg-info/SOURCES.txt
+pyfiniium.egg-info/dependency_links.txt
+pyfiniium.egg-info/requires.txt
+pyfiniium.egg-info/top_level.txt
