@@ -1,0 +1,22 @@
+
+Functional
+===========
+
+→ Possibility to define path aliases. For example „let default=dom”
+
+→ Detect and handle cases where a few patterns match current repo
+  (pick longest .local). Example: ~/sources have some rule,
+  ~/sources/archived another
+
+→ Allow {1}, {2} etc instead of names
+
+→ clonefrom ?  [ either clone all missing, or give short name ]
+   { Note: it works to      hg init;   hg pull lagrange }
+
+
+Technical
+===========
+
+→ Maybe use ui.expandpath("alias") instead of analysing paths section
+
+
