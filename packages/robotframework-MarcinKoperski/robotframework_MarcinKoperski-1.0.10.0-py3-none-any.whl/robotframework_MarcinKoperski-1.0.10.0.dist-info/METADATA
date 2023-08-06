@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: robotframework-MarcinKoperski
+Version: 1.0.10.0
+Summary: RobotFramework Marcin Koperski bundle
+Home-page: https://github.com/IlfirinPL/robotframework-MarcinKoperski
+Author: Marcin Koperski
+Author-email: marcin.koperski+pypi@gmail.com
+License: MIT
+Download-URL: https://github.com/IlfirinPL/robotframework-MarcinKoperski/archive/master.zip
+Keywords: robotframework,MarcinKoperski
+Platform: UNKNOWN
+Requires-Dist: robotframework (>=3.0)
+Requires-Dist: robotframework-databaselibrary
+Requires-Dist: robotframework-imaplibrary
+Requires-Dist: robotframework-seleniumlibrary
+Requires-Dist: gspread
+Requires-Dist: unicodecsv
+Requires-Dist: oauth2client
+Requires-Dist: robotframework-httplibrary
+Requires-Dist: openpyxl
+Requires-Dist: PyPDF2
+
+UNKNOWN
+
+
