@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+pyform/__init__.py
+pyform/_version.py
+pyform/returnseries.py
+pyform/timeseries.py
+pyform.egg-info/PKG-INFO
+pyform.egg-info/SOURCES.txt
+pyform.egg-info/dependency_links.txt
+pyform.egg-info/top_level.txt
+tests/__init__.py
+tests/unit/__init__.py
+tests/unit/test_returnseries.py
+tests/unit/test_timeseries.py
