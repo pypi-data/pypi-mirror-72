@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: lgp
+Version: 0.0.2
+Summary: A python implementation of linear genetic programming algorithm
+Home-page: https://github.com/ChengyuanSha/linear_genetic_programming
+Author: Chengyuan Sha
+Author-email: 15cs69@queensu.ca
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.18.1)
+Requires-Dist: pandas (>=0.25.3)
+Requires-Dist: scikit-learn (>=0.22.1)
+Requires-Dist: scipy (>=1.3.1)
+
+Check github (https://github.com/ChengyuanSha/linear_genetic_programming) for details
+
+
