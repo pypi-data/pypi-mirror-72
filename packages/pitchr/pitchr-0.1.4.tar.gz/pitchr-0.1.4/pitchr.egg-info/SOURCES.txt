@@ -1,0 +1,16 @@
+README.md
+setup.py
+pitchr/__init__.py
+pitchr/lyexport.py
+pitchr/music.py
+pitchr/playing.py
+pitchr/test_exporting.py
+pitchr/test_music.py
+pitchr/test_pitch.py
+pitchr/test_playing.py
+pitchr/test_writing.py
+pitchr.egg-info/PKG-INFO
+pitchr.egg-info/SOURCES.txt
+pitchr.egg-info/dependency_links.txt
+pitchr.egg-info/requires.txt
+pitchr.egg-info/top_level.txt
