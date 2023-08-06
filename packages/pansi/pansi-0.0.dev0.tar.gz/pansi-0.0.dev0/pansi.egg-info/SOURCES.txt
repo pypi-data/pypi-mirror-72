@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+NOTICE
+README.rst
+pansi.py
+setup.py
+pansi.egg-info/PKG-INFO
+pansi.egg-info/SOURCES.txt
+pansi.egg-info/dependency_links.txt
+pansi.egg-info/entry_points.txt
+pansi.egg-info/top_level.txt
