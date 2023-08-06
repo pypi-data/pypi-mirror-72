@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: medspacy
+Version: 0.0.1
+Summary: Library for clinical NLP with spaCy.
+Home-page: UNKNOWN
+Author: medSpaCy
+Author-email: medspacy.dev@gmail.com
+License: UNKNOWN
+Description: # medspacy
+        Library for clinical NLP with spaCy.
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
