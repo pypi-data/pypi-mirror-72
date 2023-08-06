@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+launchd_tag.egg-info/PKG-INFO
+launchd_tag.egg-info/SOURCES.txt
+launchd_tag.egg-info/dependency_links.txt
+launchd_tag.egg-info/top_level.txt
+scripts/launchd-tag
