@@ -1,0 +1,5 @@
+KEY_ID: str = 'id'
+KEY_INPUT: str = 'input'
+KEY_AUTH: str = 'auth'
+KEY_CID: str = 'cid'
+KEY_OUTPUT: str = 'output'
