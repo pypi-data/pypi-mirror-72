@@ -1,0 +1,9 @@
+pandas
+geopandas
+matplotlib
+scikit-learn>=0.21.3
+seaborn
+numpy
+scipy
+libpysal
+tqdm
