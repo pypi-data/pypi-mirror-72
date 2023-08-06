@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="xps" name="pytest" skipped="0" tests="10" time="113.262" timestamp="2020-03-11T21:26:05.405864"><testcase classname="tests.test_stm" file="tests/test_stm.py" line="546" name="test_layer" time="31.015"><system-out>Hello World!!
+&gt;&gt; Hello!
+&gt;&gt; Ready
+&gt;&gt; timer: b=1
+&gt;&gt; Ready
+&gt;&gt; timer: b=2
+&gt;&gt; Ready
+&gt;&gt; timer: b=3
+&gt;&gt; Ready
+&gt;&gt; timer: b=4
+&gt;&gt; Ready
+&gt;&gt; Ready
+&gt;&gt; Received: &lt;term&gt;, but not_yet()
+&gt;&gt; Ready
+&gt;&gt; timer: b=5
+&gt;&gt; Ready
+&gt;&gt; Ready
+&gt;&gt; Received: &lt;term&gt;, but not_yet()
+&gt;&gt; Ready
+&gt;&gt; timer: b=6
+&gt;&gt; Ready
+&gt;&gt; Ready
+&gt;&gt; Received: &lt;term&gt;, OK shutdown now
+Term &lt;term&gt;: 31.01160430908203
+&gt;&gt; Ready
+ &gt; Forcing Foo fo QUIT. Detaching from Reactor
+&gt;&gt; Stop !!
+</system-out></testcase><testcase classname="tests.test_stm" file="tests/test_stm.py" line="555" name="test_timeit" time="0.937"><system-out>1973749.249427306
+3318777.3478608336
+1.6814584470766967
+Pandas: 2.384185791015625e-06
+</system-out></testcase><testcase classname="tests.test_stm" file="tests/test_stm.py" line="599" name="test_await_vs_normal" time="4.891"><system-out>5916485.145959012
+3125093.088464198
+1.8932188509196126
+</system-out></testcase><testcase classname="tests.test_stm" file="tests/test_stm.py" line="636" name="test_clock" time="21.004"><system-out>Hello World!!
+ &gt; Timer each:5,1: 1.001168966293335
+ &gt; Timer each:3,2: 2.001208543777466
+ &gt; Timer each:3,2: 5.0031819343566895
+ &gt; Timer each:5,1: 6.001170635223389
+ &gt; Timer each:3,2: 8.002434253692627
+ &gt; Timer each:5,1: 11.003420114517212
+ &gt; Timer each:3,2: 11.003501415252686
+ &gt; Timer each:3,2: 14.00342845916748
+ &gt; Timer each:5,1: 16.002448081970215
+ &gt; Timer each:3,2: 17.001376628875732
+ &gt; Timer each:3,2: 20.002798557281494
+Term &lt;term&gt;: 21.001394033432007
+ &gt; Forcing Clock fo QUIT. Detaching from Reactor
+</system-out></testcase><testcase classname="tests.test_stm" file="tests/test_stm.py" line="643" name="test_hierarchy" time="0.001"></testcase><testcase classname="tests.test_stm" file="tests/test_stm.py" line="666" name="test_calc" time="18.249"><system-out>Hello World!!
+Speed: 369397.7632358378
+ &gt; Forcing RPNCalc1 fo QUIT. Detaching from Reactor
+413627.0257510957
+Hello World!!
+Speed: 120930.1826720704
+0.3273711827942604 faster
+</system-out></testcase><testcase classname="tests.test_stm" file="tests/test_stm.py" line="721" name="test_graph_layer" time="0.023"></testcase><testcase classname="tests.test_stm" file="tests/test_stm.py" line="728" name="test_create_channel" time="0.136"><system-out>HTTP/1.1 302 Found
+Date: Wed, 11 Mar 2020 20:27:21 GMT
+Server: Apache
+X-Content-Type-Options: nosniff
+X-Frame-Options: sameorigin
+Referrer-Policy: no-referrer
+X-Xss-Protection: 1
+Location: https://www.debian.org/
+Content-Length: 271
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;302 Found&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Found&lt;/h1&gt;
+&lt;p&gt;The document has moved &lt;a href=&quot;https://www.debian.org/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;address&gt;Apache Server at www.debian.org Port 80&lt;/address&gt;
+&lt;/body&gt;&lt;/html&gt;
+</system-out></testcase><testcase classname="tests.test_stm" file="tests/test_stm.py" line="736" name="test_crawler" time="36.004"><system-out>Hello World!!
+  &gt; new_channel
+  &gt; get_page
+  &gt; new_channel
+  &gt; get_page
+  &gt; new_channel
+  &gt; get_page
+  &gt; new_channel
+  &gt; get_page
+  &gt; save_page: 1
+  &gt; get_page
+  &gt; save_page: 2
+  &gt; get_page
+  &gt; save_page: 3
+  &gt; get_page
+  &gt; save_page: 4
+  &gt; get_page
+  &gt; save_page: 5
+  &gt; save_page: 6
+  &gt; save_page: 7
+  &gt; get_page
+  &gt; get_page
+  &gt; get_page
+  &gt; save_page: 8
+  &gt; save_page: 9
+  &gt; get_page
+  &gt; get_page
+  &gt; save_page: 10
+  &gt; save_page: 11
+Term &lt;term&gt;: 36.001707315444946
+ &gt; Forcing Crawler fo QUIT. Detaching from Reactor
+</system-out></testcase><testcase classname="tests.test_stm" file="tests/test_stm.py" line="743" name="test_hashable_events" time="0.009"><system-out>  &gt; hello_world
+  &gt; uno
+</system-out></testcase></testsuite></testsuites>
