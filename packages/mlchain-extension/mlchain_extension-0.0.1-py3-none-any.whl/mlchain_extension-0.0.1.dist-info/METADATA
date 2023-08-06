@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: mlchain-extension
+Version: 0.0.1
+Summary: MLchain Extension Python Library
+Home-page: https://gitlab.com/techainer/ml_platform/mlchain-extension
+Author: Techainer Inc.
+Author-email: admin@techainer.com
+License: UNKNOWN
+Keywords: mlchain,development,deployment ai,ai,artificial neural network,training,deploy,deployment,monitoring,model,deep learning,machine learning
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+Requires-Dist: boto3 (>=1.9.66)
+Requires-Dist: cachetools
+Requires-Dist: elasticsearch (==7.0.1)
+Requires-Dist: mlchain
+Requires-Dist: numpy
+Requires-Dist: opencv-python (>=4.1.2.30)
+Requires-Dist: pika
+Requires-Dist: psutil (>=5.4.8)
+Requires-Dist: pymongo (>=3.6.1)
+Requires-Dist: redis
+
+Mlchain helps AI developers to easily run, deploy and monitor AI models and Workflows without having Devops skills. 
+
+This Mlchain Python library lets you launch models and do many tasks with Mlchain Platform. Please sign up your account on Mlchain before working with it. 
+
