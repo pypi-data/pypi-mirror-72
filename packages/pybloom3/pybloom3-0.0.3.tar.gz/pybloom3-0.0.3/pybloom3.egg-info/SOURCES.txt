@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.py
+pybloom/__init__.py
+pybloom/benchmarks.py
+pybloom/pybloom.py
+pybloom/tests.py
+pybloom/utils.py
+pybloom3.egg-info/PKG-INFO
+pybloom3.egg-info/SOURCES.txt
+pybloom3.egg-info/dependency_links.txt
+pybloom3.egg-info/requires.txt
+pybloom3.egg-info/top_level.txt
+pybloom3.egg-info/zip-safe
