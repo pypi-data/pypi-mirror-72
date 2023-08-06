@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: Postfix-tools
+Version: 1.1.0
+Summary: Tools, scripts and config for use with the Postfix MTA.
+Home-page: https://github.com/unixnut/Postfix-tools
+Author: Alastair Irvine
+Author-email: alastair@plug.org.au
+License: GNU General Public License v3
+Keywords: postscan
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: Click (>=6.0)
+
+=============
+Postfix tools
+=============
+
+
+.. image:: https://img.shields.io/pypi/v/postscan.svg
+        :target: https://pypi.python.org/pypi/postscan
+
+
+
+Tools, scripts and config for use with the Postfix MTA.
+
+
+* Free software: GNU General Public License v3
+
+postscan
+--------
+
+Accepts system mail logs on standard input and provides individual details of
+all e-mail messages received.  Note that this can produce a *lot* of output on
+a busy system.
+
+Makes the following assumptions:
+
+- Postfix is your MTA
+- dovecot-lda is your delivery agent
+- (optional) SpamAssassin is set up
+
+Run ``postscan --help`` for command-line options.
+
+postresolve
+-----------
+
+Since ``sendmail -bv`` doesn't work as expected, this fakes it to show you what a
+given user resolves to (e.g. by processing aliases)
+
+tweak_clamav-milter
+-------------------
+
+This script assumes ``clamav-milter`` and SpamAssassin have been installed.
+
+::
+
+  tweak_clamav-milter
+
+This will alter the configurations to suit SpamAssassin and ClamAV being
+invoked at SMTP time by milters, e.g. mail filter plugins.
+
+Then, in your Postfix ``main.cf``, set::
+
+  smtpd_milters = unix:/spamass/spamass.sock, unix:/clamav/clamav-milter.ctl
+
+=======
+Credits
+=======
+
+Development Lead
+----------------
+
+* Alastair Irvine <alastair@plug.org.au>
+
+Other Credits
+-------------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+1.1.0 (2020-06-30)
+------------------
+
+* Extra ability to handle empty/weird Message IDs.
+
+1.0 (2018-08-12)
+------------------
+
+* First release on PyPI.
+
+

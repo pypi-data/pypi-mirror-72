@@ -1,0 +1,14 @@
+Postfix_tools-1.1.0.data/scripts/postresolve,sha256=KwcPMxBFdS74ZqEqqN-ZOX7_Pi-PYrteParWw0Tlk44,7879
+Postfix_tools-1.1.0.data/scripts/tweak_clamav-milter,sha256=xGLbRrW_DLaagSJlh_V9qBJNEg7XFpwVnD3qELuGtFw,1015
+postscan/__init__.py,sha256=584P7uUaZ7F83SvPgwJ-tSfwj-xOqpm6l9gpmeO2F4s,161
+postscan/cli.py,sha256=7OneRcLm3c8pTv1cKm8RrXGaItfMxZr3Q6NKLIUESs4,1751
+postscan/postscan.py,sha256=l4gEjg3u5vK_4Kc6UkARJMXqM5tqOSoLGpSfw5mj1EI,1062
+postscan/scanner.py,sha256=xGhzpEBWde8R2z7E3TxtU-2_zAijHM08Kf95erQ786o,6329
+postscan/state.py,sha256=vZDsCFbXP4THTEA7SYSHjvkaVxwATZSygaLGYfD97Mw,9365
+postscan/uuid_helper.py,sha256=vZE3T-0gtMBTP-1uUeiFx_XCVoPOWeG1iY59oQasyvk,745
+Postfix_tools-1.1.0.dist-info/LICENSE,sha256=-y1ftWZGCBHArg0OgkZiXejiXdKjQAnqiblSC5ltHdo,1573
+Postfix_tools-1.1.0.dist-info/METADATA,sha256=l-Qx7YVZG3tWh_2KeYOT1u3qaurSaC39OKDfxlW8DrU,2657
+Postfix_tools-1.1.0.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+Postfix_tools-1.1.0.dist-info/entry_points.txt,sha256=ZsM6PfpjlhRaCvg1rkHaWdhVuVZo8R9HVJjSRMP29ok,48
+Postfix_tools-1.1.0.dist-info/top_level.txt,sha256=2cB7lUS8FDw7jL_3O4P5ucndUDOw8LdUB_1P-HHM3xs,9
+Postfix_tools-1.1.0.dist-info/RECORD,,
