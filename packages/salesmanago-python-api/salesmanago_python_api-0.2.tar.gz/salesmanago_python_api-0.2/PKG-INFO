@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: salesmanago_python_api
+Version: 0.2
+Summary: Client for Salesmanago API.
+Home-page: https://github.com/haloween/salesmanago-python-api
+Author: Tomasz Utracki-Janeta
+Author-email: halgravity+githubrepo@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: salesmanago,api
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
