@@ -1,0 +1,10 @@
+README.md
+setup.py
+etest/__init__.py
+etest/test.py
+namantest/__init__.py
+namantest/__version__.py
+namantest.egg-info/PKG-INFO
+namantest.egg-info/SOURCES.txt
+namantest.egg-info/dependency_links.txt
+namantest.egg-info/top_level.txt

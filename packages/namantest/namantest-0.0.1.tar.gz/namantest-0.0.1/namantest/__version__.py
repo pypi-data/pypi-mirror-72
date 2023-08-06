@@ -1,0 +1,9 @@
+__title__ = "namantest"
+__version__ = "0.0.1"
+__description__ = "Naman test package"
+__author__ = "Naman Aggarwal"
+__author_email__ = "aggarwal.nam@gmail.com"
+__license__ = 'MIT'
+__url__ = 'https://github.com/namaggarwal/namantestpackage'
+__download_url__ = 'https://github.com/namaggarwal/namantestpackage/tarball/'+__version__
+__copyright__ = 'Copyright 2020 Naman Aggarwal'

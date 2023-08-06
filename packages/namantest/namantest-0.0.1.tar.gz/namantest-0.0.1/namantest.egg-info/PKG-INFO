@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: namantest
+Version: 0.0.1
+Summary: Naman test package
+Home-page: https://github.com/namaggarwal/namantestpackage
+Author: Naman Aggarwal
+Author-email: aggarwal.nam@gmail.com
+License: MIT
+Download-URL: https://github.com/namaggarwal/namantestpackage/tarball/0.0.1
+Description: Naman Test
+        
+        This is just to test different things regarding python packages
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
