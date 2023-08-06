@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: bluefog
+Version: 0.2.1
+Summary: A distributed training framework for diffusion or consensus-type algorithm.
+Home-page: https://github.com/ybc1991/bluefog
+Author: Bicheng Ying
+Author-email: bichengying@gmail.com
+License: UNKNOWN
+Description: Bluefog is a distributed training framework for PyTorch based on
+        diffusion/consensus-type algorithm.
+        The goal of Bluefog is to make distributed and decentralized machine learning fast,
+        fault-tolerant, friendly to heterogeneous environment, and easy to use.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.7.0
+Description-Content-Type: text/x-rst

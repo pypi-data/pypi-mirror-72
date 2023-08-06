@@ -1,0 +1,3 @@
+[console_scripts]
+bfrun = bluefog.run.run:main
+
