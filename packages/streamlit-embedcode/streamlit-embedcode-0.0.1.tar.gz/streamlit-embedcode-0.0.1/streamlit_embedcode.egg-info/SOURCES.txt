@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+streamlit_embedcode/__init__.py
+streamlit_embedcode.egg-info/PKG-INFO
+streamlit_embedcode.egg-info/SOURCES.txt
+streamlit_embedcode.egg-info/dependency_links.txt
+streamlit_embedcode.egg-info/requires.txt
+streamlit_embedcode.egg-info/top_level.txt
