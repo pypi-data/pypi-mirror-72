@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: catchphrase
+Version: 0.1.0
+Summary: Holy Hooligan Coders, Batman! A python package for generating/retrieving common catchphrases!
+Home-page: https://github.com/scnerd/catchphrase
+Author: David Maxson
+Author-email: scnerd@gmail.com
+License: MIT
+Description: # catchphrase
+        Holy Hooligan Coders, Batman! A python package for generating/retrieving common catchphrases!
+        
+        # Installation
+        
+        ```
+        pip install catchphrase
+        ```
+        
+        # Usage
+        
+        ```
+        >>> import catchphrase
+        >>> catchphrase.batman.random_holy()
+        'Holy Roadblocks, Batman!'
+        >>> catchphrase.batman.random_holy(suffix=', Robin!')
+        'Holy Hallucination, Robin!'
+        ```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
