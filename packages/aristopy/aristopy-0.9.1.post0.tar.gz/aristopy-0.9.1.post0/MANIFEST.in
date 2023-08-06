@@ -1,0 +1,8 @@
+include *.txt
+include *.yml
+include pytest.ini
+recursive-include docs *.rst *.bat *.py *.png Makefile
+recursive-include tests *.py
+recursive-include examples *.ipynb *.csv
+prune examples/*/.ipynb_checkpoints
+prune docs/.build
