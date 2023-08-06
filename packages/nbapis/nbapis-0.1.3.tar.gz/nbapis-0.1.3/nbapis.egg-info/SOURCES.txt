@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+nbapis/__init__.py
+nbapis.egg-info/PKG-INFO
+nbapis.egg-info/SOURCES.txt
+nbapis.egg-info/dependency_links.txt
+nbapis.egg-info/requires.txt
+nbapis.egg-info/top_level.txt
