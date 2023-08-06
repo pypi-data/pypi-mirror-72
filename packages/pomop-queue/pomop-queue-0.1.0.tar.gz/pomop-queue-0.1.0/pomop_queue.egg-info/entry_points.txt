@@ -1,0 +1,3 @@
+[console_scripts]
+pomop-queue = pomop_queue.cli_parser:cli
+
