@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: OpenAISurveyWrapper
+Version: 0.0.5
+Summary: wrapper for the OpenAI to label survey results
+Home-page: https://github.com/brockmanmatt/OpenAISurveyWrapper/tree/master/
+Author: Matt Brockman
+Author-email: brockman@email.arizona.edu
+License: Apache Software License 2.0
+Keywords: topic modeling
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: openai
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+# OpenAI Survey Wrapper
+> wrapper to label survey respones and test accuracy
+
+
+## Install
+
+`pip install OpenAISurveyWrapper`
+
+## How to use
+
+Fill me in please! Don't forget code examples:
+
+```python
+print("in progress")
+```
+
+    in progress
+
+
+## Create and Add Key
+
+```python
+from OpenAISurveyWrapper.survey import survey
+import json, pandas as pd
+```
+
+```python
+tmp = survey()
+tmp.add_key(json.load(open("../gpt3/key.json", "r"))["key"])
+```
+
+
