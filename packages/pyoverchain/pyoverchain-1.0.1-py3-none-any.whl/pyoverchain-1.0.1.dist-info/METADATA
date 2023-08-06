@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pyoverchain
+Version: 1.0.1
+Summary: a python pipeline to generate chain files between different genome assemblies for LiftOver
+Home-page: https://github.com/billzt/pyOverChain
+Author: Tao Zhu
+Author-email: taozhu@mail.bnu.edu.cn
+License: MIT
+Keywords: genome bioinformatics assembly BLAT LiftOver
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.6
+Requires-Dist: progressbar2
+
+UNKNOWN
+
+
