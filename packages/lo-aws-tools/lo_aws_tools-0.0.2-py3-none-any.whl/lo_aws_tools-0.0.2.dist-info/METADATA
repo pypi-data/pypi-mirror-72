@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: lo-aws-tools
+Version: 0.0.2
+Summary: AWS Python API custom tools
+Home-page: https://gitlab.com/dyllan/lo-aws-tools
+Author: Dyllan Pascoe
+Author-email: dyllan@lookopen.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: boto3
+
+# Lookopen AWS Python API Custom Tools
+
+A set of tools to manage AWS tasks from your command line.
+Built-in support for switching between multiple AWS profiles.
+
+
