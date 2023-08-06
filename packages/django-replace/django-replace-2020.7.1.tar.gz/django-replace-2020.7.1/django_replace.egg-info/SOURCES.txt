@@ -1,0 +1,10 @@
+requirements.txt
+setup.py
+django_replace/__init__.py
+django_replace.egg-info/PKG-INFO
+django_replace.egg-info/SOURCES.txt
+django_replace.egg-info/dependency_links.txt
+django_replace.egg-info/requires.txt
+django_replace.egg-info/top_level.txt
+django_replace/templatetags/__init__.py
+django_replace/templatetags/replace.py
