@@ -1,0 +1,12 @@
+uosclient/__init__.py,sha256=SHk6ViuZo279_IeYjCfHJecWfXrOjT3xeXUNnQWvTVk,37
+uosclient/network.py,sha256=fw1WBt6f27hTX66FPXHufMTOB5ekWh5SxwwPKiNzEUs,7481
+uosclient/port.py,sha256=0vKJFRjgp2p3waV_pU7u6dHvULM8heAF9V3KaVzUxqk,5302
+uosclient/project.py,sha256=VaiTzEmsy1T97rB-um3nmkBtGoGW5H4V2zx8kx3U2cI,3452
+uosclient/secgroup.py,sha256=dWtedjgQZdcjrt03f3tvWjb3scV8VfvnBXsrkuhpboc,4195
+uosclient/user.py,sha256=adWsml4PWvCsnnMeeS8F_35OaxoBQMu-z0C_8TEjdAY,3659
+uosclient-0.0.13.dist-info/COPYING,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+uosclient-0.0.13.dist-info/METADATA,sha256=K31et-vj0-982_mkciMuhNpEAL3pmM_3Up4WDWfH7V0,1673
+uosclient-0.0.13.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+uosclient-0.0.13.dist-info/entry_points.txt,sha256=0TIKuPMI9oMqY35j-BvkjiC6HHHvIlVeH0GKyt1Uv0o,501
+uosclient-0.0.13.dist-info/top_level.txt,sha256=oqvWabFsfzZ-wRZG_DARN9YDMARiq1a2tG56xa6iheU,10
+uosclient-0.0.13.dist-info/RECORD,,

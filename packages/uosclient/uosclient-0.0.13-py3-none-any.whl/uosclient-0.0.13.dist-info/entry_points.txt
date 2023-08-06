@@ -1,0 +1,11 @@
+[openstack.common]
+uos_network_create = uosclient.network:CreateNetwork
+uos_network_delete = uosclient.network:DeleteNetwork
+uos_project_create = uosclient.project:CreateProject
+uos_project_delete = uosclient.project:DeleteProject
+uos_routing_port_create = uosclient.port:CreateRoutingPort
+uos_routing_port_delete = uosclient.port:DeleteRoutingPort
+uos_security_groups_fix = uosclient.secgroup:FixSecurityGroups
+uos_user_create = uosclient.user:CreateUser
+uos_user_delete = uosclient.user:DeleteUser
+
