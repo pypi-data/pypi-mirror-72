@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: sparcur
+Version: 0.0.1.dev2
+Summary: assorted
+Home-page: https://github.com/tgbugs/sparc-curation
+Author: Tom Gillespie
+Author-email: tgbugs@gmail.com
+License: MIT
+Description: # sparc-curation
+        [![PyPI version](https://badge.fury.io/py/sparcur.svg)](https://pypi.org/project/sparcur/)
+        [![Build Status](https://travis-ci.org/SciCrunch/sparc-curation.svg?branch=master)](https://travis-ci.org/SciCrunch/sparc-curation)
+        [![Coverage Status](https://coveralls.io/repos/github/SciCrunch/sparc-curation/badge.svg?branch=master)](https://coveralls.io/github/SciCrunch/sparc-curation?branch=master)
+        
+        code, files, and documentation for SPARC curation workflows
+        
+        ## Setup
+        New developers or curators should start by following [setup.org](./docs/setup.org).
+        
+        ## Background
+        For a general introduction to the SPARC curpation process see [background.org](./docs/background.org).
+        
+        ## Workflows
+        Documentation for curation workflows currently lives in [setup.org](./docs/setup.org#workflows).
+        
+        ## Developer guide
+        See the [developer guide](./docs/developer-guide.org) for examples of how to reuse and develop sparcur.
+        
+Keywords: SPARC curation biocuration ontology blackfynn protc protocols hypothesis
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: filetypes
+Provides-Extra: test

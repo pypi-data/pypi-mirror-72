@@ -1,0 +1,1634 @@
+# -*- org-adapt-indentation: nil; org-edit-src-content-indentation: 0; -*-
+#+TITLE: Developer and curator setup guide
+#+AUTHOR: Tom Gillespie
+# [[./setup.pdf]]
+#+OPTIONS: num:nil ^:nil
+#+LATEX_HEADER: \usepackage[margin=1.0in]{geometry}
+#+STARTUP: showall
+
+* Introduction
+This is a general guide to bootstrapping and maintaining a complete development environment for
+working as a curator or developer on the NIF-Ontology, protc, sparc-curation, scibot, etc.
+For a general introduction to the SPARC curation process see [[./background.org]]
+The environment bootstrapped by running this file was originally developed on Gentoo,
+and is portable to other distributions with a few tweaks.
+
+Please report any bugs you find in this file or during the execution of any of the
+workflows described in this file to the sparc-curation GitHub
+[[https://github.com/SciCrunch/sparc-curation/issues][issue tracker]].
+* Setup
+Setup takes about 3 hours.
+[[#one-shot][OS level setup]] takes about and hour, and [[#user][user setup]] takes about two hours. \\
+
+*If you do not have root or sudo access or do not administer the computer*
+*you are following this guide on you should start at [[#user][user setup]].*
+
+If you do have admin access then do the [[#one-shot][OS level setup]] first
+and then come back to the [[#user][user setup]] once you are done.
+
+** User
+:PROPERTIES:
+:CUSTOM_ID: user
+:END:
+If you are already on a system that has the [[#one-shot][prerequisites]]
+installed start here. If you are not you will find out fairly
+quickly when the following commands fail.
+*** Git name and email
+These workflows make extensive use of git.
+Git needs to know who you are (and so do we) so that it can stash files
+that you change (for example this file, which logs to itself).
+Use the email that you will use for curation or development for this.
+You should not use your primary email account for this because it will
+get a whole bunch of development related emails.
+
+Run the following in a terminal replacing the examples with the fields
+that apply to you.
+#+BEGIN_SRC bash :eval never
+git config --global user.name "FIRST_NAME LAST_NAME"
+git config --global user.email "MY_NAME@example.com"
+#+END_SRC
+*** Bootstrapping [[./setup.org][this =setup.org= file]]
+You can run all the code in [[./setup.org][this =setup.org= file]] automatically
+using emacs [[https://orgmode.org/][org-mode]]. The easiest way to accomplish this is to
+install [[https://github.com/jkitchin/scimax][scimax]] which is an emacs starterkit for scientists and
+engineers that has everything we will need. The following steps will do this automatically for you.
+
+*All the code blocks in this Bootstrapping section need to be pasted into a terminal (shell) where you are logged in as your user.*
+*Run every code block in the order that they appear on this page. Do not skip any blocks.*
+*Read all the text between blocks. It will tell you what to do next.*
+
+When pasting blocks into the terminal (middles mouse, or =C-V= =control-shift-v= in the ubuntu terminal)
+if you do not copy the last newline of the blocks then you will have to hit enter to run the last command.
+# TODO emacs auto setup to be able to run this file
+#+NAME: setup-folders
+#+CAPTION: Set up the folder structure and clone this sparc-curation repository.
+#+BEGIN_SRC bash :exports code :eval never
+mkdir -p ~/.local/bin
+mkdir ~/bin
+mkdir ~/opt
+mkdir ~/git
+mkdir ~/files
+source .profile
+#+end_src
+
+Run the following block to clone this repository and the =scimax= repository.
+#+begin_src bash :exports code :eval never
+pushd ~/git
+git clone https://github.com/SciCrunch/sparc-curation.git
+popd
+pushd ~/opt
+git clone https://github.com/jkitchin/scimax.git
+popd
+#+END_SRC
+
+Run the following command to initialize texlive for your user.
+It is needed for scimax to install correctly.
+#+name: setup-texlive
+#+begin_src bash :exports code :eval never
+tlmgr init-usertree
+#+end_src
+
+Run the following commands to create the =scimax= command (
+[[file:${HOME}/bin/scimax][~/bin/scimax]] on linux and macos,
+[[file:${HOME}/bin/scimax.ps1][~/bin/scimax.ps1]] on windows),
+and the config file
+[[file:${HOME}/opt/scimax/user/user.el][user.el]]
+that is needed for the rest of the process.
+# astoundingly powershell redirection and bash redirection have the same behavior for strings so it makes it
+# possible to work around the fact that the behavior is effectively mutually exclusive for strings passed as
+# arguments, all I can do is laugh at how dumb this is
+# NOTE: can't use line continuation here because it is different between powershell and posix
+#+name: tangle-setup-org
+#+begin_src sh :eval never
+echo '(defvar *path-to-setup.org* "~/git/sparc-curation/docs/setup.org")' > vars.el
+emacs --batch --load vars.el --load org --load ob-shell --eval '(org-babel-tangle-file *path-to-setup.org*)' --load ~/opt/scimax/user/user.el --eval '(org-babel-tangle-file *path-to-setup.org*)'
+rm vars.el
+#+end_src
+# yes we tangle twice here intentionally because user-config-path needs to be defined
+# before the second round of tangles can succeed
+
+When running the next block =scimax= will launch emacs an install a number of packages (DON'T PANIC).
+It is normal to see errors during this step. When everything finishes installing you should find
+yourself staring at next section of this file [[#per-user-setup][Per user setup]] and can continue
+from there in =scimax=.
+# NOTE: cannot use line continuation because it breaks posix/powershell portability
+#+name: scimax-bootstrap
+#+begin_src bash :exports code :eval never
+scimax --find-file ~/git/sparc-curation/docs/setup.org --eval "(add-hook 'window-setup-hook (lambda () (org-goto-section *section-per-user-setup*)))"
+#+end_src
+*** Per user setup
+:PROPERTIES:
+:CUSTOM_ID: per-user-setup
+:END:
+You should now have this file open in =scimax=
+and can run the code blocks directly by clicking on a block
+and typing =C-c C-c= (control c control c). In the default
+=scimax= setup code blocks will appear as yellow or green.
+Note that not all yellow blocks are source code, some may be
+examples, you can tell because examples won't execute and the
+start with =#+BEGIN_EXAMPLE= instead of =#+BEGIN_SRC=.
+
+All the following should be run as your user in =scimax=.
+If you run these blocks from the command line be sure to run
+nameref:remote-exports first.
+
+When you run this block emacs will think for about 3 minutes
+as it retrieves everything. You can know that it is thinking
+because your mouse will be in thinking mode if you hover over
+emacs, and because in the minibuffer window at the bottom of
+the window there will be a message saying something to the
+effect of =Wrote /tmp/babel-nonsense/ob-input-nonsense=.
+If an error window appears when running this block just run
+it again.
+
+You can also run this block to update an existing installation.
+
+*After running this block you can move on to the [[#configuration-files][Configuration files]] section.*
+# FIXME why no output on first run? too many errors?
+# ANSWER i think it is because raco pkg install runs in alphabetical order
+#+CAPTION: You can run them all at once from this block.
+#+HEADER: :var REPOS=repos PYROOTS=py-roots RKTROOTS=rkt-roots
+#+BEGIN_SRC bash :results output :noweb yes :exports none :eval no-export
+<<environment-sanity-checks>>
+<<git-pull-all>>
+<<clone-repos>>
+<<python-setup>>
+<<racket-ontology>>
+<<racket-setup>>
+#+END_SRC
+
+See [[#developer-setup-code][Developer setup code]] in the appendix for the source for this block.
+*** Configuration files
+:PROPERTIES:
+:CUSTOM_ID: configuration-files
+:END:
+The config files for this section should have already been tangled
+to the correct locations when [[tangle-setup-org][setup.org was tangled]].
+If you want to see their source it is contained in the [[#config-templates][Config Templates appendix]]
+
+If the basic configuration files have been tangled correctly
+you should be able to run this block with =C-c C-c= and get results.
+#+name: test-basic-config
+#+begin_src bash :results output drawer
+scig t brain
+#+end_src
+
+At this point installation is complete. *Congratulations!*
+
+*You should log out and log back in to your window manager* so that any new terminal
+you open will have access to all the programs you just installed.
+Logout on the default ubuntu window manager is located in the upper right.
+
+*When you log back in* run the following command to start at the next step.
+# Yes, this is a hilarious chicken and egg problem, I know.
+# NOTE: cannot use line continuation because it breaks posix/powershell portability
+#+NAME: launch-setup-org-2
+#+CAPTION: Run the following to open this file in an executable form.
+#+BEGIN_SRC bash :exports code :eval never
+scimax --find-file ~/git/sparc-curation/docs/setup.org --eval "(add-hook 'window-setup-hook (lambda () (org-goto-section *section-accounts-and-api-access*)))"
+#+END_SRC
+
+When you exit emacs it may ask you if you want to save,
+say yes so that the logs of the install are saved.
+
+The [[#accounts-and-api-access][next section]] will walk you through the steps needed
+to get access to all the various systems holding different pieces of data that we need.
+*** Accounts and API access
+:PROPERTIES:
+:CUSTOM_ID: accounts-and-api-access
+:END:
+At this point you should open your =secrets.yaml= file
+so that you can edit it as you work through the next section where you will
+get the various API keys that you will need to replace the fake values
+(seen in the template below). Direct links per platform are listed below.
+Clicking on the link will open it in another buffer. While editing the file
+you can save using the file menu, =C-x C-s= (emacs keys), or =:w= (vim keys).
+
+| Linux   | [[file:${HOME}/.config/orthauth/secrets.yaml][~/.config/orthauth/secrets.yaml]]                                         |
+| Macos   | [[file:${HOME}/Library/Application Support/orthauth/secrets.yaml][~/Library/Application Support/orthauth/secrets.yaml]] |
+| Windows | [[file:${HOME}/AppData/Local/orthauth/secrets.yaml][~/AppData/Local/orthauth/secrets.yaml]]                             |
+
+_*When you are done* there should be *NO* entries with =*replace-me-with:= in the file._
+
+The notation =(-> key1 key2 key3)= indicates a path in the =secrets.yaml= file.
+In a yaml file this looks like the block below.
+Replace the =fake-value= with the real value you obtain in the following sections.
+#+CAPTION: yaml view of =(-> key1 key2 key3)=
+#+BEGIN_SRC yaml :eval never
+key1:
+  key2:
+    key3: fake-value
+#+END_SRC
+**** Blackfynn
+Once you have a Blackfynn account on the sparc org go to your
+[[https://app.blackfynn.io/N:organization:618e8dd9-f8d2-4dc4-9abb-c6aaab2e78a0/profile/][profile]]
+and create an API key. Put they key in =(-> blackfynn sparc key)= and the secret in =(-> blackfynn sparc secret)=.
+While you are there you should also connect your ORCiD (button at the bottom of the page).
+**** Google API
+Enable the [[https://console.developers.google.com/apis/library/sheets.googleapis.com][google sheets API]]
+from the [[https://console.developers.google.com][google api dashboard]]. If you need other APIs
+you can enable them via the [[https://console.developers.google.com/apis/library][library page]].
+
+*If you do not do this then at the end of the client flow you will receive a =invalid_clientUnauthorized= error.*
+
+The instructions below are probably incomplete/missing steps. \\
+
+Useful docs for =(-> google api creds-file)= \\
+https://developers.google.com/identity/protocols/OAuth2 \\
+https://developers.google.com/api-client-library/python/guide/aaa_oauth \\
+
+You will need to get API access for an OAuth client.
+1. https://console.developers.google.com/apis/credentials
+2. create credentials -> OAuth client ID
+3. Fill in the consent screen, you only need the Application name field.
+4. Download JSON
+5. Add the name of the downloaded JSON file to =(-> google api creds-file)=.
+6. Run the following \\
+   =googapis auth sheets= and \\
+   =googapis auth sheets --readonly=.
+
+Those commands will run the auth workflow and create the
+file specified at =(-> google api store-file)= for you.
+During the process you will be taken to (or need to paste
+a link to) a google login page to confirm that you want to
+give the google API project you created access to your account.
+# TODO fix these instructions
+**** Google sheets
+Get the document ids for the following.
+- =(-> google sheets sparc-master)=
+- =(-> google sheets sparc-consistency)=
+- =(-> google sheets sparc-affiliations)=
+- =(-> google sheets sparc-field-alignment)=
+
+Document id matches this pattern =https://docs.google.com/spreadsheets/d/{document_id}/edit=.
+**** protocols.io
+To get protocols.io API keys [[https://www.protocols.io/create][create an account]],
+login, and go to your [[https://www.protocols.io/developers][developer page]].
+You will need to set the redirect uri on that page to match the redirect uri
+in the json below.
+
+Use the information from that page to fill in a json file with the structure below.
+Add the full path to that json file to =(-> protocols-io api creds-file)= in secrets.yaml
+like you did for the google json file.
+#+CAPTION: protocols.io creds-file.json template
+#+BEGIN_SRC js
+{
+    "installed": {
+        "client_id": "pr_live_id_fake-client-id<<<",
+        "client_secret": "pr_live_sc_fake-client-secret<<<",
+        "auth_uri": "https://www.protocols.io/api/v3/oauth/authorize",
+        "token_uri": "https://www.protocols.io/api/v3/oauth/token",
+        "redirect_uris": [
+            "https://sparc.olympiangods.org/curation/"
+        ]
+    }
+}
+#+END_SRC
+You will be prompted for your protocols.io email and password the first
+time you run.
+**** Hypothes.is
+As your user Install the hypothesis client in chrome.
+#+CAPTION: open chrome to hypothesis extension install page
+#+BEGIN_SRC bash :results none
+google-chrome-stable https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek
+#+END_SRC
+To get Hypothes.is API keys [[https://web.hypothes.is/start/][create an account]],
+login, and go to your [[https://hypothes.is/account/developer][developer page]].
+
+Add your the API key to =(-> hypothesis api user-default-hypothesis)=
+**** SciGraph
+For some use cases you will need access to the SciCrunch production SciGraph endpoint.
+[[https://scicrunch.org/register][Register for an account]] and
+[[https://scicrunch.org/account/developer][get an api key]].
+Edit [[file:${HOME}/.config/pyontutils/config.yaml][config.yaml]]
+and update the =scigraph-api-key: path:= entry to point to =scicrunch api name-of-user-or-name-for-the-key=.
+Edit [[file:${HOME}/.config/orthauth/secrets.yaml][secrets.yaml]]
+and add the api key to =(-> scicrunch api name-of-user-or-name-for-the-key)=.
+** Developer extras
+*** Python debugger settings
+**** POSIX
+If you can use python3.7 (>=ubuntu-19.04) you can set the embedded debugger as follows.
+#+begin_src bash
+pip install --user pudb
+#+end_src
+
+Add the following to =~/.bashrc=.
+#+CAPTION: .bashrc extras
+#+begin_src bash
+export PYTHONBREAKPOINT=pudb.set_trace
+#+end_src
+**** Windows
+Sadly =pudb= doesn't support windows so we have to use =ipdb= instead.
+#+begin_src powershell
+pip install --user ipdb
+#+end_src
+
+Add the following to your powershell =$profile=.
+#+caption: powershell =$profile= extras
+#+begin_src powershell
+$Env:PYTHONBREAKPOINT = "ipdb.set_trace"
+#+end_src
+*** Prevent vim from removing xattrs
+[[file:${HOME}/.vimrc][~/.vimrc]] settings to prevent klobbering of xattrs
+#+CAPTION: .vimrc
+#+begin_src vimrc
+augroup HasXattrs
+ autocmd BufRead,BufNewFile * let x=system('getfattr ' . bufname('%')) | if len(x) | call HasXattrs() | endif
+augroup END
+
+function HasXattrs()
+ " don't create new inodes
+ setlocal backupcopy=yes
+endfunction
+#+end_src
+** One shot
+:PROPERTIES:
+:CUSTOM_ID: one-shot
+:VISIBILITY: folded
+:END:
+These bits are os specific setup instructions that need to be run as =root=.
+They only need to be run once.
+*** Gentoo
+#+CAPTION: /var/lib/portage/world
+#+BEGIN_SRC text
+app-editors/emacs
+app-editors/gvim
+app-text/texlive
+dev-vcs/git
+dev-scheme/racket
+dev-lisp/sbcl
+www-client/google-chrome-stable
+#+END_SRC
+*** Ubuntu
+18.10 cosmic cuttlefish (and presumably other debian derivatives)
+
+The following need to be run in a shell where you have root (e.g. via =sudo su -=). \\
+
+# Remind me, why is an ssh server not provided by default!?
+#+CAPTION: Must be done locally as root prior to remote execution. \\
+#+BEGIN_SRC bash :exports code :eval never
+apt install openssh-server net-tools
+#+END_SRC
+
+Add your ssh public key to [[file:${HOME}/.ssh/authorized_keys][~/.ssh/authorized_keys]]
+if you want to run this remotely.
+
+#+NAME: ubuntu-root-setup
+#+CAPTION: Can be run remotely as root.
+#+CAPTION: texlive-full is a big boy, minimal version is
+#+CAPTION: texlive texlive-luatex texlive-latex-extra  \\
+#+BEGIN_SRC bash :exports code :eval never
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' \
+>> /etc/apt/sources.list.d/google-chrome.list
+add-apt-repository ppa:plt/racket
+add-apt-repository ppa:kelleyk/emacs
+add-apt-repository ppa:pypy/ppa
+apt update
+apt install build-essential lib64readline-dev rxvt-unicode htop attr tree sqlite curl git
+apt install emacs26 vim-gtk3 texlive-full pandoc hunspell
+apt install librdf0-dev python3-dev python3-pip pypy3 jupyter racket sbcl r-base r-base-dev maven
+apt install inkscape gimp krita graphviz firefox google-chrome-stable xfce4
+apt install nginx
+update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 10
+#+END_SRC
+
+Ubuntu struggles to set user specific PATHs correctly via
+=~/.profile= This code works when the user logs in. It does not
+work correctly if you =su= to the user. Not entirely sure why.
+Doesn't work on xfce either apparently. The absolute madness.
+#+NAME: user-home-paths
+#+CAPTION: Set user home PATHs for all users to simplify later steps
+#+CAPTION: FIXME for some reason if this block is treated a source block it kills html export !?
+#+BEGIN_EXAMPLE
+{ cat <<EOL
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+EOL
+} > /etc/profile.d/user-home-paths.sh
+#+END_EXAMPLE
+
+Other software that you will probably need at some point but that is not packaged on ubuntu.
+- [[https://imagej.net/Fiji/Downloads][Fiji/ImageJ]]
+
+*** Windows
+**** Symlinks
+=augpathlib= makes extensive use of symlinks to store metadata for remote files
+that have not been downloaded. By default normal users cannot create symlinks on
+windows. The best way to fix this is by granting the user that will run sparcur
+permission to create symlinks (NOT to run the process as Administrator).
+
+Three relevant links:
+[[https://stackoverflow.com/questions/6260149/os-symlink-support-in-windows][stackoverflow]]
+[[https://superuser.com/questions/104845/permission-to-make-symbolic-links-in-windows-7][superuser]]
+[[https://dbondarchuk.com/2016/09/23/adding-permission-for-creating-symlink-using-powershell/][powershell script source]].
+
+*You will need to log out and log back in for the setting to take effect.*
+
+You can use =gpedit.msc= to grant these permissions by adding the user
+by navigating the menu tree below. You can run =gpedit.msc= directly
+with =Win-r= or often =Win gpedit enter=.
+
+#+begin_example
+Computer configuration
+└── Windows Settings
+    └── Security Settings
+        └── Local Policies
+            └── User Rights Assignment
+                Create symbolic links
+#+end_example
+
+Alternately you can define and run the function below as Administrator.
+Run it as =addSymLinkPermissions("user-to-add")=.
+
+#+begin_src powershell
+function addSymLinkPermissions($accountToAdd){
+    Write-Host "Checking SymLink permissions.."
+    $sidstr = $null
+    try {
+        $ntprincipal = new-object System.Security.Principal.NTAccount "$accountToAdd"
+        $sid = $ntprincipal.Translate([System.Security.Principal.SecurityIdentifier])
+        $sidstr = $sid.Value.ToString()
+    } catch {
+        $sidstr = $null
+    }
+    Write-Host "Account: $($accountToAdd)" -ForegroundColor DarkCyan
+    if( [string]::IsNullOrEmpty($sidstr) ) {
+        Write-Host "Account not found!" -ForegroundColor Red
+        exit -1
+    }
+    Write-Host "Account SID: $($sidstr)" -ForegroundColor DarkCyan
+    $tmp = [System.IO.Path]::GetTempFileName()
+    Write-Host "Export current Local Security Policy" -ForegroundColor DarkCyan
+    secedit.exe /export /cfg "$($tmp)" 
+    $c = Get-Content -Path $tmp 
+    $currentSetting = ""
+    foreach($s in $c) {
+        if( $s -like "SECreateSymbolicLinkPrivilege*") {
+            $x = $s.split("=",[System.StringSplitOptions]::RemoveEmptyEntries)
+            $currentSetting = $x[1].Trim()
+        }
+    }
+    if( $currentSetting -notlike "*$($sidstr)*" ) {
+        Write-Host "Need to add permissions to SymLink" -ForegroundColor Yellow
+        
+        Write-Host "Modify Setting ""Create SymLink""" -ForegroundColor DarkCyan
+
+        if( [string]::IsNullOrEmpty($currentSetting) ) {
+            $currentSetting = "*$($sidstr)"
+        } else {
+            $currentSetting = "*$($sidstr),$($currentSetting)"
+        }
+        Write-Host "$currentSetting"
+    $outfile = @"
+[Unicode]
+Unicode=yes
+[Version]
+signature="`$CHICAGO`$"
+Revision=1
+[Privilege Rights]
+SECreateSymbolicLinkPrivilege = $($currentSetting)
+"@
+    $tmp2 = [System.IO.Path]::GetTempFileName()
+        Write-Host "Import new settings to Local Security Policy" -ForegroundColor DarkCyan
+        $outfile | Set-Content -Path $tmp2 -Encoding Unicode -Force
+        Push-Location (Split-Path $tmp2)
+        try {
+            secedit.exe /configure /db "secedit.sdb" /cfg "$($tmp2)" /areas USER_RIGHTS 
+        } finally { 
+            Pop-Location
+        }
+    } else {
+        Write-Host "NO ACTIONS REQUIRED! Account already in ""Create SymLink""" -ForegroundColor DarkCyan
+        Write-Host "Account $accountToAdd already has permissions to SymLink" -ForegroundColor Green
+        return $true;
+    }
+}
+#+end_src
+**** ssh                                                           :optional:
+You can skip this if you will only be using the windows computer locally.
+In a local administrator powershell install OpenSSH. The rest can then be done remotely.
+#+begin_src powershell
+Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
+Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+Set-Service sshd -StartupType Automatic
+Start-Service sshd
+# add your ssh key to %programdata%\ssh\administrators_authorized_keys
+# disable password login in %programdata%\ssh\sshd_config
+Restart-Service sshd
+#+end_src
+**** Package manager
+For managing a windows development/curation environment I highly recommend using
+the [[https://chocolatey.org/][chocolatey]] package manager.
+[[https://chocolatey.org/install#install-with-powershellexe][Install chocolatey]].
+
+#+begin_src powershell :exports code :eval never
+choco install `
+autohotkey `
+clisp `
+emacs `
+firefox `
+GoogleChrome `
+poshgit `
+procexp `
+python `
+racket `
+vim
+#+end_src
+
+Update system Path to include packages that don't add themselves.
+This needs to be run as administrator.
+#+begin_src powershell :exports code :eval never
+$path = [Environment]::GetEnvironmentVariable("Path", [EnvironmentVariableTarget]::Machine)
+$prefix_path = "C:\Program Files\Racket;C:\Program Files\Git\cmd;C:\Program Files\Git\bin;"
+[Environment]::SetEnvironmentVariable("Path",
+                                      $prefix_path + $path,
+                                      [EnvironmentVariableTarget]::Machine)
+#+end_src
+
+If you are logged in remotely restarting sshd is the easiest way to refresh
+the environment so commands are in PATH. This is because new shells inherit the
+environment of sshd at the time that it was started.
+#+begin_src powershell :exports code :eval never
+Restart-Service sshd
+#+end_src
+You will need to reconnect to a new ssh session in order to have access to git and other
+newly installed commands.
+
+**** Manual install
+***** texlive
+https://www.tug.org/texlive/windows.html
+https://www.tug.org/texlive/acquire-netinstall.html
+http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe
+This takes quite a while, about 50 mins on a good connection with a fast computer.
+***** protege
+https://github.com/protegeproject/protege-distribution/releases/latest
+***** redland
+rdf tools
+http://librdf.org/raptor/INSTALL.html
+https://github.com/dajobe/raptor
+Unfortunately to get the latest version of these it seems you have to build them yourself.
+**** old                                                           :noexport:
+add to PATH so we can just link everything there
+=%HOMEPATH%\bin=
+=%APPDATA%\Python\Python37\Scripts=
+
+TODO =-l %HOMEPATH%/opt/scimax/init.el setup.org= in the shortcut ...
+also =%HOMEPATH%= for the start in ...
+*** OS X
+**** ssh                                                           :optional:
+You can skip this if you will only be using the osx computer locally.
+#+begin_src bash
+sudo systemsetup -setremotelogin on
+# scp your key over to ~/.ssh/authorized_keys
+# set PasswordAuthentication no in /etc/ssh/sshd_config
+# set ChallengeResponseAuthentication no in /etc/ssh/sshd_config
+sudo launchctl unload  /System/Library/LaunchDaemons/ssh.plist
+sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
+#+end_src
+**** Package manager
+[[https://brew.sh/][Install homebrew]].
+
+#+begin_src bash :exports code :eval never
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/5ecca39372cffdc4c9fbacee6e22328a0dc61eac/install)"
+brew cask install \
+emacs \
+firefox \
+gimp \
+google-chrome \
+inkscape \
+krita \
+mactex \
+macvim \
+protege \
+racket
+
+brew install \
+coreutils \
+curl \
+git \
+htop \
+hunspell \
+libmagic \
+pandoc \
+postgres \
+python \
+redland \
+rxvt-unicode \
+sbcl \
+sqlite \
+tree
+#+end_src
+
+Add the following to your ~/.bash_profile
+#+CAPTION: .bash_profile
+#+begin_src bash :exports code :eval never
+# This file is sourced by bash for login shells.  The following line
+# runs your .bashrc and is recommended by the bash info pages.
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+#+end_src
+
+Add the following to your ~/.bashrc
+#+CAPTION: .bashrc
+#+begin_src bash :exports code :eval never
+export PATH=${HOME}/bin:${HOME}/Library/Python/3.7/bin:${PATH}
+#+end_src
+
+Run the following to symlink python3 to python
+#+begin_src bash :eval never
+mkdir ~/bin
+ln -s /usr/local/bin/python3 ~/bin/python
+ln -s /usr/local/bin/pip3 ~/bin/pip
+#+end_src
+* Workflows
+** General
+*** Updating an installation
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+#+NAME: git-pull-all
+#+CAPTION: new features that you want to use? aka git pull all or =gpa= if implemented as a function
+#+BEGIN_SRC bash :results output :var REPOS=repos
+pushd ~/git
+for d in $(ls); do if [ -d $d/.git ]; then pushd $d; git pull || break; popd; fi; done
+popd
+#+END_SRC
+** SPARC
+*** WARNINGS
+1. *DO NOT USE* =cp -a= copy files with xattrs! \\
+   *INSTEAD* use =rsync -X -u -v=. \\
+   =cp= does not remove absent fields from xattrs of the file previously
+   occupying that name! OH NO (is this a =cp= bug!?)
+*** Get data
+:PROPERTIES:
+:CUSTOM_ID: get-data
+:VISIBILITY: folded
+:END:
+If you have never retrieved the data before run.
+#+CAPTION: first time per local network
+#+BEGIN_SRC bash :results none
+pushd ~/files/blackfynn_local/
+spc clone ${SPARC_ORG_ID} # initialize a new repo and pull existing structure
+scp refresh -f
+spc fetch  # actually download files
+spc find -n '*.xlsx' -n '*.csv' -n '*.tsv' -n '*.msexcel'  # see what to fetch
+spc find -n '*.xlsx' -n '*.csv' -n '*.tsv' -n '*.msexcel'-f  # fetch
+spc find -n '*.xlsx' -n '*.csv' -n '*.tsv' -n '*.msexcel'-f -r 10  # slow down you are seeing errors!
+#+END_SRC
+
+#+CAPTION: unfriendly refersh
+#+BEGIN_SRC bash :results none
+ls -Q | xargs -P10 -r -n 1 sh -c 'spc refresh -r 4 "${1}"'
+#+END_SRC
+
+#+CAPTION: friendly refersh
+#+BEGIN_SRC bash :results none
+find -maxdepth 1 -type d -name '[C-Z]*' -exec spc refresh -r 8 {} \;
+#+END_SRC
+
+#+CAPTION: find any stragglers
+#+BEGIN_SRC bash :results none
+find \( -name '*.xlsx' -o -name '*.csv' -o -name '*.tsv' \) -exec ls -hlS {} \+
+#+END_SRC
+
+Open the dataset page for all empty directories in the browser.
+#+begin_src bash
+find -maxdepth 1 -type d -empty -exec spc pull {} \+
+find -maxdepth 1 -type d -empty -exec spc meta -u --browser {} \+
+#+end_src
+
+# temp fix for summary making folders when it should skip
+#+CAPTION: clean up empty directories
+#+BEGIN_SRC bash :results none
+find -maxdepth 1 -type d -empty -exec rmdir {} \;
+#+END_SRC
+
+Pull local copy of data to a new computer. Note the double escape needed for the space.
+#+BEGIN_SRC bash :results none :eval never
+rsync -X -u -v -r -e ssh ${REMOTE_HOST}:/home/${DATA_USER}/files/blackfynn_local/SPARC\\\ Consortium ~/files/blackfynn_local/
+#+END_SRC
+=-X= copy extended attributes
+=-u= update files
+=-v= verbose
+=-r= recursive
+=-e= remote shell to use
+*** Fetch missing files
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+fetching a whole dataset or a subset of a dataset
+=spc ** -f=
+*** Export
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+#+CAPTION: export everything
+#+BEGIN_SRC bash
+pushd ${SPARCDATA}
+spc export
+popd
+#+END_SRC
+
+Setup as root
+#+begin_src bash :eval never
+mkdir -p /var/www/sparc/sparc/archive/exports/
+chown -R nginx:nginx /var/www/sparc
+#+end_src
+
+#+name: &sparc-export-to-server-function
+#+CAPTION: copy export to server location, run as root
+#+BEGIN_SRC bash :eval never
+# export vs exports, no wonder this is so confusing >_<
+function sparc-export-to-server () {
+    : ${SPARCUR_EXPORTS:=/var/lib/sparc/.local/share/sparcur/export}
+    EXPORT_BASE=${SPARCUR_EXPORTS}/N:organization:618e8dd9-f8d2-4dc4-9abb-c6aaab2e78a0/integrated/
+    FOLDERNAME=$(readlink ${EXPORT_BASE}/LATEST)
+    FULLPATH=${EXPORT_BASE}/${FOLDERNAME}
+    pushd /var/www/sparc/sparc
+    cp -a "${FULLPATH}" archive/exports/ && chown -R nginx:nginx archive && unlink exports ; ln -sT "archive/exports/${FOLDERNAME}" exports
+    popd
+    echo Export complete. Check results at:
+    echo fill-in-the-url-here
+}
+#+END_SRC
+*** Export and report
+You can't run this directly because the venvs create their own subshell.
+#+begin_src bash :dir "/ssh:cassava-sparc:~/files/test2/SPARC Curation" :eval never
+# git repos are in ~/files/venvs/sparcur-dev/git
+# use the development pull code
+source ~/files/venvs/sparcur-dev/bin/activate
+spc pull
+# switch to the production export pipeline
+source ~/files/venvs/sparcur-1/bin/activate
+spc export
+#+end_src
+
+#+begin_src bash :dir /ssh:cassava|sudo:cassava
+<<&sparc-export-to-server-function>>
+sparc-export-to-server
+#+end_src
+
+#+begin_src bash :eval never
+function fetch-and-run-reports () {
+    local FN="/tmp/curation-export-$(date -Is).json"
+    curl https://cassava.ucsd.edu/sparc/exports/curation-export.json -o "${FN}"
+    spc report all --sort-count-desc --to-sheets --export-file "${FN}"
+}
+fetch-and-run-reports
+#+end_src
+*** Reporting
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+#+CAPTION: reports
+#+BEGIN_SRC bash
+spc report completeness
+#+END_SRC
+
+#+CAPTION: reporting dashboard
+#+BEGIN_SRC bash
+spc server --latest --count
+#+END_SRC
+
+#+begin_src python
+keywords = sorted(set([k for d in asdf['datasets'] if 'meta' in d and 'keywords' in d['meta']
+                       for k in d['meta']['keywords']]))
+#+end_src
+*** Queries
+**** Human datasets queries
+#+name: human-datasets-queries
+#+begin_src python :results output drawer :exports both :eval no-export
+import rdflib
+from pyontutils.core import OntResIri
+from pyontutils.namespaces import sparc, TEMP, dc, rdfs
+
+ori = OntResIri('https://cassava.ucsd.edu/sparc/exports/curation-export.ttl')
+g = ori.graph
+gns = g.namespace_manager
+
+def fmt(s, u):
+    return f'[[{u}][{s.n3(gns)}]]'
+
+species = set([fmt(do, urih) for s, p, o in g
+              if isinstance(o, rdflib.Literal) and
+              ('human' in o.lower() or 'homo' in o.lower()) and
+              p == sparc.animalSubjectIsOfSpecies
+              for do in g[s:TEMP.hasDerivedInformationAsParticipant]
+              for urih in g[do:TEMP.hasUriHuman]])
+
+hlabel = set([fmt(s, urih) for s, p, o in g
+             if isinstance(o, rdflib.Literal) and
+             ('human' in o.lower() or 'homo' in o.lower()) and
+             p == rdfs.label
+             for urih in g[s:TEMP.hasUriHuman]])
+
+htitle = set([fmt(s, urih) for s, p, o in g
+              if isinstance(o, rdflib.Literal) and
+              ('human' in o.lower() or 'homo' in o.lower()) and
+              p == dc.title
+              for urih in g[s:TEMP.hasUriHuman]])
+
+htd = set([fmt(s, urih) for s, p, o in g
+           if isinstance(o, rdflib.Literal) and
+           ('human' in o.lower() or 'homo' in o.lower()) and
+           (p == dc.title or p == dc.description)
+           for urih in g[s:TEMP.hasUriHuman]])
+
+counts = dict(species=len(human),
+              label=len(hlabel),
+              title=len(htitle),
+              title_and_desc=len(htd))
+
+[print(_ + r' \\') for _ in ['species n= ' + str(counts['species'])] +
+sorted(species) +
+['label n= ' + str(counts['label'])] +
+sorted(hlabel) +
+['title n= ' + str(counts['title'])] +
+sorted(htitle) +
+['td n= ' + str(counts['title_and_desc'])] +
+sorted(htd)]
+#+end_src
+*** Archiving files with xattrs
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+=tar= is the only one of the 'usual' suspects for file archiving that
+supports xattrs, =zip= cannot.
+
+#+CAPTION: archive
+#+begin_src bash
+tar --force-local --xattrs -cvzf 2019-07-17T10\:44\:16\,457344.tar.gz '2019-07-17T10:44:16,457344/'
+#+end_src
+
+#+CAPTION: extract
+#+begin_src bash
+tar --force-local --xattrs -xvzf 2019-07-17T10\:44\:16\,457344.tar.gz
+#+end_src
+
+#+CAPTION: test
+#+begin_src bash
+find 2019-07-17T10\:44\:16\,457344 -exec getfattr -d {} \;
+#+end_src
+*** Other random commands
+**** Duplicate top level and ./.operations/objects
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+# TODO upgrade this into backup and duplication
+#+begin_src bash
+function sparc-copy-pull () {
+    : ${SPARC_PARENT:=${HOME}/files/blackfynn_local/}
+    local TODAY=$(date +%Y%m%d)
+    pushd ${SPARC_PARENT} &&
+        mv SPARC\ Consortium "SPARC Consortium_${TODAY}" &&
+        rsync -ptgo -A -X -d --no-recursive --exclude=* "SPARC Consortium_${TODAY}/"  SPARC\ Consortium &&
+        mkdir SPARC\ Consortium/.operations &&
+        mkdir SPARC\ Consortium/.operations/trash &&
+        rsync -X -u -v -r "SPARC Consortium_${TODAY}/.operations/objects" SPARC\ Consortium/.operations/ &&
+        pushd SPARC\ Consortium &&
+        spc pull || echo "spc pull failed"
+    popd
+    popd
+}
+#+end_src
+**** Simplified error report
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+#+CAPTION: simplified error report
+#+begin_src bash
+jq -r '[ .datasets[] |
+         {id: .id,
+          name: .meta.folder_name,
+          se: [ .status.submission_errors[].message ] | unique,
+          ce: [ .status.curation_errors[].message   ] | unique } ]' curation-export.json
+#+end_src
+**** File extensions
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+***** List all file extensions
+Get a list of all file extensions.
+#+begin_src bash
+find -type l -o -type f | grep -o '\(\.[a-zA-Z0-9]\+\)\+$' | sort -u
+#+end_src
+***** Get ids with files matching a specific extension
+Arbitrary information about a dataset with files matching a pattern.
+The example here gives ids for all datasets that contain xml files.
+Nesting =find -exec= does not work so the first pattern here uses shell
+globing to get the datasets.
+#+begin_src bash
+function datasets-matching () {
+    for d in */; do
+        find "$d" \( -type l -o -type f \) -name "*.$1" \
+        -exec getfattr -n user.bf.id --only-values "$d" \; -printf '\n' -quit ;
+    done
+}
+#+end_src
+***** Fetch files matching a specific pattern
+Fetch files that have zero size (indication that fetch is broken).
+#+begin_src bash
+find -type f -name '*.xml' -empty -exec spc fetch {} \+
+#+end_src
+**** Sort of manifest generation
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+This is slow, but prototypes functionality useful for the curators.
+#+begin_src bash
+find -type d -not -name 'ephys' -name 'ses-*' -exec bash -c \
+'pushd $1 1>/dev/null; pwd >> ~/manifest-stuff.txt; spc report size --tab-table ./* >> ~/manifest-stuff.txt; popd 1>/dev/null' _ {} \;
+#+end_src
+**** Path ids
+This one is fairly slow, but is almost certainly i/o limited due to having to read the xattrs.
+Maintaining the backup database of the mappings would make this much faster.
+#+begin_src bash
+# folders and files
+find . -not -type l -not -path '*operations*' -exec getfattr -n user.bf.id --only-values {} \; -print
+# broken symlink format, needs work, hard to parse
+find . -type l -not -path '*operations*' -exec readlink -n {} \; -print
+#+end_src
+**** Path counts per dataset
+#+begin_src bash
+for d in */; do printf "$(find "${d}" -print | wc -l) "; printf "$(getfattr --only-values -n user.bf.id "${d}") ${d}\n" ; done | sort -n
+#+end_src
+** SODA
+Have to clone [[https://github.com/bvhpatel/SODA][SODA]] and fetch the files for testing.
+#+header: :var parent_folder="~/files/blackfynn_local/"
+#+header: :var path="./SPARC Consortium/The effect of gastric stimulation location on circulating blood hormone levels in fasted anesthetized rats/source/pool-r1009"
+#+begin_src python :dir ~/git/SODA/src/pysoda :results drawer output
+from pprint import pprint
+import pysoda
+from sparcur.paths import Path
+p = Path(parent_folder, path).expanduser().resolve()
+children = list(p.iterdir())
+blob = pysoda.create_folder_level_manifest(
+    {p.resolve().name: children},
+    {k.name + '_description': ['some description'] * len(children)
+     for k in [p] + list(p.iterdir())})
+manifest_path = Path(blob[p.name][-1])
+manifest_path.xopen()
+pprint(manifest_path)
+#+end_src
+** Developer
+See also the [[file:./developer-guide.org][sparcur developer guild]]
+*** Releases
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+**** DatasetTemplate
+Commit any changes and push to master.
+
+#+begin_src bash
+make-template-zip () {
+    local CLEANROOM=/tmp/cleanroom/
+    mkdir ${CLEANROOM} || return 1
+    pushd ${CLEANROOM}
+    git clone https://github.com/SciCrunch/sparc-curation.git &&
+    pushd ${CLEANROOM}/sparc-curation/resources
+    zip -r DatasetTemplate.zip DatasetTemplate
+    mv DatasetTemplate.zip ${CLEANROOM}
+    popd
+    rm -rf ${CLEANROOM}/sparc-curation
+    popd
+}
+make-template-zip
+#+end_src
+
+Once that is done open /tmp/cleanroom/DatasetTemplate.zip in =file-roller= or similar
+and make sure everything is as expected.
+
+Create the GitHub release. The tag name should have the format =dataset-template-1.1= where
+the version number should match the metadata version embedded in
+[[file:../resources/DatasetTemplate/dataset_description.xlsx][dataset_description.xlsx]].
+Minor versions such as =dataset-template-1.2.1= are allowed.
+
+Attach =${CLEANROOM}/DatasetTemplate.zip= as a release asset.
+Update
+https://github.com/Blackfynn/docs.sparc.science/blob/master/pages/data_submission/submit_data.md
+https://github.com/Blackfynn/docs.sparc.science/blob/master/pages/sparc_portal/sparc_data_format.md
+and
+with the new link.
+[[file:../../docs.sparc.science/pages/data_submission/submit_data.md][Link to the local copy.]]
+[[file:../../docs.sparc.science/pages/sparc_portal/sparc_data_format.md][Link to the local copy.]]
+*** Getting to know the codebase
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+Use =inspect.getclasstree= along with =pyontutils.utils.subclasses=
+to display hierarchies of classes.
+#+begin_src python :results output verbatim org
+      from inspect import getclasstree
+      from pyontutils.utils import subclasses
+      from IPython.lib.pretty import pprint
+
+      # classes to inspect
+      import pathlib
+      from sparcur import paths
+
+      def class_tree(root):
+          return getclasstree(list(subclasses(root)))
+
+      pprint(class_tree(pathlib.PurePosixPath))
+#+end_src
+
+#+RESULTS:
+#+begin_src org
+    [(pathlib.Path, (pathlib.PurePath,)),
+     [(pathlib.PosixPath, (pathlib.Path, pathlib.PurePosixPath)),
+      [(AugmentedPath, (pathlib.PosixPath,)),
+       [(CachePath, (AugmentedPath,)),
+        [(PrimaryCache, (CachePath,)),
+         [(BlackfynnCache,
+           (PrimaryCache, XattrCache)),
+          (SshCache,
+           (PrimaryCache, XattrCache))],
+         (SqliteCache, (CachePath,)),
+         (SymlinkCache, (CachePath,)),
+         (XattrCache,
+          (CachePath, XattrPath)),
+         [(BlackfynnCache,
+           (PrimaryCache, XattrCache)),
+          (SshCache,
+           (PrimaryCache, XattrCache))]],
+        (XattrPath, (AugmentedPath,)),
+        [(LocalPath, (XattrPath,)),
+         [(Path, (LocalPath,))],
+         (XattrCache,
+          (CachePath, XattrPath)),
+         [(BlackfynnCache,
+           (PrimaryCache, XattrCache)),
+          (SshCache,
+           (PrimaryCache, XattrCache))]]]]],
+     (pathlib.PurePosixPath, (pathlib.PurePath,)),
+     [(pathlib.PosixPath, (pathlib.Path, pathlib.PurePosixPath)),
+      [(AugmentedPath, (pathlib.PosixPath,)),
+       [(CachePath, (AugmentedPath,)),
+        [(PrimaryCache, (CachePath,)),
+         [(BlackfynnCache,
+           (PrimaryCache, XattrCache)),
+          (SshCache,
+           (PrimaryCache, XattrCache))],
+         (SqliteCache, (CachePath,)),
+         (SymlinkCache, (CachePath,)),
+         (XattrCache,
+          (CachePath, XattrPath)),
+         [(BlackfynnCache,
+           (PrimaryCache, XattrCache)),
+          (SshCache,
+           (PrimaryCache, XattrCache))]],
+        (XattrPath, (AugmentedPath,)),
+        [(LocalPath, (XattrPath,)),
+         [(Path, (LocalPath,))],
+         (XattrCache,
+          (CachePath, XattrPath)),
+         [(BlackfynnCache,
+           (PrimaryCache, XattrCache)),
+          (SshCache,
+           (PrimaryCache, XattrCache))]]]]]]
+#+end_src
+*** Viewing logs
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+View the latest log file with colors using =less=.
+#+begin_src bash
+less -R $(ls -d ~sparc/files/blackfynn_local/export/log/* | tail -n 1)
+#+end_src
+For a permanent fix for =less= add
+#+begin_src bash
+alias less='less -R'
+#+end_src
+*** Debugging terminal pipeline errors
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+You have an error!
+#+begin_src python
+maybe_size = c.cache.meta.size  # << AttributeError here
+#+end_src
+
+Modify to wrap code
+#+begin_src python
+try:
+    maybe_size = c.cache.meta.size
+except AttributeError as e:
+    breakpoint()  # << investigate error
+#+end_src
+
+Temporary squash by logging as an exception with optional explanation
+#+begin_src python
+try:
+    maybe_size = c.cache.meta.size
+except AttributeError as e:
+    log.exception(e)
+    log.error(f'explanation for error and local variables {c}')
+#+end_src
+*** Dataset removed
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+If a dataset is removed, just move it manually to trash IF it is clear that it
+was supposed to be removed, otherwise to consult the curation team. You can confirm
+that it was actually removed by checking Blackfynn directly using DATASETID from
+the error trace.
+#+begin_src 
+spc meta -u "$(spc goto ${DATASETID})"
+#+end_src
+
+Example trace.
+#+begin_src 
+Future exception was never retrieved
+future: <Future finished exception=Exception("No dataset matching name or ID 'N:dataset:83e0ebd2-dae2-4ca0-ad6e-81eb39cfc053'.",)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/var/lib/sparc/git/pyontutils/pyontutils/utils.py", line 416, in <lambda>
+    generator = (lambda:list(limited_gen(chunk, smooth_offset=(i % lc)/lc, time_est=time_est, debug=debug, thread=i))  # this was the slowdown culpret
+  File "/var/lib/sparc/git/pyontutils/pyontutils/utils.py", line 455, in limited_gen
+    yield element()
+  File "/var/lib/sparc/git/pyontutils/pyontutils/utils.py", line 376, in inner
+    return function(*args, **kwargs)
+  File "/var/lib/sparc/git/sparc-curation/sparcur/paths.py", line 1156, in refresh
+    size_limit_mb=size_limit_mb)
+  File "/var/lib/sparc/git/sparc-curation/sparcur/backends.py", line 816, in refresh
+    old_meta = self.meta
+  File "/var/lib/sparc/git/sparc-curation/sparcur/backends.py", line 872, in meta
+    return PathMeta(size=self.size,
+  File "/var/lib/sparc/git/sparc-curation/sparcur/backends.py", line 603, in size
+    if isinstance(self.bfobject, File):
+  File "/var/lib/sparc/git/sparc-curation/sparcur/backends.py", line 401, in bfobject
+    bfobject = self._api.get(self._seed)
+  File "/var/lib/sparc/git/sparc-curation/sparcur/blackfynn_api.py", line 795, in get
+    thing = self.bf.get_dataset(id)  # heterogenity is fun!
+  File "/var/lib/sparc/.local/lib/python3.6/site-packages/blackfynn/client.py", line 231, in get_dataset
+    raise Exception("No dataset matching name or ID '{}'.".format(name_or_id))
+Exception: No dataset matching name or ID 'N:dataset:83e0ebd2-dae2-4ca0-ad6e-81eb39cfc053'.
+sparc@cassava:~/files/blackfynn_local/SPARC Consortium$ spc goto 'N:dataset:83e0ebd2-dae2-4ca0-ad6e-81eb39cfc053'
+Hackathon Team Materials
+sparc@cassava:~/files/blackfynn_local/SPARC Consortium$ mv Hackathon\ Team\ Materials ../.trash/
+sparc@cassava:~/files/blackfynn_local/SPARC Consortium$ spc pull
+#+end_src
+* Variables :noexport:
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+If you make any changes to this section be sure to run =#+SRC= and =#+CALL:= blocks below.
+
+GitHub repositories
+#+NAME: tgbugs-repos
+| augpathlib idlib hyputils orthauth ontquery parsercomb pyontutils protc rrid-metadata rkdf orgstrap |
+#+NAME: sci-repos
+| NIF-Ontology scibot sparc-curation |
+#+NAME: other-repos
+| Ophirr33/pda zussitarze/qrcode |
+
+Repository local roots. The ordering of the entries matters.
+#+NAME: py-roots
+| augpathlib idlib pyontutils/htmlfn pyontutils/ttlser hyputils orthauth ontquery parsercomb pyontutils pyontutils/nifstd pyontutils/neurondm protc/protcur sparc-curation scibot |
+#+NAME: rkt-roots
+| qrcode/ pda/ protc/protc-lib protc/protc-tools-lib protc/protc protc/protc-tools rkdf/rkdf-lib rkdf/rkdf rrid-metadata/rrid NIF-Ontology/ |
+
+** Make repos
+#+NAME: repos-code
+#+HEADER: :var trl=tgbugs-repos srl=sci-repos orl=other-repos
+#+BEGIN_SRC python :results value :eval no-export
+from itertools import chain
+urs = chain((('tgbugs', r) for tr in trl for rs in tr for r in rs.split(' ')),
+            (('SciCrunch', r) for sr in srl for rs in sr for r in rs.split(' ')),
+            (ur.split('/') for o_r in orl for urs in o_r for ur in urs.split(' ')))
+#print(trl, srl, orl)
+#print(list(urs))  # will express the generator so there will be no result
+
+out = []
+for user, repo in urs:
+    out.append(f'https://github.com/{user}/{repo}')
+return [' '.join(out)]
+#+END_SRC
+
+#+NAME: repos
+#+RESULTS: repos-code
+| https://github.com/tgbugs/augpathlib https://github.com/tgbugs/idlib https://github.com/tgbugs/hyputils https://github.com/tgbugs/orthauth https://github.com/tgbugs/ontquery https://github.com/tgbugs/parsercomb https://github.com/tgbugs/pyontutils https://github.com/tgbugs/protc https://github.com/tgbugs/rrid-metadata https://github.com/tgbugs/rkdf https://github.com/tgbugs/orgstrap https://github.com/SciCrunch/NIF-Ontology https://github.com/SciCrunch/scibot https://github.com/SciCrunch/sparc-curation https://github.com/Ophirr33/pda https://github.com/zussitarze/qrcode |
+
+** Variables testing
+#+CAPTION: testing
+#+HEADER: :var REPOS=repos PYROOTS=py-roots RKTROOTS=rkt-roots
+#+BEGIN_SRC bash
+for repo in ${REPOS}; do echo ${repo}; done
+echo '-------------'
+for repo in ${PYROOTS}; do echo ${repo}; done
+echo '-------------'
+for repo in ${RKTROOTS}; do echo ${repo}; done
+#+END_SRC
+** Remote exports code
+#+NAME: remote-exports-code
+#+CAPTION: export commands to set if running remotely via copy and paste
+#+HEADER: :var REPOS=repos PYROOTS=py-roots RKTROOTS=rkt-roots
+#+BEGIN_SRC bash :results output code example :exports results :eval no-export
+echo export REPOS="'"
+printf "$(echo ${REPOS} | tr ' ' '\n')"
+echo
+echo "'"
+echo export PYROOTS="'"
+printf "$(echo ${PYROOTS} | tr ' ' '\n')"
+echo
+echo "'"
+echo export RKTROOTS="'"
+printf "$(echo ${RKTROOTS} | tr ' ' '\n')"
+echo
+echo "'"
+#+END_SRC
+
+#+RESULTS: remote-exports-code
+#+begin_src bash
+export REPOS='
+https://github.com/tgbugs/augpathlib
+https://github.com/tgbugs/idlib
+https://github.com/tgbugs/hyputils
+https://github.com/tgbugs/orthauth
+https://github.com/tgbugs/ontquery
+https://github.com/tgbugs/parsercomb
+https://github.com/tgbugs/pyontutils
+https://github.com/tgbugs/protc
+https://github.com/tgbugs/rrid-metadata
+https://github.com/tgbugs/rkdf
+https://github.com/tgbugs/orgstrap
+https://github.com/SciCrunch/NIF-Ontology
+https://github.com/SciCrunch/scibot
+https://github.com/SciCrunch/sparc-curation
+https://github.com/Ophirr33/pda
+https://github.com/zussitarze/qrcode
+'
+export PYROOTS='
+augpathlib
+idlib
+pyontutils/htmlfn
+pyontutils/ttlser
+hyputils
+orthauth
+ontquery
+parsercomb
+pyontutils
+pyontutils/nifstd
+pyontutils/neurondm
+protc/protcur
+sparc-curation
+scibot
+'
+export RKTROOTS='
+qrcode/
+pda/
+protc/protc-lib
+protc/protc-tools-lib
+protc/protc
+protc/protc-tools
+rkdf/rkdf-lib
+rkdf/rkdf
+rrid-metadata/rrid
+NIF-Ontology/
+'
+#+end_src
+* Appendix
+:PROPERTIES:
+:CUSTOM_ID: appendix
+:END:
+** Code
+*** Config Templates
+:PROPERTIES:
+:CUSTOM_ID: config-templates
+:VISIBILITY: folded
+:END:
+=~/.config/pyontutils/config.yaml=
+#+name: pyontutils-config-defaults
+#+caption: [[file:${HOME}/.config/pyontutils/config.yaml][~/.config/pyontutils/config.yaml]]
+#+header: :export neither
+#+begin_src yaml :tangle (when (and (fboundp 'user-config-path) (not (file-exists-p (user-config-path "pyontutils/config.yaml")))) (user-config-path "pyontutils/config.yaml")) :mkdirp yes
+auth-stores:
+  secrets:
+    path: '{:user-config-path}/orthauth/secrets.yaml'
+auth-variables:
+  curies:
+  git-local-base: ~/git
+  git-remote-base:
+  google-api-creds-file:
+    path: google api creds-file
+  google-api-store-file:
+    path: google api store-file
+  google-api-store-file-readonly:
+    path: google api store-file-readonly
+  nifstd-checkout-ok:
+  ontology-local-repo:
+  ontology-org:
+  ontology-repo:
+  patch-config:
+  resources:
+  scigraph-api: https://scigraph.olympiangods.org/scigraph
+  scigraph-api-key:
+  scigraph-graphload:
+  scigraph-services:
+  zip-location:
+#+end_src
+
+=~/.config/sparcur/config.yaml=
+#+name: sparcur-config-defaults
+#+caption: [[file:${HOME}/.config/sparcur/config.yaml][~/.config/sparcur/config.yaml]]
+#+header: :export neither
+#+begin_src yaml :tangle (when (and (fboundp 'user-config-path) (not (file-exists-p (user-config-path "sparcur/config.yaml")))) (user-config-path "sparcur/config.yaml")) :mkdirp yes
+auth-stores:
+  secrets:
+    path: '{:user-config-path}/orthauth/secrets.yaml'
+auth-variables:
+  blackfynn-organization:
+  cache-path:
+  export-path:
+  hypothesis-api-key: hypothesis api default-user
+  hypothesis-group: hypothesis group sparc-curation
+  hypothesis-user:
+  log-path:
+  protocols-io-api-creds-file: protocols-io api creds-file
+  protocols-io-api-store-file: protocols-io api store-file
+#+end_src
+
+=~/.config/orthauth/secrets.yaml=
+#+name: secrets-template
+#+caption: [[file:${HOME}/.config/orthauth/secrets.yaml][~/.config/orthauth/secrets.yaml]]
+#+header: :tangle-mode (identity #o600)
+#+begin_src yaml :tangle (when (and (fboundp 'user-config-path) (not (file-exists-p (user-config-path "orthauth/secrets.yaml")))) (user-config-path "orthauth/secrets.yaml")) :mkdirp yes
+blackfynn:
+  sparc:
+    key: *replace-me-with:your-blackfynn-api-key*
+    secret: *replace-me-with:your-blackfynn-api-secret*
+google:
+  api:
+    creds-file: *replace-me-with:/path/to/creds-file.json*
+    store-file: google-api-token-rw.pickle
+    store-file-readonly: google-api-token.pickle
+  sheets:
+    sparc-consistency: *replace-me-with:document-hash-id*
+    sparc-master: *replace-me-with:document-hash-id*
+    sparc-affiliations: *replace-me-with:document-hash-id*
+    sparc-field-alignment: *replace-me-with:document-hash-id*
+    spc-reports: *replace-me-with:document-hash-id*
+    anno-tags: *replace-me-with:document-hash-id*
+hypothesis:
+  api:
+    user-default-hypothesis: *replace-me-with:your-hypothesis-api-key*
+  group:
+    sparc-curation: *replace-me-with:sparc-curation-group-id*
+protocols-io:
+  api:
+    creds-file: *replace-me-with:/path/to/creds-file.json*
+    store-file: protocols-io-api-token-rw.pickle
+#+end_src
+*** Bootstrap code
+:PROPERTIES:
+:CUSTOM_ID: bootstrap-code
+:VISIBILITY: folded
+:END:
+**** user.el
+Tangle the following blocks with =C-c C-v C-t= in vanilla emacs or paste it into scimax's
+#+NAME: scimax-user-preload
+#+begin_src elisp :exports code :eval never :tangle ~/opt/scimax/user/preload.el
+;; silence ob-ipython complaining about missing command
+;; THIS CAN CAUSE RUNTIME ERRORS
+(setq ob-ipython-html-to-image-program "/dev/null")
+#+end_src
+#+NAME: scimax-user-config
+#+CAPTION: Needed to get sane behavior for executing this file out of the box.
+#+BEGIN_SRC emacs-lisp :exports code :eval never :noweb yes :tangle ~/opt/scimax/user/user.el
+;; requires
+(require 'cl)  ;; needed for case
+
+;; org goto heading
+(defun org-goto-section (heading)
+  "\`heading' should be a string matching the desired heading"
+  (goto-char (org-find-exact-headline-in-buffer heading)))
+
+;; workaround for powershell cmd windows braindead handling of strings
+(defvar *section-per-user-setup* "Per user setup")
+(defvar *section-accounts-and-api-access* "Accounts and API access")
+
+;; recenter a line set using --eval to be at the top of the buffer
+(add-hook 'emacs-startup-hook (lambda () (recenter-top-bottom 0)))
+
+;; line numbers so it is harder to get lost in a big file
+(when (>= emacs-major-version 26)
+  (setq display-line-numbers-grow-only 1)
+  (global-display-line-numbers-mode 1))
+
+;; open setup.org symlink without prompt
+(setq vc-follow-symlinks 1)
+
+;; sane python indenting
+(setq-default indent-tabs-mode nil)
+(setq tab-width 4)
+(setq org-src-preserve-indentation nil)
+(setq org-src-tab-acts-natively nil)
+
+;; don't hang on tlmgr since it is broken on ubuntu
+(setq scimax-installed-latex-packages t)
+
+;; save command history
+(setq history-length t)
+(savehist-mode 1)
+(setq savehist-additional-variables '(kill-ring search-ring regexp-search-ring))
+
+;; racket
+(when (fboundp 'use-package)
+  (use-package racket-mode
+    :mode "\\.ptc\\'" "\\.rkt\\'" "\\.sxml\\'"
+    :bind (:map racket-mode-map
+                ("<f5>" . recompile-quietly))
+    :init
+    (defun my/buffer-local-tab-complete ()
+      "Make \`tab-always-indent' a buffer-local variable and set it to 'complete."
+      (make-local-variable 'tab-always-indent)
+      (setq tab-always-indent 'complete))
+    (defun rcc ()
+      (set (make-local-variable 'compile-command)
+           (format "raco make %s" (file-name-nondirectory buffer-file-name))))
+    (add-hook 'racket-mode-hook 'rcc)
+    (add-hook 'racket-mode-hook 'hs-minor-mode)
+    (add-hook 'racket-mode-hook 'goto-address-mode)
+    (add-hook 'racket-mode-hook 'my/buffer-local-tab-complete)
+    (add-hook 'racket-repl-mode-hook 'my/buffer-local-tab-complete)))
+
+;; config paths
+
+(defun config-paths (&optional os)
+  (case (or os system-type)
+    ;; ucp udp uchp ulp
+    (gnu/linux '("~/.config"
+                 "~/.local/share"
+                 "~/.cache"
+                 "~/.cache/log"))
+    (darwin '("~/Library/Application Support"
+              "~/Library/Application Support"
+              "~/Library/Caches"
+              "~/Library/Logs"))
+    (windows-nt (let ((ucp "~/AppData/Local"))
+                  (list ucp ucp ucp (concat ucp "/Logs"))))
+    (otherwise (error (format "Unknown OS %s" (or os system-type))))))
+
+(eval-when-compile (defvar *config-paths* (config-paths)))
+
+(defun fcp (position &optional suffix)
+  (let ((base-path (funcall position *config-paths*)))
+    (if suffix
+        (format "%s/%s" base-path suffix)
+      base-path)))
+
+(defun user-config-path (&optional suffix) (fcp #'first  suffix))
+(defun user-data-path   (&optional suffix) (fcp #'second suffix))
+(defun user-cache-path  (&optional suffix) (fcp #'third  suffix))
+(defun user-log-path    (&optional suffix) (fcp #'fourth suffix))
+
+;; vim bindings if you need them
+;; if undo-tree fails to install for strange reasons M-x list-packages C-s undo-tree
+;; to manually install, mega gnu elpa weirdness
+(setq evil-want-keybinding nil)
+(when (fboundp 'use-package)
+  (require 'scimax-evil))
+#+END_SRC
+**** scimax launch scripts
+#+name: scimax-cmd-windows
+#+begin_src powershell :eval never :tangle (when (eq system-type 'windows-nt) "~/bin/scimax.ps1")
+emacs -q -l ~/opt/scimax/init.el $args
+#+end_src
+#+name: scimax-cmd-posix
+#+header: :shebang "#!/usr/bin/env bash"
+#+begin_src bash :eval never :tangle (when (not (eq system-type 'windows-nt)) "~/bin/scimax") :tangle-mode (identity #o755)
+emacs -q -l ~/opt/scimax/init.el $@
+#+end_src
+*** Developer setup code
+:PROPERTIES:
+:CUSTOM_ID: developer-setup-code
+:VISIBILITY: folded
+:END:
+#+NAME: environment-sanity-checks
+#+BEGIN_SRC bash :results output :eval no-export
+# implicit check for bash by being able to run this block at all
+
+# git check on the off chance that we made it here without cloning this repo
+git --version || exit 1
+
+# python version check
+python -c "print('python ok') if __import__('sys').version_info.major >= 3 else __import__('sys').exit(1)" || exit 2
+pip --version || exit 3
+
+# git email check
+[[ -n "$(git config --list | grep user.email)" ]] || exit 4
+#+END_SRC
+
+#+NAME: clone-repos
+#+CAPTION: Clone all required git repositories.
+#+HEADER: :var REPOS=repos
+#+BEGIN_SRC bash :results output :eval no-export
+pushd ~/git
+for repo_url in ${REPOS}; do git clone ${repo_url}.git 2>&1; done
+popd
+#+END_SRC
+
+#+NAME: python-setup
+#+CAPTION: Set up all python repositories so that they can be used from git.
+#+CAPTION: This also installs missing python dependencies to =~/.local/lib*/python*/site-packages=.
+#+HEADER: :var PYROOTS=py-roots
+#+BEGIN_SRC bash :results output :eval no-export
+[ -z $VIRTUAL_ENV ] || pip install --user wheel  # if in a venv wheel will be missing
+pushd ~/git
+for repo in ${PYROOTS}; do pushd ${repo}; pip install --user --editable . 2>&1 || break; popd; done
+popd
+#+END_SRC
+
+#+NAME: racket-ontology
+#+CAPTION: Convert ontology and build as module for racket.
+#+CAPTION: This will take a bit of time to run. \\
+#+BEGIN_SRC bash :results output :eval no-export
+ln -s ~/git/rkdf/bin/ttl-to-rkt ~/bin/ttl-to-rkt
+ln -s ~/git/rkdf/bin/rkdf-convert-all ~/bin/rkdf-convert-all
+pushd ~/git/NIF-Ontology
+git checkout dev
+rkdf-convert-all
+git checkout master
+popd
+#+END_SRC
+
+#+NAME: racket-setup
+#+CAPTION: Install racket packages and dependencies. \\
+#+HEADER: :var RKTROOTS=rkt-roots
+#+BEGIN_SRC bash :results output :eval no-export
+pushd ~/git
+raco pkg install --skip-installed --auto --batch ${RKTROOTS} 2>&1
+popd
+#+END_SRC
+*** Remote exports
+:PROPERTIES:
+:CUSTOM_ID: appendix-remote-exports
+:VISIBILITY: folded
+:END:
+Paste the results of this block into your shell if you are running
+the code from this file by pasting it into a terminal.
+
+_*NOTE: DO NOT EDIT THE CODE BELOW IT WILL BE OVERWRITTEN.*_
+#+CALL: remote-exports-code()
+
+#+NAME: remote-exports
+#+HEADER: :eval never
+#+RESULTS:
+#+begin_src bash
+export REPOS='
+https://github.com/tgbugs/augpathlib
+https://github.com/tgbugs/idlib
+https://github.com/tgbugs/hyputils
+https://github.com/tgbugs/orthauth
+https://github.com/tgbugs/ontquery
+https://github.com/tgbugs/parsercomb
+https://github.com/tgbugs/pyontutils
+https://github.com/tgbugs/protc
+https://github.com/tgbugs/rrid-metadata
+https://github.com/tgbugs/rkdf
+https://github.com/tgbugs/orgstrap
+https://github.com/SciCrunch/NIF-Ontology
+https://github.com/SciCrunch/scibot
+https://github.com/SciCrunch/sparc-curation
+https://github.com/Ophirr33/pda
+https://github.com/zussitarze/qrcode
+'
+export PYROOTS='
+augpathlib
+idlib
+pyontutils/htmlfn
+pyontutils/ttlser
+hyputils
+orthauth
+ontquery
+parsercomb
+pyontutils
+pyontutils/nifstd
+pyontutils/neurondm
+protc/protcur
+sparc-curation
+scibot
+'
+export RKTROOTS='
+qrcode/
+pda/
+protc/protc-lib
+protc/protc-tools-lib
+protc/protc
+protc/protc-tools
+rkdf/rkdf-lib
+rkdf/rkdf
+rrid-metadata/rrid
+NIF-Ontology/
+'
+#+end_src
