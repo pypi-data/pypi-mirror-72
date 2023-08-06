@@ -1,0 +1,3 @@
+[console_scripts]
+image_embeddings = image_embeddings.cli.main:main
+
