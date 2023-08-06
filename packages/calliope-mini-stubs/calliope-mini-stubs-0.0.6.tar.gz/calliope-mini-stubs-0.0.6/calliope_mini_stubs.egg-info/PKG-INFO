@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: calliope-mini-stubs
+Version: 0.0.6
+Summary: Provide stubs with documentation for the MicroPython running on Calliope Mini
+Home-page: https://github.com/kopp/calliope-mini-stubs
+Author: kopp
+License: UNKNOWN
+Description: # CalliopeMini Stubs
+        
+        Use this library to develop your python programs for the
+        [Calliope Mini](https://calliope.cc/)
+        using a state-of-the-art python IDE such as
+        [Visual Studio Code](https://code.visualstudio.com/)
+        on your computer.
+        
+        This library only helps by providing documentation, type annotations and
+        function signatures.
+        It does not contain a simulator/emulator and it does not allow to transfer the
+        developed code to the Calliope Mini.
+        
+        
+        
+        Please see
+        [the repository on GitHub](https://github.com/kopp/calliope-mini-stubs)
+        for how a simple step-by-step instruction how to use it.
+            
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
