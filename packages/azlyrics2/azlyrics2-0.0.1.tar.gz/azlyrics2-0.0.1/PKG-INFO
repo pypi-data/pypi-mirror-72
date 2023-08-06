@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: azlyrics2
+Version: 0.0.1
+Summary:  Extends azlyrics 'API' and CLI program to fetch lyrics from azlyrics
+Home-page: https://github.com/bngom/azlyrics
+Author: Barthelemy NGOM
+Author-email: barthe.ngom@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent

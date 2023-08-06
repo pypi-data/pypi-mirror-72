@@ -1,0 +1,11 @@
+README.md
+setup.py
+azlyrics2.egg-info/PKG-INFO
+azlyrics2.egg-info/SOURCES.txt
+azlyrics2.egg-info/dependency_links.txt
+azlyrics2.egg-info/entry_points.txt
+azlyrics2.egg-info/requires.txt
+azlyrics2.egg-info/top_level.txt
+mydemo/__init__.py
+mydemo/azlyrics2.py
+mydemo/exceptions.py
