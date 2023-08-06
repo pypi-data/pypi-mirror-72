@@ -1,0 +1,15 @@
+README.md
+setup.py
+pyndex/__init__.py
+pyndex/core/__init__.py
+pyndex/core/algorithm.py
+pyndex/core/index.py
+pyndex/util/__init__.py
+pyndex/util/_decorator.py
+pyndex/util/diff.py
+pyndex/util/join.py
+pyndex_fin.egg-info/PKG-INFO
+pyndex_fin.egg-info/SOURCES.txt
+pyndex_fin.egg-info/dependency_links.txt
+pyndex_fin.egg-info/requires.txt
+pyndex_fin.egg-info/top_level.txt
