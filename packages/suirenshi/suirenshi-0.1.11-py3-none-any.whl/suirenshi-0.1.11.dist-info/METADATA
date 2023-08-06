@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: suirenshi
+Version: 0.1.11
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: opencv-python (>=4.1.1.26)
+Requires-Dist: scikit-image (>=0.16.2)
+Requires-Dist: numpy (>=1.17.4)
+Requires-Dist: grpcio (>=1.29.0)
+Requires-Dist: grpcio-tools (>=1.29.0)
+Requires-Dist: protobuf (>=3.12.2)
+
+UNKNOWN
+
+
