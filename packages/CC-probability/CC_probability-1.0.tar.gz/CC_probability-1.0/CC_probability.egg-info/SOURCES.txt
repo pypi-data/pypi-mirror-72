@@ -1,0 +1,10 @@
+setup.py
+CC_probability/Binomialdistribution.py
+CC_probability/Gaussiandistribution.py
+CC_probability/Generaldistribution.py
+CC_probability/__init__.py
+CC_probability.egg-info/PKG-INFO
+CC_probability.egg-info/SOURCES.txt
+CC_probability.egg-info/dependency_links.txt
+CC_probability.egg-info/not-zip-safe
+CC_probability.egg-info/top_level.txt
