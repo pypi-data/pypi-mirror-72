@@ -1,0 +1,3 @@
+[console_scripts]
+pydnsviz = pydnsviz.main:entrypoint
+
