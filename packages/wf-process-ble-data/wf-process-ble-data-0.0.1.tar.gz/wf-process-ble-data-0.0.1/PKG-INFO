@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: wf-process-ble-data
+Version: 0.0.1
+Summary: Tools for fetching, processing, visualizing, and analyzing Wildflower BLE data
+Home-page: https://github.com/WildflowerSchools/wf-process-ble-data
+Author: Theodore Quinn
+Author-email: ted.quinn@wildflowerschools.org
+License: UNKNOWN
+Description: # process_ble_data
+        
+        Tools for fetching, processing, visualizing, and analyzing Wildflower BLE data
+        
+Keywords: Bluetooth,BLE,localization
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python

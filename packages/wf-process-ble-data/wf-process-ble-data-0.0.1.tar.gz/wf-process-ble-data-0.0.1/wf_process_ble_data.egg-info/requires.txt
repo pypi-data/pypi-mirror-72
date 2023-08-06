@@ -1,0 +1,8 @@
+wf-minimal-honeycomb-python>=0.5.1
+wf-smcmodel-localize>=0.0.1
+pandas>=1.0.5
+numpy>=1.19.0
+tqdm>=4.46.1
+matplotlib>=3.2.2
+seaborn>=0.10.1
+python-slugify>=4.0.0
