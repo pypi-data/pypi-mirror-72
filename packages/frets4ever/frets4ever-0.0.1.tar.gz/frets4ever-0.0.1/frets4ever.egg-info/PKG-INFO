@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: frets4ever
+Version: 0.0.1
+Summary: The best and briggtest new way to locate the major scale
+Home-page: https://github.com/pypa/sampleproject
+Author: Chase
+Author-email: ccochran@trek10.com
+License: UNKNOWN
+Description: Read it!
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
