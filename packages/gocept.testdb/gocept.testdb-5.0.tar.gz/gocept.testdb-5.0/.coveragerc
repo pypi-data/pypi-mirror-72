@@ -1,0 +1,19 @@
+[run]
+branch = True
+source = gocept.testdb
+
+[report]
+precision = 2
+exclude_lines =
+    pragma: no cover
+    raise NotImplementedError
+fail_under = 94.0
+
+[html]
+directory = coverage-report
+
+[paths]
+source =
+   src/gocept/testdb
+   .tox/*/lib/python*/site-packages/gocept/testdb
+   .tox/pypy*/site-packages/gocept/testdb
