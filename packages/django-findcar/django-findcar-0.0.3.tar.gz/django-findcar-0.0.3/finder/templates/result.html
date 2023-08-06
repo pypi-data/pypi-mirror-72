@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <div>
+        <h2>We predict your image is a</h2>
+        <h2>{{predictedLabel}}</h2>
+        <div class="img_div">
+            <img src={{imagePath}} alt='Uploaded Image' class='image'>
+        </div>
+        <br>
+        <div class="plot_div">
+            <img src={{plotImagePath}} alt='Confidence Values' class='plot'>
+        </div>
+    </div>
+</html>

@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+recursive-include finder/static *
+recursive-include finder/templates *
+recursive-include carfinder *
+recursive-include ml *
