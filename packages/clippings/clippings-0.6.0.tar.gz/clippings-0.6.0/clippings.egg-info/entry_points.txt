@@ -1,0 +1,3 @@
+[console_scripts]
+clippings = clippings.parser:main
+
