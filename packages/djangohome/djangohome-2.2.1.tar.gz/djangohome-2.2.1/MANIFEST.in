@@ -1,0 +1,6 @@
+include LICENSE
+include README.md
+include requirements.txt
+recursive-include djangohome/migrations *
+recursive-include djangohome/templates/djangoadmin/djangohome *
+recursive-include djangohome/views *
