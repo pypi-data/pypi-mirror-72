@@ -1,0 +1,15 @@
+xsec/__init__.py,sha256=UDsi9_ddrW62cp2QTfeQViTSzb4sOrtDA1zFXRqTXKE,1007
+xsec/evaluation.py,sha256=5PZq09Xx8uILUvNguvHM8y35JGAwUM70k-uiZXf4iP8,15880
+xsec/features.py,sha256=Z0Wu7ThegCP-3VnAfyezSB5fRe_z1ecxxouNETk0wjc,13434
+xsec/gploader.py,sha256=hnCfyXUaRiqTCYZBdkEvOMPU6s4pNnkEb2Re5zyOwxg,18113
+xsec/kernels.py,sha256=XXbbG_nAnARNTZk_n7W13wAH8VQv60z3n7IhrXWQobQ,4866
+xsec/parameters.py,sha256=ZumFg7bCcaZqAt8vQBMbwyiyqBTiE5ysJfqIzE1QSu0,21966
+xsec/utils.py,sha256=s49V7QknHIleLvp7ShkSYhdEIIB-28P8ub5157bjR9Y,18164
+xsec-1.0.0.data/scripts/xsec,sha256=Lw2w1uZXLvnE7BYFd5dNyaa-Mo2hx8nHd8x9HU5OF2I,9346
+xsec-1.0.0.data/scripts/xsec-download-gprocs,sha256=xMjP5OjopUwOrdMKM5eKCagTRCARcJmJ4ena3HB6LMU,7900
+xsec-1.0.0.data/scripts/xsec-test,sha256=5HUHFWjCVHfxJAJjgoXrb7rSP4c3eRv9TUU6Td2iKS0,1816
+xsec-1.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+xsec-1.0.0.dist-info/METADATA,sha256=alLvFJkp5MD9qGHw-jAwYQzAZRU0pn2TJ3I9ahSd9JI,1112
+xsec-1.0.0.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+xsec-1.0.0.dist-info/top_level.txt,sha256=uL-ysu8MRETNP1O9jtEL0K1WFwuqvbk33rhA4ssDaZ8,5
+xsec-1.0.0.dist-info/RECORD,,
