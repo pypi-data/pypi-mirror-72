@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+juneanalytics/__init__.py
+juneanalytics/version.py
+juneanalytics.egg-info/PKG-INFO
+juneanalytics.egg-info/SOURCES.txt
+juneanalytics.egg-info/dependency_links.txt
+juneanalytics.egg-info/requires.txt
+juneanalytics.egg-info/top_level.txt

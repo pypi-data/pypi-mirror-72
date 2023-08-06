@@ -1,0 +1,30 @@
+Metadata-Version: 1.2
+Name: juneanalytics
+Version: 1.0.1
+Summary: Integrate June into any python application.
+Home-page: https://github.com/June-Analytics/june-python
+Author: June
+Author-email: ferruccio@june.so
+Maintainer: June
+Maintainer-email: ferruccio@june.so
+License: MIT License
+Description: 
+        June is simple product analytics. juneanalytics is the python package.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
