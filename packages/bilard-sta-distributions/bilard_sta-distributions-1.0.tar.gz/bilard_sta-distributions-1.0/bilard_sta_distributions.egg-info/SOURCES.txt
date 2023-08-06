@@ -1,0 +1,10 @@
+setup.py
+bilard_sta-distributions/Binomialdistribution.py
+bilard_sta-distributions/Gaussiandistribution.py
+bilard_sta-distributions/Generaldistribution.py
+bilard_sta-distributions/__init__.py
+bilard_sta_distributions.egg-info/PKG-INFO
+bilard_sta_distributions.egg-info/SOURCES.txt
+bilard_sta_distributions.egg-info/dependency_links.txt
+bilard_sta_distributions.egg-info/not-zip-safe
+bilard_sta_distributions.egg-info/top_level.txt
