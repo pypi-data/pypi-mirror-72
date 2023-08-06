@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: AGDPK
+Version: 1.0.0
+Summary: a advanced geoscience data processing kit.
+Home-page: UNKNOWN
+Author: Viktor Xu
+Author-email: viktorxu@qq.com
+Maintainer: Viktor Xu
+Maintainer-email: viktorxu@qq.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: Windows
+Platform: Ubuntu
+Requires: GDAL
+Requires: imageio
+Requires: numpy
+Requires: tqdm
