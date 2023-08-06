@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: detectem
+Version: 0.7.2
+Summary: Detect software in websites.
+Home-page: https://github.com/alertot/detectem
+Author: Claudio Salazar
+Author-email: csalazar@spect.cl
+License: MIT
+Keywords: detector detection
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Requires-Dist: click (==7.0)
+Requires-Dist: click-log (==0.3.2)
+Requires-Dist: docker (==4.1.0)
+Requires-Dist: parsel (==1.5.2)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: zope.interface (==4.7.1)
+
+UNKNOWN
+
+
