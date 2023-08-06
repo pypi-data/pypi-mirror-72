@@ -1,0 +1,47 @@
+## My Calculator
+
+This package computes the various computations of Maths like :
+* Greatest Common Divisor
+* Lowest Common Multiple
+* Reducing Fraction
+
+## Installations
+__Through pypi package__
+``` Shell
+$ pip install my-calculator
+```
+
+__From Source__
+``` Shell
+$ git clone git@github.com:ghimireadarsh/My-Calculator.git
+$ cd My-Calculator
+$ pip install . 
+```
+
+## Usage
+After the package is installed, several operation can be performed like:
+
+__Greatest Common Divisor__
+``` Python
+from my_calculator import Calculator
+Calculator.gcd(10,12)
+# Output : 2
+```
+
+__Lowest Common Multiple__
+``` Python
+from my_calculator import Calculator
+Calculator.lcm(10,12)
+# Output : 60
+```
+
+__Fraction reducer__
+``` Python
+from my_calculator import Calculator
+Calculator.reduce_fraction(10,12)
+# Output : (5,6)
+```
+### TO DO:
+1. License info addition
+2. Contributor info addition
+3. Other comuptation addition and their corresponding info addition
