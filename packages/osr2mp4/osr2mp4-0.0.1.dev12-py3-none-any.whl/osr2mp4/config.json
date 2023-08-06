@@ -1,0 +1,16 @@
+{
+    "osu! path": "/Users/yuitora./Documents/osu!.app/Contents/Resources/drive_c/osu!",
+    "Skin path": "/Users/yuitora./Documents/osu!.app/Contents/Resources/drive_c/osu!/Skins/Cookiezi 33 2018-09-02",
+    "Beatmap path": "/Users/yuitora./Documents/osu!.app/Contents/Resources/drive_c/osu!/Songs/540028 Mili - world.execute(me);/",
+    ".osr path": "/Users/yuitora./Documents/osu!.app/Contents/Resources/drive_c/osu!/Replays/yuitora_-_Mili_-_world.executeme_Makars_test_2019-12-06_Osu-1.osr",
+    "Default skin path": "",
+    "Output path": "/Users/yuitora./Documents/\u0431\u0432\u0433\u0434 \u0436\u0437\u043a \u043b\u043c\u043d \u043f\u0440\u0441/output.avi",
+    "Width": 1280,
+    "Height": 720,
+    "FPS": 60,
+    "Start time": 0.0,
+    "End time": 5,
+    "Video codec": "XVID",
+    "Process": 2,
+    "ffmpeg path": "ffmpeg"
+}
