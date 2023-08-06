@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+coordinates_hub/cli.py
+coordinates_hub/utils.py
+coordinateshub.egg-info/PKG-INFO
+coordinateshub.egg-info/SOURCES.txt
+coordinateshub.egg-info/dependency_links.txt
+coordinateshub.egg-info/entry_points.txt
+coordinateshub.egg-info/requires.txt
+coordinateshub.egg-info/top_level.txt
