@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: shellctx
+Version: 0.1.0
+Summary: shell context helper
+Home-page: http://github.com/serwy/shellctx
+Author: Roger D. Serwy
+Author-email: roger.serwy@gmail.com
+License: GNU GPLv3
+Description: shellctx - shell context helper
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Topic :: System :: Shells
+Classifier: Topic :: Utilities
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
