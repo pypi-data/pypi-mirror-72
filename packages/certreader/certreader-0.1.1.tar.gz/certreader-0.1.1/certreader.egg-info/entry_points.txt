@@ -1,0 +1,4 @@
+[console_scripts]
+certreader2json = certreader.cli:to_json
+certreader2yaml = certreader.cli:to_yaml
+
