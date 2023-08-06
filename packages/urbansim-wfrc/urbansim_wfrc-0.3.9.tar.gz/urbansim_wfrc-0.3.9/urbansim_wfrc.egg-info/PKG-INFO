@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: urbansim-wfrc
+Version: 0.3.9
+Summary: Urbansim library originally by Paul Waddell, customized by WFRC Analytics
+Home-page: https://github.com/WFRCAnalytics/urbansim-wfrc
+Author: WFRC_Analytics
+Author-email: jreynolds@wfrc.org
+License: UNKNOWN
+Description: This is WFRC's modified version of Urbansim by Paul Waddell. We claim no ownership of this codebase, please direct any Urbansim related questions to https://github.com/udst/urbansim
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.6
