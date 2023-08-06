@@ -1,0 +1,33 @@
+<mjml>
+    <mj-head>
+        <mj-font name="Noto Sans" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" />
+    </mj-head>
+    <mj-body>
+        <mj-section background-color="#f0f0f0">
+            <mj-column>
+                <mj-text font-style="bold" font-size="20px">
+                    Jellyfin
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section>
+            <mj-column>
+                <mj-text font-size="15px" font-family="Noto Sans, Helvetica, Arial, sans-serif">
+                    <p>Hi,</p>
+                    <h2>You've been invited to Jellyfin.</h2>
+                    <p>To join, click the button below.</p>
+                    <p>This invite will expire on {{ expiry_date }}, at {{ expiry_time }}, which is in {{ expires_in }}, so act quick.</p>
+                </mj-text>
+                <mj-button href="{{ invite_link }}">Setup your account</mj-button>
+            </mj-column>
+        </mj-section>
+        <mj-section background-color="#f0f0f0">
+            <mj-column>
+                <mj-text font-style="italic" font-size="10px">
+                    {{ message }}
+                </mj-text>
+            </mj-column>
+        </mj-section>
+    </body>
+</mjml>
+
