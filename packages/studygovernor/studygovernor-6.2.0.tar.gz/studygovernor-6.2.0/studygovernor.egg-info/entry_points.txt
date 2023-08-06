@@ -1,0 +1,13 @@
+[console_scripts]
+studygov-config = studygovernor.__main__:config_from_file
+studygov-create-experiment = studygovernor.__main__:create_experiment
+studygov-create-subject = studygovernor.__main__:create_subject
+studygov-db-clean = studygovernor.__main__:db_clean
+studygov-db-init = studygovernor.__main__:db_init
+studygov-manager = studygovernor.__main__:flask_manager
+studygov-parse-pontiac = studygovernor.__main__:parse_pontiac_dump
+studygov-run-callback = studygovernor.__main__:run_callback
+studygov-test-data = studygovernor.__main__:test_data
+studygov-workflow-init = studygovernor.__main__:workflow_init
+studygov-workflow-visualize = studygovernor.__main__:visualize_workflow
+

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% from "_macros.html" import collapse_card_start, collapse_card_end %}
+{% block content %}
+
+
+<h1>Subject {{ subject.label}} </h1>
+
+{{ collapse_card_start("Subject Information", show=True)}}
+    <dl class="dl-horizontal">
+      <dt>id</dt>
+      <dd>{{ subject.id }}</dd>
+
+      <dt>label</dt>
+      <dd>{{ subject.label }}</dd>
+
+      <dt>date of birth</dt>
+      <dd>{{ subject.date_of_birth }}</dd>
+
+      {% if subject.external_ids %}
+      <dt>external ids</dt>
+      <dd><p>
+        {% for external_system, external_id in subject.external_ids.items() %}
+        <span class="badge badge-success">{{ external_system }}: {{ external_id }}</span>
+        {% endfor %}
+      </p></dd>
+      {% endif %}
+    </dl>
+{{ collapse_card_end("Subject Information")}}
+
+{% if subject.experiments %}
+{{ collapse_card_start("Experiments", show=True, data_count=subject.experiments|length) }}
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>id</th>
+          <th>label</th>
+          <th>scan date</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for experiment in subject.experiments | sort(attribute='id') %}
+        <tr>
+          <td>
+            <a href="{{ url_for('web.web_experiment', id=experiment.id) }}">
+              {{experiment.id}}
+            </a>
+          </td>
+          <td>
+            <a href="{{ url_for('web.web_experiment', id=experiment.id) }}">
+              {{experiment.label}}
+            </a>
+          </td>
+          <td>{{experiment.scandate}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+{{ collapse_card_end("Experiments") }}
+{% endif %}
+
+{% endblock %}

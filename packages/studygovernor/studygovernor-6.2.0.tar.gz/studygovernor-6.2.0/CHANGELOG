@@ -1,0 +1,135 @@
+Changelog
+=========
+
+All notable changes to this project will be documented in this file.
+
+The format is based on `Keep a Changelog <http://keepachangelog.com/>`_
+and this project adheres to `Semantic Versioning <http://semver.org/>`_
+
+
+6.2.0 - 2020-07-02
+------------------
+
+
+Added
+~~~~~
+
+- Workflow version to state view and state/workflow view
+
+
+Changed
+~~~~~~~
+
+
+- Revamped the way the external systems work, which fixes a lot of problems.
+- The fastr_pipeline_launcher is now using python3 and fastr/3.2.0 to run pipelines.
+- Adds set_state to the studygovernor client.
+
+
+Fixed
+~~~~~
+
+- The PIDB callback is working with the newer versions of the PIDB tool.
+
+
+
+6.1.0 - 2020-03-27
+------------------
+
+Added
+~~~~~
+
+- Multiple workflows: Multiple worflows can co-exist next to each other
+- Views for monitoring the co-existing workflows
+
+
+6.0.1 - 2020-01-30
+------------------
+
+Fixed
+~~~~~
+
+- Python 2to3 bug in the studygov-workflow-visualisation CLI tool.
+
+
+6.0.0 - 2020-01-27
+------------------
+
+Added
+~~~~~
+
+- Adds Role Based access and user management, please see the documentation.
+- Added support for python 3.6 or greater
+- Added health metric end-points
+- Added api versioning
+- Testing using pytest and tox
+- Migrations
+- Automated docker build/upload to registry.gitlab.com/radiology/infrastructure/study-governor
+- Example docker-compose file (cant be found in docker directory)
+- CI on Gitlab
+
+
+Changed
+~~~~~
+
+- The api has been moved from /data to /api/v1
+- Refactored the api to make use of blueprints for versioning and portability
+- Refactored the config to make use of ``python-dotenv`` for configuration via ``.env`` files
+- Refactored the config to make use of environment variables prefixed with ``STUDYGOV``, ``FLASK`` or ``SQLALCHEMY``
+- Refactored the app creation process by injecting the app into the extensions on create time instead of on import time.
+- Changed the way the app is loaded by making use of ``.env`` and ``.flaskenv`` files. Run the app from now on via ``flask run``.
+- This package is renamed from syncotron to studygovernor
+- jinja2_highlight is replaced by prism
+- Moved the repository to Gitlab
+
+
+Removed
+~~~~~
+
+- Removed support for python 3.5 or lesser.
+- Removed the pontiac data library from this repository. (And moved it to the appropriate project repo).
+
+
+3.0.0 - 2018-10-24
+----------
+
+Added
+~~~~~
+
+- Adds workflow visualization based on GraphViz with colors
+- Can add a freetext entry in the ``/data/experiments/<id>/state`` put method
+- Adds a send mail callback function
+- Added Dockerfile + bibucket-pipeline.yml for automated docker builds
+
+Changed
+~~~~~~~
+
+- Changing the state via ``/data/experiments/<id>/state`` now accepts both state
+  as ``/data/states/<id-or-label>`` as well as just ``<id-or-label>``
+- The error response in ``/data/experiments/<id>/state`` now marshals properly
+- The /data/subjects/id api is now accepting a ``filter_field`` argument in a
+  query string. You can force to filter on ``id`` or ``label``
+- Show external subject id links in subject template
+- Added variable $SUBJECT_ID to create_task callback for use in base tasks
+
+
+Fixed
+~~~~~
+
+- Added Flask-Script to the requirements in order for the flask manager to work.
+- Added params attribute to the get method of the SyncotronSession class.
+- Fixed deprecated imports to flask-script and flask-migrate.
+
+
+
+
+2.0.0 - 2017-06-26
+------------------
+
+Added
+~~~~~
+
+- Web frontend
+- Swagger documentation for REST API
+- Sentry.io support
+

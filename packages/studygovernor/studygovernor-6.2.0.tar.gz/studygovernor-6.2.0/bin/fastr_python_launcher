@@ -1,0 +1,13 @@
+#!/bin/bash
+source /etc/profile.d/modules.sh
+
+module unload fastr
+module unload python
+module load fastr/3.2.3
+module load sge
+
+PYTHON_BIN=`which python3`
+echo "Using python from $PYTHON_BIN"
+echo "PYTHONPATH=$PYTHONPATH"
+echo "FASTRHOME=$FASTRHOME"
+$PYTHON_BIN "$@"

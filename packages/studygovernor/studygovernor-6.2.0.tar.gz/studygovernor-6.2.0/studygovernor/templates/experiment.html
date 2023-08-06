@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% from "_macros.html" import collapse_card_start, collapse_card_end %}
+{% block content %}
+
+
+<h1>Experiment {{ experiment.label}} </h1>
+
+    {{ collapse_card_start("Info") }}
+      <dl class="row">
+        <dt class="col-sm-3">id</dt>
+        <dd class="col-sm-9">{{ experiment.id }}</dd>
+
+        <dt class="col-sm-3">label</dt>
+        <dd class="col-sm-9">{{ experiment.label }}</dd>
+
+        <dt class="col-sm-3">subject</dt>
+        <dd class="col-sm-9">
+          <a href="{{url_for('web.web_subject', id=experiment.subject.id) }}">
+            [{{ experiment.subject.id }}] {{ experiment.subject.label }}
+          </a>
+        </dd>
+
+        {% if experiment.external_experiment_links %}
+        <dt class="col-sm-3">external ids</dt>
+        <dd class="col-sm-9"><p>
+          {% for external_exp in experiment.external_experiment_links %}
+          <span class="badge badge-primary">{{ external_exp.external_system.system_name }}: {{ external_exp.external_id }}</span>
+          {% endfor %}
+        </p></dd>
+        {% endif %}
+
+        <dt class="col-sm-3">scan date</dt>
+        <dd class="col-sm-9">{{ experiment.scandate }}</dd>
+
+        <dt class="col-sm-3">state</dt>
+        <dd class="col-sm-9">
+          <a href="{{url_for('web.web_state', id=experiment.state.id) }}">
+            [{{ experiment.state.id }}] {{ experiment.state.label }}
+          </a>
+        </dd>
+
+      </dl>
+    {{ collapse_card_end("Info") }}
+
+{% if experiment.actions %}
+    {{ collapse_card_start("Actions", data_count=experiment.actions|length) }}
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>id</th>
+          <th>time</th>
+          <th>start state</th>
+          <th>end state</th>
+          <th>callback success</th>
+          <th>callback finished</th>
+          <th>description</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for action in experiment.actions | sort(attribute='id')  %}
+        <tr>
+          <td>
+            <a href="{{url_for('web.web_action', id=action.id) }}">
+              {{action.id}}
+            </a>
+          </td>
+          <td>{{action.start_time}}</td>
+          <td>
+            <a href="{{url_for('web.web_state', id=action.transition.source_state.id) }}">
+              [{{action.transition.source_state.id}}] {{action.transition.source_state.label}}
+            </a>
+          </td>
+          <td>
+            <a href="{{url_for('web.web_state', id=action.transition.destination_state.id) }}">
+              [{{action.transition.destination_state.id}}] {{action.transition.destination_state.label}}
+            </a>
+          </td>
+          <td>
+            <span class="badge badge-{{ 'success' if action.success else 'danger' }}">
+              {{action.success}}
+            </span>
+          </td>
+          <td>{{action.end_time}}</td>
+          <td>{{action.freetext}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {{ collapse_card_end("Actions") }}
+{% endif %}
+
+{% endblock %}
