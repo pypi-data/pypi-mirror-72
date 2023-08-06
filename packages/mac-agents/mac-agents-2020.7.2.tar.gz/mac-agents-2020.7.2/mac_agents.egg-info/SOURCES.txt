@@ -1,0 +1,9 @@
+requirements.txt
+setup.py
+mac_agents/__init__.py
+mac_agents/create.py
+mac_agents.egg-info/PKG-INFO
+mac_agents.egg-info/SOURCES.txt
+mac_agents.egg-info/dependency_links.txt
+mac_agents.egg-info/requires.txt
+mac_agents.egg-info/top_level.txt
