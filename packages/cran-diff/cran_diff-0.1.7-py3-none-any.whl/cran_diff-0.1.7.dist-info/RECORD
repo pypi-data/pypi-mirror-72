@@ -1,0 +1,9 @@
+cran_diff/__init__.py,sha256=_AfsFDoQwPxL4LaZhNnuTt6Sd4zLICQjZk9ruyK20vM,463
+cran_diff/cran_diff.py,sha256=P-oaNvpwgy34zpPnxUbpy8Ghpfe2o1ct7K191djIPzs,23618
+cran_diff/cran_parser.py,sha256=Uk7TM5FRS73VdC48EIOqmNBtE2OuA6W59p63ciAmIG0,20236
+cran_diff/models.py,sha256=f5IlCv0TYKm0vrGDD_tI2L7dHKu6BOnuI8GvkPJEB4Y,2918
+cran_diff/populate_db.py,sha256=xFHKWR6YVB4aMRvESSfyIVjvxRJKVoWcy2G206vHnZA,36593
+cran_diff/rcom.py,sha256=KCMjv_UCHIVg0nThQZUVUJ8vz5OsPb5qnGGtYQblxNU,2341
+cran_diff-0.1.7.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+cran_diff-0.1.7.dist-info/METADATA,sha256=p9BwGg06sMsY-R4xvrmIVAHDWFOi6fAGKHhdM37uGVo,453
+cran_diff-0.1.7.dist-info/RECORD,,
