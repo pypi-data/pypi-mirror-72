@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+npm_register_cli.egg-info/PKG-INFO
+npm_register_cli.egg-info/SOURCES.txt
+npm_register_cli.egg-info/dependency_links.txt
+npm_register_cli.egg-info/top_level.txt
+scripts/npm-register
