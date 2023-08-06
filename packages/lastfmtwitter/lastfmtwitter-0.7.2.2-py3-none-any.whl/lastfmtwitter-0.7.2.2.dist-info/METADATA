@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: lastfmtwitter
+Version: 0.7.2.2
+Summary: Post your top weekly or yearly scrobbled artists to twitter.
+Home-page: http://server.ericsbinaryworld.com/gpl_code/lastfmtwitter/index.html
+Author: Eric Mesa
+Author-email: eric@ericmesa.com
+License: GPLv3
+Keywords: twitter,lastfm
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/x-rst
+Requires-Dist: argparse
+Requires-Dist: pylast
+Requires-Dist: twitter
+
+=====
+Usage
+=====
+
+First you need to get app API credentials from last.fm and twitter. 
+
+Then you need to create a secrets.json file with the following format:
+
+.. code-block:: JSON
+
+    {"lastfm":
+                {"key": "alphanumeric",
+                "secret": "alphanumeric"},
+    "twitter":
+            {"consumer_key": "alphanumeric",
+            "consumer_secret": "alphanumeric",
+            "token_key": "alphanumeric-alphanumeric",
+            "token_secret": "alphanumeric"}
+
+Currently you need to use the -j or --json option to link to a secrets file with your API secrets for last.fm and twitter.            
+
+After installation via pip, you can run python -m lastfmtwitter.lastfm_twitter
+
+usage: python -m lastfmtwitter.lastfm_twitter [-h] [-w | -y] [-j JSON]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -w, --weekly          post your top weekly artists (default)
+  -y, --yearly          post your top yearly artists
+  -j JSON, --json JSON  optional path to secrets.json file with api keys
+
+For more documentation, visit: http://server.ericsbinaryworld.com/gpl_code/lastfmtwitter/index.html
+
+
