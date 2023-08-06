@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pysplitter
+Version: 0.0.2
+Summary: A python package that splits large files into smaller chunks.
+Home-page: https://github.com/marktodisco/pysplit
+Author: Mark Todisco
+Author-email: mark.todisco@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+# pysplit
+
+A python package that splits large files into small chunks. This package is
+useful for overcoming GitHub's 100MB upload limit.
+
+
+
