@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+EnsembleBench/__init__.py
+EnsembleBench/diversityMetrics.py
+EnsembleBench/groupMetrics.py
+EnsembleBench/teamSelection.py
+EnsembleBench.egg-info/PKG-INFO
+EnsembleBench.egg-info/SOURCES.txt
+EnsembleBench.egg-info/dependency_links.txt
+EnsembleBench.egg-info/requires.txt
+EnsembleBench.egg-info/top_level.txt
