@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: play_store_scrapper
+Version: 1.0.0
+Summary: A python package to scrape data from Google Play Store using Selenium
+Home-page: https://github.com/cstayyab/play-store-scrapper
+Author: Muhammad Tayyab Sheikh
+Author-email: cstayyab@gmail.com
+License: UNKNOWN
+Description: # Play Store Scrapper
+        Using this package you can easily scrap data from Google Play Store.
+        
+        ## Installation
+        ```
+        pip install play-store-scrapper
+        ```
+        ### Environment Variables
+        Set the following Environment variables before running.
+        
+        `GECKO_DRIVER_PATH` Path to Gecko Web Driver  (You also need Firefox to run this. For now no other browser option is added)
+        
+        ## Usage
+        ```python
+        from play_store_scapper import PlayStore
+        store = PlayStore()
+        store.get_app_detail("com.cstayyab.beemy")
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

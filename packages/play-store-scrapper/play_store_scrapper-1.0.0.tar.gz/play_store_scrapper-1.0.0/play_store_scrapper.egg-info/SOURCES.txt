@@ -1,0 +1,11 @@
+README.md
+setup.py
+play_store_scrapper/__init__.py
+play_store_scrapper/store.py
+play_store_scrapper.egg-info/PKG-INFO
+play_store_scrapper.egg-info/SOURCES.txt
+play_store_scrapper.egg-info/dependency_links.txt
+play_store_scrapper.egg-info/top_level.txt
+play_store_scrapper/internals/__init__.py
+play_store_scrapper/internals/elements.py
+play_store_scrapper/internals/regex_helper.py
