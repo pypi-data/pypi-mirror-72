@@ -1,0 +1,12 @@
+nltk
+pandas
+numpy
+
+[docs]
+recommonmark
+sphinx
+sphinx_rtd_theme
+sphinxcontrib.bibtex
+
+[tests]
+pytest
