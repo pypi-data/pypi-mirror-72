@@ -1,0 +1,3 @@
+[nomnomdata.cli_plugins]
+login=nomnomdata.auth.cli:login
+
