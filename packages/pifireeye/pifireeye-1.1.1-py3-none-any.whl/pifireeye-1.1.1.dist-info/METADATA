@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pifireeye
+Version: 1.1.1
+Summary: python image detect client lib
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+Requires-Dist: pillow
+Requires-Dist: certifi (>=14.05.14)
+Requires-Dist: six (>=1.10)
+Requires-Dist: python-dateutil (>=2.5.3)
+Requires-Dist: setuptools (>=21.0.0)
+Requires-Dist: urllib3 (>=1.15.1)
+Requires-Dist: matplotlib (<=3.1)
+Requires-Dist: picompress
+
+UNKNOWN
+
+
