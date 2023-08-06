@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+opportunity_scraper/__init__.py
+opportunity_scraper/govuk.py
+opportunity_scraper/ktn.py
+opportunity_scraper/opportunity.py
+opportunity_scraper/settings.py
+opportunity_scraper.egg-info/PKG-INFO
+opportunity_scraper.egg-info/SOURCES.txt
+opportunity_scraper.egg-info/dependency_links.txt
+opportunity_scraper.egg-info/entry_points.txt
+opportunity_scraper.egg-info/requires.txt
+opportunity_scraper.egg-info/top_level.txt
