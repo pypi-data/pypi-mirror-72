@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: igmov
+Version: 0.0.2b0
+Summary: Video generator using Ngupuk templates.
+Home-page: https://github.com/ngupuk/igmov
+Author: Ngupuk
+Author-email: wafax.4@gmail.com
+License: MIT
+Description: # IGMOV
+        
+        [![PyPI version](https://badge.fury.io/py/igmov.svg)](https://pypi.org/project/igmov/)
+        ![Upload Python Package](https://github.com/ngupuk/igmov/workflows/Upload%20Python%20Package/badge.svg)
+        
+        Video Editing Program for Podcast Preview
+        
+        - [Documentation](https://github.com/ngupuk/igmov/wiki) : language Indonesian
+Keywords: Python,video,editor
+Platform: any
+Classifier: Programming Language :: Python
+Requires-Python: >= 3.5.*
+Description-Content-Type: text/markdown
