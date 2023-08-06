@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: ccdjangodeploy
+Version: 1.1.2
+Summary: A Python package to deploy django project on any linux based system.
+Home-page: https://github.com/avinashkatariya/ccdjangodeploy
+Author: Avinash Katariya
+Author-email: avinashkatariya@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+
+# CCDD
+
+A Python package to deploy django website on any linux based cloud instance
+
+## Usage
+
+Following query on terminal will deploy your djangoproject
+
+```
+ccdd
+```
+
+
