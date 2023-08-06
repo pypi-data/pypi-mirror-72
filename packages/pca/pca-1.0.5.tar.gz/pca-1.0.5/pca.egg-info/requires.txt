@@ -1,0 +1,8 @@
+wget
+matplotlib
+numpy
+sklearn
+scipy
+colourmap
+pandas
+tqdm
