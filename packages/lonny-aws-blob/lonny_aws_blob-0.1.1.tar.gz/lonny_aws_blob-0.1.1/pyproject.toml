@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "lonny_aws_blob"
+version = "0.1.1"
+description = ""
+authors = ["tlonny <t@lonny.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+boto3 = "^1.14.12"
+
+[tool.poetry.dev-dependencies]
+pylama = "^7.7.1"
+pyflakes = "^2.2.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
