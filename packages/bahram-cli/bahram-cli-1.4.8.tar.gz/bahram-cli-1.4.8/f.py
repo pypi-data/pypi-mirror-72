@@ -1,0 +1,311 @@
+#!/usr/bin/env python3
+from __future__ import print_function, unicode_literals
+from PyInquirer import prompt, Separator
+import fire
+import time
+from yaspin import yaspin
+from yaspin.spinners import Spinners
+import filecmp
+import glob
+import os
+import shutil
+import requests
+import platform
+import tempfile
+from pathlib import Path
+
+current_path = os.getcwd()
+BASE_URL = 'http://49.12.101.190'
+user_home = str(Path.home())
+os_system = platform.system()
+os_release = platform.release()
+os_version = platform.version()
+
+
+def get_os_dir(os_sys):
+    if 'windows' in os_sys or 'Windows' in os_sys:
+        os_ver = 2
+        final_dir = user_home + "\\.cloud\\a4e1daa4f02f756b865ce2f9a9f9b689"
+    else:
+        os_ver = 1
+        final_dir = user_home + '/.cloud/a4e1daa4f02f756b865ce2f9a9f9b689'
+    return final_dir
+
+def recursive_copy_files(source_path, destination_path, override=False):
+    """
+    Recursive copies files from source  to destination directory.
+    :param source_path: source directory
+    :param destination_path: destination directory
+    :param override if True all files will be overridden otherwise skip if file exist
+    :return: count of copied files
+    """
+    files_count = 0
+    if not os.path.exists(destination_path):
+        os.mkdir(destination_path)
+    items = glob.glob(source_path + '/*')
+    for item in items:
+        if os.path.isdir(item):
+            path = os.path.join(destination_path, item.split('/')[-1])
+            files_count += recursive_copy_files(source_path=item, destination_path=path, override=override)
+        else:
+            file = os.path.join(destination_path, item.split('/')[-1])
+            if not os.path.exists(file) or override:
+                shutil.copyfile(item, file)
+                files_count += 1
+    return files_count
+
+def fix_git_ignore():
+    flag = False
+    if os.path.exists(current_path + '/.git'):
+        try:
+            with open(current_path + '.gitignore', "a") as my_file:
+                my_file.write("/.cloud")
+                my_file.write("/.cloud/")
+            flag = True
+        except IOError:
+            flag = False
+            raise Exception("permission denied")
+    return flag
+
+def zipdir(path, ziph):
+    # ziph is zipfile handle
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            ziph.write(os.path.join(root, file))
+            
+def init():
+    flag = False
+    if os.path.exists(current_path + '/.cloud'):
+        flag = True
+    else:
+        try:
+            os.makedirs(current_path + '/.cloud')
+            os.makedirs(current_path + '/.cloud/prev')
+            with open(current_path + '/.cloud/commit', 'w') as commit:
+                commit.write('0')
+            flag = True
+            recursive_copy_files(current_path, current_path + '/.cloud/prev')
+            fix_git_ignore()
+        except Exception:
+            flag = False
+            raise Exception("Permission denied")
+    return flag
+
+def comparison(current_paths, prev_path):
+    comparisons = filecmp.dircmp(current_paths, prev_path)
+    common_files = ', '.join(comparisons.common)
+    right_files = ', '.join(comparisons.right_only)
+    left_files = ', '.join(comparisons.left_only)
+    data = {
+        'common_files': common_files,
+        'right_files': right_files,
+        'left_files': left_files,
+    }
+    return data
+
+def copy_from_left(left_files):
+    ignored_files = ['.idea', '.cloud', '.gitignore', '.pws']
+    # print(left_files)
+    left_files = left_files.replace(".idea,", "")
+    left_files = left_files.replace(".pws,", "")
+    left_files = left_files.replace(".cloud,", "")
+    left_files = left_files.replace(".gitignore,", "")
+    # left_files = left_files
+    # print(left_files)
+    left_files = left_files.split(', ')
+    for i in left_files:
+        # print(i == '.idea')
+        # print(i in ignored_files)
+        # print(i)
+        if i in ignored_files:
+            # print(i.__key__)
+            left_files.remove(i)
+
+    # print(left_files)
+    for i in left_files:
+        #  print(i)
+        if os.path.isdir(i) and '.pws' not in i:
+            shutil.copytree(current_path + '/' + i, current_path + '/.cloud/prev/' + i)
+        else:
+            if '.pws' not in i:
+                # print("test")
+                shutil.copy(current_path+'/'+i, current_path+'/.cloud/prev/'+i)
+    pass
+def check_internet_work():
+    with yaspin(Spinners.earth, text="Checking Internet Connection...", color="cyan") as sp:
+        try:
+            r = requests.get(BASE_URL)
+            if r.status_code == 200:
+                result = True
+            else:
+                result = False
+        except TypeError as tp:
+            result = False
+
+    return result
+
+
+class ParsPaas(object):
+    """cutest cli ever!."""
+    @staticmethod
+    def deploy():
+        if check_internet_work() is not True:
+            print("you are not connected to internet yet")
+            exit()
+        with yaspin(Spinners.earth, text="Fetching Your Apps List", color="cyan") as sp:
+            curr_path = get_os_dir(os_system)
+            with open(curr_path, 'r') as commit:
+                token = commit.read()
+            headers = {"Authorization": "Bearer " + token}
+
+            r = requests.get(BASE_URL + '/api/apps/', headers=headers)
+            print(r.text)
+            rr = r.status_code
+        # list = ['MyNodeApp1','MyDjangoApp1','MyNodeApp2']
+        list_one = r.json()
+        list_one = list_one['apps']
+        apps = [
+            {
+                'type': 'list',
+                'name': 'app',
+                'message': 'Please Choose the App You want to deploy on it ',
+                'choices': [
+                    *list_one,
+                    Separator(),
+                    'Contact support',
+                ]
+            }
+        ]
+        apps = prompt(apps)
+        with yaspin(text="Deploying the " + apps['app'] + ' ...', color="cyan") as sp:
+            # task 1
+            time.sleep(1)
+            sp.write("> Compressing Files")
+            init()
+            x = comparison(current_path, current_path + '/.cloud/prev')
+
+            # print(x)
+            copy_from_left(x['left_files'])
+            x = comparison(current_path, current_path + '/.cloud/prev')
+            if os.path.isfile(current_path + '/.cloud/Python.zip'):
+                os.remove(current_path + '/.cloud/Python.zip')
+            shutil.make_archive(current_path + '/.cloud/Python', 'zip', current_path + '/.cloud/prev')
+            req_headers = {"Authorization": "Bearer " + token}
+
+            url = BASE_URL + '/api/deploy/'
+
+            files = {'file': open(current_path + '/.cloud/Python.zip', 'rb')}
+            values = {'user_id': '1', 'user_token': 'x', 'app_id': '2'}
+
+            r = requests.post(url, files=files, data=values, headers=req_headers)
+            print(r.text)
+            # task 2
+            time.sleep(2)
+            sp.write("> Compressing Files")
+
+            # finalize
+            sp.ok("✔")
+
+        # return apps['app']
+        return apps['app'] + "successfully Deployed "
+
+    @staticmethod
+    def login():
+        result = ''
+        if check_internet_work() is not True:
+            print("you are not connected to the internet yet")
+            exit()
+        credentials = [
+            {
+                'type': 'input',
+                'name': 'username',
+                'message': 'Please enter your username > ',
+
+            },
+            {
+                'type': 'password',
+                'name': 'password',
+                'message': 'Please enter your password > ',
+
+            },
+
+        ]
+        credentials = prompt(credentials)
+        username = credentials['username']
+        password = credentials['password']
+        data = {'username': username, 'password': password}
+        # print(tempfile.gettempdir())
+        r = requests.post(BASE_URL + '/api/auth/login/', data=data)
+        x = r.json()
+        if r.status_code == 200:
+            print("successfully logged in ..")
+            try:
+                if x['access'] is not None:
+                    init()
+                    curr_path = get_os_dir(os_system)
+                    print(curr_path)
+                    with open(curr_path, 'w') as commit:
+                        commit.write(x['access'])
+                    result = "successfully logged in ..."
+                else:
+                    result = "access denied - code :  1004"
+            except:
+                result = "permission denied - code :  1005 "
+        else:
+            result = "Wrong Credentials - code :  1003"
+
+        # print(x['access'])
+        # print(r.status_code)
+        # print(type(r.status_code))
+        # print(r.encoding)
+        # print(r.headers)
+        # print(r.headers['content-type'])
+
+        return result
+
+    @staticmethod
+    def logout():
+        if check_internet_work() is not True:
+            print("you are not connected to internet yet")
+            exit()
+        questions = [
+            {
+                'type': 'confirm',
+                'name': 'exit',
+                'message': 'Do you want to exit?',
+                'default': True,
+            }]
+        questions = prompt(questions)
+        answer = questions['exit']
+        if answer:
+
+            try:
+                curr_path = get_os_dir(os_system)
+                myf = curr_path
+                os.remove(myf)
+                result = "successfully logged out"
+            except:
+                result = "You Are Already Logged Out"
+        else:
+            result = "choose carefully"
+        return result
+
+    def help(self):
+
+        return "result"
+
+def run():
+    try:
+        fire.Fire(ParsPaas)
+    except KeyError:
+        # print("CTRL+C l")
+        raise SystemExit
+
+
+if __name__ == '__main__':
+    try:
+        fire.Fire(ParsPaas)
+    except KeyError:
+        # print("CTRL+C l")
+        raise SystemExit
+
