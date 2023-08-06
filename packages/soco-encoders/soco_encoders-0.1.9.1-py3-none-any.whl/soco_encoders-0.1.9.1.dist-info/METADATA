@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: soco-encoders
+Version: 0.1.9.1
+Summary: Neural encoders for embedding diverse objects
+Home-page: https://www.soco.ai
+Author: tianchez
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Free for non-commercial use
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: torch (>=1.1.0)
+Requires-Dist: numpy (>=1.15.3)
+Requires-Dist: boto3 (>=1.9.46)
+Requires-Dist: oss2 (>=2.6.0)
+Requires-Dist: scipy (>=1.2.1)
+Requires-Dist: transformers (==2.8.0)
+Requires-Dist: tqdm (>=4.45.0)
+Requires-Dist: scikit-learn (>=0.22.2.post1)
+Requires-Dist: nltk (>=3.5)
+Requires-Dist: jieba (>=0.42.1)
+Requires-Dist: spacy (>=2.2.4)
+Requires-Dist: requests (>=2.23.0)
+
+# Encoders
+A library of neural encoders developed by Soco Inc
+
+
+## Make a package
+    python setup.py bdist_wheel
+    twine upload dist/*
+
+## Usage
+
+    python exmaple.py
+
+### Available models
+#### English
+- bert-base-nli-mean-tokens
+- bert-base-nli-stsb-mean-tokens
+- bert-base-wikipedia-sections-mean-tokens
+- bert-large-nli-mean-tokens
+- bert-large-nli-stsb-mean-tokens
+- en-RnnEncoder-1563406351
+- en-RnnEncoder-1563826953
+
+#### Chinese
+- bert-base-zh-mean-tokens
+
