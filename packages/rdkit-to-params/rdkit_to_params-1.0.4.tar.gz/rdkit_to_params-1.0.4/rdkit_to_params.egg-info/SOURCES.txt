@@ -1,0 +1,12 @@
+README.md
+setup.py
+rdkit_to_params/__init__.py
+rdkit_to_params/_init_mixin.py
+rdkit_to_params/_io_mixin.py
+rdkit_to_params/_pyrosetta_mixin.py
+rdkit_to_params/constraint.py
+rdkit_to_params/entries.py
+rdkit_to_params.egg-info/PKG-INFO
+rdkit_to_params.egg-info/SOURCES.txt
+rdkit_to_params.egg-info/dependency_links.txt
+rdkit_to_params.egg-info/top_level.txt
