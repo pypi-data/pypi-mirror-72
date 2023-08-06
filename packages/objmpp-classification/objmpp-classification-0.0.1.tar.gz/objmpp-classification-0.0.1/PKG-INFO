@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: objmpp-classification
+Version: 0.0.1
+Summary: Package to perform classification from obj.MPP output
+Home-page: https://github.com/JEmonet67/objmpp-classification
+Author: Jérôme Emonet
+Author-email: jerome.emonet.67@gmail.com
+License: MIT License
+Description: ## Install package
+        
+        ```bash
+        pip install -e .
+        ```
+        
+        ## Run package
+        
+        With commande line:
+        
+        ```bash
+        objmpp-classification --help
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7.6
+Description-Content-Type: text/markdown
