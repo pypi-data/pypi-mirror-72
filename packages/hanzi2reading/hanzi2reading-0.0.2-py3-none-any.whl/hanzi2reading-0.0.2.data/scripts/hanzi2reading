@@ -1,0 +1,7 @@
+#!python
+
+import sys
+from hanzi2reading import Reading
+
+reading = Reading()
+print(reading.get(sys.argv[1]))
