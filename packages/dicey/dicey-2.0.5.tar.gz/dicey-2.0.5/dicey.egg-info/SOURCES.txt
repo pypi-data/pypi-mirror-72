@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+dicey/__init__.py
+dicey/__main__.py
+dicey/dicey.lark
+dicey/dieparser.py
+dicey/dietransformer.py
+dicey.egg-info/PKG-INFO
+dicey.egg-info/SOURCES.txt
+dicey.egg-info/dependency_links.txt
+dicey.egg-info/entry_points.txt
+dicey.egg-info/requires.txt
+dicey.egg-info/top_level.txt
