@@ -1,0 +1,7 @@
+[tool.pylint.format]
+max-line-length = 140
+
+[tool.black]
+line-length = 140
+skip-string-normalization = true
+target-version = ['py36', 'py37', 'py38']
