@@ -1,0 +1,5 @@
+PyGithub>=1.51
+python-dotenv>=0.10.0
+
+[dev]
+pylint>=2.5.0
