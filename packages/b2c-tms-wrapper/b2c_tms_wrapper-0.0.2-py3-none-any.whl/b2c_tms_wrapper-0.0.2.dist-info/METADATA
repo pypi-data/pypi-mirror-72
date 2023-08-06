@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: b2c-tms-wrapper
+Version: 0.0.2
+Summary: Interface for b2c_tms backend
+Home-page: https://github.com/shuttl-tech/b2c-tms-wrapper
+Author: Shuttl
+Author-email: author@example.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pytz
+Provides-Extra: dev
+Requires-Dist: flake8 ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-runner ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-pep8 ; extra == 'test'
+Requires-Dist: requests ; extra == 'test'
+Requires-Dist: responses ; extra == 'test'
+Requires-Dist: pyshuttlis ; extra == 'test'
+
+UNKNOWN
+
+
