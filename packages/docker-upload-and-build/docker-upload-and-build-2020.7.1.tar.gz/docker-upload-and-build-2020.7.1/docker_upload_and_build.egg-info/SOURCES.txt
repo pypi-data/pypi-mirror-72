@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+docker_upload_and_build.egg-info/PKG-INFO
+docker_upload_and_build.egg-info/SOURCES.txt
+docker_upload_and_build.egg-info/dependency_links.txt
+docker_upload_and_build.egg-info/top_level.txt
+scripts/docker-upload-and-build
