@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+quoras/__init__.py
+quoras/browser.py
+quoras/quoras.py
+quoras/scraper.py
+quoras.egg-info/PKG-INFO
+quoras.egg-info/SOURCES.txt
+quoras.egg-info/dependency_links.txt
+quoras.egg-info/requires.txt
+quoras.egg-info/top_level.txt
