@@ -1,0 +1,6 @@
+include ipywidgets_game_maze/images/blanc.jpg
+include ipywidgets_game_maze/images/gagne.jpg
+include ipywidgets_game_maze/images/perdu.png
+include ipywidgets_game_maze/images/win.jpg
+include ipywidgets_game_maze/lab/lab.json
+include ipywidgets_game_maze/lab/laby3d.json
