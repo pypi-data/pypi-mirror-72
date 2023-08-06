@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: fakemod
+Version: 0.2.1
+Summary: Reloadable Modules and Namespace Packages
+Home-page: http://github.com/serwy/fakemod
+Author: Roger D. Serwy
+Author-email: roger.serwy@gmail.com
+License: BSD License
+Description: # FakeMod
+        
+        A utility to automatically reload a module if modified,
+        or emulate a namespace package.
+        
+        
+        ## Example
+        
+            import os
+            os.makedirs('./utilities', exist_ok=True)
+            with open('./utilities/tool.py', 'w') as f:
+               f.write(r'''if 1:
+        
+                def func(a):
+                    print('func', a)
+        
+                ''')
+        
+            import fakemod
+            mod = fakemod.at('./utilities')
+            mod.tool.func(123)
+        
+        
+        ## Usage
+        
+        Place into `__init__.py`:
+        
+            import fakemod; fakemod.local(vars())
+        
+        Also place into `local.py` to allow for 
+        `from . import local` to access other files in the 
+        same directory.
+        
+        
+Keywords: reload module
+Platform: Windows
+Platform: Linux
+Platform: Solaris
+Platform: Mac OS-X
+Platform: Unix
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

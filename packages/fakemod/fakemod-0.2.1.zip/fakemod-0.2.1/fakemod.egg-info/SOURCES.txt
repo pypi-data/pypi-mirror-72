@@ -1,0 +1,10 @@
+README.md
+setup.py
+fakemod/__init__.py
+fakemod/_fakemod.py
+fakemod/_fm2.py
+fakemod/_version.py
+fakemod.egg-info/PKG-INFO
+fakemod.egg-info/SOURCES.txt
+fakemod.egg-info/dependency_links.txt
+fakemod.egg-info/top_level.txt
