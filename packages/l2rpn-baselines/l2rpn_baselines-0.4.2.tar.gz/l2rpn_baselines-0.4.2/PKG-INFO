@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: l2rpn_baselines
+Version: 0.4.2
+Summary: L2RPN Baselines a repository to host baselines for l2rpn competitions.
+Home-page: https://github.com/BDonnot/L2RPN_Baselines
+Author: Benjamin DONNOT
+Author-email: benjamin.donnot@rte-france.com
+License: MPL
+Description: This repository aims at facilitating the use of state of the art algorithm in coming from the reinforcement learning community or the power system community in the l2rpn competitions. It  also provides some usefull function to make life or participants to the l2rpn competitions easier.
+Keywords: ML powergrid optmization RL power-systems
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Provides-Extra: challenge
+Provides-Extra: docs
