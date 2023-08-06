@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+Markdown/Figure1.PNG
+Markdown/Figure2.PNG
+Markdown/Figure3.PNG
+Markdown/Figure4.PNG
+Markdown/Figure5.PNG
+sustainalytics/__init__.py
+sustainalytics/api.py
+sustainalytics.egg-info/PKG-INFO
+sustainalytics.egg-info/SOURCES.txt
+sustainalytics.egg-info/dependency_links.txt
+sustainalytics.egg-info/requires.txt
+sustainalytics.egg-info/top_level.txt
