@@ -1,0 +1,13 @@
+.travis.yml
+Makefile
+requirements.txt
+setup.py
+chisel3_jar/__init__.py
+chisel3_jar/main.py
+chisel3_jar/version.py
+chisel3_jar.egg-info/PKG-INFO
+chisel3_jar.egg-info/SOURCES.txt
+chisel3_jar.egg-info/dependency_links.txt
+chisel3_jar.egg-info/entry_points.txt
+chisel3_jar.egg-info/top_level.txt
+chisel3_jar/jars/chisel3.jar
