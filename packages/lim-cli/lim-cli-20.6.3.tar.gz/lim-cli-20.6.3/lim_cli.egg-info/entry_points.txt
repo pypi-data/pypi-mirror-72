@@ -1,0 +1,34 @@
+[console_scripts]
+lim = lim.__main__:main
+
+[lim]
+about = lim.about:About
+cafe about = lim.packet_cafe.about:About
+cafe admin delete = lim.packet_cafe.admin.delete:AdminDelete
+cafe admin endpoints = lim.packet_cafe.admin.endpoints:Endpoints
+cafe admin files = lim.packet_cafe.admin.files:Files
+cafe admin info = lim.packet_cafe.admin.info:AdminInfo
+cafe admin results = lim.packet_cafe.admin.results:Results
+cafe admin sessions = lim.packet_cafe.admin.sessions:Sessions
+cafe containers = lim.packet_cafe.extensions.containers:Containers
+cafe endpoints = lim.packet_cafe.api.endpoints:Endpoints
+cafe info = lim.packet_cafe.api.info:ApiInfo
+cafe raw = lim.packet_cafe.api.raw:Raw
+cafe report = lim.packet_cafe.extensions.report:Report
+cafe requests = lim.packet_cafe.api.requests:Requests
+cafe results = lim.packet_cafe.api.results:Results
+cafe status = lim.packet_cafe.api.status:Status
+cafe stop = lim.packet_cafe.api.stop:Stop
+cafe tools = lim.packet_cafe.api.tools:Tools
+cafe ui = lim.packet_cafe.ui:UI
+cafe upload = lim.packet_cafe.api.upload:Upload
+ctu get = lim.ctu.get:CTUGet
+ctu list = lim.ctu.list:CTUList
+ctu overview = lim.ctu.overview:CTUOverview
+ctu show = lim.ctu.show:CTUShow
+ctu stats = lim.ctu.stats:CTUStats
+pcap extract ips = lim.pcap.extract:PCAPExtract
+pcap shift network = lim.pcap.shift:PCAPShift
+pcap shift time = lim.pcap.shift:PCAPShift
+version = lim.about:About
+

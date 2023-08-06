@@ -1,0 +1,61 @@
+usage: lim [--version] [-v | -q] [--log-file LOG_FILE] [-h] [--debug]
+           [-D <data-directory>] [-e] [-E <environment>] [-n <results_limit>]
+
+LiminalInfo command line app.
+
+optional arguments:
+  --version             show program's version number and exit
+  -v, --verbose         Increase verbosity of output. Can be repeated.
+  -q, --quiet           Suppress output except warnings and errors.
+  --log-file LOG_FILE   Specify a file to log output. Disabled by default.
+  -h, --help            Show help message and exit.
+  --debug               Show tracebacks on errors.
+  -D <data-directory>, --data-dir <data-directory>
+                        Root directory for holding data files (Env:
+                        ``LIM_DATA_DIR``; default: /path/to/data)
+  -e, --elapsed         Include elapsed time (and ASCII bell) on exit
+                        (default: False)
+  -E <environment>, --environment <environment>
+                        Deployment environment selector (Env:
+                        ``LIM_ENVIRONMENT``; default: None)
+  -n <results_limit>, --limit <results_limit>
+                        Limit result to no more than this many items (0 means
+                        no limit; default: 0)
+
+Author:    Dave Dittrich <dave.dittrich@gmail.com>
+Copyright: 2018-2020, Dave Dittrich. 2019-2020, Liminal Information Corp.
+License:   Apache 2.0 License
+URL:       https://pypi.python.org/pypi/lim-cli
+
+Commands:
+  about          About the ``lim`` CLI (lim-cli)
+  cafe about     Open packet-cafe documentation. (lim-cli)
+  cafe admin delete  Delete data for a session. (lim-cli)
+  cafe admin endpoints  List available packet-cafe admin endpoints. (lim-cli)
+  cafe admin files  List files in packet-cafe server. (lim-cli)
+  cafe admin info  Return basic information about the packet-cafe service. (lim-cli)
+  cafe admin results  List all files produced by tools. (lim-cli)
+  cafe admin sessions  List session IDs in packet-cafe service. (lim-cli)
+  cafe containers  Show status of Packet Café Docker containers. (lim-cli)
+  cafe endpoints  List available packet-cafe API endpoints. (lim-cli)
+  cafe info      Return basic information about the packet-cafe service. (lim-cli)
+  cafe raw       Get raw output from a specific tool, session, and request. (lim-cli)
+  cafe report    Produce a report on results of a session+request. (lim-cli)
+  cafe requests  List request IDs for a specific session ID. (lim-cli)
+  cafe results   Get the results from a tool for local storage or rendering. (lim-cli)
+  cafe status    Return the status of all tools for a session and request ID. (lim-cli)
+  cafe stop      Stop jobs of a request ID. (lim-cli)
+  cafe tools     List details about workers in the packet-cafe server. (lim-cli)
+  cafe ui        Open packet-cafe UI in a browser. (lim-cli)
+  cafe upload    Upload a file to the packet-cafe service for processing. (lim-cli)
+  complete       print bash completion command (cliff)
+  ctu get        Get CTU dataset components. (lim-cli)
+  ctu list       List CTU dataset metadata. (lim-cli)
+  ctu overview   Get CTU dataset overview. (lim-cli)
+  ctu show       Show scenario details. (lim-cli)
+  ctu stats      List CTU dataset metadata. (lim-cli)
+  help           print detailed help for another command (cliff)
+  pcap extract ips  Extract source and destination IP addresses from PCAP file(s). (lim-cli)
+  pcap shift network  Shift timestamps or source/destination addresses in PCAP files. (lim-cli)
+  pcap shift time  Shift timestamps or source/destination addresses in PCAP files. (lim-cli)
+  version        About the ``lim`` CLI (lim-cli)
