@@ -1,0 +1,3 @@
+async-generator
+cffi
+trio>=0.15
