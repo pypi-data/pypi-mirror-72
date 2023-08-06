@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+cm-rgb-demo.jpg
+cm-rgb-monitor.gif
+gui-ss.png
+setup.py
+cm_rgb/__init__.py
+cm_rgb/ctrl.py
+cm_rgb.egg-info/PKG-INFO
+cm_rgb.egg-info/SOURCES.txt
+cm_rgb.egg-info/dependency_links.txt
+cm_rgb.egg-info/requires.txt
+cm_rgb.egg-info/top_level.txt
+scripts/cm-rgb-cli
+scripts/cm-rgb-monitor
