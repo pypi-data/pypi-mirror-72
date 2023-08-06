@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dehyphen
+Version: 0.1.0
+Summary: Dehyphenation of broken text (mainly German), e.g., extracted from a PDF
+License: GPL-3.0-only
+Keywords: dehyphenation,nlp,german,hyhpens
+Author: Johannes Filter
+Author-email: hi@jfilter.de
+Requires-Python: >=3.6
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: clean-text (>=0.1.1,<0.2.0)
+Requires-Dist: flair (>=0.5,<0.6)
+Requires-Dist: unidecode[gpl] (>=1.1.1,<2.0.0)
