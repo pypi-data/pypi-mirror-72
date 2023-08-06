@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: staffingetl
+Version: 0.0.2
+Summary: ETL tools for staffing
+Home-page: https://github.com/ncthuc/elastictools
+Author: globus.ai
+Author-email: zhas@globus.ai
+License: MIT
+Download-URL: https://pypi.org/project/staffingetl/
+Keywords: Staffing,ETL
+Platform: UNKNOWN
+Requires-Dist: jinja2
+
+UNKNOWN
+
+
