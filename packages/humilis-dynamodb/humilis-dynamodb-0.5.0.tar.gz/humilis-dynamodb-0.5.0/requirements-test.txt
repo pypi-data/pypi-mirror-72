@@ -1,0 +1,10 @@
+# test requirements
+boto3
+pytest
+pyyaml==5.2
+mock
+tox
+
+humilis-vpc>=0.2.7
+
+-e .
