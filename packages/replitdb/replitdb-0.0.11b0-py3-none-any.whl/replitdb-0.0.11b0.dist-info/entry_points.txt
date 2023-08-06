@@ -1,0 +1,3 @@
+[console_scripts]
+replitdb = replitdb:command_main
+
