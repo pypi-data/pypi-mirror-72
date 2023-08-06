@@ -1,0 +1,10 @@
+requirements.txt
+setup.py
+ubersicht/__init__.py
+ubersicht/_coffee.py
+ubersicht/_widgets.py
+ubersicht.egg-info/PKG-INFO
+ubersicht.egg-info/SOURCES.txt
+ubersicht.egg-info/dependency_links.txt
+ubersicht.egg-info/requires.txt
+ubersicht.egg-info/top_level.txt
