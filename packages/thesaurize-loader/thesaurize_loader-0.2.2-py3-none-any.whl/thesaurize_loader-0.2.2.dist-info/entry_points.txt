@@ -1,0 +1,3 @@
+[console_scripts]
+thesaurize-loader=thesaurize_loader.__main__:main
+
