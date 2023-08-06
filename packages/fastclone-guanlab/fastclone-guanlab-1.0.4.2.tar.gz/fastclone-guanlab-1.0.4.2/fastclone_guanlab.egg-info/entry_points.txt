@@ -1,0 +1,3 @@
+[console_scripts]
+fastclone = fastclone.__main__:main
+
