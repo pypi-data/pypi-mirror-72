@@ -1,0 +1,16 @@
+README.md
+setup.py
+prodmx/__init__.py
+prodmx/build.py
+prodmx/build_pro_arc.py
+prodmx/build_pro_dom.py
+prodmx/matrix.py
+prodmx/pfam_filter.py
+prodmx/util.py
+prodmx.egg-info/PKG-INFO
+prodmx.egg-info/SOURCES.txt
+prodmx.egg-info/dependency_links.txt
+prodmx.egg-info/entry_points.txt
+prodmx.egg-info/not-zip-safe
+prodmx.egg-info/requires.txt
+prodmx.egg-info/top_level.txt
