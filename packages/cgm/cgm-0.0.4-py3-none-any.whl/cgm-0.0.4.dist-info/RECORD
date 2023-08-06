@@ -1,0 +1,16 @@
+cgm/__init__.py,sha256=JbvWf3pkCsb8BCXZaEiiOfRqjrChZ5RMa5b3edciCuk,73
+cgm/core.py,sha256=hlYg6lrFGVeWB6gFOQ4FLIlRmYRQCg6d4DwISeuK-Eg,7752
+cgm/sample_graphs.py,sha256=GfqXMZlz8oZaacCEfeD0UkAs6yT6N4fK5_cO4DH01-w,924
+cgm/inference/__init__.py,sha256=AStJfrZOa2c4m23v9YN9Nx_yI61qNTD3u72hqN4aMw8,101
+cgm/inference/belief_propagation.py,sha256=uBriVqMiKIuASnr1UheX9FRq9LtbwNMmQlsEjEjzyDc,3336
+cgm/inference/forward_sampling.py,sha256=6nrNfHnw2Fc1EviwwvRZtHZqHuAgnrkCjKyLJxlxtE4,1272
+cgm/inference/variable_elimination.py,sha256=f1d2Bd8QyAQ5qp66Zi-Ph_g7LtoIUwKSNV8j8Xj47a0,1679
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/context.py,sha256=R9lY0RK2QxzOI_B2URobuB0T-kvUVh_8nrkvwX4WGJs,114
+tests/core_tests.py,sha256=Eaon-4jKMj8T9wJCvYEwtDoazwJNf7aQ6u55F732E8g,425
+tests/inference_tests.py,sha256=iiLQwPbpeCiNTI11WEKi0d-RGK1SKplTNoxZxQ-GeDM,5653
+cgm-0.0.4.dist-info/LICENSE,sha256=FQKoCdk9-RrJu7vIS7gJQICC4t-79vpmpc7J6tkxu3k,1069
+cgm-0.0.4.dist-info/METADATA,sha256=s6pvQQGY2SAyljXmevF0-F8FknHZBnPSQb0Q65Rj2W4,1596
+cgm-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+cgm-0.0.4.dist-info/top_level.txt,sha256=36-pLcsatVhpNki2wLzgA89S86DeH_ZIc5l1wWi52pE,10
+cgm-0.0.4.dist-info/RECORD,,
