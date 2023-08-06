@@ -1,0 +1,12 @@
+README.md
+setup.py
+gpssi/__init__.py
+gpssi/covariance.py
+gpssi/gpssi.py
+gpssi/kernel.py
+gpssi/misc.py
+gpssi.egg-info/PKG-INFO
+gpssi.egg-info/SOURCES.txt
+gpssi.egg-info/dependency_links.txt
+gpssi.egg-info/requires.txt
+gpssi.egg-info/top_level.txt
