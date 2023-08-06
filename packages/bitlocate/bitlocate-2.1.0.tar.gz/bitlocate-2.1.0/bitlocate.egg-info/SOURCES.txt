@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+bitlocate/cli.py
+bitlocate/utils.py
+bitlocate.egg-info/PKG-INFO
+bitlocate.egg-info/SOURCES.txt
+bitlocate.egg-info/dependency_links.txt
+bitlocate.egg-info/entry_points.txt
+bitlocate.egg-info/requires.txt
+bitlocate.egg-info/top_level.txt

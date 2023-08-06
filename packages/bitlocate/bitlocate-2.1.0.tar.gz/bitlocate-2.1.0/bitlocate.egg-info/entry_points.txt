@@ -1,0 +1,3 @@
+[console_scripts]
+bit-locate = bitlocate.cli:main
+
