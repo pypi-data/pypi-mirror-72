@@ -1,0 +1,11 @@
+README.md
+setup.py
+var_io/__init__.py
+var_io/__ioFunc.py
+var_io/__var_filter.py
+var_io/__var_home.py
+var_io.egg-info/PKG-INFO
+var_io.egg-info/SOURCES.txt
+var_io.egg-info/dependency_links.txt
+var_io.egg-info/requires.txt
+var_io.egg-info/top_level.txt
