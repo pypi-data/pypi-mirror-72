@@ -1,0 +1,9 @@
+requirements.txt
+setup.py
+mac_comment/__init__.py
+mac_comment/__main__.py
+mac_comment.egg-info/PKG-INFO
+mac_comment.egg-info/SOURCES.txt
+mac_comment.egg-info/dependency_links.txt
+mac_comment.egg-info/requires.txt
+mac_comment.egg-info/top_level.txt
