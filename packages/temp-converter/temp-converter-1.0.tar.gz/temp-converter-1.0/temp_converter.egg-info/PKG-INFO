@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: temp-converter
+Version: 1.0
+Summary: Convert temperatures easily here.
+Home-page: https://github.com/kailash1011/temp-converter
+Author: Kailash Sharma
+Author-email: kailashps.1011@gmail.com
+License: MIT
+Description: This is the description. Using this module u can convert different units of temperature & run it to use.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
