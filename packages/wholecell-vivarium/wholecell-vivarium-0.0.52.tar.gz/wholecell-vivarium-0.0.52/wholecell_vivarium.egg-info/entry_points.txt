@@ -1,0 +1,8 @@
+[console_scripts]
+vivarium.actor.boot = vivarium.actor.boot:run
+vivarium.actor.control = vivarium.actor.control:run
+vivarium.analysis.analyze = vivarium.analysis.analyze:run
+vivarium.compartments = vivarium.compartments:run
+vivarium.environment.boot = vivarium.environment.boot:run
+vivarium.environment.control = vivarium.environment.control:run
+
