@@ -1,0 +1,14 @@
+quantized_mesh_encoder-0.2.0.dist-info/RECORD,,
+quantized_mesh_encoder-0.2.0.dist-info/WHEEL,sha256=t7NMAxUAarKLTOuYlyMuhTxEWsGVrf_opj38nxzwJgI,109
+quantized_mesh_encoder-0.2.0.dist-info/METADATA,sha256=F_yMlg2wB5ey6AqlZUdwpK9Q78dRusleiVsfXMrzCFc,7105
+quantized_mesh_encoder-0.2.0.dist-info/top_level.txt,sha256=ZkuObaa6XV0k8cD5P4vAp29Kva2CTCTOSLaGSqH6gxI,23
+quantized_mesh_encoder-0.2.0.dist-info/LICENSE,sha256=nibXnqSIeJlpfnQR5MVbs8vUPl-FZQQeoZjiEko4vnY,1068
+quantized_mesh_encoder/util_cy.cpython-35m-x86_64-linux-gnu.so,sha256=KSQTLCSlw6wL7i0vHUUs_n0dIPmk8ETDGD_U6trGwg8,1034632
+quantized_mesh_encoder/ecef.py,sha256=sfHOWiRfqny5lwj977hHMblXDk7GwzBEd-dRr82WnN4,1155
+quantized_mesh_encoder/__init__.py,sha256=eFzqePP9lU3aHT46p6VPXJcEohT3829luFWv5wwYQak,170
+quantized_mesh_encoder/encode.py,sha256=vCwORW1PV7sxg5fuTwn3YIRvuiL1fVRnt7xrHvzwKos,9867
+quantized_mesh_encoder/util_cy.c,sha256=OVnsQIn8AYN0BwA4UBys-MHTDocEOXWJnRG_ojsR23w,961534
+quantized_mesh_encoder/constants.py,sha256=fmW1PHv-BU22_ZtTn-kQnOCLf7JYNLCwsr-4-n5uWXE,2029
+quantized_mesh_encoder/bounding_sphere.py,sha256=NXc8aWfIW6Yw1TZBfqVuBgTEmRGxWXT5XpGrBS5uurk,5906
+quantized_mesh_encoder/occlusion.py,sha256=NR1a7f8-T11EqDQKfriunInFUDsM8uu5DYCIkFZncA4,1505
+quantized_mesh_encoder/util.py,sha256=5TUaka6EBn_QLYQy2XYha_v_Us2SqwU_0QV4jm_Q2-U,416
