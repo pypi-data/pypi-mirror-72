@@ -1,0 +1,3 @@
+[console_scripts]
+yamlpy = yamlpy.yaml_py:start_project
+
