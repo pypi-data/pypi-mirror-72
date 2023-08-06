@@ -1,0 +1,10 @@
+[run]
+source = check_python_versions
+cover_pylib = False
+branch = True
+
+[report]
+exclude_lines =
+    pragma: nocover
+    pragma: windows
+    if __name__ == .__main__.:

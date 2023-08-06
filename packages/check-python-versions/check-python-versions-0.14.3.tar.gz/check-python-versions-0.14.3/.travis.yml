@@ -1,0 +1,31 @@
+language: python
+dist: xenial
+python:
+  - 3.6
+  - 3.7
+  - 3.8
+  - pypy3.6-7.1.1
+matrix:
+  include:
+    - name: flake8
+      install: pip install tox
+      script: tox -e flake8
+      after_script:
+    - name: mypy
+      install: pip install tox
+      script: tox -e mypy
+      after_script:
+    - name: isort
+      install: pip install tox
+      script: tox -e isort
+      after_script:
+install:
+  - pip install pytest coverage coveralls
+  - pip install -e .
+script:
+  - coverage run -m pytest tests
+  - coverage report -m --fail-under=100
+after_script:
+  - coveralls
+notifications:
+  email: false
