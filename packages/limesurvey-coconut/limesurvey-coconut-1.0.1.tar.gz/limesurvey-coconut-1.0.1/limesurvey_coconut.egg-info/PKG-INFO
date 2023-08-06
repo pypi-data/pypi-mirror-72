@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: limesurvey-coconut
+Version: 1.0.1
+Summary: Coconut - A LimeSurvey data extraction and helper library
+Home-page: https://github.com/istresearch/coconut
+Author: IST Research
+Author-email: support@istresearch.com
+License: MIT License
+Description: # coconut
+        
+        *A LimeSurvey data extractor*
+        
+        ## Installation
+        
+        ```
+        pip install limesurvey-coconut
+        ```
+        
+        ## Usage
+        
+        
+        ```python
+        from coconut import LimeAPI, Survey, Workbook
+        
+        # Create a LimeAPI instance
+        lime = LimeAPI(
+                url="https://surveys.my-lime-survey-instance.org",
+                username="admin",
+                password="password"
+            )
+        
+        # Create the survey instance
+        survey = Survey(survey_id=119618, lime_api=lime)
+        
+        # Load questions, responses, survey info
+        survey.load_data()
+        
+        # Save the data to an Excel file
+        survey.to_excel("survey.xlsx")
+        
+        # Save response data to a CSV file
+        survey.to_csv("survey.csv")
+        
+        # Update a Google Sheets workbook
+        workbook = Workbook(
+            workbook_id="abc123",
+            survey=survey,
+            service_account_json_path="google-cloud-creds.json"
+        )
+        workbook.sync()
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
