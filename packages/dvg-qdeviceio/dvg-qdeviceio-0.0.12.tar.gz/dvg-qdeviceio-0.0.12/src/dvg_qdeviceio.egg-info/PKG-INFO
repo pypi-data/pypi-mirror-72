@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: dvg-qdeviceio
+Version: 0.0.12
+Summary: Hassle-free PyQt5 interface for multithreaded data acquisition and communication with an I/O device.
+Home-page: https://github.com/Dennis-van-Gils/python-dvg-qdeviceio
+Author: Dennis van Gils
+Author-email: vangils.dennis@gmail.com
+License: MIT
+Project-URL: Issue Tracker, https://github.com/Dennis-van-Gils/python-dvg-qdeviceio/issues
+Description: .. image:: https://img.shields.io/pypi/v/dvg-qdeviceio
+            :target: https://pypi.org/project/dvg-qdeviceio
+        .. image:: https://img.shields.io/pypi/pyversions/dvg-qdeviceio
+            :target: https://pypi.org/project/dvg-qdeviceio
+        .. image:: https://travis-ci.org/Dennis-van-Gils/python-dvg-qdeviceio.svg?branch=master
+            :target: https://travis-ci.org/Dennis-van-Gils/python-dvg-qdeviceio
+        .. image:: https://coveralls.io/repos/github/Dennis-van-Gils/python-dvg-qdeviceio/badge.svg?branch=master
+            :target: https://coveralls.io/github/Dennis-van-Gils/python-dvg-qdeviceio?branch=master
+        .. image:: https://requires.io/github/Dennis-van-Gils/python-dvg-qdeviceio/requirements.svg?branch=master
+             :target: https://requires.io/github/Dennis-van-Gils/python-dvg-qdeviceio/requirements/?branch=master
+             :alt: Requirements Status
+        .. image:: https://readthedocs.org/projects/python-dvg-qdeviceio/badge/?version=latest
+            :target: https://python-dvg-qdeviceio.readthedocs.io/en/latest/?badge=latest
+        .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+            :target: https://github.com/psf/black
+        .. image:: https://img.shields.io/badge/License-MIT-purple.svg
+            :target: https://github.com/Dennis-van-Gils/python-dvg-qdeviceio/blob/master/LICENSE.txt
+        
+        DvG_QDeviceIO
+        =============
+        Hassle-free PyQt5 interface for multithreaded data acquisition and communication with an I/O device.
+        
+        It will manage the creation and handling of the threads, workers and signals for you, reducing it to just a few simple method calls of a QDeviceIO class instance to get set up and going.
+        
+        Documentation is available at https://python-dvg-qdeviceio.readthedocs.io.
+        
+        Changelog
+        =========
+        
+        0.0.1 (2020-05-25)
+        ------------------
+        * First release on PyPI
+        
+        0.0.5 (2020-06-06)
+        ------------------
+        * Implemented smooth start and stop machinery to the workers
+        
+        0.0.6 (2020-06-07)
+        ------------------
+        * Added start(), renamed quit_all_workers() to quit()
+        * Added send(), add_to_send_queue(), process_send_queue()
+        
+        0.0.8 (2020-06-09)
+        ------------------
+        * Added pause_DAQ, unpause_DAQ(), wake_up_DAQ()
+        * Changed many attribute and method names
+        * Code style: black
+        
+        0.0.9 (2020-06-17)
+        ------------------
+        * Moved the Worker_### classes outside of QDeviceIO and into module root
+        * Added documentation using Sphinx and Read the docs
+        * Changed from MarkDown to ReStructuredText
+        
+        0.0.10 (2020-06-22)
+        -------------------
+        * Major: Changed name 'Worker_send' to 'Worker_jobs' and similar
+        * Added more Sphinx documentation
+        
+        0.0.11
+        -------------------
+        Skipped (I screwed up the versioning)
+        
+        0.0.12 (2020-06-29)
+        -------------------
+        * INTERNAL_TIMER: Already instantiate the QTimer in 'create_worker_DAQ()', instead of in 'start_worker_DAQ()'
+        * Changed default DAQ_timer_type from CoarseTimer to PreciseTimer
+        * Added more Sphinx documentation
+        
+Keywords: PyQt5,multithread,device I/O,automation,laboratory,science
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
