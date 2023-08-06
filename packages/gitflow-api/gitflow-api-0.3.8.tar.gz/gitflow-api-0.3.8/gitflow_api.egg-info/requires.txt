@@ -1,0 +1,3 @@
+GitPython>=2.1.11
+python-gitlab>=1.6.0
+slackclient>=1.3.0
