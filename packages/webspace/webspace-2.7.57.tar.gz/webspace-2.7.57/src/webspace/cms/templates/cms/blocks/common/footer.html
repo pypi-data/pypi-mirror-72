@@ -1,0 +1,80 @@
+{% load static %}
+{% load wagtailsettings_tags my my_amp %}
+
+<div class="">
+    <div class="theme-{{ page.theme }}">
+        <footer>
+            <div id="block-footer" class="footer-links">
+                <div class="container regular">
+                    <div>
+                        {% include 'cms/blocks/common/nav/nav_footer.html' with menus=page.navigation.footer %}
+                    </div>
+                </div>
+            </div>
+            <div id="block-footer-socials" class="footer-socials">
+                <div class="container full nopad">
+                    <div class="fs-ss rich-text">
+                        <small>Créé par <a href="{{ studio.url }}">{{ studio.name }}</a> ©2020 - Tous droits réservés.</small>
+                    </div>
+                    <div class="fs-container">
+
+                        {% if settings.cms.WebspaceSettings.linkedin %}
+                            <a rel="noreferrer" target="_blank" href="{{ settings.cms.WebspaceSettings.linkedin }}">
+                                {% amp_img %}
+                                    <img class="s-icon x1" src="{{ icons.linkedin|ico:page.theme }}"
+                                         alt="Linkedin"/>
+                                {% endamp_img %}
+                            </a>
+                        {% endif %}
+
+                        {% if settings.cms.WebspaceSettings.facebook %}
+                            <a rel="noreferrer" target="_blank" href="{{ settings.cms.WebspaceSettings.facebook }}">
+                                {% amp_img %}
+                                    <img class="s-icon x1" src="{{ icons.facebook|ico:page.theme }}"
+                                         alt="Facebook"/>
+                                {% endamp_img %}
+                            </a>
+                        {% endif %}
+
+                        {% if settings.cms.WebspaceSettings.instagram %}
+                            <a rel="noreferrer" target="_blank" href="{{ settings.cms.WebspaceSettings.instagram }}">
+                                {% amp_img %}
+                                    <img class="s-icon x1" src="{{ icons.instagram|ico:page.theme }}"
+                                         alt="Instagram"/>
+                                {% endamp_img %}
+                            </a>
+                        {% endif %}
+
+                        {% if settings.cms.WebspaceSettings.twitter %}
+                            <a rel="noreferrer" target="_blank" href="{{ settings.cms.WebspaceSettings.twitter }}">
+                                {% amp_img %}
+                                    <img class="s-icon x1" src="{{ icons.twitter|ico:page.theme }}"
+                                         alt="Twitter"/>
+                                {% endamp_img %}
+                            </a>
+                        {% endif %}
+
+                        {% if settings.cms.WebspaceSettings.youtube %}
+                            <a rel="noreferrer" target="_blank" href="{{ settings.cms.WebspaceSettings.youtube }}">
+                                {% amp_img %}
+                                    <img class="s-icon x1" src="{{ icons.youtube|ico:page.theme }}"
+                                         alt="Youtube"/>
+                                {% endamp_img %}
+                            </a>
+                        {% endif %}
+
+                        {% if settings.cms.WebspaceSettings.pinterest %}
+                            <a rel="noreferrer" target="_blank" href="{{ settings.cms.WebspaceSettings.pinterest }}">
+                                {% amp_img %}
+                                    <img class="s-icon x1" src="{{ icons.pinterest|ico:page.theme }}"
+                                         alt="Pinterest"/>
+                                {% endamp_img %}
+                            </a>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>

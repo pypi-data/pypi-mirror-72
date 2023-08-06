@@ -1,0 +1,21 @@
+{% load wagtailcore_tags my my_amp %}
+<form method="post" action{% if amp %}-xhr{% endif %}="{% pageurl page %}" class="padding regular max">
+    {{ form.text|richtext }}
+    {% csrf_token %}
+    <input type="hidden" name="form_id" value="{{ form.id }}">
+    {% for field in form|cached_form:request %}
+        <div class="form-group {{ field.field.widget|klass }}">
+            {{ field.label_tag }}
+            {{ field }}
+            <div class="management">
+                {{ field.errors }}
+                {% if field.help_text %}
+                    <small>{{ field.help_text|safe }}</small>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+    <div class="form-submit center">
+        <button type="submit" class="btn {{ form.button_theme }}">{{ form.button_text }}</button>
+    </div>
+</form>
