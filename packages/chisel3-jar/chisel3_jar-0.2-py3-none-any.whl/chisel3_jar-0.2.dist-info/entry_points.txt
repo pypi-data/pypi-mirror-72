@@ -1,0 +1,3 @@
+[console_scripts]
+chisel3_jar = chisel3_jar.main:main
+
