@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: selenium-pinterest
+Version: 0.0.60
+Summary: Selenium Pinterest helps you follow / unfollow / pin / post to Pinterest
+Home-page: https://github.com/Zselter07/selenium-pinterest
+Author: Pentek Zsolt
+License: UNKNOWN
+Description: # selenium_pinterest
+        ![python_version](https://img.shields.io/static/v1?label=Python&message=3.5%20|%203.6%20|%203.7&color=blue)
+        
+        ## Install
+        ~~~~shell
+        pip install --upgrade selenium-pinterest
+        # or
+        pip3 install --upgrade selenium-pinterest
+        ~~~~
+        
+        ## Usage
+        ~~~~python
+        
+        from selenium_pinterest import Pinterest
+        
+        pinterest_demo = pinterst_one = Pinterest("/path/to/cookies", "path/to/extension", host = 'host_nr', port=12345)
+        pinterest_demo.repin('pin_id')
+        
+        ## Dependencies
+        geckodriver
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
