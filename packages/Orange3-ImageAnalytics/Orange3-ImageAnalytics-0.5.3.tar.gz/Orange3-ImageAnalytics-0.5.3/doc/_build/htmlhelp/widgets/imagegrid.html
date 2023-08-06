@@ -1,0 +1,93 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <title>Image Grid</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="next" title="Save Images" href="saveimages.html" />
+    <link rel="prev" title="Image Embedding" href="imageembedding.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="saveimages.html" title="Save Images"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="imageembedding.html" title="Image Embedding"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Orange3 Image Analytics  documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="image-grid">
+<h1>Image Grid</h1>
+<p>Displays images in a similarity grid.</p>
+<p><strong>Inputs</strong></p>
+<ul class="simple">
+<li>Embeddings: Image embeddings from Image Embedding widget.</li>
+<li>Data Subset: A subset of embeddings or images.</li>
+</ul>
+<p><strong>Outputs</strong></p>
+<ul class="simple">
+<li>Images: Images from the dataset with an additional column specifying if the image is selected or the group, if there are several.</li>
+<li>Selected Images: Selected images with an additional column specifying the group.</li>
+</ul>
+<p>The <strong>Image Grid</strong> widget can display images from a dataset in a similarity grid - images with similar content are placed closer to each other. It can be used for image comparison, while looking for similarities or discrepancies between selected data instances (e.g. bacterial growth or bitmap representations of handwriting).</p>
+<p>![](images/ImageGrid-stamped.png)</p>
+<ol class="arabic simple">
+<li><em>Image Filename Attribute</em>: Attribute containing paths to images.</li>
+<li><em>Image cell fit</em>: Resize scales the images to grid, while Crop crops them to squares.</li>
+<li><em>Grid size</em>: Set the size of the grid. Click <em>Set size automatically</em> to optimize the projection.</li>
+<li>Tick the box to commit the changes automatically. Alternatively, click <em>Apply</em>.</li>
+<li>Information on the input.</li>
+<li>Access help, save image, and report (in that order).</li>
+</ol>
+<div class="section" id="example">
+<h2>Example</h2>
+<p><strong>Image Grid</strong> can be used to visualize similarity of images in a 2D projection. We have used 5 images of fruits and vegetables, namely orange, banana, strawberry, broccoli and cauliflower.</p>
+<p>We loaded the images with [Import Images](importimages.md) and embedded them with Inception v3 embedder in [Image Embedding](imageembedding.md).</p>
+<p>Finally, we visualized the images in <strong>Image Grid</strong>. It is obvious that broccoli and cauliflower and much more alike than strawberry and banana.</p>
+<p>![](images/ImageGrid-Example.png)</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="saveimages.html" title="Save Images"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="imageembedding.html" title="Image Embedding"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Orange3 Image Analytics  documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, Laboratory of Bioinformatics, Faculty of Computer Science, University of Ljubljana.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+    </div>
+  </body>
+</html>
