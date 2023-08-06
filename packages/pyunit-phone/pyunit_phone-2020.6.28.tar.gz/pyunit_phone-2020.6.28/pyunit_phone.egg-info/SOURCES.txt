@@ -1,0 +1,12 @@
+README.md
+setup.py
+pyunit_phone/__init__.py
+pyunit_phone/phone.py
+pyunit_phone/phoneRegularity.py
+pyunit_phone/singleton.py
+pyunit_phone/telephone.zip
+pyunit_phone.egg-info/PKG-INFO
+pyunit_phone.egg-info/SOURCES.txt
+pyunit_phone.egg-info/dependency_links.txt
+pyunit_phone.egg-info/not-zip-safe
+pyunit_phone.egg-info/top_level.txt
