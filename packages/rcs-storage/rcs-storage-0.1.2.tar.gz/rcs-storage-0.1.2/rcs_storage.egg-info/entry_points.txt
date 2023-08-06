@@ -1,0 +1,3 @@
+[console_scripts]
+rcs-storage = rcs_storage.scripts.main:cmd
+

@@ -1,0 +1,7 @@
+# Result from response = requests.get('.../api/collections/<code>/')
+
+# response.content
+content = b'[{"url":"https://dashboard.storage/api/collections/2013R9.9/","created":"2020-06-14","code":"2013R9.9","name":"Old group","type":"program_of_projects","status":"active","request_source":"TASK0000001"},{"url":"https://dashboard.storage/api/collections/2019UOM999/","created":"2020-06-14","code":"2019UOM999","name":"Test project","type":"project","status":"decommissioned","request_source":"RITM0000001"},{"url":"https://dashboard.storage/api/collections/9770_lab_name/","created":"2020-06-14","code":"9770_lab_name","name":"Lab Name","type":"facility_laboratory_or_research_service","status":"active","request_source":"RITM0000000"}]'
+
+# repsonse.json()
+json = [{'url': 'https://dashboard.storage/api/collections/2013R9.9/', 'created': '2020-06-14', 'code': '2013R9.9', 'name': 'Old group', 'type': 'program_of_projects', 'status': 'active', 'request_source': 'TASK0000001'}, {'url': 'https://dashboard.storage/api/collections/2019UOM999/', 'created': '2020-06-14', 'code': '2019UOM999', 'name': 'Test project', 'type': 'project', 'status': 'decommissioned', 'request_source': 'RITM0000001'}, {'url': 'https://dashboard.storage/api/collections/9770_lab_name/', 'created': '2020-06-14', 'code': '9770_lab_name', 'name': 'Lab Name', 'type': 'facility_laboratory_or_research_service', 'status': 'active', 'request_source': 'RITM0000000'}]
