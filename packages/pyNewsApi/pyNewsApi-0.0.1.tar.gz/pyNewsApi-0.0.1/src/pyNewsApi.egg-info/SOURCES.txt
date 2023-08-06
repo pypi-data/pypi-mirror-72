@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+dist/pyNewsApi-0.0.1-py3-none-any.whl
+src/pyNewsApi.egg-info/PKG-INFO
+src/pyNewsApi.egg-info/SOURCES.txt
+src/pyNewsApi.egg-info/dependency_links.txt
+src/pyNewsApi.egg-info/requires.txt
+src/pyNewsApi.egg-info/top_level.txt
