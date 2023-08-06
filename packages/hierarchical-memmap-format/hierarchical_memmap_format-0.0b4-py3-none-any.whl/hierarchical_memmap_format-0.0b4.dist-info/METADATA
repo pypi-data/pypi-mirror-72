@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: hierarchical-memmap-format
+Version: 0.0b4
+Summary: Hierarchical numpy memmap datasets for Python
+Home-page: https://github.com/mozjay0619/HMF
+Author: Jay Kim
+License: DSB 3-clause
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
+Requires-Dist: numpy (>=1.18.2)
+Requires-Dist: pandas (>=0.25.3)
+Requires-Dist: psutil (>=5.7.0)
+
+UNKNOWN
+
+
