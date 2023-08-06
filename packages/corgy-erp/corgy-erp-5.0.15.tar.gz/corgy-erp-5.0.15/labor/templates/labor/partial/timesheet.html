@@ -1,0 +1,30 @@
+{% load i18n material_frontend humanize %}
+
+{% if object.items.count > 0 %}
+    <div class="card">
+        <div class="card-content">
+            <div class="card-title">{% trans 'Jelenlét' %}</div>
+
+            <table class="table bordered">
+                <tr>
+                    <th>{% trans 'Dátum' %}</th>
+                    <th>{% trans 'Óraszám' %}</th>
+                    <th>{% trans 'Állapot' %}</th>
+                </tr>
+                {% for item in object.items.all %}
+                <tr>
+                    <td>{{ item.timestamp }}</td>
+                    <td>{{ item.duration }}</td>
+                    <td>{{ item.presence }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <div class="card-action">
+                {% include "labor/partial/presence.html" with object=object %}
+                {% include "labor/partial/absense.html" with object=object %}
+            </div>
+
+        </div>
+    </div>
+{% endif %}

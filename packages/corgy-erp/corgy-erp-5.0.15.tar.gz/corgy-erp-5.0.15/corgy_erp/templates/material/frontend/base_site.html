@@ -1,0 +1,15 @@
+{% extends 'material/frontend/base.html' %}
+{% load i18n corgy.erp.version %}
+
+{% block title %}<a href="{% url 'index' %}">{% trans "Corgy" %}</a>>{% endblock %}
+{% block page_title %}<a href="{% url 'index' %}">{% trans "Corgy" %}</a>{% endblock %}
+
+{% block footer %}
+
+<div><a href="{% url 'index' %}">Corgy</a></div>
+<div>{% trans 'Powered by' %} <a href="https://www.cherubits.hu">Cherubits</a></div>
+<div>Copyright 2020, <a href="mailto:laszlo.hegedus@cherubits.hu">László Hegedűs</a></div>
+
+{% current_version %}
+
+{% endblock footer %}

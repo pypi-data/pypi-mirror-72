@@ -1,0 +1,20 @@
+{% load i18n %}
+<ul>
+    <li>
+        <a href="{% url 'customers:customer_list' %}">
+            <i class="material-icons">account_circle</i>
+            <span>{% trans 'Ügyfelek' %}</span>
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'customers:individual_list' %}">
+            <i class="material-icons">account_box</i>
+            <span>{% trans 'Egyéni vállalkozások' %}</span>
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'customers:organization_list' %}">
+            <i class="material-icons">group_work</i>
+            <span>{% trans 'Társas vállalkozások' %}</span>
+        </a>
+    </li>

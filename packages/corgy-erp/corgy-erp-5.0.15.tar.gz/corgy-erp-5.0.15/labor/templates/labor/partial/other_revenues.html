@@ -1,0 +1,29 @@
+{% load i18n material_frontend humanize %}
+
+    <div class="card">
+        <div class="card-content">
+            <div class="card-title">{% trans 'Béren kívüli juttatások' %}</div>
+            <table class="table bordered">
+                <tr>
+                    <th>{% trans 'Osztalék fizetés' %}</th>
+                    <td>{{ '0.00' }} HUF</td>
+                </tr>
+                <tr>
+                    <th>{% trans 'Osztalékká vált korábbi évi osztalékelőleg' %}</th>
+                    <td>{{ '0.00' }} HUF</td>
+                </tr>
+                <tr>
+                    <th>{% trans 'Osztalékká vált idén kifizetett osztalékelőleg' %}</th>
+                    <td>{{ '0.00' }} HUF</td>
+                </tr>
+                <tr>
+                    <th>{% trans 'Osztalék adója' %}</th>
+                    <td>{{ '0.00' }} (0.00 %)</td>
+                </tr>
+                <tr>
+                    <th>{% trans 'Osztalékelőleg megfizetett adója' %}</th>
+                    <td>{{ '0.00' }} (0.00 %)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
