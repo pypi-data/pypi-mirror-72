@@ -1,0 +1,4 @@
+dbnd==0.27.17
+
+[tests]
+pyspark==2.4.4
