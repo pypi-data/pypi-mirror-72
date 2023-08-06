@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "scrapyscript"
+version = "1.1.0"
+description = "Run a Scrapy spider programmatically from a script or a Celery task - no project required."
+authors = ["Jeff Schnurr <jschnurr@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/jschnurr/scrapyscript"
+keywords = ["scrapy"]
+classifiers = [
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Framework :: Scrapy',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License'
+]
+include = [
+        'LICENCE'
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+billiard = "3.6.3.0"
+scrapy = "^2.2.0"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+pytest = "^5.4.3"
+tox = "^3.16.0"
+
+[build-system]
+requires = ["poetry>=1.0.9"]
+build-backend = "poetry.masonry.api"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = true
+envlist = py36,py37,py38
+
+[testenv]
+whitelist_externals = poetry
+commands =
+    poetry install -v
+    poetry run black --check --diff --quiet src
+    poetry run pytest tests/
+"""
