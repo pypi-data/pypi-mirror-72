@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: drive-catalog
+Version: 0.1.3
+Summary: Return formatted file and directory information.
+Home-page: https://github.com/bestep/drive-catalog
+Author: William Estep
+License: UNKNOWN
+Description: Return formatted file and drive information.
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+Provides-Extra: lint
+Provides-Extra: test
