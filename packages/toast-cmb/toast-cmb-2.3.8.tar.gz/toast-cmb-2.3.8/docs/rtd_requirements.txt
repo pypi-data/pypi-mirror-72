@@ -1,0 +1,7 @@
+cmake>=3.10.0
+numpy
+scipy
+healpy
+astropy
+h5py
+ephem
