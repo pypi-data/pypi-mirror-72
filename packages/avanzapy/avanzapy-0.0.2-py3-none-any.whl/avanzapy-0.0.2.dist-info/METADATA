@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: avanzapy
+Version: 0.0.2
+Summary: A Python wrapper to interact with Avanza
+Home-page: https://github.com/alrevuelta/avanzapy
+Author: Alvaro Revuelta
+License: UNKNOWN
+Keywords: avanza broker trading
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Requires-Dist: aiohttp (>=3.6.2)
+Requires-Dist: requests (==2.23.0)
+Requires-Dist: pandas (==1.0.4)
+Requires-Dist: matplotlib (==3.2.1)
+
+With this Python wrapper you can interact with the Swedish broker Avanza. You can run two types of query: logged in and not logged in. Regarding the first ones you can query your balances and open positions, or even send orders to market. If you are not logged with your account (maybe you don't have an account or don't want to expose your data) you can still use this wrapper to query differentes instruments data (stocks, funds, certificates, etf,...). You can get both current price and historical price in different formats
+
+
