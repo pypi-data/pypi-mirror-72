@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+github_delete.egg-info/PKG-INFO
+github_delete.egg-info/SOURCES.txt
+github_delete.egg-info/dependency_links.txt
+github_delete.egg-info/top_level.txt
+scripts/github-delete
