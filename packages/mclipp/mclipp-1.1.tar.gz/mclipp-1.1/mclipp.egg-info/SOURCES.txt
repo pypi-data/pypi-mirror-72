@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+mclipp/__init__.py
+mclipp.egg-info/PKG-INFO
+mclipp.egg-info/SOURCES.txt
+mclipp.egg-info/dependency_links.txt
+mclipp.egg-info/not-zip-safe
+mclipp.egg-info/top_level.txt
