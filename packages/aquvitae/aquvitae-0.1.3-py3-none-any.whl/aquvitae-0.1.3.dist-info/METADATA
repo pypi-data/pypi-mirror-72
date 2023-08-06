@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: aquvitae
+Version: 0.1.3
+Summary: The easiest Knowledge Distillation library for Light Weight DeepLearning
+Home-page: https://github.com/aquvitae/aquvitae
+Author: marload
+Author-email: rladhkstn8@gmail.com
+License: MIT
+Download-URL: https://github.com/aquvitae/aquvitae/archive/v0.1.3.tar.gz
+Keywords: tensorflow,pytorch,pytorch-ignite,tqdm
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+
+UNKNOWN
+
+
