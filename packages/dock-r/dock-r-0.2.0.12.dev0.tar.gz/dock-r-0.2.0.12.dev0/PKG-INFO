@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: dock-r
+Version: 0.2.0.12.dev0
+Summary: dock-r - Tools to go faster with docker.
+Home-page: https://www.github.com/aaronsteers/runnow
+Author: Aaron (AJ) Steers
+Author-email: aj.steers@slalom.com
+License: MIT
+Download-URL: https://www.github.com/aaronsteers/runnow/archive
+Description: UNKNOWN
+Keywords: DOCKER
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8

@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+VERSION
+setup.cfg
+setup.py
+dock_r/__init__.py
+dock_r/app.py
+dock_r/cli.py
+dock_r/main.py
+dock_r.egg-info/PKG-INFO
+dock_r.egg-info/SOURCES.txt
+dock_r.egg-info/dependency_links.txt
+dock_r.egg-info/entry_points.txt
+dock_r.egg-info/requires.txt
+dock_r.egg-info/top_level.txt
