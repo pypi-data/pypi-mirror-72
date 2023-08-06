@@ -1,0 +1,17 @@
+README.md
+setup.py
+node/__init__.py
+node/compositor.py
+node/expression.py
+node/group.py
+node/internal.py
+node/properties.py
+node/shader.py
+node/texture.py
+node/util.py
+node/value.py
+node_expressions.egg-info/PKG-INFO
+node_expressions.egg-info/SOURCES.txt
+node_expressions.egg-info/dependency_links.txt
+node_expressions.egg-info/requires.txt
+node_expressions.egg-info/top_level.txt
