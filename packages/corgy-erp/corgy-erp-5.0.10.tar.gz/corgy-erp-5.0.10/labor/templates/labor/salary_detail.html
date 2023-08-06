@@ -1,0 +1,78 @@
+{% extends 'material/frontend/views/detail.html' %}
+{% load i18n material_frontend humanize corgy.commons %}
+
+{% block breadcrumbs_items %}
+<a href="{% url object.employee.employer|frontend_urlname:'detail' object.employee.employer.pk %}">{{ object.employee.employer }}</a>
+<a href="{% url object.employee|frontend_urlname:'list' %}">{{ object.employee|verbose_name_plural|title }}</a>
+<a href="{% url object.employee|frontend_urlname:'detail' object.employee.pk %}">{{ object.employee }}</a>
+<a href="{% url object|frontend_urlname:'list' %}">{{ salary|verbose_name_plural|title }}</a>
+<a href="{% url object|frontend_urlname:'detail' object.pk %}">{{ object.period_year }}</a>
+<a class="active">{{ object.period_month }}</a>
+{% endblock %}
+
+{% block content %}
+<div class="left-panel">
+    <div class="card">
+        <div class="card-content">
+            {% block card %}
+            <div class="card-title">{{ view.model|verbose_name|title }}: {{ object }}</div>
+            <table class="table bordered">
+                {% for field_name, value in object_data %}
+                <tr>
+                    <th>{{ field_name }}</th>
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endblock %}
+            </table>
+        </div>
+        <div class="card-action">
+            <div class="right-align">
+                <a href="#" class="btn">{% trans 'Bérjegyzék' %}</a>
+                {% if delete_url %}<a class="waves-effect waves-light btn red white-text" href="{{ delete_url }}">{% trans 'Delete' %}</a>{% endif %}
+                {% if change_url %}<a class="waves-effect waves-light btn white-text" href="{{ change_url }}">{% trans 'Change' %}</a>{% endif %}
+            </div>
+        </div>
+    </div>
+
+    {% include "labor/partial/timesheet.html" with object=object.timesheet %}
+
+    {% include "labor/partial/revenues.html" %}
+
+    {% include "labor/partial/non_monetary.html" %}
+
+    {% include "labor/partial/employee_contributions.html" %}
+
+    {% include "labor/partial/employer_contributions.html" %}
+
+    {% include "labor/partial/personal_tax.html" %}
+
+    {% include "labor/partial/other_revenues.html" %}
+
+    {% include "labor/partial/blocked.html" %}
+
+<!--    <div class="card">-->
+<!--        <div class="card-content">-->
+<!--            <div class="card-title">graf</div>-->
+<!--            <canvas id="salaryChart" ></canvas>-->
+
+<!--            <script type="text/javascript">-->
+<!--              new Chart($("#salaryChart"), {-->
+<!--                type: 'line',-->
+<!--                data: {{ salary_history|safe }},-->
+<!--                options: {-->
+<!--                  scales: {-->
+<!--                    xAxes: [{-->
+<!--                      type: 'time',-->
+<!--                    }]-->
+<!--                  }-->
+<!--                }-->
+<!--              });-->
+<!--            </script>-->
+<!--        </div>-->
+<!--    </div>-->
+</div>
+<div class="right-panel">
+    {% include "labor/partial/salary.html" %}
+</div>
+{% endblock %}

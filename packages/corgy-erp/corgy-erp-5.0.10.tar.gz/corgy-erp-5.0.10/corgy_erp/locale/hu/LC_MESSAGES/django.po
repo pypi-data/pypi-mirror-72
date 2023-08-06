@@ -1,0 +1,52 @@
+# ERP MODULE LOCALIZATION MESSAGES.
+# Copyright (C) 2020, Cherubits
+# This file is distributed under the same license as the corgy_erp package.
+# László Hegedűs <laszlo.hegedus@cherubits.hu>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-05 00:47+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: corgy_erp/settings.py:234
+msgid "English"
+msgstr "Angol"
+
+#: corgy_erp/settings.py:235
+msgid "Hungarian"
+msgstr "Magyar"
+
+#: corgy_erp/templates/admin/base_site.html:5
+msgid "Administration Console"
+msgstr "Adminisztrációs Konzol"
+
+#: corgy_erp/templates/flatpages/default.html:21
+msgid "Web Assistant"
+msgstr "Web Asszisztens"
+
+#: corgy_erp/templates/material/frontend/base.html:78
+msgid "Log out"
+msgstr "Kijelentkezés"
+
+#: corgy_erp/templates/material/frontend/base.html:80
+msgid "Log in"
+msgstr "Bejelentkezés"
+
+#: corgy_erp/templates/material/frontend/base_site.html:4
+#: corgy_erp/templates/material/frontend/base_site.html:5
+msgid "Corgy"
+msgstr "Corgy"
+
+#: corgy_erp/templates/material/frontend/base_site.html:10
+msgid "Powered by"
+msgstr "Működtetve"
