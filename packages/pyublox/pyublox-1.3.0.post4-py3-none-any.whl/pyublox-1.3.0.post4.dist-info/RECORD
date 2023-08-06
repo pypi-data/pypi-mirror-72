@@ -1,0 +1,13 @@
+pyublox/__init__.py,sha256=AKwc-snKZ12jU_gXAqDsqQ3Pjcl3hbAAc72-jXmGwzo,104
+pyublox/commands.py,sha256=4621rHtcysOoyP3ZvpgMbXs9gNTQC9xuczSzGKJz5aU,2698
+pyublox/main.py,sha256=ejcOscMNdsSUWgeHFRU4n9TJlPLHW6l62GgMIxmwdvE,3363
+pyublox/ublox/__init__.py,sha256=Rp8IavUv8RrbdR41Umla0iIRAGtLFvJEqo8QpyeLoXQ,32
+pyublox/ublox/constants.py,sha256=JcDpBgqoJz3kFF7TCAb-tvNC9fz8NWHNJiaqvJ7ipQI,310
+pyublox/ublox/core.py,sha256=fbgDOECGNcA085W1s4A7QuEHn9o9J7uEqLYl6BkDtgI,17588
+pyublox/ublox/helpers.py,sha256=65GyVn9dehdbBHr1nPXatzQBkLSUWuKxTFyROrWRJSI,3235
+pyublox/ublox/io.py,sha256=SlOME4hTXdjMKIg1L3EGynNI384ZmKdZ11Prf6MXgAo,15162
+pyublox-1.3.0.post4.dist-info/METADATA,sha256=RNmsNH2NeNCH8XqRYfk05SKKz39W9Mz2EpPpfKiHwGM,2656
+pyublox-1.3.0.post4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pyublox-1.3.0.post4.dist-info/entry_points.txt,sha256=ZQmJHWvm2WYUpambcd5icozFO8De5uCkcti-dbN1qVU,47
+pyublox-1.3.0.post4.dist-info/top_level.txt,sha256=zHBk3ESpOuH3QMsLqNTWusz-xPLPtifpAyk4kCn1too,8
+pyublox-1.3.0.post4.dist-info/RECORD,,
