@@ -1,0 +1,21 @@
+$section-border-radius: 10px;
+$section-space: 30px;
+
+section, article, form {
+  position: relative;
+  border-radius: $section-border-radius;
+
+  &.padding {
+    padding: $section-space;
+  }
+
+  @include theme($themes) {
+    background: t('kaks');
+  }
+
+  &.reverse-color {
+    @include theme($themes) {
+      background: t('uks');
+    }
+  }
+}
