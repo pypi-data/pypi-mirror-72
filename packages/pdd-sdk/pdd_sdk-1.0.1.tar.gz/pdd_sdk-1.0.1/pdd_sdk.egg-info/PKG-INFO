@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pdd-sdk
+Version: 1.0.1
+Summary: pdd_sdk
+Home-page: https://github.com/ymj4023/pdd_sdk
+Author: ymj4023
+Author-email: xuerobec@foxmail.com
+License: MIT
+Description: # pdd_sdk
+         原作者github链接:https://github.com/makelove/DDK_SDK
+        
+        多多客接口python3版本
+        
+        增加接口字段细节
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: ~=3.4
+Description-Content-Type: text/markdown
