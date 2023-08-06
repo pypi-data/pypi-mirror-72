@@ -1,0 +1,129 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-11-18 15:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ../widget.py:72
+msgid "Created on"
+msgstr ""
+
+#: ../behavior.py:73
+msgid "Crop first image"
+msgstr ""
+
+#: ../behavior.py:87
+msgid "Crop image"
+msgstr ""
+
+#: ../behavior.py:74
+msgid "Crop the image to the selected boundaries above"
+msgstr ""
+
+#: ../behavior.py:95
+msgid "Feel free to add/remove classes in your registry.xml"
+msgstr ""
+
+#: ../behavior.py:121
+msgid "Files"
+msgstr ""
+
+#: ../behavior.py:66
+msgid "First image scale"
+msgstr ""
+
+#: ../behavior.py:81
+msgid "Gallery image preview scale"
+msgstr ""
+
+#: ../behavior.py:94
+msgid "Gallery layout"
+msgstr ""
+
+#: ../behavior.py:80
+msgid "Image scale"
+msgstr ""
+
+#: ../behavior.py:58
+msgid "Include Leadimage"
+msgstr ""
+
+#: ../configure.zcml:21
+msgid "Manage content-related images and attachments"
+msgstr ""
+
+#: ../behavior.py:102
+msgid "Pictures"
+msgstr ""
+
+#: ../configure.zcml:123
+msgid "Profile for upgrade step 'Local configuration'"
+msgstr ""
+
+#: ../configure.zcml:106
+msgid "Profile for upgrade step 'Package rename'"
+msgstr ""
+
+#: ../behavior.py:162
+#: ../configure.zcml:43
+msgid "Related Media"
+msgstr ""
+
+#: ../configure.zcml:21
+msgid "Related media behavior"
+msgstr ""
+
+#: ../behavior.py:52
+msgid "Show image titles as caption"
+msgstr ""
+
+#: ../behavior.py:67
+msgid "Size for the first image in the gallery"
+msgstr ""
+
+#: ../widget.py:73
+msgid "Title"
+msgstr ""
+
+#: ../configure.zcml:29
+msgid "Uninstallation profile"
+msgstr ""
+
+#: ../behavior.py:59
+msgid "Whether or not include the Leadimage in the gallery viewlet"
+msgstr ""
+
+#. Default: "Related Attachments"
+#: ../behavior.py:119
+msgid "label_attachments"
+msgstr ""
+
+#. Default: "Base Path"
+#: ../behavior.py:32
+msgid "label_base_path"
+msgstr ""
+
+#. Default: "Base path for uploaded content. If not given the base path is automatically generated as [configured media root path]/[this id]."
+#: ../behavior.py:33
+msgid "label_base_path_desc"
+msgstr ""
+
+#. Default: "Related Images"
+#: ../behavior.py:100
+msgid "label_images"
+msgstr ""
+
+#. Default: "Attachments"
+#: ../viewlet_attachments.pt:3
+msgid "title_attachments"
+msgstr ""

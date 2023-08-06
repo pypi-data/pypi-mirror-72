@@ -1,0 +1,16 @@
+<div tal:define="attachments view/get_attachments"
+     tal:condition="attachments" class="visualNoPrint"
+     i18n:domain="collective.behavior.relatedmedia">
+    <h2 i18n:translate="title_attachments">Attachments</h2>
+    <ul id="related-attachments" class="visualNoMarker">
+
+        <li tal:repeat="att attachments" class="attachment-item">
+            <a tal:attributes="href att/url;
+                               target att/target">
+                <img tal:condition="att/icon|nothing" border="0"
+                     tal:attributes="src string:${view/site_url}/${att/icon}"
+                /> <span tal:content="att/title" /> (<span tal:content="att/size" />)
+            </a>
+        </li>
+    </ul>
+</div>

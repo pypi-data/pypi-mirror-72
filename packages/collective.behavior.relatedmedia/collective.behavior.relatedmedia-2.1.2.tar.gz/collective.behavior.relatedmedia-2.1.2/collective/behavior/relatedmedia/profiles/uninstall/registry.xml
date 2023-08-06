@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+    <records interface="collective.behavior.relatedmedia.interfaces.IRelatedMediaSettings"
+             prefix="collective.behavior.relatedmedia" remove="True" />
+
+</registry>
