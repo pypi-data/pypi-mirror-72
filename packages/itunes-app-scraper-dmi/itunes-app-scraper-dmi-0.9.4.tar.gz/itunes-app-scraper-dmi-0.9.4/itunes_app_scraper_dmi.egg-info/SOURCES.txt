@@ -1,0 +1,9 @@
+README.md
+setup.py
+itunes_app_scraper/__init__.py
+itunes_app_scraper/scraper.py
+itunes_app_scraper/util.py
+itunes_app_scraper_dmi.egg-info/PKG-INFO
+itunes_app_scraper_dmi.egg-info/SOURCES.txt
+itunes_app_scraper_dmi.egg-info/dependency_links.txt
+itunes_app_scraper_dmi.egg-info/top_level.txt
