@@ -1,0 +1,11 @@
+mypy_boto3_marketplace_entitlement/__init__.py,sha256=JY6VWk39c40MSjVTrk4KnJj5vdn9zrmPxAYJxp0GfB4,894
+mypy_boto3_marketplace_entitlement/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_marketplace_entitlement/client.py,sha256=3EMgwEIPNnObxQBER8BLa8dl6KSme9ql49WeOEcYLSQ,2911
+mypy_boto3_marketplace_entitlement/paginator.py,sha256=K2I6mca6oKuZ8Ovzxxkv5k9e6tx6lecjrOPvp1Ck0jw,1753
+mypy_boto3_marketplace_entitlement/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_marketplace_entitlement/type_defs.py,sha256=iL7iRq9TLjPxkigPbgqy1ECdFOKidtN058pqdLM8duw,1290
+mypy_boto3_marketplace_entitlement/version.py,sha256=-rISFHmHiESo1swbSNjN49fLaSWdvWbL2V7cbK6fqPA,57
+mypy_boto3_marketplace_entitlement-1.14.12.0.dist-info/METADATA,sha256=U2L1eZxRyVtyu-YtEGglgJjybwPkN7s6dHGS4F_vBsw,5239
+mypy_boto3_marketplace_entitlement-1.14.12.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_marketplace_entitlement-1.14.12.0.dist-info/top_level.txt,sha256=DUOq6LqSFXa27G7vJmeWPiFJc0PRsBD4s_K1b2YcDzY,35
+mypy_boto3_marketplace_entitlement-1.14.12.0.dist-info/RECORD,,
