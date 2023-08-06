@@ -1,0 +1,11 @@
+numpy
+opencv-python
+flask
+tezign
+sklearn
+scenedetect
+moviepy==1.0.0
+Pillow<7.0.0
+torch
+torchvision
+joblib
