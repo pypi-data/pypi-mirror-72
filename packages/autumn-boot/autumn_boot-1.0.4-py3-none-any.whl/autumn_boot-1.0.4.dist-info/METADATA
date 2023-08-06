@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: autumn-boot
+Version: 1.0.4
+Summary: A framework to build event-driven backend solutions
+Home-page: https://bitbucket.org/AlphaSpliT/autumn
+Author: Ferencz Albert
+Author-email: split@aferencz.xyz
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: asyncio
+Requires-Dist: websockets
+Requires-Dist: python-dotenv
+Requires-Dist: click
+Requires-Dist: pymongo
+
+UNKNOWN
+
+
