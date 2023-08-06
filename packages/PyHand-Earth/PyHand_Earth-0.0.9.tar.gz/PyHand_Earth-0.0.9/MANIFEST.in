@@ -1,0 +1,6 @@
+include PyHand-Earth
+include PyHand-Earth/tyler/*
+include PyHand-Earth/tyler/testing
+include PyHand-Earth/tyler/testing/new/*.png
+include PyHand-Earth/tyler/testing/new/*
+
