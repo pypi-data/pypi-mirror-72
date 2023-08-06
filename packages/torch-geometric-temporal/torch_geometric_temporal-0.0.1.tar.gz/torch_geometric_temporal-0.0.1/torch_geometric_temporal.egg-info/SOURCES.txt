@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+torch_geometric_temporal/__init__.py
+torch_geometric_temporal.egg-info/PKG-INFO
+torch_geometric_temporal.egg-info/SOURCES.txt
+torch_geometric_temporal.egg-info/dependency_links.txt
+torch_geometric_temporal.egg-info/requires.txt
+torch_geometric_temporal.egg-info/top_level.txt
+torch_geometric_temporal/nn/__init__.py
+torch_geometric_temporal/nn/dummy_layer.py
