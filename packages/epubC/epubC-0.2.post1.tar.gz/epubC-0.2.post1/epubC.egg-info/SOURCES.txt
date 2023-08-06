@@ -1,0 +1,11 @@
+.hgignore
+COPYING.txt
+MANIFEST.in
+README.txt
+epubC.py
+setup.py
+test.py
+epubC.egg-info/PKG-INFO
+epubC.egg-info/SOURCES.txt
+epubC.egg-info/dependency_links.txt
+epubC.egg-info/top_level.txt
