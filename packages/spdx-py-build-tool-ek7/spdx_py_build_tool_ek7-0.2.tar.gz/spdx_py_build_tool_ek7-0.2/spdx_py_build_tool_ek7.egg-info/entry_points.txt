@@ -1,0 +1,3 @@
+[console_scripts]
+spdx-build = build_tool.tool:entry_point
+

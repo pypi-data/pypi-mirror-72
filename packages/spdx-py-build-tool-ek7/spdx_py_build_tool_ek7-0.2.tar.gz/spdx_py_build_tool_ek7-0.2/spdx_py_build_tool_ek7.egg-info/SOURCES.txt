@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+build_tool/__init__.py
+build_tool/core.py
+build_tool/helpers.py
+build_tool/tool.py
+build_tool/utils.py
+spdx_py_build_tool_ek7.egg-info/PKG-INFO
+spdx_py_build_tool_ek7.egg-info/SOURCES.txt
+spdx_py_build_tool_ek7.egg-info/dependency_links.txt
+spdx_py_build_tool_ek7.egg-info/entry_points.txt
+spdx_py_build_tool_ek7.egg-info/top_level.txt
