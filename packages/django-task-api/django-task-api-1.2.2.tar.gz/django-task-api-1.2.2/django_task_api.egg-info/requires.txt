@@ -1,0 +1,4 @@
+djangorestframework==3.*
+django>=1.11.23
+celery==4.*
+six
