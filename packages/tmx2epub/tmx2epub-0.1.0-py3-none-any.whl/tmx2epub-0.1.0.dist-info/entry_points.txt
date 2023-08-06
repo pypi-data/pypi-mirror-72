@@ -1,0 +1,3 @@
+[console_scripts]
+tmx2epub=tmx2epub.__main__:main
+
