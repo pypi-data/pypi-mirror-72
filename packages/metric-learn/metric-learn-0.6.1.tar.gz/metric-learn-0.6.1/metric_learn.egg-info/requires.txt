@@ -1,0 +1,14 @@
+numpy
+scipy
+scikit-learn>=0.20.3
+
+[demo]
+matplotlib
+
+[docs]
+sphinx
+shinx_rtd_theme
+numpydoc
+
+[sdml]
+skggm>=0.2.9
