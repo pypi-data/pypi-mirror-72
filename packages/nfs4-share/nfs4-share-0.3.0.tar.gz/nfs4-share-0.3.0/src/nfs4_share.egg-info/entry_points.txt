@@ -1,0 +1,3 @@
+[console_scripts]
+nfs4_share = nfs4_share.cli:entry_point
+
