@@ -1,0 +1,13 @@
+agp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+agp/algorithm.py,sha256=lHABGCxtJqkl2UeS8Gjr_3RGna6tqZooh-yxzCM_Gd4,879
+agp/configuration.py,sha256=mk9eq5PAF-n79d4D1ibmMOMKFbGm1pT62DP-iDsE_S4,1064
+agp/entrypoint.py,sha256=tbUaUk9vLci0b0su3b2x-bsM30w3O16ACY740kB9dmI,18369
+agp/environment.py,sha256=Z5TvxAjlVwqTHiHKIJ1U6q61DzicqqkyhSdnBqDurSU,9187
+agp/geoimage.py,sha256=yftGAH4kX0_bW58OK1QVvDSwN-o0z5KHmJv3opR5Z8E,13126
+agp/geometries.py,sha256=0BZFtmFyB0j7hc02t6LWc4_FRGtzXRpRh71POmcCcIM,5107
+agp/lasfile.py,sha256=gvf5Lc-_ecpEf6bcfo-XRMoU04MIuhVtwmZvBIO6VYk,4314
+agp-0.0.5.dist-info/LICENSE,sha256=gXzaVJ0uGgLHNnIFpKheiz5Lvn0hUamvNynb1Nn5O6Y,1545
+agp-0.0.5.dist-info/METADATA,sha256=DFOGZlIwunsHEZtv-AC5MUlRxH_YDXTEcJVs-UjyDjg,1083
+agp-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+agp-0.0.5.dist-info/top_level.txt,sha256=Yqtuqp_kQ491p4kiHJylWSIXGxA_VOOZxOrjc-URhP8,4
+agp-0.0.5.dist-info/RECORD,,
