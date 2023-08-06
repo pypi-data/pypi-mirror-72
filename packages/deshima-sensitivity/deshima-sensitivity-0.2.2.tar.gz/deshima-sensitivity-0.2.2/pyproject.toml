@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "deshima-sensitivity"
+version = "0.2.2"
+description = "Sensitivity calculator for DESHIMA-type spectrometers"
+authors = [
+    "Akira Endo <a.endo@tudelft.nl>",
+    "Akio Taniguchi <taniguchi@a.phys.nagoya-u.ac.jp>",
+]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/deshima-dev/deshima-sensitivity"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+ipython = "^5.5"
+matplotlib = "^3.1"
+numpy = "^1.17"
+scipy = "^1.4"
+pandas = ">= 0.25, < 1.1"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.7"
+black = "^19.10b0"
+pytest = "^5.3"
+jupyter = "^1.0"
+jupyterlab = "^2.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
