@@ -1,0 +1,3 @@
+[console_scripts]
+handy_ml = handy_ml.cli:main
+
