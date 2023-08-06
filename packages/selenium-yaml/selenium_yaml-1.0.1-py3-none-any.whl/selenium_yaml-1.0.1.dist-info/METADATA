@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: selenium-yaml
+Version: 1.0.1
+Summary: Selenium bots using YAML
+Home-page: https://github.com/wigeria/selenium-yaml-core
+Author: Abhishek Verma
+Author-email: wigeriaaeriag@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Development Status :: 3 - Alpha
+Classifier: Natural Language :: English
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: selenium (>=3.141.0)
+Requires-Dist: Jinja2
+Requires-Dist: loguru
+Requires-Dist: PyYAML
+Requires-Dist: requests
+
+# selenium-yaml-core
+Selenium bots using YAML
+
+## Documentation
+
+For in-depth documentation, head over to our [GH-Pages site](https://wigeria.github.io/selenium-yaml-core/).
+
+## Running the CLI from source
+
+As long as the dependencies are installed, and you're using Python>=3.6, the CLI can be run directly by using:
+
+```run_sally.py --yaml-file=path/to/bot/yaml```
+
+<sub><sup>Use the `--help` argument for details on the CLI!</sup></sub>
+
+## Todos
+
+- [ ] Deploy on PyPi
+
