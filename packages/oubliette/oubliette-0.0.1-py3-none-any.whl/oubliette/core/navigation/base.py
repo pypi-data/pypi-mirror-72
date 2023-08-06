@@ -1,0 +1,3 @@
+"""This file houses the building blocks that make up in-game locations like
+towns, rooms, forests, hallways, etc...
+"""
