@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: chrome-bookmarks
+Version: 2020.7.2
+Summary: Google Chrome bookmarks helper
+Home-page: https://github.com/andrewp-as-is/chrome-bookmarks.py
+License: Unlicense
+Description: <!--
+        https://readme42.com
+        -->
+        
+        
+        [![](https://img.shields.io/pypi/v/chrome-bookmarks.svg?maxAge=3600)](https://pypi.org/project/chrome-bookmarks/)
+        [![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
+        
+        ### Installation
+        ```bash
+        $ [sudo] pip install chrome-bookmarks
+        ```
+        
+        #### Features
+        OS|path
+        -|-
+        `Linux`|`~/.config/google-chrome/Default/Bookmarks`
+        `macOS`|`~/Library/Application Support/Google/Chrome/Default/Bookmarks`
+        `Windows`|`~\AppData\Local\Google\Chrome\User Data\Default\Bookmarks`
+        
+        #### Examples
+        ```python
+        import chrome_bookmarks
+        
+        for folder in chrome_bookmarks.folders:
+            print(folder.name)
+            print(folder.folders)
+        ```
+        
+        ```python
+        for url in chrome_bookmarks.urls:
+            print(url.url, url.name)
+        ```
+        
+        <p align="center">
+            <a href="https://readme42.com/">readme42.com</a>
+        </p>
+Keywords: Google Chrome bookmarks
+Platform: UNKNOWN
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
