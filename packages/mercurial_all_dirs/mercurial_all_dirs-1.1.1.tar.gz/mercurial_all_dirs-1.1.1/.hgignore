@@ -1,0 +1,10 @@
+syntax: regexp
+
+\.pyc$
+\.pyo$
+~$
+^\.\#
+^build/
+^dist/
+\.egg-info/
+^README\.html

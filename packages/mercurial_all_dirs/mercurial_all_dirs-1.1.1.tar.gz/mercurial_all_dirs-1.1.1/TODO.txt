@@ -1,0 +1,13 @@
+
+→ decision whether to continue after errors, or fail on first problem
+
+→ recursive way, which checks for repos inside repos
+   (probably another command name to avoid using opts)
+
+→ reasonable support for filenames  like 
+       hg alld log file.txt
+   or
+       hg alld add file.txt
+   which currently fail
+   (resolve relative names against repo path)
+
