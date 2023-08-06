@@ -1,0 +1,11 @@
+README.md
+setup.py
+jqfilters/__init__.py
+jqfilters/filters.py
+jqfilters/operations.py
+jqfilters/value_getters.py
+jqfilters.egg-info/PKG-INFO
+jqfilters.egg-info/SOURCES.txt
+jqfilters.egg-info/dependency_links.txt
+jqfilters.egg-info/requires.txt
+jqfilters.egg-info/top_level.txt
