@@ -1,0 +1,12 @@
+crawlutils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crawlutils/exporters.py,sha256=7GRnQEX_bQ19wh0EiHkiBD-yPxKMTDnLBGLD4s_g0N4,234
+crawlutils/items.py,sha256=byKGxXWmKQp8tQdZEiFWXq39gol2AVlYItdI8NltlMI,1016
+crawlutils/pipelines.py,sha256=pAcu4LA2OUM2ljYw4ztv9IQDwc9BC3JWVFAX1BHYLy0,1247
+crawlutils/settings.py,sha256=D0x0CZjsyimVpERoAKgo6gVoT4NICXzExvFYUDD_Hgg,3304
+crawlutils/base_spiders/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+crawlutils/base_spiders/base.py,sha256=smkAX60ZI6tG2H-Ru0EYTjeTFKCIdLsrNHDDie2-L3c,3099
+crawlutils-1.4.0.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+crawlutils-1.4.0.dist-info/METADATA,sha256=sbA_gpc6TUO_y8iXRUun5G6CQbUGrhwsVZk3ocX_MY4,510
+crawlutils-1.4.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+crawlutils-1.4.0.dist-info/top_level.txt,sha256=_8pKTBjrUf05vUUh30XkmF1cpIkWZgH-YJkPanwjkUQ,11
+crawlutils-1.4.0.dist-info/RECORD,,
