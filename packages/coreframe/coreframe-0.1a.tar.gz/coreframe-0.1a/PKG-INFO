@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: coreframe
+Version: 0.1a
+Summary: COmmon REsearch FRAMEwork
+Home-page: https://github.com/hyungjun/coreframe
+Author: Hyungjun Kim
+Author-email: hyungjun@gmail.com
+License: MIT
+Description:  long_description to be written. 
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
