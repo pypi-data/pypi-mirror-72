@@ -1,0 +1,14 @@
+desk/__init__.py,sha256=jVA5MHkOYxsqNNSc5EexBWVmBClSqH5T3OyN-957DPk,528
+desk/console_commands.py,sha256=eQMgSA_mcSuypaTcUvSbJNPB49TzyTp7CQbcLQ_ooIM,3825
+desk/main.py,sha256=q5UKIcPgcpzQbjqXu3MlXl0IEd18-9sl6yTUAk7Ojy0,1712
+desk/models/Oss-Orich-bb_models.hdf5,sha256=Qi1f3tgm8YYhO4wfOypBNeaUneDHPeHcu0NTqDwDn_M,14722048
+desk/models/Oss-Orich-bb_outputs.hdf5,sha256=mimKYh7QWg7dXKj9dL2csQIyIf94B-wUs5WCalI6UG8,124096
+desk/put_target_data_here/IRAS_04407-7000.csv,sha256=BBhnmOrsGXCtY52mGrg7RPSPR2be2-J3mswDooUUeGw,97
+desk/put_target_data_here/IRAS_04509-6922.csv,sha256=2VslqEiLkFQX4GACRNMzHptJfh2NLiNeEhy4tyZ0LS4,36185
+desk/put_target_data_here/MSX_LMC_807.csv,sha256=MJPDA9VdpnVQtcidg1QFSWPSnwFQz4A0V54D3CjUAps,1210
+desk-1.6.16.dist-info/LICENSE,sha256=xgKVh5XV1kSkUCnPJ-EHdFD1zHEFB9wLsM_MV5tcEVw,1511
+desk-1.6.16.dist-info/METADATA,sha256=8RKmWNcNP9V40HznKh062sM8KDwyjk4rjBSYYOS_Npc,1812
+desk-1.6.16.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+desk-1.6.16.dist-info/entry_points.txt,sha256=pzd1J2-o7CFmlOwwAAUaXcC3LvbnoeNn8XQvOBkd4DQ,41
+desk-1.6.16.dist-info/top_level.txt,sha256=I9ya82rutlk1hCYwjBilryz3p0R9TY3YBrHBYRDK9xo,5
+desk-1.6.16.dist-info/RECORD,,
