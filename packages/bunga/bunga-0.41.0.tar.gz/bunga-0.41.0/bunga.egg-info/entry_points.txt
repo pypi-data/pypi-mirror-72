@@ -1,0 +1,3 @@
+[console_scripts]
+bunga = bunga.__init__:main
+
