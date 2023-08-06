@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: driveways-project-cis4930-v6
+Version: 0.0.8
+Summary: Driveways Package
+Home-page: https://github.com/henryparker/drivewaynew
+Author: Andres Canas, Henry Parker, Dylan Fay, Zack Saadioui
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: asgiref
+Requires-Dist: astroid
+Requires-Dist: certifi
+Requires-Dist: chardet
+Requires-Dist: Django
+Requires-Dist: django-crispy-forms
+Requires-Dist: django-leaflet
+Requires-Dist: geographiclib
+Requires-Dist: geopy
+Requires-Dist: idna
+Requires-Dist: isort
+Requires-Dist: lazy-object-proxy (==1.4.*)
+Requires-Dist: mccabe
+Requires-Dist: psycopg2-binary
+Requires-Dist: pylint
+Requires-Dist: pytz
+Requires-Dist: requests
+Requires-Dist: six
+Requires-Dist: sqlparse
+Requires-Dist: toml
+Requires-Dist: typed-ast
+Requires-Dist: urllib3
+Requires-Dist: wrapt
+
+This is Driveways by Andres Canas, Dylan Fay, Henry Parker, Zack Saadioui.
+
+This app helps user find private parking near hot destinations!
+
+This app requires GDAL installation
+
