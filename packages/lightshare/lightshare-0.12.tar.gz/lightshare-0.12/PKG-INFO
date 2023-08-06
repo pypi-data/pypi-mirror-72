@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: lightshare
+Version: 0.12
+Summary: Faster file sharing using sockets. Makes work easier.
+Home-page: UNKNOWN
+Author: Nannan
+Author-email: nanna7077@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: Filesharing,File,Sharing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
