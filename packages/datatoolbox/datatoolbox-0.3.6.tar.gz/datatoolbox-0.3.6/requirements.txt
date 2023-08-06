@@ -1,0 +1,12 @@
+pandas<=1.0.0
+numpy
+gitpython
+openscm-units
+pint==0.9
+pycountry
+fuzzywuzzy
+tqdm
+matplotlib
+openpyxl
+pyam-iamc<=0.6.0
+hdx-python-country
