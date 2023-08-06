@@ -1,0 +1,12 @@
+MANIFEST.in
+README
+README.md
+setup.cfg
+setup.py
+pyiocontrol/__init__.py
+pyiocontrol/pyiocontrol.py
+pyiocontrol.egg-info/PKG-INFO
+pyiocontrol.egg-info/SOURCES.txt
+pyiocontrol.egg-info/dependency_links.txt
+pyiocontrol.egg-info/requires.txt
+pyiocontrol.egg-info/top_level.txt
