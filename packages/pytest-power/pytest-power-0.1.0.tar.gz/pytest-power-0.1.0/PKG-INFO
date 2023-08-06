@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pytest-power
+Version: 0.1.0
+Summary: pytest plugin with powerful fixtures
+Home-page: https://github.com/nl-ix/pytest-power
+License: MIT
+Author: Jacopo Cascioli
+Author-email: jacopo@nl-ix.net
+Requires-Python: >=3.5,<4.0
+Classifier: Framework :: Pytest
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Testing
+Requires-Dist: pytest (>=5.4.3,<6.0.0)
+Requires-Dist: pytest-mock (>=3.1.1,<4.0.0)
+Project-URL: Repository, https://github.com/nl-ix/pytest-power
