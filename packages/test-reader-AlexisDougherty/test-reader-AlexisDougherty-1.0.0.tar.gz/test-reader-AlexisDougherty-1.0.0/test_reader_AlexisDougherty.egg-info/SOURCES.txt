@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+reader/__init__.py
+reader/__main__.py
+reader/config.cfg
+reader/feed.py
+reader/viewer.py
+test_reader_AlexisDougherty.egg-info/PKG-INFO
+test_reader_AlexisDougherty.egg-info/SOURCES.txt
+test_reader_AlexisDougherty.egg-info/dependency_links.txt
+test_reader_AlexisDougherty.egg-info/entry_points.txt
+test_reader_AlexisDougherty.egg-info/requires.txt
+test_reader_AlexisDougherty.egg-info/top_level.txt
