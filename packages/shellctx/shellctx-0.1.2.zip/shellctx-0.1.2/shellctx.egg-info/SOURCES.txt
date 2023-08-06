@@ -1,0 +1,11 @@
+README.md
+setup.py
+scripts/ctx
+scripts/ctx.bat
+shellctx/__init__.py
+shellctx/_version.py
+shellctx/ctx.py
+shellctx.egg-info/PKG-INFO
+shellctx.egg-info/SOURCES.txt
+shellctx.egg-info/dependency_links.txt
+shellctx.egg-info/top_level.txt
