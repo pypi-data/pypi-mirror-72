@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: apyrs
+Version: 0.2.dev0
+Summary: APRS for Python
+Home-page: UNKNOWN
+Author: Iain R. Learmonth
+Author-email: irl@hambsd.org
+License: UNKNOWN
+Keywords: aprs local hamradio packet kiss
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Requires-Dist: nose
+Requires-Dist: sphinx
+
+APyRS
+=====
+
+*APyRS for Python*
+
+Introduction
+------------
+
+APyRS is a library for Python 3.7+ for the real-time tactical local information
+`Automatic Packet Reporting System <http://aprs.org/>`_ protocol.
+
+
