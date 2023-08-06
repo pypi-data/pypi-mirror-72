@@ -1,0 +1,25 @@
+isodate
+
+[all]
+coverage
+pytest-runner
+Jinja2==2.11.1
+MarkupSafe==1.1.1
+requests==2.23.0
+colorlog==2.10.0
+certifi
+isort
+black
+zest-releaser[recommended]
+
+[all:python_version >= "3.5"]
+pytest>5.4.0
+pytest-cov>=2.10.0
+
+[test]
+coverage
+pytest-runner
+
+[test:python_version >= "3.5"]
+pytest>5.4.0
+pytest-cov>=2.10.0
