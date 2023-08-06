@@ -1,0 +1,35 @@
+from setuptools import setup, find_packages
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setup(
+    name="EQTransformer",
+    version="0.1.48",
+    author="S. Mostafa Mousavi",
+    author_email="smousavi05@gmail.com",
+    description="A python package for making and using attentive deep-learning models for earthquake signal detection and phase picking.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/smousavi05/EQTransformer",
+    licence="MIT",
+    package_dir={'': 'src'},
+    packages=find_packages(where='src'),
+    keywords='Seismology, Earthquakes Detection, P&S Picking, Deep Learning, Attention Mechanism',
+    install_requires=[
+	'pytest', 
+	'keyring>=15.1', 
+	'pkginfo>=1.4.2',
+	'scipy==1.4.1', 
+	'tensorflow==2.2.0', 
+	'keras==2.4.3', 
+	'matplotlib', 
+	'pandas',
+	'tqdm', 
+	'h5py', 
+	'obspy'], 
+
+    python_requires='>=3.6',
+)
+
+
