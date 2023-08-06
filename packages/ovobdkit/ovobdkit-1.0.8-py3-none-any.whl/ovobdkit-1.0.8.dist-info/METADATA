@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: ovobdkit
+Version: 1.0.8
+Summary: Big Data Development Kit for OVO Big Data
+Home-page: https://github.com/pypa/sampleproject
+Author: OVO BD Enginners, Zaky Rahim
+Author-email: bd-engineers@ovo.id, zaky.rahim@ovo.id
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: psycopg2-binary
+Requires-Dist: pandas
+Requires-Dist: pyspark
+Requires-Dist: bash
+Requires-Dist: sqlalchemy
+
+# OVO Test Kit
+
+## installation
+create installer : 
+
+```
+    python3 setup.py sdist bdist_wheel
+```
+
+installer will be at ```dist/``` directory
+install using : 
+```
+pip3 install dist/<generated-file>.whl
+```
+
+## Quickstart
+
+```python
+from ovobdkit.testkit import OVOTestKit
+import unittest
+class TestMlmMerchant(OVOTestKit):
+    TABLE_NAME = 'ovo_raw.ovo_smp_mlm_merchant'
+    FIELDS = '''
+        id BigInt
+        merchant_code String
+        grab_id String
+    '''
+    def test_having_no_duplicates(self):
+        self.duplicate_check(TestMlmMerchant.TABLE_NAME)
+
+
+if __name__ == '__main__':
+    unittest.main()
+```
+more? see examples directories 
+
+## Functionalities
+- Unit Test
+- Functional Test
+    - Communicate to Airflow
+    - Communicate to OMT
+
+# Common case
+- get all (example / merchant_owner)
+- delta (example / springreward/txn_ledger)
+- delta with update (example/springreward/customer_transaction)
+
