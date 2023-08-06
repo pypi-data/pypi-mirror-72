@@ -1,0 +1,3 @@
+[console_scripts]
+putup-interactive = pyscaffold_interactive.cli:run
+

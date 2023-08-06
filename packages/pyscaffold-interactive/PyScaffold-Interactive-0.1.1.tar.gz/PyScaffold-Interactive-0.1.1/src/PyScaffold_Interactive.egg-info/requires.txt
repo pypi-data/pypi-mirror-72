@@ -1,0 +1,6 @@
+pyscaffold[all]
+click
+
+[testing]
+pytest
+pytest-cov
