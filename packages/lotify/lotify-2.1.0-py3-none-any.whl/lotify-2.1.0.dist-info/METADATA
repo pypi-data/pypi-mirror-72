@@ -1,0 +1,279 @@
+Metadata-Version: 2.1
+Name: lotify
+Version: 2.1.0
+Summary: Using Line Notify more easily
+Home-page: https://github.com/louis70109/line-notify
+Author: NiJia Lin
+Author-email: louis70109@gmail.com
+Maintainer: NiJia Lin
+Maintainer-email: louis70109@gmail.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/louis70109/lotify/issues
+Project-URL: Source, https://github.com/louis70109/lotify
+Keywords: line notify python lotify
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development
+Requires-Python: !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.0)
+
+
+Lotify - LINE Notify client SDK
+===============================
+
+
+.. image:: https://img.shields.io/badge/License-MIT-blue.svg
+   :target: https://opensource.org/licenses/MIT
+   :alt: License: MIT
+
+
+.. image:: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
+   :target: https://github.com/louis70109/line-notify#contributing
+   :alt: PRs Welcome
+
+
+.. image:: https://travis-ci.com/louis70109/lotify.svg?branch=master
+   :target: https://travis-ci.org/louis70109/lotify
+   :alt: Build Status
+
+
+.. image:: https://badge.fury.io/py/lotify.svg
+   :target: https://badge.fury.io/py/lotify
+   :alt: pypi package
+
+
+.. image:: https://img.shields.io/badge/Python-%3E%3D%203.5-blue.svg
+   :target: https://badge.fury.io/py/lotify
+   :alt: Python Version
+
+
+**Lotify** is a `LINE Notify <https://notify-bot.line.me/doc/en/>`_ client SDK that you can build Notify bot quickly.
+
+
+.. image:: https://i.imgur.com/Rms5ZNG.png
+   :target: https://i.imgur.com/Rms5ZNG.png
+   :alt: 
+
+
+If you programing language is not python, here can find other language version:
+
+
+* `Ruby <https://github.com/etrex/lotify>`_
+* `PHP <https://github.com/eric0324/lotify>`_
+
+Usage
+=====
+
+You need a **LINE account** and create a Notify like this:
+
+
+.. image:: https://i.imgur.com/m9q4jLOl.png
+   :target: https://i.imgur.com/m9q4jLOl.png
+   :alt: create-a-line-notify
+
+
+Install package
+---------------
+
+.. code-block::
+
+   pip install lotify
+
+..
+
+   You can find sample - `flask-line-notify <https://github.com/louis70109/flask-line-notify>`_
+
+
+Environment variables
+---------------------
+
+Input those variables in your ``.env`` file or OS environment (using export),
+
+then you don't need to input any parameters in ``initialize step``.
+
+.. code-block::
+
+   LINE_NOTIFY_CLIENT_ID
+   LINE_NOTIFY_CLIENT_SECRET
+   LINE_NOTIFY_REDIRECT_URI
+
+Initialize instance
+-------------------
+
+
+* If you already have Notify environment variables:
+
+.. code-block:: python
+
+   from lotify.client import Client
+
+   client = Client()
+
+
+* else:
+
+.. code-block:: python
+
+   from lotify.client import Client
+
+   client = Client(
+       client_id='YOUR_CLIENT_ID',
+       client_secret='YOUR_CLIENT_SECRET',
+       redirect_uri='YOUR_URI'
+   )
+
+Get authorizer link
+-------------------
+
+.. code-block:: python
+
+   link = client.get_auth_link(state='RANDOM_STRING')
+   print(link)
+   # https://notify-bot.line.me/oauth/authorize?scope=notify&response_type=code&client_id=QxUxF..........i51eITH&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fnotify&state=foo
+
+Get access token
+----------------
+
+.. code-block:: python
+
+   access_token = client.get_access_token(code='NOTIFY_RESPONSE_CODE')
+   print(access_token)
+   # N6g50DiQZk5Xh...25FoFzrs2npkU3z
+
+Get Status
+----------
+
+.. code-block:: python
+
+   status = client.status(access_token='YOUR_ACCESS_TOKEN')
+   print(status)
+   # {'status': 200, 'message': 'ok', 'targetType': 'USER', 'target': 'NiJia Lin'}
+
+Send message
+------------
+
+
+.. image:: https://i.imgur.com/RhvwZVm.png
+   :target: https://i.imgur.com/RhvwZVm.png
+   :alt: push-notify
+
+
+.. code-block:: python
+
+   response = client.send_message(access_token='YOUR_ACCESS_TOKEN', message='This is notify message')
+   print(response)
+   # {'status': 200, 'message': 'ok'}
+
+Send message with Sticker
+-------------------------
+
+
+.. image:: https://i.imgur.com/EWpZahk.png
+   :target: https://i.imgur.com/EWpZahk.png
+   :alt: push-notify-with-sticker
+
+
+You can find stickerId and stickerPackageId `here <https://devdocs.line.me/files/sticker_list.pdf>`_
+
+.. code-block:: python
+
+   response = client.send_message_with_sticker(
+       access_token='YOUR_ACCESS_TOKEN',
+       message='This is notify message',
+       sticker_id=1,
+       sticker_package_id=1)
+   print(response)
+   # {'status': 200, 'message': 'ok'}
+
+Send message with Files
+-----------------------
+
+
+.. image:: https://i.imgur.com/ESCrk8b.png
+   :target: https://i.imgur.com/ESCrk8b.png
+   :alt: send-message-with-image-path
+
+
+.. code-block:: python
+
+   image = client.send_message_with_image_file(
+       access_token='YOUR_ACCESS_TOKEN',
+       message='This is notify message',
+       file=open('./test_image.png', 'rb')
+   )
+   print(image)
+   # {'status': 200, 'message': 'ok'}
+
+Send message with Image url
+---------------------------
+
+
+.. image:: https://i.imgur.com/0Lxatu9.png
+   :target: https://i.imgur.com/0Lxatu9.png
+   :alt: send-message-with-image-url
+
+
+.. code-block:: python
+
+   image = client.send_message_with_image_url(
+       access_token='YOUR_ACCESS_TOKEN',
+       message='This is notify message',
+       image_thumbnail='https://i.imgur.com/RhvwZVm.png',
+       image_fullsize='https://i.imgur.com/RhvwZVm.png',
+   )
+   print(image)
+   # {'status': 200, 'message': 'ok'}
+
+Revoke access token
+-------------------
+
+
+.. image:: https://i.imgur.com/7GAAzOi.png
+   :target: https://i.imgur.com/7GAAzOi.png
+   :alt: revoke-line-notify-token
+
+
+.. code-block:: python
+
+   revoke = client.revoke(access_token='YOUR_ACCESS_TOKEN')
+   print(revoke)
+   # {'status': 200, 'message': 'ok'}
+
+Contributing
+============
+
+Fork before Clone the repository:
+
+.. code-block::
+
+   git clone git@github.com:your-username/line-notify.git
+
+First install for development.
+
+.. code-block::
+
+   pip install -r requirements-dev.txt
+
+Run ``pytest`` to make sure the tests pass:
+
+.. code-block::
+
+   cd line-notify/
+   python -m tox
+   python -m pytest --flake8 tests/
+
+License
+=======
+
+`MIT <https://github.com/louis70109/line-notify/blob/master/LICENSE>`_ © `NiJia Lin <https://nijialin.com/about/>`_ & Duncan Huang
+
+
