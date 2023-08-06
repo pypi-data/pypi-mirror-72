@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: gpssi
+Version: 0.1.1
+Summary: Sampling image segmentations with Gaussian process
+Home-page: https://github.com/alainjungo/gpssi/
+Author: Alain Jungo
+Author-email: alain.jungo@artorg.unibe.ch
+License: Apache 2.0
+Keywords: medical image analysis,Image segmentation,Sampling image segmentations
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.18.5)
+Requires-Dist: Pillow (>=7.1.2)
+Requires-Dist: scipy (>=1.4.1)
+
+# gpssi
+This repository provides code for the paper:
+
+_Lê, Matthieu, et al. "Sampling image segmentations for uncertainty quantification." Medical image analysis 34 (2016): 42-51. doi:10.1016/j.media.2016.04.005_
+
+
+Note that this is not an official implementation by the authors and was motivated by the lack of publicly available code. 
+Be aware that there might be difference to the original implementation.
+
+
+## Implementation Details
+
+### Geodesic map
+
+To produce the geodesic maps, this project relies on the _GeodisTK_ packages. This package can be installed via pip or via 
+source code ([https://github.com/taigw/GeodisTK](https://github.com/taigw/GeodisTK)). Due to observed issues when installing 
+the package via pip, we suggest to install it from the github link (see [installation](#installation)).
+
+
+### Factorization via Kronecker
+The authors use a Kronecker matrix representation of the covariance matrix to overcome the issue of large covariance matrices.
+
+This project implements the kronecker matrix-vector product based on following reference:
+- _Saatçi, Yunus. Scalable inference for structured Gaussian process models. Diss. University of Cambridge, 2012._
+- _Gilboa, Elad, Yunus Saatçi, and John P. Cunningham. "Scaling multidimensional inference for structured Gaussian processes." IEEE transactions on pattern analysis and machine intelligence 37.2 (2013): 424-436._
+
+
+## Installation
+This projects is available as python package and can be installed by 
+
+```pip install gpssi```
+
+Otherwise, the package can also from the source code via 
+
+```
+git clone https://github.com/alainjungo/gpssi.git
+cd gpssi
+pip install .
+```
+
+The _GeodisTK_ package is not installed automatically and has to be installed manually. 
+We propose to use the direct installation via source code: 
+
+```
+pip install git+ssh://git@github.com/taigw/GeodisTK.git
+```
+
+Alternatively, you can try installing it from pypi (`pip install GeodisTK`)
+
+
+## Usage
+See [gpssi_example.py](examples/gpssi_example.py) for an example usage.
+
+
+
