@@ -1,0 +1,7 @@
+[d3m.primitives]
+data_preprocessing.dataset_text_reader.DatasetTextReader = sri.autoflow.dataset_text_reader:DatasetTextReader
+data_transformation.conditioner.Conditioner = sri.autoflow.conditioner:Conditioner
+data_transformation.conditioner.StaticEnsembler = sri.autoflow.static_ensembler:StaticEnsembler
+data_transformation.simple_column_parser.DataFrameCommon = sri.autoflow.simple_column_parser:SimpleColumnParser
+learner.model.GeneralRelational = sri.psl.general_relational:GeneralRelational
+
