@@ -1,0 +1,13 @@
+fedora_elections_messages/__init__.py,sha256=qQk2eLtTjYdxJc26m57lmr0ZEgC4KKROifF_ViPhNu8,1029
+fedora_elections_messages/base.py,sha256=Wiwx0glAjTyNKS4fVxXBuALiM0caC-5BbQbpRdF4yI0,2846
+fedora_elections_messages/candidate_delete.py,sha256=OvFFVZkjU2AjLaHSBQC8uJbYYLXyOf2qq3GfGsBgRsA,2638
+fedora_elections_messages/candidate_edit.py,sha256=OvbIHPNSew8c5zBokFvtKhqy6waLoabYnrBt9x6AKDQ,2629
+fedora_elections_messages/candidate_new.py,sha256=Jhp7tmNKIfZD7eLZzEvxI-sXJ-VmfFtbhTbDMhuPGrw,2625
+fedora_elections_messages/election_edit.py,sha256=Q6Zr62CfhF16xryxBU6lUo7B0aH0rOkhvO_nKX7MM5c,1966
+fedora_elections_messages/election_new.py,sha256=DJ0DJQc8GbGNdFo5aXiceeDS5cAoWZLP9kgR1T34fh4,1970
+fedora_elections_messages-1.0.0.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+fedora_elections_messages-1.0.0.dist-info/METADATA,sha256=q3zdhuk10AKXUFRo61dJmmCn8wcQjk31xfsEMVFhkZc,1005
+fedora_elections_messages-1.0.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+fedora_elections_messages-1.0.0.dist-info/entry_points.txt,sha256=NGqz44UrgzlkibSQ7dQGWRcP9PRAYJ3IEQ5efyYrwsE,468
+fedora_elections_messages-1.0.0.dist-info/top_level.txt,sha256=dM0AcCS-QVsaGez9AahUElXLRwB_gsWwiZPjfmskQnc,26
+fedora_elections_messages-1.0.0.dist-info/RECORD,,

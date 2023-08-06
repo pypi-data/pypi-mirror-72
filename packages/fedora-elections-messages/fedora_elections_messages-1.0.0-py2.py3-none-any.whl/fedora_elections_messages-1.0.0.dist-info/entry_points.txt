@@ -1,0 +1,7 @@
+[fedora.messages]
+fedora_elections.candidate.delete = fedora_elections_messages.candidate_delete:DeleteCandidateV1
+fedora_elections.candidate.edit = fedora_elections_messages.candidate_edit:EditCandidateV1
+fedora_elections.candidate.new = fedora_elections_messages.candidate_new:NewCandidateV1
+fedora_elections.election.edit = fedora_elections_messages.election_edit:EditElectionV1
+fedora_elections.election.new = fedora_elections_messages.election_new:NewElectionV1
+
