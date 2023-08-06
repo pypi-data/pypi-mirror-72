@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: hichesslib
+Version: 1.2.9
+Summary:  Cross-platform Python chess GUI library based on PySide2 and python_chess. 
+Home-page: https://github.com/H-a-y-k/hichesslib
+Author: Haik Sargsian
+Author-email: haiksargsian6@gmail.com
+License: gpl-3.0+
+Download-URL: https://github.com/H-a-y-k/hichesslib/archive/v1.2.9.tar.gz
+Description: UNKNOWN
+Keywords: chess,Qt,PySide2,GUI
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Games/Entertainment :: Board Games
+Classifier: Topic :: Games/Entertainment :: Turn Based Strategy
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
