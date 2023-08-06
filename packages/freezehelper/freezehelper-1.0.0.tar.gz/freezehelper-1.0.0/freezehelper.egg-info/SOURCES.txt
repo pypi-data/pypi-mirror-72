@@ -1,0 +1,12 @@
+COPYING
+COPYING.LESSER
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+freezehelper/__init__.py
+freezehelper/helpers.py
+freezehelper.egg-info/PKG-INFO
+freezehelper.egg-info/SOURCES.txt
+freezehelper.egg-info/dependency_links.txt
+freezehelper.egg-info/top_level.txt
