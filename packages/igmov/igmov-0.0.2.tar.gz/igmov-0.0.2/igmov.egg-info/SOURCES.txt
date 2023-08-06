@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+igmov/__init__.py
+igmov/analyzer.py
+igmov/dl.py
+igmov/draw.py
+igmov.egg-info/PKG-INFO
+igmov.egg-info/SOURCES.txt
+igmov.egg-info/dependency_links.txt
+igmov.egg-info/not-zip-safe
+igmov.egg-info/requires.txt
+igmov.egg-info/top_level.txt
+igmov/template/__init__.py
+igmov/template/ig.py
+igmov/template/igtv.py
+igmov/template/youtube.py
