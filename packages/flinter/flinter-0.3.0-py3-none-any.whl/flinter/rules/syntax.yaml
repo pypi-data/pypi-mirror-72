@@ -1,0 +1,36 @@
+types: 
+    - real
+    - character
+    - logical
+    - integer
+    - complex
+    - double precision
+
+operators:
+    - '\.eq\.'
+    - '=='
+    - '\.neq\.'
+    - '/='
+    - '\.gt\.'
+    - '>'
+    - '\.lt\.'
+    - '<'
+    - '\.geq\.'
+    - '>='
+    - '\.leq\.'
+    - '<='
+    - '\.le\.'
+    - '\.ge\.'
+    - '\.and\.'
+    - '\.or\.'
+
+structs:
+    - 'if'
+    - 'select'
+    - 'case'
+    - 'while'
+
+ponctuations:
+  - ','
+  - '\)'
+  - ';'

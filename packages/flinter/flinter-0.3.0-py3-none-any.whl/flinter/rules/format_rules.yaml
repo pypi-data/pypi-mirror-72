@@ -1,0 +1,134 @@
+'001':
+  message: Missing spaces
+  regexp: do (\w+)=(\S+),(\S+)
+  replacement: do \1 = \2, \3
+
+'0021':
+  message: Missing spaces around operator
+  regexp: (\w|\))({operators})(\w|\()
+  replacement: \1 \2 \3
+
+'0022':
+  message: Missing space before operator
+  regexp: (\w|\))({operators})
+  replacement: \1 \2
+
+'0023':
+  message: Missing space after operator
+  regexp: ({operators})(\w|\()
+  replacement: \1 \2
+
+'0031':
+  message: Missing spaces around separator
+  regexp: (\S)::(\S)
+  replacement: '\1 :: \2'
+
+'0032':
+  message: Missing space before separator
+  regexp: '(\S)::'
+  replacement: '\1 ::'
+
+'0033':
+  message: Missing space after separator
+  regexp: ::(\S)
+  replacement: ':: \1'
+
+'004':
+  message: Missing space after ponctuation
+  regexp: ({ponctuations})(\w)
+  replacement: \1 \2
+
+'005':
+  message: Types should be lowercased
+  regexp: \b({types_upper})\b
+  replacement: null
+
+'006':
+  message: Missing space before parenthesis
+  regexp: ({structs})\(
+  replacement: \1 (
+
+'007':
+  message: Should prepend with "!$"
+  regexp: ^(\s*)use omp_lib
+  replacement: '\1!$ use omp_lib'
+
+'008':
+  message: Line length > {linelen} characters
+  regexp: ^.{linelen_re}.+$
+  replacement: null
+
+'009':
+  message: Should use 2 spaces instead of tabulation
+  regexp: \t
+  replacement: '  '
+
+'010':
+  message: Use new syntax TYPE(kind)
+  regexp: ({types})\*(\w+)
+  replacement: \1(\2)
+
+'011':
+  message: At least one space before comment
+  regexp: (\w)\!
+  replacement: \1 !
+
+'012':
+  message: Exactly one space after comment
+  regexp: \!(\w)
+  replacement: '! \1'
+
+'013':
+  message: Useless ";" at end of line
+  regexp: ;\s*$
+  replacement: \n
+
+'0141':
+  message: null
+  regexp: \#endif
+  replacement: null
+
+'0142':
+  message: Missing space after `end'
+  regexp: end(if|do|subroutine|function)
+  replacement: end \1
+
+'0151':
+  message: null
+  regexp: (\(kind|\(len)=
+  replacement: null
+
+'0152':
+  message: null
+  regexp: write\(.*\)
+  replacement: null
+
+'0153':
+  message: null
+  regexp: open *\([^\)]+\)
+  replacement: null
+
+'0154':
+  message: Missing spaces around "="
+  regexp: (?<!(\(kind|.\(len))=(\w|\(|\.|\+|-|\'|")
+  replacement: ' = \2'
+
+'016':
+  message: Trailing whitespaces
+  regexp: ( \t)+$
+  replacement: ''
+
+'017':
+  message: You should use "sp" or "dp" instead
+  regexp: \(kind\s*=\s*\d\s*\)
+  replacement: null
+
+'018':
+  message: You should use "[]" instead
+  regexp: \(\\([^\)]*)\\\)
+  replacement: '[\1]'
+
+'020':
+  message: Should use `use mpi_f08` instead (or `use mpi` if not available)
+  regexp: include ["\']mpif.h[\'"]
+  replacement: null

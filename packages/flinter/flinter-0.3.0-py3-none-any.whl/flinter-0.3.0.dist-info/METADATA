@@ -1,0 +1,173 @@
+Metadata-Version: 2.1
+Name: flinter
+Version: 0.3.0
+Summary: Flinter, a fortran code linter
+Home-page: http://open-source.pg.cerfacs.fr/flint
+Author: Aimad Er-Raiy, Antoine Dauptain, Quentin Douasbin
+Author-email: coop@cerfacs.com
+License: CeCILL-B FREE SOFTWARE LICENSE AGREEMENT
+Keywords: linter, fortran
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pyaml
+Requires-Dist: click
+
+
+# Flint
+
+*Flint* is a source-code static analyzer and quality checker for fortran programming language. It intends to follows the coding conventions mentioned [OMS Documentation Wiki page](https://alm.engr.colostate.edu/cb/wiki/16983)
+
+Many Fortran Linter software exists, and are giants full of wisdom compared to the midget *flint*. The goal of *Flint* is to provide a Free, quickly installed, (and soon customizable) linter for Continuous Integration.
+
+
+## Installation
+
+Install Flint from Python Package index "Flinter" (because Flint was already taken =_=)
+
+
+```
+>pip install flinter
+```
+
+## Usage
+
+FLint provide a CLI with the command currently implemented. 
+
+```
+>flint
+  --------------------    FLINT  ---------------------
+
+  .      - Flint, because our code stinks... -
+
+  You are now using the Command line interface of Flint, a Fortran linter
+  created at CERFACS (https://cerfacs.fr).
+
+  This is a python package currently installed in your python environement.
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  all-files  Score the formatting of all .f90 FILE under a folder...
+  fmt        Score the formatting of .f90 FILE.
+  pep8       Score the complexity of .f90 FILE.
+```
+
+### Formatting score
+
+To get the score with respect to the coding convention (up to 0.2 the only convention implemented is the COlostate Univ. convention):
+
+```
+> flint fmt awesomecode.f90
+
+ File NUMERICS/clip.f90
+
+5:22:Missing space after ponctuation :
+|SUBROUTINE clip ( neq,neqs,nnode,w_spec,w )
+|                      ^
+|SUBROUTINE clip ( neq, neqs, nnode, w_spec, w )
+
+(...)
+
+41:15:Missing space after ponctuation :
+|      w_spec(k,n) = rho * Ymas
+|               ^
+|      w_spec(k, n) = rho * Ymas
+
+
+
+ Broken rules:
+--------------------------------------------------
+Missing space after ponctuation : 11
+Types should be lowercased : 5
+Missing spaces around "=" : 2
+
+
+ Score on 35 lines:
+--------------------------------------------------
+Your code has been rated at 4.86/10
+```
+
+### PEP008-like score
+
+This score is against several rules taken from pep008 ensuring readability and maintanability.
+
+```
+>flint pep8 awesomecode.f90
+
+  invalid-name : local var n is too short
+   invalid-name : local var k is too short
+   invalid-name : argument w is too short
+
+
+ Broken rules:
+--------------------------------------------------
+invalid-name  : 3
+
+
+ Score on 18 lines:
+--------------------------------------------------
+Your code has been rated at 1.67/10
+
+```
+
+### All-files score
+
+Average the `fmt` and `pep8` score while iterating on a folder.
+
+```
+>flint all-files ./AWESOME_FOLDER
+
+133 Files parsed.
+
+
+ Broken rules:
+--------------------------------------------------
+Missing space after ponctuation : 6804
+Types should be lowercased : 1786
+Missing spaces around operator : 542
+Missing space before operator : 566
+Missing space after operator : 545
+Missing spaces around "=" : 1367
+too-many-lines  : 68
+too-many-arguments  : 99
+invalid-name  : 361
+too-many-locals  : 56
+Line length > 132 characters : 141
+line-too-long  : 256
+Missing spaces : 23
+too-many-levels  : 3
+Useless ";" at end of line : 15
+Missing space after separator : 1
+Missing space before parenthesis : 4
+Exactly one space after comment : 12
+At least one space before comment : 1
+
+
+ Score on 19202 lines:
+--------------------------------------------------
+Your code has been rated at 1.66/10
+
+```
+
+## Score formula
+
+The score formula is taken from pylint:
+
+```python
+rate = 10 - (float(errors_nb*5 + warnings_nb) / lines_nb) * 10
+```
+
+The `fmt` errors are considered as warnings, the `pep8`errors a considered as errors.
+
+## Limitations
+
+*Flint* is working with a single convention  for now. Next versions will allow customisable conventions (err.. to a certain extent, of course)
+
+## Acknowledgement
+
+Flint is a service created in the [EXCELLERAT Center Of Excellence](https://www.excellerat.eu/wp/), funded by the European comunity.
+![logo](http://cerfacs.fr/coop/whatwedo/logo_excellerat.png)
+
