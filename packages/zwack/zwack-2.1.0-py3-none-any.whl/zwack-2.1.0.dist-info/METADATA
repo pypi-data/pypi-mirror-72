@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: zwack
+Version: 2.1.0
+Summary: zwackkk
+Home-page: UNKNOWN
+Author: codemonkey51
+Author-email: pypi@codemonkey51.dev
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# docs
+## start
+### install
+`import zwack`
+### init zwack
+`zwack = zwack.Zwack()`
+
+## commands
+### ascii
+`ascii = zwack.ascii()` (sets ascii to the ascii class)
+#### zwack
+`ascii.zwack` (returns ascii art of zwack)
+#### zwack overflow
+##### full icon
+`ascii.overflow` (returns full zwack overflow icon ascii art)
+##### icon only
+`ascii.overflow_small` (returns ascii art of the overflow part of the logo)
+
