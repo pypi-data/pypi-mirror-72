@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: simpledit
+Version: 0.0.1
+Summary: A simple image editor
+Home-page: https://gitlab.com/torresed/simpledit
+Author: Edilberto Torres
+Author-email: torrese@ufl.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Pillow
+Requires-Dist: PyQt5
+Requires-Dist: PyQt5-sip
+
+UNKNOWN
+
+
