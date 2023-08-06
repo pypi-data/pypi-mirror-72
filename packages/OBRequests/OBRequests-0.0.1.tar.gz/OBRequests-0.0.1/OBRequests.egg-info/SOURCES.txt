@@ -1,0 +1,11 @@
+README.md
+setup.py
+OBRequests/__init__.py
+OBRequests/exceptions.py
+OBRequests/requests.py
+OBRequests.egg-info/PKG-INFO
+OBRequests.egg-info/SOURCES.txt
+OBRequests.egg-info/dependency_links.txt
+OBRequests.egg-info/not-zip-safe
+OBRequests.egg-info/requires.txt
+OBRequests.egg-info/top_level.txt
