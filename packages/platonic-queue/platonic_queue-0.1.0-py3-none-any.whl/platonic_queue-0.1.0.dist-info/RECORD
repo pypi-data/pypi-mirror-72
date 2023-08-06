@@ -1,0 +1,11 @@
+platonic_queue/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+platonic_queue/chunkify.py,sha256=7NNh_ML1EeGeQ9hOTzmkTiOeGfTBrMokEkDUV5GJA2g,407
+platonic_queue/list.py,sha256=RGXQu65OVBCjFjbdw7HARTPeXED-XHuhOR3-TjKMnh0,490
+platonic_queue/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+platonic_queue/queue.py,sha256=hy4qwvLovg6uEyMrTu0OeOMtdOi8s3gfY1Y2MugPaQ0,548
+platonic_queue/serde.py,sha256=bAvxJCLqe9-ix4yLXPs3-8WhDeziZls0sZKPelFYObY,451
+platonic_queue/sqs.py,sha256=94vfp9aPFrNFmHwOeC3XxUBMMcMvmN-eHxY6zeP9GT8,2593
+platonic_queue-0.1.0.dist-info/LICENSE,sha256=XNCYYo6N0skWNo3Tkvz3eMgZwqdX4mNEjeysn6S8vvA,1096
+platonic_queue-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+platonic_queue-0.1.0.dist-info/METADATA,sha256=YU3jR6wxasLBwmAAxovAmkhjD6AzUKR5OCx5HaUWdBs,2589
+platonic_queue-0.1.0.dist-info/RECORD,,
