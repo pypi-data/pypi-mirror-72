@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: likelycause2
+Version: 0.0.1
+Summary: Likely cause finds creative ways to identify causes
+Home-page: https://github.com/shaypal5/chocobo
+Author: Ana Garcia
+Author-email: ana.n.garcia2@gmail.com
+License: MIT
+Description: # chocobo
+        chocobo is a python package for delicious chocobo recipes.
+        
+        (actually this is an example repository demonstrating basic Python packaging principles) 
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Requires-Python: >=2.7
