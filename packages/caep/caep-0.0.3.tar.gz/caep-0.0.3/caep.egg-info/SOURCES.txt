@@ -1,0 +1,10 @@
+README.md
+setup.py
+caep/__init__.py
+caep/config.py
+caep/xdg.py
+caep.egg-info/PKG-INFO
+caep.egg-info/SOURCES.txt
+caep.egg-info/dependency_links.txt
+caep.egg-info/top_level.txt
+caep.egg-info/zip-safe
