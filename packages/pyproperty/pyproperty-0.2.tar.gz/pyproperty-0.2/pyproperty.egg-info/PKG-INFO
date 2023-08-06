@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: pyproperty
+Version: 0.2
+Summary: Python Explore Modules Func Tool *
+Home-page: https://github.com/raifpy/pyproperty
+Author: raifpy
+Author-email: omerto12.45y@gmail.com
+License: UNKNOWN
+Description: Python Explore Modules Func Tool
+        
+        Usage   : pyproperty [module]
+        
+        Example : pyproperty os sys time
+        
+        Example Output : 
+        
+        <image src="https://github.com/raifpy/pyproperty/blob/master/up.png">
+        
+Platform: UNKNOWN
+Requires-Python: >=3.5
