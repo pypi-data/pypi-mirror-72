@@ -1,0 +1,16 @@
+[Unit]
+Description=Odoo Service
+After=network.target
+
+[Service]
+Type=simple
+User={{ user }}
+ExecStart={{ path }}/odoo/odoo-bin --config={{ path }}/odoo.conf --syslog
+Restart=on-failure
+RestartSec=10
+SyslogIdentifier={{ odoover }}
+StandardError=journal
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
