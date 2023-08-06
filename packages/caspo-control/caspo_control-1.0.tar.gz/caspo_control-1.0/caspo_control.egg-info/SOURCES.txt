@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+caspo_control/__init__.py
+caspo_control/iface.py
+caspo_control.egg-info/PKG-INFO
+caspo_control.egg-info/SOURCES.txt
+caspo_control.egg-info/dependency_links.txt
+caspo_control.egg-info/requires.txt
+caspo_control.egg-info/top_level.txt
