@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: range-digit
+Version: 0.0.1
+Summary: 
+Home-page: https://github.com/SaitoTsutomu/range-digit
+Author: SaitoTsutomu
+Author-email: tsutomu7@hotmail.co.jp
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
