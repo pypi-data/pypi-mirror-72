@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+github_description.egg-info/PKG-INFO
+github_description.egg-info/SOURCES.txt
+github_description.egg-info/dependency_links.txt
+github_description.egg-info/top_level.txt
+scripts/github-description
