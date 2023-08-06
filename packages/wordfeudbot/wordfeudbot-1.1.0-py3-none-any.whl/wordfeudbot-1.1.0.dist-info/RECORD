@@ -1,0 +1,13 @@
+wordfeudbot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wordfeudbot/main.py,sha256=fmczPlYQGT567IucvG0LTRVi_S2GJXNdw3n-30L4yII,44364
+wordfeudbot/data/test.txt,sha256=SbOw0Of3NT-6jRJjVHwL8KUx69Gz5dljffZ5nW9EdkE,312
+wordfeudbot/data/wordlists/swedish.txt,sha256=l2yWgFj9QNOiXPCOT8LKtXvw8VHElb-J1_q6B_BacTg,4684850
+wordfeudbot/wordfeud_logic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wordfeudbot/wordfeud_logic/board.py,sha256=aJGY6SzQB4PgX6m7Vqsc7R7j64PJqSj80-d3eieiclQ,7995
+wordfeudbot/wordfeud_logic/wordlist.py,sha256=YVO3go0A5xLak3Sh6winw2-OQjBk9KC6kGFJzifVxao,4641
+wordfeudbot-1.1.0.dist-info/LICENSE.md,sha256=VJL4iMHU25nrRR-rSPo97GuvZ6gI1EIq9JYDF5YsyY8,1089
+wordfeudbot-1.1.0.dist-info/METADATA,sha256=XWChZBH-oEyQMb2GSerX7rT52XD8WaKZHa5Jedfb8EQ,504
+wordfeudbot-1.1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+wordfeudbot-1.1.0.dist-info/entry_points.txt,sha256=g7QRzC3h_tsjoDz3yaXviaaQ3_pEgOQigkDcWg9lROU,55
+wordfeudbot-1.1.0.dist-info/top_level.txt,sha256=WTCmdjXS2-gUvwCORYlkapJXRYz6VFv2Etvv9_CNZnE,39
+wordfeudbot-1.1.0.dist-info/RECORD,,
