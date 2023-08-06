@@ -1,0 +1,3 @@
+[console_scripts]
+molfunc = molfunc.molfunc:main
+
