@@ -1,0 +1,3 @@
+[console_scripts]
+vscode-dl = vscode_dl.vscode_dl:main
+
