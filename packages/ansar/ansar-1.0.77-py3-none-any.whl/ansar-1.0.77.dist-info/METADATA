@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: ansar
+Version: 1.0.77
+Summary: Library for storing complex application objects in JSON files.
+Home-page: https://gitlab.com/scott.ansar/ansar
+Author: Scott Woods
+Author-email: scott.suzuki@gmail.com
+License: UNKNOWN
+Download-URL: https://gitlab.com/scott.ansar/ansar/archive/1.0.77.tar.gz
+Keywords: persistence,serialization,marshalling,encoding
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: defusedxml (>=0.6)
+
+
+Project Description
+*******************
+
+Store your complex application objects in plain files of JSON, or XML.
+
+For complete information, refer to the `docs <http://ansar-library-documentation.s3-website-ap-southeast-2.amazonaws.com/index.html>`_.
+
+
