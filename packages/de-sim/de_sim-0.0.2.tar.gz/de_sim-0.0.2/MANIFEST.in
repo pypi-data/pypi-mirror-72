@@ -1,0 +1,12 @@
+# description
+include README.rst
+
+# license
+include LICENSE
+
+# examples
+recursive-include de_sim/examples *
+
+# requirements
+include requirements.txt
+include requirements.optional.txt
