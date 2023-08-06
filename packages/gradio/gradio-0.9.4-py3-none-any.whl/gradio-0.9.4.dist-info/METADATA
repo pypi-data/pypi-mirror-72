@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: gradio
+Version: 0.9.4
+Summary: Python library for easily interacting with trained machine learning models
+Home-page: https://github.com/abidlabs/gradio
+Author: Abubakar Abid
+Author-email: a12d@stanford.edu
+License: UNKNOWN
+Keywords: machine learning,visualization,reproducibility
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: requests
+Requires-Dist: paramiko
+Requires-Dist: scipy
+Requires-Dist: IPython
+Requires-Dist: scikit-image
+
+UNKNOWN
+
+
