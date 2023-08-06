@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+video_anonymize/__init__.py
+video_anonymize/anon.py
+video_anonymize.egg-info/PKG-INFO
+video_anonymize.egg-info/SOURCES.txt
+video_anonymize.egg-info/dependency_links.txt
+video_anonymize.egg-info/entry_points.txt
+video_anonymize.egg-info/top_level.txt
