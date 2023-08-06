@@ -1,0 +1,16 @@
+README.md
+setup.py
+badass/__init__.py
+badass/__main__.py
+badass/db.py
+badass/p5.py
+badass/words.py
+badass/c/__init__.py
+badass/c/run.py
+badass/c/source.py
+not_so_badass.egg-info/PKG-INFO
+not_so_badass.egg-info/SOURCES.txt
+not_so_badass.egg-info/dependency_links.txt
+not_so_badass.egg-info/entry_points.txt
+not_so_badass.egg-info/requires.txt
+not_so_badass.egg-info/top_level.txt
