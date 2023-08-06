@@ -1,0 +1,12 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+pyud/__init__.py
+pyud/client.py
+pyud/definition.py
+pyud.egg-info/PKG-INFO
+pyud.egg-info/SOURCES.txt
+pyud.egg-info/dependency_links.txt
+pyud.egg-info/requires.txt
+pyud.egg-info/top_level.txt
