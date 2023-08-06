@@ -1,0 +1,13 @@
+CHANGES.rst
+DESCRIPTION.rst
+MANIFEST.in
+README.md
+setup.py
+src/dbg/__init__.py
+src/dbg/generate.py
+src/docker_banner_gen.egg-info/PKG-INFO
+src/docker_banner_gen.egg-info/SOURCES.txt
+src/docker_banner_gen.egg-info/dependency_links.txt
+src/docker_banner_gen.egg-info/entry_points.txt
+src/docker_banner_gen.egg-info/requires.txt
+src/docker_banner_gen.egg-info/top_level.txt
