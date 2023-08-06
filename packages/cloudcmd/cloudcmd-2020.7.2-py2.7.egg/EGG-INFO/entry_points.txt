@@ -1,0 +1,29 @@
+[cloudcmd.client]
+floatingip-list = cloudcmd.floatingips:FloatingipsList
+floatingip-show = cloudcmd.floatingips:FloatingipShow
+floatingip-summary = cloudcmd.floatingips:FloatingipSummary
+graphite-instance-metrics = cloudcmd.graphite:GraphiteInstanceMetrics
+graphite-metrics = cloudcmd.graphite:GraphiteMetrics
+hypervisor-list = cloudcmd.hypervisor:HypervisorList
+hypervisor-show = cloudcmd.hypervisor:HypervisorShow
+instance-list = cloudcmd.instance:InstanceList
+instance-show = cloudcmd.instance:InstanceShow
+router-list = cloudcmd.router:RouterList
+sensu-floatingip = cloudcmd.floatingips:FloatingipSensu
+sensu-hypervisor = cloudcmd.hypervisor:HypervisorSensu
+sensu-instances = cloudcmd.instance:InstancesSensu
+sensu-services = cloudcmd.services:ServicesSensu
+sensu-volumes = cloudcmd.volumes:VolumeSensu
+service-list = cloudcmd.services:ServicesList
+tenant-list = cloudcmd.tenants:TenantList
+tenant-resources-list = cloudcmd.tenants:TenantResourceList
+tenant-show = cloudcmd.tenants:TenantShow
+token-create = cloudcmd.token:TokenCreate
+volume-list = cloudcmd.volumes:VolumeList
+volume-show = cloudcmd.volumes:VolumeShow
+zombie-list = cloudcmd.zombie:ZombieList
+zombie-stats = cloudcmd.zombie:ZombieStats
+
+[console_scripts]
+cloudcmd = cloudcmd.main:main
+
