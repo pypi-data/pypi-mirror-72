@@ -1,0 +1,10 @@
+requirements.txt
+setup.py
+django_static_s3.egg-info/PKG-INFO
+django_static_s3.egg-info/SOURCES.txt
+django_static_s3.egg-info/dependency_links.txt
+django_static_s3.egg-info/top_level.txt
+scripts/static-s3
+scripts/static-s3-create-bucket
+scripts/static-s3-create-env
+scripts/static-s3-upload
