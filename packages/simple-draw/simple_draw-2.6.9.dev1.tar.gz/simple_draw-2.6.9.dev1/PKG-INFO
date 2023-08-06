@@ -1,0 +1,32 @@
+Metadata-Version: 1.1
+Name: simple_draw
+Version: 2.6.9.dev1
+Summary: This package allows you to draw graphical primitives with pygame.
+Home-page: https://github.com/suguby/simple_draw
+Author: Shandrinov Vadim
+Author-email: suguby@gmail.com
+License: BSD License
+Description: # simple_draw
+        
+        Pygame-based package for drawing graphical primitives for tutorial purpose.
+        
+        ![screenshot one](screenshots/fractal_tree.png "Fractal tree")​
+        
+        #### Changelog
+        
+        ##### 2.6.8
+        * Переход на pygame 2.0.*
+        * Прекращение поддержки пайтона 2.х
+        
+Keywords: draw graphical primitives tutorial
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Education
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
