@@ -1,0 +1,9 @@
+include README.md
+include setup.py
+
+global-exclude xlsxio/*.c
+global-include xlsxio/*.pyx
+global-include xlsxio/*.pxd
+
+global-include deps/xlsxio-0.2.26/lib/*.[ch]
+global-include deps/xlsxio-0.2.26/include/*.h
