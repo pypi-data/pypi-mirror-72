@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pymatrix/__init__.py
+pymatrix/pymatrix.py
+pymatrix_rain.egg-info/PKG-INFO
+pymatrix_rain.egg-info/SOURCES.txt
+pymatrix_rain.egg-info/dependency_links.txt
+pymatrix_rain.egg-info/entry_points.txt
+pymatrix_rain.egg-info/requires.txt
+pymatrix_rain.egg-info/top_level.txt
