@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: nb2md
+Version: 0.1.5
+Summary: Conversion of Jupyter and Zeppelin notebooks to Jupyter and Markdown formats
+Home-page: https://github.com/elehcimd/nb2md
+Author: Michele Dallachiesa
+Author-email: michele.dallachiesa@sigforge.com
+License: MIT
+Description: Conversion of Jupyter and Zeppelin notebooks to Jupyter and Markdown formats.
+        The online documentation is accessible at `<https://github.com/elehcimd/nb2md>`_.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.4
