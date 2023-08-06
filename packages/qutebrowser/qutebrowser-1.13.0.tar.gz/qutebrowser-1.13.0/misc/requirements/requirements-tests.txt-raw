@@ -1,0 +1,31 @@
+beautifulsoup4
+cheroot
+coverage
+Flask
+hypothesis
+pytest
+pytest-bdd
+pytest-benchmark
+pytest-cov
+pytest-instafail
+pytest-mock
+pytest-qt
+pytest-rerunfailures
+pytest-xvfb
+PyVirtualDisplay
+
+## optional:
+# To test :debug-trace, gets skipped if hunter is not installed
+hunter
+# To test scripts/dev/run_vulture.py which is not part of the release tarball
+vulture
+# For colored pytest output (though also a direct qutebrowser dependency))
+pygments
+# Output folding on Travis
+pytest-travis-fold
+# --repeat switch (used to manually repeat tests)
+pytest-repeat
+
+#@ markers: jaraco.functools python_version>="3.6"
+#@ add: jaraco.functools==2.0; python_version<"3.6"  # rq.filter: <= 2.0
+#@ ignore: Jinja2, MarkupSafe, colorama
