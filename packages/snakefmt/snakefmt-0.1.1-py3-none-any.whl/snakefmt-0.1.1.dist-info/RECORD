@@ -1,0 +1,15 @@
+snakefmt/__init__.py,sha256=yWAoKaWwFbnGT-5OpVDBzGdm-rPQsqr9GosodtwL7l4,47
+snakefmt/__main__.py,sha256=EDowGc3Eeh2B432iPea3JqCJ_yV0mUoDS6rhlly74Mc,100
+snakefmt/diff.py,sha256=pYQvv2noxklGVClfOuMyy5f6y9nnSd92fFL613StYo0,1014
+snakefmt/exceptions.py,sha256=d8yn_hRqIZfxG_T1vSA4SXIvzGnMn1z0AILrhzb_WD4,567
+snakefmt/formatter.py,sha256=dscbZxvPQU47tqK8lg4oAEKPcMYFnbTHnPE1z2FPve4,10629
+snakefmt/parser/grammar.py,sha256=0vv-tSOhjTHAiMfQIkE59cLp6fg16dFt-1eyQ93jwLk,2741
+snakefmt/parser/parser.py,sha256=O6DoYNBqkHl7I0tm1vXEeaoY_b4tI59Lf43Lei1nRLM,6397
+snakefmt/parser/syntax.py,sha256=zlp8paKuL0QpF0VqhafNgTKuuFTMp6kxWZKYnT6yNvA,13262
+snakefmt/snakefmt.py,sha256=-E6i34K2N1eWI-GDaMXQN5UJe5ksZL6XD0bdUfPgTS8,11251
+snakefmt/types.py,sha256=vqFxNpuVmMxuh-8lZL4xO-zlvpGo7oKTcbPLByb8Lzo,1465
+snakefmt-0.1.1.dist-info/entry_points.txt,sha256=xeld34Plv6zTOnnCvSe50QTXA6TqmjCN9DMh7lHWr-4,51
+snakefmt-0.1.1.dist-info/LICENSE,sha256=l0b9EXSEQg4xBCugJaJKliE0pW-XOp8BTKwADhWWM_8,1069
+snakefmt-0.1.1.dist-info/WHEEL,sha256=G_NFpzHmv_dUXgCUSAWL0-bLL-eMzYU6DzDeGXbRXUk,83
+snakefmt-0.1.1.dist-info/METADATA,sha256=n7PjsoiaE2BeYw4Rw9uf81tQvjM_sSOC24Pm9Wp5Z7M,13421
+snakefmt-0.1.1.dist-info/RECORD,,
