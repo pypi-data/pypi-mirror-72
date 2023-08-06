@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+a5orchestrator/OrchestratorAPI.py
+a5orchestrator/__init__.py
+a5orchestrator.egg-info/PKG-INFO
+a5orchestrator.egg-info/SOURCES.txt
+a5orchestrator.egg-info/dependency_links.txt
+a5orchestrator.egg-info/not-zip-safe
+a5orchestrator.egg-info/requires.txt
+a5orchestrator.egg-info/top_level.txt
