@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: PathPandemCLI
+Version: 0.0.0.1.dev1
+Summary: Simulate Pandemic Pathogen Outbreak Non-Gooey version
+Home-page: UNKNOWN
+Author: Pradyumna Paranjape
+Author-email: pradyparanjpe@rediffmail.com
+License: GPLv3
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+**(GitHub Repository)[https://github.com/pradyparanjpe/PathPandem.git]:**
+
+Visit github repository for details, clone it using:
+
+git clone https://github.com/pradyparanjpe/PathPandem.git
+
+
+**pip**
+
+pip install [--user] PathPandem
+
+**wxPython:**
+
+This dependency of the external module Gooey currently needs to be installed by the packagemanager, since pip fails
+
+
