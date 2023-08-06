@@ -1,0 +1,10 @@
+README.md
+setup.py
+thorcam/__init__.py
+thorcam/camera.py
+thorcam/camera_dot_net.py
+thorcam.egg-info/PKG-INFO
+thorcam.egg-info/SOURCES.txt
+thorcam.egg-info/dependency_links.txt
+thorcam.egg-info/requires.txt
+thorcam.egg-info/top_level.txt
