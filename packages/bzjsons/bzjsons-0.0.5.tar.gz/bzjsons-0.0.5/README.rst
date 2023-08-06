@@ -1,0 +1,1 @@
+A enhanced json utility based upon json, which can be used to serialize or deserialize custom classes.

@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: bzjsons
+Version: 0.0.5
+Summary: A enhanced json utility based upon json.
+Home-page: https://gitee.com/brightzh/bzjsons/
+Author: Bright Zhang
+Author-email: 67669182@qq.com
+License: MIT
+Description: A enhanced json utility based upon json, which can be used to serialize or deserialize custom classes.
+Keywords: json,serialize,deserialize,序列化,反序列化
+Platform: linux/Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent

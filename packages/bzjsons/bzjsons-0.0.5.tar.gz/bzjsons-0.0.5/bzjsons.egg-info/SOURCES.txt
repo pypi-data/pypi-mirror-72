@@ -1,0 +1,9 @@
+MANIFEST.in
+README.rst
+bzjsons.py
+setup.py
+bzjsons.egg-info/PKG-INFO
+bzjsons.egg-info/SOURCES.txt
+bzjsons.egg-info/dependency_links.txt
+bzjsons.egg-info/not-zip-safe
+bzjsons.egg-info/top_level.txt
