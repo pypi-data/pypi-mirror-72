@@ -1,0 +1,16 @@
+setup.py
+kspifka/__init__.py
+kspifka/connection.py
+kspifka/dupefilter.py
+kspifka/engine.py
+kspifka/kafka_default_settings.py
+kspifka/picklecompat.py
+kspifka/queues.py
+kspifka/scheduler.py
+kspifka/settings.py
+kspifka/utils.py
+kspifka.egg-info/PKG-INFO
+kspifka.egg-info/SOURCES.txt
+kspifka.egg-info/dependency_links.txt
+kspifka.egg-info/requires.txt
+kspifka.egg-info/top_level.txt
