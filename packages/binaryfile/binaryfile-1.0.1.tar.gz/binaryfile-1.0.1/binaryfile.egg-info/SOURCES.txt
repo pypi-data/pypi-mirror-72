@@ -1,0 +1,9 @@
+README.md
+setup.py
+binaryfile/__init__.py
+binaryfile/fileformat.py
+binaryfile/utils.py
+binaryfile.egg-info/PKG-INFO
+binaryfile.egg-info/SOURCES.txt
+binaryfile.egg-info/dependency_links.txt
+binaryfile.egg-info/top_level.txt
