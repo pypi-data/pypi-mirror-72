@@ -1,0 +1,7 @@
+fire>=0.3
+numpy
+pandas>=1
+pyarrow>=0.14
+tensorflow>=2.2
+tensorflow_datasets
+fire
