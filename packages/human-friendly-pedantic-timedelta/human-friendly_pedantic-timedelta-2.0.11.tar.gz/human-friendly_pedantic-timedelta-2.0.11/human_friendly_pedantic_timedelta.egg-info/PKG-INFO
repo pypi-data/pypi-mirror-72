@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: human-friendly-pedantic-timedelta
+Version: 2.0.11
+Summary: Human-friendly Pedantic `timedelta`
+Home-page: https://github.com/hotoffthehamster/human-friendly_pedantic-timedelta
+Author: HotOffThe Hamster
+Author-email: hotoffthehamster+humanfriendlypedantictimedelta@gmail.com
+License: MIT
+Project-URL: Documentation, https://human-friendly_pedantic-timedelta.readthedocs.io/en/latest/
+Project-URL: Source Code, https://github.com/hotoffthehamster/human-friendly_pedantic-timedelta
+Description: #####################################
+        Human-Friendly Pedantic ``timedelta``
+        #####################################
+        
+        .. image:: https://travis-ci.com/hotoffthehamster/human-friendly_pedantic-timedelta.svg?branch=develop
+          :target: https://travis-ci.com/hotoffthehamster/human-friendly_pedantic-timedelta
+          :alt: Build Status
+        
+        .. image:: https://codecov.io/gh/hotoffthehamster/human-friendly_pedantic-timedelta/branch/develop/graph/badge.svg
+          :target: https://codecov.io/gh/hotoffthehamster/human-friendly_pedantic-timedelta
+          :alt: Coverage Status
+        
+        .. image:: https://readthedocs.org/projects/human-friendly-pedantic-timedelta/badge/?version=latest
+          :target: https://human-friendly-pedantic-timedelta.readthedocs.io/en/latest/
+          :alt: Documentation Status
+        
+        .. image:: https://img.shields.io/github/release/hotoffthehamster/human-friendly_pedantic-timedelta.svg?style=flat
+          :target: https://github.com/hotoffthehamster/human-friendly_pedantic-timedelta/releases
+          :alt: GitHub Release Status
+        
+        .. image:: https://img.shields.io/pypi/v/human-friendly-pedantic-timedelta.svg
+          :target: https://pypi.org/project/human-friendly-pedantic-timedelta/
+          :alt: PyPI Release Status
+        
+        .. image:: https://img.shields.io/github/license/hotoffthehamster/human-friendly_pedantic-timedelta.svg?style=flat
+          :target: https://github.com/hotoffthehamster/human-friendly_pedantic-timedelta/blob/release/LICENSE
+          :alt: License Status
+        
+        A Python ``timedelta`` wrapper which provides pedantic string formatting.
+        
+        Install with ``pip``::
+        
+            pip3 install human-friendly_pedantic-timedelta
+        
+        For more options, read the
+        `installation guide
+        <https://human-friendly-pedantic-timedelta.readthedocs.io/en/latest/installation.html>`__.
+        
+        Simple example::
+        
+            $ python3
+            >>> from pedantic_timedelta import PedanticTimedelta
+            >>> PedanticTimedelta(days=0.33).time_format_scaled()
+            # OUTPUT
+            # ('7.92 hours', 3600.0, 'hour')
+        
+        |
+        
+        .. image:: https://raw.githubusercontent.com/hotoffthehamster/human-friendly_pedantic-timedelta/release/docs/assets/hfpt-logo-lrg.png
+           :target: https://human-friendly-pedantic-timedelta.readthedocs.io/en/latest/authors.html#graphics-shout-out
+           :align: center
+           :alt: "Penrose Hourglass"
+        
+        
+Keywords: timedelta elapsed time duration human friendly string formatter
+Platform: any
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/x-rst; charset=UTF-8
