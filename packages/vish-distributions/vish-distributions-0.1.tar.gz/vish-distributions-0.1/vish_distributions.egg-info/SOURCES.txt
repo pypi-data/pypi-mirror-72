@@ -1,0 +1,10 @@
+setup.py
+vish-distributions/Binomialdistribution.py
+vish-distributions/Gaussiandistribution.py
+vish-distributions/Generaldistribution.py
+vish-distributions/__init__.py
+vish_distributions.egg-info/PKG-INFO
+vish_distributions.egg-info/SOURCES.txt
+vish_distributions.egg-info/dependency_links.txt
+vish_distributions.egg-info/not-zip-safe
+vish_distributions.egg-info/top_level.txt
