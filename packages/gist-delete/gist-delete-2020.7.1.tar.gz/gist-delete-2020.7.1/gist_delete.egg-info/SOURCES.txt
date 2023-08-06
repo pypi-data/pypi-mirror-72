@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+gist_delete.egg-info/PKG-INFO
+gist_delete.egg-info/SOURCES.txt
+gist_delete.egg-info/dependency_links.txt
+gist_delete.egg-info/top_level.txt
+scripts/gist-delete
