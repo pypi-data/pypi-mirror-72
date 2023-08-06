@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: retic
+Version: 0.0.11
+Summary: Fastest, easiest and simple web framework for Python.
+Home-page: https://github.com/reticpy/retic
+Author: Braian Staimer
+Author-email: braianflorian@gmail.com
+License: MIT
+Download-URL: https://github.com/reticpy/retic/archive/0.0.11.tar.gz
+Description: # Retic.<span></span>py
+        
+        Fastest, easiest and simplest web framework for Python.
+        
+        * Building secure and **fast** REST services with Python
+        * A **easy** Python web framework for beginners.
+        * **Simple** integration with frontend frameworks to deploying a machine learning model in a modern web application.
+        
+        ## Install a Python rest api framework
+        
+        Install and update using [Pip](https://pypi.org/):
+        
+        ```sh
+        # Get the latest stable release of Retic
+        $ pip install -U retic
+        ```
+        
+        ## Simple rest api example in Python
+        
+        ```Python
+        # Retic
+        from retic import Router, App as app
+        
+        router = Router()
+        router \
+            .get("/", lambda req, res, next: res.ok({"msg": "Welcome to Retic ^^"})) \
+            .get("/example", lambda req, res: res.ok({"msg": "Simple rest api example in Python"})) \
+            .get("/withoutres", lambda req, res: print("RESTÂ apiÂ PythonÂ example"))
+        
+        app.use(router)
+        
+        app.listen(
+            use_reloader=True,
+            use_debugger=True,
+            port=1801,
+            hostname="localhost"
+        )
+        ```
+        
+        ## Quickstart
+        
+        Build a Python rest api in 5 minutes.
+        
+        ## Changelog
+        
+        [Learn about the latest improvements][changelog].
+        
+        ## Want to help?
+        
+        Do you want to send an error, contribute some code or improve the documentation? Great, you can do it! Read our guidelines to [contribute][contribute] and then review one of our issues in the [hotlist: community-help][hotlist].
+        
+        ## License
+        
+        [MIT][LICENSE]
+        
+        [LICENSE]: https://github.com/reticpy/retic/blob/dev_initial_app/LICENSE
+        [changelog]: https://github.com/reticpy/retic/blob/dev_initial_app/CHANGELOG.md
+        [contribute]: https://github.com/reticpy/retic/blob/dev_initial_app/CONTRIBUTING.md
+        [hotlist]: https://github.com/reticpy/retic/labels/hotlist%3A%20community-help
+Keywords: PYTHON,WEB FRAMEWORK,MACHINE LEARNING WEB FRAMEWORK
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
