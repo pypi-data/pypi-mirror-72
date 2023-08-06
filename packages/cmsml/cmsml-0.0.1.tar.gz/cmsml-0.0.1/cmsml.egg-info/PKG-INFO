@@ -1,0 +1,57 @@
+Metadata-Version: 1.2
+Name: cmsml
+Version: 0.0.1
+Summary: Python package of the CMS Machine Learning Group.
+Home-page: https://github.com/cms-ml/cmsml
+Author: CMS Machine Learning Group
+Author-email: hn-cms-machine-learning@cern.ch
+License: BSD-3-Clause
+Description: Python Package of the CMS Machine Learning Group
+        ================================================
+        
+        .. marker-after-logo
+        
+        
+        .. image:: https://img.shields.io/travis/riga/cmsml/master.svg?style=flat
+           :target: https://travis-ci.org/riga/cmsml
+           :alt: Build status
+        
+        .. image:: https://readthedocs.org/projects/cmsml/badge/?version=latest
+           :target: http://cmsml.readthedocs.io/en/latest
+           :alt: Documentation status
+        
+        .. image:: https://img.shields.io/pypi/v/cmlml.svg?style=flat
+           :target: https://pypi.python.org/pypi/cmlml
+           :alt: Package version
+        
+        .. image:: https://img.shields.io/github/license/riga/cmlml.svg
+           :target: https://github.com/riga/cmlml/blob/master/LICENSE
+           :alt: License
+        
+        .. marker-after-header
+        
+        
+        Todo.
+        
+        
+        Development
+        -----------
+        
+        - Source hosted at `GitHub <https://github.com/cms-ml/cmsml>`__
+        - Report issues, questions, feature requests on `GitHub Issues <https://github.com/cms-ml/cmsml/issues>`__
+        
+        .. marker-after-body
+        
+Keywords: CERN CMS LHC machine learning
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: System :: Monitoring
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, <4'

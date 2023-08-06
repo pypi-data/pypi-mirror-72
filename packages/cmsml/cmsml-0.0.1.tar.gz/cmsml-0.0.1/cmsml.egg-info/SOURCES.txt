@@ -1,0 +1,13 @@
+.flake8
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+cmsml/__init__.py
+cmsml/__meta__.py
+cmsml.egg-info/PKG-INFO
+cmsml.egg-info/SOURCES.txt
+cmsml.egg-info/dependency_links.txt
+cmsml.egg-info/not-zip-safe
+cmsml.egg-info/top_level.txt
