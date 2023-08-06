@@ -1,0 +1,121 @@
+pylorentz
+=================================
+
+The python package pylorentz provides classes to facilitate computations with
+4-vectors in high-energy physics.
+
+Quickstart
+==========
+
+Install the package using pip
+
+.. code-block:: console
+
+   $ pip install git+https://gitlab.sauerburger.com/frank/pylorentz.git
+
+or 
+
+.. code-block:: console
+
+   $ pip install pylorentz
+
+
+Properties
+----------
+
+The package defines three types of 4-vectors: general purpose vectors,
+4-positions and 4-momenta. The working horse of the package are 4-momenta.
+
+.. code-block:: python
+
+    >>> from pylorentz import Momentum4
+    >>> muon = Momentum4.m_eta_phi_pt(0.1057, 4.5, 1.5, 35)
+    >>> muon.eta
+    4.5
+    >>> muon.phi
+    1.5
+    >>> muon.p_t
+    35.0
+    >>> "%.2f" % muon.p
+    '1575.49'
+    >>> "%.2f" % muon.e
+    '1575.49'
+
+Vectorized Properties
+*********************
+
+Since version 0.2.0, it is possible to pass numpy arrays to the constructors
+and operate on multiple vectors at a time.
+
+.. code-block:: python
+
+    >>> from pylorentz import Momentum4
+    >>> import numpy as np
+    >>> masses = np.array([0.0005, 0.1057, 1.7769])
+    >>> etas = np.array([1, 2, 3])
+    >>> phis = np.array([0, 0, 0])
+    >>> pts = np.array([10, 10, 10])
+    >>> muon = Momentum4.m_eta_phi_pt(masses, etas, phis, pts)
+    >>> ["%.2f" % m for m in muon.e]
+    ['15.43', '37.62', '100.69']
+
+Arithmetics
+-----------
+
+4-vectors support a variety of arithmetic operations. The most important one
+is the addition of two vectors.
+
+.. code-block:: python
+
+    >>> from pylorentz import Momentum4
+    >>> tau_1 = Momentum4.m_eta_phi_pt(1.777, 4.5, 1.5, 35)
+    >>> tau_2 = Momentum4.m_eta_phi_pt(1.777, -4.5, 1.5, 35)
+
+We can add the momenta of the two tau leptons and access the properties of the
+parent particle.
+
+.. code-block:: python
+
+    >>> parent = tau_1 + tau_2
+    >>> "%.2f" % parent.m
+    '3150.21'
+    >>> "%.2f" % parent.eta
+    '0.00'
+    >>> "%.2f" % parent.phi
+    '1.50'
+
+
+Lorentz Boosts
+--------------
+
+The package also provides methods to perform Lorentz boosts. For example,
+consider the decay of a Higgs boson to a pair of tau leptons in the rest frame
+of the Higgs boson. The tau leptons are back-to-back in the
+y-z-plane.
+
+.. code-block:: python
+
+    >>> import math
+    >>> from pylorentz import Momentum4
+    >>> m = 125.0
+    >>> tau_1 = Momentum4.e_m_eta_phi(m / 2, 1.777, 1.5, math.pi / 2)
+    >>> tau_2 = Momentum4.e_m_eta_phi(m / 2, 1.777, -1.5, -math.pi / 2)
+
+Now let's assume the Higgs boson itself is not at rest. We can define its
+momentum and then boost the two tau leptons.
+
+.. code-block:: python
+
+    >>> higgs = Momentum4.m_eta_phi_pt(m, 2, 0, 250)
+    >>> tau_1.boost_particle(higgs)
+    Momentum4(884.599, 220.498, 26.5578, 856.264)
+    >>> tau_2.boost_particle(higgs)
+    Momentum4(64.2195, 29.5021, -26.5578, 50.451)
+
+
+Links
+=====
+
+ * `GitLab Repository <https://gitlab.sauerburger.com/frank/pylorentz>`_
+ * `pylorentz on PyPi <https://pypi.org/project/pylorentz>`_
+ * `Documentation <https://pylorentz.readthedocs.io/>`_
