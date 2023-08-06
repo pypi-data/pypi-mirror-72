@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: asyncapi
+Version: 0.1.0
+Summary: Doodle
+Home-page: https://github.com/dutradda/asyncapi
+License: UNKNOWN
+Author: Diogo Dutra
+Author-email: diogodutradamata@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Database
+Requires-Dist: circuitbreaker
+Requires-Dist: cachetools
+Requires-Dist: pyyaml
+Requires-Dist: mkdocs ; extra == "doc"
+Requires-Dist: mkdocs-material ; extra == "doc"
+Requires-Dist: markdown-include ; extra == "doc"
+Requires-Dist: httpx ; extra == "http"
+Requires-Dist: black ; extra == "test"
+Requires-Dist: isort ; extra == "test"
+Requires-Dist: ipython ; extra == "test"
+Requires-Dist: mypy ; extra == "test"
+Requires-Dist: pytest-asyncio ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Requires-Dist: pytest-mock ; extra == "test"
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: flake8 ; extra == "test"
+Requires-Dist: bumpversion ; extra == "test"
+Project-URL: Documentation, https://dutradda.github.io/asyncapi/
+Provides-Extra: doc
+Provides-Extra: http
+Provides-Extra: test
+
+# asyncapi
+Publish events using broadcaster lib from asyncapi specification
+
