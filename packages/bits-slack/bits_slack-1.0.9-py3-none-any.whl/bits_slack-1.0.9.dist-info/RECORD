@@ -1,0 +1,9 @@
+bits/__init__.py,sha256=EtOD91ivU_kXxRA8lopap-Ihis3DvCkFVpiaQIdypM4,89
+bits/slack/__init__.py,sha256=L-oXH93U7BZdPl-c5Fz7at5u2h1z9keWrtN4IZ_dE2o,10246
+bits/slack/bitsdb.py,sha256=s2HaM6I-9EsYG2kZzBT7uNNY2YBDo0lVwUBv8P_P7YI,2575
+bits/slack/client.py,sha256=q1sRCUiDa2wyy_Mi3hwb3Sip57gq4FuGo5paGtrlY8k,4947
+bits/slack/update.py,sha256=r1dmLGL3ZHs57lDnvBWhp_s73xvk68IERGz7bmOzEqo,15624
+bits_slack-1.0.9.dist-info/METADATA,sha256=dxz57D2WNpN3NEgJsdEYA6kkM_RngsX_6HeBqG4zga8,247
+bits_slack-1.0.9.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+bits_slack-1.0.9.dist-info/top_level.txt,sha256=r0CPtEdvhPhtNI1RzFMKlSds-wmUFadHdR_o8lZNEOg,5
+bits_slack-1.0.9.dist-info/RECORD,,
