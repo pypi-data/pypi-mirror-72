@@ -1,0 +1,8 @@
+[console_scripts]
+canker-as = canker.cli:tool
+canker-c++ = canker.cli:tool
+canker-cc = canker.cli:tool
+canker-cpp = canker.cli:tool
+canker-env = canker.cli:env
+canker-ld = canker.cli:tool
+
