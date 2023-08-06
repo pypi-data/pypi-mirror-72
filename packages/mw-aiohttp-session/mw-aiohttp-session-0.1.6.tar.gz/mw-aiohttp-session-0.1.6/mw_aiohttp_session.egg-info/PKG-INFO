@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: mw-aiohttp-session
+Version: 0.1.6
+Summary: maxwin aiohttp-session 
+Home-page: https://bitbucket.org/maxwin-inc/mw-aiohttp-session/src
+Author: candyabc
+Author-email: hfcandyabc@163.com
+License: UNKNOWN
+Description: maxwin aiohttp-session
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
