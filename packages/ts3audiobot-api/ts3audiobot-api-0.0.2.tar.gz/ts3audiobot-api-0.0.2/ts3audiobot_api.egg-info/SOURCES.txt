@@ -1,0 +1,10 @@
+README.md
+setup.py
+ts3audiobot_api/__init__.py
+ts3audiobot_api/commands.py
+ts3audiobot_api/ts3audiobot.py
+ts3audiobot_api/ts3commandcaller.py
+ts3audiobot_api.egg-info/PKG-INFO
+ts3audiobot_api.egg-info/SOURCES.txt
+ts3audiobot_api.egg-info/dependency_links.txt
+ts3audiobot_api.egg-info/top_level.txt
