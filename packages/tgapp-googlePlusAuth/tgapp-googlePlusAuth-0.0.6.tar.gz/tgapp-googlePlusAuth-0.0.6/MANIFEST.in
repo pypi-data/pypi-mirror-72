@@ -1,0 +1,5 @@
+recursive-include googleplusauth/migration *
+recursive-include googleplusauth/public *
+recursive-include googleplusauth/templates *.html
+global-exclude *.pyc
+
