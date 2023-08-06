@@ -1,0 +1,3 @@
+[console_scripts]
+azbacklog = azbacklog.azbacklog:main
+

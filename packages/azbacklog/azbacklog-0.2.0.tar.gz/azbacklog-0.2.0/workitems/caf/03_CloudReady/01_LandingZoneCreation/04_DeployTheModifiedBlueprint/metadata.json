@@ -1,0 +1,6 @@
+{
+    "title": "Deploy the modified blueprint",
+    "description": "Update the landing zone blueprint based on the impacted considerations and deploy the modified blueprint.",
+    "tags": ["Ready"],
+    "roles": []
+}

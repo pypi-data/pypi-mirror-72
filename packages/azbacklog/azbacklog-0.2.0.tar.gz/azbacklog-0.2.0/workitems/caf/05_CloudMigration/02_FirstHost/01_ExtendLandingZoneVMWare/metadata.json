@@ -1,0 +1,6 @@
+{
+    "title": "Extend the landing zone for VMWare",
+    "description": "Resolve defined prerequisites necessary to migrate VMWare assets to Azure",
+    "tags": ["First Host"],
+    "roles": []
+}

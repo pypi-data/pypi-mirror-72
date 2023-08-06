@@ -1,0 +1,18 @@
+{
+    "tags" : [
+        "Strategy",
+        "Plan",
+        "Ready",
+        "Innovation",
+        "Migration",
+        "First Workload",
+        "First Host",
+        "Workload Template"
+    ],
+    "roles": [
+        "Infra",
+        "AppDev",
+        "Data",
+        "Security"
+    ]
+}

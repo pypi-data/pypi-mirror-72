@@ -1,0 +1,6 @@
+{
+    "title": "Migration tool choice(s)",
+    "description": "Evaluate the approach to migrate the workload based on future state architecture decisions https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/decision-guides/migrate-decision-guide/",
+    "tags": ["Workload Template"],
+    "roles": []
+}

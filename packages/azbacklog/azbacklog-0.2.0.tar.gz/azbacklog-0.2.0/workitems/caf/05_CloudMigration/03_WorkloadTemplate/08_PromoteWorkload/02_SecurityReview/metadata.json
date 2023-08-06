@@ -1,0 +1,6 @@
+{
+    "title": "Security Review",
+    "description": "Validate adherence to security baseline https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/migrate/migration-considerations/optimize/promote",
+    "tags": ["Workload Template"],
+    "roles": []
+}
