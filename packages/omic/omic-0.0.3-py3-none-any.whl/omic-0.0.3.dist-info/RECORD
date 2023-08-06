@@ -1,0 +1,15 @@
+omic/__init__.py,sha256=Db6WnlIN0aiz4WK1yTYWod8F82c-vXWbAGu0Ae6-Zj4,36
+omic/client.py,sha256=HR05bMjCoRvqybGySCM8HjlxVbYBkdlRA26zagDuS88,1192
+omic/const.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+omic/global_.py,sha256=WMv5OjE43o7G32EAcKRwJYHIUUuH0LzwVEmSaPXL-2w,765
+omic/omic.py,sha256=mbYSEXtptlYxdr-YU5UnhS5dn2aDnUSXy_pY_HD1d0w,1683
+omic/parallel.py,sha256=7CAByDJRVzkoGhhPSwCQWsEyuhz2BP2tohFr2QeymBA,3945
+omic/util.py,sha256=JLP5bxq95zhy-5tuFFcy91ADa3xriUcyzbQh8CzgKzg,5286
+omic/entity/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+omic/entity/data.py,sha256=sOgYk9PgWJVyROSRKJ1anuaSh7PSMz7ghdur6jcDUxQ,5032
+omic/entity/execution.py,sha256=zRIbZSK1gh0OTRgoD5irjHJehWbp16nZeYKlXbnX9kM,4629
+omic/entity/graph.py,sha256=Nawv3VwEMXqDWytH2mrEYk7N6PMxBlaRM4fU9rT30ok,909
+omic-0.0.3.dist-info/METADATA,sha256=6Nv5nRHAl7_K8N6aQe5PEl7nw7_t_1Q6MTMpa2IbuZI,624
+omic-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+omic-0.0.3.dist-info/top_level.txt,sha256=qguvWmIeDT4sUYLyOWpINSkq1djVOKwuoSl13mA6q6o,5
+omic-0.0.3.dist-info/RECORD,,
