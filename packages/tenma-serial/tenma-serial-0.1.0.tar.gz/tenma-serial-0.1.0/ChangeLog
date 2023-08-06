@@ -1,0 +1,37 @@
+CHANGES
+=======
+
+0.1.0
+-----
+
+* Fixed setup.cfg
+* Add packaging, tests and pep8 fixes
+* added python3 support to library
+* Added reading of running current and voltage with --actualCurrent and --actualVoltage flags. Alongside a --script flag to run without printing the TenmaVersion every time
+* Small cleanup of unused code
+* Save conf flow. Because SAV<X> does not work as expected or advertised
+* Added OVP and OCP control
+* TenmaControl with channel and Status command line arguments
+* Tenma Dc Lib reading status
+* README fix: on/off commands
+* Update license terms
+* Fixed icon path to load properly in multiple cases
+* GTK gui can reload serial ports, not only present the ones at boot
+* Updated the name to gtkIndicator
+* Small unity graphical indicator to control the DC power supply from the graphical desktop
+* Added URL in readme
+* Re-ordered on off to be able to call with --off --on and effectively reset the power
+* Readme fixes
+* Added basic Readme
+* Fixed small problem, cleaned up function
+* Added exception error message
+* Added tenmaControl
+* Tenma Control program DEBUG mode
+* Load and recall
+* renamed to tenmaDcLib
+* Saving and storing
+* ON/OFF mode
+* Added setVoltage
+* tenma control set current
+* tenma set maximum current
+* First version of tenmaDcPower supply UART controller
