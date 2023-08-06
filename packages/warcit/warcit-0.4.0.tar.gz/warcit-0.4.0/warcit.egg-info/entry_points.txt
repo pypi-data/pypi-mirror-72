@@ -1,0 +1,5 @@
+
+        [console_scripts]
+        warcit = warcit.warcit:main
+        warcit-converter = warcit.converter:main
+    
