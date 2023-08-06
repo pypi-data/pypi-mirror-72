@@ -1,0 +1,6 @@
+graphviz
+psycopg2
+python-benedict
+
+[test]
+pytest
