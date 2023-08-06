@@ -1,0 +1,17 @@
+data/.list-of-algorithms.json,sha256=bu6mDjrvg2o30ro1DLQ3D6sC3Z7IvK3ThS2Ovwof7Uc,113146
+data/__init__.py,sha256=jeYvdNpEWvp-xwDEGejPv1HEjaXb5LGqSlBnp1b6tEA,44
+sapera/__init__.py,sha256=jNJ9uIXDKFySjmT-5sLbSSGohgZocR2tXtvUXs_6NoQ,2726
+sapera/settings.py,sha256=XPwaxuCjUA4vpmSeR2zFq1DT9BRuUSsgyiCrOg0-wiw,93
+sapera/main/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+sapera/main/main.py,sha256=95TkF0lzrH4n-TYO6D7XSzONkMm3ppxvADpp1qcIN6A,1188
+sapera/scraper/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+sapera/scraper/updater.cmd,sha256=KTKs1ahWA8Pu-b0z4ETj7yp6f353tkXKHn2RJAiS5q4,46
+sapera/scraper/updater.py,sha256=4yb8yjERx-Al8dTopfZEUJaBm6OM54XAn4BuZki_JqY,1966
+sapera/scraper/updater.sh,sha256=FzGRqztVhZrMzZnepOzMTMjX8XB4SR7lDjkHvvRQPVc,346
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sapera-2.0.dist-info/LICENSE,sha256=0jO5HvvJ42Igmo3os8SJvVJdvlb_DIQZF8KBAeFFDqQ,1077
+sapera-2.0.dist-info/METADATA,sha256=f8qBuKRRPBTyc98RjzZ4YSZBl7YKlsZ9OBugWzktJjY,4471
+sapera-2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sapera-2.0.dist-info/entry_points.txt,sha256=Ap12Gwe2Nxo5bWBt5Qgj-L8--qsBg7bWixFA6VPIwqY,47
+sapera-2.0.dist-info/top_level.txt,sha256=BZCjupB7u5CMUEjleELerxOAnaYq37NU7BLyWTE2Lzc,17
+sapera-2.0.dist-info/RECORD,,
