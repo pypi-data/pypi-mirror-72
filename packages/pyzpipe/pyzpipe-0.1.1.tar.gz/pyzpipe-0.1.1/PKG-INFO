@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pyzpipe
+Version: 0.1.1
+Summary: Concurrent and parallel pipeline framework using ZMQ
+Home-page: https://github.com/jheo4/zpipe
+Author: Jin Heo
+Author-email: 993jin@gmail.com
+License: MIT
+Description: # zpipe
+        Python pipeline framework with ZMQ
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: <=3.6
+Provides-Extra: pyopencv
+Provides-Extra: vidgear
+Provides-Extra: dev
