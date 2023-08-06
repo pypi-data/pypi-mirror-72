@@ -1,0 +1,50 @@
+import config
+
+
+def base(cls):
+    for key, val in config.BASE.items():
+        setattr(cls, key, val)
+    return cls
+
+
+def data(cls):
+    cls = base(cls)
+    for key, val in config.DATA.items():
+        setattr(cls, key, val)
+    return cls
+
+
+def proc(cls):
+    cls = base(cls)
+    for key, val in config.PROC.items():
+        setattr(cls, key, val)
+
+    return cls
+
+
+def loss(cls):
+    cls = base(cls)
+    for key, val in config.LOSS.items():
+        setattr(cls, key, val)
+    return cls
+
+
+def gensim(cls):
+    cls = base(cls)
+    for key, val in config.GENSIM.items():
+        setattr(cls, key, val)
+    return cls
+
+
+def intent(cls):
+    cls = base(cls)
+    for key, val in config.INTENT.items():
+        setattr(cls, key, val)
+    return cls
+
+
+def entity(cls):
+    cls = base(cls)
+    for key, val in config.ENTITY.items():
+        setattr(cls, key, val)
+    return cls
