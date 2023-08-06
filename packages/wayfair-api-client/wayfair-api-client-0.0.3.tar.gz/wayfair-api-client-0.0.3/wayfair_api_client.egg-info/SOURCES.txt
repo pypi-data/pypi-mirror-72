@@ -1,0 +1,10 @@
+README.md
+setup.py
+wayfair_api_client/__init__.py
+wayfair_api_client/client.py
+wayfair_api_client/queries.py
+wayfair_api_client/utils.py
+wayfair_api_client.egg-info/PKG-INFO
+wayfair_api_client.egg-info/SOURCES.txt
+wayfair_api_client.egg-info/dependency_links.txt
+wayfair_api_client.egg-info/top_level.txt
