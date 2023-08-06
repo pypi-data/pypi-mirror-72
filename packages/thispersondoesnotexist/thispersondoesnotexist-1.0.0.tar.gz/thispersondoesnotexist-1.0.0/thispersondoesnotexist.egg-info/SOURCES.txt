@@ -1,0 +1,10 @@
+README.md
+setup.py
+thispersondoesnotexist/__init__.py
+thispersondoesnotexist/assets.py
+thispersondoesnotexist/helpers.py
+thispersondoesnotexist/online_getter.py
+thispersondoesnotexist.egg-info/PKG-INFO
+thispersondoesnotexist.egg-info/SOURCES.txt
+thispersondoesnotexist.egg-info/dependency_links.txt
+thispersondoesnotexist.egg-info/top_level.txt
