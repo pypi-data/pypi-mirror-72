@@ -1,0 +1,10 @@
+setup.py
+simple_distributions_v11/Binomialdistribution.py
+simple_distributions_v11/Gaussiandistribution.py
+simple_distributions_v11/Generaldistribution.py
+simple_distributions_v11/__init__.py
+simple_distributions_v11.egg-info/PKG-INFO
+simple_distributions_v11.egg-info/SOURCES.txt
+simple_distributions_v11.egg-info/dependency_links.txt
+simple_distributions_v11.egg-info/not-zip-safe
+simple_distributions_v11.egg-info/top_level.txt
