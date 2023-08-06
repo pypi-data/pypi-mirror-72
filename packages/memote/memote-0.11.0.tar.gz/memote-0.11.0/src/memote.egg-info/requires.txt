@@ -1,0 +1,26 @@
+click
+click-configfile
+click-log
+six
+future
+pytest>=4.0
+gitpython
+pandas
+Jinja2
+cookiecutter
+cobra>=0.15.3
+lxml
+ruamel.yaml>=0.15
+travis-encrypt<1.2.0
+sympy
+sqlalchemy
+requests
+importlib_resources
+numpydoc
+pylru
+goodtables~=2.0
+depinfo
+requests
+
+[:python_version >= "3.5"]
+equilibrator_api<0.2
