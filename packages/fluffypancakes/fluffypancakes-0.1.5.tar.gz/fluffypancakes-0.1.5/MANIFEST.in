@@ -1,0 +1,9 @@
+include README.md
+include LICENSE.txt
+
+include fluffypancakes/data/*.csv
+include fluffypancakes/data/*.txt
+
+include fluffypancakes/dependencies/linux/*
+include fluffypancakes/dependencies/macOS/*
+include fluffypancakes/dependencies/windows/*
