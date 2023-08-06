@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: modbus4mqtt
+Version: 0.1
+Summary: A YAML-defined bidirectional Modbus to MQTT interface
+Home-page: https://github.com/tjhowse/modbus4mqtt
+Author: Travis Howse
+Author-email: tjhowse@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyyaml (>=3.5.0)
+Requires-Dist: paho-mqtt (>=1.5.0)
+Requires-Dist: pymodbus (>2.3.0)
+
+# Modbus4MQTT
+
+This is a gateway that translates between modbus TCP/IP and MQTT.
+
+There are already a few things that do this, but didn't quite have the features I wanted.
+
+The mapping of modbus registers to MQTT topics is in a simple YAML file.
+
