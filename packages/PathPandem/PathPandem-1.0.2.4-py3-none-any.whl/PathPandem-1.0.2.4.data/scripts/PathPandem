@@ -1,0 +1,7 @@
+#!python
+# -*- coding: utf-8 -*-
+
+from PathPandem import spread_simul
+
+if __name__ == "__main__":
+    spread_simul.main()
