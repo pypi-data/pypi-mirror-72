@@ -1,0 +1,12 @@
+README.md
+setup.py
+ietfdata/__init__.py
+ietfdata/datatracker.py
+ietfdata/datatracker_ext.py
+ietfdata/mailarchive.py
+ietfdata/py.typed
+ietfdata/rfcindex.py
+ietfdata.egg-info/PKG-INFO
+ietfdata.egg-info/SOURCES.txt
+ietfdata.egg-info/dependency_links.txt
+ietfdata.egg-info/top_level.txt
