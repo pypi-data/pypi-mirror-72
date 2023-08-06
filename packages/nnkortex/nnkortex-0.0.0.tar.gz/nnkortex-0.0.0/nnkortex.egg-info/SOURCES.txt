@@ -1,0 +1,7 @@
+MANIFEST.in
+setup.py
+nnkortex/__init__.py
+nnkortex.egg-info/PKG-INFO
+nnkortex.egg-info/SOURCES.txt
+nnkortex.egg-info/dependency_links.txt
+nnkortex.egg-info/top_level.txt
