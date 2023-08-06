@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: urlfinderlib
+Version: 0.11.12
+Summary: Library to find URLs and check their validity.
+Home-page: https://github.com/ace-ecosystem/urlfinderlib
+Author: Matthew Wilson
+Author-email: automationator@runbox.com
+License: Apache 2.0
+Keywords: urlfinderlib
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Description-Content-Type: text/markdown
+Requires-Dist: bs4
+Requires-Dist: tld (<0.9.8,>=0.9)
+Requires-Dist: python-magic
+Requires-Dist: lxml
+
+# urlfinderlib
+Python library for finding URLs in documents and arbitrary data and checking their validity.
+
+**Basic usage**
+
+    from urlfinderlib import find_urls
+
+    with open('/path/to/file', 'rb') as f:
+        print(find_urls(f.read())
+
+**base_url usage**
+
+If you are trying to find URLs inside of an HTML file, the paths in the URLs are likely relative to their location on the server hosting the HTML. You can use the *base_url* parameter in this case to extract these "relative" URLs.
+
+    from urlfinderlib import find_urls
+
+    with open('/path/to/file', 'rb') as f:
+        print(find_urls(f.read(), base_url='http://somewebsite.com/')
+
+
