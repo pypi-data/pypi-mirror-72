@@ -1,0 +1,9 @@
+setup.py
+mpkg/__init__.py
+mpkg/mpkg.py
+mpkg.egg-info/PKG-INFO
+mpkg.egg-info/SOURCES.txt
+mpkg.egg-info/dependency_links.txt
+mpkg.egg-info/entry_points.txt
+mpkg.egg-info/requires.txt
+mpkg.egg-info/top_level.txt
