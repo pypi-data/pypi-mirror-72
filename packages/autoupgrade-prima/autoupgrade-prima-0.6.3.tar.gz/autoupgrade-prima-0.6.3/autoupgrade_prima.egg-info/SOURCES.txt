@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+autoupgrade/__init__.py
+autoupgrade_prima.egg-info/PKG-INFO
+autoupgrade_prima.egg-info/SOURCES.txt
+autoupgrade_prima.egg-info/dependency_links.txt
+autoupgrade_prima.egg-info/requires.txt
+autoupgrade_prima.egg-info/top_level.txt
+autoupgrade_prima.egg-info/zip-safe
