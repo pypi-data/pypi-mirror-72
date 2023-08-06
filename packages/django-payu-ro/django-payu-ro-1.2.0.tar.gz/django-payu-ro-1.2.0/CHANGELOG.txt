@@ -1,0 +1,21 @@
+=== 1.2.0 ===
+- Added support for token payments with ALU/v3.
+- As token/v1 payments are deprecated and unmaintained by PayU, support for it in this package is
+  deprecated as well from now on.
+
+=== 1.1.1 ===
+- Fix signature error caused by wrong unicode length. Hopefully.
+
+=== 1.1 ===
+- Drop Django1.8 support.
+- Properly fix HMAC UnicodeEncodeError. Hopefully.
+
+=== 1.0.11 ===
+- Fixed trying to convert unicode chars to ascii in some cases.
+
+=== 1.0.0 ===
+- Implement PayU tokens
+- Improve project structure and development
+
+=== 0.0.1 ===
+- Initial release
