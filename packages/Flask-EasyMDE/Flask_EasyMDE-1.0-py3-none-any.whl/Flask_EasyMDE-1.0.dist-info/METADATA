@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: Flask-EasyMDE
+Version: 1.0
+Summary: Flask implementation for EasyMDE Markdown Editor
+Home-page: https://github.com/dnymxm/flask-easymde/
+Author: Maxime Diony
+Author-email: maxime.diony@gmail.com
+License: BSD
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >= 3.6
+Requires-Dist: Flask
+
+
+Flask-EasyMDE
+-------------
+Flask implementation for EasyMDE Markdown Editor
+EasyMDE is a fork of abandoned SimpleMDE project which brings new features and fix bugs
+
+
