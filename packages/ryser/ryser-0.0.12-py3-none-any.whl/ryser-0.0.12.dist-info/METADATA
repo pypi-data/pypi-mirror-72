@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ryser
+Version: 0.0.12
+Summary: Latin squares and related designs.
+Home-page: http://packages.python.org/ryser/
+Author: Matthew Henderson
+Author-email: matthew.james.henderson@gmail.com
+License: LICENSE.txt
+Download-URL: http://pypi.python.org/pypi/ryser/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+## ryser
+
+Latin Squares and Related Designs
+
+
+
