@@ -1,0 +1,7 @@
+numpy
+matplotlib
+scipy>=1.1.0
+tifffile
+Pillow
+PyQt5>=5.13.2
+h5py>=2.10.0
