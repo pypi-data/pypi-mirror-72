@@ -1,0 +1,13 @@
+scalene/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scalene/__main__.py,sha256=KgSPe_UmO9wzE3G3gy-Mo3aIFOlHuBpsPZEXboCnZlM,107
+scalene/adaptive.py,sha256=VFLa8NQtjhvXVx7vfYFDZqhDs3AbLVOtReBaLOdUX5k,1349
+scalene/libscalene.dylib,sha256=ZASU3YCPRG337ki1dMY7FlIvIT2ukTItecOzEbwBybI,58184
+scalene/libscalene.so,sha256=-JCXZO59s0KnHkpCk0059LHrWXQKeU5u-zXoRswf6Dk,461744
+scalene/scalene.py,sha256=Q-y7iCliKO4UawxgVrfi4njTzrLk6-Ng5NtnTkkJ0d4,54541
+scalene/sparkline.py,sha256=YSu-RkL7X5wWStGnXGzku3SZZGgZLcpH5aAfGXegGuo,1510
+scalene-0.9.9.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+scalene-0.9.9.dist-info/METADATA,sha256=a0kWKUWZQ3IlwXvGlJFyZu8bzqyQouZOFXlibUJqLN4,10952
+scalene-0.9.9.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+scalene-0.9.9.dist-info/entry_points.txt,sha256=69V7fxDLlzl46jlQwkcwqoQp_GuZ--hf7ao1hxI-wyQ,51
+scalene-0.9.9.dist-info/top_level.txt,sha256=leRWXBwvkk6_qrtteERsyql3sxxxzRbeq9pX2xaxcMA,8
+scalene-0.9.9.dist-info/RECORD,,
