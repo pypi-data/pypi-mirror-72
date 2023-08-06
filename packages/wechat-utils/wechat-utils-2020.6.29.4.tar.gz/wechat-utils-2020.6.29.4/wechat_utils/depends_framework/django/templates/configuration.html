@@ -1,0 +1,237 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% load i18n static %}
+
+{% block extrastyle %}{{ block.super }}
+	<link rel="stylesheet" type="text/css" href="{% static 'admin/css/dashboard.css' %}">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+{% endblock %}
+
+{% block coltype %}colMS{% endblock %}
+
+{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% csrf_token %}
+
+
+
+{% block content %}
+<div id="content-main">
+
+<form action="." method="post">
+
+<div class="container">
+
+	<!-- 第一行（共一行） -->
+	<div class="row">
+
+		<!-- 第一列 -->
+		<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">应用设置</div>
+			<div class="panel-body">
+
+				<div class="col-md-5">
+					应用类型
+				</div>
+				<div class="col-md-7 inline">
+					<div class="radio-inline">
+						{% if data.app_category == 'miniapp' %}
+						<label><input type="radio" name="app_category" value="miniapp" checked>小程序</label>
+						{% else %}
+						<label><input type="radio" name="app_category" value="miniapp">小程序</label>
+						{% endif %}
+					</div>
+					<div class="radio-inline">
+						{% if data.app_category == 'mpapp' %}
+						<label><input type="radio" name="app_category" value="mpapp" checked>公众号</label>
+						{% else %}
+						<label><input type="radio" name="app_category" value="mpapp">公众号</label>
+						{% endif %}
+					</div>
+				</div>
+				
+				<div class="col-md-5">
+				appid
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="appid" value="{{data.appid}}">
+				</div>
+
+				<div class="col-md-5">
+					app_secret
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="app_secret" value="{{data.app_secret}}">
+				</div>
+
+				<div class="col-md-5">
+					token_secret_key
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="token_secret_key" value="{{data.token_secret_key}}">
+				</div>
+
+				<div class="col-md-5">
+					token_salt
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="token_salt" value="{{data.token_salt}}">
+				</div>
+
+
+				<div class="col-md-5">
+					token_expiration
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="token_expiration" value="{{data.token_expiration}}">
+				</div>
+
+				<div class="col-md-5">
+					access_token_expiration
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="access_token_expiration" value="{{data.access_token_expiration}}">
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- 第二列 -->
+		{% if data.app_category == 'mpapp' %}
+		<div class="panel panel-default" style="display:block;">
+		{% else %}
+		<div class="panel panel-default" style="display:none;">
+		{% endif %}
+			<div class="panel-heading">公众号设置</div>
+			<div class="panel-body">
+
+				<div class="col-md-5">
+					oauth_redirect_url
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="oauth_redirect_url" value="{{data.oauth_redirect_url}}">
+				</div>
+
+				<div class="col-md-5">
+					oauth_redirect_token_expiration
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="oauth_redirect_token_expiration" value="{{data.oauth_redirect_token_expiration}}">
+				</div>
+
+				<div class="col-md-5">
+					post_oauth_redirect_url_default
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="post_oauth_redirect_url_default" value="{{data.post_oauth_redirect_url_default}}">
+				</div>
+
+				<div class="col-md-5">
+					公众号token
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="mp_token" value="{{data.mp_token}}">
+				</div>
+
+
+				
+			
+			</div>
+		</div>
+
+
+		</div>
+
+
+		<!-- 第二列 -->
+		<div class="col-md-6">
+
+		<!-- 第一行（不用设置列高） -->
+		<div class="panel panel-default">
+			<div class="panel-heading">商户设置</div>
+				<div class="panel-body">
+
+				<div class="col-md-5">
+					商户id
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="mch_id" value="{{data.mch_id}}">
+				</div>
+
+				<div class="col-md-5">
+					商户secret
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="mch_secret" value="{{data.mch_secret}}">
+				</div>
+
+
+				</div>
+			</div>
+
+
+		<!-- 第二行（不用设置列高） -->
+		<div class="panel panel-default">
+			<div class="panel-heading">redis</div>
+				<div class="panel-body">
+
+
+				<div class="col-md-5">
+					redis_host
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="redis_host" value="{{data.redis_host}}">
+				</div>
+
+				<div class="col-md-5">
+					redis_port
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="redis_port" value="{{data.redis_port}}">
+				</div>
+
+				<div class="col-md-5">
+					redis_db
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="redis_db" value="{{data.redis_db}}">
+				</div>
+
+				<div class="col-md-5">
+					redis_password
+				</div>
+				<div class="col-md-7">
+					<input type="text" name="redis_password" value="{{data.redis_password}}">
+				</div>
+
+
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<br>
+</div>
+
+<input type="submit" value="修改">
+</form> 
+
+
+
+
+
+</div>
+{% endblock %}
+
