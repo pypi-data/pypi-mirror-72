@@ -1,0 +1,5 @@
+scikit-optimize==0.5.2
+scikit-learn
+mpi4py
+cython
+sphinxcontrib-bibtex
