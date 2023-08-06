@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: flask-adminlte-full
+Version: 0.1.dev19
+Summary: An extension for Flask that integrates the AdminLTE template with most of the features.
+Home-page: https://github.com/kyzima-spb/flask-adminlte-full
+Author: Kirill Vercetti
+Author-email: office@kyzima-spb.com
+License: MIT
+Keywords: adminlte adminlte3 flask templating html
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Flask
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Dist: Flask-Gravatar (>=0.5)
+Requires-Dist: Flask (>=1.0)
+Requires-Dist: adminlte-base
+
+Flask-AdminLTE-Full
+===================
+
+Flask-AdminLTE-Full is an extension for `Flask`_ that integrates the `AdminLTE`_ template with most of the features.
+
+Installation
+------------
+
+Install the latest stable version::
+
+    $ pip install flask-adminlte-full
+
+or install development version (bugs are possible)::
+
+    $ pip install https://github.com/kyzima-spb/flask-adminlte-full/archive/dev-master.zip
+
+Documentation
+-------------
+`Continue reading the documentation.`_
+
+
+.. _Flask: http://flask.pocoo.org/
+.. _AdminLTE: https://adminlte.io/
+.. _Continue reading the documentation.: https://adminlte-full.readthedocs.io/en/latest/flask.html
+
+
