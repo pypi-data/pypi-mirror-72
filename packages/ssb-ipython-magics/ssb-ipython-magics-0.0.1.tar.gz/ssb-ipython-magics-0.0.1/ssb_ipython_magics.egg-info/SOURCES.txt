@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+dapla/__init__.py
+dapla/magics/__init__.py
+dapla/magics/blueprint.py
+ssb_ipython_magics.egg-info/PKG-INFO
+ssb_ipython_magics.egg-info/SOURCES.txt
+ssb_ipython_magics.egg-info/dependency_links.txt
+ssb_ipython_magics.egg-info/requires.txt
+ssb_ipython_magics.egg-info/top_level.txt
