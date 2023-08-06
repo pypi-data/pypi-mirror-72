@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mtstruct
+Version: 0.2.1
+Summary: Minh-Tri's C/C++ structures that can be useful for Python.
+Home-page: https://github.com/inteplus/mtstruct
+Author: ['Minh-Tri Pham']
+License: UNKNOWN
+Project-URL: Documentation, https://mtdoc.readthedocs.io/en/latest/mt.struct/mt.struct.html
+Project-URL: Source Code, https://github.com/inteplus/mtstruct
+Platform: UNKNOWN
+Requires-Dist: mtbase (>=0.4.1)
+Requires-Dist: numpy
+
+UNKNOWN
+
+
