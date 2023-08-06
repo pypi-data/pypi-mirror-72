@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+channelpack/__init__.py
+channelpack/datautils.py
+channelpack/dbf.py
+channelpack/pack.py
+channelpack/readtext.py
+channelpack/readxl.py
+channelpack.egg-info/PKG-INFO
+channelpack.egg-info/SOURCES.txt
+channelpack.egg-info/dependency_links.txt
+channelpack.egg-info/requires.txt
+channelpack.egg-info/top_level.txt
