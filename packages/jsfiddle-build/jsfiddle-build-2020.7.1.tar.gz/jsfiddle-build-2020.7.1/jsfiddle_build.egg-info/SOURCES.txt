@@ -1,0 +1,9 @@
+requirements.txt
+setup.py
+jsfiddle_build/__init__.py
+jsfiddle_build/__main__.py
+jsfiddle_build.egg-info/PKG-INFO
+jsfiddle_build.egg-info/SOURCES.txt
+jsfiddle_build.egg-info/dependency_links.txt
+jsfiddle_build.egg-info/requires.txt
+jsfiddle_build.egg-info/top_level.txt
