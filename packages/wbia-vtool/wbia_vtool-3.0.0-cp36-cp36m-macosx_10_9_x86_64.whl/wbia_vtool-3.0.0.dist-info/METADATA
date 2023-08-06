@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: wbia-vtool
+Version: 3.0.0
+Summary: Vtool - Image Tools for Wildbook IA
+Home-page: https://github.com/WildbookOrg/wbia-vtool
+Author: Avi Weinstock, Chuck Stewart, Hendrik Weideman, Jason Parham, Jon Crall, Zackary Rutfield, WildMe Developers
+Author-email: dev@wildme.org
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 6 - Mature
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Unix
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Description-Content-Type: text/x-rst
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: Pillow
+Requires-Dist: scikit-image
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: six
+Requires-Dist: statsmodels
+Requires-Dist: ubelt
+Requires-Dist: wbia-pyflann
+Requires-Dist: wbia-pyhesaff
+Requires-Dist: wbia-utool
+Provides-Extra: all
+Requires-Dist: brunette ; extra == 'all'
+Requires-Dist: cmake ; extra == 'all'
+Requires-Dist: ninja ; extra == 'all'
+Requires-Dist: scikit-build ; extra == 'all'
+Requires-Dist: setuptools ; extra == 'all'
+Requires-Dist: wheel ; extra == 'all'
+Requires-Dist: networkx ; extra == 'all'
+Requires-Dist: numpy ; extra == 'all'
+Requires-Dist: opencv-python ; extra == 'all'
+Requires-Dist: Pillow ; extra == 'all'
+Requires-Dist: scikit-image ; extra == 'all'
+Requires-Dist: scikit-learn ; extra == 'all'
+Requires-Dist: scipy ; extra == 'all'
+Requires-Dist: six ; extra == 'all'
+Requires-Dist: statsmodels ; extra == 'all'
+Requires-Dist: ubelt ; extra == 'all'
+Requires-Dist: wbia-pyflann ; extra == 'all'
+Requires-Dist: wbia-pyhesaff ; extra == 'all'
+Requires-Dist: wbia-utool ; extra == 'all'
+Requires-Dist: codecov ; extra == 'all'
+Requires-Dist: coverage ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: pytest-cov ; extra == 'all'
+Requires-Dist: xdoctest ; extra == 'all'
+Provides-Extra: build
+Requires-Dist: brunette ; extra == 'build'
+Requires-Dist: cmake ; extra == 'build'
+Requires-Dist: ninja ; extra == 'build'
+Requires-Dist: scikit-build ; extra == 'build'
+Requires-Dist: setuptools ; extra == 'build'
+Requires-Dist: wheel ; extra == 'build'
+Provides-Extra: runtime
+Requires-Dist: networkx ; extra == 'runtime'
+Requires-Dist: numpy ; extra == 'runtime'
+Requires-Dist: opencv-python ; extra == 'runtime'
+Requires-Dist: Pillow ; extra == 'runtime'
+Requires-Dist: scikit-image ; extra == 'runtime'
+Requires-Dist: scikit-learn ; extra == 'runtime'
+Requires-Dist: scipy ; extra == 'runtime'
+Requires-Dist: six ; extra == 'runtime'
+Requires-Dist: statsmodels ; extra == 'runtime'
+Requires-Dist: ubelt ; extra == 'runtime'
+Requires-Dist: wbia-pyflann ; extra == 'runtime'
+Requires-Dist: wbia-pyhesaff ; extra == 'runtime'
+Requires-Dist: wbia-utool ; extra == 'runtime'
+Provides-Extra: tests
+Requires-Dist: codecov ; extra == 'tests'
+Requires-Dist: coverage ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: xdoctest ; extra == 'tests'
+
+===================
+Wildbook IA - vtool
+===================
+
+|Pypi| |ReadTheDocs|
+
+Vision Tools - tools for computer vision. Part of the WildMe / Wildbook IA Project.
+
+
+Repos relevant to the ibeis project:
+
+* https://github.com/WildbookOrg/wbia-vtool
+
+* https://github.com/WildbookOrg/wbia-pyflann
+
+* https://github.com/WildbookOrg/wbia-pyhesaff
+
+* https://github.com/WildbookOrg/wbia-utool
+
+* https://github.com/WildbookOrg/wildbook-ia
+
+
+.. |Pypi| image:: https://img.shields.io/pypi/v/vtool.svg
+   :target: https://pypi.python.org/pypi/vtool
+.. |ReadTheDocs| image:: https://readthedocs.org/projects/wbia-vtool/badge/?version=latest
+    :target: http://wbia-vtool.readthedocs.io/en/latest/
+
+
