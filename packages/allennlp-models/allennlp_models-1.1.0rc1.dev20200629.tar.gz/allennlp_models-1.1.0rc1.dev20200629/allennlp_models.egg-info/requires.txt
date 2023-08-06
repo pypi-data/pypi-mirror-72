@@ -1,0 +1,5 @@
+conllu==3.0
+word2number>=1.1
+py-rouge==1.1
+nltk
+allennlp==1.1.0rc1.dev20200629
