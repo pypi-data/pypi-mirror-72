@@ -1,0 +1,2 @@
+def printer():
+    return "Printer"
