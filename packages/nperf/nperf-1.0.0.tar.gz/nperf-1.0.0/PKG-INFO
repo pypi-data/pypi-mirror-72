@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: nperf
+Version: 1.0.0
+Summary: Python network performance tools
+Home-page: https://github.com/jncraton/nperf
+Author: Jon Craton
+Author-email: jon@joncraton.com
+License: UNKNOWN
+Description: nperf
+        =====
+        
+        [![Build Status](https://travis-ci.org/jncraton/nperf.svg?branch=master)](https://travis-ci.org/jncraton/nperf)
+        
+        Simple network performance monitoring tools
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown

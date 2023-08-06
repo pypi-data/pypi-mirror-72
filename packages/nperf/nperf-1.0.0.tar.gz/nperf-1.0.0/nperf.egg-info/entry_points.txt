@@ -1,0 +1,3 @@
+[console_scripts]
+nperf = nperf.__main__:main
+

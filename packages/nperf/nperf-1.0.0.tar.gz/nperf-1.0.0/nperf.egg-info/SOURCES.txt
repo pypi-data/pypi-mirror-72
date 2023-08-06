@@ -1,0 +1,10 @@
+setup.py
+nperf/__init__.py
+nperf/__main__.py
+nperf/shell.py
+nperf/web.py
+nperf.egg-info/PKG-INFO
+nperf.egg-info/SOURCES.txt
+nperf.egg-info/dependency_links.txt
+nperf.egg-info/entry_points.txt
+nperf.egg-info/top_level.txt
