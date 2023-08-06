@@ -1,0 +1,3 @@
+[console_scripts]
+y2j = y2j.__main__:main
+
