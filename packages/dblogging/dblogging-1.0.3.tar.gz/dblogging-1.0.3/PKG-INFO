@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: dblogging
+Version: 1.0.3
+Summary: Persist logs With SQLite. Easy to query logs.
+Home-page: https://gitlab.com/tspens/dblogging
+Author: Tyler Spens
+Author-email: mrtspens@gmail.com
+License: UNKNOWN
+Download-URL: https://gitlab.com/tspens/dblogging/-/archive/V1.0.2/dblogging-V1.0.2.zip
+Description: Check out the documentation here:
+        https://gitlab.com/tspens/dblogging
+Keywords: logging,persistent,database,db
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
