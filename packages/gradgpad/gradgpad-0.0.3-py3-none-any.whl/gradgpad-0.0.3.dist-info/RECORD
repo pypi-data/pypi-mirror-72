@@ -1,0 +1,12 @@
+gradgpad/VERSION,sha256=TKwna27F1Mcc2Wyi57di6xJUOa28hyHeVhMQbRNF_i0,6
+gradgpad/__init__.py,sha256=QVEXLkmipoALd5e6DXWsxJsH66RryHEvlaOO1ERlRXU,62
+gradgpad/public_api.py,sha256=iGRIQUcUIsTVMLg2ACc-GvrG-BFJpnrDz1ZGlScBiOs,145
+gradgpad/example/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gradgpad/example/dummy_class.py,sha256=pTySdqk-e-ba-SXoHDiwGTV4VkxM-REUfZm4xwRtXts,582
+gradgpad/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gradgpad/tools/open_result_json.py,sha256=3EU9uqgeXxKbZLhBCcDx1pjWBqt5AbI8cqQwDSOedis,424
+gradgpad-0.0.3.dist-info/LICENSE,sha256=gOCzXpTVW56uvL8xZec5hd0tjXg1GnDlvvnltGTuNvM,1074
+gradgpad-0.0.3.dist-info/METADATA,sha256=yDOenvC2m_gnLmuhTCP0g7ZgHkCS0aaHkTFHpoFCPL4,1648
+gradgpad-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gradgpad-0.0.3.dist-info/top_level.txt,sha256=GcWe446NCXMzHHMmmPQp5am3J5u-d-TM5oSzv-vqEnk,9
+gradgpad-0.0.3.dist-info/RECORD,,
