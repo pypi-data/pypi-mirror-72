@@ -1,0 +1,16 @@
+ocd/__init__.py,sha256=pqPTkG-7HnpkBH6E3guJSTMoN32ce_jr-QByig62_rY,25
+ocd/abc.py,sha256=oa3HQun7StXcIMM18caYT8qXkoE0jHeT7wVObHfHnG0,1632
+ocd/defaults.py,sha256=fQ8x8HC5xtxTZhjz0tvE3lG6lxDmnPOEHPGaJBS-rME,1953
+ocd/deprecate.py,sha256=kkJU9g73GO0x1za9YP079FwcjT7E7lEkKEB7mOdE6kg,7387
+ocd/mixins.py,sha256=NKp7-hwOZtpmyP-GXLAcFS4BHlBq2-x4ioeWGBuQc78,5484
+ocd/prop.py,sha256=uo-V2SUD-pZfnDaVfhJ9LyLZIHyjPT4Bo28yHyIDKIk,22854
+ocd/types.py,sha256=j9M-WxPooi6C7tK5nQs1ZWFDKhs6plT9Lcf4wme1ydY,2091
+ocd/unro.py,sha256=AMPuTI0mlDcX1N73vc6gQWUWH3KpHsc7xmN7Kqvy0nE,11018
+ocd/utils.py,sha256=geOQR8DLbOhkAwjYL3qO34olMYph-xbCw6bKWIjQkdA,1251
+ocd/version.py,sha256=KzOgjIRJAYCwR5ge5xQGGbQoIEo3IdusZUf9uEAJHwA,61
+ocd/warnings.py,sha256=ABnYTMoaXOE3fXkpwUs8CfqXMERBvOWBe0qtjobbVXM,761
+ocd-1.0.1.dist-info/LICENSE,sha256=VWsTvZmFtlW7LLhvk9XpQdjLPCaZ4GMvYv26vEg3BwQ,1703
+ocd-1.0.1.dist-info/METADATA,sha256=lKkzmZbIf1h0dgTlOr7p9hRGQweKIiOLF3V43p9OyJQ,7515
+ocd-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ocd-1.0.1.dist-info/top_level.txt,sha256=LbUpdwKO2_z1Q3BXI29Bc4bN68k3uLOSLOvsazGt0hI,4
+ocd-1.0.1.dist-info/RECORD,,
