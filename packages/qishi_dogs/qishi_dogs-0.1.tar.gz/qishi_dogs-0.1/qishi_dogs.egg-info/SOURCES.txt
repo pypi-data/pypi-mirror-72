@@ -1,0 +1,9 @@
+README.rst
+setup.py
+dogs/__init__.py
+dogs/hello.py
+qishi_dogs.egg-info/PKG-INFO
+qishi_dogs.egg-info/SOURCES.txt
+qishi_dogs.egg-info/dependency_links.txt
+qishi_dogs.egg-info/not-zip-safe
+qishi_dogs.egg-info/top_level.txt
