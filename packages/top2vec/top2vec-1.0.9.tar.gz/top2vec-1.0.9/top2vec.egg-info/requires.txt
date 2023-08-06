@@ -1,0 +1,6 @@
+numpy
+pandas
+gensim
+pynndescent>=0.4umap-learn
+hdbscan
+wordcloud
