@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "sprite-pack"
+version = "0.2.0"
+description = ""
+authors = ["Gregory C. Oakes <gregoryoakes@fastmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+rectangle-packer = "^1.1.0"
+pillow = "^7.1.2"
+coloredlogs = "^14.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+sprite-pack = "sprite_pack:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

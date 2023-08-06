@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: sprite-pack
+Version: 0.2.0
+Summary: 
+Author: Gregory C. Oakes
+Author-email: gregoryoakes@fastmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: coloredlogs (>=14.0,<15.0)
+Requires-Dist: pillow (>=7.1.2,<8.0.0)
+Requires-Dist: rectangle-packer (>=1.1.0,<2.0.0)
