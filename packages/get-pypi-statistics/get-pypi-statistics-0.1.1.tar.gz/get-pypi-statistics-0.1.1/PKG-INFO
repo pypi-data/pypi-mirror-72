@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: get-pypi-statistics
+Version: 0.1.1
+Summary: Get statistics of pypi.org. How many projects, how many releases, how many files and how many users?
+Home-page: https://github.com/zencore-cn/zencore-issues
+Author: zencore
+Author-email: dobetter@zencore.cn
+License: MIT
+Description: # get-pypi-statistics
+        
+        Get statistics of pypi.org. How many projects, how many releases, how many files and how many users?
+        
+        ## Install
+        
+        ```shell
+        pip install get-pypi-statistics
+        ```
+        
+        ## Usage
+        
+        ```shell
+        C:\Code\get-pypi-statistics>get-pypi-statistics
+        Usage: get-pypi-statistics [OPTIONS] COMMAND [ARGS]...
+        
+          Get statistics of pypi.org. How many projects, how many releases, how many
+          files and how many users?
+        
+        Options:
+          --help  Show this message and exit.
+        
+        Commands:
+          all       Get how many projects, release, files and users on pypi.org.
+          files     Get how many files on pypi.org.
+          projects  Get how many projects on pypi.org.
+          releases  Get how many releases on pypi.org.
+          users     Get how many users on pypi.org.
+        ```
+        
+        ## Example
+        
+        ```shell
+        C:\Code\get-pypi-statistics>get-pypi-statistics all
+             207114 projects
+            1563853 releases
+            2338758 files
+             388982 users
+        
+        
+        C:\Code\get-pypi-statistics>get-pypi-statistics projects
+        207114
+        
+        C:\Code\get-pypi-statistics>get-pypi-statistics releases
+        1563854
+        
+        C:\Code\get-pypi-statistics>get-pypi-statistics files
+        2338760
+        
+        C:\Code\get-pypi-statistics>get-pypi-statistics users
+        388982
+        ```
+        
+        ## Bug Reports
+        
+        Please report any issues at https://github.com/zencore-cn/zencore-issues.
+        
+        ## Releases
+        
+        ### v0.1.1 2020/06/28
+        
+        - Fix problem in extracting real data. Thanks to @Bob Hancock for reporting the issue.
+        
+        ### v0.1.0 2019/12/01
+        
+        - First release
+        - Get statistics of projects, releases, files and users.
+        
+Keywords: get-pypi-statistics
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires: requests
+Requires: click
+Description-Content-Type: text/markdown

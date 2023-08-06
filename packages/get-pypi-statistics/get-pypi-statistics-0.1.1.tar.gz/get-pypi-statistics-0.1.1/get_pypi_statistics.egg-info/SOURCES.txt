@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+get_pypi_statistics.py
+requirements.txt
+setup.py
+get_pypi_statistics.egg-info/PKG-INFO
+get_pypi_statistics.egg-info/SOURCES.txt
+get_pypi_statistics.egg-info/dependency_links.txt
+get_pypi_statistics.egg-info/entry_points.txt
+get_pypi_statistics.egg-info/requires.txt
+get_pypi_statistics.egg-info/top_level.txt

@@ -1,0 +1,4 @@
+[console_scripts]
+get-pypi-statistics = get_pypi_statistics:statistics
+get-pypi-stats = get_pypi_statistics:statistics
+
