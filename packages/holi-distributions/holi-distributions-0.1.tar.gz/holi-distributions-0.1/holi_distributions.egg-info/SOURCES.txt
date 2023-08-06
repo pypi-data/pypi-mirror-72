@@ -1,0 +1,10 @@
+setup.py
+holi-distributions/Binomialdistribution.py
+holi-distributions/Gaussiandistribution.py
+holi-distributions/Generaldistribution.py
+holi-distributions/__init__.py
+holi_distributions.egg-info/PKG-INFO
+holi_distributions.egg-info/SOURCES.txt
+holi_distributions.egg-info/dependency_links.txt
+holi_distributions.egg-info/not-zip-safe
+holi_distributions.egg-info/top_level.txt
