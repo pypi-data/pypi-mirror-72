@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: iAnnotateSV
+Version: 1.2.0
+Summary: The module helps to annotate structural variants called using NGS on human.
+Home-page: https://github.com/rhshah/iAnnotateSV
+Author: Ronak H Shah
+Author-email: rons.shah@gmail.com
+License: Apache Software License
+Download-URL: https://github.com/rhshah/iAnnotateSV/tarball/1.2.0
+Description: See Readme
+Keywords: structural,variants,NGS,MSK-IMPACT,MSK-ACCESS
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Development Status :: 5 - Production/Stable
