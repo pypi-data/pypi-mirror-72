@@ -1,0 +1,12 @@
+requirements.txt
+setup.py
+mac_dock.egg-info/PKG-INFO
+mac_dock.egg-info/SOURCES.txt
+mac_dock.egg-info/dependency_links.txt
+mac_dock.egg-info/top_level.txt
+scripts/dock
+scripts/dock-add-app
+scripts/dock-add-folder
+scripts/dock-apps
+scripts/dock-folders
+scripts/dock-rm
