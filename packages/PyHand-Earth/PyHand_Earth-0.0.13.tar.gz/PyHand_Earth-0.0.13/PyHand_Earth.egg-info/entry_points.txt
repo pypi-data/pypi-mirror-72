@@ -1,0 +1,3 @@
+[console_scripts]
+start-pyhand = PyHand_Earth.main_qt.py:main
+
