@@ -1,0 +1,8 @@
+Click>=7.1.2
+PyChromecast>=7.0.0
+ifaddr>=0.1.7
+requests>=2.23.0
+youtube-dl>=2020.6.6
+
+[:python_version < "3.5"]
+typing
