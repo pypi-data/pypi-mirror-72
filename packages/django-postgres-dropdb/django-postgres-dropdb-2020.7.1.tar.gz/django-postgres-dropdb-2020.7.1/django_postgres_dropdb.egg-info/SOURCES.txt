@@ -1,0 +1,13 @@
+requirements.txt
+setup.py
+django_postgres_dropdb/__init__.py
+django_postgres_dropdb/__main__.py
+django_postgres_dropdb/apps.py
+django_postgres_dropdb.egg-info/PKG-INFO
+django_postgres_dropdb.egg-info/SOURCES.txt
+django_postgres_dropdb.egg-info/dependency_links.txt
+django_postgres_dropdb.egg-info/requires.txt
+django_postgres_dropdb.egg-info/top_level.txt
+django_postgres_dropdb/management/__init__.py
+django_postgres_dropdb/management/commands/__init__.py
+django_postgres_dropdb/management/commands/dropdb.py
