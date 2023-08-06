@@ -1,0 +1,17 @@
+README.md
+setup.py
+cgm/__init__.py
+cgm/core.py
+cgm/sample_graphs.py
+cgm.egg-info/PKG-INFO
+cgm.egg-info/SOURCES.txt
+cgm.egg-info/dependency_links.txt
+cgm.egg-info/requires.txt
+cgm.egg-info/top_level.txt
+cgm/inference/__init__.py
+cgm/inference/belief_propagation.py
+cgm/inference/variable_elimination.py
+tests/__init__.py
+tests/context.py
+tests/core_tests.py
+tests/inference_tests.py
