@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pcdm
+Version: 0.0.1
+Summary: Property Casualty Data Model Standard
+Home-page: https://github.com/genedan/pcdm
+Author: Gene Dan
+Author-email: genedan@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# PCDM
+[![PyPI version](https://badge.fury.io/py/pcdm.svg)](https://badge.fury.io/py/pcdm)
+
+Property Casualty Data Model
+
+SQLAlchemy implementation of [OMG Property Casualty Data Model](https://www.omg.org/spec/PC/About-PC/)
+
+![](docs/pcdmcdm.png)
+
+### Installation
+
+Run pip install:
+
+```
+pip install pcdm
+```
+
+
