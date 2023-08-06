@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: graphkke
+Version: 0.1.1
+Summary: Library for the analysis of graph-structured and tree-structured data
+Home-page: https://github.com/KaterynaMelnyk/graphKKE.git
+Author: Kateryna Melnyk
+Author-email: kateryna.melnyk96@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.7
