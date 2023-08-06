@@ -1,0 +1,26 @@
+sudo: false
+dist: xenial
+
+cache:
+  directories:
+    - ~/.cache.pip
+
+language: python
+
+python:
+  - 3.8
+  - 3.7
+  - 3.6
+  - 3.5
+  - pypy3.5-6.0.0
+
+install:
+  - pip install -e .\[dev\]
+
+script:
+  - flake8 click_hotoffthehamster_alias examples tests setup.py -v --show-source
+  - py.test tests --cov click_hotoffthehamster_alias --cov-report term-missing
+
+after_success:
+  - coveralls
+
