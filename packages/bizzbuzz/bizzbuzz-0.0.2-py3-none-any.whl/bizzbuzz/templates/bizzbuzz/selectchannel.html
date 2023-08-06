@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    function setActiveLink(setActive){
+    if ($("a").hasClass('active'))
+        $("a").removeClass('active');
+    if (setActive)
+        $("#"+setActive).addClass('active');
+}
+
+$(function() {
+    $("a").click(function() {
+        setActiveLink(this.id);
+    });
+});
+</script>
+<div class="navbar">
+<span class="mainHeading"><a href="/bizzbuzz/home">Bizzbuzz</a> </span>
+    <span class="subHeading"><a href="/bizzbuzz/selectchannel">Manage Company Subscriptions</a></span>
+    <span class="subHeading"><a href="/bizzbuzz/login">Logout</a></span>
+    <span class="subHeading" style="margin-left: 800px; color: white; text-transform:capitalize; ">Welcome <b>{{ name }}</b>!</span>
+</div>
+<div class="container" >
+    <div class="feed" style="padding-left: 150px;padding-right: 68px;padding-bottom: 150px;">
+        <span class="loginHeading" style="margin-left: 370px; margin-bottom: 7px">Manage Company Subscriptions</span>
+        <span class="loginHeading" style="margin-left: 440px; margin-bottom: 5px; font-size: 16px;padding-top: 0px;">You Are Currently Subscribed To: </span>
+        {% for field in preferred %}
+        <span class="loginHeading" style="margin-left: 510px;font-size: 16px;padding-top: 0px;">{{ field }} </span>
+        {% endfor %}
+
+        <span class="loginHeading" style="margin-left: 420px; margin-top: 7px; margin-bottom: 5px; font-size: 16px;padding-top: 0px;">You Are Currently NOT Subscribed To: </span>
+        {% for field in not_preferred %}
+        <span class="loginHeading" style="margin-left: 510px;font-size: 16px;padding-top: 0px;">{{ field }} </span>
+        {% endfor %}
+        <h4 style="text-align:center">***To see your updated preferences after submitting, please click "Manage Company Subscriptions" again.  Please do NOT refresh***</h4>
+<div class="loginContainer">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <span class="subHeading" style="padding-left: 85px;padding-top: 15px;font-size: 20px;">Microsoft</span>
+  <input type="checkbox" value="Microsoft" name="microsoft" style="margin-left: -85px;margin-top: 22px;">
+            </div>
+        <div class="row">
+            <span class="subHeading" style="padding-left: 85px;padding-top: 15px;font-size: 20px;">Apple</span>
+  <input type="checkbox" value="Apple" name="apple" style="margin-left: -53px;margin-top: 22px;">
+            </div>
+        <div class="row">
+            <span class="subHeading" style="padding-left: 85px;padding-top: 15px;font-size: 20px;">Google</span>
+  <input type="checkbox" value="Google" name="google" style="margin-left: -63px;margin-top: 22px;">
+            </div>
+        <div class="row">
+            <span class="subHeading" style="padding-left: 85px;padding-top: 15px;font-size: 20px;">Facebook</span>
+  <input type="checkbox" value="Facebook" name="facebook" style="margin-left: -85px;margin-top: 22px;">
+            </div>
+        <input type="submit" name="" value="Save" class="logibtn"><br>
+    </form>
+</div>
+</div>
+    </div>
+
+</body>
+</html>

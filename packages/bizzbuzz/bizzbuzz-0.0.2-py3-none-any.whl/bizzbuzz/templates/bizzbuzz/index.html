@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    function setActiveLink(setActive){
+    if ($("a").hasClass('active'))
+        $("a").removeClass('active');
+    if (setActive)
+        $("#"+setActive).addClass('active');
+}
+
+$(function() {
+    $("a").click(function() {
+        setActiveLink(this.id);
+    });
+});
+</script>
+<div class="navbar">
+<span class="mainHeading"><a href="/bizzbuzz">Bizzbuzz</a> </span>
+{#    <span class="subHeading"><a href="/bizzbuzz/searchchannel"> Search Channel</a></span>#}
+    <span class="subHeading"><a href="/bizzbuzz/login"> Login</a></span>
+    <span class="subHeading"><a href="/bizzbuzz/signup"> Sign Up</a></span>
+</div>
+<div class="container">
+<div class="sidebar">
+{#    <form method="post" action="">#}
+{#        <input type="search" placeholder="Filter Feeds" class="searchbox"></form>#}
+{#    <a href="#" id="link1"> <img src="{% static "images/heart.png" %}" class="favorite"></a>#}
+    <a href="#" id="link2"> <img src="{% static "images/channel1.png" %}" class="channel"></a>
+    <a href="#" id="link3"> <img src="{% static "images/channel2.png" %}" class="channel"></a>
+    <a href="#" id="link4"> <img src="{% static "images/channel3.png" %}" class="channel"></a>
+    <a href="#" id="link5"> <img src="{% static "images/channel4.png" %}" class="channel" style="height: 50px;"></a>
+
+</div>
+    <div class="feed">
+    <div class="favoritebar">
+{#        <span class="subHeading"><a href="">Add to Favorites</a> </span>#}
+{#        <span class="subHeading"><a href="">Remove from Favorites</a> </span>#}
+    </div>
+        <div class="timeheading">
+            <h1>Today</h1>
+        </div>
+        <div class="news">
+            <a href="">
+<div class="newsCard">
+<button class="number" disabled>1</button>
+    <div class="textcontainer">
+        <span class="feedtext">Welcome to Bizz Buzz</span>
+        <span class="author">By BizzBuzzers</span>
+        </div>
+</div></a>
+            <a href="">
+<div class="newsCard">
+<button class="number" disabled>2</button>
+    <div class="textcontainer">
+        <span class="feedtext">Welcome to Bizz Buzz</span>
+        <span class="author">By BizzBuzzers</span>
+        </div>
+</div></a>
+            <a href="">
+<div class="newsCard">
+<button class="number" disabled>3</button>
+    <div class="textcontainer">
+        <span class="feedtext">Welcome to Bizz Buzz</span>
+        <span class="author">By BizzBuzzers</span>
+        </div>
+</div></a>
+            <a href="">
+<div class="newsCard">
+<button class="number" disabled>4</button>
+    <div class="textcontainer">
+        <span class="feedtext">Welcome to Bizz Buzz</span>
+        <span class="author">By BizzBuzzers</span>
+        </div>
+</div></a>
+        </div>
+        <div class="timeheading">
+            <h1>This Week</h1>
+        </div>
+              <div class="news">
+            <a href="">
+<div class="newsCard">
+<button class="number" disabled>1</button>
+    <div class="textcontainer">
+        <span class="feedtext">Welcome to Bizz Buzz</span>
+        <span class="author">By BizzBuzzers</span>
+        </div>
+</div></a>
+            <a href="">
+<div class="newsCard">
+<button class="number" disabled>2</button>
+    <div class="textcontainer">
+        <span class="feedtext">Welcome to Bizz Buzz</span>
+        <span class="author">By BizzBuzzers</span>
+        </div>
+</div></a>
+            <a href="">
+<div class="newsCard">
+<button class="number" disabled>3</button>
+    <div class="textcontainer">
+       <span class="feedtext">Welcome to Bizz Buzz</span>
+        <span class="author">By BizzBuzzers</span>
+        </div>
+</div></a>
+            <a href="">
+<div class="newsCard">
+<button class="number" disabled>4</button>
+    <div class="textcontainer">
+      <span class="feedtext">Welcome to Bizz Buzz</span>
+        <span class="author">By BizzBuzzers</span>
+
+        </div>
+</div></a>
+        </div>
+</div>
+    </div>
+
+</body>
+</html>
