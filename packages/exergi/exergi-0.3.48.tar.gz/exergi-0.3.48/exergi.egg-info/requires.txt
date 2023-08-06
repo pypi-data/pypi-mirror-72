@@ -1,0 +1,6 @@
+pandas>=1.0.5
+boto3
+tables
+numpy>=1.19.0
+sklearn
+psycopg2-binary
