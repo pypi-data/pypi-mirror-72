@@ -1,0 +1,3 @@
+[console_scripts]
+split_qr_exam = split_qr_exam.main:main
+
