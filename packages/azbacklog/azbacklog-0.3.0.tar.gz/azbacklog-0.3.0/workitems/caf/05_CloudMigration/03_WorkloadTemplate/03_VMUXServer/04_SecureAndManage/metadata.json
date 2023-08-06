@@ -1,0 +1,6 @@
+{
+    "title": "Secure and Manage",
+    "description": "Ideally governance, security, and operations have each been factored into the operating model for your cloud environments. If they have not, take a moment to validate security and management constraints for this asset.\nGuide: https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/migrate/azure-migration-guide/secure-and-manage\nConsiderations: https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/migrate/migration-considerations/secure-and-manage/",
+    "tags": ["Workload Template"],
+    "roles": []
+}

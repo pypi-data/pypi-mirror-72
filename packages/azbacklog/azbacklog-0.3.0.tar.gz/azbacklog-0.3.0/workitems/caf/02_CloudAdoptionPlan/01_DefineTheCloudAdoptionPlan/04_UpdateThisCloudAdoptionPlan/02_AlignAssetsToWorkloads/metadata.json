@@ -1,0 +1,6 @@
+{
+    "title": "Align assets to workloads",
+    "description": "Ensure that all [assets are aligned](https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/plan/assets) to at least one workload.",
+    "tags": ["Plan"],
+    "roles": []
+}

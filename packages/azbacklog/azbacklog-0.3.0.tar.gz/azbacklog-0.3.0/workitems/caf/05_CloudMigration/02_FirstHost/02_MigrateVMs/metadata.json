@@ -1,0 +1,6 @@
+{
+    "title": "Migrate VMs",
+    "description": "Migrate a select group of VMs from the on-premises host to a host on Azure",
+    "tags": ["First Host"],
+    "roles": []
+}

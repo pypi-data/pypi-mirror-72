@@ -1,0 +1,6 @@
+{
+    "title": "Migrate",
+    "description": "Leverage the define migration solution to automate migration of the asset to the cloud. This step may be best executed as a single task for all assets associated with this workload.\nGuide https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/migrate/azure-migration-guide/migrate\nConsiderations: https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/migrate/migration-considerations/migrate/",
+    "tags": ["Workload Template"],
+    "roles": []
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Scale Test",
+    "description": "Execute the test at scale to test asset performance under load.",
+    "tags": ["Workload Template"],
+    "roles": []
+}

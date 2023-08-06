@@ -1,0 +1,6 @@
+{
+    "title": "Assess",
+    "description": "Evaluate readiness, architecture, cost, and appropriate migration tooling\nGuide: https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/migrate/azure-migration-guide/assess\nConsiderations: https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/migrate/migration-considerations/assess/\n    Decision Tree: https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/decision-guides/migrate-decision-guide/",
+    "tags": ["Workload Template"],
+    "roles": []
+}
