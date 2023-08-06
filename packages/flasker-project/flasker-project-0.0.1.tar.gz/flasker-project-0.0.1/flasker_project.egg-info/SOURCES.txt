@@ -1,0 +1,10 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+app/__init__.py
+app/main.py
+flasker_project.egg-info/PKG-INFO
+flasker_project.egg-info/SOURCES.txt
+flasker_project.egg-info/dependency_links.txt
+flasker_project.egg-info/top_level.txt
