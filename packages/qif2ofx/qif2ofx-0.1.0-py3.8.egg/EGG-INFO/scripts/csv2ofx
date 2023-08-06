@@ -1,0 +1,5 @@
+#!/usr/bin/python
+
+from qif2ofx.csv_transactions import main
+
+main()

@@ -1,0 +1,4 @@
+#!python
+from qif2ofx import qif2ofx
+
+qif2ofx.main()
