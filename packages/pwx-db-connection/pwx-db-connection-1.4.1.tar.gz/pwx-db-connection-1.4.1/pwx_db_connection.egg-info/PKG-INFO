@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pwx-db-connection
+Version: 1.4.1
+Summary: Connection to PostgreSQL and Redis - PWX
+Home-page: UNKNOWN
+Author: Guilherme Rosa Koerich
+Author-email: guilherme@pwx.cloud
+License: UNKNOWN
+Description: ## Rabbit PWX Connection Data Base
+        Project for PWX connection to PostgreSQL and Redis
+        
+Keywords: connection redis postgres pwx
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >3.4
+Description-Content-Type: text/markdown
