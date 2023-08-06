@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+import_env_file/__init__.py
+import_env_file.egg-info/PKG-INFO
+import_env_file.egg-info/SOURCES.txt
+import_env_file.egg-info/dependency_links.txt
+import_env_file.egg-info/top_level.txt
