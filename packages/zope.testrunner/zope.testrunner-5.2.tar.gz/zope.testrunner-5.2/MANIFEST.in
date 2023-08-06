@@ -1,0 +1,16 @@
+include *.rst
+include *.py
+include buildout.cfg
+include tox.ini
+include *.yml
+include .coveragerc
+include *.txt
+
+recursive-include src *.py
+recursive-include src *.rst
+
+recursive-include docs *.rst
+recursive-include docs *.py
+
+# added by check_manifest.py
+include *.md
