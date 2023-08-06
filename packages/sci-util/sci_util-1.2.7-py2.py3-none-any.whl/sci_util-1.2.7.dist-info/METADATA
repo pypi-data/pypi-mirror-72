@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: sci-util
+Version: 1.2.7
+Summary: Sci utils for science calculation.
+Home-page: https://github.com/iViolinSolo/python-util
+Author: ViolinSolo
+Author-email: i.violinsolo@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (>=0.23.4)
+Requires-Dist: numpy
+
+
+# python-util
+python util code snippets
+
+Some useful python utils
+
+
