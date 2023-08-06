@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: co2mini
+Version: 0.1.0
+Summary: Monitor CO2 levels with Prometheus and/or HomeKit
+Home-page: https://github.com/jerr0328/co2-mini
+Author: Jeremy Mayeres
+Author-email: jeremy@jerr.dev
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: prometheus-client
+Provides-Extra: homekit
+Requires-Dist: HAP-python[qrcode] ; extra == 'homekit'
+
+# CO2 monitoring with Prometheus
+
+This reads from the CO2 Meter and makes it available as a Prometheus service.
+The core logic comes from [this hackaday article](https://hackaday.io/project/5301-reverse-engineering-a-low-cost-usb-co-monitor/log/17909-all-your-base-are-belong-to-us).
+
+## Setup
+
+1. Install Python 3
+2. Install the monitor with `python3 -m pip install co2mini[homekit]` (remove `[homekit]` if you don't use HomeKit)
+3. Set up CO2 udev rules by copying `90-co2mini.rules` to `/etc/udev/rules.d/90-co2mini.rules`
+4. Set up the service by copying `co2mini.service` to `/lib/systemd/system/co2mini.service`
+5. Run `systemctl enable co2mini.service`
+
+
