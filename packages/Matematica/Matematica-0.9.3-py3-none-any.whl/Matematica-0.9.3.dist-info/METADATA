@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: Matematica
+Version: 0.9.3
+Summary: A simple, and powerful, math library
+Home-page: https://github.com/CaioVieiraF/MathLib
+Author: Caio Vieira
+Author-email: caiovieiraproficional@protonmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# MathLib
+A simple python math library
+
+With MathLib, it's easy to operate with multiple numbers:
+
+![example image](https://github.com/CaioVieiraF/MathLib/blob/master/media/Peek%202020-06-30%2013-15.gif)
+
+
+### to install it, use the command:
+
+`pip install Matematica`
+
+### usage:
+`import Matematica as mat`
+
+### docs:
+The documentation is [Here](https://matematica-python.readthedocs.io/en/latest/)
+
+
