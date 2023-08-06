@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: dicey
+Version: 2.0.6
+Summary: UNKNOWN
+Home-page: https://github.com/gnullbyte/dicey
+Author: Chase Franklin
+Author-email: gnullbyte@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown
+Requires-Dist: lark-parser
+Requires-Dist: docopt
+
+# Dicey
+
+=======
+version 2.0.6
+
+
+A python package for evaluating dice rolls.
+
+## Description
+Dicey parses strings of dice rolls of the form:
+```
+'1d20 + 2 + 2d4 - 1d8 + 1 - min {3}'
+```
+
+Where `min` (or `max`) holds the value of the highest or lowest single die rolled and `{3}` is how many times to repeat the expression. `[min|max]` and `{num}` are optional.
+Dicey then rolls the specified dice, and computes the total. Valid arithmentic operators are `+ - * / ()`. Dicey will always translate individual die expressions to a randomized result
+before applying arithmetic operators.
+
+## Installation
+pip install dicey
+
+## Usage
+### Command Line
+```
+Usage:
+  dicey
+  dicey <expression>
+
+Options:
+  -h --help  show this screen.
+```
+
+### As a python package
+```python
+from dicey.dieparser import DieParser
+
+d = DieParser()
+d.parse('1d20 + 1d4 + 2')
+result = d.__str__()
+print(result)
+
+# or of course simply:
+print(d)
+```
+
+
