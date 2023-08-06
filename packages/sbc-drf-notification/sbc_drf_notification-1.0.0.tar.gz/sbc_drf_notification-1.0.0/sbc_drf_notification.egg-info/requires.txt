@@ -1,0 +1,3 @@
+sbc_drf<2,>1
+psycopg2-binary
+djrill==2.1.0
