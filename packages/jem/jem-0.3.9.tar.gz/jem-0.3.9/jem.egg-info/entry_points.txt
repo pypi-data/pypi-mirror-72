@@ -1,0 +1,7 @@
+[console_scripts]
+coil_correction = jem.cli:coil_correction
+compute_features = jem.cli:compute_features
+contrast_normalization = jem.cli:contrast_normalization
+laplacian_pyramid = jem.cli:compute_laplacian_pyramid
+riff = jem.cli:riff
+
