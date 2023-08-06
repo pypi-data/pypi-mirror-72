@@ -1,0 +1,15 @@
+MANIFEST.in
+README
+setup.py
+thorskyclasses_py2.ipynb
+thorskyclasses_py3.ipynb
+bin/pyskycalc3.py
+thorsky/__init__.py
+thorsky/cartesian_bright.dat
+thorsky/observatories_rev.dat
+thorsky/thorskyclasses3.py
+thorsky/thorskyutil.py
+thorsky.egg-info/PKG-INFO
+thorsky.egg-info/SOURCES.txt
+thorsky.egg-info/dependency_links.txt
+thorsky.egg-info/top_level.txt
