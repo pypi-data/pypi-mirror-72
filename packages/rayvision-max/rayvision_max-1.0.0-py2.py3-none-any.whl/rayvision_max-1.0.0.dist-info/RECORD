@@ -1,0 +1,16 @@
+rayvision_max/__init__.py,sha256=TVlb2AGCNKP0jrv3p4ZLZCPKp68hTVMFi00DTdi6QAo,49
+rayvision_max/analyse_max.py,sha256=6DaXVAxCBKZY8XORMmpTAfsNlIplv6jqM2MFuIk7NFk,6088
+rayvision_max/tests/__init__.py,sha256=uZhZBb-KXarVfE_yBMuSgzBei5mrGMuK05AN-PELmYI,48
+rayvision_max/tests/conftest.py,sha256=hb4W-hVO71Is9i5yhvJCa412OT1T3_GndG5GD5WSfw4,787
+rayvision_max/tests/test_analyse_max.py,sha256=wtKpjbed0_VK22Bm_azjOdYoD-q1295uf6qUcDAf8nI,437
+rayvision_max/tool/7-zip.dll,sha256=1eOyoZjo3755PIiF13UcH214YKqxFuKUWxFUu1rums0,84104
+rayvision_max/tool/7z.dll,sha256=dzQcJwsIxGpy378bavHeONTquStvBsX4RAVRsFZpAFQ,1512072
+rayvision_max/tool/7z.exe,sha256=41wgaee963Rr63EORGEFICybyHW8TsfxihE4s_Xu3bw,427144
+rayvision_max/tool/MaxInfo.exe,sha256=lAWpKUeU3mRsQrpeSSWGklsYQi0h2CTAYX97yA7VjtM,135168
+rayvision_max/tool/analysea.mse,sha256=1f-E7at4sG925yJ5Iivrpy0R2HdgLC3fXAFpvFAuCTg,77335
+rayvision_max/tool/analysemax.exe,sha256=hs8FpYC7bpPUX6z6F0RPOzqHYUx1SEUdfrbrflUhX0k,5581281
+rayvision_max/tool/analyseu.mse,sha256=OsokOFkTGk7_Elqcvzfby31JmkSMhMr3TyKhKQ_hht8,77337
+rayvision_max-1.0.0.dist-info/METADATA,sha256=O18q9bMqTf4TOpJiZW6JEuaDtzPyR6raGVRIJocezGU,543
+rayvision_max-1.0.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+rayvision_max-1.0.0.dist-info/top_level.txt,sha256=iE2EyCGdXG3DmzBJzx9t_6N3N-lEE-Up3QSu44ocvlQ,14
+rayvision_max-1.0.0.dist-info/RECORD,,
