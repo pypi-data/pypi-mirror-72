@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: ab-decrypt
+Version: 1.0.0
+Summary: Decryptor for android backups
+Home-page: https://github.com/joernheissler/ab-decrypt
+License: MIT
+Keywords: ab,android,backup
+Author: Jörn Heissler
+Author-email: nosuchaddress@joern.heissler.de
+Requires-Python: >=3.5,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: cryptography (>=2.9.2,<3.0.0)
+Project-URL: Repository, https://github.com/joernheissler/ab-decrypt
+Description-Content-Type: text/x-rst
+
+Android Backup Decryptor
+========================
+Decryptor for android backups that were created with ``adb backup``.
+
+Installation
+------------
+.. code-block:: bash
+
+    python3 -m venv /path/to/venv
+    /path/to/venv/pip install ab-decrypt
+    ln -sr /path/to/venv/ab-decrypt ~/bin/
+
+Usage
+-----
+.. code-block:: bash
+
+    # Read from stdin, write to stdout
+    $ ab-decrypt
+
+    # Read from stdin, write to stdout
+    $ ab-decrypt - -
+
+    # Read from file, write to other file
+    $ ab-decrypt backup.ab backup.tar
+
+    # List backup contents
+    $ ab-decrypt backup.ab | tar -tv
+
+Environment variables
+---------------------
+* ``AB_DECRYPT_PASSWORD``: Decryption password
+
+Help / Bugs / Contributions
+---------------------------
+Please file an issue or pull request at GitHub.
+
