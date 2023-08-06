@@ -1,0 +1,11 @@
+requirements.txt
+setup.py
+scripts/.webloc.sh
+scripts/webloc
+webloc/__init__.py
+webloc/__main__.py
+webloc.egg-info/PKG-INFO
+webloc.egg-info/SOURCES.txt
+webloc.egg-info/dependency_links.txt
+webloc.egg-info/requires.txt
+webloc.egg-info/top_level.txt
