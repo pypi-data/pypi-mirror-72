@@ -1,0 +1,9 @@
+matplotlib>=3.2.0
+numexpr<3.0.0,>=2.7.1
+numpy>=0.18.0
+pandas>=1.0.0
+scikit-learn<0.23.0,>=0.22.1
+scipy>=1.4.0
+
+[pydmd]
+pydmd
