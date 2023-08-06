@@ -1,0 +1,14 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+elutils/__init__.py
+elutils/decorators.py
+elutils/osio.py
+elutils/performance.py
+elutils/utils.py
+elutils.egg-info/PKG-INFO
+elutils.egg-info/SOURCES.txt
+elutils.egg-info/dependency_links.txt
+elutils.egg-info/top_level.txt
