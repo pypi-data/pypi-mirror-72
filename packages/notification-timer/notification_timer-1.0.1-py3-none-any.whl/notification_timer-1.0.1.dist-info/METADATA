@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: notification-timer
+Version: 1.0.1
+Summary: Package To Push Notification and Keep User Motivated
+Home-page: https://github.com/TheMLEngineer/notification_timer
+Author: KARTHIKEYAN MUTHU
+Author-email: phenomenalkarthikeyan@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: time
+Requires-Dist: os
+Requires-Dist: subprocess
+
+# notification_timer
+
+## A Python Package to send notifications to keep the user motivated
+
+'''
+
+Thanks for downloading , Please check GITHUB URL : https://github.com/TheMLEngineer/notification_timer and provide your feedback / contribution to the project
+
+'''
+
+
