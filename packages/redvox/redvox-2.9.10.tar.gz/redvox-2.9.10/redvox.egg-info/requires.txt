@@ -1,0 +1,13 @@
+fastkml>=0.11
+lxml>=4.5.1
+lz4>=3.1.0
+matplotlib>=3.2.2
+numpy>=1.19.0
+pandas>=1.0.5
+protobuf>=3.12.2
+requests>=2.24.0
+scipy>=1.5.0
+dataclasses-json>=0.5.1
+
+[:python_version == "3.6"]
+dataclasses>=0.7
