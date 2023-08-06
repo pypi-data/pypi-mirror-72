@@ -1,0 +1,11 @@
+click<8.0,>=7.0
+colorama
+colorlog
+
+[dev]
+flake8
+pytest
+sphinx
+sphinx-rtd-theme
+livereload
+twine

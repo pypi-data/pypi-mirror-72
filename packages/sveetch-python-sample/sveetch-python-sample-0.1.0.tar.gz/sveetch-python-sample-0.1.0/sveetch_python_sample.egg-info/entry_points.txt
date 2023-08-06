@@ -1,0 +1,3 @@
+[console_scripts]
+sample = sample.cli.entrypoint:cli_frontend
+
