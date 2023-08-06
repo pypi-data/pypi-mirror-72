@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+texteditor/__init__.py
+texteditor/main.py
+texteditor/version.py
+texteditor.egg-info/PKG-INFO
+texteditor.egg-info/SOURCES.txt
+texteditor.egg-info/dependency_links.txt
+texteditor.egg-info/requires.txt
+texteditor.egg-info/top_level.txt
