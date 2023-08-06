@@ -1,0 +1,14 @@
+{
+    "name": "Games",
+    "version": "1.0.0",
+    "author": "Emile Clark-Boman",
+    "description": "Kara Base Games Library",
+    "long-description": "",
+    "main": "main.py",
+    "commands": {
+        "newScoreboard": {
+            "target": "newScoreboard",
+            "keywords": ["new scoreboard"]
+        }
+    }
+}

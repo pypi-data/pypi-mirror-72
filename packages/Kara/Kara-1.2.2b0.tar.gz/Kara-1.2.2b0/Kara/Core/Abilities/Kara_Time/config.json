@@ -1,0 +1,26 @@
+{
+    "name": "Time",
+    "version": "1.0.0",
+    "author": "Emile Clark-Boman",
+    "description": "Kara Base Time Library",
+    "long-description": "",
+    "main": "main.py",
+    "commands": {
+        "time": {
+            "target": "currentTime",
+            "keywords": ["time"]
+        },
+        "date": {
+            "target": "currentDate",
+            "keywords": ["date"]
+        },
+        "month": {
+            "target": "currentMonth",
+            "keywords": ["month"]
+        },
+        "year": {
+            "target": "currentYear",
+            "keywords": ["year"]
+        }
+    }
+}
