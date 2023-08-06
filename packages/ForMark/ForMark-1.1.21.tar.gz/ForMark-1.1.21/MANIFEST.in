@@ -1,0 +1,2 @@
+ecursive-include pywt/data     *      #这样就会包含pywt下data目录里所有的文件
+# prune pywt/_extensions/back   #这样就会忽略掉pywt/_extensions/back文件夹
