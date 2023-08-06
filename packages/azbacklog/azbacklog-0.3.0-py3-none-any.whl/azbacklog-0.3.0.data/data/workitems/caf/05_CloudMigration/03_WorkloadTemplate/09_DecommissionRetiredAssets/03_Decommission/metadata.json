@@ -1,0 +1,6 @@
+{
+    "title": "Decommission",
+    "description": "Terminate or resuse the allocated resources https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/migrate/migration-considerations/optimize/decommission",
+    "tags": ["Workload Template"],
+    "roles": []
+}

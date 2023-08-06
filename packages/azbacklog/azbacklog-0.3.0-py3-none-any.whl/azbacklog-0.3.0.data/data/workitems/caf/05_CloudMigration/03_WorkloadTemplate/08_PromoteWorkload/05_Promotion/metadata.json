@@ -1,0 +1,6 @@
+{
+    "title": "Promotion",
+    "description": "Re-route production traffic to deployed assets https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/migrate/migration-considerations/optimize/promote",
+    "tags": ["Workload Template"],
+    "roles": []
+}

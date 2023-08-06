@@ -1,0 +1,6 @@
+{
+    "title": "CAF Migrate Landing Zone blueprint",
+    "description": "Evaluate the [CAF Migrate Landing Zone blueprint](https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/ready/azure-readiness-guide/migration-landing-zone). If the assumptions and decisions in that article align to your business and technical objectives, the blueprint can be used to create your landing zone.",
+    "tags": ["Ready"],
+    "roles": []
+}

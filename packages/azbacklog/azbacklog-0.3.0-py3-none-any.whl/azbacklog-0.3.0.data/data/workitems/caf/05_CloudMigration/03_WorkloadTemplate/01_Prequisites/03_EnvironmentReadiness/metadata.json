@@ -1,0 +1,6 @@
+{
+    "title": "Environment readiness (Landing Zone)",
+    "description": "Has the cloud migration target been established? Are the necessary migration tools in place? Has a resource organization and naming standard been set for this workload's assets? https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/migrate/migration-considerations/prerequisites/planning-checklist",
+    "tags": ["Workload Template"],
+    "roles": []
+}

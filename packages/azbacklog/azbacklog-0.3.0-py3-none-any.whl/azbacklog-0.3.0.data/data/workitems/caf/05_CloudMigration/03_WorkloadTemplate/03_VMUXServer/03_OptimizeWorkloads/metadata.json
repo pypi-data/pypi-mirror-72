@@ -1,0 +1,6 @@
+{
+    "title": "Optimize workload(s)",
+    "description": "Test, measure performance, and optimize workloads. When ready promote the workload to production\nGuide: https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/migrate/azure-migration-guide/optimize-and-transform\nConsiderations: https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/migrate/migration-considerations/optimize/",
+    "tags": ["Workload Template"],
+    "roles": []
+}

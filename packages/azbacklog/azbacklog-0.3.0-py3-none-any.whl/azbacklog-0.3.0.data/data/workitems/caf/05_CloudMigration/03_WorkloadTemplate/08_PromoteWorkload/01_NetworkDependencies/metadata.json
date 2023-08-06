@@ -1,0 +1,6 @@
+{
+    "title": "Network dependencies",
+    "description": "Validate network traffic based on scale test to identify unplanned dependencies https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/migrate/migration-considerations/optimize/promote",
+    "tags": ["Workload Template"],
+    "roles": []
+}

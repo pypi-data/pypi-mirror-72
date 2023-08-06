@@ -1,0 +1,6 @@
+{
+    "title": "Decide on optimization timing",
+    "description": "Decide if testing is sufficient to optimize (Or if optimization should happen after promotion) https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/migrate/migration-considerations/optimize/optimize",
+    "tags": ["Workload Template"],
+    "roles": []
+}
