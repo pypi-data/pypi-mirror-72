@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: wf-datetime-conversion
+Version: 0.0.1
+Summary: Provides various functions for converting between datetime formats
+Home-page: https://github.com/WildflowerSchools/datetime_conversion
+Author: Theodore Quinn
+Author-email: ted.quinn@wildflowerschools.org
+License: UNKNOWN
+Keywords: datetime
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Dist: pandas (>=1.0.5)
+Requires-Dist: numpy (>=1.19.0)
+
+# datetime_conversion
+
+Provides various functions for converting between datetime formats
+
+
