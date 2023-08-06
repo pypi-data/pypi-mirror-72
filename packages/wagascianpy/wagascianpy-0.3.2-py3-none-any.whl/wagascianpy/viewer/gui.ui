@@ -1,0 +1,1232 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object id="mainwindow" class="tk.Toplevel">
+    <property name="geometry">1280x1040</property>
+    <property name="height">300</property>
+    <property name="padx">10</property>
+    <property name="pady">10</property>
+    <property name="resizable">both</property>
+    <property name="title" translatable="yes">WAGASCI Database Viewer</property>
+    <property name="width">300</property>
+    <child>
+      <object id="scrolledframe" class="pygubu.builder.widgets.scrolledframe">
+        <property name="scrolltype">both</property>
+        <property name="usemousewheel">true</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">nsew</property>
+        </layout>
+        <child>
+          <object id="wagasci_repository_frame" class="ttk.Labelframe">
+            <property name="height">200</property>
+            <property name="padding">10</property>
+            <property name="relief">raised</property>
+            <property name="text" translatable="yes">WAGASCI run repository</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="ipadx">10</property>
+              <property name="ipady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">nsew</property>
+            </layout>
+            <child>
+              <object id="simple_repository" class="ttk.Radiobutton">
+                <property name="text" translatable="yes">Simple repository</property>
+                <property name="value">False</property>
+                <property name="variable">boolean:is_borg_repo</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="columnspan">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="borg_repository" class="ttk.Radiobutton">
+                <property name="text" translatable="yes">Borg repository</property>
+                <property name="value">True</property>
+                <property name="variable">boolean:is_borg_repo</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="columnspan">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="wagasci_repository_label" class="ttk.Label">
+                <property name="text" translatable="yes">Repository location</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="wagasci_repository" class="ttk.Combobox">
+                <property name="values">kekcc:/hsm/nu/wagasci/data/beam kekcc:/hsm/t2k/t2k_JB/t2k_wagasci/rawdata /home/wagasci-ana/Data/beam /media/neo/BACKUP/WAGASCI/rawdata</property>
+                <property name="width">40</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="wagasci_download_location_label" class="ttk.Label">
+                <property name="text" translatable="yes">Download folder</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">3</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="wagasci_download_location" class="ttk.Combobox">
+                <property name="values">/media/neo/BACKUP/WAGASCI/rawdata</property>
+                <property name="width">40</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">3</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="wagasci_decoded_location_label" class="ttk.Label">
+                <property name="text" translatable="yes">Decoded folder</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">4</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="wagasci_decoded_location" class="ttk.Combobox">
+                <property name="values">/media/neo/BACKUP/WAGASCI/decoded</property>
+                <property name="width">40</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">4</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="data_quality_location_label" class="ttk.Label">
+                <property name="text" translatable="yes">Data quality folder</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">5</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="data_quality_location" class="ttk.Combobox">
+                <property name="values">/media/neo/BACKUP/WAGASCI/data_quality</property>
+                <property name="width">40</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">5</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object id="wagasci_database_frame" class="ttk.Labelframe">
+            <property name="padding">10</property>
+            <property name="relief">raised</property>
+            <property name="text" translatable="yes">WAGASCI run database</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="ipadx">10</property>
+              <property name="ipady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">nsew</property>
+              <rows>
+                <row id="0">
+                  <property name="weight">0</property>
+                </row>
+              </rows>
+            </layout>
+            <child>
+              <object id="wagasci_database_label" class="ttk.Label">
+                <property name="text" translatable="yes">WG database location</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="wagasci_rebuild_database" class="ttk.Checkbutton">
+                <property name="offvalue">False</property>
+                <property name="onvalue">True</property>
+                <property name="text" translatable="yes">Rebuild WAGASCI database</property>
+                <property name="variable">boolean:wagasci_rebuild_database</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="columnspan">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">3</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="wagasci_libdir_label" class="ttk.Label">
+                <property name="text" translatable="yes">WAGASCI library directory
+(optional)</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">4</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="wagasci_libdir" class="ttk.Combobox">
+                <property name="values">/home/wagasci-ana/Code/Analysis/lib/libwagasci.so /home/neo/Code/WAGASCI/WagasciCalibration/lib/libwagasci.so</property>
+                <property name="width">50</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">4</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="wagasci_update_database" class="ttk.Checkbutton">
+                <property name="offvalue">False</property>
+                <property name="onvalue">True</property>
+                <property name="text" translatable="yes">Update WAGASCI database</property>
+                <property name="variable">boolean:wagasci_update_database</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="columnspan">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="wagasci_database" class="ttk.Combobox">
+                <property name="values">"&lt;Same as repository&gt;" kekcc:/hsm/nu/wagasci/data/beam/wagascidb.db /home/wagasci-ana/Data/beam/wagascidb.db /home/neo/Code/WAGASCI/Configs/wagascidb.db</property>
+                <property name="width">50</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="temperature_sqlite_database_label" class="ttk.Label">
+                <property name="text" translatable="yes">Temperature SQLite database</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="temperature_sqlite_database" class="ttk.Combobox">
+                <property name="values">kekcc:/hsm/nu/wagasci/data/temphum/mh_temperature_sensors_t2krun10.sqlite3 /hsm/nu/wagasci/data/temphum/mh_temperature_sensors_t2krun10.sqlite3 /home/neo/Desktop/work/mh_temperature_sensors.sqlite3</property>
+                <property name="width">50</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object id="query" class="ttk.Labelframe">
+            <property name="height">200</property>
+            <property name="relief">raised</property>
+            <property name="text" translatable="yes">Query</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="columnspan">2</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+              <property name="sticky">nsew</property>
+            </layout>
+            <child>
+              <object id="interval" class="ttk.Labelframe">
+                <property name="height">200</property>
+                <property name="text" translatable="yes">Interval</property>
+                <property name="width">200</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="rowspan">2</property>
+                </layout>
+                <child>
+                  <object id="start" class="ttk.Label">
+                    <property name="padding">10</property>
+                    <property name="relief">ridge</property>
+                    <property name="text" translatable="yes">From run</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="from_calendar" class="pygubu.builder.widgets.calendarframe">
+                    <property name="firstweekday">0</property>
+                    <property name="month">11</property>
+                    <property name="year">2019</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="columnspan">3</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="stop" class="ttk.Label">
+                    <property name="padding">10</property>
+                    <property name="relief">ridge</property>
+                    <property name="text" translatable="yes">To run</property>
+                    <layout>
+                      <property name="column">3</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="to_calendar" class="pygubu.builder.widgets.calendarframe">
+                    <property name="firstweekday">0</property>
+                    <property name="month">11</property>
+                    <property name="year">2019</property>
+                    <layout>
+                      <property name="column">3</property>
+                      <property name="columnspan">3</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="from_hours" class="ttk.Combobox">
+                    <property name="textvariable">int:from_hours</property>
+                    <property name="validate">focusout</property>
+                    <property name="values">0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23</property>
+                    <property name="width">4</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">3</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="from_minutes" class="ttk.Combobox">
+                    <property name="textvariable">int:from_minutes</property>
+                    <property name="validate">focusout</property>
+                    <property name="values">0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59</property>
+                    <property name="width">4</property>
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">3</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="from_seconds" class="ttk.Combobox">
+                    <property name="textvariable">int:from_seconds</property>
+                    <property name="validate">focusout</property>
+                    <property name="values">0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59</property>
+                    <property name="width">4</property>
+                    <layout>
+                      <property name="column">2</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">3</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="to_hours" class="ttk.Combobox">
+                    <property name="exportselection">true</property>
+                    <property name="height">0</property>
+                    <property name="state">normal</property>
+                    <property name="textvariable">int:to_hours</property>
+                    <property name="validate">none</property>
+                    <property name="values">0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23</property>
+                    <property name="width">4</property>
+                    <layout>
+                      <property name="column">3</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">3</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="to_minutes" class="ttk.Combobox">
+                    <property name="textvariable">int:to_minutes</property>
+                    <property name="validate">focusout</property>
+                    <property name="values">0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59</property>
+                    <property name="width">4</property>
+                    <layout>
+                      <property name="column">4</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">3</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="to_seconds" class="ttk.Combobox">
+                    <property name="textvariable">int:to_seconds</property>
+                    <property name="validate">focusout</property>
+                    <property name="values">0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59</property>
+                    <property name="width">4</property>
+                    <layout>
+                      <property name="column">5</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">3</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="from_hours_label" class="ttk.Label">
+                    <property name="text" translatable="yes">Hours</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="propagate">True</property>
+                      <property name="row">2</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="from_minutes_label" class="ttk.Label">
+                    <property name="text" translatable="yes">Minutes</property>
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="propagate">True</property>
+                      <property name="row">2</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="from_seconds_label" class="ttk.Label">
+                    <property name="text" translatable="yes">Seconds</property>
+                    <layout>
+                      <property name="column">2</property>
+                      <property name="propagate">True</property>
+                      <property name="row">2</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="to_hours_label" class="ttk.Label">
+                    <property name="text" translatable="yes">Hours</property>
+                    <layout>
+                      <property name="column">3</property>
+                      <property name="propagate">True</property>
+                      <property name="row">2</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="to_minutes_label" class="ttk.Label">
+                    <property name="text" translatable="yes">Minutes</property>
+                    <layout>
+                      <property name="column">4</property>
+                      <property name="propagate">True</property>
+                      <property name="row">2</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="to_seconds_label" class="ttk.Label">
+                    <property name="text" translatable="yes">Seconds</property>
+                    <layout>
+                      <property name="column">5</property>
+                      <property name="propagate">True</property>
+                      <property name="row">2</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="start_run" class="ttk.Entry">
+                    <property name="text" translatable="yes">Start run</property>
+                    <property name="textvariable">int:start_run</property>
+                    <property name="validate">focusout</property>
+                    <property name="width">10</property>
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="columnspan">2</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="stop_run" class="ttk.Entry">
+                    <property name="text" translatable="yes">Stop run</property>
+                    <property name="textvariable">int:stop_run</property>
+                    <property name="validate">focusout</property>
+                    <property name="width">10</property>
+                    <layout>
+                      <property name="column">4</property>
+                      <property name="columnspan">2</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object id="getters" class="ttk.Labelframe">
+                <property name="height">200</property>
+                <property name="text" translatable="yes">Getters</property>
+                <property name="width">200</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">nsew</property>
+                </layout>
+                <child>
+                  <object id="send_time_interval_query" class="ttk.Button">
+                    <property name="command">get_time_interval</property>
+                    <property name="compound">top</property>
+                    <property name="cursor">arrow</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Get time interval</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="send_all_query" class="ttk.Button">
+                    <property name="command">get_all</property>
+                    <property name="compound">top</property>
+                    <property name="cursor">arrow</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Get all</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">2</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="send_run_interval_query" class="ttk.Button">
+                    <property name="command">get_run_interval</property>
+                    <property name="compound">top</property>
+                    <property name="cursor">arrow</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Get run number interval</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object id="topology" class="ttk.Labelframe">
+                <property name="height">200</property>
+                <property name="text" translatable="yes">Topology</property>
+                <property name="width">200</property>
+                <layout>
+                  <property name="column">3</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="rowspan">2</property>
+                  <property name="sticky">nsew</property>
+                  <rows>
+                    <row id="0">
+                      <property name="pad">0</property>
+                    </row>
+                  </rows>
+                </layout>
+                <child>
+                  <object id="wallmrd_top_north" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">WallMRD North Top</property>
+                    <property name="variable">boolean:wallmrd_top_north</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">20</property>
+                      <property name="pady">5</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="wallmrd_bottom_north" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">WallMRD North Bottom</property>
+                    <property name="variable">boolean:wallmrd_bottom_north</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">20</property>
+                      <property name="pady">5</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="wallmrd_top_south" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">WallMRD South Top</property>
+                    <property name="variable">boolean:wallmrd_top_south</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">20</property>
+                      <property name="pady">5</property>
+                      <property name="propagate">True</property>
+                      <property name="row">2</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="wallmrd_bottom_south" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">WallMRD South Bottom</property>
+                    <property name="variable">boolean:wallmrd_bottom_south</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">20</property>
+                      <property name="pady">5</property>
+                      <property name="propagate">True</property>
+                      <property name="row">3</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="wagasci_top_upstream" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">WAGASCI Upstream Top</property>
+                    <property name="variable">boolean:wagasci_top_upstream</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">20</property>
+                      <property name="pady">5</property>
+                      <property name="propagate">True</property>
+                      <property name="row">4</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="wagasci_side_upstream" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">WAGASCI Upstream Side</property>
+                    <property name="variable">boolean:wagasci_side_upstream</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">20</property>
+                      <property name="pady">5</property>
+                      <property name="propagate">True</property>
+                      <property name="row">5</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="wagasci_top_downstream" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">WAGASCI Downstream Top</property>
+                    <property name="variable">boolean:wagasci_top_downstream</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">20</property>
+                      <property name="pady">5</property>
+                      <property name="propagate">True</property>
+                      <property name="row">6</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="wagasci_side_downstream" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">WAGASCI Downstream Side</property>
+                    <property name="variable">boolean:wagasci_side_downstream</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">20</property>
+                      <property name="pady">5</property>
+                      <property name="propagate">True</property>
+                      <property name="row">7</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object id="conditions" class="ttk.Labelframe">
+                <property name="height">200</property>
+                <property name="text" translatable="yes">Conditions</property>
+                <property name="width">200</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">nsew</property>
+                </layout>
+                <child>
+                  <object id="only_good_runs" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">Only good runs</property>
+                    <property name="variable">boolean:only_good_runs</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">4</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="include_overlapping" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">Include overlapping runs
+(only for time interval)</property>
+                    <property name="variable">boolean:include_overlapping</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">5</property>
+                      <property name="sticky">nw</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object id="analyzers" class="ttk.Labelframe">
+                <property name="height">200</property>
+                <property name="text" translatable="yes">Analyzers</property>
+                <property name="width">200</property>
+                <layout>
+                  <property name="column">2</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="rowspan">2</property>
+                  <property name="sticky">nsew</property>
+                </layout>
+                <child>
+                  <object id="download" class="ttk.Button">
+                    <property name="command">download</property>
+                    <property name="text" translatable="yes">Download</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="analyze" class="ttk.Button">
+                    <property name="command">analyze</property>
+                    <property name="text" translatable="yes">Start analysis</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">6</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="decoder" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">Decoder</property>
+                    <property name="variable">boolean:decoder</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="spill_number_fixer" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">Spill Number Fixer</property>
+                    <property name="variable">boolean:spill_number_fixer</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">2</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="beam_summary_data" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">Beam Summary Data</property>
+                    <property name="variable">boolean:beam_summary_data</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">3</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="temperature" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">Temperature</property>
+                    <property name="variable">boolean:temperature</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">4</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object id="data_quality" class="ttk.Checkbutton">
+                    <property name="offvalue">False</property>
+                    <property name="onvalue">True</property>
+                    <property name="text" translatable="yes">Data Quality</property>
+                    <property name="variable">boolean:data_quality</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">5</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object id="run_info" class="ttk.Labelframe">
+            <property name="height">200</property>
+            <property name="padding">10</property>
+            <property name="relief">raised</property>
+            <property name="text" translatable="yes">Run info</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="columnspan">2</property>
+              <property name="ipadx">10</property>
+              <property name="ipady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+              <property name="sticky">nsew</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object id="run_list_frame" class="ttk.Labelframe">
+            <property name="height">200</property>
+            <property name="relief">raised</property>
+            <property name="text" translatable="yes">Run list</property>
+            <property name="width">800</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="columnspan">2</property>
+              <property name="ipadx">10</property>
+              <property name="ipady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+              <property name="sticky">nsew</property>
+              <rows>
+                <row id="0">
+                  <property name="weight">1</property>
+                </row>
+              </rows>
+              <columns>
+                <column id="0">
+                  <property name="weight">1</property>
+                </column>
+              </columns>
+            </layout>
+            <child>
+              <object id="run_list" class="pygubu.builder.widgets.scrolledframe">
+                <property name="scrolltype">both</property>
+                <property name="usemousewheel">false</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">nsew</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object id="bsd_repository_frame" class="ttk.Labelframe">
+            <property name="height">200</property>
+            <property name="padding">10</property>
+            <property name="relief">raised</property>
+            <property name="text" translatable="yes">Beam Summary Data repository</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="ipadx">10</property>
+              <property name="ipady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="sticky">nsew</property>
+            </layout>
+            <child>
+              <object id="bsd_download_location_label" class="ttk.Label">
+                <property name="text" translatable="yes">Download folder</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="bsd_download_location" class="ttk.Combobox">
+                <property name="values">/tmp /home/wagasci-ana/Data/bsd</property>
+                <property name="width">40</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="bsd_repository_label" class="ttk.Label">
+                <property name="text" translatable="yes">Repository location</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="bsd_repository" class="ttk.Combobox">
+                <property name="values">kekcc:/gpfs/fs03/t2k/beam/exp/data/beam_summary/current /media/neo/SDCARD/WAGASCI/BSD</property>
+                <property name="width">40</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object id="bsd_database_frame" class="ttk.Labelframe">
+            <property name="height">200</property>
+            <property name="padding">10</property>
+            <property name="relief">raised</property>
+            <property name="text" translatable="yes">Beam Summary Data database</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="ipadx">10</property>
+              <property name="ipady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="sticky">nsew</property>
+            </layout>
+            <child>
+              <object id="bsd_database_label" class="ttk.Label">
+                <property name="text" translatable="yes">BSD database location</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="bsd_rebuild_database" class="ttk.Checkbutton">
+                <property name="offvalue">False</property>
+                <property name="onvalue">True</property>
+                <property name="text" translatable="yes">Rebuild BSD database</property>
+                <property name="variable">boolean:bsd_rebuild_database</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="columnspan">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="t2krun_label" class="ttk.Label">
+                <property name="text" translatable="yes">T2K run number</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">3</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="t2krun" class="ttk.Combobox">
+                <property name="state">normal</property>
+                <property name="values">10</property>
+                <property name="width">5</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">3</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="bsd_database" class="ttk.Combobox">
+                <property name="values">"&lt;Same as repository&gt;" kekcc:/hsm/nu/wagasci/data/bsd/bsddb.db /home/wagasci-ana/Data/bsd/bsddb.db /home/neo/Code/WAGASCI/Configs/bsddb.db</property>
+                <property name="width">50</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object id="bsd_update_database" class="ttk.Checkbutton">
+                <property name="offvalue">False</property>
+                <property name="onvalue">True</property>
+                <property name="text" translatable="yes">Update BSD database</property>
+                <property name="variable">boolean:bsd_update_database</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="columnspan">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object id="download_window" class="tk.Toplevel">
+    <property name="height">200</property>
+    <property name="padx">10</property>
+    <property name="pady">10</property>
+    <property name="resizable">both</property>
+    <property name="title" translatable="yes">Download progress</property>
+    <property name="width">200</property>
+    <child>
+      <object id="download_frame" class="ttk.Frame">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">nsew</property>
+        </layout>
+        <child>
+          <object id="progress_label" class="ttk.Label">
+            <property name="justify">center</property>
+            <property name="padding">10</property>
+            <property name="relief">sunken</property>
+            <property name="text" translatable="yes">
+</property>
+            <property name="textvariable">string:download_label_text</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object id="progress_bar" class="ttk.Progressbar">
+            <property name="length">800</property>
+            <property name="mode">determinate</property>
+            <property name="orient">horizontal</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="sticky">nsew</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
