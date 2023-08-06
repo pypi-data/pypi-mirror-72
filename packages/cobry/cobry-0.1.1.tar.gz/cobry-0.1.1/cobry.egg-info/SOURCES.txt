@@ -1,0 +1,11 @@
+README.md
+setup.py
+cobry/__init__.py
+cobry/args.py
+cobry/command.py
+cobry/flag.py
+cobry/flag_set.py
+cobry.egg-info/PKG-INFO
+cobry.egg-info/SOURCES.txt
+cobry.egg-info/dependency_links.txt
+cobry.egg-info/top_level.txt
