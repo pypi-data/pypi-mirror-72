@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+apyrs/__init__.py
+apyrs/extension.py
+apyrs.egg-info/PKG-INFO
+apyrs.egg-info/SOURCES.txt
+apyrs.egg-info/dependency_links.txt
+apyrs.egg-info/requires.txt
+apyrs.egg-info/top_level.txt
