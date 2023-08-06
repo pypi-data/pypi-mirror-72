@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nldata
+Version: 0.3.0
+Summary: NLData is a library of Natural Language Datasets.
+Author: Davide Nunes
+Author-email: davidenunes@pm.me
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: Cython (>=0.29.20,<0.30.0)
+Requires-Dist: cyac (>=1.0,<2.0)
+Requires-Dist: filelock (>=3.0.12,<4.0.0)
+Requires-Dist: numpy (>=1.19.0,<2.0.0)
+Requires-Dist: requests (>=2.24.0,<3.0.0)
+Requires-Dist: smart_open (>=2.0.0,<3.0.0)
+Requires-Dist: tqdm (>=4.46.1,<5.0.0)
