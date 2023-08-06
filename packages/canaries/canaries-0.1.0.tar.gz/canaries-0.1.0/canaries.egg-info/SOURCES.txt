@@ -1,0 +1,8 @@
+README.rst
+setup.py
+canaries/__init__.py
+canaries/canaries.py
+canaries.egg-info/PKG-INFO
+canaries.egg-info/SOURCES.txt
+canaries.egg-info/dependency_links.txt
+canaries.egg-info/top_level.txt
