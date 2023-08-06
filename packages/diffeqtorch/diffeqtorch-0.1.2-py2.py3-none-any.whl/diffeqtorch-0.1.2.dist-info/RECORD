@@ -1,0 +1,13 @@
+diffeqtorch/__init__.py,sha256=TavrPHGaT1irM_J5VHMUPGRegghDf7w_c9HApMokRMM,113
+diffeqtorch/__version__.py,sha256=iWaTzUDhrkZYEItY9U-T4wCdv2ApI0TkDZ-cFOgTJSk,63
+diffeqtorch/diffeqtorch.py,sha256=2V-p0BuzNaw_6pIs0KNoIIzzqXYmiINnKUZWMXIDWUw,9609
+diffeqtorch/install.py,sha256=ENFHWOjCKWRhkpzr90X3WoKIa_Dea5r6elGy3VKiLYQ,2617
+diffeqtorch/logging.py,sha256=zBp-rBOFz2JEEy5kH3h47VNcF9bqsPi_G4rVWofe5GU,995
+diffeqtorch/julia/Project.toml,sha256=Pj9VcNO0JooiNIKJw8tdA2Mqvmnj5OdtC3IbkFtE6vE,493
+diffeqtorch/julia/precompile.jl,sha256=lg4OF_M8Y7V0Tjr73DJjcUVHTQ8cDTAw_3Ft0WpgE0w,475
+diffeqtorch/julia/sysimage.jl,sha256=JSNgP_wwfJ0y2l5Pen26FjJO9uQcG9Nl52oNhM9VO6s,1087
+diffeqtorch-0.1.2.dist-info/LICENSE,sha256=wI6MNurVivLVF4GXgAaF-3asjsdxf4iAVmT7j_qHjec,1060
+diffeqtorch-0.1.2.dist-info/METADATA,sha256=UrKe8nUIq1Au0yQHyhjwVU_qIqRi88aRjiBMKZWwzbY,3655
+diffeqtorch-0.1.2.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+diffeqtorch-0.1.2.dist-info/top_level.txt,sha256=V-3pt1dStUNxN8jYGKRfFN6YKxpptlxPoH6uzX0VbPQ,12
+diffeqtorch-0.1.2.dist-info/RECORD,,
