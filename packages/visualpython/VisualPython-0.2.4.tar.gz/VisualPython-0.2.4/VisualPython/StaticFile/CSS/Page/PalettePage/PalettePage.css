@@ -1,0 +1,103 @@
+.PalettePage-container {
+    /* height: 100%; */
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--BACKGROUND-COLOR-WHITE);
+
+    box-shadow: 0 0 1px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.1);
+
+    overflow-y: auto;
+}
+.PalettePage-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+.PalettePage-inner-title {
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 22px;
+}
+
+.PalettePage-inner-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.PalettePage-inner-container {
+    position: relative;
+
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+}
+
+.PalettePage-block {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+.PalettePage-block-title {
+    font-weight: 700;
+}
+
+.PalettePage-block-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    max-width: 470px;
+}
+.PalettePage-block-body #Base-input-button {
+    margin-top: 10px;
+}
+.PalettePage-block-body #Base-input-search{
+    margin-top: 10px;
+}
+.PalettePage-block-body-button-container {
+    text-align: center;
+}
+
+
+
+.PalettePage-addonbutton {
+    position: absolute;
+    z-index: 2;
+
+    right: 20px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border: 1px solid black;
+}
+
+.PalettePage-addonbutton:hover {
+    cursor: pointer;
+    transition: 0.7s;
+
+    background-color: black;
+    color: white;
+}
+

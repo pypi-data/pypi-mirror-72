@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: VisualPython
+Version: 0.2.4
+Summary: VisualPython
+Home-page: https://gitlab.com/blacklogic.dev/visualpython
+Author: BlackLogic
+Author-email: blacklogic.dev@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: Visual,visual,VisualPython,visualpython
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

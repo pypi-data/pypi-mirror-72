@@ -1,0 +1,8 @@
+Type: IPython Notebook Extension
+Name: VisualPython
+Link: README.md
+Description: 코드를 몰라도 UI를 통해 AI 작업을 할 수 있게 만드는 VisualPython
+Main: Main.js
+Compatibility: 4.x, 5.x
+Parameters:
+
