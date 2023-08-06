@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+scimma_aws_utils/auth.py
+scimma_aws_utils/awscreds.py
+scimma_aws_utils/main.py
+scimma_aws_utils.egg-info/PKG-INFO
+scimma_aws_utils.egg-info/SOURCES.txt
+scimma_aws_utils.egg-info/dependency_links.txt
+scimma_aws_utils.egg-info/entry_points.txt
+scimma_aws_utils.egg-info/requires.txt
+scimma_aws_utils.egg-info/top_level.txt
