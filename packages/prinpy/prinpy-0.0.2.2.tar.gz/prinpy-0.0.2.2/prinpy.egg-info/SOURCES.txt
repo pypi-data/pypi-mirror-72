@@ -1,0 +1,9 @@
+README.md
+setup.py
+prinpy/__init__.py
+prinpy/local.py
+prinpy.egg-info/PKG-INFO
+prinpy.egg-info/SOURCES.txt
+prinpy.egg-info/dependency_links.txt
+prinpy.egg-info/requires.txt
+prinpy.egg-info/top_level.txt
