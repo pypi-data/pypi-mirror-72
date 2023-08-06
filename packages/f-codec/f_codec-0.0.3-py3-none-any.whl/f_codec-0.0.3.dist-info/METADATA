@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: f-codec
+Version: 0.0.3
+Summary: Python 'f' Codec
+Home-page: https://github.com/in4lio/f-codec
+Author: Vitaly Kravtsov
+Author-email: in4lio@gmail.com
+License: UNKNOWN
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Python `f` Codec
+
+Wrap lonesome f-strings in `print()`
+
+## Install
+
+    python3 -m pip install f-codec
+
+
