@@ -1,0 +1,7 @@
+validators>=0.12.6
+requests>=2.21.0
+dnspython>=1.15.0
+domain-connect>=0.0.7
+
+[:python_version < "3.3"]
+ipaddress>=1.0.23
