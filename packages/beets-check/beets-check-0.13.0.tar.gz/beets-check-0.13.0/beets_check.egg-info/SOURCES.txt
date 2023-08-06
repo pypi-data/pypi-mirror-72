@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+beets_check.egg-info/PKG-INFO
+beets_check.egg-info/SOURCES.txt
+beets_check.egg-info/dependency_links.txt
+beets_check.egg-info/requires.txt
+beets_check.egg-info/top_level.txt
+beetsplug/__init__.py
+beetsplug/check.py
