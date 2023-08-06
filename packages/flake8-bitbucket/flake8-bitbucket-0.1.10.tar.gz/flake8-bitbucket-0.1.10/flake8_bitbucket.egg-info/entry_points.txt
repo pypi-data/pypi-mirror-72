@@ -1,0 +1,3 @@
+[flake8.report]
+flake8-bitbucket = flake8_bitbucket:Flake8Bitbucket
+
