@@ -1,0 +1,3 @@
+[console_scripts]
+scimma-aws = scimma_aws_utils.main:main
+
