@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+zwack/__init__.py
+zwack/ascii.py
+zwack.egg-info/PKG-INFO
+zwack.egg-info/SOURCES.txt
+zwack.egg-info/dependency_links.txt
+zwack.egg-info/top_level.txt
