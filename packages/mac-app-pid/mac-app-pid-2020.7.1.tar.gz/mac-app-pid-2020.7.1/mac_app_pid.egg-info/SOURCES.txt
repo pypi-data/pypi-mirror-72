@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+mac_app_pid.egg-info/PKG-INFO
+mac_app_pid.egg-info/SOURCES.txt
+mac_app_pid.egg-info/dependency_links.txt
+mac_app_pid.egg-info/top_level.txt
+scripts/app-pid
