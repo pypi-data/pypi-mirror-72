@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: OsSom
+Version: 0.1.0a0
+Summary: Audio IO tools for real time data visualization
+Home-page: http://github.com/Chum4k3r/ossom
+Author: João Vitor Gutkoski Paes
+Author-email: joao.paes@eac.ufsm.br
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
