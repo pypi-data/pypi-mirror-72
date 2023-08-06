@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: shear
+Version: 0.0.0
+Summary: 🐑 Shear: Trim Excess Quotes from your Strings in Python and on the Command Line
+Home-page: https://github.com/DanielJDufour/shear
+Author: Daniel J. Dufour
+Author-email: daniel.j.dufour@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/DanielJDufour/shear/tarball/download
+Description: <div align="center">
+        	<div>
+        		<img width="500" height="500" src="shear.png" alt="shear logo">
+        	</div>
+        </div>
+        
+        # features
+        :package: &nbsp; works great out of the box  
+        :scissors: &nbsp; removes regular quotes like `"` and `'`  
+        :snake: &nbsp; removes python quotes like `'''`, `"""`, and `b''`  
+        :zap: &nbsp; removes JavaScript quotes like `` ` ``  
+        :computer: &nbsp; command line interface included
+        
+        # install
+        `pipenv install shear` or `pip3 install shear`
+        
+        # usage
+        ## python
+        ```python
+        from shear import shear
+        
+        string = "`Sheep`"
+        
+        string = shear(string)
+        # string is now Sheep instead of `Sheep`
+        ```
+        ## command line interface
+        ```bash
+        string="'Sheep'"
+        
+        echo $(shear $string)
+        # string is now Sheep instead of 'Sheep'
+        ```
+        
+        # support
+        Post an issue at https://github.com/DanielJDufour/shear/issues or email the package author at daniel.j.dufour@gmail.com
+        
+Keywords: python,string,unquote
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
