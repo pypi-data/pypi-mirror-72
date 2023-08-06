@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+scripts/travis-image-status
+travis_image_status.egg-info/PKG-INFO
+travis_image_status.egg-info/SOURCES.txt
+travis_image_status.egg-info/dependency_links.txt
+travis_image_status.egg-info/top_level.txt
