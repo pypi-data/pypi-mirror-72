@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: tanager-tcp
+Version: 0.0.4
+Summary: TCP server/client for use with tanager-feeder and asd-feeder packages
+Home-page: https://github.com/firstmode/tanager-tcp
+Author: Kathleen Hoza
+Author-email: kathleen@firstmode.com
+License: Creative Commons Attribution-Noncommercial-Share Alike license
+Project-URL: Source, https://github.com/firstmode/tanager-tcp
+Platform: UNKNOWN
+Requires-Python: >=3
+
+UNKNOWN
+
+
