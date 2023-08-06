@@ -1,0 +1,7 @@
+include vcp_beuth/vcp_beuth.min.js
+include vcp_beuth/vcp_beuth.min.js.map
+include vcp_beuth/metadata.json
+include vcp_beuth/package-info.json
+include README.md
+include LICENSE
+include package.json

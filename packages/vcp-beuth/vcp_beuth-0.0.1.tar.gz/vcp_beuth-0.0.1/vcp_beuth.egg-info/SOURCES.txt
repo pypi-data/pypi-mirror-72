@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+vcp_beuth/KPI.py
+vcp_beuth/__init__.py
+vcp_beuth/_imports_.py
+vcp_beuth/metadata.json
+vcp_beuth/package-info.json
+vcp_beuth/vcp_beuth.min.js
+vcp_beuth/vcp_beuth.min.js.map
+vcp_beuth.egg-info/PKG-INFO
+vcp_beuth.egg-info/SOURCES.txt
+vcp_beuth.egg-info/dependency_links.txt
+vcp_beuth.egg-info/top_level.txt
