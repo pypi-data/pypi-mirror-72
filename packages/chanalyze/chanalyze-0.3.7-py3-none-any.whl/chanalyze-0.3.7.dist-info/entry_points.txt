@@ -1,0 +1,3 @@
+[console_scripts]
+chanalyze=chanalyze.app:main
+
