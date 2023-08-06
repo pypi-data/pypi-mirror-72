@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pyvk
+Version: 0.1.0
+Summary: VK API for Python
+Home-page: https://github.com/mkuznets/pyvk
+Author: Max Kuznetsov
+Author-email: maks.kuznetsov@gmail.com
+License: MIT
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Internet
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: requests
+Requires-Dist: lxml
+Requires-Dist: appdirs
+
+UNKNOWN
+
+
