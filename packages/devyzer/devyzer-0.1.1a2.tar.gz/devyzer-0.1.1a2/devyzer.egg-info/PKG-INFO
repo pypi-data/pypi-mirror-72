@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: devyzer
+Version: 0.1.1a2
+Summary: Devyzer CLI
+Home-page: https://devyzer.io
+Author: Ayham Hassan
+Author-email: ayham@devyzer.io
+License: Other
+Description: ## Installation
+        
+        - prepare  virtual environment 
+        - install requirements
+        ```
+        pip install -r requirements.txt
+        ```
+        
+        
+        ## Run Package
+        
+        login:
+        
+        ```
+         python  -m devyzer_cli.main -L
+        
+        ```
+        or
+        ```
+         python  -m devyzer_cli.main --login
+        
+        ```
+        
+        
+        talk:
+        
+        ```
+          python  -m devyzer_cli.main
+            
+        ```
+        
+        help:
+        
+        ```
+          python  -m devyzer_cli.main --help
+        
+        ```
+        sudo apt-get install alien
+        python setup.py bdist --formats=rpm
+        cd dist/
+        sudo alien devyzer-0.1.0-1.noarch.rpm
+        sudo dpkg -i devyzer_0.1.0-2_all.deb
+        sudo dpkg --remove devyzer
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Other
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
