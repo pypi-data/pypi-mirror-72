@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: pyud
+Version: 1.0.0
+Summary: A simple wrapper for the Urban Dictionary API
+Home-page: https://github.com/WilliamWFLee/pyud
+Author: William Lee
+Author-email: wlee753159@gmail.com
+License: GNU GPL v3.0
+Project-URL: Documentation, https://pyud.readthedocs.io
+Project-URL: Source, https://github.com/WilliamWFLee/pyud
+Keywords: urbandictionary api async
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: ~=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: aiohttp (==3.6.2)
+
+pyud
+====
+
+A simple wrapper for the Urban Dictionary API in Python.
+
+Features
+--------
+
+- Synchronous and asynchronous clients for the API
+- Definition objects for object-style access to definition attributes, and includes all fields
+- Full coverage of the known API
+
+Requirements
+------------
+
+- **Python 3.6 or higher.** Python 2 is not supported.
+
+- `aiohttp <https://docs.aiohttp.org/en/stable/>`_, version 3.6.2
+
+Installing
+----------
+
+You can install directly from PyPI:
+
+.. code:: sh
+
+    python3 -m pip install pyud
+
+On Windows this is:
+
+.. code:: bat
+
+    py -3 -m pip install pyud
+
+Quick Examples
+--------------
+
+Synchronous Example
+~~~~~~~~~~~~~~~~~~~
+
+.. code:: py
+
+    import pyud
+
+    ud = pyud.Client()
+    definitions = ud.define("hello")
+    print(definitions[0].word) # Outputs "hello"
+
+Asynchronous Example
+~~~~~~~~~~~~~~~~~~~~
+
+.. code:: py
+
+    import asyncio
+
+    import pyud
+
+
+    async def example():
+        ud = pyud.AsyncClient()
+        definitions = await ud.define("hello")
+        print(definitions[0].word) # Outputs "hello"
+
+
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(example())
+
+Documentation
+-------------
+
+`pyud Documentation <https://pyud.readthedocs.io/en/latest/>`_
+
+License
+-------
+
+`GNU GPL v3 <https://www.gnu.org/licenses/gpl-3.0.en.html>`_
+
