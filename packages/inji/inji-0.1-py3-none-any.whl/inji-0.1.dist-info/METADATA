@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: inji
+Version: 0.1
+Summary: Render Jinja2 templates
+Home-page: https://github.com/shalomb/inji
+Author: Shalom Bhooshi
+Author-email: s.bhooshi@gmail.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Requires-Dist: jinja2 (==2.11.*)
+Requires-Dist: pyyaml (==5.3.*)
+
+UNKNOWN
+
+
