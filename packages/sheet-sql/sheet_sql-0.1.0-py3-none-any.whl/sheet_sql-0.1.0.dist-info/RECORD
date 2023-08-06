@@ -1,0 +1,10 @@
+sheetsql/__init__.py,sha256=eDJ3mBqNsnu5D-Wg5ORQyov0ENlIuwskbG5GUyLV9eU,606
+sheetsql/connection.py,sha256=iS7j4RgA_gCb0B7FkI4ByWQesft5XOjPp-k0A6AG35Y,1571
+sheetsql/exceptions.py,sha256=3mw2pycpRHeBfD2YKAqzVzvYp5taxLqqx0eGs_Y_IhI,336
+sheetsql/spreadsheet.py,sha256=sjyKROV_4-bj2eWmnxf0hJu_TXOiezVX84C5f-bBA4w,1279
+sheetsql/utils.py,sha256=xIJ4m7M8C6vY7iXw_RU7_RLeNt3IVu6W4yLrxUjsmNk,1152
+sheetsql/worksheet.py,sha256=vVjCsp6Wf8veuN8WGw5BDKd3xfrBSSThvj30PqVItRc,5128
+sheet_sql-0.1.0.dist-info/LICENSE,sha256=Gi7B6BfxUDFn-4TXJYAc2WsyVuRLolsBaleVSvB0lKM,1067
+sheet_sql-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+sheet_sql-0.1.0.dist-info/METADATA,sha256=f-ikyiNvvqu9CVzPGC4Jkx5Fj7Db1C_ES3iUZfLaBK4,2981
+sheet_sql-0.1.0.dist-info/RECORD,,
