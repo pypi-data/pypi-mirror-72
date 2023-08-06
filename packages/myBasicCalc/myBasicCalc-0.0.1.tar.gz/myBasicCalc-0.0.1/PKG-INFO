@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: myBasicCalc
+Version: 0.0.1
+Summary: A library for basic calculator action
+Home-page: UNKNOWN
+Author: Happy Singh
+Author-email: hsingh0805@gmail.com
+License: MIT
+Description: This is a very simple calculator that takes two numbers and add subtract 
+        multiply and divide them with each other.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

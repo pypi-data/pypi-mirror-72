@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+myBasicCalc/__init__.py
+myBasicCalc.egg-info/PKG-INFO
+myBasicCalc.egg-info/SOURCES.txt
+myBasicCalc.egg-info/dependency_links.txt
+myBasicCalc.egg-info/top_level.txt
