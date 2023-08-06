@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+beets_lidarr_fields.egg-info/PKG-INFO
+beets_lidarr_fields.egg-info/SOURCES.txt
+beets_lidarr_fields.egg-info/dependency_links.txt
+beets_lidarr_fields.egg-info/requires.txt
+beets_lidarr_fields.egg-info/top_level.txt
+beetsplug/__init__.py
+beetsplug/lidarrfields.py
