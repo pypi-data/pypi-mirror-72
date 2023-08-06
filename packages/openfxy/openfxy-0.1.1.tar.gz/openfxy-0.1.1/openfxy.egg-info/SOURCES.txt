@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.py
+docs/TimeLine.md
+docs/我对安全与NLP的思考和实践.md
+docs/测试用例.md
+docs/考虑和解决的问题.md
+docs/需求和设计.md
+fxy/__init__.py
+fxy/lib.py
+fxy/model.py
+fxy/nlp2vec.py
+openfxy.egg-info/PKG-INFO
+openfxy.egg-info/SOURCES.txt
+openfxy.egg-info/dependency_links.txt
+openfxy.egg-info/requires.txt
+openfxy.egg-info/top_level.txt
