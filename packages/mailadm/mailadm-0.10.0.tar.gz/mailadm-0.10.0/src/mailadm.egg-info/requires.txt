@@ -1,0 +1,5 @@
+click>=6.0
+flask
+pillow
+qrcode
+gunicorn
