@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: vest
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/mattf1n/vest
+Author: mattf1n
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Click
+Requires-Dist: robin-stocks
+
+# Vest
+My personal robo-advisor
+
+## Install
+
+`pip install finvest`
+
+
