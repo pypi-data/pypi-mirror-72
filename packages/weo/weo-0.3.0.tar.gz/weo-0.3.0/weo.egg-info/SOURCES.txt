@@ -1,0 +1,11 @@
+README.md
+setup.py
+weo/__init__.py
+weo/dataframe.py
+weo/download.py
+weo.egg-info/PKG-INFO
+weo.egg-info/SOURCES.txt
+weo.egg-info/dependency_links.txt
+weo.egg-info/not-zip-safe
+weo.egg-info/requires.txt
+weo.egg-info/top_level.txt
