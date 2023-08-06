@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: torch-enhance
+Version: 0.1.5
+Summary: Image Super-Resolution Library for PyTorch
+Home-page: https://github.com/IsaacCorley/pytorch-enhance
+Author: Isaac Corley
+Author-email: isaac.corley@my.utsa.edu
+License: Apache License 2.0
+Download-URL: https://github.com/IsaacCorley/pytorch-enhance/archive/0.1.5.tar.gz
+Description: UNKNOWN
+Keywords: pytorch,image-super-resolution,computer-vision,deep-neural-networks
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
