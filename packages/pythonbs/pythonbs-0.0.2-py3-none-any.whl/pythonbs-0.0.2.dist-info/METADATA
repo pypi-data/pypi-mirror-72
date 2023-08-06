@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: pythonbs
+Version: 0.0.2
+Summary: A python client for running tests in browserstack
+Home-page: UNKNOWN
+Author: Rohan Joshi
+Author-email: rohan.j@qxf2.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+
+# pythonbs
+
+A python client for running tests in browserstack
+
+# About
+This package aims to provide a straighforward python client to interact with browserstack
+
+
+# Pre-requisites
+* pythonbs requires [Python3](https://www.python.org/download/releases/3.0/)  to run
+* selenium installed  if not ```pip3 install selenium```
+
+
+### Installation
+
+This client is hosted at PyPi under the name pythonbs, to install it, simply run
+```
+pip install pythonbs
+```
+# Examples
+```
+import pythonbs as bs
+from selenium import webdriver
+
+def test_bs():
+    try :
+        desired_cap = {
+                'browser': 'Chrome',
+                'browser_version': '83.0',
+                'os': 'Windows',
+                'os_version': '10',
+                'resolution': '1024x768',
+                'name': 'Bstack-[Python] Sample Test'
+                }
+        username = ''
+        accesskey = ''
+        driver = bs.get_webdriver(username,username,desired_cap)
+        driver.get("http://www.google.com")
+        if not "Google" in driver.title:
+            raise Exception("Unable to load google page!")
+        elem = driver.find_element_by_name("q")
+        elem.send_keys("BrowserStack")
+        elem.submit()
+        print(driver.title)
+        driver.quit()
+    except:
+        driver.close()
+        driver.quit()
+
+
+if __name__ == "__main__":
+    test_bs()
+
+```
+
+
+Obtain your username and accesskey values from browserstack settings and Update the values of variable names username & accesskey 
+Run your file and you will see your script run in browserstack 
+
