@@ -1,0 +1,27 @@
+MANIFEST.in
+README.md
+setup.py
+example_bundle_nbx/__init__.py
+example_bundle_nbx/experiment.py
+example_bundle_nbx/wrapper.py
+nbx/__init__.py
+nbx/_nbdev.py
+nbx/om.py
+nbx/pspace.py
+nbx/templ.py
+nbx.egg-info/PKG-INFO
+nbx.egg-info/SOURCES.txt
+nbx.egg-info/dependency_links.txt
+nbx.egg-info/entry_points.txt
+nbx.egg-info/not-zip-safe
+nbx.egg-info/top_level.txt
+nbx/templates/__init__.py
+nbx/templates/experiment.tpl
+nbx/templates/experiment_jl.tpl
+nbx/templates/experiment_py.tpl
+nbx/templates/job.tpl
+nbx/templates/job_jl.tpl
+nbx/templates/pspace jl.tpl
+nbx/templates/run.tpl
+nbx/templates/wrapper.tpl
+nbx/templates/wrapper_jl.tpl
