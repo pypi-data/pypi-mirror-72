@@ -1,0 +1,11 @@
+README.md
+setup.py
+turnitin_cli/__init__.py
+turnitin_cli/__main__.py
+turnitin_cli/core.py
+turnitin_cli/test.py
+turnitin_cli.egg-info/PKG-INFO
+turnitin_cli.egg-info/SOURCES.txt
+turnitin_cli.egg-info/dependency_links.txt
+turnitin_cli.egg-info/requires.txt
+turnitin_cli.egg-info/top_level.txt
