@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+VERSION
+setup.py
+smcmodel/__init__.py
+smcmodel/core.py
+smcmodel/data_pipes.py
+smcmodel/shared_constants.py
+wf_smcmodel.egg-info/PKG-INFO
+wf_smcmodel.egg-info/SOURCES.txt
+wf_smcmodel.egg-info/dependency_links.txt
+wf_smcmodel.egg-info/requires.txt
+wf_smcmodel.egg-info/top_level.txt

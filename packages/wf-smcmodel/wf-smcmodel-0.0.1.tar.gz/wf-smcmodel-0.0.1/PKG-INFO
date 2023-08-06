@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: wf-smcmodel
+Version: 0.0.1
+Summary: Provide estimation and simulation capabilities for sequential Monte Carlo (SMC) models
+Home-page: https://github.com/WildflowerSchools/wf-smcmodel
+Author: Theodore Quinn
+Author-email: ted.quinn@wildflowerschools.org
+License: UNKNOWN
+Description: # smcmodel
+        
+        Provide estimation and simulation capabilities for sequential Monte Carlo (SMC) models
+        
+        ## Task list
+        
+        * Add logging
+        * Add docstrings
+        * Generate documentation
+        * Add explicit names to tensors and ops
+        * Check dataflow graphs using tensorboard (are all objects of known size at graph specification time)
+        * In simulate, do init and pull initial values in one run
+        * Figure out how to force assignment ops without fetching their outputs
+        * Consider adding num_samples argument to simulate()
+        
+Keywords: Bayes,SMC
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python

@@ -1,0 +1,5 @@
+wf-datetime-conversion>=0.0.1
+tensorflow>=2.2
+numpy>=1.19.0
+python-dateutil>=2.8.1
+tqdm>=4.46.1
