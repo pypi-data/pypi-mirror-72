@@ -1,0 +1,10 @@
+README.md
+setup.py
+datasette_write/__init__.py
+datasette_write.egg-info/PKG-INFO
+datasette_write.egg-info/SOURCES.txt
+datasette_write.egg-info/dependency_links.txt
+datasette_write.egg-info/entry_points.txt
+datasette_write.egg-info/requires.txt
+datasette_write.egg-info/top_level.txt
+datasette_write/templates/datasette_write.html
