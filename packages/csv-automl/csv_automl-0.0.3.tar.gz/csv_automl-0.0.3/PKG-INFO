@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: csv_automl
+Version: 0.0.3
+Summary: AutoML on CSV
+Home-page: https://github.com/juliettyi/csv_automl
+Author: Juliett Yi Chen
+Author-email: juliettyi@gmail.com
+License: bsd-2-clause
+Download-URL: https://github.com/juliettyi/csv_automl/dist/csv_automl-0.0.1.tar.gz
+Description: UNKNOWN
+Keywords: csv,automl
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
