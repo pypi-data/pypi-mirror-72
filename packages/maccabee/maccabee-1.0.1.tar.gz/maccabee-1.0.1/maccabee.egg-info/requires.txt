@@ -1,0 +1,17 @@
+numpy
+pandas
+scipy
+sympy
+scikit-learn
+POT
+pyyaml
+threadpoolctl
+
+[docs]
+sphinx
+sphinx-autobuild
+sphinx_rtd_theme
+nbsphinx
+
+[r]
+rpy2

@@ -1,0 +1,98 @@
+# This file defines the available parameters and their valid values.
+
+PROBABILITY_MIN_MAX: &probability_min_max
+  min: 0
+  max: 1
+
+PROPENSITY_MIN_MAX: &propensity_min_max
+  min: 0.000000000000001
+  max: 0.999999999999999
+
+FUNCTION_SURFACE_REQUIRED_KEYS: &function_surface_required_keys
+  required_keys:
+    - LINEAR
+    - POLY_QUAD
+    - POLY_CUBIC
+    - STEP_JUMP
+    - STEP_KINK
+    - INTERACTION_TWO_WAY
+    - INTERACTION_THREE_WAY
+
+# The DGP sampling parameters are defined below. The name of the parameter is
+# the main key and nested under this is the type, validity conditions and role
+# description.
+SCHEMA:
+  POTENTIAL_CONFOUNDER_SELECTION_PROBABILITY:
+    type: number
+    <<: *probability_min_max
+    description: |
+        Marginal probability that each covariate is a potential confounder
+        (affecting one or both of treatment and outcome) Lower values reduce
+        the number of covariates which are predicitive of treatment/outcome.
+        This makes modelling harder given need for variable selection
+
+  ACTUAL_CONFOUNDER_ALIGNMENT:
+    type: number
+    <<: *probability_min_max
+    description: |
+        Marginal probability that a covariate in the transformed covariate space
+        will appear in both the outcome and treatment functions. This is a soft
+        target - there is variance in actual achieved alignment.
+
+  ### SHARED TREAT/OUTCOME FUNCTION SETTINGS ###
+
+  TREAT_MECHANISM_COVARIATE_SELECTION_PROBABILITY:
+    type: dictionary
+    <<: *function_surface_required_keys
+    description: |
+      Probabilities that govern the probability with which
+      covariates appear in the treatment mechanism in different
+      forms.
+
+  OUTCOME_MECHANISM_COVARIATE_SELECTION_PROBABILITY:
+    type: dictionary
+    <<: *function_surface_required_keys
+    description: |
+      Probabilities that govern the probability with which
+      covariates appear in the outcome mechanism in different
+      forms.
+
+  ### TREATMENT FUNCTION PARAMS ###
+
+  TARGET_PROPENSITY_SCORE:
+    type: number
+    <<: *propensity_min_max
+    description: |
+      Target propensity score for treatment mechanism
+
+  FORCED_IMBALANCE_ADJUSTMENT:
+    type: number
+    min: 0
+    max: 0.5
+    description: |
+      Value between 0 and 0.5 which is the proportion of controls/treated units
+      that will be swapped to increase imbalance.
+
+  TARGET_MEAN_LOGIT:
+    type: calculated
+    expr: np.log(TARGET_PROPENSITY_SCORE/(1-TARGET_PROPENSITY_SCORE))
+    description: |
+      Target logit value for treatment mechanism
+
+  ### OUTCOME FUNCTION PARAMS ###
+
+  ### TREATMENT EFFECT PARAMS ###
+
+  TREATMENT_EFFECT_HETEROGENEITY:
+    type: number
+    <<: *probability_min_max
+    description: |
+      Marginal probability that there is an interaction between the
+      base treatment effect and each subfunction in the outcome function.
+
+  OBSERVATION_PROBABILITY:
+    type: number
+    <<: *probability_min_max
+    description: |
+      Marginal probability of observing any given row of the data set.
+      Used to reduce the overall number of observations if desired.
