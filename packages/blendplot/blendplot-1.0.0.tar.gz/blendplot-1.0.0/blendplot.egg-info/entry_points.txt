@@ -1,0 +1,3 @@
+[console_scripts]
+blendplot = blendplot.__main__:run
+

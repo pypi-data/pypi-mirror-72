@@ -1,0 +1,12 @@
+README.md
+setup.py
+blendplot/__init__.py
+blendplot/__main__.py
+blendplot/obj_graph.py
+blendplot.egg-info/PKG-INFO
+blendplot.egg-info/SOURCES.txt
+blendplot.egg-info/dependency_links.txt
+blendplot.egg-info/entry_points.txt
+blendplot.egg-info/requires.txt
+blendplot.egg-info/top_level.txt
+test/test_obj_graph.py
