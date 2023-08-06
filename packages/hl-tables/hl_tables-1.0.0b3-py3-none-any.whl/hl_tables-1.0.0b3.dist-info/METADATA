@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: hl-tables
+Version: 1.0.0b3
+Summary: Tables for structured data - universal backend
+Home-page: https://github.com/gordonwatts/hep_tables
+Author: G. Watts (IRIS-HEP/UW Seattle)
+Author-email: gwatts@uw.edu
+Maintainer: Gordon Watts (IRIS-HEP/UW Seattle)
+Maintainer-email: gwatts@uw.edu
+License: TBD
+Platform: Any
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6, <3.8
+Description-Content-Type: text/markdown
+Requires-Dist: hep-tables (<2a,>=1.0b1)
+Requires-Dist: make-it-sync
+Requires-Dist: matplotlib
+Provides-Extra: complete
+Requires-Dist: coverage ; extra == 'complete'
+Requires-Dist: flake8 ; extra == 'complete'
+Requires-Dist: jupyterlab ; extra == 'complete'
+Requires-Dist: pytest ; extra == 'complete'
+Requires-Dist: pytest-asyncio ; extra == 'complete'
+Requires-Dist: pytest-cov ; extra == 'complete'
+Requires-Dist: pytest-mock ; extra == 'complete'
+Requires-Dist: twine ; extra == 'complete'
+Requires-Dist: wheel ; extra == 'complete'
+Provides-Extra: notebook
+Requires-Dist: jupyterlab ; extra == 'notebook'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-asyncio ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-mock ; extra == 'test'
+Requires-Dist: flake8 ; extra == 'test'
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: twine ; extra == 'test'
+Requires-Dist: wheel ; extra == 'test'
+
+# hl_tables
+
+ A high level tables dispatcher for putting together multiple tables executors
+
+## Examples
+
+## Making a histogram
+
+```python
+dataset = EventDataset(f'localds://mc16_13TeV:{ds["RucioDSName"].values[0]}')
+df = xaod_table(dataset)
+truth = df.TruthParticles('TruthParticles')
+llp_truth = truth[truth.pdgId == 35]
+histogram(llp_truth.Count(), bins=3, range=(0,3))
+plt.yscale('log')
+plt.xlabel('Number of good LLPs in each event')
+plt.ylabel('a MC Sample')
+```
+
+1. The histogram data will be calculated by the backend and returned to your local Jupyter instance.
+1. Plots will be rendered!
+
+## Outstanding things
+
+- Definitely need to decide on an approach to this whole thing. Reducers - and where should they be applied, at the outer most or inner most level? So seq.count() - should that mean seq.Select(a: a.count()), or seq.count() (number of events, or a list of objects inside the event)?
+
+- Count needs to be changed to num or dimensions, etc.
+
+
