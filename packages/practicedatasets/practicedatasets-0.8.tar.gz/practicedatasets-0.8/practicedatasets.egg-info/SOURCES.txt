@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+practicedatasets/Covid.py
+practicedatasets/__init__.py
+practicedatasets.egg-info/PKG-INFO
+practicedatasets.egg-info/SOURCES.txt
+practicedatasets.egg-info/dependency_links.txt
+practicedatasets.egg-info/not-zip-safe
+practicedatasets.egg-info/top_level.txt
+practicedatasets/data/WPP2019_TotalPopulationBySex.csv
+practicedatasets/data/covid_19_clean_complete.csv
