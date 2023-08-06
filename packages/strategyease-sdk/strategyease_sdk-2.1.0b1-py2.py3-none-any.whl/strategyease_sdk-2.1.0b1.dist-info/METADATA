@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: strategyease-sdk
+Version: 2.1.0b1
+Summary: 策略易（StrategyEase）Python SDK，策略自动化交易 API。
+Home-page: https://github.com/sinall/StrategyEase-Python-SDK
+Author: sinall
+Author-email: gaoruinan@163.com
+License: MIT
+Requires-Dist: requests
+Requires-Dist: six
+Requires-Dist: apscheduler
+Requires-Dist: lxml
+Requires-Dist: cssselect
+Requires-Dist: bs4
+Requires-Dist: html5lib
+Requires-Dist: pandas
+Requires-Dist: rqopen-client
+Requires-Dist: tushare
+Requires-Dist: pyyaml
+Provides-Extra: dev
+Provides-Extra: test
+
+StrategyEase-Python-SDK
+
+
