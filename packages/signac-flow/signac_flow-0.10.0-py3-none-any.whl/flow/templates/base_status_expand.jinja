@@ -1,0 +1,23 @@
+{% if compact %}
+{% extends "base_status_compact.jinja" %}
+{% elif not unroll %}
+{% extends "base_status_stack.jinja" %}
+{% else %}
+{% extends "base_status.jinja" %}
+{% endif %}
+{% block detailed %}
+{{ super () }}
+{{ 'Operations: \n' }}
+| job_id | operation | eligible | cluster_status |
+| ------ | --------- | -------- | -------------- |
+{% for job in jobs %}
+{% for key, value in job['operations'].items() if value | job_filter(scheduler_status_code, all_ops) %}
+{% if loop.first %}
+| {{ job['job_id'] }} | {{ '%s' | highlight(value['eligible'], pretty) | format(key) }} | {{ alias_bool[value['eligible']] }} | {{ scheduler_status_code[value['scheduler_status']] }} |
+{% else %}
+|  | {{ '%s' | highlight(value['eligible'], pretty) | format(key) }} | {{ alias_bool[value['eligible']] }} | {{ scheduler_status_code[value['scheduler_status']] }} |
+{% endif %}
+{% endfor %}
+{% endfor %}
+{{ status_legend }}
+{% endblock %}
