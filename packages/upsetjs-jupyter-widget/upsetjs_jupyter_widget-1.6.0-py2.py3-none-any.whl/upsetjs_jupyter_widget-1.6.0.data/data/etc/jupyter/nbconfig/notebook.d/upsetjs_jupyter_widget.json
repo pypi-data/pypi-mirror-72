@@ -1,0 +1,5 @@
+{
+  "load_extensions": {
+    "@upsetjs/jupyter_widget/extension": true
+  }
+}
