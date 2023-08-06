@@ -1,0 +1,103 @@
+Metadata-Version: 1.1
+Name: flopy
+Version: 3.3.1
+Summary: FloPy is a Python package to create, run, and post-process MODFLOW-based models.
+Home-page: https://github.com/modflowpy/flopy/
+Author: Mark Bakker, Vincent Post, Christian D. Langevin, Joseph D. Hughes, Jeremy T. White, Andrew T. Leaf, Scott R. Paulinski, Joshua D. Larsen, Michael W. Toews, Eric D. Morway, Jason C. Bellino, Jon Jeffrey Starn, Michael N. Fienen
+Author-email: mark.bakker@tudelft.nl, Vincent.Post@bgr.de, langevin@usgs.gov, jdhughes@usgs.gov, jwhite@usgs.gov, aleaf@usgs.gov, spaulinski@usgs.gov, jlarsen@usgs.gov, M.Toews@gns.cri.nz, emorway@usgs.gov, jbellino@usgs.gov, jjstarn@usgs.gov, mnfienen@usgs.gov
+License: CC0
+Description: Introduction
+        ------------
+        
+        FloPy includes support for MODFLOW 6, MODFLOW-2005, MODFLOW-NWT,
+        MODFLOW-USG, and MODFLOW-2000. Other supported MODFLOW-based models
+        include MODPATH (version 6 and 7), MT3DMS, MT3D-USGS, and SEAWAT.
+        
+        For general modeling issues, please consult a modeling forum, such as
+        the `MODFLOW Users
+        Group <https://groups.google.com/forum/#!forum/modflow>`__. Other
+        MODFLOW resources are listed in the `MODFLOW
+        Resources <https://github.com/modflowpy/flopy#modflow-resources>`__
+        section.
+        
+        Installation
+        ------------
+        
+        FloPy requires **Python** 3.5 (or higher) and **NumPy** 1.9 (or higher).
+        Dependencies for optional FloPy methods are summarized
+        `here <docs/flopy_method_dependencies.md>`__.
+        
+        To install FloPy type:
+        
+        ::
+        
+           conda install -c conda-forge flopy
+        
+        or
+        
+        ::
+        
+           pip install flopy
+        
+        The release candidate version can also be installed from the git
+        repository using the instructions provided `below <#relcand>`__.
+        
+        Documentation
+        -------------
+        
+        FloPy code documentation is available at
+        http://modflowpy.github.io/flopydoc/
+        
+        How to Cite
+        -----------
+        
+        *Citation for FloPy:*
+        
+        `Bakker, Mark, Post, Vincent, Langevin, C. D., Hughes, J. D., White, J.
+        T., Starn, J. J. and Fienen, M. N., 2016, Scripting MODFLOW Model
+        Development Using Python and FloPy: Groundwater, v. 54, p. 733–739,
+        doi:10.1111/gwat.12413. <http://dx.doi.org/10.1111/gwat.12413>`__
+        
+        *Software/Code citation for FloPy:*
+        
+        `Bakker, Mark, Post, Vincent, Langevin, C. D., Hughes, J. D., White, J.
+        T., Leaf, A. T., Paulinski, S. R., Larsen, J. D., Toews, M. W., Morway,
+        E. D., Bellino, J. C., Starn, J. J., and Fienen, M. N., 2020, FloPy
+        v3.3.1: U.S. Geological Survey Software Release, 26 June 2020,
+        http://dx.doi.org/10.5066/F7BK19FH <http://dx.doi.org/10.5066/F7BK19FH>`__
+        
+        Disclaimer
+        ----------
+        
+        This software has been approved for release by the U.S. Geological
+        Survey (USGS). Although the software has been subjected to rigorous
+        review, the USGS reserves the right to update the software as needed
+        pursuant to further analysis and review. No warranty, expressed or
+        implied, is made by the USGS or the U.S. Government as to the
+        functionality of the software and related material nor shall the fact of
+        release constitute any such warranty. Furthermore, the software is
+        released on condition that neither the USGS nor the U.S. Government
+        shall be held liable for any damages resulting from its authorized or
+        unauthorized use.
+        
+        .. _installation-1:
+        
+        Installation
+        ------------
+        
+        To install FloPy version 3.3.1:
+        
+        ::
+        
+           pip install flopy
+        
+        To update to FloPy version 3.3.1:
+        
+        ::
+        
+           pip install flopy --upgrade
+        
+Platform: Windows
+Platform: Mac OS-X
+Platform: Linux
+Classifier: Topic :: Scientific/Engineering :: Hydrology
