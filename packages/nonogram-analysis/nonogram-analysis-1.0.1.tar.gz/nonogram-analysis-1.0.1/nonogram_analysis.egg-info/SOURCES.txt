@@ -1,0 +1,11 @@
+README.md
+setup.py
+nonogram/__init__.py
+nonogram/analysis.py
+nonogram_analysis.egg-info/PKG-INFO
+nonogram_analysis.egg-info/SOURCES.txt
+nonogram_analysis.egg-info/dependency_links.txt
+nonogram_analysis.egg-info/requires.txt
+nonogram_analysis.egg-info/top_level.txt
+test/test_waypoint1.py
+test/test_waypoint2.py
