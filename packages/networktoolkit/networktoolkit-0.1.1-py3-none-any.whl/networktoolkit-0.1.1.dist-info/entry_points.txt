@@ -1,0 +1,6 @@
+[console_scripts]
+arpspoof=networktoolkit.arpspoof:cli
+networkscan=networktoolkit.networkscan:cli
+portuselookup=networktoolkit.portuselookup:cli
+vendorlookup=networktoolkit.vendorlookup:cli
+
