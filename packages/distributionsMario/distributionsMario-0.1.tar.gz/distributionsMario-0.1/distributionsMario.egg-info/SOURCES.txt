@@ -1,0 +1,10 @@
+setup.py
+distributionsMario/Binomialdistribution.py
+distributionsMario/Gaussiandistribution.py
+distributionsMario/Generaldistribution.py
+distributionsMario/__init__.py
+distributionsMario.egg-info/PKG-INFO
+distributionsMario.egg-info/SOURCES.txt
+distributionsMario.egg-info/dependency_links.txt
+distributionsMario.egg-info/not-zip-safe
+distributionsMario.egg-info/top_level.txt
