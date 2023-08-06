@@ -1,0 +1,11 @@
+insided/__init__.py,sha256=ce-8v4kgp5Ww-SIz61SFV21v1ud7L8Xc4QA16rFzvFU,46
+insided/api.py,sha256=YE1WH1nAucevUyw-IQ4rmAndp5DiiFepb9OaChXPPf8,2049
+insided/api_helper.py,sha256=EdKEe5o1CISN111LyrOCn5tbRrrXTwPL6FQei7U11Ls,3076
+insided/authorization.py,sha256=cHxBF4fEHl0VY5BNiVYe5hxM9l30mr4rZjnWeJbWdC0,931
+insided/gamification.py,sha256=h9Etw4HrHcW_zDUpXnANLpNilwI_uUPxryCgFesFw3o,3310
+insided/users.py,sha256=GZn2tKDZoQ_R2nYCWrtRaW0zsgRdIw_o_ffDkI_oUaA,7045
+insided/webhooks.py,sha256=tYBMvLugdD2FvHaPZzz1h3bHWEg_CC350jX2WNgPmrk,976
+insided-1.0.1.dist-info/METADATA,sha256=0sTd9klH5ZXhrppAH681t18-jd5KU1OlLxRz4Sef4hk,470
+insided-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+insided-1.0.1.dist-info/top_level.txt,sha256=yOoO7S8swudZ6zrnhtXP-UuBH8qcTjVhe-rqFSERW3U,8
+insided-1.0.1.dist-info/RECORD,,
