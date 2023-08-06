@@ -1,0 +1,14 @@
+base_kivy_app
+ffpyplayer
+kivy
+psutil
+
+[dev]
+pytest>=3.6
+pytest-cov
+flake8
+sphinx-rtd-theme
+coveralls
+trio
+pytest-trio
+pyinstaller

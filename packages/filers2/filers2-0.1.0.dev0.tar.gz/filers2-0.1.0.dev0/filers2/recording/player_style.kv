@@ -1,0 +1,329 @@
+#:import Factory kivy.factory.Factory
+#:import partial functools.partial
+#:import pretty_space base_kivy_app.utils.pretty_space
+#:import pretty_time base_kivy_app.utils.pretty_time
+
+<PlayersContainerWidget>:
+    size_hint_min: self.minimum_size
+
+
+<PlayerSettingsDropdown@FlatDropDown>:
+    flat_color: app.theme.primary_text
+    flat_border_color: app.theme.divider
+    do_scroll: False, False
+    settings_container: settings_container
+    real_rate: 0
+    data_rate: 0
+    player_summery: ''
+    FlatSplitter:
+        size_hint: None, None
+        height: self.minimum_height
+        min_size: self.minimum_width
+        sizable_from: 'right'
+        flat_color: app.theme.accent
+        BoxLayout:
+            id: settings_container
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height
+            size_hint_min_x: self.minimum_width
+            BoxLayout:
+                size_hint_y: None
+                height: self.minimum_height
+                size_hint_min_x: self.minimum_width
+                spacing: '5dp'
+                ThemedSizedLabel:
+                    text: 'Estimated FPS: {}.'.format(int(root.real_rate))
+                ThemedSizedLabel:
+                    text: 'Data rate: {}.'.format(pretty_space(root.data_rate, is_rate=True))
+                ThemedLabel:
+                    text: root.player_summery
+                    shorten: True
+                    text_size: self.size
+
+
+<RecorderSettingsDropdown@FlatDropDown>:
+    flat_color: app.theme.primary_text
+    flat_border_color: app.theme.divider
+    do_scroll: False, False
+    settings_container: settings_container
+    size_recorded: 0
+    data_rate: 0
+    frames_skipped: 0
+    recorder_summery: ''
+    player: None
+    FlatSplitter:
+        size_hint: None, None
+        height: self.minimum_height
+        min_size: self.minimum_width
+        sizable_from: 'right'
+        flat_color: app.theme.accent
+        BoxLayout:
+            id: settings_container
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height
+            size_hint_min_x: self.minimum_width
+            BoxLayout:
+                size_hint_y: None
+                height: self.minimum_height
+                size_hint_min_x: self.minimum_width
+                spacing: '5dp'
+                ThemedSizedLabel:
+                    text: 'Size: {}.'.format(pretty_space(root.size_recorded))
+                ThemedSizedLabel:
+                    text: 'Data rate: {}.'.format(pretty_space(root.data_rate, is_rate=True))
+                ThemedSizedLabel:
+                    text: 'Skipped: {}.'.format(root.frames_skipped)
+                ThemedLabel:
+                    text: root.recorder_summery
+                    shorten: True
+                    text_size: self.size
+            BoxLayout:
+                size_hint_y: None
+                height: self.minimum_height
+                size_hint_min_x: self.minimum_width
+                spacing: '5dp'
+                padding: 0, '5dp', 0, 0
+                ThemedSizedLabel:
+                    text: 'Records with player #'
+                    bold: True
+                ThemedSpinner:
+                    text_autoupdate: False
+                    size_hint_x: None
+                    width: self.minimum_width
+                    values: ['none'] +  [str(pid) for pid in app.players_widget.player_id_mapping if pid is not root.player.player_id] if root.player else []
+                    text: str(root.player.records_with) if root.player and app.players_widget.player_id_mapping and root.player.records_with != -1 else 'none'  # force update with player_id_mapping, otherwise restoring doesn't update
+                    on_text: root.player.records_with = -1 if self.text == 'none' else int(self.text)
+
+
+<PlayerWidget>:
+    orientation: 'vertical'
+    size_hint_min: self.minimum_size
+    image_display: image_display
+    spacing: '5dp'
+    canvas:
+        Color:
+            rgba: app.theme.text_primary
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        size_hint_y: None
+        size_hint_min_x: self.minimum_width
+        height: '34dp'
+        padding: '5dp'
+        spacing: '5dp'
+        canvas:
+            Color:
+                rgba: app.theme.primary
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        ThemedSizedLabel:
+            text: 'Player #{}:'.format(root.player.player_id)
+            bold: True
+        ThemedSpinner:
+            disabled: pin_btn.state == 'down'
+            size_hint_x: None
+            width: self.minimum_width
+            values: list(root.player.player_to_raw_name_map)
+            text: root.player.player_to_nice_name_map[root.player.player_name]
+            on_text: root.player.player_name = root.player.player_to_raw_name_map[self.text]
+        FlatImageToggleButton:
+            source: 'flat_play.png' if self.state == 'normal' else 'flat_stop.png'
+            flat_color: app.theme.accent
+            disabled: not root.player.player.can_play or root.player.player.play_state == 'stopping'
+            state: 'down' if root.player.player.play_state == 'starting' or root.player.player.play_state == 'playing' else 'normal'
+            on_state: if self.state == 'normal': root.player.recorder.stop()
+            on_release: root.player.player.play() if self.state == 'down' else root.player.player.stop()
+        FlatImageButton:
+            scale_down_color: True
+            source: 'rotate-right-variant.png'
+            flat_color: app.theme.accent
+            on_release: image_display.rotate_right_reposition()
+        FlatImageButton:
+            disabled: pin_btn.state == 'down'
+            scale_down_color: True
+            source: 'flat_dots_vertical.png'
+            flat_color: app.theme.accent
+            ffmpeg_dropdown: ffmpeg.__self__
+            ptgray_dropdown: ptgray.__self__
+            thor_dropdown: thor.__self__
+            client_dropdown: client.__self__
+            rtv_dropdown: rtv.__self__
+            on_release: getattr(self, '{}_dropdown'.format(root.player.player_name)).open(self)
+        FlatImageToggleButton:
+            id: pin_btn
+            scale_down_color: True
+            source: 'flat_pin.png' if self.state == 'normal' else 'flat_pin_off.png'
+            flat_color: app.theme.accent
+            on_release:
+                if self.state == 'down': self._old_settings_parent = root.player.player_settings.parent.parent
+                root.player.player_settings.parent.parent.remove_widget(root.player.player_settings.parent)
+                if self.state == 'down': settings_pin_container.add_widget(root.player.player_settings.parent)
+                if self.state == 'normal': self._old_settings_parent.add_widget(root.player.player_settings.parent)
+        FlatDivider:
+            color: app.theme.divider
+        ThemedSizedLabel:
+            text: 'Recorder:'
+            bold: True
+        ThemedSpinner:
+            size_hint_x: None
+            width: self.minimum_width
+            values: list(root.player.recorder_to_raw_name_map)
+            text: root.player.recorder_to_nice_name_map[root.player.recorder_name]
+            on_text: root.player.recorder_name = root.player.recorder_to_raw_name_map[self.text]
+        FlatImageToggleButton:
+            source: 'flat_record.png' if self.state == 'normal' else 'flat_stop.png'
+            flat_color: app.theme.accent
+            disabled: root.player.player.play_state != 'playing'
+            state: 'down' if root.player.recorder.record_state == 'starting' or root.player.recorder.record_state == 'recording' else 'normal'
+            on_release: app.players_widget.start_recording(root.player) if self.state == 'down' else app.players_widget.stop_recording(root.player)
+        FlatImageButton:
+            scale_down_color: True
+            source: 'flat_dots_vertical.png'
+            flat_color: app.theme.accent
+            image_file_dropdown: image_file.__self__
+            video_dropdown: video.__self__
+            server_dropdown: server.__self__
+            on_release: getattr(self, '{}_dropdown'.format(root.player.recorder_name)).open(self)
+        Widget:
+            size_hint_x: None
+            width: self.height
+            canvas:
+                Color:
+                    rgb: (1., 0, 0) if root.player.disk_used_percent >= .75 else app.theme.accent
+                Ellipse:
+                    pos: self.pos
+                    size: self.size
+                    angle_end: root.player.disk_used_percent * 360.
+                Line:
+                    circle: self.center_x, self.center_y, self.height / 2.
+        FlatDivider:
+            color: app.theme.divider
+        FlatImageButton:
+            disabled: root.player.last_image is None
+            scale_down_color: True
+            source: 'flat_screenshot_save.png'
+            flat_color: app.theme.accent
+            last_image: None
+            on_press: self.last_image = root.player.last_image
+            on_release: if self.last_image: app.open_filechooser(callback=partial(root.player.save_screenshot, self.last_image), target=root.player.get_screenshot_filename(), mode='save', title='Select screenshot filename', filters=['*.bmp'])
+        FlatDivider:
+            color: app.theme.divider
+        FlatImageButton:
+            test_name: 'del_btn_func'
+            scale_down_color: True
+            source: 'flat_delete.png'
+            flat_color: app.theme.accent
+            on_release: root.parent.remove_player(root.player)
+        PlayerSettingsDropdown:
+            id: ffmpeg
+            real_rate: root.player.ffmpeg_player.real_rate
+            data_rate: root.player.ffmpeg_player.data_rate
+            player_summery: root.player.ffmpeg_player.player_summery
+            on_kv_post:
+                self.settings_container.add_widget(root.player.ffmpeg_settings)
+                self.parent.remove_widget(self)
+        PlayerSettingsDropdown:
+            id: ptgray
+            real_rate: root.player.ptgray_player.real_rate
+            data_rate: root.player.ptgray_player.data_rate
+            player_summery: root.player.ptgray_player.player_summery
+            on_kv_post:
+                self.settings_container.add_widget(root.player.ptgray_settings)
+                self.parent.remove_widget(self)
+        PlayerSettingsDropdown:
+            id: thor
+            real_rate: root.player.thor_player.real_rate
+            data_rate: root.player.thor_player.data_rate
+            player_summery: root.player.thor_player.player_summery
+            on_kv_post:
+                self.settings_container.add_widget(root.player.thor_settings)
+                self.parent.remove_widget(self)
+        PlayerSettingsDropdown:
+            id: client
+            real_rate: root.player.client_player.real_rate
+            data_rate: root.player.client_player.data_rate
+            player_summery: root.player.client_player.player_summery
+            on_kv_post:
+                self.settings_container.add_widget(root.player.client_settings)
+                self.parent.remove_widget(self)
+        PlayerSettingsDropdown:
+            id: rtv
+            real_rate: root.player.rtv_player.real_rate
+            data_rate: root.player.rtv_player.data_rate
+            player_summery: root.player.rtv_player.player_summery
+            on_kv_post:
+                self.settings_container.add_widget(root.player.rtv_settings)
+                self.parent.remove_widget(self)
+        RecorderSettingsDropdown:
+            id: image_file
+            player: root.player
+            size_recorded: root.player.image_file_recorder.size_recorded
+            data_rate: root.player.image_file_recorder.data_rate
+            frames_skipped: root.player.image_file_recorder.frames_skipped
+            recorder_summery: root.player.image_file_recorder.recorder_summery
+            on_kv_post:
+                self.settings_container.add_widget(root.player.image_file_recorder_settings)
+                self.parent.remove_widget(self)
+        RecorderSettingsDropdown:
+            id: video
+            player: root.player
+            size_recorded: root.player.video_recorder.size_recorded
+            data_rate: root.player.video_recorder.data_rate
+            frames_skipped: root.player.video_recorder.frames_skipped
+            recorder_summery: root.player.video_recorder.recorder_summery
+            on_kv_post:
+                self.settings_container.add_widget(root.player.video_recorder_settings)
+                self.parent.remove_widget(self)
+        RecorderSettingsDropdown:
+            id: server
+            player: root.player
+            size_recorded: root.player.server_recorder.size_recorded
+            data_rate: root.player.server_recorder.data_rate
+            frames_skipped: root.player.server_recorder.frames_skipped
+            recorder_summery: root.player.server_recorder.recorder_summery
+            on_kv_post:
+                self.settings_container.add_widget(root.player.server_recorder_settings)
+                self.parent.remove_widget(self)
+    BoxLayout:
+        id: settings_pin_container
+        size_hint_y: None
+        height: self.minimum_height
+        canvas:
+            Color:
+                rgba: app.theme.primary_text
+            Rectangle:
+                size: self.size
+                pos: self.pos
+    RelativeLayout:
+        size_hint_min_y: '200dp'
+        on_size: image_display.reload_buffer()
+        canvas:
+            Color:
+                rgba: [0, 0, 0, 1]
+            Rectangle:
+                size: self.size
+        StencilView:
+            BufferImage:
+                id: image_display
+                auto_bring_to_front: False
+                available_size: self.parent.size
+                size: self.image_size
+                size_hint: None, None
+
+                do_scale: False
+                do_translation: False, False
+                do_rotation: False
+                on_rotation: root.player.display_rotation = self.rotation
+                rotation: root.player.display_rotation
+        FlatLabel:
+            size: max(self.texture_size[0], self.width), self.texture_size[1]
+            size_hint: None, None
+            flat_color: [1, 1, 1, 1]
+            outline_color: 0, 0, 0
+            text: pretty_time(root.player.recorder.elapsed_record_time) if root.player.recorder.elapsed_record_time else ''
+            font_size: '20dp'
+            pos_hint: {'x': 0, 'top': 1}
