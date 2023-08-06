@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "cran-diff"
+version = "0.1.7"
+description = ""
+authors = ["Aoife Curran <aocurran@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+sqlalchemy = "*"
+deb_pkg_tools = "*"
+python-dateutil = "*"
+bs4 = "*"
+requests = "*"
+psycopg2-binary = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
