@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+pyNamespace/Dir.py
+pyNamespace/Namespace.py
+pyNamespace/Object.py
+pyNamespace/__init__.py
+pyNamespace/version.py
+pyNamespace.egg-info/PKG-INFO
+pyNamespace.egg-info/SOURCES.txt
+pyNamespace.egg-info/dependency_links.txt
+pyNamespace.egg-info/requires.txt
+pyNamespace.egg-info/top_level.txt
