@@ -1,0 +1,10 @@
+README.md
+setup.py
+cli/__init__.py
+cli/main.py
+echome_cli.egg-info/PKG-INFO
+echome_cli.egg-info/SOURCES.txt
+echome_cli.egg-info/dependency_links.txt
+echome_cli.egg-info/entry_points.txt
+echome_cli.egg-info/requires.txt
+echome_cli.egg-info/top_level.txt
