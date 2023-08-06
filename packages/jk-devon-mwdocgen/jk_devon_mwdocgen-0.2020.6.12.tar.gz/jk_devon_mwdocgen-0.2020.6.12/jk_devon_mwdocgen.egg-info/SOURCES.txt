@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+jk_devon_mwdocgen/__init__.py
+jk_devon_mwdocgen.egg-info/PKG-INFO
+jk_devon_mwdocgen.egg-info/SOURCES.txt
+jk_devon_mwdocgen.egg-info/dependency_links.txt
+jk_devon_mwdocgen.egg-info/not-zip-safe
+jk_devon_mwdocgen.egg-info/requires.txt
+jk_devon_mwdocgen.egg-info/top_level.txt
