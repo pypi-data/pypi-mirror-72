@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+uttlv/__init__.py
+uttlv/encoder.py
+uttlv/tlv.py
+uttlv.egg-info/PKG-INFO
+uttlv.egg-info/SOURCES.txt
+uttlv.egg-info/dependency_links.txt
+uttlv.egg-info/top_level.txt
