@@ -1,0 +1,11 @@
+[arlunio.cli.commands]
+repl = arlunio.cli.repl:Repl
+tutorial = arlunio.cli.tutorial:Tutorial
+
+[console_scripts]
+arlunio = arlunio.cli.__main__:main
+
+[sphinx.builders]
+nbgallery = arlunio.doc
+nbtutorial = arlunio.doc
+
