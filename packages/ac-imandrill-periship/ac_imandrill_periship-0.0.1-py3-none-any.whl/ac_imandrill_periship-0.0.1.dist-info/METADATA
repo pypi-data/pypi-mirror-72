@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: ac-imandrill-periship
+Version: 0.0.1
+Summary: Transactional Email MailChimp Helper Functions
+Home-page: UNKNOWN
+Author: Amy Chang
+Author-email: amy.chang@periship.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mandrill
+
+# Example Package
+
+This is a Mandrill/Transactional Email MailChimp helper function package. 
+
+To be updated later...
+You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
