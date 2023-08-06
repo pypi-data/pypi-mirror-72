@@ -1,0 +1,11 @@
+bottle
+certifi
+chardet
+ciscoconfparse
+colorama
+dnspython
+idna
+marshmallow
+passlib
+requests
+urllib3
