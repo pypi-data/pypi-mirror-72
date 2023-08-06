@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ezreal
+Version: 1.0a1
+Summary: An application of services.
+Home-page: https://github.com/maximeheliot/ezreal
+Author: An aspiring data scientist enthousiast
+Author-email: maxime.heliotpro@example.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/maximeheliot/ezreal/issues
+Project-URL: Funding, https://donate.pypi.org
+Project-URL: Source, https://github.com/pypa/ezreal/
+Description: Ezreal is a service distributor. It exploits different tools and framework around the league of legends environment and gathers their functionalities in order to serve functions to feed interfaces. Its initial design serves the EzrealBot interface, a bot for discord. 
+Keywords: services,framework,tool,leagueoflegends,statistics
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Customer Service
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
