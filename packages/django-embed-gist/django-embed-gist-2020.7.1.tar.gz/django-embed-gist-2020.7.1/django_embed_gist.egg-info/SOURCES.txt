@@ -1,0 +1,10 @@
+requirements.txt
+setup.py
+django_embed_gist/__init__.py
+django_embed_gist.egg-info/PKG-INFO
+django_embed_gist.egg-info/SOURCES.txt
+django_embed_gist.egg-info/dependency_links.txt
+django_embed_gist.egg-info/requires.txt
+django_embed_gist.egg-info/top_level.txt
+django_embed_gist/templatetags/__init__.py
+django_embed_gist/templatetags/embed_gist.py
