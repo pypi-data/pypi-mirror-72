@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: spock
+Version: 1.0.1
+Summary: Stability of Planetary Orbital Configurations Klassifier
+Home-page: https://github.com/dtamayo/spock
+Author: Daniel Tamayo
+Author-email: tamayo.daniel@gmail.com
+License: GPL
+Description: UNKNOWN
+Keywords: astronomy astrophysics exoplanets stability
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3

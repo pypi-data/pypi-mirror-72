@@ -1,0 +1,17 @@
+README.md
+setup.py
+spock/AMD_functions.py
+spock/__init__.py
+spock/additional_feature_functions.py
+spock/classifier.py
+spock/feature_functions.py
+spock/modelfitting.py
+spock/nbody.py
+spock/simsetup.py
+spock.egg-info/PKG-INFO
+spock.egg-info/SOURCES.txt
+spock.egg-info/dependency_links.txt
+spock.egg-info/not-zip-safe
+spock.egg-info/requires.txt
+spock.egg-info/top_level.txt
+spock/models/spock.json
