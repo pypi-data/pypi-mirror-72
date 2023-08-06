@@ -1,0 +1,85 @@
+{
+    "task_results": {
+        "bar": {
+            "values": {
+                "y": {
+                    "value": [
+                        4,
+                        5,
+                        6
+                    ]
+                }
+            },
+            "artifacts": {},
+            "status": "success",
+            "error": null
+        },
+        "foo": {
+            "values": {
+                "x": {
+                    "value": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            },
+            "artifacts": {},
+            "status": "success",
+            "error": null
+        },
+        "baz": {
+            "values": {
+                "result": {
+                    "value": 21
+                }
+            },
+            "artifacts": {},
+            "status": "success",
+            "error": null
+        }
+    },
+    "task_inputs": {
+        "bar": {
+            "task_results": {},
+            "task_inputs": {}
+        },
+        "foo": {
+            "task_results": {},
+            "task_inputs": {}
+        },
+        "baz": {
+            "task_results": {
+                "foo": {
+                    "values": {
+                        "x": {
+                            "value": [
+                                1,
+                                2,
+                                3
+                            ]
+                        }
+                    },
+                    "artifacts": {},
+                    "status": "success",
+                    "error": null
+                },
+                "bar": {
+                    "values": {
+                        "y": {
+                            "value": [
+                                4,
+                                5,
+                                6
+                            ]
+                        }
+                    },
+                    "artifacts": {},
+                    "status": "success",
+                    "error": null
+                }
+            },
+            "task_inputs": {}
+        }
+    }
+}
