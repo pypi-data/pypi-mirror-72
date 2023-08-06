@@ -1,0 +1,86 @@
+#!/usr/bin/env python
+
+import sys
+import os
+import click
+import json
+import kachery_p2p as kp
+
+@click.group(help="Kachery peer-to-peer command-line client")
+def cli():
+    pass
+
+@click.command(help="Show the channels that this node belongs to.")
+def get_channels():
+    channels = kp.get_channels()
+    for channel in channels:
+        num_peers = channel["numPeers"]
+        if num_peers == 1:
+            num_peers_str = '1 peer'
+        else:
+            num_peers_str = f'{num_peers} peers'
+        print(f'{channel["name"]}: {num_peers_str}')
+
+@click.command(help="Join a channel.")
+@click.argument('channel_name')
+def join_channel(channel_name):
+    kp.join_channel(channel_name)
+
+@click.command(help="Leave a channel.")
+@click.argument('channel_name')
+def leave_channel(channel_name):
+    kp.leave_channel(channel_name)
+
+@click.command(help="Find a file.")
+@click.argument('path')
+def find_file(path):
+    infos = kp.find_file(path)
+    for info in infos:
+        print(json.dumps(info, indent=4))
+
+@click.command(help="Download a file.")
+@click.argument('path')
+@click.option('--dest', default=None, help='Optional destination file.')
+def load_file(path, dest):
+    x = kp.load_file(path, dest=dest)
+    print(x)
+
+@click.command(help="Download a file and write the content to stdout.")
+@click.argument('path')
+def cat_file(path):
+    old_stdout = sys.stdout
+    sys.stdout = sys.stderr
+
+    path1 = kp.load_file(path)
+    if not path1:
+        raise Exception('Error loading file.')
+
+    sys.stdout = old_stdout
+    with open(path1, 'rb') as f:
+        while True:
+            data = os.read(f.fileno(), 4096)
+            if len(data) == 0:
+                break
+            os.write(sys.stdout.fileno(), data)
+    
+
+@click.command(help="Start the daemon.")
+def start_daemon():
+    kp.start_daemon()
+
+@click.command(help="Display kachery_p2p version and exit.")
+def version():
+    click.echo(f"This is kachery_p2p version {kp.__version__}.")
+    exit()
+
+cli.add_command(get_channels)
+cli.add_command(join_channel)
+cli.add_command(leave_channel)
+cli.add_command(find_file)
+cli.add_command(load_file)
+cli.add_command(cat_file)
+cli.add_command(version)
+cli.add_command(start_daemon)
+
+if __name__ == "__main__":
+    cli()
