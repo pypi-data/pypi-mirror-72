@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+gradgpad/VERSION
+gradgpad/__init__.py
+gradgpad.egg-info/PKG-INFO
+gradgpad.egg-info/SOURCES.txt
+gradgpad.egg-info/dependency_links.txt
+gradgpad.egg-info/not-zip-safe
+gradgpad.egg-info/requires.txt
+gradgpad.egg-info/top_level.txt
+requirements/requirements.txt

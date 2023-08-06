@@ -1,0 +1,3 @@
+include gradgpad/VERSION
+include requirements/requirements.txt
+include LICENSE
