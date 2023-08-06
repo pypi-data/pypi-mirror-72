@@ -1,0 +1,3 @@
+[console_scripts]
+markdown_refdocs = markdown_refdocs.main:command_interface
+
