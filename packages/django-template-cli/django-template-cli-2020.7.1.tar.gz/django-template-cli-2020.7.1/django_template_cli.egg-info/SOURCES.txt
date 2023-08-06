@@ -1,0 +1,10 @@
+requirements.txt
+setup.py
+django_template_cli/__init__.py
+django_template_cli/__main__.py
+django_template_cli.egg-info/PKG-INFO
+django_template_cli.egg-info/SOURCES.txt
+django_template_cli.egg-info/dependency_links.txt
+django_template_cli.egg-info/requires.txt
+django_template_cli.egg-info/top_level.txt
+scripts/django-template-cli
