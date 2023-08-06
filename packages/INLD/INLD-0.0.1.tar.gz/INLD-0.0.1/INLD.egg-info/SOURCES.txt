@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+INLD/INLD.py
+INLD/__init__.py
+INLD/lang_detect.model
+INLD/vectorizer.pkl
+INLD.egg-info/PKG-INFO
+INLD.egg-info/SOURCES.txt
+INLD.egg-info/dependency_links.txt
+INLD.egg-info/top_level.txt
+iNLD/lang_detect.model
+iNLD/vectorizer.pkl
