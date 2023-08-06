@@ -1,0 +1,145 @@
+Metadata-Version: 2.1
+Name: enterprise
+Version: 0.4.1
+Summary: A bunch of libraries for building backend enterprise on django
+Home-page: https://github.com/ardzix/django-enterprise-core
+Author: Arif Dzikrullah
+Author-email: ardzix@hotmail.com
+License: GPL 3.0
+Keywords: enterprise,backend,admin,crud,django
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: Django (==2.2.13)
+Requires-Dist: djangorestframework (==3.9.1)
+Requires-Dist: timeago (==1.0.8)
+Requires-Dist: psycopg2 (==2.7.5)
+Requires-Dist: postgis (==1.0.4)
+Requires-Dist: arrow (==0.12.1)
+Requires-Dist: pycountry (==17.5.14)
+Requires-Dist: rackspacesdk (==0.7.5)
+Requires-Dist: openstacksdk (==0.17.2)
+Requires-Dist: PyJWT (==1.7.1)
+
+
+# django-enterprise-core
+A base core libraries and apps to build enterprise system using django
+
+# Installation
+just `pip install -e git+https://github.com/ardzix/django-enterprise-core.git#egg=enterprise` in your python environment
+
+# Features
+
+This repo contains work to build base structures of an enterprise system that includes:
+
+### Notable libraries like:
+
+- ProtectedMixin
+  A library that handle your view permission based on django group of permission
+
+- TrackerMixin
+  A library that handle your visitor tracking in each view
+
+- Rest Module base library
+bunch of libraries that will useful if you want to build a rest api
+
+### Base Apps that u will use in every development:
+
+- Authentication
+Don't worry about register, login, email verification etc. We handle it
+
+- Tracker
+App to track your visitor, a TrackerMixin viewer
+
+- SuperUser
+You want to manage another user inside your system? groups, permission, you name it. the super user app can handle it
+
+### The Structures
+Structure holds models and admins of django
+
+- Authentication
+- Common
+- Integration
+- Tracker
+
+## Usage
+
+* Insert desired app(s) to installed_apps in your settings.py
+
+```python
+    INSTALLED_APPS = [
+        # ........
+        'enterprise.apps.account',
+        'enterprise.apps.superuser',
+        # ........
+    ]
+```
+
+* Include the app's url
+
+```python
+from django.contrib import admin
+from django.conf.urls import url, include
+
+from enterprise.apps.account import urls as account
+from enterprise.apps.superuser import urls as superuser
+
+urlpatterns = [
+    # ...
+    url(r'^account/', include((account, 'account'), namespace='account')),
+    url(r'^superuser/', include((superuser, 'superuser'), namespace='superuser')),
+    # ...
+]
+```
+
+# Libraries
+
+## Model lib
+
+### First thing first
+
+Insert path bellow to your settings.py
+```python
+    INSTALLED_APPS = [
+        # ........
+        'enterprise.structures.common',
+        # ........
+    ]
+```
+
+You can follow this example to create a model
+
+```python
+from django.db import models
+from enterprise.libs.model import BaseModelGeneric
+
+# Create your models here.
+class TestField(BaseModelGeneric):
+    display_name = models.CharField(max_length=100)
+    short_name = models.SlugField(max_length=100)
+```
+
+## Protected Mixin
+Protected mixin is a mixin for to protect view, it applies django permission and group to the implemented view
+
+Just specify the namespace and model of the view
+
+Example:
+```python
+from enterprise.libs.view import ProtectedMixin
+from django.views.generic import TemplateView 
+
+class UserView(ProtectedMixin, TemplateView):
+    template_name = "account/user.html"
+    namespace = "account"
+    model = "user"
+
+    def get(self, request):
+        return self.render_to_response({})
+```
+
+
