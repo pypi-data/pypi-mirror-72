@@ -1,0 +1,3 @@
+[console_scripts]
+sapsec = sapsec.sapanalysis:main
+
