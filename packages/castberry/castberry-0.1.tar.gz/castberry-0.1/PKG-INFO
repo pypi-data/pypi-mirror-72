@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: castberry
+Version: 0.1
+Summary: Cast youtube to a video player
+Home-page: https://github.com/GintarasD/Castberry
+Author: Gintaras D.
+License: GPLv3
+Download-URL: https://github.com/GintarasD/Castberry/archive/0.1.tar.gz
+Description: Castberry
+        =========
+        Cast youtube to a video player.
+        
+        Current issues:
+        
+        * Cast disconnects after some time.
+        * Slow volume control response (use slider instead).
+        * Stutters on big playlists.
+        
+        
+        Inspired by https://github.com/CBiX/gotubecast
+Keywords: youtube cast raspberrypi
+Platform: UNKNOWN
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Internet
+Classifier: Topic :: Games/Entertainment
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Operating System :: OS Independent
+Classifier: Typing :: Typed
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/x-rst
