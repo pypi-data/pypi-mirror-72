@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+PyCrowdTangle/PyCrowdTangle.py
+PyCrowdTangle/__init__.py
+PyCrowdTangle.egg-info/PKG-INFO
+PyCrowdTangle.egg-info/SOURCES.txt
+PyCrowdTangle.egg-info/dependency_links.txt
+PyCrowdTangle.egg-info/requires.txt
+PyCrowdTangle.egg-info/top_level.txt
