@@ -1,0 +1,13 @@
+[STYLESHEET]
+base = sphinx_base14
+
+[VARIABLES]
+blue=#000
+
+
+[chapter]
+page_break = none
+
+
+[hidden section : Section(has_class='hide')]
+hide = true
