@@ -1,0 +1,26 @@
+import pandas as pd
+import pickle
+import gzip
+from typing import Dict, List
+import os
+
+with gzip.open(os.path.join(os.path.dirname(__file__), 'res', 'HAPT.pkl.gz'), 'rb') as f:
+    __dfs = pickle.load(f)
+
+__remove_no_labels: pd.DataFrame = lambda remove_no_labels, df: df if not remove_no_labels else df[df.label != -1]
+
+def load_by_user(uid: int, remove_no_lavels=True) -> List[pd.DataFrame]:
+    if uid > 30:
+        return None
+    result = list()
+    for df in __dfs[uid]:
+        result.append(__remove_no_labels(remove_no_lavels, df.copy()))
+    return result
+
+
+def load_all(remove_no_lavels=True) -> Dict[int, List[pd.DataFrame]]:
+    result = dict()
+    for uid in __dfs:
+        for df in __dfs[uid]:
+            result.setdefault(uid, list()).append(__remove_no_labels(remove_no_lavels, df.copy()))
+    return result
