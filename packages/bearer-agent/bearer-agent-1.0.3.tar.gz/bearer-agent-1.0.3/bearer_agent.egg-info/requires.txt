@@ -1,0 +1,10 @@
+setuptools>=3.0
+urllib3<2,>=1
+wrapt<2,>=1
+
+[tests]
+black
+flake8
+pytest
+requests
+httpx
