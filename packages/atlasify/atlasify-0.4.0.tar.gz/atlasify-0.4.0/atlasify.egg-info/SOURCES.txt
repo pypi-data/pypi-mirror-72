@@ -1,0 +1,14 @@
+README.md
+setup.py
+atlasify/__init__.py
+atlasify.egg-info/PKG-INFO
+atlasify.egg-info/SOURCES.txt
+atlasify.egg-info/dependency_links.txt
+atlasify.egg-info/requires.txt
+atlasify.egg-info/top_level.txt
+atlasify/fonts/NimbusSanL-Bol.otf
+atlasify/fonts/NimbusSanL-BolIta.otf
+atlasify/fonts/NimbusSanL-Reg.otf
+atlasify/fonts/NimbusSanL-RegIta.otf
+atlasify/tests/__init__.py
+atlasify/tests/test_main.py
