@@ -1,0 +1,9 @@
+Django>=1.10
+user-agents>=1.1.0
+django-ipware>=2.0.0
+
+[dev]
+geoip2==3.0.0
+pytest
+pytest-cov
+pytest-django
