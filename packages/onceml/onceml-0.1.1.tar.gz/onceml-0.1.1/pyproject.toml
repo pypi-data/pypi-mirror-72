@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "onceml"
+version = "0.1.1"
+description = ""
+authors = ["DJ <dujun@ruiking.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+typer = "^0.3.0"
+pendulum = "^2.1.0"
+mlflow = "^1.9.1"
+neptune-client = "^0.4.117"
+path = "^14.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+flake8 = "^3.8.3"
+black = {version = "^19.10b0", allow-prereleases = true}
+
+[tool.poetry.scripts]
+onceml = "onceml.onceml:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
