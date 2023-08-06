@@ -1,0 +1,3 @@
+[console_scripts]
+jiradata=jiradata.jiradata:cli
+
