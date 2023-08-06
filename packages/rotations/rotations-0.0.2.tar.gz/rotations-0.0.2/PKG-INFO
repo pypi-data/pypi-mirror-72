@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: rotations
+Version: 0.0.2
+Summary: Reference frame rotation sequences
+Home-page: https://pypi.org/project/rotations/
+License: MIT
+Keywords: euler,rotation,matrix
+Author: walchko
+Author-email: walchko@users.noreply.github.com
+Requires-Python: >=3.6
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: numpy
+Project-URL: Repository, https://github.com/MomsFriendlyRobotCompany/rotations
+Description-Content-Type: text/markdown
+
+# Rotations
+
+**Under construction**
+
+
+## References
+
+- [Euler_angles](https://en.wikipedia.org/wiki/Euler_angles)
+- [Rotation_formalisms_in_three_dimensions](https://en.wikipedia.org/wiki/Rotation_formalisms_in_three_dimensions)
+
