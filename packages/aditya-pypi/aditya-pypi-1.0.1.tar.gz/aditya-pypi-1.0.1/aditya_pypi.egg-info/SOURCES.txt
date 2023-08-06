@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+aditya_pypi.egg-info/PKG-INFO
+aditya_pypi.egg-info/SOURCES.txt
+aditya_pypi.egg-info/dependency_links.txt
+aditya_pypi.egg-info/entry_points.txt
+aditya_pypi.egg-info/requires.txt
+aditya_pypi.egg-info/top_level.txt
+hello_pypi/cli.py

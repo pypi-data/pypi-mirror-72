@@ -1,0 +1,3 @@
+[console_scripts]
+hello-pypi = hello_pypi.cli:main
+
