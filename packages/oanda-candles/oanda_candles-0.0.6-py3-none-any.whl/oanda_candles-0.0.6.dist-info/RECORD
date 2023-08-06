@@ -1,0 +1,12 @@
+oanda_candles/__init__.py,sha256=95n13xLEUeyK_AKXTX_UvbenaK0hm3gxXzgzYdo6Dek,171
+oanda_candles/candle.py,sha256=UpdXmYVfkK7IPA73_vIiYzJwPZ5tzjG6rmmik_8cgZE,3027
+oanda_candles/candle_requester.py,sha256=ldoudA86gA4U-qayA6cTX8R_ejVZnF7nIXJQ0dwZ_sI,3341
+oanda_candles/candle_sequence.py,sha256=4nHLLbVX0dMOQ774uuGM_wlpLrEdsieaZgaiKwALdo4,7192
+oanda_candles/gran.py,sha256=PonXXtdoNQzDp4vTYMxy1XpdEtZUltBzvhcoSiHAyFE,2332
+oanda_candles/gran_unit.py,sha256=DFGsYvB_xBoYAW9Y7SLu-ES6YQ-bvlCe38HMQngABMY,1518
+oanda_candles/ohlc.py,sha256=G5eYlD2mGxBQaBYgPSnGWJG_2NoULp6-11xr9tIJDyc,977
+oanda_candles/quote_kind.py,sha256=K9KmxNVEIZWh0LWFWO7YqOAsC0VEUM88QML8g14rwv4,689
+oanda_candles-0.0.6.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+oanda_candles-0.0.6.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+oanda_candles-0.0.6.dist-info/METADATA,sha256=0XHZfz__XV_xnmpE9B1fNC-_cBhrlVivrd9ukM5w53U,3389
+oanda_candles-0.0.6.dist-info/RECORD,,
