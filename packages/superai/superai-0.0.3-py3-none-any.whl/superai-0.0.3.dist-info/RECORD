@@ -1,0 +1,16 @@
+superai/__init__.py,sha256=tiVfgKlswRPaDMEy0gA7u8rveqEYZTA_kyB9lJ3J6Sc,21
+superai/cli.py,sha256=Uqjk88M-JqLSsC_gm1Et27cpkM_hWre-_KIUL6-uMOo,12137
+superai/client.py,sha256=U-uFiZ7TKyO-e6Xu8FkPFhlfHxc38O78xeW0LDCS4j0,1698
+superai/config.py,sha256=8fSD_DQhS24GYuITVBdMZU80BQeX4vv5PeGFpJhPxYI,195
+superai/exceptions.py,sha256=NDJ3NyajKRNTiKXW-qhGNemSrjd_ykCnQvnTo9zj6mU,460
+superai/apis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+superai/apis/auth.py,sha256=IhZ3Xowjw4l6_wEMClCOVls8aRiT6-IsfLoFloh0xck,489
+superai/apis/data.py,sha256=nrpAC1Pm7XHJXhQDCH9P0M1SUk_hq1cU1CoZJS2G9yU,4918
+superai/apis/ground_truth.py,sha256=vS9v-t9ZFURKQvccIJNk3-0xXeIyhn92sYx1_xsxsUQ,4419
+superai/apis/jobs.py,sha256=ULOJ07wx4a0pCFNvigiHga5A7i5zW21ycNsFk-LIRaE,8152
+superai-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+superai-0.0.3.dist-info/METADATA,sha256=hBg4mS1uFY7_RaRA43lBDvVjWKu_HcLEzneOkxhMq3w,1695
+superai-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+superai-0.0.3.dist-info/entry_points.txt,sha256=7Fp_VtHGwz-oacYaw3tXP_dTxHk9g3fBstj8KD2agv0,46
+superai-0.0.3.dist-info/top_level.txt,sha256=9t4NpR5fDTn5EszXp1LsFJtT7CaHnkyy1vFDaIKNlfs,8
+superai-0.0.3.dist-info/RECORD,,
