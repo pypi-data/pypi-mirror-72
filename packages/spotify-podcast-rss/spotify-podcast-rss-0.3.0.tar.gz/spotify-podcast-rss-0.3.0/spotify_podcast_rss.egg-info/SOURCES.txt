@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+spotify_podcast_rss.egg-info/PKG-INFO
+spotify_podcast_rss.egg-info/SOURCES.txt
+spotify_podcast_rss.egg-info/dependency_links.txt
+spotify_podcast_rss.egg-info/entry_points.txt
+spotify_podcast_rss.egg-info/requires.txt
+spotify_podcast_rss.egg-info/top_level.txt
+spr/__init__.py
+spr/cli.py
+spr/config.py
+spr/engine.py
+spr/wsgi.py
