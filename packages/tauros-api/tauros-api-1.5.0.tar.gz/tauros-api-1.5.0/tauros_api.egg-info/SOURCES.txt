@@ -1,0 +1,12 @@
+README.md
+setup.py
+tauros_api/__init__.py
+tauros_api/exceptions.py
+tauros_api/request.py
+tauros_api/response.py
+tauros_api.egg-info/PKG-INFO
+tauros_api.egg-info/SOURCES.txt
+tauros_api.egg-info/dependency_links.txt
+tauros_api.egg-info/top_level.txt
+tests/__init__.py
+tests/test_request_post.py
