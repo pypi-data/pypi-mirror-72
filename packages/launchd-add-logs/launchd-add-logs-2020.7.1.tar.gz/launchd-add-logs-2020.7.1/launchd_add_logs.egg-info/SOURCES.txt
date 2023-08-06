@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+launchd_add_logs.egg-info/PKG-INFO
+launchd_add_logs.egg-info/SOURCES.txt
+launchd_add_logs.egg-info/dependency_links.txt
+launchd_add_logs.egg-info/top_level.txt
+scripts/launchd-add-logs
