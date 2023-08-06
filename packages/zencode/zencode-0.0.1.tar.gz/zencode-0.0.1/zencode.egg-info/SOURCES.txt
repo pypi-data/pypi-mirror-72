@@ -1,0 +1,14 @@
+CHANGES.md
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+zencode.py
+zencode.egg-info/PKG-INFO
+zencode.egg-info/SOURCES.txt
+zencode.egg-info/dependency_links.txt
+zencode.egg-info/entry_points.txt
+zencode.egg-info/requires.txt
+zencode.egg-info/top_level.txt

@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: zencode
+Version: 0.0.1
+Summary: Z3-assisted x86 shellcode encoder
+Home-page: https://github.com/jasperla/zencoder
+Author: Jasper Lievisse Adriaanse
+Author-email: r+pypi@jasper.la
+License: ISC
+Description: # zencode
+        
+        z3-assisted x86 shellcode encoder 
+        
+        Currently it's a rather unpolished implementation with plenty of room for improvement.
+        
+        ## ToDo
+        
+        In no particular order:
+        
+        - alphanumeric encoding
+        - linting/style
+        - print resulting bytes (ready for usage) along with size, etc
+        - tests
+        - x86\_64 support
+        
+        
+        # 0.0.1
+        
+        Initial public release.
+        
+Keywords: z3,shellcode,x86 assembly
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Security
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
