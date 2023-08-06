@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hanzi2reading
+Version: 0.1.1
+Summary: Convert Mandarin text to Hanyu Pinyin, Zhuyin, and more, using swappable dictionary backends.
+Home-page: https://github.com/bdon/hanzi2reading
+Author: Brandon Liu
+Author-email: bdon@bdon.org
+License: BSD-2-Clause
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
