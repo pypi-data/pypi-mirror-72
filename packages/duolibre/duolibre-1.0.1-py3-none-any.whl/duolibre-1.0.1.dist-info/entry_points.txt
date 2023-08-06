@@ -1,0 +1,3 @@
+[console_scripts]
+duolibre = duolibre.duolibre:duolibre
+
