@@ -1,0 +1,328 @@
+#! /usr/bin/env python
+
+"""
+Command-line interface to xsec
+
+usage:
+  xsec [-h] {13000} pid1 pid2 (-i | -r FILE | -p PAR [PAR ...]) [-g PATH] [-w FILE]
+
+positional arguments:
+  {13000}               select centre-of-mass energy in GeV. This is intended
+                        for future code extensions; only 13000 GeV is
+                        currently supported.
+  pid1                  PDG particle code for the first produced sparticle
+  pid2                  PDG particle code for the second produced sparticle
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -g PATH, --gppath PATH
+                        path to the Gaussian process files. The default search
+                        path is ./gprocs.
+  -i, --show-input      show input parameters and usage examples for the
+                        process specified by pid1 and pid2
+  -r FILE, --slha-input FILE
+                        input SLHA file
+  -w FILE, --slha-output FILE
+                        output SLHA file
+  -p PAR [PAR ...], --parameters PAR [PAR ...]
+                        list of input parameters. Dimensionful parameters are
+                        given in GeV. Use the --show-input option to display
+                        the relevant input parameters for a process with
+                        sparticles pid1 and pid2
+
+Example with parameter input:
+  xsec 13000 1000021 1000001 --parameters 1000.0 1000.0 1000.0 --gppath /path/to/GPs
+
+Example with SLHA file input:
+  xsec 13000 1000021 1000001 --slha-input /path/to/SLHAfile --gppath /path/to/GPs
+
+Example to find the (order of) input parameters for a given process:
+  xsec 13000 1000021 1000001 --show-input
+
+Note that the command-line interface can only be used for a single production
+process at a time.
+"""
+
+from __future__ import print_function
+
+import os
+import sys
+import argparse
+
+# Import xsec, first assume we have pip installed it
+try:
+    import xsec
+# Someone is insisting on using our fine programme without pip
+# installing
+except ImportError:
+    # Our current absolute directory
+    absdir = os.path.dirname(os.path.abspath(__file__))
+    # Parent directory containing xsec
+    parent_dir = os.path.dirname(absdir)
+    sys.path.append(parent_dir)
+    import xsec
+
+
+#
+# Parse and check command line arguments
+#
+
+# Get the script name
+prog_name = os.path.basename(sys.argv[0])
+
+# Set up the argument parser
+parser = argparse.ArgumentParser(
+    prog=prog_name,
+    description="Command-line interface to xsec.",
+    formatter_class=argparse.RawDescriptionHelpFormatter,
+    epilog="""
+    * Example with parameter input:
+    \t xsec 13000 1000021 1000001 -p 1000.0 1000.0 1000.0 -g /path/to/GPs
+    * Example with SLHA file input:
+    \t xsec 13000 1000021 1000001 -r /path/to/SLHAfile -g /path/to/GPs
+    * Example to find the (order of) input parameters for a given process:
+    \t xsec 13000 1000021 1000001 -i\n
+    Note that the command-line interface can only be used for a single
+    production process at a time.
+    """,
+)
+
+parser.add_argument(
+    "-g",
+    "--gppath",
+    metavar="PATH",
+    default=os.path.join(os.getcwd(), "gprocs"),
+    type=str,
+    action="store",
+    required=False,
+    help="path to the Gaussian process files. The default path is "
+    "%(default)s.",
+    dest="gppath",
+)
+
+parser.add_argument(
+    "energy",
+    type=int,
+    choices=[13000],
+    action="store",
+    help="select centre-of-mass energy in GeV. This is intended for future "
+    "code extensions; only 13000 GeV is currently supported.",
+)
+
+parser.add_argument(
+    "pid1",
+    type=int,
+    action="store",
+    help="PDG particle code for the first produced sparticle",
+)
+
+parser.add_argument(
+    "pid2",
+    type=int,
+    action="store",
+    help="PDG particle code for the second produced sparticle",
+)
+
+parser.add_argument(
+    "-w",
+    "--slha-output",
+    metavar="FILE",
+    type=str,
+    action="store",
+    required=False,
+    help="SLHA file for output in terms of XSECTION blocks (SLHA3)",
+    dest="slha_output",
+)
+
+# Put the input options --slha-input and --parameters, as well as the
+# --show-input option, in a group for mutually exclusive arguments. Use
+# required=True since one of these arguments must be present.
+
+input_group = parser.add_mutually_exclusive_group(required=True)
+
+input_group.add_argument(
+    "-i",
+    "--show-input",
+    action="store_true",
+    required=False,
+    help="show input parameters and usage examples for the process specified "
+    "by pid1 and pid2",
+    dest="show_input",
+)
+
+input_group.add_argument(
+    "-r",
+    "--slha-input",
+    metavar="FILE",
+    type=str,
+    action="store",
+    required=False,
+    help="input SLHA file",
+    dest="slha_input",
+)
+
+input_group.add_argument(
+    "-p",
+    "--parameters",
+    metavar="PAR",
+    type=float,
+    nargs="+",
+    action="store",
+    required=False,
+    help="list of input parameters. Dimensionful parameters are given in GeV. "
+    "Use the --show-input option to display the relevant input "
+    "parameters for a given process.",
+    dest="params_input",
+)
+
+
+# Parse the arguments
+args = parser.parse_args()
+
+# Define a string that identifies the process, for easy printing
+process_str = (
+    "energy="
+    + str(args.energy)
+    + ", pid1="
+    + str(args.pid1)
+    + ", pid2="
+    + str(args.pid2)
+)
+
+# Check that the process is known and get the features list
+try:
+    features = xsec.features.get_features(args.pid1, args.pid2)
+except KeyError as e:
+    print(
+        "The chosen process (", process_str, ") is unknown.", sep="", end="\n"
+    )
+    xsec.list_all_xsec_processes()
+    sys.exit()
+
+# Get the number of features
+n_features = len(features)
+
+# If --show-input is passed, display input parameter list along with
+# and example command, then exit
+if args.show_input:
+    # All parameters are masses, unless stop/sbottom process:
+    # then last parameter should be a mixing angle
+    if any(
+        pid in xsec.parameters.ALL_GEN3_IDS for pid in (args.pid1, args.pid2)
+    ):
+        example_params = [str(1000.0) for i in range(n_features - 1)]
+        example_params.append(str(0.1))
+    else:
+        example_params = [str(1000.0) for i in range(n_features)]
+
+    # Some formatting to show the required input in a neat way
+    # features_list = xsec.features.get_features(args.pid1, args.pid2)
+    print("Selected process:")
+    print("  ", process_str, sep="")
+    print()
+    print("Parameters:")
+    print("  ", " ".join(features), sep="")
+    print()
+    print("Example usage, parameter input:")
+    print(
+        "  ",
+        sys.argv[0],
+        args.energy,
+        args.pid1,
+        args.pid2,
+        "--parameters",
+        " ".join(example_params),
+        "--gppath",
+        args.gppath,
+    )
+    print()
+    print("Example usage, SLHA file input:")
+    print(
+        "  ",
+        sys.argv[0],
+        args.energy,
+        args.pid1,
+        args.pid2,
+        "--slha-input",
+        "PATH-TO-SLHA-FILE",
+        "--gppath",
+        args.gppath,
+    )
+    print()
+    sys.exit()
+
+# Check which of --parameters and --slha-input is used for input
+if (args.params_input is None) and (args.slha_input is not None):
+    input_mode = "slha"
+elif (args.params_input is not None) and (args.slha_input is None):
+    input_mode = "params"
+else:
+    # This should never happen
+    raise RuntimeError(
+        "Either --parameters, --slha-input or --show-input must be used. If "
+        "you see this error it indicates a bug in the argument parsing."
+    )
+    sys.exit()
+
+# If parameter input is used, check that the number of given parameters
+# equals the number of features
+if input_mode == "params":
+    if n_features != len(args.params_input):
+        parser.print_usage()
+        print(
+            prog_name,
+            ": error: Wrong number of input parameters. This process (",
+            process_str,
+            ") requires ",
+            n_features,
+            " parameters to be set.",
+            sep="",
+            end=" ",
+        )
+        print(
+            "Use the --show-input flag to display the list of parameters and "
+            "usage examples.",
+            sep="",
+        )
+        sys.exit()
+
+# DEBUG
+# print('DEBUG: args.energy =',args.energy)
+# print('DEBUG: args.pid1 =',args.pid1)
+# print('DEBUG: args.pid2 =',args.pid2)
+# print('DEBUG: args.gppath =',args.gppath)
+# print('DEBUG: args.slha_input =',args.slha_input)
+# print('DEBUG: args.params_input =',args.params_input)
+# print('DEBUG: args.show_input =',args.show_input)
+# print('DEBUG: args.slha_output =',args.slha_output)
+
+
+############
+# Run xsec
+############
+
+# Set directory
+xsec.init(data_dir=args.gppath)  # run with default settings (no caching)
+
+# Set energy before loading processes
+xsec.set_energy(args.energy)
+
+# Load GP models for the specified process
+xsec.load_processes([(args.pid1, args.pid2)])
+
+# Set parameters, either from command-line input or from SLHA file
+if input_mode == "params":
+    for i, feature in enumerate(features):
+        xsec.set_parameter(feature, args.params_input[i])
+elif input_mode == "slha":
+    xsec.import_slha(args.slha_input)
+
+# Calculate cross section
+result = xsec.eval_xsection()
+
+# If SLHA output has been specified, write to file
+if args.slha_output is not None:
+    xsec.write_slha(args.slha_output, result)
+
+# Finalise
+xsec.finalise()
