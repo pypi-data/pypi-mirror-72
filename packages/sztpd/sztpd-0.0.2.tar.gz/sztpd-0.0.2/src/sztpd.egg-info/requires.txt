@@ -1,0 +1,14 @@
+six
+sqlalchemy
+sqlalchemy_utils
+pysqlite3
+cryptography
+yangson
+aiohttp==3.6.2
+basicauth
+pyasn1
+pyasn1-modules
+pem
+passlib
+requests
+certvalidator

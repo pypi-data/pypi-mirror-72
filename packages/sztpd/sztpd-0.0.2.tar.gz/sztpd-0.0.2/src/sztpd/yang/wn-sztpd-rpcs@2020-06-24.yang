@@ -1,0 +1,287 @@
+module wn-sztpd-rpcs {
+  yang-version 1.1;
+  namespace "https://watsen.net/sztpd-rpcs";
+  prefix sztpd-rpcs;
+
+  import ietf-inet-types {
+    prefix inet;
+    reference
+      "RFC 6991: Common YANG Data Types";
+  }
+  import ietf-crypto-types {
+    prefix ct;
+    reference
+      "Common YANG Data Types for Cryptography
+        - draft-ietf-netconf-crypto-types";
+  }
+  import wn-app {
+    prefix app;
+  }
+
+  organization
+    "Watsen Networks (https://watsen.net)";
+  description
+    "This module defines RPCs that are used by SZTPD to either
+     push data to or collect data from other systems.
+
+     Each RPC definition is conditional on a distinct 'feature'
+     statement, enabling servers to support just the subset of
+     callbacks desired.
+
+     Copyright (c) 2020 Watsen Networks.  All Rights Reserved.";
+
+  revision 2020-06-24 {
+    description
+      "Initial version";
+  }
+
+  feature authenticate-device-ownership {
+    description
+      "Indicates that the 'authenticate-device-ownership' RPC is supported.";
+  }
+
+  feature get-bootstrapping-data {
+    description
+      "Indicates that the 'get-bootstrapping-data' RPC is supported.";
+  }
+
+  feature get-conveyed-information {
+    description
+      "Indicates that the 'get-conveyed-information' RPC is supported.";
+  }
+
+  feature get-ownership-voucher {
+    description
+      "Indicates that the 'get-ownership-voucher' RPC is supported.";
+  }
+
+  identity authenticate-device-ownership {
+    base app:dynamic-callout-rpc;
+    description
+      "Identifies the 'wn-sztpd-rpcs:authenticate-device-ownership' RPC.";
+  }
+
+  identity get-bootstrapping-data {
+    base app:dynamic-callout-rpc;
+    description
+      "Identifies the 'wn-sztpd-rpcs:get-bootstrapping-data' RPC.";
+  }
+
+  identity get-conveyed-information {
+    base app:dynamic-callout-rpc;
+    description
+      "Identifies the 'wn-sztpd-rpcs:get-conveyed-information' RPC.";
+  }
+
+  identity get-ownership-voucher {
+    base app:dynamic-callout-rpc;
+    description
+      "Identifies the 'wn-sztpd-rpcs:get-ownership-voucher' RPC.";
+  }
+
+  rpc authenticate-device-ownership {
+    if-feature "authenticate-device-ownership";
+    description
+      "An RPC enabling the SZTPD to callout to another
+       system to confirm that the SZTPD (or tenant
+       therein) is the rightful owner for a list of devices
+       (i.e., a serial number).
+
+       In the case of an error, the RPC MUST return
+       the 'ietf-restconf:errors' structure defined
+       in Section 7.1 in RFC 8040.";
+    input {
+      leaf tenant {
+        type string;
+        mandatory true;
+      }
+      leaf-list serial-number {
+        type string;
+        min-elements 1;
+      }
+    }
+    output {
+      leaf-list result {
+        type enumeration {
+          enum success;
+          enum failure;
+        }
+        min-elements 1;
+      }
+    }
+  }
+
+  grouping common-device-input {
+    leaf serial-number {
+      type string;
+      mandatory true;
+      description
+        "The device's serial number, as extracted during its
+         authentication to the SZTPD.  The term 'serial-number'
+         is used, to be consistent with RFC 8572 and IEEE 802.1AR
+         terminology, but it may be any unique identifier.";
+      reference
+        "802.1AR: Secure Device Identity";
+    }
+    leaf source-ip-address {
+      type inet:ip-address;
+      mandatory true;
+      description
+        "The source IP address of the device's connection to SZTPD.
+         This may not be the device's real IP address if, for
+         instance, an intermediate device performed address
+         translation.";
+    }
+    anydata from-device {
+      description
+        "Contains the 'input' node provided by the device's
+         'get-bootstrapping-data' RPC request sent to SZTPD's
+         southbound interface, as per RFC 8572.
+
+         From RFC 8572, this node may contain the following possible
+         parameters: 'signed-data-preferred', 'hw-model', 'os-name',
+         'os-version', and 'nonce'.
+
+         Additionally, from draft-ietf-kwatsen-sztp-csr, this node
+         may also contain the parameters 'csr-support' and 'csr'.";
+      reference
+        "https://tools.ietf.org/html/draft-kwatsen-netconf-sztp-csr";
+    }
+    leaf identity-certificate {
+      type ct:cms;
+      description
+        "The device's identity certificate (e.g., IDevID).
+
+         This parameter is not 'mandatory true' as RFC 8572 allows
+         devices to optionally authenticate using an HTTP-level
+         authentication scheme (e.g., 'digest').
+
+         This node will be present whenever the device authenticates
+         using a client certificates.";
+    }
+  }
+
+  rpc get-bootstrapping-data {
+    if-feature "get-bootstrapping-data";
+    description
+      "An RPC for supplying a dynamic response to a device's
+       'get-bootstrapping-data' RPC.  This call is invoked
+       only for devices authenticated by the SZTPD.
+
+       Returns up to three CMS structures.  In essence,
+       removing SZTPD almost entirely from the processing
+       the request.
+
+       In the case of an error, the RPC MUST return
+       the 'ietf-restconf:errors' structure defined
+       in Section 7.1 in RFC 8040.";
+    input {
+      uses common-device-input;
+    }
+    output {
+      leaf conveyed-information {
+        type ct:cms;
+        mandatory true;
+        description
+          "An SZTP conveyed information artifact, as described in
+           Section 3.1 of RFC 8572.";
+        reference
+          "RFC 8572: Secure Zero Touch Provisioning (SZTP)";
+      }
+      leaf owner-certificate {
+        type ct:cms;
+        must '../ownership-voucher' {
+          description
+            "An ownership voucher must be present whenever an owner
+             certificate is presented.";
+        }
+        description
+          "An owner certificate artifact, as described in Section
+           3.2 of RFC 8572.  This leaf is optional because it is
+           only needed when the conveyed information artifact is
+           signed.";
+        reference
+          "RFC 8572: Secure Zero Touch Provisioning (SZTP)";
+      }
+      leaf ownership-voucher {
+        type ct:cms;
+        must '../owner-certificate' {
+          description
+            "An owner certificate must be present whenever an
+             ownership voucher is presented.";
+        }
+        description
+          "An ownership voucher artifact, as described by Section
+           3.3 of RFC 8572.  This leaf is optional because it is
+           only needed when the conveyed information artifact is
+           signed.";
+        reference
+          "RFC 8572: Secure Zero Touch Provisioning (SZTP)";
+      }
+    }
+  }
+
+  rpc get-conveyed-information {
+    if-feature "get-conveyed-information";
+    description
+      "An RPC for supplying a dynamic response to a device's
+       'get-bootstrapping-data' RPC, as defined in RFC 8572.
+
+       This call is invoked for devices after they have been
+       authenticated and it has been determined, via the policy
+       define in the 'response manager', that a dynamic
+       callout should be used to define the 'conveyed
+       information' to return to the device.
+
+       Just the 'conveyed-information' is returned, leaving
+       it to SZTPD to encapsulate it into a CMS structure,
+       which it may be additionally signed and/or encrypted,
+       as per configuration.
+
+       In the case of an error, the RPC MUST return
+       the 'ietf-restconf:errors' structure defined
+       in Section 7.1 in RFC 8040.";
+    input {
+      uses common-device-input;
+    }
+    output {
+      anydata conveyed-information {
+        mandatory true;
+        description
+          "The 'conveyed-information' yang-data structure, as
+           as described in Section 3.1 of RFC 8572.  The
+           structure MAY contain 'redirect-information' or
+           'onboarding-information'.";
+        reference
+          "RFC 8040: RESTCONF Protocol
+           RFC 8572: Secure Zero Touch Provisioning (SZTP)";
+      }
+    }
+  }
+
+  rpc get-ownership-voucher {
+    if-feature "get-ownership-voucher";
+    description
+      "An RPC for supplying a dynamic response to a device's
+       'get-bootstrapping-data' RPC.  This call is invoked
+       only for devices authenticated by the SZTPD.
+
+       In the case of an error, the RPC MUST return
+       the 'ietf-restconf:errors' structure defined
+       in Section 7.1 in RFC 8040.";
+    input {
+      uses common-device-input;
+    }
+    output {
+      leaf ownership-voucher {
+        type ct:cms;
+        mandatory true;
+        description
+          "An ownership voucher artifact, as described by Section
+           3.3 of RFC 8572.";
+        reference
+          "RFC 8572: Secure Zero Touch Provisioning (SZTP)";
+      }
+    }
+  }
+}

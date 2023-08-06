@@ -1,0 +1,254 @@
+module wn-sztpd-1 {
+  yang-version 1.1;
+  namespace "https://watsen.net/sztpd-1";
+  prefix sztpd-1;
+
+  import ietf-truststore {
+    prefix ts;
+    reference
+      "RFC XXXX: A YANG Data Model for a Truststore
+       - draft-ietf-netconf-trust-anchors (work in progress)";
+  }
+  import wn-app {
+    prefix wnapp;
+    reference
+      "https://watsen.net/products/common";
+  }
+  import wn-sztpd-0 {
+    prefix sztpd-0;
+    reference
+      "https://watsen.net/products/szptd";
+  }
+
+  organization
+    "Watsen Networks (https://watsen.net)";
+  description
+    "This module defines the data model for a bootstrap server
+     for single tenant use.
+
+     Copyright (c) 2020 Watsen Networks.  All Rights Reserved.";
+
+  revision 2020-06-24 {
+    description
+      "Initial version";
+  }
+
+  feature device-ownership-verification {
+    description
+      "Indicates that device ownership verification configuration
+       is supported.";
+  }
+
+  feature system-level-administration-disabled {
+    description
+      "Indicates that system-level administration is disabled.  Used
+       by multi-tenant administrators to limit some tenant-level
+       configuration.";
+  }
+
+  grouping generic-tenant-with-devices-grouping {
+    description
+      "Extends sztpd-0:tenant-extentions-grouping to also include
+       a *list* of devices, which sztpd-0 doesn't have and hence
+       couldn't be defined there.  Note that relative-paths are
+       used for context-free leafrefs.";
+    uses sztpd-0:tenant-extentions-grouping {
+      refine "owner-certificates/owner-certificate/with-or-without-pki/with-pki/with-pki/local-or-keystore/local-keystore" {
+        if-feature "not system-level-administration-disabled";
+      }
+    }
+    container devices {
+      list device {
+        key "serial-number";
+        uses sztpd-0:device-grouping {
+          augment "response-manager/matched-response/response/response-handler/use-dynamic-callout/dynamic-callout" {
+            if-feature "sztpd-0:artifact-callbacks-implemented";
+            leaf reference {
+              type leafref {
+                path "../../../../../../../dynamic-callouts/dynamic-callout/name";
+              }
+            }
+          }
+          augment "response-manager/matched-response/response/response-handler/managed-response/conveyed-information/conveyed-information-handler/use-dynamic-callout/dynamic-callout" {
+            leaf reference {
+              type leafref {
+                path "../../../../../../../../dynamic-callouts/dynamic-callout/name";
+              }
+            }
+          }
+          augment "response-manager/matched-response/response/response-handler/managed-response/conveyed-information/conveyed-information-handler/cms-information/cms-information/local-or-reference" {
+            if-feature "sztpd-0:signed-managed-data-implemented";
+            if-feature "sztpd-0:onboarding-supported";
+            case reference {
+              leaf reference {
+                type leafref {
+                  path "../../../../../../../../conveyed-information-responses/cms-information-response/name";
+                }
+              }
+            }
+          }
+          augment "response-manager/matched-response/response/response-handler/managed-response/conveyed-information/conveyed-information-handler/redirect-information/redirect-information/local-or-reference" {
+            case reference {
+              leaf reference {
+                type leafref {
+                  path "../../../../../../../../conveyed-information-responses/redirect-information-response/name";
+                }
+              }
+            }
+          }
+          augment "response-manager/matched-response/response/response-handler/managed-response/conveyed-information/conveyed-information-handler/onboarding-information/onboarding-information/local-or-reference" {
+            if-feature "sztpd-0:onboarding-supported";
+            case reference {
+              leaf reference {
+                type leafref {
+                  path "../../../../../../../../conveyed-information-responses/onboarding-information-response/name";
+                }
+              }
+            }
+          }
+          augment "response-manager/matched-response/response/response-handler/managed-response/conveyed-information/conveyed-information-handler/redirect-information/redirect-information/local-or-reference/local/local-definition/redirect-information" {
+            if-feature "sztpd-0:local-definitions-information-implemented";
+            leaf-list bootstrap-server {
+              type leafref {
+                path "../../../../../../../../../../bootstrap-servers/bootstrap-server/name";
+              }
+              min-elements 1;
+              ordered-by user;
+            }
+          }
+          augment "response-manager/matched-response/response/response-handler/managed-response/conveyed-information/conveyed-information-handler/onboarding-information/onboarding-information/local-or-reference/local/local-definition/onboarding-information" {
+            if-feature "sztpd-0:local-definitions-information-implemented";
+            if-feature "sztpd-0:onboarding-supported";
+            leaf boot-image {
+              type leafref {
+                path "../../../../../../../../../../boot-images/boot-image/name";
+              }
+              mandatory true;
+              description
+                "A reference to the image file (and associated
+                 information) that bootstrapping devices
+                 should use.";
+            }
+            leaf pre-configuration-script {
+              type leafref {
+                path "../../../../../../../../../../scripts/pre-configuration-script/name";
+              }
+            }
+            leaf configuration {
+              type leafref {
+                path "../../../../../../../../../../configurations/configuration/name";
+              }
+            }
+            leaf post-configuration-script {
+              type leafref {
+                path "../../../../../../../../../../scripts/post-configuration-script/name";
+              }
+            }
+          }
+          augment "response-manager/matched-response/response/response-handler/managed-response/owner-certificate" {
+            if-feature "sztpd-0:signed-managed-data-implemented";
+            leaf certificate-reference {
+              description
+                "A reference to the owner certificate to return.";
+              type leafref {
+                path "../../../../../../../owner-certificates/owner-certificate/name";
+              }
+              mandatory true;
+            }
+          }
+          augment "response-manager/matched-response/response/response-handler/managed-response/ownership-voucher/voucher-access/dynamic-voucher/webhook/transport/https/https/tls-client-parameters/server-authentication/ca-certs/local-or-truststore" {
+            if-feature "sztpd-0:signed-managed-data-implemented";
+            case local-truststore {
+              leaf local-truststore-reference {
+                if-feature "ts:certificates";
+                type leafref {
+                  path "../../../../../../../../../../../../truststore/certificate-bags/certificate-bag/name";
+                }
+                mandatory true;
+                description
+                  "A reference to set of trust anchors that exists
+                   in the local truststore (not /ts:truststore).";
+              }
+            }
+          }
+          augment "response-manager/matched-response/response/response-handler/managed-response/ownership-voucher/voucher-access/dynamic-voucher/webhook/transport/https/https/tls-client-parameters/server-authentication/ee-certs/local-or-truststore" {
+            if-feature "sztpd-0:signed-managed-data-implemented";
+            case local-truststore {
+              leaf local-truststore-reference {
+                if-feature "ts:certificates";
+                type leafref {
+                  path "../../../../../../../../../../../../truststore/certificate-bags/certificate-bag/name";
+                }
+                mandatory true;
+                description
+                  "A reference to set of trust anchors that exists
+                   in the local truststore (not /ts:truststore).";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  uses wnapp:single-tenant-app-grouping {
+    augment "preferences" {
+      uses sztpd-0:device-ownership-verification-prefs-grouping;
+    }
+    augment "preferences/system/features" {
+      uses sztpd-0:prefs-system-features-grouping;
+    }
+    augment "preferences/storage-management" {
+      if-feature "wnapp:storage-reclamation-implemented";
+      uses sztpd-0:prefs-storage-management-grouping;
+    }
+    refine "keystore" {
+      if-feature "not system-level-administration-disabled";
+    }
+    refine "transport" {
+      if-feature "not system-level-administration-disabled";
+    }
+    refine "transport/listen" {
+      must 'endpoint/use-for = "native-interface"' {
+        error-message "There must be at least one endpoint presenting the native API.";
+      }
+    }
+    augment "transport/listen/endpoint" {
+      description
+        "Augments in flags indicating which interfaces the RESTCONF
+         server instance supports.  Either one endpoint supporting
+         both interfaces, or two endpoints, each supporting one of
+         the two interfaces, must be configured.
+
+         A single RESTCONF server instance that supports both
+         interfaces may be desirable when SZTPD
+         is attached to a single network.
+
+         Multiple RESTCONF server instances may be desirable when
+         SZTPD is attached to multiple networks.";
+      leaf-list use-for {
+        min-elements 1;
+        max-elements 1;
+        type enumeration {
+          enum native-interface;
+          enum tenant-interface;
+          enum rfc8572-interface;
+        }
+      }
+    }
+  }
+  uses sztpd-0:device-types-grouping;
+  uses generic-tenant-with-devices-grouping {
+    augment "devices/device" {
+      leaf device-type {
+        type leafref {
+          path "/device-types/device-type/name";
+          require-instance false;
+        }
+        mandatory true;
+        description
+          "The type of device this device is.";
+      }
+    }
+  }
+}

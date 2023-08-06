@@ -1,0 +1,101 @@
+module wn-sztpd-x {
+  yang-version 1.1;
+  namespace "https://watsen.net/sztpd-x";
+  prefix sztpd-x;
+
+  import wn-app {
+    prefix wnapp;
+    reference
+      "https://watsen.net/products/common";
+  }
+  import wn-sztpd-0 {
+    prefix sztpd-0;
+    reference
+      "https://watsen.net/products/szptd";
+  }
+  import wn-sztpd-1 {
+    prefix sztpd-1;
+    reference
+      "https://watsen.net/products/szptd";
+  }
+
+  organization
+    "Watsen Networks (https://watsen.net)";
+  description
+    "This module defines the data model for a bootstrap server
+     for multi-tenant use.
+
+     Copyright (c) 2020 Watsen Networks.  All Rights Reserved.";
+
+  revision 2020-06-24 {
+    description
+      "Initial version";
+  }
+
+  feature device-ownership-verification {
+    description
+      "Indicates that device ownership verification is implemented
+       at the multi-tenant level (not at the per-tenant level).";
+  }
+
+  uses sztpd-0:device-types-grouping;
+  uses wnapp:multi-tenant-app-grouping {
+    augment "preferences" {
+      uses sztpd-0:device-ownership-verification-prefs-grouping {
+        refine "device-ownership-verification" {
+          if-feature "sztpd-x:device-ownership-verification";
+          if-feature "not sztpd-1:device-ownership-verification";
+        }
+      }
+    }
+    augment "preferences/system/features" {
+      uses sztpd-0:prefs-system-features-grouping;
+    }
+    refine "transport/listen" {
+      must 'endpoint/use-for = "native-interface"' {
+        error-message "There must be at least one endpoint presenting the native API.";
+      }
+    }
+    augment "transport/listen/endpoint" {
+      description
+        "Augments in flags indicating which interfaces the RESTCONF
+         server instance supports.  Either one endpoint supporting
+         both interfaces, or two endpoints, each supporting one of
+         the two interfaces, must be configured.
+
+         A single RESTCONF server instance that supports both
+         interfaces may be desirable when SZTPD
+         is attached to a single network.
+
+         Multiple RESTCONF server instances may be desirable when
+         SZTPD is attached to multiple networks.";
+      leaf-list use-for {
+        min-elements 1;
+        max-elements 1;
+        type enumeration {
+          enum native-interface;
+          enum tenant-interface;
+          enum rfc8572-interface;
+        }
+      }
+    }
+    augment "tenants/tenant" {
+      uses sztpd-1:generic-tenant-with-devices-grouping {
+        augment "devices/device" {
+          leaf device-type {
+            type leafref {
+              path "/device-types/device-type/name";
+            }
+            mandatory true;
+            description
+              "The type of device this device is.";
+          }
+        }
+      }
+    }
+    augment "tenants/tenant/preferences/storage-management" {
+      if-feature "wnapp:storage-reclamation-implemented";
+      uses sztpd-0:prefs-storage-management-grouping;
+    }
+  }
+}

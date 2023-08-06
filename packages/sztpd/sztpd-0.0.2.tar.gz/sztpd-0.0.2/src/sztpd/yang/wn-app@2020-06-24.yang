@@ -1,0 +1,1226 @@
+module wn-app {
+  yang-version 1.1;
+  namespace "https://watsen.net/wnapp";
+  prefix wnapp;
+
+  import ietf-yang-types {
+    prefix yang;
+    reference
+      "RFC 6991: Common YANG Data Types";
+  }
+  import ietf-inet-types {
+    prefix inet;
+    reference
+      "RFC 6991: Common YANG Data Types";
+  }
+  import iana-crypt-hash {
+    prefix ianach;
+    reference
+      "RFC 7317: A YANG Data Model for System Management";
+  }
+  import ietf-netconf-acm {
+    prefix nacm;
+    reference
+      "RFC 8341: Network Configuration Access Control Model";
+  }
+  import ietf-truststore {
+    prefix ts;
+    reference
+      "RFC XXXX: A YANG Data Model for a Truststore
+         - draft-ietf-netconf-trust-anchors (work in progress)";
+  }
+  import ietf-keystore {
+    prefix ks;
+    reference
+      "RFC XXXX: A YANG Data Model for a Keystore
+         - draft-ietf-netconf-keystore (work in progress)";
+  }
+  import ietf-tcp-client {
+    prefix tcpc;
+    reference
+      "RFC XXXX: YANG Groupings for TCP Clients and TCP Servers
+         - draft-ietf-netconf-tcp-client-server (work in progress)";
+  }
+  import ietf-tls-server {
+    prefix tlss;
+    reference
+      "RFC XXXX: YANG Groupings for TLS Clients and TLS Servers
+         - draft-ietf-netconf-tls-client-server (work in progress)";
+  }
+  import ietf-http-client {
+    prefix httpc;
+    reference
+      "RFC XXXX: YANG Groupings for HTTP Clients and HTTP Servers
+         - draft-ietf-netconf-http-client-server (work in progress)";
+  }
+  import ietf-restconf-client {
+    prefix rcc;
+    reference
+      "RFC XXXX: RESTCONF Client and Server Models
+         - draft-ietf-netconf-restconf-client-server (work in progress)";
+  }
+  import ietf-restconf-server {
+    prefix rcs;
+    reference
+      "RFC XXXX: RESTCONF Client and Server Models
+         - draft-ietf-netconf-restconf-client-server (work in progress)";
+  }
+
+  organization
+    "Watsen Networks (https://watsen.net)";
+  description
+    "This module defines groupings that can be used to define the
+     data model for single or multi tenant applications using the
+     'wnapp' Python-based RESTCONF server infrasrature.
+
+     Copyright (c) 2020 Watsen Networks.  All Rights Reserved.";
+
+  revision 2020-06-24 {
+    description
+      "Initial version";
+  }
+
+  identity dynamic-callout-rpc {
+    description
+      "The base for identities for various RPCs
+       supported by the application.  Consuming
+       modules may define additional identities
+       as needed.";
+  }
+
+  feature webhook-based-callouts {
+    description
+      "Indicates that the server supports webhook-based callouts.";
+  }
+
+  feature http-based-webhooks {
+    description
+      "Indicates that the server supports webhooks without TLS.
+       Non TLS-based RESTCONF-clients isn't supported here for
+       convenience during development.";
+  }
+
+  feature time-based-alerts-implemented {
+    description
+      "Indicates that the server supports time-based callbacks and alarms.";
+  }
+
+  feature account-activation-expiration-implemented {
+    if-feature "time-based-alerts-implemented";
+    description
+      "Indicates that the SZTPD supports activation-axirations.";
+  }
+
+  feature password-aging-implemented {
+    if-feature "time-based-alerts-implemented";
+    description
+      "Indicates that the SZTPD supports password-aging.";
+  }
+
+  feature certificate-expiration-implemented {
+    if-feature "time-based-alerts-implemented";
+    description
+      "Indicates that the SZTPD supports certificate-expiration.";
+  }
+
+  feature audit-log-extras-implemented {
+    description
+      "Indicates that the SZTPD supports storing 'extras'
+       (i.e., read-only requests and client-input payloads).";
+  }
+
+  feature storage-reclamation-implemented {
+    if-feature "time-based-alerts-implemented";
+    description
+      "Indicates that the SZTPD supports garbage collecting
+       lingering items.";
+  }
+
+  feature security-protections-implemented {
+    description
+      "Indicates that the SZTPD supports protecting admin
+       accounts.";
+  }
+
+  extension ref-stats {
+    description
+      "Indicates that this node reports reference statistics.  The ref-stats' indicates
+       that reference tracking should be enabled for the node.  In particular, that
+       leafrefs to the object (or any descendant node of the object, e.g., a list's
+       key field) should be tracked.
+
+       Reference tracking includes both counting the total number of references as
+       well as updating a timestamp wherever a reference is added or removed.
+
+       The count and timestamp values are reported via the 'auto-reclamation-grouping' as
+       opstate values, and used to determine when to send the 'unreferenced-node-lingering'
+       notification, and when to purge the node (and send the 'unreferenced-node-purged'
+       notification).
+      ";
+  }
+
+  extension globally-unique {
+    description
+      "Used only on 'list' key leaf nodes to indicate that, not only are they unique,
+       but they are globally unique.";
+  }
+
+  grouping amount-and-units-grouping {
+    leaf amount {
+      must '../units';
+      type uint16;
+    }
+    leaf units {
+      must '../amount';
+      type enumeration {
+        enum seconds;
+        enum minutes;
+        enum hours;
+        enum days;
+        enum weeks;
+        enum months;
+        enum years;
+      }
+    }
+  }
+
+  grouping purge-timeout-grouping {
+    description
+      "Specifies when data will be purged after having remained
+       unreferenced or, in the case of device records, inactive.
+
+       Prior to the data-type being purged, several data-type
+       specific 'lingering' notifications are sent.  The
+       schedule for when these warnings are sent is as follows:
+
+         - 1 month prior to expiration
+         - 2 weeks prior to expiration
+         - 1 week prior to expiration
+         - 3 days prior to expiration
+         - 2 days prior to expiration
+         - 1 day prior to expiration
+
+       When the data is purged, a data-type specific 'purged'
+       message is sent.  ";
+    uses amount-and-units-grouping {
+      refine "amount" {
+        default "3";
+      }
+      refine "units" {
+        default "months";
+      }
+    }
+  }
+
+  grouping auto-reclamation-grouping {
+    description
+      "A grouping that enables a referenceable item to indicate
+       how many times it is currently referenced and when the
+       last time it was referenced (if ever).";
+    grouping last-referenced-grouping {
+      leaf last-referenced {
+        type union {
+          type yang:date-and-time;
+          type enumeration {
+            enum never;
+          }
+        }
+        mandatory true;
+        description
+          "Indicate when this item was last referenced, if ever.";
+      }
+    }
+
+    container reference-statistics {
+      wnapp:ref-stats;
+      config false;
+      leaf reference-count {
+        type uint32;
+        mandatory true;
+        description
+          "The number of current references to this referenceable item.";
+      }
+      uses last-referenced-grouping;
+    }
+    notification unreferenced-node-lingering {
+      if-feature "storage-reclamation-implemented";
+      uses last-referenced-grouping;
+    }
+    notification unreferenced-node-purged {
+      if-feature "storage-reclamation-implemented";
+      uses last-referenced-grouping;
+    }
+  }
+
+  grouping plugin-function-ref-grouping {
+    description
+      "A chamelion grouping used to identify a function
+       inside of a plugin.";
+    leaf plugin {
+      mandatory true;
+      type leafref {
+        path "/preferences/system/plugins/plugin/name";
+      }
+      description
+        "A reference to the plugin that contains the function.";
+    }
+    leaf function {
+      mandatory true;
+      type leafref {
+        path "/preferences/system/plugins/plugin["
+           + "name = current()/../plugin]/functions/function/name";
+      }
+      description
+        "A reference to the function.";
+    }
+  }
+
+  grouping webhook-grouping {
+    description
+      "A chamelion grouping for a single webhook.";
+    leaf encoding {
+      description
+        "Specifies the encoding to use for the invocation.
+         The response (if any) MUST use the same encoding.";
+      default "json";
+      type enumeration {
+        enum xml;
+        enum json;
+      }
+    }
+    uses rcc:restconf-client-initiate-stack-grouping {
+      augment "transport" {
+        if-feature "http-based-webhooks";
+        case http {
+          description
+            "Non TLS-based RESTCONF-clients isn't supported by RFC 8040,
+             but supported (though protected by a feature statement) by
+             SZTPD just in case.";
+          container http {
+            description
+              "TCP client parameters.";
+            container tcp-client-parameters {
+              description
+                "TCP client parameters.";
+              uses tcpc:tcp-client-grouping {
+                refine "remote-port" {
+                  default "80";
+                }
+              }
+            }
+            container http-client-parameters {
+              description
+                "HTTP client parameters.";
+              uses httpc:http-client-grouping;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  grouping webhooks-grouping {
+    description
+      "A list of webhooks.
+
+       How the list is used is up to the application.  In some cases,
+       the list may be processed sequentially while, in other cases,
+       the list may be processed in parallel.";
+    list webhook {
+      key "name";
+      leaf name {
+        type string;
+        description
+          "An arbitrary name for this webhook.";
+      }
+      uses webhook-grouping;
+    }
+  }
+
+  grouping dynamic-callout-grouping {
+    description
+      "A chamelion grouping used to callout to some external
+       logic to perform some application-specific function.";
+    leaf rpc-supported {
+      mandatory true;
+      type identityref {
+        base dynamic-callout-rpc;
+      }
+      description
+        "Identifies the RPC this dynamic callout supports.
+         This enables references to specific dynamic callouts
+         elsewhere in the configuration, further preventing
+         possible misconfigurations.";
+    }
+    choice callout-type {
+      mandatory true;
+      case use-callback {
+        description
+          "The external logic is implemented as a callback
+           (i.e., a plugin linked into the Python executable).";
+        container callback {
+          uses plugin-function-ref-grouping;
+        }
+      }
+      case use-webhooks {
+        if-feature "webhook-based-callouts";
+        description
+          "The external logic is implemented as a webhook
+           (i.e., an RPC call to a remote RESTCONF server).";
+        container webhooks {
+          description
+            "The list of webhooks are configurable for HA purposes
+             only.  The entries are tried in order until either a
+             response is obtained or the end of the list is reached,
+             unless the 'round-robin' flag is set, in which case
+             the logic will loop until the 'timeout' is reached.";
+          uses webhooks-grouping;
+          container round-robin {
+            presence "Indicates that looping behavior is desired.
+                      Present so that the 'timeout' node's mandatory
+                      true doesn't imply that round-robin must be
+                      configured.";
+            uses amount-and-units-grouping {
+              refine "amount" {
+                mandatory true;
+              }
+              refine "units" {
+                mandatory true;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  grouping dynamic-callouts-grouping {
+    description
+      "A chamelion grouping for a list of dynamic callouts.";
+    list dynamic-callout {
+      key "name";
+      leaf name {
+        type string;
+        description
+          "An arbitrarary name for this dynamic callout.";
+      }
+      uses dynamic-callout-grouping;
+    }
+  }
+
+  grouping system-prefs-grouping {
+    container system {
+      nacm:default-deny-write;
+      description
+        "Preference settings for the system.";
+      leaf hostname {
+        type inet:host;
+        description
+          "The hostname (recommended) or IP address for the northbound
+           interface URLs used in the account-activation and password-aging
+           emails.";
+      }
+      leaf email-from-address {
+        type string;
+        default "SZTPD Administrator <root@$SZTP-SERVER-ADDRESS>";
+        description
+          "The 'from' email address to use when sending emails, such
+           as when an administrator password is expiring or when the
+           account is disabled due to is (potentially) being hacked.";
+      }
+      container security {
+        if-feature "security-protections-implemented";
+        container brute-force-attack-protection {
+          container same-ip-testing {
+            container max-num-consecutive-failures {
+              presence "Indicates that consecutive-failure testing is enabled.";
+              description
+                "Specifies the number of consecutive login failures
+                 from the same IP address in a period of time before
+                 that IP address is blocked.";
+              leaf how-many-allowed {
+                type uint16;
+                default "20";
+              }
+              container auto-resets-allowed {
+                presence "Indicates that auto-reset is enabled.";
+                container reset-timeout {
+                  uses amount-and-units-grouping {
+                    refine "amount" {
+                      default "5";
+                    }
+                    refine "units" {
+                      default "minutes";
+                    }
+                  }
+                }
+              }
+            }
+            container max-num-usernames {
+              presence "Indicates that max-username limits are enabled.";
+              description
+                "Specifies the number of usernames that can be used in
+                 unsuccessful login attempts from the same IP address
+                 in a period of time before that IP address is blocked.";
+              leaf how-many-allowed {
+                type uint16;
+                default "3";
+              }
+              container over-what-period-of-time {
+                uses amount-and-units-grouping {
+                  refine "amount" {
+                    default "5";
+                  }
+                  refine "units" {
+                    default "minutes";
+                  }
+                }
+              }
+              container auto-resets-allowed {
+                presence "Indicates that auto-reset is enabled.";
+                container reset-timeout {
+                  uses amount-and-units-grouping {
+                    refine "amount" {
+                      default "5";
+                    }
+                    refine "units" {
+                      default "minutes";
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        container hacked-account-protection {
+          container multi-ip-testing {
+            container same-username-limit {
+              presence "Indicates that cross-IP same-username limits
+                        are enabled.";
+              description
+                "Specifies the maximum number of unique IP addresses
+                 that can login using the same username in a given
+                 span of time before that account is disabled.";
+              leaf how-many-ip-allowed {
+                type uint16;
+                default "20";
+              }
+              container over-what-period-of-time {
+                uses amount-and-units-grouping {
+                  refine "amount" {
+                    default "5";
+                  }
+                  refine "units" {
+                    default "minutes";
+                  }
+                }
+              }
+              container auto-resets-allowed {
+                presence "Indicates that auto-reset is enabled.";
+                container reset-timeout {
+                  uses amount-and-units-grouping {
+                    refine "amount" {
+                      default "5";
+                    }
+                    refine "units" {
+                      default "minutes";
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      container features {
+        description
+          "Enables admin-configurable features to be enabled.
+
+           Application-level modules are expected to augment-in additional
+           features as needed here.";
+      }
+      container plugins {
+        description
+          "A list of known plugins.  Only configured plugins may be
+           used, thus enabling safe use by sub-tenents (if supported).";
+        list plugin {
+          description
+            "A plugin.";
+          key "name";
+          leaf name {
+            type string;
+            description
+              "The name of the plugin (e.g., 'foo.py').  There MUST be a
+               Python module having this name in the 'plugins' directory.";
+          }
+          container functions {
+            description
+              "A list of known functions.  Only configured functions
+               may be called, thus enabling safe use by sub-tenents
+               (if supported).";
+            list function {
+              description
+                "A function defined inside the plugin.  The function MUST
+                 be stateless and idempotent.";
+              key "name";
+              min-elements 1;
+              leaf name {
+                type string;
+                description
+                  "The name of the function (e.g., 'generate_foo').  There
+                   MUST be a Python function having this name in the plugin.";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  grouping generic-tenant-grouping {
+    description
+      "This grouping provides a data-model that every tenant (both top-level
+       and subtenants, if any) must have in order to work with the generic
+       RESTCONF server application infrafrastructure.
+
+       Application-level models MUST NOT use this grouping.  Application-
+       level models MUST instead use the 'single-tenant-app-grouping' or the
+       'multi-tenant-app-grouping' groupings.";
+    container preferences {
+      container admin-accounts {
+        nacm:default-deny-write;
+        description
+          "Preference settings for admin accounts.";
+        container new-account-verification {
+          description
+            "Specifies the content of the email sent to new administrators
+             to verify their accounts.  It is important to verify the
+             administrator's account as:
+
+               1) the email address is unique within the SZTPD's
+                  network, specifically, the Internet.
+
+               2) a properly working email address is important in order
+                  for an administrator to receive notifications regarding
+                  their password expiring or their account being disabled
+                  due to (potentially) being hacked.
+
+             The email includes an email that contains a temporary activation
+             URL.  If the temporary URL expires, an 'account activation
+             expired' email will be sent to the new administrator, and a
+             an 'admin-account-activation-expired' notification will be
+             delivered (via the 'receive-notification' RPC).  The 'resend-
+             account-activation' action can be used to have SZTPD
+             send a new account activation email.";
+          leaf subject {
+            type string;
+            default "SZTPD new account verification required.";
+          }
+          leaf cc {
+            type string;
+            default "$CREATOR-FULLNAME <CREATOR-EMAIL-ADDRESS>";
+            description
+              "Specifies the CC line on the verification email sent to
+               the new administrator.";
+          }
+          leaf body {
+            type string;
+            default "$ACCOUNT-FULLNAME,
+
+                     You are receiving this email because I created a new account
+                     for you on the SZTPD ($SZTP-SERVER-ADDRESS).   You
+                     account's login is \"$ACCOUNT-EMAIL-ADDRESS\".
+
+                     Please activate your account via the following URL:
+                     $VERIFICATION-URI (This URL expires in 48-hours).
+
+                     Note that I CC-ed myself on this email and you may contact
+                     me to verify the veracity of this email.
+
+                     Thanks,
+                     $CREATOR-FULLNAME
+                    ";
+            description
+              "The body of the email to send.  Only plain-text is supported.
+               variables that may be used include:
+
+                 CREATOR-EMAIL-ADDRESS: the login of the creator's account.
+                 CREATOR-FULLNAME: the fullname of the creator's account.
+                 VERIFICATION-URI: a random server-generated verification URL.
+                 SZTP-SERVER-ADDRESS: the address of the SZTPD.
+                 ACCOUNT-EMAIL-ADDRESS: the new account's login.
+                 ACCOUNT-FULLNAME: the 'fullname' of the new account.
+              ";
+          }
+        }
+        container passwords {
+          container strength-testing {
+            presence "Indicates that password-strength testing will be applied
+                      to new passwords.  Enabling this option disables the
+                      ability to new passwords to be created using an external
+                      hashing program; that is, they must be created using
+                      cleartext (e.g., '$0$').";
+            leaf min-length {
+              description
+                "Specifies the minimum number of characters";
+              type uint16;
+              default "16";
+            }
+          }
+          container aging-timeout {
+            if-feature "password-aging-implemented";
+            presence "Indicates that password aging is enabled.";
+            description
+              "How long after a password's 'last-modified' date until
+               the password is disabled.
+
+               Prior to the account being disabled, several warnings
+               are sent.  For each warning, a 'password-aging' email
+               is sent to the administrator and an 'admin-account-
+               password-aging' notification is to be sent.  The
+               schedule for the warnings is as follows:
+
+                 - 1 month prior to expiration
+                 - 2 weeks prior to expiration
+                 - 1 week prior to expiration
+                 - 3 days prior to expiration
+                 - 2 days prior to expiration
+                 - 1 day prior to expiration
+
+
+               When disabled, a 'disabled-account' email is sent to the
+               administrator and an 'admin-account-disabled'
+               notification is to be sent.";
+            uses amount-and-units-grouping {
+              refine "amount" {
+                default "1";
+              }
+              refine "units" {
+                default "years";
+              }
+            }
+          }
+          container reuse-limits {
+            if-feature "password-aging-implemented";
+            presence "Indicates that password-reuse limits are enabled.";
+            container reuse-timeout {
+              description
+                "An admin account may reuse a password after the specified
+                 amount of time has elapsed.";
+              uses amount-and-units-grouping {
+                refine "amount" {
+                  default "3";
+                }
+                refine "units" {
+                  default "years";
+                }
+              }
+            }
+          }
+        }
+        container inactivity-handling {
+          if-feature "storage-reclamation-implemented";
+          presence "Indicates that inactivity handling is enabled.";
+          container disable-timeout {
+            description
+              "Configures timeout for when an inactive (based on last
+               use of the NBI) administrator account is disabled.";
+            uses amount-and-units-grouping {
+              refine "amount" {
+                default "3";
+              }
+              refine "units" {
+                default "months";
+              }
+            }
+          }
+          container purge-timeout {
+            must '../disable-timeout' {
+              description
+                "An account should be disabled before it is purged.";
+            }
+            description
+              "Configures timeout after a disabled administrator
+               account is purged.";
+            uses purge-timeout-grouping;
+          }
+        }
+      }
+      container notification-delivery {
+        presence "Indicates that notification delivery is configured,
+                  which is recommended.  Present so that the 'reference'
+                  leaf's 'mandatory true' doesn't imply that notification
+                  delivery must be configured.";
+        description
+          "Configures how the application delivers its various
+           YANG-defined notifications.  ";
+        container dynamic-callout {
+          description
+            "A dynamic-callout to send notifications to.";
+          leaf reference {
+            mandatory true;
+            type leafref {
+              path "../../../../dynamic-callouts/dynamic-callout/name";
+            }
+          }
+        }
+      }
+      container storage-management {
+        if-feature "storage-reclamation-implemented";
+        nacm:default-deny-write;
+        description
+          "Configures various timeouts for automated storage management,
+           specifically gerbage collection for unused or abandoned items.
+
+           Note that the default purge timeout for all items is 3 months.
+           Assuming the default values are used, and a fully-configured
+           system remains completely dormant, all items would be purged
+           in 6 months (3 months to purge the device records, which
+           would then cause all the other item reference counts to go
+           to zero, and thus would be purged 3 months later).";
+        container truststore-certificates {
+          description
+            "Configures timeout for when unreferenced truststore
+             certificate are purged.";
+          uses purge-timeout-grouping;
+        }
+      }
+      container audit-log {
+        if-feature "storage-reclamation-implemented or audit-log-extras-implemented";
+        nacm:default-deny-write;
+        description
+          "Preference settings for an audit log that captures activity
+           in SZTPD's northbound and southbound interfaces.";
+        leaf store-read-only {
+          if-feature "audit-log-extras-implemented";
+          type boolean;
+          default "false";
+          description
+            "Indicates that the system should also persist 'HEAD' and
+             'GET' operations in the audit log.";
+        }
+        leaf store-input-payload {
+          if-feature "audit-log-extras-implemented";
+          type boolean;
+          default "false";
+          description
+            "Indicates that the system should also persist any input
+             data sent by the client.";
+        }
+        container purge-timeout {
+          if-feature "storage-reclamation-implemented";
+          description
+            "Configures timeout for when audit log records are purged.";
+          uses purge-timeout-grouping;
+        }
+      }
+    }
+    container admin-accounts {
+      nacm:default-deny-write;
+      description
+        "An unordered list of users authorized to access the northbound
+         interface (NBI).";
+      must 'admin-account/access = "unrestricted"' {
+        error-message "There must be at least one admin with unrestricted access.";
+      }
+      list admin-account {
+        key "email-address";
+        min-elements 1;
+        description
+          "A user authorized to access the northbound interface (NBI).";
+        leaf email-address {
+          wnapp:globally-unique;
+          type string;
+          description
+            "The administrator's email address.  Used both for account
+             login and for sending emails regarding their password expiring
+             or their account being disabled due to (potentially) being
+             hacked.";
+        }
+        leaf fullname {
+          type string;
+          description
+            "The administrator's full name (e.g. John Smith).";
+        }
+        leaf password {
+          nacm:default-deny-all;
+          type ianach:crypt-hash;
+          mandatory true;
+          description
+            "The password uses when logging into this bootstrap
+             server.  Only the hash of the password is stored in
+             the database.";
+        }
+        leaf password-last-modified {
+          type yang:date-and-time;
+          config false;
+          mandatory true;
+        }
+        leaf access {
+          type enumeration {
+            enum unrestricted {
+              description
+                "All access allowed.";
+            }
+            enum typical {
+              description
+                "All access except:
+                   * read-only access to /preferences
+                   * read-only access to /transport
+                   * no access to /admin-accounts
+                   * no access for all passwords and private keys
+                     in /users and /device-ownership-verification.
+
+                 Note that the 'nacm:default-deny-all' and
+                 'nacm:default-deny-write' annotations defines
+                 this distinction.";
+            }
+            enum minimal {
+              description
+                "Read-only access to all except:
+                   * no access to /preferences
+                   * no access to /transport
+                   * no access to /admin-accounts";
+            }
+          }
+          mandatory true;
+        }
+        action resend-activation-email {
+          description
+            "Can be used by an admin if another admin didn't activate
+             their account in time or allowed their password to expire.";
+        }
+        notification admin-account-activation-expired {
+          if-feature "account-activation-expiration-implemented";
+        }
+        notification admin-account-password-aging {
+          if-feature "password-aging-implemented";
+          leaf expiration-date {
+            type yang:date-and-time;
+            mandatory true;
+            description
+              "Specifies when the password is set to expire.";
+          }
+        }
+        notification admin-account-disabled {
+          if-feature "storage-reclamation-implemented";
+        }
+        notification admin-account-purged {
+          if-feature "storage-reclamation-implemented";
+        }
+      }
+    }
+    container audit-log {
+      config false;
+      description
+        "An audit log capturing all requests sent to any transport
+         interface and, in particular, if they were authorized.
+
+         Entries do not capture how the request was processed or
+         the nature of any response that may have been returned.
+
+         For multi-tenant installations, only entries generated by
+         clients bound to the view are returned.  This only impacts
+         mutli-tenant deployments in that the host-level audit-log
+         contains only entries made by host-level administrators
+         and, likewise, each tenant's audit logs contains only
+         entries from other administrators in that tenant account.
+         Host-level administrator changes to tenant level data
+         will appear only in the host's audit log.";
+      list log-entry {
+        leaf timestamp {
+          type yang:date-and-time;
+          mandatory true;
+          description
+            "When the event occurred.";
+        }
+        leaf source-ip {
+          type inet:ip-address;
+          mandatory true;
+          description
+            "The source IP address of the HTTP client, as it was
+             presented to SZTPD.  This IP address may not be
+             the client's real IP address, as intermediates may
+             have performed network address translation (NAT).";
+        }
+        leaf-list source-proxies {
+          type string;
+          min-elements 0;
+          description
+            "List of any intermediate proxies specified in the
+             HTTP header, per RFC 7239.";
+        }
+        leaf host {
+          type string;
+          mandatory true;
+          description
+            "The host reached.  The value is either via the HTTP
+             header 'Host' field or, if not present, the returned
+             by socket.gtfqdn().";
+        }
+        leaf method {
+          type enumeration {
+            enum UNKNOWN;
+            enum HEAD {
+              if-feature "audit-log-extras-implemented";
+            }
+            enum GET {
+              if-feature "audit-log-extras-implemented";
+            }
+            enum PUT;
+            enum POST;
+            enum PATCH;
+            enum DELETE;
+            enum OPTIONS;
+          }
+          mandatory true;
+          description
+            "The HTTP method used in the request.";
+        }
+        leaf path {
+          type string;
+          mandatory true;
+          description
+            "The relative URL requested by the request.";
+        }
+        anydata input {
+          if-feature "audit-log-extras-implemented";
+          description
+            "The payload of the input request, if any.";
+        }
+        leaf outcome {
+          type enumeration {
+            enum success;
+            enum failure;
+          }
+          mandatory true;
+          description
+            "Indicates if the request was authorized.";
+        }
+        leaf comment {
+          type string;
+          mandatory false;
+          description
+            "Additional information for unauthorized requests.
+
+             Note that clients only receive a '401 Unauthorized' response,
+             with no reason provided for why.  This field enables administrators
+             to see the 'why'.
+
+             Per security best practice, neither usernames nor passwords
+             are shown.";
+        }
+      }
+    }
+    container alarms {
+      if-feature "time-based-alerts-implemented";
+      config false;
+      description
+        "A list of current alarms.  The only way to clear an alarm is
+         to resolve the underlying issue causing the alarm (e.g., by
+         reissuing a certificate that is about to expire or deleting
+         an object that is about to be purged.";
+      list alarm {
+        leaf raised {
+          type yang:date-and-time;
+          mandatory true;
+          description
+            "When the alarm was raised.";
+        }
+        leaf issue {
+          type string;
+          mandatory true;
+          description
+            "A description of the issue that caused the alarm.";
+        }
+        leaf object {
+          type instance-identifier;
+          description
+            "A reference to the specific object having the issue.
+             This node is not 'mandatory true' as some alarms
+             may not regard any object in particular.";
+        }
+      }
+    }
+    container truststore {
+      nacm:default-deny-write;
+      description
+        "The truststore contains sets of X.509 certificates.";
+      uses ts:truststore-grouping {
+        augment "certificate-bags/certificate-bag" {
+          uses auto-reclamation-grouping;
+        }
+        augment "certificate-bags/certificate-bag/certificate" {
+          uses auto-reclamation-grouping;
+        }
+        augment "certificate-bags/certificate-bag/certificate/certificate-expiration" {
+          if-feature "certificate-expiration-implemented";
+        }
+      }
+    }
+    container keystore {
+      nacm:default-deny-write;
+      description
+        "The keystore contains a list of keys.";
+      uses ks:keystore-grouping {
+        augment "asymmetric-keys/asymmetric-key" {
+          uses auto-reclamation-grouping;
+        }
+        augment "asymmetric-keys/asymmetric-key/certificates/certificate" {
+          uses auto-reclamation-grouping;
+        }
+      }
+    }
+    container dynamic-callouts {
+      uses dynamic-callouts-grouping {
+        augment "dynamic-callout/callout-type/use-webhooks/webhooks/webhook/transport/https/https/tls-client-parameters/client-identity/auth-type/certificate/certificate/local-or-keystore" {
+          if-feature "webhook-based-callouts";
+          case local-keystore {
+            container local-keystore-reference {
+              leaf asymmetric-key {
+                type leafref {
+                  path "../../../../../../../../../../keystore/asymmetric-keys/asymmetric-key/name";
+                }
+                mandatory true;
+                description
+                  "A reference to an asymmetric key in the local keystore.";
+              }
+              leaf certificate {
+                type leafref {
+                  path "../../../../../../../../../../keystore/asymmetric-keys/"
+                     + "asymmetric-key[name = current()/../asymmetric-key]/"
+                     + "certificates/certificate/name";
+                }
+                mandatory true;
+                description
+                  "A reference to a specific certificate of the
+                   asymmetric key in the local keystore.";
+              }
+              description
+                "This grouping defines a reference to a specific certificate
+                 associated with an asymmetric key stored in the Keystore.";
+            }
+          }
+        }
+        augment "dynamic-callout/callout-type/use-webhooks/webhooks/webhook/transport/https/https/tls-client-parameters/server-authentication/ca-certs/local-or-truststore" {
+          if-feature "webhook-based-callouts";
+          case local-truststore {
+            if-feature "ts:certificates";
+            leaf local-truststore-reference {
+              type leafref {
+                path "../../../../../../../../../truststore/certificate-bags/certificate-bag/name";
+              }
+              description
+                "A reference to set of trust anchors that exists
+                 in the local truststore (not /ts:truststore).";
+            }
+          }
+        }
+        augment "dynamic-callout/callout-type/use-webhooks/webhooks/webhook/transport/https/https/tls-client-parameters/server-authentication/ee-certs/local-or-truststore" {
+          if-feature "webhook-based-callouts";
+          case local-truststore {
+            if-feature "ts:certificates";
+            leaf local-truststore-reference {
+              type leafref {
+                path "../../../../../../../../../truststore/certificate-bags/certificate-bag/name";
+              }
+              description
+                "A reference to set of trust anchors that exists
+                 in the local truststore (not /ts:truststore).";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  grouping single-tenant-app-grouping {
+    uses generic-tenant-grouping {
+      augment "preferences" {
+        uses system-prefs-grouping;
+      }
+    }
+    container transport {
+      description
+        "Transport settings for the northbound and southbound interfaces.";
+      must 'listen' {
+        error-message "The 'listen' container must be present.";
+        description
+          "The 'listen' container must be present.";
+      }
+      uses rcs:restconf-server-app-grouping {
+        augment "listen/endpoint/transport/https/https/tls-server-parameters/server-identity/auth-type/certificate/certificate/local-or-keystore" {
+          case local-keystore {
+            container reference {
+              must 'asymmetric-key and certificate';
+              leaf asymmetric-key {
+                type leafref {
+                  path "/keystore/asymmetric-keys/asymmetric-key/name";
+                }
+                description
+                  "A reference to an asymmetric key in the keystore.";
+              }
+              leaf certificate {
+                type leafref {
+                  path "/keystore/asymmetric-keys/asymmetric-key[name = current()/../asymmetric-key]/certificates/certificate/name";
+                }
+                description
+                  "A reference to a specific certificate of the
+                   asymmetric key in the keystore.";
+              }
+              description
+                "A reference to a certificate (and its associated
+                 asymmetric key) that exists in the local keystore (not
+                 /ks:keystore).";
+            }
+          }
+        }
+        augment "listen/endpoint/transport/https/https/tls-server-parameters/client-authentication/ca-certs/local-or-truststore" {
+          case local-truststore {
+            if-feature "ts:certificates";
+            if-feature "tlss:client-auth-config-supported";
+            leaf local-truststore-reference {
+              type leafref {
+                path "/truststore/certificate-bags/certificate-bag/name";
+              }
+            }
+            description
+              "A reference to a set of certificates in the truststore.";
+          }
+        }
+        augment "listen/endpoint/transport/https/https/tls-server-parameters/client-authentication/ee-certs/local-or-truststore" {
+          case local-truststore {
+            if-feature "ts:certificates";
+            if-feature "tlss:client-auth-config-supported";
+            leaf local-truststore-reference {
+              type leafref {
+                path "/truststore/certificate-bags/certificate-bag/name";
+              }
+            }
+            description
+              "A reference to a set of certificates in the truststore.";
+          }
+        }
+      }
+    }
+  }
+
+  grouping multi-tenant-app-mixin-grouping {
+    container tenants {
+      list tenant {
+        key "name";
+        leaf name {
+          type string;
+          description
+            "an arbitrary name for this tenant.";
+        }
+        uses generic-tenant-grouping;
+      }
+    }
+  }
+
+  grouping multi-tenant-app-grouping {
+    uses single-tenant-app-grouping;
+    uses multi-tenant-app-mixin-grouping;
+  }
+}

@@ -1,0 +1,50 @@
+module wn-app-rpcs {
+  yang-version 1.1;
+  namespace "https://watsen.net/app-rpcs";
+  prefix app-rpcs;
+
+  import wn-app {
+    prefix app;
+  }
+
+  organization
+    "Watsen Networks (https://watsen.net)";
+  description
+    "This module defines an RPC used to either to deliver notifications
+     (i.e., deined by YANG 'notification' statements) to the HTTP server
+     implementing the 'RPC'.  Note that the server need only implement
+     support for the 'POST' request (it does not have to implement all
+     of the RESTCONF protocol, as might be implied here).
+
+     Copyright (c) 2020 Watsen Networks.  All Rights Reserved.";
+
+  revision 2020-06-24 {
+    description
+      "Initial version";
+  }
+
+  feature send-notification {
+    description
+      "Indicates that the 'send-notification' RPC is supported.";
+  }
+
+  identity send-notification {
+    base app:dynamic-callout-rpc;
+    description
+      "Identifies the 'wn-app-rpcs:send-notification' RPC.";
+  }
+
+  rpc send-notification {
+    if-feature "send-notification";
+    description
+      "An RPC for receiving a 'notification', i.e., defined
+       by a 'notification' statement in a YANG module.
+
+       In the case of an error, the RPC MUST return
+       the 'ietf-restconf:errors' structure defined
+       in Section 7.1 in RFC 8040.";
+    input {
+      anydata notification;
+    }
+  }
+}
