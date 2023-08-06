@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ContactMechanics
+Version: 0.90.0
+Summary: Efficient contact mechanics using elastic half-space methods
+Home-page: UNKNOWN
+Author: Lars Pastewka
+Author-email: lars.pastewka@imtek.uni-freiburg.de
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5.0
