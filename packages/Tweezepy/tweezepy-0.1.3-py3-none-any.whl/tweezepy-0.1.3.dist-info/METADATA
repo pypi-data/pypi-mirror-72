@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: tweezepy
+Version: 0.1.3
+Summary: Single-molecule pulling analysis package
+Home-page: https://github.com/pypa/tweezepy
+Author: Ian Morgan
+Author-email: ilmorgan@ucsb.edu
+License: LICENSE.txt
+Project-URL: Source, https://github.com/ianlmorgan/tweezepy/
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: autograd
+
+# tweezepy
+This is [tweezepy](https://github.com/ianlmorgan/tweezepy), a package of single-molecule pulling experiment related analysis code.
+
+# Installation
+Clone repository onto local machine.
+
+Navigate to directory: 
+
+    cd path/to/tweezepy
+Install:
+
+    python setup.py install
+or using pip:
+
+    pip install .
+
+
+# Contents
+The `tweezepy` package includes the following modules:
+* 'smmcalibration' - tools to calculate and perform mle fits to the allan variance and power spectral density
+
+
+
