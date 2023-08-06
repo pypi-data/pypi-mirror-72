@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: interstate-love-song.SimpleWebserviceMapper
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Eric Hermelin, Simon Otter, Fredrik Brännbacka
+Author-email: eric.hermelin@ilpvfx.com, simon.otter@ilpvfx.com, fredrik.brannbacka@ilpvfx.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >3.6
+Requires-Dist: interstate-love-song (<3,>=2)
+
+UNKNOWN
+
+
