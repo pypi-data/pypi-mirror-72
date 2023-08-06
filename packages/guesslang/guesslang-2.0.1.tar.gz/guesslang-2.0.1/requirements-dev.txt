@@ -1,0 +1,10 @@
+# Tests runner
+pytest
+
+# Documentation
+Sphinx
+
+# Code checkers
+flake8
+mypy
+pylint
