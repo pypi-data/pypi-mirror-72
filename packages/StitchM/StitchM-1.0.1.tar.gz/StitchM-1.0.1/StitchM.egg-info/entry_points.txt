@@ -1,0 +1,3 @@
+[console_scripts]
+StitchM = stitch_m.scripts.commandline:main
+
