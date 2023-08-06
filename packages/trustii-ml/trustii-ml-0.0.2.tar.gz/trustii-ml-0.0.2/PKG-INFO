@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: trustii-ml
+Version: 0.0.2
+Summary: To add Trustii Class to Python Path
+Home-page: UNKNOWN
+Author: tiwars
+Author-email: mockinbird24@gmail.com
+License: UNKNOWN
+Description: To add TrustiiAggreatedModel to your pyhton path
+        
+        referece https://packaging.python.org/tutorials/packaging-projects/
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
