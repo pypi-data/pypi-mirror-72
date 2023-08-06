@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+metadata.json
+pyproject.toml
+setup.cfg
+setup.py
+rainbow_print/__init__.py
+rainbow_print/rainbow.py
+rainbow_print/singleton.py
+rainbow_print.egg-info/PKG-INFO
+rainbow_print.egg-info/SOURCES.txt
+rainbow_print.egg-info/dependency_links.txt
+rainbow_print.egg-info/requires.txt
+rainbow_print.egg-info/top_level.txt
