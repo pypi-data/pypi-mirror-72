@@ -1,0 +1,8 @@
+requirements.txt
+setup.py
+badge/__init__.py
+badge.egg-info/PKG-INFO
+badge.egg-info/SOURCES.txt
+badge.egg-info/dependency_links.txt
+badge.egg-info/requires.txt
+badge.egg-info/top_level.txt
