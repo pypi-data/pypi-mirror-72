@@ -1,0 +1,13 @@
+pymeshfix-0.14.0.dist-info/RECORD,,
+pymeshfix-0.14.0.dist-info/WHEEL,sha256=kRpTOiUzoWO2GDfCevceK0ME-mjr5hdBNCWO78h60mA,112
+pymeshfix-0.14.0.dist-info/METADATA,sha256=Cm2kmXltZxy6BKBTAYNALiAvIhySmmUUSRcVMSAMnO8,6503
+pymeshfix-0.14.0.dist-info/top_level.txt,sha256=UwkbgnJw1YWdCJLKz78XfFSiG0jitpw5mLOQDA7V9a4,29
+pymeshfix-0.14.0.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+pymeshfix/__init__.py,sha256=Sc8appvhjeoFX8Q22uubkCs7iE-itJ4xMQ3JPYePPFQ,106
+pymeshfix/_meshfix.cpython-36m-x86_64-linux-gnu.so,sha256=bf-3980zFVlE9y42Es0fMLvfvnw2in9at8IBzaXoRgA,3679216
+pymeshfix/_version.py,sha256=wHaP5UIfvt8bJNBdnpZ-8eg4hGzwvZsi650WVSDL0Pc,71
+pymeshfix/meshfix.py,sha256=LFjHVGsR5tip4SILREtclp0jowKZJDBXP-dHxZpsaXQ,6159
+pymeshfix/examples/fix.py,sha256=mFtrhUCcal3Ptg61ABKcIQLW1SiQLLLiOGwpNkC8MRs,1619
+pymeshfix/examples/planar_mesh.ply,sha256=HC9H3crzIFGsObW2CnoaO5qf8MpA6tshhyih9ArjtSY,50280
+pymeshfix/examples/StanfordBunny.ply,sha256=BK3gkor-PzB4Uby3-pMtb5N119_4QyYVyBBYKCCd6z8,1897462
+pymeshfix/examples/__init__.py,sha256=ggQzVOqWHHGJlOcbr0XTefGu5ncP1vfwvK2BEy53C5s,240
