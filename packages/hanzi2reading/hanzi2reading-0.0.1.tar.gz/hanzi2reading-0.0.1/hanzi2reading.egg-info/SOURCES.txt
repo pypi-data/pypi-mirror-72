@@ -1,0 +1,11 @@
+README.md
+setup.py
+bin/hanzi2reading
+hanzi2reading/__init__.py
+hanzi2reading/create_db.py
+hanzi2reading/read_db.py
+hanzi2reading/trie.py
+hanzi2reading.egg-info/PKG-INFO
+hanzi2reading.egg-info/SOURCES.txt
+hanzi2reading.egg-info/dependency_links.txt
+hanzi2reading.egg-info/top_level.txt
