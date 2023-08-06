@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: fah_api
+Version: 0.1
+Summary: A python3 library for controlling Folding@Home clients
+Home-page: https://github.com/fraterrisus/fah-api-python
+Author: Ben Cordes
+Author-email: cordes.ben@gmail.com
+License: MIT
+Download-URL: https://github.com/fraterrisus/fah-api-python/archive/v0.1.tar.gz
+Description: UNKNOWN
+Keywords: foldingathome
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Home Automation
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
