@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cloudflow
+Version: 0.0.1
+Summary: AWS DAGs utility
+Home-page: https://github.com/victormpa/cloudflow
+Author: Victor Martins
+Author-email: victor.martins.dpaula@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+
+UNKNOWN
+
+
