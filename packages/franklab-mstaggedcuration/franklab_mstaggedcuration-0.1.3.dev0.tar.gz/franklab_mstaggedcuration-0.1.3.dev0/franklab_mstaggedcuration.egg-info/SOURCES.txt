@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+franklab_mstaggedcuration/__init__.py
+franklab_mstaggedcuration/p_add_curation_tags.py
+franklab_mstaggedcuration/p_merge_burst_parents.py
+franklab_mstaggedcuration/tagged_curation.mp
+franklab_mstaggedcuration/tagged_curation.py
+franklab_mstaggedcuration.egg-info/PKG-INFO
+franklab_mstaggedcuration.egg-info/SOURCES.txt
+franklab_mstaggedcuration.egg-info/dependency_links.txt
+franklab_mstaggedcuration.egg-info/requires.txt
+franklab_mstaggedcuration.egg-info/top_level.txt
