@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pykumo
+Version: 0.1.8
+Summary: Small library for interfacing with Mitsubishi KumoCloud enabled devices
+Home-page: https://github.com/dlarrick/pykumo
+Author: Doug Larrick
+Author-email: doug@parkercat.org
+License: UNKNOWN
+Description: # pykumo
+        Python library to interact with Mitsubishi KumoCloud devices via their local API.
+        
+        The hard work of generating the security token was done by https://github.com/sushilks/kumojs and that part is based heavily on his code, translated to Python by me.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
