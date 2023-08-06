@@ -1,0 +1,26 @@
+2020-07-02 14:30:14,524 — TestBase — INFO — To load tests data.
+2020-07-02 14:30:14,579 — TestBase — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-07-02 14:30:14,646 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'deepika_test01', 'job': 'tester'} 
+2020-07-02 14:30:15,636 — APIMethods — INFO — post_request
+2020-07-02 14:30:15,724 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-07-02 14:30:15,806 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-07-02 14:30:15,806 — TestBase — INFO — Fetched Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-07-02 14:30:15,806 — TestBase — INFO — Fetching Subnode Json Value in Get Request {'company': 'StatusCode Weekly', 'url': 'http://statuscode.org/', 'text': 'A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.'} 
+2020-07-02 14:30:15,808 — TestBase — INFO — Test test_get_reqre_api passed.
+2020-07-02 14:30:16,279 — APIMethods — INFO —  -------- Checking the Expected Status 204 
+2020-07-02 14:30:16,283 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 204 
+2020-07-02 14:30:16,286 — TestBase — INFO — Test test_delete_reqre_api passed.
+2020-07-02 14:30:16,291 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'deepika_test01', 'job': 'tester'} 
+2020-07-02 14:30:16,291 — APIMethods — INFO — post_request
+2020-07-02 14:30:16,792 — APIMethods — INFO —  -------- Checking the Expected Status 201 
+2020-07-02 14:30:16,794 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 201 
+2020-07-02 14:30:16,795 — TestBase — INFO — Fetched Json Value - name - in Post Request deepika_test01 
+2020-07-02 14:30:16,795 — TestBase — INFO — Fetched Json Value - ID - in Post Request 96 
+2020-07-02 14:30:16,797 — TestBase — INFO — Test test_post_body_json_no_header passed.
+2020-07-02 14:30:16,800 — CommonMethods — INFO —  Requesting Payload in Put Request {'name': 'morpheus', 'job': 'zion resident'} 
+2020-07-02 14:30:16,801 — APIMethods — INFO — post_request
+2020-07-02 14:30:17,221 — APIMethods — INFO —  -------- Checking the Expected Status 200 
+2020-07-02 14:30:17,224 — APIMethods — INFO —  -------- Checking the Actual Status in Response Code 200 
+2020-07-02 14:30:17,225 — TestBase — INFO — Fetched Json Value - name - in Put Request morpheus 
+2020-07-02 14:30:17,225 — TestBase — INFO — Fetched Json Value - updatedAt - in Put Request 2020-07-02T06:30:17.069Z 
+2020-07-02 14:30:17,227 — TestBase — INFO — Ended --------- To load tests data.
