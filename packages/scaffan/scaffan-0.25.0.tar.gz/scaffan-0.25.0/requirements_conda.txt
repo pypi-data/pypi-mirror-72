@@ -1,0 +1,24 @@
+io3d
+imma
+# openslide-python # installed with pip on windows or with conda on linux
+lxml
+pyqtgraph
+morphsnakes
+pandas
+openpyxl
+xlrd
+loguru
+# higer version work in different way with alpha
+scipy=1.2
+click
+exsu
+scikit-learn
+scikit-image
+chainer
+czifile
+read-roi
+# tensorflow>=2.0 there is no TF2 for py36 on conda
+# requirements of TF2 installed later by pip
+absl-py
+termcolor
+# ------ end of TF2 requirements
