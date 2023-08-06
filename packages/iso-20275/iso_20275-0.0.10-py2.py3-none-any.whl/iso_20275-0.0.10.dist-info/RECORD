@@ -1,0 +1,14 @@
+iso20275/Cleaned - ISO-20275 - 2017-11-30.csv,sha256=iGx5wIjGPwsvRG8rBWFLiwkU7a0JpJpFY9wWYmdf9BM,250023
+iso20275/Cleaned - ISO-20275 - 2019-11-06.csv,sha256=x7zX-LytwdKqupt4DfMLgwIV4C5pZ2NDTaxdrf_xMoQ,411598
+iso20275/ISO-20275 - 2017-11-30.csv,sha256=NYvbn5vnDRl0LCx54LsY8JVuM6uzE1QXd0Cre_nMlZI,253216
+iso20275/ISO-20275 - 2019-11-06.csv,sha256=x9QGzsrOKMI0ipir9euMdIPo5ds7z7IR7LAwUnymgqY,411652
+iso20275/__init__.py,sha256=U96EdqQuQjWYn4rskCDX3B1linH4EuK4OXeUefvN1wo,6113
+iso20275/merge_additional_legal_forms.py,sha256=DQXn5CNZ5RoMAgQsQHFjXf4NC54ntM1ofJJV9ZjrxEs,2559
+iso20275/trim.py,sha256=OJSSKhi6f_Fj3e3VcRL6-oR19Go9yA8RMFY_RAcPjN8,817
+tests/__init__.py,sha256=dr_7VwyTfgzin4X1_qY6RVSvD3TSUZ-ghybkg6q8l70,30
+tests/test_iso20275.py,sha256=Lgt4fLzbeWgCnc5Y_fHnXL51rN4pKi6Z0W5_mqPiGeU,3330
+iso_20275-0.0.10.dist-info/LICENSE,sha256=LSZm8DCw0NyIRM9WMeyab4YYHgOEnF_8XxOTDAlJ60o,1088
+iso_20275-0.0.10.dist-info/METADATA,sha256=gq-IlliYDgEC_tr6DCjXUJxn-TzD8A7X-E0aCwia9KU,13830
+iso_20275-0.0.10.dist-info/WHEEL,sha256=6T3TYZE4YFi2HTS1BeZHNXAi8N52OZT4O-dJ6-ome_4,116
+iso_20275-0.0.10.dist-info/top_level.txt,sha256=zOGxyPbijWbGWTOP_uLOm6EBmCahzJ4DJguZHyAeFc0,15
+iso_20275-0.0.10.dist-info/RECORD,,
