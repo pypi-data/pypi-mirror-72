@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+SpotDownloader.egg-info/PKG-INFO
+SpotDownloader.egg-info/SOURCES.txt
+SpotDownloader.egg-info/dependency_links.txt
+SpotDownloader.egg-info/entry_points.txt
+SpotDownloader.egg-info/requires.txt
+SpotDownloader.egg-info/top_level.txt
+spotdownloader/SpotDownloader.py
+spotdownloader/__init__.py
+spotdownloader/__main__.py
+spotdownloader/audio_metadata.py
+spotdownloader/os_helper.py
+spotdownloader/tagdemo.py
