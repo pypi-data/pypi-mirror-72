@@ -1,0 +1,10 @@
+setup.py
+GussBinoDist/Binomialdistribution.py
+GussBinoDist/Gaussiandistribution.py
+GussBinoDist/Generaldistribution.py
+GussBinoDist/__init__.py
+GussBinoDist.egg-info/PKG-INFO
+GussBinoDist.egg-info/SOURCES.txt
+GussBinoDist.egg-info/dependency_links.txt
+GussBinoDist.egg-info/not-zip-safe
+GussBinoDist.egg-info/top_level.txt
