@@ -1,0 +1,6 @@
+coremltools
+numpy
+onnx
+onnxruntime
+Pillow
+tensorflow-cpu
