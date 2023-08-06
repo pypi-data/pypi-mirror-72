@@ -1,0 +1,6 @@
+numpy
+pathlib
+contexttimer
+requests
+getjson
+microconventions>=0.0.4
