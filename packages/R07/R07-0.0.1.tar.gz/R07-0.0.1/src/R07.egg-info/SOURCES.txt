@@ -1,0 +1,13 @@
+CHANGELOG.md
+MANIFEST.in
+README.md
+setup.py
+.pytest_cache/README.md
+src/LICENSE.md
+src/R07.py
+src/R07.egg-info/PKG-INFO
+src/R07.egg-info/SOURCES.txt
+src/R07.egg-info/dependency_links.txt
+src/R07.egg-info/requires.txt
+src/R07.egg-info/top_level.txt
+test/test_R07.py

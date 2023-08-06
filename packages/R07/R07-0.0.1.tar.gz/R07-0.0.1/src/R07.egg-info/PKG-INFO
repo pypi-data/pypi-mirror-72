@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: R07
+Version: 0.0.1
+Summary: Packages of R-07!
+Home-page: https://github.com/rahulbordoloi/PyPI-Publish
+Author: Rahul Bordoloi
+Author-email: rahulbordoloi24@gmail.com
+License: UNKNOWN
+Description: # R-07 Python Package
+        
+        This is an example project demonstrating how to publish a python module to PyPI.
+        
+        All the classes will be imported under the package 'R07'.
+        
+        ## Installation
+        
+        Run the following command on your terminal to install : 
+        
+        ```python
+        pip install R07
+        ```
+        
+        ## Usage
+        
+        ```python
+        from R07 import say_hello
+        
+        # Generate 'Hello R-07!'
+        say_hello()
+        
+        # Generate 'Hello, Rahul!'
+        say_hello('Rahul')
+        ```
+        
+        # Developing R07
+        
+        To install `R07`, along with the tools you need to develop and run tests, run the following in your virtualenv:
+        
+        ```bash
+        $ pip install -e .[dev]
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Provides-Extra: dev
