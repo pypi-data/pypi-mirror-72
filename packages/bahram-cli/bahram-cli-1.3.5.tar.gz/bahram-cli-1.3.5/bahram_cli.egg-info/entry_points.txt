@@ -1,0 +1,5 @@
+[console_scripts]
+bahram deploy = src.f:deploy
+bahram help = src.f:help
+bahram login = src.f:login
+
