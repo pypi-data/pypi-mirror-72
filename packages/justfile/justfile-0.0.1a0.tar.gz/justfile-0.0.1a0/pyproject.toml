@@ -1,0 +1,13 @@
+[tool]
+[tool.poetry]
+name = "justfile"
+version = "0.0.1a0"
+description = "Just Read, Just Write, Just Right"
+license = "MIT"
+classifiers = ["Development Status :: 5 - Production/Stable", "Intended Audience :: Developers", "License :: OSI Approved :: MIT License", "Operating System :: Unix", "Operating System :: POSIX", "Operating System :: Microsoft :: Windows", "Programming Language :: Python", "Programming Language :: Python :: 2.7", "Programming Language :: Python :: 3", "Programming Language :: Python :: 3.5", "Programming Language :: Python :: 3.6", "Programming Language :: Python :: 3.7", "Programming Language :: Python :: 3.8", "Programming Language :: Python :: Implementation :: CPython", "Programming Language :: Python :: Implementation :: PyPy", "Topic :: Utilities", "Topic :: System :: Filesystems"]
+homepage = "https://gitlab.com/src-r-r/python-justfile"
+authors = ["Jordan Hewitt <srcrr@damngood.pro>"]
+readme = "README.rst"
+
+[tool.poetry.dependencies]
+python = "*"
