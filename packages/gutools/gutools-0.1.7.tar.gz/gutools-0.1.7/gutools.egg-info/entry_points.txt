@@ -1,0 +1,3 @@
+[console_scripts]
+gutools = gutools.cli:main
+

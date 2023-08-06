@@ -1,0 +1,27 @@
+digraph {
+	graph [mindist=2.5 mode=KK model=10 ranksep=1]
+	edge [len=5 ranksep=3]
+	subgraph RPNCalc2 {
+		graph [mindist=2.5 mode=KK model=10 ranksep=1]
+		edge [len=5 ranksep=3]
+		label="Layer: RPNCalc2"
+
+		subgraph cluster_term {
+			graph [mindist=2.5 mode=KK model=10 ranksep=1]
+			edge [len=5 ranksep=3]
+			RPNCalc2_term_INIT [label=INIT]
+			RPNCalc2_term_READY [label=READY]
+			RPNCalc2_term_END [label=END]
+			RPNCalc2_term_INIT -> RPNCalc2_term_READY [label="" color=gray style=dashed]
+			aux_66278885 [color=grey shape=point]
+			RPNCalc2_term_READY -> aux_66278885 [label="<term> ->
+0: term()" color=blue fontcolor=blue style=solid]
+			aux_66278885 -> RPNCalc2_term_READY [label="" color=blue fontcolor=blue style=solid]
+			RPNCalc2_term_READY -> RPNCalc2_term_END [label="<quit> ->
+0: quit()" color=blue fontcolor=blue style=solid]
+			label="Logic: term"
+		}
+		label="Layer: RPNCalc2"
+
+	}
+}
