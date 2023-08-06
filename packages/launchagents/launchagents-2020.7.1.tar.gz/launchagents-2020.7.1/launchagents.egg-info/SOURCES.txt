@@ -1,0 +1,8 @@
+requirements.txt
+setup.py
+launchagents/__init__.py
+launchagents.egg-info/PKG-INFO
+launchagents.egg-info/SOURCES.txt
+launchagents.egg-info/dependency_links.txt
+launchagents.egg-info/requires.txt
+launchagents.egg-info/top_level.txt
