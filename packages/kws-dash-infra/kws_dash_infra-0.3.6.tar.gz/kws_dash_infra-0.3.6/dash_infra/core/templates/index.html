@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block title %} Accueil {% endblock %} {% block
+content %}
+<div class="row">
+  <h2>
+    {{ name }}
+  </h2>
+</div>
+<div class="row">
+  <h3>
+    Applications
+  </h3>
+</div>
+<div class="row">
+  {% for route, app in router.items() %}
+  <div class="col s6 m4">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">
+          {{ app.name }}
+        </span>
+        <p>
+          {{ app.md_doc | safe}}
+        </p>
+      </div>
+      <div class="card-action">
+        <a href="{{ route }}"> Go to application </a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<div class="row">
+  <a href="{{ url_for('endpoints') }}"> >> API Endpoints </a>
+</div>
+{% endblock %}

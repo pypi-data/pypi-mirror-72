@@ -1,0 +1,60 @@
+{% extends 'base.html' %} {% block title %} Endpoints {% endblock %} {% block content %}
+<div class="row">
+  <h3>
+    API Endpoints
+  </h3>
+</div>
+<div class="row">
+  {% for row in endpoints %}
+  <div class="row">
+    {% for name, endpoint in row.items() %}
+    <div class="col s4">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">
+            <span>
+              {{ name }}
+            </span>
+          </span>
+          <div>
+            <span class="code light-blue lighten-4">
+              <a href="/api/{{ name }}/">
+                /api/{{ name }}
+              </a>
+            </span>
+            <h6>Documentation</h6>
+            {% if endpoint.docstring %}
+            <p class="code lighten-4">
+              {{ endpoint.docstring }}
+            </p>
+            {% else %}
+            <p class="code orange lighten-4 red-text text-darken-5">
+              Not documented
+            </p>
+            {% endif %}
+            <h6>Parameters</h6>
+            <ul>
+              {% for parameter in endpoint.parameters %}
+              <li>
+                <span class="code"> <em>{{ parameter.name }}</em></span>
+                {% if parameter.get("type") %}
+                <span class="code grey lighten-4"> {{ parameter.type }} </span>
+                {% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+            {% if endpoint.get("return_type") %}
+            <h6>Returns</h6>
+            <span class="code grey lighten-4">
+              {{ endpoint.return_type }}
+            </span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
