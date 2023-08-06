@@ -1,0 +1,2 @@
+include helios-core/Source/*.h
+include helios-core/Python/*.h
