@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: tablite
+Version: 2020.6.27.54477
+Summary: A table crunching library
+Home-page: https://github.com/root-11/tablite
+Author: Bjorn Madsen
+Author-email: bjorn.madsen@operationsresearchgroup.com
+License: MIT
+Description: # This is tablite. 
+        
+        ...More to come.
+Keywords: tables
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
