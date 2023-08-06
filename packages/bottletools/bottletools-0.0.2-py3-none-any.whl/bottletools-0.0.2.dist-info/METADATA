@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: bottletools
+Version: 0.0.2
+Summary: Bottle tools
+Home-page: https://gitlab.com/smartad/bottletools
+Author: Bikash Sapkota
+Author-email: bikash@bottle.com.np
+License: MIT
+Download-URL: https://pypi.org/project/bottletools/
+Keywords: aws,bottle,nepal
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: boto3
+
+Useful tools to work with s3 stack in Python
+
+# Description
+
+It consists of one module:
+
+- `s3tools`: tools to work with S3 files
+
+# Installation
+
+## Normal installation
+
+```bash
+pip install bottletools
+```
+
+## Development installation
+
+```bash
+git clone https://github.com/smartad/bottletools.git
+cd bottletools
+pip install --editable .
+```
+
+# Change log
+
+## [0.0.1] - 2020-06-29
+
+### Added
+- `s3tools.get_s3_data`
+- `s3tools.get_s3_data_path_stringio`
+
+### Changed
+
+### Removed
+
