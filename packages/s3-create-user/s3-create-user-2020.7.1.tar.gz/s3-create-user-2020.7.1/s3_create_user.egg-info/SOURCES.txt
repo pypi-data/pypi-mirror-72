@@ -1,0 +1,8 @@
+requirements.txt
+setup.py
+s3_create_user.egg-info/PKG-INFO
+s3_create_user.egg-info/SOURCES.txt
+s3_create_user.egg-info/dependency_links.txt
+s3_create_user.egg-info/top_level.txt
+scripts/s3-create-full-access-user
+scripts/s3-create-read-only-user
