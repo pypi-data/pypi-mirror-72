@@ -1,0 +1,11 @@
+validators
+beautifulsoup4
+gcsfs==0.6.0
+google-cloud-storage==1.26.0
+pandas==0.24.2
+stemming
+nltk
+setuptools
+scrapy
+vaderSentiment
+scikit-learn
