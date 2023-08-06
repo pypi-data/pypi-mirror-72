@@ -1,0 +1,35 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+PyGuitar.egg-info/PKG-INFO
+PyGuitar.egg-info/SOURCES.txt
+PyGuitar.egg-info/dependency_links.txt
+PyGuitar.egg-info/requires.txt
+PyGuitar.egg-info/top_level.txt
+examples/.DS_Store
+examples/UFRET.ipynb
+examples/Whole-notes.png
+examples/export-chordbook.ipynb
+examples/plot-chord.ipynb
+examples/欲望に満ちた少年団(ONE OK ROCK)-key_B-major_scale.pdf
+examples/欲望に満ちた青年団  ONE OK ROCK | key-0.json
+examples/.ipynb_checkpoints/UFRET-checkpoint.ipynb
+examples/.ipynb_checkpoints/export-chordbook-checkpoint.ipynb
+examples/.ipynb_checkpoints/plot-chord-checkpoint.ipynb
+guitar/__init__.py
+guitar/env.py
+guitar/main.py
+guitar/ufret.py
+guitar/data/chord.json
+guitar/data/logo.png
+guitar/data/scales.json
+guitar/utils/__init__.py
+guitar/utils/coloring_utils.py
+guitar/utils/decorate_utils.py
+guitar/utils/driver_utils.py
+guitar/utils/fmt_utils.py
+guitar/utils/font_utils.py
+guitar/utils/guitar_utils.py
+guitar/utils/mpatches_utils.py
+image/pyguitar.png
