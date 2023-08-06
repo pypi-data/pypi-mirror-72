@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+emailz/__init__.py
+emailz.egg-info/PKG-INFO
+emailz.egg-info/SOURCES.txt
+emailz.egg-info/dependency_links.txt
+emailz.egg-info/top_level.txt
+emailz.egg-info/zip-safe
