@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "nwsubprocess"
+version = "0.2.2"
+description = ""
+authors = ["NativeWaves <contact@nativewaves.com>"]
+exclude = ["**/obsolete/*"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+psutil = "*"
+atomicwrites = "*"
+
+[tool.poetry.dev-dependencies]
+"autopep8" = "*"
+mypy = "*"
+pylint = "*"
+pytest = "*"
+pytest-cov = "*"
+rope = "*"
+astroid = "*"
+
+[build-system]
+requires = ["nwpoetry>=1.0.0b101"]
+build-backend = "poetry.masonry.api"
+
