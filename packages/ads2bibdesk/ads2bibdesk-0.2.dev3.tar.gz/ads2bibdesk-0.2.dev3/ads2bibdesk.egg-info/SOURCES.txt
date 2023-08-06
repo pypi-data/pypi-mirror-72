@@ -1,0 +1,64 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+.github/FUNDING.yml
+ads2bibdesk/__init__.py
+ads2bibdesk/ads2bibdesk.cfg.default
+ads2bibdesk/ads2bibdesk.py
+ads2bibdesk/bibdesk.py
+ads2bibdesk/prefs.py
+ads2bibdesk.egg-info/PKG-INFO
+ads2bibdesk.egg-info/SOURCES.txt
+ads2bibdesk.egg-info/dependency_links.txt
+ads2bibdesk.egg-info/entry_points.txt
+ads2bibdesk.egg-info/requires.txt
+ads2bibdesk.egg-info/top_level.txt
+service/Add to BibDesk.app/Contents/Info.plist
+service/Add to BibDesk.app/Contents/document.wflow
+service/Add to BibDesk.app/Contents/MacOS/Application Stub
+service/Add to BibDesk.app/Contents/Resources/AutomatorApplet.icns
+service/Add to BibDesk.app/Contents/Resources/ar.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/ca.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/cs.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/da.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/de.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/el.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/en.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/en_AU.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/en_GB.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/es.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/es_419.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/fi.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/fr.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/fr_CA.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/he.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/hi.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/hr.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/hu.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/id.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/it.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/ja.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/ko.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/ms.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/nl.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/no.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/pl.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/pt.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/pt_PT.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/ro.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/ru.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/sk.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/sv.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/th.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/tr.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/uk.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/vi.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/zh_CN.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/zh_HK.lproj/InfoPlist.strings
+service/Add to BibDesk.app/Contents/Resources/zh_TW.lproj/InfoPlist.strings
+service/Add to BibDesk.workflow/Contents/Info.plist
+service/Add to BibDesk.workflow/Contents/document.wflow
+service/Add to BibDesk.workflow/Contents/QuickLook/Thumbnail.png
+service/Add to BibDesk.workflow/Contents/Resources/workflowCustomImage.png
