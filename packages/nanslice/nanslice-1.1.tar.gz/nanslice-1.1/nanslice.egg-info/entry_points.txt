@@ -1,0 +1,5 @@
+[console_scripts]
+nanscroll = nanslice.nanscroll:main
+nanslicer = nanslice.nanslicer:main
+nanviewer = nanslice.nanviewer:main
+
