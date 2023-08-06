@@ -1,0 +1,10 @@
+README.md
+setup.py
+ziggie/__init__.py
+ziggie/macro.py
+ziggie.egg-info/PKG-INFO
+ziggie.egg-info/SOURCES.txt
+ziggie.egg-info/dependency_links.txt
+ziggie.egg-info/top_level.txt
+ziggie/tests/__init__.py
+ziggie/tests/test.py
