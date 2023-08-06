@@ -1,0 +1,3 @@
+[console_scripts]
+flyingsnake=flyingsnake.__main__:flyingsnake
+
