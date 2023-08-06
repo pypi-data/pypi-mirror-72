@@ -1,0 +1,11 @@
+pdchaos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdchaos/ext/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdchaos/ext/flask/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdchaos/ext/flask/flask_middleware.py,sha256=TaN7eMBtjx9yQa56X6xBjbnI8zIa8sVqqVaRjyUHu_A,1003
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_flask_middleware.py,sha256=szJGll6pCmVdM4DilZ0zFAeHP1K3VB-VYLuUlyOCEdg,1183
+proofdock_chaos_middleware_flask-0.1.0.dev4.dist-info/METADATA,sha256=1NO0KDgtv-R2yZKGH1grcNYVVBpu5qJE1V6eCL1z2aU,2242
+proofdock_chaos_middleware_flask-0.1.0.dev4.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+proofdock_chaos_middleware_flask-0.1.0.dev4.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+proofdock_chaos_middleware_flask-0.1.0.dev4.dist-info/top_level.txt,sha256=gMUUyUftUttgFw85uc7iBiuM9F5IoQZXojkRO1d3_q4,14
+proofdock_chaos_middleware_flask-0.1.0.dev4.dist-info/RECORD,,
