@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+mac_appify.egg-info/PKG-INFO
+mac_appify.egg-info/SOURCES.txt
+mac_appify.egg-info/dependency_links.txt
+mac_appify.egg-info/top_level.txt
+scripts/appify
