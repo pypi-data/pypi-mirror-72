@@ -1,0 +1,5 @@
+Pillow==6.2.2
+numpy==1.18.0
+pydicom==2.*
+matplotlib==3.1.2
+factory-boy==2.12.0
