@@ -1,0 +1,14 @@
+requirements.txt
+setup.py
+itunes/__init__.py
+itunes/pause.py
+itunes/play.py
+itunes/playing.py
+itunes/playlists.py
+itunes/tracks.py
+itunes/volume.py
+itunes.egg-info/PKG-INFO
+itunes.egg-info/SOURCES.txt
+itunes.egg-info/dependency_links.txt
+itunes.egg-info/requires.txt
+itunes.egg-info/top_level.txt
