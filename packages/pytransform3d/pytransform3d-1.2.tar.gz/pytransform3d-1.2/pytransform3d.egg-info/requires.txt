@@ -1,0 +1,9 @@
+numpy
+scipy
+matplotlib
+lxml
+beautifulsoup4
+
+[all]
+pydot
+trimesh
