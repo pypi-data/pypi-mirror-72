@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Overview &#8212; cloud-functions-dispatch 0.9.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Security Considerations" href="security.html" />
+    <link rel="prev" title="Cloud Functions Dispatch" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>Cloud Functions Dispatch gives you the ability to dispatch in-process no-response function calls to a remote cloud function by applying a decorator to your function.</p>
+<p>This is useful for tasks such as the following:</p>
+<ul class="simple">
+<li><p>update a database record separately from this process</p></li>
+<li><p>run secondary processes as side-effects of receiving a request</p></li>
+<li><p>fan-out of a large job into chunks that are completed independently</p></li>
+</ul>
+<p>Basically any task that accepts some set of serializable parameters but not any in-process state and does not need to return a value is a great candidate for dispatching.</p>
+<p>Functions are asynchronously executed with no mechanism for returning a value to the caller. From the caller’s perspective, these functions are “fire and forget”. Support for functions that return values may be implemented in a future version.</p>
+<div class="section" id="a-note-on-security">
+<h2>A note on security<a class="headerlink" href="#a-note-on-security" title="Permalink to this headline">¶</a></h2>
+<p>The library assumes all method calls are from a trusted sender (normally within an application, all in-process callers are trusted). Messages are not pre-processed in any way to screen for malicious intent. Because of this, the message bus should be configured so that only fully-trusted accounts can publish to the call topic.</p>
+<p>Failure to secure publishing to the topic being consumed by this library will allow publishers to construct malicious messages that can run arbitrary code within your deployed cloud function! See <a class="reference internal" href="security.html#security"><span class="std std-ref">Security Considerations</span></a> for more details.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">cloud-functions-dispatch</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a-note-on-security">A note on security</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security Considerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="considerations.html">Other Considerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Cloud Functions Dispatch</a></li>
+      <li>Next: <a href="security.html" title="next chapter">Security Considerations</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, jeffrey k eliasen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/overview.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
