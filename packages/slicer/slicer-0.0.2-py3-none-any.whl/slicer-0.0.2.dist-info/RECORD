@@ -1,0 +1,14 @@
+slicer/__init__.py,sha256=YS2CtxHWNYfsF2V1BuS4-QmCKnLXaDY26-qrKbEkapI,45
+slicer/query.py,sha256=RfV8O5_uwCo59P1YSRjrOxGMu-vl3ESxnUeXvQIDW28,3008
+slicer/slicer.py,sha256=2EO2nFMj8vrBjQJCzYsAbI4mxH-WP00qmrTQsdFNPNU,19513
+slicer/test_query.py,sha256=C0e73DNbugoKr0tI2ANB7E8HsbDU1gICpkkqrRAbvj0,1164
+slicer/test_slicer.py,sha256=DF93MGxMJ795i3tkAoMXgaEerx4jaN-2YphevqkirCY,9008
+slicer/utils_testing.py,sha256=sPLBHhyiqNCabNByc5sdhjJ53eQDuIX-DCif-ZogSnI,1290
+slicer/interpretapi/__init__.py,sha256=E_Cp_K7NzGuleu0OJSJBOZEHf6BSSw2Mk83azCDjYD4,48
+slicer/interpretapi/explanation.py,sha256=acLpK9_lfpG3B-PkePQNBvMOjp1E2ZuEVgJRJJ0mtKM,4701
+slicer/interpretapi/test_explanation.py,sha256=frVMaRyrHljpeWBABbL6TuLFFaYNHCaAAta57wfsLTE,1089
+slicer-0.0.2.dist-info/LICENSE,sha256=3dPe7JVsvMhLnAMUkwRFHTp4jKViyVmQ-JOYh4FJVhk,1089
+slicer-0.0.2.dist-info/METADATA,sha256=oJzvqRV44uT1ZbD6pysynWXFRfPkAe-_LUL2dOvKxAQ,534
+slicer-0.0.2.dist-info/WHEEL,sha256=QBOOAdG2icRHGBs2s94rfaUlHrdfNBp-TceubUYCwOE,97
+slicer-0.0.2.dist-info/top_level.txt,sha256=tnLR59Ifbh7q7B_DawkHkPsLcN2UGQul7BssQUMR-5Q,7
+slicer-0.0.2.dist-info/RECORD,,
