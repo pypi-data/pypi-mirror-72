@@ -1,0 +1,8 @@
+ctorch/__init__.py,sha256=N2VqBEx-vfpq8Wsh-kQmLfK14Ri02oObELwR2XHvHlI,40
+ctorch/nn/__init__.py,sha256=35soXfjUsQjstxFvVjP86qynG7L44YUYtUsXRKGB3x8,61
+ctorch/nn/functional.py,sha256=s57-PDjjQ6t-DItEcWMu89YR1bnOyfbc72kMdKx_pTI,428
+ctorch/nn/modules/__init__.py,sha256=Qiq0fQdBN1g4h8FO8mfg_dPsuNg0u1lPg3B8gkgpdsM,34
+ctorch/nn/modules/linear.py,sha256=lsXiAluyHqBas59p4EjsB8CRj5X6xLI5VzFLf_XLKhM,1375
+ctorch-0.1.0.dist-info/WHEEL,sha256=G_NFpzHmv_dUXgCUSAWL0-bLL-eMzYU6DzDeGXbRXUk,83
+ctorch-0.1.0.dist-info/METADATA,sha256=UWIMweSou-NSy-L2LMf5Qevk8Ip6em_qroIVqD2UoRk,431
+ctorch-0.1.0.dist-info/RECORD,,
