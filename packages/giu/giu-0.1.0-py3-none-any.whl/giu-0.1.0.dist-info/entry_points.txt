@@ -1,0 +1,3 @@
+[console_scripts]
+giu=giu.cli:giu
+
