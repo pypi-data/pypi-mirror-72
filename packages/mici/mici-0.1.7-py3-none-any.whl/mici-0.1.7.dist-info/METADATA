@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: mici
+Version: 0.1.7
+Summary: MCMC samplers based on simulating Hamiltonian dynamics on a manifold
+Home-page: https://github.com/matt-graham/mici.git
+Author: Matt Graham
+License: MIT
+Project-URL: Documentation, https://matt-graham.github.io/mici/docs
+Keywords: inference sampling MCMC HMC
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Requires-Dist: numpy (>=1.15)
+Requires-Dist: scipy (>=1.1)
+Provides-Extra: autodiff
+Requires-Dist: autograd (>=1.2) ; extra == 'autodiff'
+Requires-Dist: multiprocess (>=0.70) ; extra == 'autodiff'
+Provides-Extra: randomgen
+Requires-Dist: randomgen (>=1.15) ; extra == 'randomgen'
+
+Mici is a Python package providing implementations of Markov chain Monte Carlo (MCMC) methods for approximate inference in probabilistic models, with a particular focus on MCMC methods based on simulating Hamiltonian dynamics on a manifold.
+
+
