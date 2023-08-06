@@ -1,0 +1,34 @@
+dictdumper~=0.8.0
+chardet
+aenum
+tbtrim>=0.2.1
+
+[:python_version < "3.6"]
+f2format
+
+[:python_version == "3.4"]
+pathlib2>=2.3.2
+
+[DPKT]
+dpkt
+
+[PyShark]
+pyshark
+
+[Scapy]
+scapy
+
+[all]
+emoji
+dpkt
+scapy
+pyshark
+requests[socks]
+beautifulsoup4[html5lib]
+
+[cli]
+emoji
+
+[vendor]
+requests[socks]
+beautifulsoup4[html5lib]
