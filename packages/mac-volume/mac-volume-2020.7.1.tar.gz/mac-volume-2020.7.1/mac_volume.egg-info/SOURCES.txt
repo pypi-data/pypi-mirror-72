@@ -1,0 +1,12 @@
+requirements.txt
+setup.py
+mac_volume.egg-info/PKG-INFO
+mac_volume.egg-info/SOURCES.txt
+mac_volume.egg-info/dependency_links.txt
+mac_volume.egg-info/top_level.txt
+scripts/.mute.applescript
+scripts/.unmute.applescript
+scripts/.volume.applescript
+scripts/mute
+scripts/unmute
+scripts/volume
