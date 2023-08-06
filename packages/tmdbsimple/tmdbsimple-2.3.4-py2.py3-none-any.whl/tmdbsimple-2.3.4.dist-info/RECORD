@@ -1,0 +1,17 @@
+tmdbsimple/__init__.py,sha256=4I8FrICvqPvPVkZ6iDnbLBLGy_FGpLEpENwYKn5MS38,1369
+tmdbsimple/account.py,sha256=crkP6PY3vw9B4eOPkVuZJ0W9_pwzW9aJ-mnstVlOWWI,17936
+tmdbsimple/base.py,sha256=gHBiSZemv73wQV26fKAjm-l3sFtWZm2jPZAGh2IiZmE,3525
+tmdbsimple/changes.py,sha256=276MHh1NmtEXCeq4gjtgQpxHhet8gTBI6wn7qXABwpM,2849
+tmdbsimple/configuration.py,sha256=70iV0umUanp0CUjx7rkeKKWu5lJKGetxXOd8pjYTFAI,5860
+tmdbsimple/discover.py,sha256=t-geqqcMIb5w20SQoB80c-wJIJek_TlAyQjGW69QYAc,8952
+tmdbsimple/find.py,sha256=zblI3nxmVJh3a8FMN6jgWI2YpnZ0By0dS7-oFHiE0dY,2841
+tmdbsimple/genres.py,sha256=4VuAtgEoYr9cQU6XF3qvuULYNt8x3UKHFY1Zt9ewnto,2436
+tmdbsimple/movies.py,sha256=_IbJmNQaVTxIJMAXv9jWZstZ-ssE1TKOzXsPFGJ6wzA,21113
+tmdbsimple/people.py,sha256=wBMRE8KLE4p3GBGfTPxydJIW13rhEtDyXUy8UwWH9aU,7625
+tmdbsimple/search.py,sha256=c39kiTR4qF5SZiLHB2pT4hXjJV6hwQGgA_pfyLxVKbc,6313
+tmdbsimple/tv.py,sha256=bIbtYZoZXq6VtZlf1NguKD6ZekEnTvYVo_MMmtrzOxo,29085
+tmdbsimple-2.3.4.dist-info/LICENSE,sha256=4cCtcomD2KVzNeUs8QZPGv_R1FQXPYzr0-2LSnK0hwQ,35121
+tmdbsimple-2.3.4.dist-info/METADATA,sha256=2tyibyo6SXjPciI5iQcCm9GqAEVBu6JPXOCps_pqZ6E,6091
+tmdbsimple-2.3.4.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+tmdbsimple-2.3.4.dist-info/top_level.txt,sha256=lh1e8hjj3ghHZypVpI6357o4oVWoAzxwKR0AMOP4SoI,11
+tmdbsimple-2.3.4.dist-info/RECORD,,
