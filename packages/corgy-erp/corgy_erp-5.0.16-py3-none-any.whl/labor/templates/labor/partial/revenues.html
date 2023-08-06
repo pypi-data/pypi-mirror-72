@@ -1,0 +1,61 @@
+{% load i18n material_frontend humanize %}
+
+    <div class="card">
+        <div class="card-content">
+            <div class="card-title">{% trans 'Jövedelem' %}</div>
+
+            <table class="table bordered">
+                <caption>{% trans 'Rendszeres jövedelem' %}</caption>
+                <tr>
+                    <th>{% trans 'Munkaórák' %}</th>
+                    <th>{% trans 'Jövedelem' %}</th>
+                </tr>
+                {% for item in revenue.systematic_revenue.all %}
+                <tr>
+                    <td>{{ item.workdays }}</td>
+                    <td>{{ item.revenue }}</td>
+
+                </tr>
+                {% endfor %}
+            </table>
+
+            <table class="table bordered">
+                <caption>{% trans 'Nem rendszeres jövedelem' %}</caption>
+                <tr>
+                    <th>{% trans 'Költségek' %}</th>
+                    <th>{% trans 'Bevétel' %}</th>
+                    <th>{% trans 'Jövedelem' %}</th>
+                </tr>
+                {% for item in revenue.non_systematic_revenue.all %}
+                <tr>
+                    <td>{{ item.costs }}</td>
+                    <td>{{ item.income }}</td>
+                    <td>{{ item.revenue }}</td>
+
+                </tr>
+                {% endfor %}
+            </table>
+
+            <table class="table bordered">
+                <tr>
+                    <th>{% trans 'Rendszeres jövedelem' %}</th>
+                    <td>{{ revenue.summary_systematic_revenue }}</td>
+                </tr>
+                <tr>
+                    <th>{% trans 'Nem rendszeres jövedelem' %}</th>
+                    <td>{{ revenue.summary_non_systematic_revenue }}</td>
+                </tr>
+                <tr>
+                    <th>{% trans 'Összes jövedelem' %}</th>
+                    <th>{{ revenue.summary }}</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card-actions">
+            <div class="right-align">
+                <a class="waves-effect waves-light btn white-text" href="#">{% trans 'Előző hónap alapján' %}</a>
+                <a class="waves-effect waves-light btn white-text" href="#">{% trans 'Osztószám/távolléti díj' %}</a>
+            </div>
+        </div>
+    </div>
