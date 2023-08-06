@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: batch-ops
+Version: 0.1
+Summary: A module for executing batch file operations in Python
+Home-page: https://github.com/nickkhess/batch-ops
+Author: Nicholas Hess
+Author-email: nkhess@umich.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# batch-ops
+A module for executing batch file operations in Python.
+
+## Installation
+`pip install batch-ops`
+
+
