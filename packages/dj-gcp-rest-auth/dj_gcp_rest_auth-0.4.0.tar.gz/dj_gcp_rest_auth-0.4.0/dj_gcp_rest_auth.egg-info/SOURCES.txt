@@ -1,0 +1,16 @@
+README.rst
+setup.cfg
+setup.py
+dj_gcp_rest_auth/__init__.py
+dj_gcp_rest_auth/authentication.py
+dj_gcp_rest_auth/serializers.py
+dj_gcp_rest_auth/settings.py
+dj_gcp_rest_auth/tokens.py
+dj_gcp_rest_auth/urls.py
+dj_gcp_rest_auth/views.py
+dj_gcp_rest_auth.egg-info/PKG-INFO
+dj_gcp_rest_auth.egg-info/SOURCES.txt
+dj_gcp_rest_auth.egg-info/dependency_links.txt
+dj_gcp_rest_auth.egg-info/not-zip-safe
+dj_gcp_rest_auth.egg-info/requires.txt
+dj_gcp_rest_auth.egg-info/top_level.txt
