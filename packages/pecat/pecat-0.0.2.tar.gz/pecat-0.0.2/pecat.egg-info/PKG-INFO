@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: pecat
+Version: 0.0.2
+Summary: An open-source multi-platform Windows Portable Executable(PE) analyzing module
+Home-page: https://github.com/dev4ndr3w/pecat
+Author: Andrew Bae
+Author-email: dev4ndr3w@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
