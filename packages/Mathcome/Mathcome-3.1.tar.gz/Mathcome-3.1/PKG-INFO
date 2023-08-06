@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: Mathcome
+Version: 3.1
+Summary: This is a project of the group Mathcome
+Home-page: UNKNOWN
+Author: Taebin, Yang
+Author-email: ksa.yangtaebin@gmail.com
+License: Mathcome
+Description: 1. **Project Name**
+            1. 이 프로젝트는 동아리 "MATHCOME"의 프로젝트입니다.
+        2. **Project Info**
+            1. 이 프로젝트에는 Mathcom class가 포함되어있습니다.
+            또한 class 안에 있는 함수 KHB, KYU, 등의 함수는
+            각 동아리원의 이름으로부터 나온 것이며 class 생성자의
+            person 에 넣은 이름의 대상에 대한 각 동아리원의 생각을
+            정리, 작성해 놓은 함수입니다.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
