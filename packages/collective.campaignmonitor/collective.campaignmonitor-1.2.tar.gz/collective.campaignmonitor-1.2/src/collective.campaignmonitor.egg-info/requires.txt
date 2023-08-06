@@ -1,0 +1,9 @@
+createsend<7.0.0,>=6.0.0
+plone.api>=1.8.4
+setuptools
+
+[test]
+plone.app.contenttypes
+plone.app.robotframework[debug]
+plone.app.testing
+plone.testing>=5.0.0
