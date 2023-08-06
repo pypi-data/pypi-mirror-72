@@ -1,0 +1,24 @@
+Metadata-Version: 1.2
+Name: marv-api
+Version: 20.6.0
+Summary: MARV API to implement MARV nodes
+Home-page: https://ternaris.com/marv-robotics
+Author: Ternaris
+Author-email: team@ternaris.com
+Maintainer: Ternaris
+Maintainer-email: team@ternaris.com
+License: AGPL-3.0-only
+Project-URL: Documentation, https://ternaris.com/marv-robotics/docs/
+Project-URL: Code, https://gitlab.com/ternaris/marv-robotics
+Project-URL: Issue tracker, https://gitlab.com/ternaris/marv-robotics/issues
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.7.1
