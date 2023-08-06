@@ -1,0 +1,9 @@
+requirements.txt
+setup.py
+django_next_view/__init__.py
+django_next_view/views.py
+django_next_view.egg-info/PKG-INFO
+django_next_view.egg-info/SOURCES.txt
+django_next_view.egg-info/dependency_links.txt
+django_next_view.egg-info/requires.txt
+django_next_view.egg-info/top_level.txt
