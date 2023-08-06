@@ -1,0 +1,43 @@
+Metadata-Version: 1.2
+Name: LibWiser
+Version: 0.9
+Summary: Wiser kernel library
+Home-page: https://github.com/oasys-elettra-kit/wiselib2
+Author: Michele Manfredda, Lorenzo Raimondi, Aljosa Hafner
+Author-email: michele.manfredda@elettra.eu, lorenzo.raimondi@elettra.eu
+Maintainer: Michele Manfredda
+Maintainer-email: michele.manfredda@elettra.eu
+License: GPLv3
+Download-URL: https://github.com/oasys-elettra-kit/wiselib2
+Description: WISEr library
+        ===============
+        
+        Kernel classes for WISEr in python
+        
+        wiselib package requires Python 3.3 or newer.
+        
+        
+        Installing
+        ----------
+        
+        wiselib is pip installable (https://pip.pypa.io/), simply run:
+        
+            pip install wiselib2
+        
+        to install it.
+        
+        
+Keywords: wavefront propagationsimulation
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Environment :: Plugins
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
