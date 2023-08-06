@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: python-axepta
+Version: 0.2.0
+Summary: Axepta BNP Paribas SOAP Client
+Home-page: https://bitbucket.org/metadonors/python-axepta
+Author: Metadonors S.r.l.
+Author-email: edoardo.nodari@metadonors.it
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: zeep
+
+UNKNOWN
+
+
