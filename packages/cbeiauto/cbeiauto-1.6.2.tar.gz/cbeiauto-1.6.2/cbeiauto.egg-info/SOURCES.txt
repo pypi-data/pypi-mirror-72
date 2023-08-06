@@ -1,0 +1,14 @@
+README.md
+setup.py
+cbeiauto/Bacillus_subtilis.part500.cds.all.fa
+cbeiauto/__init__.py
+cbeiauto.egg-info/PKG-INFO
+cbeiauto.egg-info/SOURCES.txt
+cbeiauto.egg-info/dependency_links.txt
+cbeiauto.egg-info/entry_points.txt
+cbeiauto.egg-info/requires.txt
+cbeiauto.egg-info/top_level.txt
+cbeiauto/cbei/__init__.py
+cbeiauto/cbei/autoCBEI.py
+cbeiauto/cbei/cbei.py
+cbeiauto/cbei/stat.py
