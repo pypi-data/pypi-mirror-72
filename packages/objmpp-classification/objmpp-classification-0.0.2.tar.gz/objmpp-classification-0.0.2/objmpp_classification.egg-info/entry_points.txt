@@ -1,0 +1,3 @@
+[console_scripts]
+objmpp-classification = objmpp_classification.__main__:cli
+
