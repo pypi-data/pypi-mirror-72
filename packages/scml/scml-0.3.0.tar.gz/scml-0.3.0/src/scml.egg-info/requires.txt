@@ -1,0 +1,17 @@
+click
+pytest
+hypothesis
+prettytable
+pulp
+python-constraint
+negmas>=0.6.13
+tqdm
+joblib
+jupyter
+gif
+
+[:python_version < "3.7"]
+dataclasses
+
+[gui]
+pyqt5
