@@ -1,0 +1,14 @@
+lxml
+numpy
+pandas
+Unidecode
+requests
+
+[docs]
+sphinx
+sphinx_rtd_theme
+recommonmark
+
+[tests]
+pytest
+covid_daily
