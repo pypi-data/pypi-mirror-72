@@ -1,0 +1,66 @@
+Metadata-Version: 2.0
+Name: s11-classifier
+Version: 2.4.1
+Summary: Classifier
+Home-page: https://gitlab.com/satelligence/classifier
+Author: Rens Masselink
+Author-email: rens.masselink@satelligence.com
+License: Apache-2.0
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: Fiona (<1.9.0,>=1.8.3)
+Requires-Dist: boto3 (<1.10.0,>=1.9.4)
+Requires-Dist: click (<6.8.0,>=6.7)
+Requires-Dist: folium (<0.7.0,>=0.6.0)
+Requires-Dist: geojson (<2.5.0,>=2.4.0)
+Requires-Dist: geopandas (<0.5.0,>=0.4.0)
+Requires-Dist: matplotlib (<2.1.0,>=2.0.0)
+Requires-Dist: numpy (<1.14.0,>=1.13.1)
+Requires-Dist: pandas (<0.23.0,>=0.22.0)
+Requires-Dist: pylint (<1.9.0,>=1.8.2)
+Requires-Dist: pytest (<5.3.0,>=5.2.0)
+Requires-Dist: rasterio (<1.1.0,>=1.0.11)
+Requires-Dist: rasterstats (<0.14.0,>=0.13.0)
+Requires-Dist: rtree (<0.9.0,>=0.8.3)
+Requires-Dist: scikit-learn (<0.22.0,>=0.21.3)
+Requires-Dist: xgboost (<0.82,>=0.81)
+
+# Classifier
+
+A scalable land cover classification tool for humans
+
+Go to [the documentation](https://satelligence.gitlab.io/classifier) for more
+ info on how to install and run Classifier!
+
+## Note on performance
+
+For now, the multithreading of XGboost is not properly implemented. If you have
+a lot of input files the XGBoost method is MUCH slower than e.g. scikit-learn's
+random forest. With single input files (so not a lot of IO operations), the
+difference in performance is small.
+
+## issues and bugs
+
+Issues are tracked on the [issue list of this
+repo](https://gitlab.com/satelligence/classifier/issues).
+
+## Development
+
+Please follow the [Satelligence development guidelines](https://gitlab.com/satelligence/workflow/blob/master/dev_workflow.md)
+when adding features or fixing bugs.
+
+(Fork) Clone this repo:
+
+```sh
+git clone git@gitlab.com:satelligence/classifier.git
+```
+
+Make sure you are running the latest docker image.
+
+Run docker with a binding to the source files:
+
+```sh
+docker run  -v $(pwd):/app -t -i classifier
+```
+
