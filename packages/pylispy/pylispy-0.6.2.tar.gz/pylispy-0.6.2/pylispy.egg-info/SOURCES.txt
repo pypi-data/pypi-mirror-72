@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+pylispy/__init__.py
+pylispy/pylispy.py
+pylispy.egg-info/PKG-INFO
+pylispy.egg-info/SOURCES.txt
+pylispy.egg-info/dependency_links.txt
+pylispy.egg-info/top_level.txt
