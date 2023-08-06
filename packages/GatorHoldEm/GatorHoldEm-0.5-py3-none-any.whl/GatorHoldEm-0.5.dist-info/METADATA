@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: GatorHoldEm
+Version: 0.5
+Summary: Poker game made for CIS4390
+Home-page: https://github.com/y0sh12/GatorHoldEm
+Author: Sean O'Reilly, Yaswanth Potluri, Adriel Mohammed, Bharat Samineni, Azharullah Baig
+Author-email: a.baig@ufl.edu
+License: MIT
+Download-URL: https://github.com/y0sh12/GatorHoldEm/archive/v0.5.tar.gz
+Keywords: poker,gatorholdem,texas
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: Pillow
+Requires-Dist: eventlet
+Requires-Dist: python-socketio
+Requires-Dist: python-socketio[client]
+
+# GatorHoldEm
+Required libraries:
+
+pip install "python-socketio[client]"
+
+pip install python-socketio
+
+pip install eventlet
+
+Package name on PyPi: 'gatorholdem'
+
+Installation: pip install gatorholdem
+
+
+
