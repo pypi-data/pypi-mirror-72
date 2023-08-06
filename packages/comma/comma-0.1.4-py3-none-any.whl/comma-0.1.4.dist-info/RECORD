@@ -1,0 +1,17 @@
+README.md,sha256=FF-tRHqo7EM7llq6JTMbGAxcE4N9-xtnyPo8D3LajkE,6917
+comma/__init__.py,sha256=jbmINhsY7rtAqFcwKKntVQHLinYdifs1O-cuUhmfZZE,444
+comma/abstract.py,sha256=waUK5crp4rZSsLpmpn5Lz0J2qUrPQ2rNz6U2J1o4cSw,2369
+comma/classes/__init__.py,sha256=_kri4lMH_vFVECLnG64rjAjyD3o6jpWbK1RDA1DhItM,368
+comma/classes/file.py,sha256=1oIuLpkXg-7a8nrfAQ2anoKjQ62iRQA31we3HRaIaQY,5912
+comma/classes/row.py,sha256=w7XLX-v9D6cJ_BsQAbjdlCQ0CuypOCQERicpMUTvYNc,4237
+comma/classes/slices.py,sha256=-Qq-IZ-FuycnGckgFsbOVGBNF3mm_Z4lgON5HSKmpAo,4908
+comma/classes/table.py,sha256=dRpwPYsZBJgjTiQ_f_Apll8y1ZBd6CPt6uq3S3STqSo,12308
+comma/exceptions.py,sha256=GDoouLtHwgqr_guehqa4q9bffcC-MRY9htscr_q7E1w,1642
+comma/extras.py,sha256=ThIHp-6Fipjs9ZAR7h0_Y34rA2-DENYdY3PWNAgCKOI,8145
+comma/helpers.py,sha256=rZt7hk9I-uaNEvuBVG6Z6fR_WVgNS44vAelcYturUSw,18128
+comma/methods.py,sha256=NEeOd957jHK-khcPRe3E9BGFrUhIEK-u0ZnH7s1VOd4,8596
+comma/typing.py,sha256=Cb574gqrYg_T7vBLDUIxlOB0NuQ1vdGl6KBNLfIthbI,1832
+comma-0.1.4.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+comma-0.1.4.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+comma-0.1.4.dist-info/METADATA,sha256=IAUaCvs5s5RgYgAPwYTr7xkeqDh2ELqugtxPPJinEP4,8127
+comma-0.1.4.dist-info/RECORD,,
