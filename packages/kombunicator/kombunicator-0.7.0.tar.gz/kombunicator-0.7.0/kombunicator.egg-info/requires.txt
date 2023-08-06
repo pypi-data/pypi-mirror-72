@@ -1,0 +1,3 @@
+celery>=4.4.2
+kombu>=4.6.8
+strongtyping>=1.1.17
