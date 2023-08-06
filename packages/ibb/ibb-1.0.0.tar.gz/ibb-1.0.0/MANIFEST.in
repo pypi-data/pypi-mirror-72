@@ -1,0 +1,2 @@
+recursive-include ibb/static *.*
+include ibb.json
