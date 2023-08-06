@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: jig-py
+Version: 0.0.2
+Summary: Jig for Python
+Home-page: https://github.com/levii/jig-py
+Author: Jig-Py Project Team
+Author-email: dev+jig-py-contact@levii.co.jp
+License: UNKNOWN
+Description: # jig-py
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
