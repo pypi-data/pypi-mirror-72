@@ -1,0 +1,10 @@
+.gitignore
+.pre-commit-config.yaml
+LICENSE
+README.md
+setup.py
+ansiblespawner/_version.py
+ansiblespawner.egg-info/PKG-INFO
+ansiblespawner.egg-info/SOURCES.txt
+ansiblespawner.egg-info/dependency_links.txt
+ansiblespawner.egg-info/top_level.txt

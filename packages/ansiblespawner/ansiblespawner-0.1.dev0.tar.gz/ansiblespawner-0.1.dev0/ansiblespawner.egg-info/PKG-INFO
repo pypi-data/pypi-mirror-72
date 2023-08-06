@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ansiblespawner
+Version: 0.1.dev0
+Summary: Spawn JupyterHub single user notebook servers using Ansible
+Home-page: https://github.com/manics/jupyterhub-ansiblespawner
+Author: Simon Li
+License: BSD-3-Clause
+Description: # AnsibleSpawner
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
