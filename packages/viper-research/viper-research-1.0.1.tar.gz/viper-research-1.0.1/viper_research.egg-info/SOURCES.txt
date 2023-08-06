@@ -1,0 +1,12 @@
+README.rst
+setup.py
+viper_research/__init__.py
+viper_research/core.py
+viper_research/demo.py
+viper_research/entity.py
+viper_research/test.py
+viper_research/util.py
+viper_research.egg-info/PKG-INFO
+viper_research.egg-info/SOURCES.txt
+viper_research.egg-info/dependency_links.txt
+viper_research.egg-info/top_level.txt

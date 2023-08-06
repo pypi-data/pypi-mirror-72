@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: viper-research
+Version: 1.0.1
+Summary: A framework for developing Quantitative Trading programmes
+Home-page: http://www.yuliangtec.cn
+Author: zhangkai
+Author-email: zhangkai@yuliangtec.com
+License: MIT
+Description: UNKNOWN
+Keywords: quant quantitative investment trading algotrading
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: License :: OSI Approved :: MIT License
