@@ -1,0 +1,17 @@
+# python-droit
+Droit is a simple library for creating bots - [view on GitHub](https://github.com/jarinox/python-droit)
+
+## Features
+- Simple definition of question-to-answer rules using Droit Database Script
+- Multiple input/output devices such as console or telegram
+- Extendable: create your own sub-rules ("plugins")
+
+
+Droit v1.0 ([release](https://github.com/jarinox/python-droit/releases/tag/v1.0.1-release)):
+
+- [Wiki > Getting started](https://github.com/jarinox/python-droit/wiki)
+- [Documentation](https://github.com/jarinox/python-droit/blob/master/docs/docs.md)
+- [Example](https://github.com/jarinox/python-droit/blob/master/sample/sample-bot.py)
+
+This library is published under the terms of the GNU LESSER GENERAL PUBLIC LICENSE. Please see LICENCE for more information.  
+Copyright 2019-2020 Jakob Stolze
