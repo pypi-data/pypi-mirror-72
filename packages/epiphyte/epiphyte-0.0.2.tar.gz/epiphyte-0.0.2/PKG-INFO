@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: epiphyte
+Version: 0.0.2
+Summary: Processing pipeline for single-unit neural activity
+Home-page: https://github.com/mackelab/DeepHumanVision_deploy
+Author: Alana Darcher, Tamara Mueller
+Author-email: tamara.mueller@tum.de
+License: UNKNOWN
+Description: Processing pipeline for high-dimensional single-unit neural activity colligated with meta data
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
