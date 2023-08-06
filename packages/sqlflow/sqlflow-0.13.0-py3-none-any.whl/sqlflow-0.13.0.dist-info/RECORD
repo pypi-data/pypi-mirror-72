@@ -1,0 +1,16 @@
+sqlflow/__init__.py,sha256=d-wL1xCWVX34G0fIOAvz07EKgtqxGrIAdAEGB7RlpBg,82
+sqlflow/__main__.py,sha256=jazxrDnxhaBtpOrKFa9f5i_ypyVuXuXZo1_ZeSheREg,583
+sqlflow/_version.py,sha256=i-7tW86NK6lTYfgD1ds3yJKmaLQAMGw5VRVh7ldWO30,64
+sqlflow/client.py,sha256=j-KkFopYzYtKDbSDWqyJKBigvIVfj8uI99ngmWTTEdg,9972
+sqlflow/compound_message.py,sha256=Fx-CZLcrFiHL1TQyMMaC_YGIC_0eygHPe47NhHQA9tA,1788
+sqlflow/env_expand.py,sha256=u2Zk3VCgY9NowpJjG_EnEsI55uJW7AbgJtJmn56wrJU,1937
+sqlflow/magic.py,sha256=FzluiiUpw7RLLqw2lMs9xtq-caM4hED6EY320sNq1M4,1563
+sqlflow/rows.py,sha256=dQBC06bQFwZ9l6xUSIswiUPix4zRqLGJRd-XuMmOWGc,1402
+sqlflow/proto/sqlflow_pb2.py,sha256=lOIS4ijlNuWB12obxceQZyfkblesAgqVT12k-sgZ9aQ,26383
+sqlflow/proto/sqlflow_pb2_grpc.py,sha256=UiV1xy_wPs81IGLIplTVzdsjh3cGDESO30c9EpT7Js4,5252
+sqlflow-0.13.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+sqlflow-0.13.0.dist-info/METADATA,sha256=uHLoxhoGjCRwG11sW_DDYQXD4PGbHezfxepETJTIDg8,1902
+sqlflow-0.13.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sqlflow-0.13.0.dist-info/entry_points.txt,sha256=NBuDuXNKF1Xfm-TwA6FFeGVBnzvU8jTJRHklcDOYsO0,51
+sqlflow-0.13.0.dist-info/top_level.txt,sha256=EExwzd8232f5Thq4rk2HfUvpaGn0zRJtbvxR6czdP9E,8
+sqlflow-0.13.0.dist-info/RECORD,,
