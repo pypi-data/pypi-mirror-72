@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: easyipc
+Version: 0.0.5
+Summary: Easy-to-use Python library for inter-process communications.
+Home-page: https://github.com/luiscarlosgph/easyipc
+Author: Luis C. Garcia-Peraza Herrera
+Author-email: luiscarlos.gph@gmail.com
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
