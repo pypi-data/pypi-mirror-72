@@ -1,0 +1,17 @@
+twitchat/__init__.py,sha256=1oOH2uDnB5h1Hx6FOYAdN6EU0fDQVvDahMnIvT02rPI,165
+twitchat/comm_template.py,sha256=jU0Kwtt8Zgdi2cQonQ1ucYtlxyOn3EQBQ7rPbiKDu00,216
+twitchat/commands.py,sha256=z8A_IDI3Sp8IdbwaBWOUipgkAXdl4DYKJ71PEItSadM,11826
+twitchat/duckduckgo_abstract.py,sha256=zLTiKK42PjA0wUxFadsokuxHbr4woI4XN3bGaZzlTtI,580
+twitchat/files_to_copy.json,sha256=HBehOPOx7US8Z4NeG4nTjcmVUCUuB0KvvvY0xAh9ibs,182
+twitchat/get_user_info.py,sha256=nnua---Q5CSi3SkFGhWKhzW--uknesforJV5mzR7cAw,359
+twitchat/permissions.json,sha256=YHtQ1b2TpN1ClYc5yjlccIQPjnt8pLVilZAq0mqoegY,693
+twitchat/settings.py,sha256=o1x1y9_bnPa5diFAs19ZeVwjgp6r2NFtG40stEjqHeU,525
+twitchat/test_classes.py,sha256=B1ssvT_D27b-faU6Av0eb157znViHUvPNVIRYGOm3xk,419
+twitchat/timers.json,sha256=h0A6jf9rpeHKMtHDoIX79jap9iWkmtHlA2mbhfescQc,217
+twitchat/twitchbot.py,sha256=OkQd8myXpzKfwW8EwT0V1_wdXZAdl-SSFdHDu5EpvQ8,4213
+twitchat/commands_backups/num.json,sha256=7jqmS7lKUIRdUCTNS9ICAqRWeu1c1TKMDZfpkgd1_Cg,3
+twitchat-1.1.2.dist-info/entry_points.txt,sha256=OmV_swnkU_z4DqGRj5nRz3ga6IwbRwg-aLg5jIv3XVM,93
+twitchat-1.1.2.dist-info/LICENSE,sha256=RtpYQq5pBghMOdZ4Vj-03zzXpfkTL5Y8jVOlI4Ctsrs,1062
+twitchat-1.1.2.dist-info/WHEEL,sha256=GLESb-AiO9TFjbXrEA7UrNl4dwWlkXoKZg6N6Vg0OJg,81
+twitchat-1.1.2.dist-info/METADATA,sha256=QTplqjcwA8G26bP4-Pl4zzcku_8t6-ukvDQpl6PLoLE,749
+twitchat-1.1.2.dist-info/RECORD,,
