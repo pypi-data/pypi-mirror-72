@@ -1,0 +1,14 @@
+README.md
+setup.py
+jfx_bridge_ida/__init__.py
+jfx_bridge_ida/install_server.py
+jfx_bridge_ida/jfx_bridge_ida.py
+jfx_bridge_ida.egg-info/PKG-INFO
+jfx_bridge_ida.egg-info/SOURCES.txt
+jfx_bridge_ida.egg-info/dependency_links.txt
+jfx_bridge_ida.egg-info/requires.txt
+jfx_bridge_ida.egg-info/top_level.txt
+jfx_bridge_ida/server/__init__.py
+jfx_bridge_ida/server/jfx_bridge_ida_port.py
+jfx_bridge_ida/server/jfx_bridge_ida_server.py
+jfx_bridge_ida/server/jfx_bridge_ida_server_shutdown.py
