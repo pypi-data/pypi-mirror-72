@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: kPOD
+Version: 0.1
+Summary: Package for kPOD clustering
+Home-page: http://github.com/iiradia/kPOD
+Author: Ishaan Radia [trl, cre], Jocelyn T. Chi [aut], Eric C. Chi [aut], Richard G. Baraniuk [aut]
+Author-email: iiradia@ncsu.edu
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+UNKNOWN
+
+
