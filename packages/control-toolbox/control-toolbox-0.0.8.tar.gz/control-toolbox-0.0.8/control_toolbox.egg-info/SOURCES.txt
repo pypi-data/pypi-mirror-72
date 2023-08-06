@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+control/LQR.py
+control/StateFeedback.py
+control/StateObserver.py
+control/__init__.py
+control/bode.py
+control/kalman.py
+control/rootlocus.py
+control/system.py
+control_toolbox.egg-info/PKG-INFO
+control_toolbox.egg-info/SOURCES.txt
+control_toolbox.egg-info/dependency_links.txt
+control_toolbox.egg-info/requires.txt
+control_toolbox.egg-info/top_level.txt
