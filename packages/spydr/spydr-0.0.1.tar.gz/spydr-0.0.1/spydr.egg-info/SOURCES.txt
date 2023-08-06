@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+spydr/__init__.py
+spydr/webdriver.py
+spydr.egg-info/PKG-INFO
+spydr.egg-info/SOURCES.txt
+spydr.egg-info/dependency_links.txt
+spydr.egg-info/requires.txt
+spydr.egg-info/top_level.txt
