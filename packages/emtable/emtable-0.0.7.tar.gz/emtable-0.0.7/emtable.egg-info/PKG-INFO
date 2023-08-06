@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: emtable
+Version: 0.0.7
+Summary: Simple module to deal with EM tabular data (aka metadata)
+Home-page: https://github.com/delarosatrevin/emtable
+Author: J.M. De la Rosa Trevin
+Author-email: delarosatrevin@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/delarosatrevin/emtable/issues
+Project-URL: Source, https://github.com/delarosatrevin/emtable
+Description: =======
+        emtable
+        =======
+        
+        Simple module to deal with EM tabular data (aka metadata)
+        
+Keywords: electron-microscopy cryo-em structural-biology image-processing
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3

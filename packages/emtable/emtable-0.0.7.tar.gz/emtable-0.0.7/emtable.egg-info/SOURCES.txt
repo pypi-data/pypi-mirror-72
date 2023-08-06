@@ -1,0 +1,11 @@
+CHANGES.txt
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+emtable/__init__.py
+emtable/metadata.py
+emtable.egg-info/PKG-INFO
+emtable.egg-info/SOURCES.txt
+emtable.egg-info/dependency_links.txt
+emtable.egg-info/top_level.txt
