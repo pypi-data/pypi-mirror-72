@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: Feature_Format
+Version: 0.1
+Summary: This module can take a list of feature names and the data dictionary, and return a numpy array.
+Home-page: https://github.com/geekquad
+Author: GEEKQUAD
+Author-email: adityaastranaut@gmail.com
+License: MIT
+Download-URL: https://github.com/geekquad/Feature_Format
+Description: UNKNOWN
+Keywords: Feature_Format,Target_Split
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
