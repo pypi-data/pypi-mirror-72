@@ -1,0 +1,25 @@
+footer .info {
+    width:70%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+}
+
+.mail a {
+  text-decoration:none;
+}
+
+.social {
+  text-align:right;
+}
+.social li{
+    list-style:none;
+}
+
+.social a {
+    text-decoration:none;
+}
+
+.love {
+  text-align:center;
+}

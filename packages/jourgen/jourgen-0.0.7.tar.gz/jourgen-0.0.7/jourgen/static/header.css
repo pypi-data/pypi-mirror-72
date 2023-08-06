@@ -1,0 +1,13 @@
+.site-header  {
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.site-title{     
+    font-size:2.3em;
+}
+
+.site-header .site-nav a {
+    margin:1em;
+}

@@ -1,0 +1,56 @@
+/*
+ * My colors:
+ *
+ * #d9e5d6ff;
+ * #4d5057ff;
+ * #4e6e5dff;
+ * #dbbaddff;
+ * #be92a2ff;
+ * https://coolors.co/d9e5d6-4d5057-4e6e5d-dbbadd-be92a2
+ * */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap');
+/*@import url('glacier-inv.css');*/
+@import url('forest.css');
+/*@import url('forest-inv.css');*/
+/*@import url('lemonbar.css');*/
+@import url('header.css');
+@import url('content.css');
+@import url('post.css');
+@import url('footer.css');
+@import url('code.css');
+@import url('mobile.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color);
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    width:80%;
+    margin:auto;
+    background:var(--bg-color);
+}
+
+.highlight {
+    width:auto;
+    margin:1em 0;
+    padding:1em;
+    border-style:solid
+}
+
+code {
+  font-family: monospace;
+}
+
+code {
+  padding: .1em .4em;
+  background-color:#fdf6e3;
+}
+
+.highlight code{
+  padding:0
+}
