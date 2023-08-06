@@ -1,0 +1,8 @@
+include libvis_mods/web/*
+recursive-include libvis_mods/tests/ *
+recursive-include libvis_mods/web/src/ *
+recursive-include libvis_mods/project-templates *
+include libvis_mods/build.sh
+include libvis_mods/develop.sh
+prune **/.git
+prune **/node_modules

@@ -1,0 +1,3 @@
+[console_scripts]
+libvis-mods = libvis_mods.cli:cli
+
