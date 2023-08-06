@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+t2i/__init__.py
+t2i/decorators.py
+t2i/tests/__init__.py
+t2i/tests/t2i_test.py
+token2index.egg-info/PKG-INFO
+token2index.egg-info/SOURCES.txt
+token2index.egg-info/dependency_links.txt
+token2index.egg-info/top_level.txt
