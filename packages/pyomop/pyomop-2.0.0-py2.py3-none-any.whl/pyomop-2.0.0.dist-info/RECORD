@@ -1,0 +1,13 @@
+pyomop/__init__.py,sha256=Hx4BRxNKf_wbiyofM2Y6m8Ikl4zymFXgmkPUK-KecGQ,1953
+pyomop/__main__.py,sha256=VXrGayfGjvbKvxrYYkaX-LfWndXFocJcUWv5Fnzn4qY,32
+pyomop/cdm6_tables.py,sha256=qN-K6Xot63kjn7CgqXj_0MRhjSpzOXmQxT-iyicEZRQ,21881
+pyomop/engine_factory.py,sha256=1lfXlb8R4eOtIJg1RQPt_VitL4_nQawU8Gjl06RlP6c,2969
+pyomop/main.py,sha256=ch22EOisF3Gz5IZ10geg_9uoJwJyV4a-C-SiAsFdfXo,1919
+pyomop/vocabulary.py,sha256=awMQwyTKn7VFP5CjPIVlM-THEAYwJAIIvsCFGC1vfbM,6172
+pyomop-2.0.0.dist-info/AUTHORS.rst,sha256=88W1lB04zCuBUjBqrRDotdupgGv0rDfTgh2gSRHeHIk,77
+pyomop-2.0.0.dist-info/LICENSE,sha256=khxFMYKRKwikdE2LjX3YIjq_AsbtsKIqGToFpvd71N4,35136
+pyomop-2.0.0.dist-info/METADATA,sha256=CuCUrUkFpPbt67K-dzcWrpgyEQTr1J3Y-l4UAuj2rm8,2190
+pyomop-2.0.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+pyomop-2.0.0.dist-info/entry_points.txt,sha256=4fsL1Eey-0t3tEFPsMXxEfMbJEzIlvI5cDPUlZ23fVw,53
+pyomop-2.0.0.dist-info/top_level.txt,sha256=Hl4so6hAKvFSEW3g8XNGOdIvw7EYFJa5W5C3EvAdeLo,7
+pyomop-2.0.0.dist-info/RECORD,,
