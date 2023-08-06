@@ -1,0 +1,3 @@
+[console_scripts]
+dbot = dstack_bot.main:main
+
