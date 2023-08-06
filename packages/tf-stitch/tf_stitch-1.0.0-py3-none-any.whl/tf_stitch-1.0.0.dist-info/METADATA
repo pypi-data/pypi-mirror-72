@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: tf-stitch
+Version: 1.0.0
+Summary: Quick Starter Code with different specifications stitched together.
+Home-page: https://github.com/amifunny/tf-stitch/
+Author: Hemant Singh
+Maintainer: amifunny
+License: UNKNOWN
+Keywords: deep learning,Boilerplate,Starter Code,Starter Pieces,Quick Work,Productivity
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# tf-stitch
+Starter code with best practices for different Deep Learning problems in one command.
+
+
