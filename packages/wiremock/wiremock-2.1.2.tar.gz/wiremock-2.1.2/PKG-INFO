@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: wiremock
+Version: 2.1.2
+Summary: Wiremock Admin API Client
+Home-page: https://github.com/platinummonkey/python-wiremock
+Author: Cody Lee
+Author-email: cody.lee@datadoghq.com
+Maintainer: Cody Lee
+Maintainer-email: cody.lee@datadoghq.com
+License: Apache Software License 2.0
+Description: 
+        wiremock is an API Client to the Admin API for WireMock Standalone installation: https://wiremock.org/docs
+        
+        `Documentation <https://wiremock.readthedocs.org/en/latest/>`_
+        
+        `Report a Bug <https://github.com/platinummonkey/python-wiremock/issues>`_
+        
+Keywords: wiremock
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Environment :: Other Environment
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.4
+Provides-Extra: develop
+Provides-Extra: docs
