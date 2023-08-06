@@ -1,0 +1,3 @@
+[console_scripts]
+model-log = model_log.modellog_web:main
+
