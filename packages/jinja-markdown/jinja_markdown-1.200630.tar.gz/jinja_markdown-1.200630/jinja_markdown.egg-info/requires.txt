@@ -1,0 +1,11 @@
+Jinja2~=2.11
+Pygments~=2.6.1
+pymdown_extensions~=7.1
+
+[dev]
+pytest
+flake8
+tox
+
+[testing]
+pytest
