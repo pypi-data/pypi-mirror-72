@@ -1,0 +1,13 @@
+strongtyping/__init__.py,sha256=9MiEQ--OHE6dN12Xmmhf5eb6_dpred71DcEE6fhCbzw,89
+strongtyping/cached_dict.py,sha256=F1rm1W6op69OCurza9FhcMSi7VZ8Et6ip1_zx88S-GQ,643
+strongtyping/cached_set.py,sha256=4zOB8NT2bUTR9mN0IrnWX8EAjqW_ODbklemHrLpoSqI,647
+strongtyping/docstring_typing.py,sha256=AwtNpcxyumJXw57xaE6aR4WUmKSEcMpB3E4DgCoOjsc,8551
+strongtyping/strong_typing.py,sha256=1cOI3FmCIzYuNrbXnxcDqJXHgIVkXZFkHFtVhnn92uQ,7546
+strongtyping/tests/__init__.py,sha256=-pKFh7eNk9JyapTdLfISTzdNrZPRpuumxbgvsw7K5Zk,90
+strongtyping/tests/test_docstring.py,sha256=xwAzMmJ3OjRQp_WFfkPUGm4MWZI1UHwbMZByeEiOoMA,7471
+strongtyping/tests/test_typing.py,sha256=F1GZWS6OlPFbIquljMGhRp9RwOHHv5p2MoD9X3sI_Jo,13902
+strongtyping-1.3.0.dist-info/LICENSE.md,sha256=mEKDM_Tv3GmnZzLpsdFEp7vmhE1rTvk33XsRUa4KqNw,1071
+strongtyping-1.3.0.dist-info/METADATA,sha256=lLpOGOte3mCp6byP6xj1CKLjIrKfPc41euz4xL3ccEs,5533
+strongtyping-1.3.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+strongtyping-1.3.0.dist-info/top_level.txt,sha256=P-Y9GNWI7Dy1GBuPkTTQI8yVJ0oR_AmkcuO3eLqEcKI,13
+strongtyping-1.3.0.dist-info/RECORD,,
