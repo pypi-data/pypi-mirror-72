@@ -1,0 +1,21 @@
+<Node kind="Project" num="1">
+    <Props>
+        <Prop key="key1" type="string" default="abc" />
+    </Props>
+    <children>
+        <Node kind="Group" num="*">
+            <Props>
+                <Prop key="key2" type="string" default="group" />
+            </Props>
+            <children>
+                <Node kind="Group" num="*">
+                </Node>
+                <Node kind="Item" num="*">
+                    <Props>
+                        <Prop key="key3" type="string" default="item" />
+                    </Props>
+                </Node>
+            </children>
+        </Node>
+    </children>
+</Node>

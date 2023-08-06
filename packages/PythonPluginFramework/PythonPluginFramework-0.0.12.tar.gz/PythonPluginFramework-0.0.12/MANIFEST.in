@@ -1,0 +1,12 @@
+include PythonPluginFramework/*
+include PythonPluginFramework/*/*
+include PythonPluginFramework/*/*/*
+include PythonPluginFramework/*/*/*/*
+include PythonPluginFramework/*/*/*/*/*
+include PythonPluginFramework/*/*/*/*/*/*
+include PythonPluginFramework/*/*/*/*/*/*/*
+
+include LICENSE
+
+global-exclude __pycache__ *.py[cod]
+global-exclude *.so *.dylib
