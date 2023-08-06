@@ -1,0 +1,193 @@
+Metadata-Version: 2.1
+Name: EcoNameTranslator
+Version: 2.0
+Summary: A lightweight but powerful package for full management and translation of ecological names
+Home-page: https://github.com/Daniel-Davies/MedeinaTranslator
+Author: Daniel Davies
+Author-email: dd16785@bristol.ac.uk
+License: UNKNOWN
+Description: # The Ecological Name Translator
+        
+        ### What is it?
+        
+        A lightweight python package containing everything you need for translation and management of ecological names. The package takes inspiration from the "taxize" package in R, and currently provides all of it's functionality. On top of this however, the EcoNameTranslator aims to be far more powerful; rather than being a thin wrapper around specific ecological name data-stores, the multiple data-stores are leveraged together alongside statistical inference to provide more coherent output and failure correction of the underlying APIs and user input. API calls are made concurrently for increased performance. 
+        
+        ### Functionality
+        
+        ##### Get Taxonomy For A Scientific Name
+        
+        Given a list of scientific names (at any taxonomic rank) this function will standardise and spell check your input names, before returning a taxonomic profile for each name:
+        
+        ```python
+        from EcoNameTranslator import classify
+        scientific_names = classify(['Vulpes vulpes','Delphinidae']) 
+        # {
+        #   'vulpes vulpes': {'species': 'vulpes vulpes','genus':'vulpes','family':'canidae'...},
+        #   'delphinidae': {'family': 'delphinidae','order': 'cetacea','class': 'mammalia'...}
+        # } 
+        ```
+        
+        The output of multiple databases is taken by the classify funcion, and a consensus protocol is run to determine the most likely true taxonomic ranking. This is to guard against inconsistencies (or false inputs) that occur in some databases, which arise from time to time, especially for lesser known species. 
+        
+        
+        ##### Common Name To Scientific Name
+        
+        A list of common names are accepted as input, which are then mapped into their scientific species names:
+        
+        ```python
+        from EcoNameTranslator import to_scientific
+        scientific_names = to_scientific(['blackbird']) 
+        # {
+        #   'blackbird': ['Turdus merula', 'Chrysomus icterocephalus', 'Agelaius assimilis'...],
+        # } 
+        ```
+        
+        This basic version should suit most applications- but some common names can differ from what you may mean; for example, suppose we want to obtain various species of crocodile:
+        
+        ```python
+        scientific_names = to_scientific(['crocodile']) 
+        # {
+        #   'crocodile': ['Crocodylus novaeguineae', 'Crocodylus johnsoni','Pseudocarcharias kamoharai'...]
+        # } 
+        ```
+        
+        But oh no! Pseudocarcharias kamoharai isn't a crocodile...it's the "crocodile shark". If you would like to guard against these natural language issues, you can use the sanityCheck parameter in the to_scientific function, as follows:
+        
+        ```python
+        scientific_names = to_scientific(['crocodile'],sanityCheck=True) 
+        # {
+        #   'crocodile': ['crocodylus acutus', 'crocodylus moreletii', 'crocodylus novaeguineae'...]
+        # } 
+        ```
+        
+        Now, only the species that we commonly know as crocodiles will be returned. (Note however that as a side effect, this will also remove any additional specifics in the name- for example,  "Osteolaemus tetraspis tetraspis" will become simply "Osteolaemus tetraspis")
+        
+        ##### Scientific Name To Common
+        
+        Given a list of scientific names (at any taxonomic rank) this function will standardise and spell check your input names, before returning the common English names that can describe the taxonmic input name
+        
+        ```python
+        from EcoNameTranslator import to_common
+        common_names = to_common(['vulpes vulpes','ursus']) 
+        # {
+        #   'vulpes vulpes': ['Red Fox','Renard Roux'],
+        #   'ursus': ['Asiatic Black Bear', 'Mexican Grizzly Bear', 'American Black Bear', ...]
+        # } 
+        ```
+        
+        ##### Any Unstandardised Names To Scientific Species
+        
+        A list of ecological names, in any format, is accepted as input. This undergoes a data-cleaning procedure (namely, removing nomenclature flags and other redundant information), after which the following actions are taken:
+        
+        - Names that are already in a standard species format (that is, genus + species), have any spelling errors corrected and are passed back
+        
+        - Names at higher levels of taxonomy again have any spelling mistakes corrected, and are then mapped to a list of specific species names
+        
+        - Common names (currently, English only) are mapped to all of the scientific species names that can be described by the common name)
+        
+        ```python
+        from EcoNameTranslator import to_species
+        #Should be "Panthera tigris"  
+        wrong_spelling = to_species(['Panhera tigris'])      
+        # {'Panera tigris':['panthera tigris']}    
+        ```
+        ```python
+        #Higher taxa    
+        higher_taxa = to_species(['Vulpes']) 
+        # {'Vulpes': ['Vulpes lagopus', 'Vulpes ferrilata', 'Vulpes zerda', 'Vulpes vulpes'...]}
+        ```
+        ```python
+        #Common English name
+        common_name = to_species(['blackbird']) 
+        # {'blackbird':['Turdus merula', 'Chrysomus icterocephalus', 'Agelaius assimilis', 'Turdus albocinctus'...]}    
+        ```
+        
+        The function becomes incredibly useful if you're working with large datasets of names that come from multiple sources. Authors use totally different formats and conventions, which this function will help you map to a standard.
+        
+        
+        ##### Synonyms
+        
+        Given a list of scientific names (at any taxonomic rank) this function will return the synonyms of the name
+        
+        ```python
+        from EcoNameTranslator import synonyms
+        scientific_names = synonyms(['Myodes']) 
+        # {
+        #   {'Myodes': ['Clethrionomys', 'Phaulomys', 'Craseomys', 'Evotomys', 'Glareomys', 'Neoaschizomys']}
+        # } 
+        ```
+        
+        ##### Children
+        
+        Given a list of names (at any taxonomic rank) this function will return the immediate children under the name
+        
+        ```python
+        from EcoNameTranslator import children
+        scientific_names = children(['Vulpes','Felidae','Carnivora']) 
+        # {
+        #  'Vulpes': ['Vulpes vulpes', 'Vulpes macrotis', 'Vulpes velox'...],
+        #  'Felidae': ['Lynx', 'Felis', 'Acinonyx', 'Leopardus'...],
+        #  'Carnivora': ['Ursidae', 'Mustelidae', 'Procyonidae'...]
+        # }
+        ```
+        
+        ##### Generalised Downstream Species
+        
+        Given a list of names (at any taxonomic rank),and a target rank, this function will return the list of children at the specified taxonomic rank for each input name
+        
+        ```python
+        from EcoNameTranslator import downstream
+        scientific_names = downstream(['Felidae','Vulpes'],'species')
+        # {
+        #  'Vulpes': ['Vulpes vulpes', 'Vulpes macrotis', 'Vulpes velox'...]
+        #  'Felidae': ['Lynx rufus', 'Lynx lynx', 'Lynx canadensis'...], 
+        # } 
+        ```
+        
+        ##### Generalised Upstream Species
+        
+        Given a list of names (at any taxonomic rank),and a target rank, this function will return the list of taxa above the given name
+        
+        ```python
+        from EcoNameTranslator import upstream
+        scientific_names = upstream(['Ursus Arctos','Vulpes Vulpes'],'genus')
+        # {
+        #  'Ursus Arctos': ['Ursus', 'Ailuropoda', 'Helarctos'...],
+        #  'Vulpes Vulpes': ['Canis', 'Vulpes', 'Urocyon'...]
+        # } 
+        ```
+        
+        ##### Lowest intersecting taxonomic rank
+        
+        ```python
+        from EcoNameTranslator import lowest_rank_intersection
+        intersection = lowest_rank_intersection(['vulpes vulpes','ursus arctos','panthera tigris','turdus merula'])
+        # ('phylum', 'chordata')
+        intersection = lowest_rank_intersection(['felis catus','panthera tigris'])
+        # ('family', 'felidae')
+        
+        ```
+        
+        ### Contributing
+        
+        See the Github page for both, [here](https://github.com/Daniel-Davies/MedeinaTranslator). Pull requests are welcome! 
+        
+        ### Coming Soon
+        
+        - Only some of the functions can currently use multiple databases for running consensus on their output. We will soon add a consensus service layer that enables all functions to use this feature. 
+        - We will be gradually build out functionality that combines APIs to achieve functionality that cannot be done with one database alone
+        
+        
+        ### Credit 
+        
+        The package uses various APIs for conversions of names. These are:
+        
+        - [The Global Names Resolver](https://resolver.globalnames.org/)
+        - [The Integrated Taxonomic Information System](https://www.itis.gov/)
+        - [The Global Biodiversity Information Facility](https://www.gbif.org/)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
