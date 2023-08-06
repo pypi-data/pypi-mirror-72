@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ezdnac
+Version: 0.0.48
+Summary: A small module to make it easy to start using the rest-api of Cisco DNA-C
+Home-page: https://github.com/johan-lahti/ezdnac
+Author: Johan Lahti
+Author-email: ccie60702@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: tabulate
+Requires-Dist: click
+
+# ezdnac
+A tiny helper for getting started or simplify coding towards Cisco DNA-C API.
+
+
