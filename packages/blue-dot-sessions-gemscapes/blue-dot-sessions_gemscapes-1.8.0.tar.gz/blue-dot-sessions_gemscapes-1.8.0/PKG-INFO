@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: blue-dot-sessions-gemscapes
+Version: 1.8.0
+Summary: Blue Dot Sessions Gemscape Generation
+Author: Dean Shaff
+Author-email: dean.shaff@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: colour (>=0.1.5,<0.2.0)
+Requires-Dist: cython (>=0.29.19,<0.30.0)
+Requires-Dist: eyeD3 (>=0.9.5,<0.10.0)
+Requires-Dist: numpy (>=1.16,<2.0)
+Requires-Dist: pillow (==6.2.2)
+Requires-Dist: pyclipper (>=1.1.0,<2.0.0)
+Requires-Dist: pysndfile (>=1.4.3,<2.0.0)
+Requires-Dist: scikit-image (>=0.16.2,<0.17.0)
+Requires-Dist: toml (>=0.10.0,<0.11.0)
+Requires-Dist: tqdm (>=4.45.0,<5.0.0)
