@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: MATE-for-Dummies
+Version: 0.5.2
+Summary: MATE for Dummies. Scienta Omicron MATE Scripting System in Python
+Home-page: https://pypi.org/project/MATE-for-Dummies/
+Author: Stephan Zevenhuizen
+Author-email: S.J.M.Zevenhuizen@uu.nl
+License: The license file is in the package.
+Keywords: SPM scanning probe microscopy
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.5
+Description-Content-Type: text/x-rst
+Requires-Dist: psutil
+Requires-Dist: pefile
+
+**MATE for Dummies** is a Python library for using scriptable MATE objects. The
+Scienta Omicron MATRIX Automated Task Environment (MATE) is using the MATRIX
+SPM Control System. **MATE for Dummies** is pure Python but it loads a dynamic
+link library RemoteAccess_API.dll, a C-language interface for remote controlling
+MATRIX.  
+
+**MATE for Dummies** consists of two modules, ``mate`` and ``objects``. The
+expert module ``mate`` uses most of the C-language functions in the
+RemoteAccess_API. With this module you must use the MATE HELP System to provide
+the arguments for the remote_access function that is in the ``mate`` module. The
+dummy module ``objects`` will provide a fraction of the available MATE objects
+but enough to do most of the experiments.
+
+Dependencies
+------------
+**MATE for Dummies** requires the psutil (https://pypi.org/project/psutil/) and
+pefile (https://pypi.org/project/pefile/) libraries.
+
+Installation
+------------
+Using pip::
+
+    > pip install MATE-for-Dummies
+
+Example usage
+-------------
+Dummy mode:
+
+.. code-block:: pycon
+
+    >>> import mate4dummies.objects as mo
+    Starting log on Thursday, 10 May 2018 16:46:40.
+
+    >>> mo.mate.connect()
+    Connecting to the MATRIX, response: RMT_SUCCESS.
+
+    Experiment parameter Name: STM_Basic.
+
+    Experiment parameter Result_File_Name: default_2018May10-164819_STM-STM_Basic.
+
+    Experiment parameter Result_File_Path: C:\Users\stephan\AppData\Roaming\Scienta Omicron\MATRIX\default\Results\10-May-2018.
+    >>> mo.xy_scanner.Angle()
+    10
+    >>> mo.xy_scanner.Angle(45)
+    45
+    >>> mo.gap_voltage_control.Voltage(0.5)
+    0.5
+    >>> mo.mate.disconnect()
+    Disconnecting from the MATRIX, response: RMT_SUCCESS.
+
+    >>> 
+
+There are four, very educational, testing scripts available in the
+**MATE for Dummies** package. In the following example you can locate these
+files.
+
+.. code-block:: pycon
+
+    >>> import mate4dummies, os
+    >>> os.path.join(mate4dummies.__path__[0], 'testing')
+    'C:\\Users\\stephan\\Python\\Python38\\lib\\site-packages\\mate4dummies\\testing'
+    >>> 
+
+Authors & affiliations
+----------------------
+Stephan J. M. Zevenhuizen [#]_
+
+..  [#] Condensed Matter and Interfaces, Debye Institute for Nanomaterials
+    Science, Utrecht University, Utrecht, The Netherlands.
+
+
