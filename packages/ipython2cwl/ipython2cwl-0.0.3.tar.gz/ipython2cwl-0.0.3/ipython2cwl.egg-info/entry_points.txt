@@ -1,0 +1,3 @@
+[console_scripts]
+jupyter-repo2cwl = ipython2cwl.repo2cwl:repo2cwl
+
