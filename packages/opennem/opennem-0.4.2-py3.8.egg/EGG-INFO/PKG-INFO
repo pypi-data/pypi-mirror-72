@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: opennem
+Version: 0.4.2
+Summary: opennem engine agent
+Home-page: UNKNOWN
+Author: Dylan McConnell
+Author-email: dylan.mcconnell@unimelb.edu.au
+License: MIT
+Project-URL: homepage, https://opennem.org.au
+Project-URL: repository, https://github.com/opennem/opennem
+Description: UNKNOWN
+Keywords: opennem analysis australia
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: Scrapy
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: ==3.*,>=3.7.0
+Provides-Extra: dev
+Provides-Extra: server
+Provides-Extra: postgres
