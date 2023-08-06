@@ -1,0 +1,34 @@
+{
+    "Emit": {
+        "table": "Events",
+        "headings": [
+            {"Lit": "id"},
+            {"Lit": "Received On"},
+            {"Lit": "Activity Name"},
+            {"Lit": "Event Date"},
+            {"Lit": "Duration"},
+            {"Lit": "Score"}
+        ],
+        "source": {"Map": {
+            "body": {
+                "List": [
+                    {"Ref": "id"},
+                    {"Ref": "received_on"},
+                    {"Ref": "form.activity_name"},
+                    {"Ref": "form.event_date"},
+                    {"Ref": "form.event_duration_minutes"},
+                    {"Ref": "form.event_score"}
+                ]
+            },
+            "source": {"Apply": {
+                "fn": {"Ref": "api_data"}, 
+                "args": [
+                    {"Lit": "form"}, 
+                    {"Lit": {"filter": {"and":[
+                        {"term": {"xmlns.exact": "http://openrosa.org/formdesigner/B4FFDB28-8240-4950-B6E2-EA26D7B0856D"}}
+                    ]}}}
+                ]
+            }}
+        }}
+    }
+}
