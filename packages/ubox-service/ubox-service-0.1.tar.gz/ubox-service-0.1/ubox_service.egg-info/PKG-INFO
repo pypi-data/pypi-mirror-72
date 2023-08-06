@@ -1,0 +1,46 @@
+Metadata-Version: 1.1
+Name: ubox-service
+Version: 0.1
+Summary: A Django app to service.
+Home-page: https://www.example.com/
+Author: appdata
+Author-email: appdata@qq.com
+License: BSD-3-Clause  # Example license
+Description: =============
+        Ubox Service
+        =============
+        
+        Service is a Django app. For each question,
+        
+        Detailed documentation is in the "docs" directory.
+        
+        Quick start
+        -----------
+        
+        1. Add "service" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'service.apps.ServiceConfig',
+            ]
+        
+        2. Include the service URLconf in your project urls.py like this::
+        
+            path('/api/endpoint', include('service.urls')),
+        
+        
+        3. Visit http://127.0.0.1:8000//api/endpoint.
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
