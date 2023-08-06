@@ -1,0 +1,3 @@
+[console_scripts]
+ivadomed = ivadomed.main:run_main
+
