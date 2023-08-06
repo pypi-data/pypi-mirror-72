@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#603cba">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ css_href }}" integrity="{{ css_integrity }}" crossorigin="{{ css_crossorigin }}">
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-serialize-object/2.5.0/jquery.serialize-object.min.js" integrity="sha256-E8KRdFk/LTaaCBoQIV/rFNc0s3ICQQiOHFT4Cioifa8=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .pageContainer {
+                margin: 20%;
+            }
+            @media (max-width: 1100px) {
+                .pageContainer {
+                    margin: 2%;
+                }
+            }
+            h1 {
+                /*margin: 20%;*/
+                margin-bottom: 5%;
+            }
+            .linkGroup {
+                /*margin: 20%;*/
+                margin-bottom: 5%;
+                margin-top: 5%;
+            }
+            .linkForm {
+                /*margin: 20%;*/
+                margin-top: 5%;
+                margin-bottom: 5%;
+            }
+            .contactBox {
+                /*margin: 20%;*/
+                margin-top: 5%;
+                color: grey;
+            }
+            .fa-clipboard {
+                color: grey;
+            }
+            .fa-clipboard:hover {
+                color: black;
+            }
+        </style>
+        <title>Admin</title>
+    </head>
+    <body>
+        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginTitle">Login</h5>
+                    </div>
+                    <div class="modal-body" id="formBody">
+                        <form action="#" method="POST" id="loginForm">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                            </div>
+                        </form>
+                        <div id="loginErrorArea"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="loginSubmit" class="btn btn-primary" form="loginForm">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="settingsMenu" tabindex="-1" role="dialog" aria-labelledby="settings menu" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="settingsTitle">Settings</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <button type="button" class="btn btn-secondary" id="openUsers">
+                                Users <i class="fa fa-user"></i>
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button type="button" class="btn btn-secondary" id="openDefaultsWizard">
+                                New account defaults
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer" id="settingsFooter">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="users" tabindex="-1" role="dialog" aria-labelledby="users" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="usersTitle">Users</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group list-group-flush" id="userList">
+                        </ul>
+                    </div>
+                    <div class="modal-footer" id="userFooter">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="userDefaults" tabindex="-1" role="dialog" aria-labelledby="users" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="defaultsTitle">New user defaults</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Create an account and configure it to your liking, then choose it from below to store the settings as a template for all new users.</p>
+                        <div id="defaultUserRadios"></div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" style="margin-right: 1rem;" id="storeDefaultHomescreen" checked>Store homescreen layout</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer" id="defaultsFooter">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="storeDefaults">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pageContainer">
+            <h1>
+                Accounts admin
+            </h1>
+            <button type="button" class="btn btn-secondary" id="openSettings">
+                Settings <i class="fa fa-cog"></i>
+            </button>
+            <div class="card bg-light mb-3 linkGroup">
+                <div class="card-header">Current Invites</div>
+                <ul class="list-group list-group-flush" id="invites">
+                </ul>
+            </div>
+            <div class="linkForm">
+                <div class="card bg-light mb-3">
+                    <div class="card-header">Generate Invite</div>
+                    <div class="card-body">
+                        <form action="#" method="POST" id="inviteForm">
+                                <div class="form-group">
+                                    <label for="hours">Hours</label>
+                                    <select class="form-control" id="hours" name="hours">
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="minutes">Minutes</label>
+                                    <select class="form-control" id="minutes" name="minutes">
+                                    </select>
+                                </div>
+                                {% if email_enabled %}
+                                <div class="form-group">
+                                    <label for="send_to_address">Send invite to address</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <input type="checkbox" onchange="document.getElementById('send_to_address').disabled = !this.checked;" aria-label="Checkbox to allow input of email address" id="send_to_address_enabled">
+                                            </div>
+                                        </div>
+                                        <input type="email" class="form-control" placeholder="example@example.com" id="send_to_address" disabled>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                <button type="submit" id="generateSubmit" class="btn btn-primary">Generate</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="contactBox">
+                <p>{{ contactMessage }}</p>
+            </div>
+        </div>
+        <script src="admin.js"></script>
+    </body>
+</html>
