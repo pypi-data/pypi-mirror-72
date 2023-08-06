@@ -1,0 +1,4 @@
+
+class HBarPlot:
+    pass
+

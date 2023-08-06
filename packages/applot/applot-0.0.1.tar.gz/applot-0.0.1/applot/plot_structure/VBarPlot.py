@@ -1,0 +1,4 @@
+
+class VBarPlot:
+    pass
+

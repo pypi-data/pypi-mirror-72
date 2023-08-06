@@ -1,0 +1,4 @@
+
+class Slopegraph:
+    pass
+
