@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: dem-util
+Version: 1.0.3
+Summary: DEM slope modeling and imaging with trilinear interpolation
+Home-page: https://github.com/BetaS/pydemutil
+Author: BetaS
+Author-email: thou1999@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
