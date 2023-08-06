@@ -1,0 +1,9 @@
+requirements.txt
+setup.py
+mac_localized/__init__.py
+mac_localized/strings.py
+mac_localized.egg-info/PKG-INFO
+mac_localized.egg-info/SOURCES.txt
+mac_localized.egg-info/dependency_links.txt
+mac_localized.egg-info/requires.txt
+mac_localized.egg-info/top_level.txt
