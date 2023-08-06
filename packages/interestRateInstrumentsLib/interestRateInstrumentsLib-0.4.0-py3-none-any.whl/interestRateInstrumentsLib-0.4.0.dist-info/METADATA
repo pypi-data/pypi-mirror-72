@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: interestRateInstrumentsLib
+Version: 0.4.0
+Summary: Interest rate instruments library
+Home-page: https://github.com/neoyung/irLib
+Author: Neo Yung
+Author-email: reverie211@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: convertdate
+Requires-Dist: holidays
+Requires-Dist: korean-lunar-calendar
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: PyMeeus
+Requires-Dist: python-dateutil
+Requires-Dist: pytz
+Requires-Dist: scipy
+Requires-Dist: six
+Requires-Dist: toml
+
+# Why develop?
+
+1. Enhance modelling and computational complexity by moving from spreadsheets to a general-purpose programming language whose instructions can be run on a server if needed.
+
+2. Reduced complexity to be user-friendly but capturing most of the practical aspects of modelling interest rate instruments to be market consistent and realistic.
+
+# How is it developed?
+
+1. This open-source library has taken reference from QuantLib, the De facto standard library for quantitative finance to maintain a clean object model and to allow for future expansibility.
+
+2. It is both unit-tested and integration-tested.
+
+# How to use?
+```bash
+pip install interestRateInstrumentsLib
+```
+
+# How to contribute?
+
+1. Please submit pull request or contact author if a bug is found. It would be easy to follow if a test case is provided with it.
+
+2. More instruments and tools shall be added in future. For general issues, flag them in the issues tab.
+
+# Illustrations
+Refer to the examples.ipynb.
+
+
