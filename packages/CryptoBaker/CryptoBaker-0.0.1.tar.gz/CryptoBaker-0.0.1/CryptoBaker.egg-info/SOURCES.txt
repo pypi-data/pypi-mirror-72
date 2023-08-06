@@ -1,0 +1,12 @@
+README.md
+setup.py
+CryptoBaker.egg-info/PKG-INFO
+CryptoBaker.egg-info/SOURCES.txt
+CryptoBaker.egg-info/dependency_links.txt
+CryptoBaker.egg-info/not-zip-safe
+CryptoBaker.egg-info/top_level.txt
+cryptobaker/__init__.py
+cryptobaker/recipes/__init__.py
+cryptobaker/recipes/encoding.py
+cryptobaker/recipes/hashing.py
+cryptobaker/recipes/util.py
