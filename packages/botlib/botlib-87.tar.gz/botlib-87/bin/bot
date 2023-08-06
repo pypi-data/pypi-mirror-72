@@ -1,0 +1,87 @@
+#!/usr/bin/python3 -u
+# BOTLIB - the bot library !
+#
+#
+
+import os, sys
+
+from bot.krn import k
+from bot.prs import parse_cli
+from bot.shl import execute, root, termreset
+
+txt="""[Unit]
+Description=BOTD - the 24/7 channel daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/bot mods=irc,rss
+
+[Install]
+WantedBy=multi-user.target
+"""
+
+def daemon():
+    pid = os.fork()
+    if pid != 0:
+        termreset()
+        os._exit(0)
+    os.setsid()
+    pid = os.fork()
+    if pid != 0:
+        os._exit(0)
+    os.umask(0)
+    si = open("/dev/null", 'r')
+    so = open("/dev/null", 'a+')
+    se = open("/dev/null", 'a+')
+    os.dup2(si.fileno(), sys.stdin.fileno())
+    os.dup2(so.fileno(), sys.stdout.fileno())
+    os.dup2(se.fileno(), sys.stderr.fileno())
+
+def help(event):
+    event.reply("bot <cmd> [-d] [-i] [-r] [-s] [-u]")
+
+def hup(event):
+    for x in os.popen("service botd stop").readlines():
+        print(x.rstrip())
+    for x in os.popen("service botd start").readlines():
+        print(x.rstrip())
+    for x in os.popen("systemctl status botd --no-pager").readlines():
+        print(x.rstrip())
+    event.reply("ok")
+    os._exit(0)
+    
+def install(event):
+    f = open("/etc/systemd/system/botd.service", "w")
+    f.write(txt)
+    f.close()
+    os.popen("systemctl enable botd")
+    os.popen("systemctl daemon-reload")
+    event.reply("ok")
+    os._exit(0)
+
+def remove(event):
+    p = "/etc/systemd/system/botd.service"
+    if os.path.exists(p):
+        for l in os.popen("rm %s" % p).readlines():
+            print(l) 
+    event.reply("ok")
+    os._exit(0)
+
+def main():
+    c = parse_cli()
+    if "d" in c.opts:
+        daemon()
+    k.cmds.register("help", help)
+    if root():
+        k.cmds.register("hup", hup)
+        k.cmds.register("install", install)
+        k.cmds.register("remove", remove)
+    if c.txt:
+        return k.cmd(c.origtxt)
+    if c.mods:
+        k.start()
+        k.init(c.mods)
+        k.wait()
+
+execute(main)
