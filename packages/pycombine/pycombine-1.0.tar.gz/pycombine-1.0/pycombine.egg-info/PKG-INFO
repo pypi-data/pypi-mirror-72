@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pycombine
+Version: 1.0
+Summary: Combine files together
+Home-page: https://github.com/jackprogramsjp/pycombine
+Author: Jack Murrow
+Author-email: jack.murrow122005@gmail.com
+License: GPLv3
+Description: On your Command line / bar, just type in `pycombine main_file [file ...]`. For example, `pycombine main.py partone.py parttwo.py`. Github is https://github.com/jackprogramsjp/pycombine.
+Keywords: Python Combine,Combine,PyCombine
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
