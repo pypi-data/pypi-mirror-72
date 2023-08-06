@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pyform
+Version: 0.0.2
+Summary: An event-driven algorithmic trading framework
+Home-page: https://github.com/shawnlinxl/pyform
+Author: Shawn Lin
+Author-email: shawn.lin@gatech.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# pyform
+
+[![PyPI version](https://badge.fury.io/py/pyform.svg)](https://badge.fury.io/py/pyform)
+![Python package](https://github.com/shawnlinxl/pyform/workflows/Python%20package/badge.svg)
+[![codecov](https://codecov.io/gh/shawnlinxl/pyform/branch/master/graph/badge.svg)](https://codecov.io/gh/shawnlinxl/pyform)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+An Event-Driven Algorithm Trading framework.
+
+
