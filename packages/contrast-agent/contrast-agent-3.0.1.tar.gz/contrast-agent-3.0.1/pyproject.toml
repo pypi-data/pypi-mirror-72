@@ -1,0 +1,15 @@
+[tool.black]
+line-length = 88
+target-version = ['py27']
+exclude = '''
+(
+  /(
+      apptest/(django|flask|pyramid|falcon).*
+    | src/contrast/extern/*
+    | src/contrast/api/*
+    | src/contrast/assess_extensions/*
+    | src/contrast/data/*
+    | hookspy/*
+  )/
+)
+'''
