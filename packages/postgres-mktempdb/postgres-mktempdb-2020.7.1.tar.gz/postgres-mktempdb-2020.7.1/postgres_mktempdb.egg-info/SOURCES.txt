@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+postgres_mktempdb.egg-info/PKG-INFO
+postgres_mktempdb.egg-info/SOURCES.txt
+postgres_mktempdb.egg-info/dependency_links.txt
+postgres_mktempdb.egg-info/top_level.txt
+scripts/mktempdb
