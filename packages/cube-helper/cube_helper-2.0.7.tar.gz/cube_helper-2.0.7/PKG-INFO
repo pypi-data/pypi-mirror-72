@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: cube_helper
+Version: 2.0.7
+Summary: Cube Helper is a package to make equalisation, 
+  concatenation, and analysis of iris cubes easier.
+  
+  It is written with reasearchers in mind and provides a good 
+  degree of abstraction from many iris functions and methods.
+Home-page: https://github.com/MetOffice/cube_helper
+Author: Met Office
+Author-email: jon.seddon@metoffice.gov.uk
+License: BSD 3-Clause License
+Download-URL: https://github.com/MetOffice/cube_helper/archive/v2.0.7.tar.gz
+Description: UNKNOWN
+Keywords: climate,cmip,iris,cubes,preprocessing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.6
