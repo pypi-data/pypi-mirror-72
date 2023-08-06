@@ -1,0 +1,10 @@
+README.md
+setup.py
+asyncdagpi/__init__.py
+asyncdagpi/client.py
+asyncdagpi/http.py
+asyncdagpi.egg-info/PKG-INFO
+asyncdagpi.egg-info/SOURCES.txt
+asyncdagpi.egg-info/dependency_links.txt
+asyncdagpi.egg-info/requires.txt
+asyncdagpi.egg-info/top_level.txt
