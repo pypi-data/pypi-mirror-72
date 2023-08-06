@@ -1,0 +1,14 @@
+primalscheme/__init__.py,sha256=7ZfL4ozxS_pZS41W23DC9dc0myDFJt1wxfzg-jFY2h8,97
+primalscheme/__main__.py,sha256=Yt35N5jHW7d0R-nfB0eIu_pnWKOy9GeFiwgNa08rvMI,71
+primalscheme/align.py,sha256=ZPVXEnfb66-7JRh4PoOh2iMMqBlpVscya_iaM_ySb3Q,2393
+primalscheme/cli.py,sha256=3lCl-o8WPwyTEnSuqTL5JE3ZCnkf-hLPVtoQlWpAvOA,9532
+primalscheme/config.py,sha256=s3wMkdSJIyTU7koU9PizPNoVqHVabgAsIcd6q9Ur3Ss,1613
+primalscheme/multiplex.py,sha256=ZbwWbqMU5max1vvu0uxVntQFGRmngWGfMqnFtyGJra8,7105
+primalscheme/primer.py,sha256=1P21tT-vjPRDNcpegd22kClPOhTBgqYuHr5cNNa7MfQ,8725
+primalscheme/region.py,sha256=K2AvOvxfA3HOpROQgnp1ugCfqAUtH2M3zE_lH9BM5Fw,12158
+primalscheme/reporting.py,sha256=p4AtgHEwj9q_GKK7h_F-EBHH_kas7JIn7kkIlf78O2M,12748
+primalscheme-1.2.0.dist-info/entry_points.txt,sha256=U9yODOPD6LORdr5TfmxnFL145m1fLXcwXDWUsRhj9k8,53
+primalscheme-1.2.0.dist-info/LICENSE,sha256=VlykLTzmxEmsTVykMFioeY1Rca-Ny2jY5Sl0pJZblrY,35173
+primalscheme-1.2.0.dist-info/WHEEL,sha256=GLESb-AiO9TFjbXrEA7UrNl4dwWlkXoKZg6N6Vg0OJg,81
+primalscheme-1.2.0.dist-info/METADATA,sha256=la7U_-_vypcevguD5sGDjVOsYmqcn1RmTooCx_G7B3M,7221
+primalscheme-1.2.0.dist-info/RECORD,,
