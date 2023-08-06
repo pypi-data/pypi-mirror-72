@@ -1,0 +1,46 @@
+#!/usr/bin/env python
+from pathlib import Path
+import importlib
+import zipfile
+import requests
+import tempfile
+import io
+import subprocess
+from contextlib import closing
+
+MPQ_URL = 'http://download.blizzard.com/pub/ai/MPQ_AND_EULA.zip'
+MPQ_PASSWORD = 'Iagreetotheeula'
+
+if __name__ == '__main__':
+    tc2_install_path = Path(importlib.util.find_spec('tc2').origin).parent.resolve().absolute()
+    mpq_install_path = tc2_install_path / "starcraft"
+    print('tc2 is installed in:          ', tc2_install_path)
+    print('will download MPQ files to:   ', mpq_install_path)
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        print('temp unzip directory:         ', tmpdir)
+        print('Downloading MPQs from', MPQ_URL, '...')
+        resp = requests.get(MPQ_URL)
+        with closing(resp), zipfile.ZipFile(io.BytesIO(resp.content)) as archive:
+            print('Extracting from archive...')
+            archive.extractall(tmpdir)
+            eula = Path(tmpdir) / "MPQ_AND_EULA" / "Blizzard AI and Machine Learning EULA.txt"
+            mpqs = Path(tmpdir) / "MPQ_AND_EULA" / "MPQs.zip"
+            print(eula.read_text('latin_1'))
+            print()
+            password = ''
+            while password != MPQ_PASSWORD: 
+                print()
+                print("Installing StarCraft data files requires agreeing to Blizzard's end-user license agreement.")
+                print(f"To accept, type {MPQ_PASSWORD}")
+                password = input()
+            mpq_install_path.mkdir(parents=True, exist_ok=True)
+            # Unfortunately, Blizzard's zipfile is encrypted with AES,
+            # which is not supported by python's standard zipfile module...
+            # zipfile.ZipFile(mpqs).extractall(mpq_install_path, pwd=...)
+            subprocess.check_call(
+                ["unzip-aes", "-p", password, str(mpqs), str(mpq_install_path)],
+            )
+            # One final thing, case matters
+            (mpq_install_path / "patch_rt.mpq").rename(mpq_install_path / "Patch_rt.mpq")
+            print('SUCCESS: Starcraft MPQ files were downloaded to', mpq_install_path)

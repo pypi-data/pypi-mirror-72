@@ -1,0 +1,4 @@
+The files libzmq.dll and bwheadless.exe are provided "as is" and have been built
+from the following sources:
+ - libzmq can be found at: https://github.com/zeromq/libzmq
+ - The source for the executable bwheadless.exe can be found at https://github.com/tscmoo/bwheadless 

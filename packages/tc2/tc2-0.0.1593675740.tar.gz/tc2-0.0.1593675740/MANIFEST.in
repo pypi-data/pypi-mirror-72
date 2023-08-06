@@ -1,0 +1,7 @@
+include CMakeLists.txt
+include *.md
+include LICENSE
+recursive-include cpp *
+recursive-include thirdparty *
+recursive-include cmake *
+global-exclude .git .gitignore
