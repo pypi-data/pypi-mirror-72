@@ -1,0 +1,3 @@
+[console_scripts]
+geo-locate = geo_sight.cli:main
+
