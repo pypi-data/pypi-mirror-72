@@ -1,0 +1,13 @@
+# Development, documentation & testing requirements.
+black; python_version >= '3.6'
+check-manifest
+coverage
+jarn.viewdoc
+olefile
+pycodestyle
+pyflakes
+pyroma
+pytest
+pytest-cov
+sphinx>=2.4
+sphinx-rtd-theme
