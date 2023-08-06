@@ -1,0 +1,55 @@
+Metadata-Version: 1.2
+Name: detect-mask
+Version: 0.5.0
+Summary: Python Package for detecting masks in the input Photos ,Pull out the camera for real time mask detection
+Home-page: https://github.com/Jash271/Detect_Mask
+Author: Jash Shah
+Author-email: shahjash271@gmail.com
+License: MIT
+Description: ******************
+        Detect_Mask
+        ******************
+        Fast AI,Open CV required to run this module 
+        ******************************************************************
+        Just Import detect_mask module :
+        ***************************************
+        ::
+          
+          
+          import detect_mask
+          from detect_mask import Mask
+        
+        call the method Determine and pass the path of the photo of the variable : 
+        *******************************************************************************
+        
+        :: 
+            
+             Mask.Determine(path)
+        
+        Returns a Tuple :
+        *************************************
+        *  (0,'No Mask')
+        
+        *  (1,'Mask')
+        
+        
+        Pull Out the Camera to Detect Mask, Real Time
+        *************************************************
+        
+        :: 
+            
+             Mask.Cam()
+        
+        
+        
+        
+        That's it ,It's that Simple
+        *******************************
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6.8
