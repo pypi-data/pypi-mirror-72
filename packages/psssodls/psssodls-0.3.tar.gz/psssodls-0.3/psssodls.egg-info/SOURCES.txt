@@ -1,0 +1,9 @@
+README.md
+setup.py
+bin/psssodls
+psssodls/__init__.py
+psssodls.egg-info/PKG-INFO
+psssodls.egg-info/SOURCES.txt
+psssodls.egg-info/dependency_links.txt
+psssodls.egg-info/not-zip-safe
+psssodls.egg-info/top_level.txt

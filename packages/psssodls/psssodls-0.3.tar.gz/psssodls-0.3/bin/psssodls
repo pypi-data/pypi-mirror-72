@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+
+"""PSSSODLS generator.
+
+Usage:
+  psssodls.py [options] [--] <size>
+
+Options:
+  -h --help     Show this screen.
+  --version     Show version.
+  -b            Include box constraints.
+"""
+
+from docopt import docopt
+from psssodls import psssodls_string
+
+arguments = docopt(__doc__, version='PSSSODLS 1.0')
+print(psssodls_string(int(arguments['<size>']), arguments['-b']))
