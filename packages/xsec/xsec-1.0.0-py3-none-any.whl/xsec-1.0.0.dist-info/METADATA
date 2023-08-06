@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: xsec
+Version: 1.0.0
+Summary: xsec: the cross-section evaluation code
+Home-page: https://github.com/jeriek/xsec
+Maintainer: Jeriek Van den Abeele
+Maintainer-email: jeriekvda@fys.uio.no
+License: GPLv3+
+Keywords: gaussian processes,supersymmetry,particle physics,hep,hep-ph,physics,cross-sections,machine learning
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Intended Audience :: Science/Research
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools (>=20.7.0)
+Requires-Dist: numpy (>=1.14)
+Requires-Dist: scipy (>=1.0.0)
+Requires-Dist: joblib (>=0.13.2)
+Requires-Dist: pyslha (>=3.2.3)
+
+
+xsec is a tool for fast evaluation of cross-sections, taking advantage
+of the power and flexibility of Gaussian process regression.
+
+For more information, please visit the GitHub repository
+at [https://github.com/jeriek/xsec](https://github.com/jeriek/xsec).
+
+
