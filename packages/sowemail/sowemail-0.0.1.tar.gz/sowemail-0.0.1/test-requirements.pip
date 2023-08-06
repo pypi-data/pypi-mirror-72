@@ -1,0 +1,9 @@
+# Depends on install-requirements:
+-r install-requirements.pip
+
+six
+coverage
+codecov
+mock
+pytest
+tox
