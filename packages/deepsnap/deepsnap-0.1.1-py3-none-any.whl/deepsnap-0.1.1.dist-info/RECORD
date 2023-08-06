@@ -1,0 +1,17 @@
+deepsnap/__init__.py,sha256=aC5D3AJt85c09--kaVFggPrpAdcuAIRLk4cHJOWNMs0,123
+deepsnap/batch.py,sha256=WIJ4sO7RpynfdWzHfKn_dGpiO1G-J_uZyqRE5RSmgZ8,12554
+deepsnap/dataset.py,sha256=8sywKjD3bi5AlK9YSfrRmTtzedxv1YsvbmyfdaIwjyo,30239
+deepsnap/graph.py,sha256=_AXgSLCBUex7fScjEXTeVX1PLxeUJkG_4fZsPIjXj7g,42290
+deepsnap/hetero_gnn.py,sha256=smWD9UEHmw5Vch0sFd3w7RHgWg7k1CWCPFCBo2kLgSQ,7816
+deepsnap/hetero_graph.py,sha256=Gj31ZJHKmrTTI54Y8MAt6qth0CXgMJHBLWpJpSyE7Bs,45977
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_batch.py,sha256=77W2mrbCkZf-zs1hhq-Pc237T5LTQ2VwSvgSY98Tut0,4081
+tests/test_dataset.py,sha256=RooAQUMVnl57xU2VuLCcScpUQiGfBzPZOKulIMq_Q54,22670
+tests/test_graph.py,sha256=tiTe4hUCx7K9y5dtY6lML7WpzQrOG-mtJgtvJ_J3RGA,14002
+tests/test_hetero_graph.py,sha256=GJn7u-HTp7XBLaw-D5ImESeACv4mGpf7si1XKvLgI4k,9833
+tests/utils.py,sha256=T0ov2Ap3BlX7lANyN-EXyxUK4ngFC987NOSZnEOi4yI,13430
+deepsnap-0.1.1.dist-info/LICENSE,sha256=_VDTKykTxMi3asdxLyl0nKjTbXKuLquYSDAFDdXVdpk,1069
+deepsnap-0.1.1.dist-info/METADATA,sha256=TlCtDbyXtcxZIkMzrtixhofJ1Z3cZJI9FryTDesXqRg,2702
+deepsnap-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+deepsnap-0.1.1.dist-info/top_level.txt,sha256=3PI8pbrGsaBXdT753x-D8UJhRcyyafsDUkx035Cp1B4,15
+deepsnap-0.1.1.dist-info/RECORD,,
