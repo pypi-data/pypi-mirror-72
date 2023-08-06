@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: kochat
+Version: 0.2
+Summary: Korean opensource chatbot framework
+Home-page: https://github.com/Kochat-framework/kochat
+Author: Hyunwoong Ko
+Author-email: gusdnd852@naver.com
+License: UNKNOWN
+Keywords: chatbot,korean chatbot,kochat
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3
+Requires-Dist: torch
+Requires-Dist: matplotlib (==3.2.1)
+Requires-Dist: pandas (==1.0.4)
+Requires-Dist: gensim (==3.8.3)
+Requires-Dist: konlpy (==0.5.2)
+Requires-Dist: sklearn (==0.0)
+Requires-Dist: numpy (==1.18.5)
+Requires-Dist: joblib (==0.15.1)
+Requires-Dist: scikit-learn (==0.23.1)
+Requires-Dist: pytorch-crf (==0.7.2)
+
+UNKNOWN
+
+
