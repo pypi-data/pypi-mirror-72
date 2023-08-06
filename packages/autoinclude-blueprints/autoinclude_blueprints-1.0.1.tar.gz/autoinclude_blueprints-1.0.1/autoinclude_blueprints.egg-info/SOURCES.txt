@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+autoinclude_blueprints.egg-info/PKG-INFO
+autoinclude_blueprints.egg-info/SOURCES.txt
+autoinclude_blueprints.egg-info/dependency_links.txt
+autoinclude_blueprints.egg-info/requires.txt
+autoinclude_blueprints.egg-info/top_level.txt
+flask_bp_autoregister/__init__.py
+flask_bp_autoregister/blueprints.py
