@@ -1,0 +1,7 @@
+django-esi<2.0
+dhooks-lite>=0.3.0
+django-navhelper
+
+[testing]
+allianceauth
+coverage
