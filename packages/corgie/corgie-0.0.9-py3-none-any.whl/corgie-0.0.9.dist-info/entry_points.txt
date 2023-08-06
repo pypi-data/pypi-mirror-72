@@ -1,0 +1,4 @@
+[console_scripts]
+corgie = corgie.main:cli
+corgie-worker = corgie.worker:worker
+
