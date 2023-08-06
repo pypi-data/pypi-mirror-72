@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: scimma-aws-utils
+Version: 1.0.0
+Summary: Tools for interacting with AWS as a SCIMMA developer
+Home-page: https://github.com/scimma/scimma-aws-utils
+Author: Spencer Nelson
+Author-email: swnelson@uw.edu
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Provides-Extra: dev
