@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: pillow-tools
+Version: 1.0.0
+Summary: A collection of useful tools for python pillow and ffmpy
+Home-page: https://github.com/GrantGMiller/gm_pillow_tools
+Author: Grant miller
+Author-email: grant@grant-miller.com
+License: PSF
+Project-URL: Source Code, https://github.com/GrantGMiller/gm_pillow_tools
+Description: A collection of useful tools for python pillow and ffmpy
+Keywords: grant miller pillow ffmpeg ffmpy image video
+Platform: UNKNOWN
