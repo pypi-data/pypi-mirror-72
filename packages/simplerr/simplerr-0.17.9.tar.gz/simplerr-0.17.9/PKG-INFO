@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: simplerr
+Version: 0.17.9
+Summary: A sample Python webframework
+Home-page: https://github.com/yevrah/simplerr
+Author: Javier Woodhouse
+Author-email: javier@wingaru.com.au
+License: MIT
+Description: simplerr
+        ========
+        
+        A lightweight WGSI application aiming to remove as much boilerplate code as possible while still keeping abstraction low and functionality high. Based on the fantastic Werkzeug project.
+        
+        
+        QuickStart
+        ----------
+        
+        Follow the quickstart tutorial [here](https://github.com/yevrah/simplerr/blob/master/examples/quickstart/README.md).
+        
+Keywords: simple web development framework
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev

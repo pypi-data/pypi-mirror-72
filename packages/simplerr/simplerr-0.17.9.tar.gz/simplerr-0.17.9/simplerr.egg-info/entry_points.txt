@@ -1,0 +1,3 @@
+[console_scripts]
+webserv = simplerr.__main__:main
+
