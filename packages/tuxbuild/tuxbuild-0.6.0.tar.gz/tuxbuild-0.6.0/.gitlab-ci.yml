@@ -1,0 +1,81 @@
+image:
+  name: python:3.7-buster
+
+services:
+  - docker:dind
+
+stages:
+  - test
+  - build
+  - publish
+
+test-tuxbuild:
+  stage: test
+  script:
+    - pip install -r requirements.txt -r requirements-dev.txt .
+    - pip install -e . # For some reason, pytest-cov does not work without this
+    - black --check .
+    - flake8 .
+    - pytest --cov=tuxbuild .
+
+test-tuxbuild-integration:
+  stage: test
+  image: python:3.7-buster
+  before_script:
+    - apt-get -q update
+    - apt-get install -qy shunit2 git
+  script:
+    - python3 -m pip install -r requirements-dev.txt -e .
+    - run-parts --report test/integration
+
+test-dockerfile:
+  stage: test
+  image: hadolint/hadolint
+  script:
+    - hadolint Dockerfile
+
+test-markdown:
+  stage: test
+  image: pipelinecomponents/markdownlint
+  script:
+    - mdl -r MD001,MD002,MD003,MD004,MD005,MD006,MD007,MD009,MD010,MD011,MD012,MD014,MD018,MD019,MD020,MD021,MD022,MD023,MD024,MD025,MD026,MD027,MD028,MD029,MD030,MD031,MD032,MD034,MD035,MD036,MD037,MD038,MD039,MD046 README.md
+
+build:
+  stage: build
+  script:
+    - python setup.py sdist bdist_wheel
+    - python setup.py --version > version.txt # save tuxbuild's version string
+  artifacts:
+    paths:
+      - dist/
+      - version.txt
+
+publish-pypi:
+  stage: publish
+  script:
+    - pip install -U twine
+    - twine upload dist/*
+  variables:
+    TWINE_NON_INTERACTIVE: "true"
+  only:
+    - tags
+  dependencies:
+    - build
+
+publish-dockerhub:
+  stage: publish
+  image: docker
+  script:
+    - docker info
+    - export tag="tuxbuild/tuxbuild:$(cat version.txt)"
+    - export latest="tuxbuild/tuxbuild:latest"
+    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - docker build --pull --tag "${tag}" --tag "${latest}" .
+    - docker push "${tag}"
+    - docker push "${latest}"
+  variables:
+    TWINE_NON_INTERACTIVE: "true"
+  only:
+    - tags
+  dependencies:
+    - build
