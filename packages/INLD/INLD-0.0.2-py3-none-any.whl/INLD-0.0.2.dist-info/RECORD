@@ -1,0 +1,12 @@
+INLD/INLD.py,sha256=VnkOvuHSVS2IyWsg-DRkSc_-F0sypSNDdXzB6czQFgU,392
+INLD/__init__.py,sha256=Of2VsvTXpsSX_T0Hop3sp_MLhY1_DmRIesIIXQEbCRE,92
+INLD/lang_detect.model,sha256=NzPq9fj7tn9PzDGjstrFfWpMuBP6Ave1BgJ0p0KWaUs,721674
+INLD/vectorizer.pkl,sha256=fqWLD8MBccx9b1vXhS5csaX31ZZHA9GSStlGI6s58nY,152870
+INLD-0.0.2.data/data/LICENSE,sha256=2Q1SERvoxmyMMxLSG0ny9EmlBXZ-QSbLZQJp3uP9HMQ,1085
+INLD-0.0.2.data/data/lang_detect.model,sha256=NzPq9fj7tn9PzDGjstrFfWpMuBP6Ave1BgJ0p0KWaUs,721674
+INLD-0.0.2.data/data/vectorizer.pkl,sha256=fqWLD8MBccx9b1vXhS5csaX31ZZHA9GSStlGI6s58nY,152870
+INLD-0.0.2.dist-info/LICENSE,sha256=2Q1SERvoxmyMMxLSG0ny9EmlBXZ-QSbLZQJp3uP9HMQ,1085
+INLD-0.0.2.dist-info/METADATA,sha256=LVdZpN9UvIb6BBIbotFBmUKD-tLY0zJz64pV39jLI10,1023
+INLD-0.0.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+INLD-0.0.2.dist-info/top_level.txt,sha256=B0iLyvWwhbAHHW5AE5TIJ296-itBRDgu4dZS36EXUbM,5
+INLD-0.0.2.dist-info/RECORD,,
