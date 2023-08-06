@@ -1,0 +1,4 @@
+boto3
+sceptre>=2.3
+click
+unison-gitignore
