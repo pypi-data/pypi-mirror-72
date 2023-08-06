@@ -1,0 +1,57 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.23.0
+    method: GET
+    uri: https://api.climacell.co/v3/weather/nowcast?apikey=CLIMACELL_API_KEY&fields=wind_gust%2Cprecipitation_type&lat=40&lon=80&start_time=now&timestep=30&unit_system=us
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA72U3YrCMBBG32Wu6zD52STmOXqliNTdshuoabGpItJ3tyuy4N0yMN6V8gUOh8Ns
+        b9A1BaKlCro+QwzLxyXlr/33NC7/b3BuuqmFqAxaXcGUUxkhwnH4gbmC4dR+piGVpqQ+78t1WJZ/
+        TyD3uf1d9YexPZ2fm3R82WjStCK30rrWFK2PRKjWbgPzXP2bTeGHNJuKisUWUDlhbYqpzaFXwmia
+        ae0taLzYPBorbM0wrQW00q0ZZmsBjWhrpiZiWvMoejseZLzUHFKQTG1B4541i2vR1B5oPGsWrRe2
+        xj1rb0F7sba7A38/FkLhBwAA
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 22 Jun 2020 20:47:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - kong/1.3.0.1-enterprise-edition
+      X-CC-REGION:
+      - global
+      X-Correlation-ID:
+      - 57dd4dc6-0d41-47b3-8bb7-66beed31121e
+      X-Kong-Proxy-Latency:
+      - '1'
+      X-Kong-Upstream-Latency:
+      - '285'
+      X-RateLimit-Limit-day:
+      - '1000'
+      X-RateLimit-Limit-hour:
+      - '100'
+      X-RateLimit-Remaining-day:
+      - '939'
+      X-RateLimit-Remaining-hour:
+      - '90'
+    status:
+      code: 200
+      message: OK
+version: 1
