@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: Exploring_Mazes
+Version: 0.1.0
+Summary: Basic classes for maze and BFS implementation
+Home-page: https://github.com/Jef808/ExploringMazes
+Author: Jean-Francois Arbour
+Author-email: jf.arbour@gmail.com
+License: MIT
+Description: 
+        # ExploringMazes
+        Implementation of a few algorithms related to mazes
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
