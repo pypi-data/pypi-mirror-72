@@ -1,0 +1,4 @@
+google-auth>=1.18.0
+django>=3.0.7
+djangorestframework-simplejwt>=4.4.0
+djangorestframework==3.11.0
