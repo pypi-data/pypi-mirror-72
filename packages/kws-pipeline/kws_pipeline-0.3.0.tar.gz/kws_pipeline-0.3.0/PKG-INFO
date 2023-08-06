@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: kws_pipeline
+Version: 0.3.0
+Summary: "A toolkit to assist in KWS application deployment"
+Home-page: UNKNOWN
+Author: Mathias Ngo
+License: kilowattsol
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: Other/Proprietary License
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: docs
+Provides-Extra: test
+Provides-Extra: google
