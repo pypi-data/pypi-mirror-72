@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+hpass/__init__.py
+hpass/encryption.py
+hpass/hpass.py
+hpass/hpass_cli.py
+hpass.egg-info/PKG-INFO
+hpass.egg-info/SOURCES.txt
+hpass.egg-info/dependency_links.txt
+hpass.egg-info/entry_points.txt
+hpass.egg-info/requires.txt
+hpass.egg-info/top_level.txt
