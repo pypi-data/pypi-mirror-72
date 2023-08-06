@@ -1,0 +1,15 @@
+.gitignore
+MANIFEST.in
+README.md
+setup.py
+djangoTimepicker/__init__.py
+djangoTimepicker/widget.py
+djangoTimepicker.egg-info/PKG-INFO
+djangoTimepicker.egg-info/SOURCES.txt
+djangoTimepicker.egg-info/dependency_links.txt
+djangoTimepicker.egg-info/requires.txt
+djangoTimepicker.egg-info/top_level.txt
+djangoTimepicker/static/.DS_Store
+djangoTimepicker/static/jquery.datetimepicker.full.min.js
+djangoTimepicker/static/jquery.datetimepicker.min.css
+djangoTimepicker/templates/datetimepicker.html

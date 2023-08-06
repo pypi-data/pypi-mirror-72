@@ -1,0 +1,15 @@
+{% include "django/forms/widgets/input.html" %}
+{% load staticfiles %}
+{% block js %}
+<link rel="stylesheet" type="text/css" href="{% static '/jquery.datetimepicker.min.css' %}" />
+<script src="{% static '/jquery.datetimepicker.full.min.js' %}"></script>
+  <script>
+    $(function () {
+      $.datetimepicker.setLocale('{{ widget.language }}');
+      $("#id_{{ widget.name }}").datetimepicker({
+        format: "{{ widget.timeFormat }}",
+        validateOnBlur: false,
+      })
+    });
+  </script>
+{% endblock %}
