@@ -1,0 +1,17 @@
+LICENCE.txt
+MANIFEST.in
+README.md
+VERSION
+setup.py
+docs/changelog.md
+docs/how_to_upload.txt
+lpfgopt/__init__.py
+lpfgopt/c_leapfrog.py
+lpfgopt/leapfrog.py
+lpfgopt/leapfrog_c.dll
+lpfgopt/opt_result.py
+lpfgopt/scipy_min.py
+lpfgopt.egg-info/PKG-INFO
+lpfgopt.egg-info/SOURCES.txt
+lpfgopt.egg-info/dependency_links.txt
+lpfgopt.egg-info/top_level.txt
