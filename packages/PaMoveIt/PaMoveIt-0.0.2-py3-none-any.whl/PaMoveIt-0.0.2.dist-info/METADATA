@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: PaMoveIt
+Version: 0.0.2
+Summary: A movement recognition library
+Home-page: UNKNOWN
+Author: Djamel RAAB
+Author-email: djamelraab95@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: absl-py (==0.9.0)
+Requires-Dist: astunparse (==1.6.3)
+Requires-Dist: cachetools (==4.1.0)
+Requires-Dist: certifi (==2020.6.20)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: cycler (==0.10.0)
+Requires-Dist: gast (==0.3.3)
+Requires-Dist: google-auth (==1.18.0)
+Requires-Dist: google-auth-oauthlib (==0.4.1)
+Requires-Dist: google-pasta (==0.2.0)
+Requires-Dist: grpcio (==1.30.0)
+Requires-Dist: h5py (==2.10.0)
+Requires-Dist: idna (==2.10)
+Requires-Dist: importlib-metadata (==1.7.0)
+Requires-Dist: joblib (==0.15.1)
+Requires-Dist: Keras-Preprocessing (==1.1.2)
+Requires-Dist: kiwisolver (==1.2.0)
+Requires-Dist: Markdown (==3.2.2)
+Requires-Dist: matplotlib (==3.2.2)
+Requires-Dist: numpy (==1.19.0)
+Requires-Dist: oauthlib (==3.1.0)
+Requires-Dist: opencv-contrib-python (==4.2.0.34)
+Requires-Dist: opt-einsum (==3.2.1)
+Requires-Dist: pandas (==1.0.5)
+Requires-Dist: pkg-resources (==0.0.0)
+Requires-Dist: protobuf (==3.12.2)
+Requires-Dist: pyasn1 (==0.4.8)
+Requires-Dist: pyasn1-modules (==0.2.8)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2020.1)
+Requires-Dist: requests (==2.24.0)
+Requires-Dist: requests-oauthlib (==1.3.0)
+Requires-Dist: rsa (==4.6)
+Requires-Dist: scikit-learn (==0.23.1)
+Requires-Dist: scipy (==1.4.1)
+Requires-Dist: seaborn (==0.10.1)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: tensorboard (>=2.2.2)
+Requires-Dist: tensorboard-plugin-wit (==1.7.0)
+Requires-Dist: tensorflow (>=2.0.0)
+Requires-Dist: tensorflow-estimator (>=2.0.0)
+Requires-Dist: termcolor (==1.1.0)
+Requires-Dist: threadpoolctl (==2.1.0)
+Requires-Dist: urllib3 (==1.25.9)
+Requires-Dist: Werkzeug (==1.0.1)
+Requires-Dist: wrapt (==1.12.1)
+Requires-Dist: zipp (==3.1.0)
+
+UNKNOWN
+
+
