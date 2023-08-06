@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+csi21_distributions/Binomialdistribution.py
+csi21_distributions/Gaussiandistribution.py
+csi21_distributions/Generaldistribution.py
+csi21_distributions/__init__.py
+csi21_distributions.egg-info/PKG-INFO
+csi21_distributions.egg-info/SOURCES.txt
+csi21_distributions.egg-info/dependency_links.txt
+csi21_distributions.egg-info/not-zip-safe
+csi21_distributions.egg-info/top_level.txt
