@@ -1,0 +1,14 @@
+bidsphysio.acq2bids-1.0.1-py3.8-nspkg.pth,sha256=-q0tz3KpVFX-CTMy1tiWJVqFViYWx9xDeDOxnfxREoQ,559
+bidsphysio/acq2bids/__init__.py,sha256=G-d438vPx7m_ks5e9XTtM3u7LDRO5dSSukibukWmyPM,56
+bidsphysio/acq2bids/acq2bidsphysio.py,sha256=R0MRRNwADFSHsf_fEfmK_LIXsZip-92rJ41qHcPRIWg,6250
+bidsphysio/acq2bids/acqsession2bids.py,sha256=5Zy4S4c9fh9AR8UGTLaqUNY_ndtHkYyF5o-a7-flgCw,2895
+bidsphysio/acq2bids/info.py,sha256=m8hk4LCE8HXAc9qmY9QoiShh7NsCpJ-WjV4M2R4lh-g,958
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_acq2bidsphysio.py,sha256=KVHqbtHTJ2VKl_WEkKBtTfd0874teiGeGFzut4Kh28M,4213
+tests/utils.py,sha256=kbLbbKYLyzPf3zM2waOJuddvmtPPWZR0w_1T_IeL_A8,75
+bidsphysio.acq2bids-1.0.1.dist-info/METADATA,sha256=GzFOSh78iqFctY3tXw2w4gRCj_GBQZZUy7GYkvlEt3o,882
+bidsphysio.acq2bids-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+bidsphysio.acq2bids-1.0.1.dist-info/entry_points.txt,sha256=LgGIl724pGVUs_CfjwgTlXevTUWhbcC4eBZ8yZwBaLI,135
+bidsphysio.acq2bids-1.0.1.dist-info/namespace_packages.txt,sha256=2FheJI0dxUB4_GQLIG6kY3N9WvHdAtvGddpujVLE9xY,11
+bidsphysio.acq2bids-1.0.1.dist-info/top_level.txt,sha256=L5cDw-5BuJykyKxyEPg0Zg6zLxwJRIET5wcn9SWjXNY,17
+bidsphysio.acq2bids-1.0.1.dist-info/RECORD,,
