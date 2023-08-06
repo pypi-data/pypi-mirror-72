@@ -1,0 +1,8 @@
+requirements.txt
+setup.py
+cached/__init__.py
+cached.egg-info/PKG-INFO
+cached.egg-info/SOURCES.txt
+cached.egg-info/dependency_links.txt
+cached.egg-info/requires.txt
+cached.egg-info/top_level.txt
