@@ -1,0 +1,14 @@
+pydif/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydif/app.py,sha256=qKmVJVJbymosiY8eN7bGqdWEaIg3HcA1uFDJ2F1JD-o,9397
+pydif/main.py,sha256=bK36Z69Qp1SnqGBfQEnhlUy5BfLcjdcTIjjTgpdhtKA,90
+pydif/exception/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydif/exception/customExceptions.py,sha256=1oEiTY5ehxzwech9zSNxztMUr1fPHdLJTWgORR3uIEc,322
+pydif/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydif/lib/create_directory.py,sha256=25175VYpM3vOOdkmVykHA5_rweW5NyuXFNaruz01BFA,812
+pydif/lib/py_validator_lib.py,sha256=JBzYeTqfC0tbuLUFo_rQYqPVgx2xCm1u96ySX3HKaXI,35013
+spydif-0.1.dist-info/LICENSE.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spydif-0.1.dist-info/METADATA,sha256=QadUEEMxjIt0UiUhDW6Uo9f-vx0wKh2xbMKatoG0k4s,435
+spydif-0.1.dist-info/WHEEL,sha256=6T3TYZE4YFi2HTS1BeZHNXAi8N52OZT4O-dJ6-ome_4,116
+spydif-0.1.dist-info/entry_points.txt,sha256=6iDVEnY_sPRqU2MboZJgER80qtl8-MGVYVsTsAeshXw,38
+spydif-0.1.dist-info/top_level.txt,sha256=Pl7oYi8VLr20A6giY_ofbI2J7zVoHLhw5PA7FzPs1ZE,6
+spydif-0.1.dist-info/RECORD,,
