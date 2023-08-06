@@ -1,0 +1,6 @@
+signxml==2.7.2
+pylint==2.5.2
+pytest-cov==2.9.0
+ruamel.yaml==0.16.10
+jsonschema==3.2.0
+requests==2.23.0
