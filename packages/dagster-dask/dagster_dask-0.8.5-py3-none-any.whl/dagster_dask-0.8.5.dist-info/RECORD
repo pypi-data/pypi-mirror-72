@@ -1,0 +1,14 @@
+dagster_dask/__init__.py,sha256=SeTsHwoP7r3ZCoCSXXoKbcSRYwRMIia6CuvECCJiiZU,220
+dagster_dask/executor.py,sha256=qkN5NmSzDvzM5C4c00Oq7rrP2yVd5w9rxOmcRBfD5Cs,10816
+dagster_dask/version.py,sha256=oMuLfTnek3i_o-tqJ5g8Uqnt2lfDzZTylkgQOX8p3Hw,50
+dagster_dask_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dagster_dask_tests/conftest.py,sha256=xKQdCpOl9OGVifWDjAm6BSDWvEdzTOtEZ269AkkuRMw,218
+dagster_dask_tests/test_execute.py,sha256=BhQp84Ter6z1fnLGjwtZ-SkHme-b9BS1fpU0QjXgaJg,2577
+dagster_dask_tests/test_graphql.py,sha256=b0VSHVnW2FRRNd5n7rY7sjcRrJc2tZ4_Vximf1SwQcU,2397
+dagster_dask_tests/test_resource_tags.py,sha256=cROHalZz6AS2hnRQozde_e3bB8_RWxsXerOzLyid2oM,350
+dagster_dask_tests/test_version.py,sha256=E3Act753cU989KTYwEpwcmRNhEEo4rxEL9N_Z9oplx4,90
+dagster_dask-0.8.5.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+dagster_dask-0.8.5.dist-info/METADATA,sha256=MmGpzTLgyZ5qls4RjswfPqduKQCu09dBYlPsWiw5FbY,887
+dagster_dask-0.8.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+dagster_dask-0.8.5.dist-info/top_level.txt,sha256=z3C243t5JS9XdoH4ks2TURNzjttTdv_qBXK9xIfabe0,32
+dagster_dask-0.8.5.dist-info/RECORD,,
