@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: itk-spcn
+Version: 0.1.0
+Summary: This performs structure preserving color normalization on an image using a reference image.
+Home-page: https://itk.org/
+Author: Lee Newberg
+Author-email: lee.newberg@kitware.com
+License: Apache
+Download-URL: https://github.com/InsightSoftwareConsortium/ITKStructurePreservingColorNormalization
+Keywords: ITK InsightToolkit
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: C++
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Operating System :: Android
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Dist: itk (>=5.0.0.post1)
+
+By perfoming a non-negative matrix factorization on an input image and a reference image, the colors in use in the reference image are transfered to the input image.
+
+
