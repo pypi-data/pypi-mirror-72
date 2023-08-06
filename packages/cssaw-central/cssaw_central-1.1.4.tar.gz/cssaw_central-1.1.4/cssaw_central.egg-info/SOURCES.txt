@@ -1,0 +1,12 @@
+README.md
+setup.py
+cssaw_central/Session.py
+cssaw_central/__init__.py
+cssaw_central/csvsql.py
+cssaw_central/tests.py
+cssaw_central.egg-info/PKG-INFO
+cssaw_central.egg-info/SOURCES.txt
+cssaw_central.egg-info/dependency_links.txt
+cssaw_central.egg-info/entry_points.txt
+cssaw_central.egg-info/requires.txt
+cssaw_central.egg-info/top_level.txt
