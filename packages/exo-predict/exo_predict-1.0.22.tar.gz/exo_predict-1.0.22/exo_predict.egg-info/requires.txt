@@ -1,0 +1,5 @@
+pandas
+sklearn
+numpy
+xgboost==1.1.1
+matplotlib
