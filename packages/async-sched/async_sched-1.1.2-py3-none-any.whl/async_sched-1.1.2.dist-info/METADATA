@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: async-sched
+Version: 1.1.2
+Summary: Use async to have functions run on a schedule.
+Home-page: https://github.com/justengel/async_sched
+Author: Justin Engel
+Author-email: jtengel08@gmail.com
+License: MIT
+Download-URL: https://github.com/justengel/async_sched/archive/v1.1.2.tar.gz
+Keywords: sched coro async cron crontab
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: serial-json (>=1.2.7)
+
+===========
+async_sched
+===========
+
+Use async to have functions run on a schedule.
+
+
