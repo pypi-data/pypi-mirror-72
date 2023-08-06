@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: my_calculator
+Version: 0.7
+Summary: Several calculations of two numbers
+Home-page: https://github.com/ghimireadarsh/My-Calculator.git
+Author: Adarsh Ghimire
+License: UNKNOWN
+Description: ## My Calculator
+        
+        This package computes the various computations of Maths like :
+        * Greatest Common Divisor
+        * Lowest Common Multiple
+        * Reducing Fraction
+        
+        ## Installations
+        __Through pypi package__
+        ``` Shell
+        $ pip install my-calculator
+        ```
+        
+        __From Source__
+        ``` Shell
+        $ git clone git@github.com:ghimireadarsh/My-Calculator.git
+        $ cd My-Calculator
+        $ pip install . 
+        ```
+        
+        ## Usage
+        After the package is installed, several operation can be performed like:
+        
+        __Greatest Common Divisor__
+        ``` Python
+        from my_calculator import Calculator
+        Calculator.gcd(8, 16, 24)
+        # Output : 8
+        Calculator.gcd(10, 12)
+        # Output : 2
+        
+        ```
+        
+        __Lowest Common Multiple__
+        ``` Python
+        from my_calculator import Calculator
+        Calculator.lcm(10, 20, 30)
+        # Output : 60
+        Calculator.lcm(10,5)
+        # Output : 10
+        ```
+        
+        __Fraction reducer__
+        ``` Python
+        from my_calculator import Calculator
+        Calculator.reduce_fraction(10,12)
+        # Output : (5,6)
+        ```
+        
+        ## Contributing
+        Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+        
+        Please make sure to update tests as appropriate.
+        
+        ## License
+        [MIT](https://github.com/ghimireadarsh/My-Calculator/blob/master/LICENSE.txt)
+        
+        ### TO DO:
+        1. Other Mathematical functions addition
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
