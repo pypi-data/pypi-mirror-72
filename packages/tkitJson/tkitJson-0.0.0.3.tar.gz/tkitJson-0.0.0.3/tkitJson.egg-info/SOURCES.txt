@@ -1,0 +1,10 @@
+README.md
+setup.py
+test/test.py
+tkitJson/__init__.py
+tkitJson/config.py
+tkitJson/tjson.py
+tkitJson.egg-info/PKG-INFO
+tkitJson.egg-info/SOURCES.txt
+tkitJson.egg-info/dependency_links.txt
+tkitJson.egg-info/top_level.txt
