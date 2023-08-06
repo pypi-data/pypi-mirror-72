@@ -1,0 +1,12 @@
+requirements.txt
+setup.py
+django_loadsql/__init__.py
+django_loadsql/__main__.py
+django_loadsql/management/__init__.py
+django_loadsql/management/commands/__init__.py
+django_loadsql/management/commands/loadsql.py
+django_postgres_indexes.egg-info/PKG-INFO
+django_postgres_indexes.egg-info/SOURCES.txt
+django_postgres_indexes.egg-info/dependency_links.txt
+django_postgres_indexes.egg-info/requires.txt
+django_postgres_indexes.egg-info/top_level.txt
