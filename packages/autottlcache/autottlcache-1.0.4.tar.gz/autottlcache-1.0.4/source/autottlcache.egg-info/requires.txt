@@ -1,0 +1,15 @@
+cachetools
+
+[dev]
+check-manifest
+wheel
+bumpversion
+
+[doc]
+sphinx
+sphinx_rtd_theme
+
+[test]
+coverage
+hypothesis
+pytest
