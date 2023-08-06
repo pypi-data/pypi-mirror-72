@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: roadwork
+Version: 0.0.1
+Summary: Roadwork-RL - A RL Environment Wrapper
+Home-page: https://github.com/roadwork/roadwork-rl
+Author: Xavier Geerinck
+Author-email: xavier.geerinck@gmail.com
+License: UNKNOWN
+Description: # Roadwork
+        
+        Roadwork-RL aims to simplify physical and virtual environment integration
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
