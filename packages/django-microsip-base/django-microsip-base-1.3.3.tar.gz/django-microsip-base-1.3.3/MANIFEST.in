@@ -1,0 +1,14 @@
+include README.rst
+include ez_setup.py
+include requirements.txt
+include logo.ico
+include logo_serv.ico
+
+include Servidor SIC.exe
+include Servidor_produccion.cmd
+recursive-include django_microsip_base templates *
+recursive-include django_microsip_base *.pyc
+recursive-include django_microsip_base __init__.py
+global-include manage_prod.py
+recursive-exclude django_microsip_base/django_microsip_base/apps/plugins *
+recursive-exclude django_microsip_base/__pycache__ *
