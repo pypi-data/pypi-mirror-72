@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: tmscore
+Version: 0.0.1
+Summary: A small tms core package
+Home-page: http://dev-gitlab.intelnal.howbuy.com/tms-pypi/tmscore
+Author: zhou yang
+Author-email: yang.zhou@howbuy.com
+License: UNKNOWN
+Description: # tmscore
+        
+        [中台基础核心的代码包](http://dev-gitlab.intelnal.howbuy.com/tms-pypi/tmscore)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

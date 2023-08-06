@@ -1,0 +1,9 @@
+README.md
+setup.py
+tests/__init__.py
+tmscore/__init__.py
+tmscore/utils.py
+tmscore.egg-info/PKG-INFO
+tmscore.egg-info/SOURCES.txt
+tmscore.egg-info/dependency_links.txt
+tmscore.egg-info/top_level.txt
