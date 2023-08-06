@@ -1,0 +1,45 @@
+Metadata-Version: 1.1
+Name: django-google-translate
+Version: 1.0
+Summary: Add google translate to your website templates easily.
+Home-page: https://samirphuyal.com.np
+Author: Samir Phuyal
+Author-email: samirphuyal65@gmail.com
+License: MIT
+Description: ========================
+        Django Google Translate
+        ========================
+        
+        Google Translate provides easy way to add google translate plugin in your django templates.
+        If your project needs to have multiple languages and if you dont want to manage .po files then you can add this package to make your website available in multiple languages easily without any hassle.
+        
+        Quick start
+        -----------
+        
+        1. Download the package::
+        
+            pip install django-google-translate
+        
+        2. Load the translate tag in your template (ideally on base.html)::
+        
+            {% load google_translate %}
+        
+        3. Add following template tag wherever you want to show translate button::
+        
+            {% google_translate %}
+            
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
