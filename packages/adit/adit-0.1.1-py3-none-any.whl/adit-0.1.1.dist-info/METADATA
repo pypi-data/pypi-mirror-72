@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: adit
+Version: 0.1.1
+Summary: Adit is a toolbox that helps people collaborating on machine learning prototype easier.
+License: MIT
+Author: Trinh Tran
+Author-email: trinhtran2151995@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: dask[complete] (>=2.17.2,<3.0.0)
+Requires-Dist: distributed (>=2.18.0,<3.0.0)
+Requires-Dist: faust (>=1.10.4,<2.0.0)
+Requires-Dist: fxcmpy (>=1.2.6,<2.0.0)
+Requires-Dist: oandapyV20 (>=0.6.3,<0.7.0)
+Requires-Dist: pandas (>=1.0.4,<2.0.0)
+Requires-Dist: python-socketio (>=4.6.0,<5.0.0)
+Requires-Dist: request (>=2019.4.13,<2020.0.0)
+Requires-Dist: tensorflow (>=2.2.0,<3.0.0)
+Requires-Dist: tiledb (>=0.6.3,<0.7.0)
+Requires-Dist: tqdm (>=4.46.1,<5.0.0)
+Requires-Dist: v20 (>=3.0.25,<4.0.0)
