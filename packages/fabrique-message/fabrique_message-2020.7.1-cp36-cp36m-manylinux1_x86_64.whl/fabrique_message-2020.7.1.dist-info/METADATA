@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: fabrique-message
+Version: 2020.7.1
+Summary: Fabrique messages classes
+Home-page: http://www.fabrique.ai
+Author: Sergey Kuzmin
+Author-email: sergey.kuzmin@fabrique.ai
+License: MIT
+Keywords: kafka
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: msgpack-python
+
+
+Fabrique messages classes
+
+
