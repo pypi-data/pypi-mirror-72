@@ -1,0 +1,3 @@
+[console_scripts]
+apos=apos_cli.apos:run
+
