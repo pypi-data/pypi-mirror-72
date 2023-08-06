@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+mitm/__init__.py
+mitm/__version__.py
+mitm/run.py
+mitm.egg-info/PKG-INFO
+mitm.egg-info/SOURCES.txt
+mitm.egg-info/dependency_links.txt
+mitm.egg-info/entry_points.txt
+mitm.egg-info/top_level.txt
