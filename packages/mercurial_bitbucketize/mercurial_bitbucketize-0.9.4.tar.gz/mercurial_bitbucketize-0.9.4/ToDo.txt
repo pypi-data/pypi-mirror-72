@@ -1,0 +1,26 @@
+
+1. Multiple identities in config 
+
+   priv.user = ktos
+   priv.path_alias = ...
+   priv.location = …
+
+   work.user = …
+   work.path_alias = …
+   work.location = …
+
+2. Defaults for commands
+
+    [bitbucketize]
+    issues = true
+    public = true
+
+3. Default language per path
+
+4. Long description in .py leading comment
+
+5. Extra prompt on wiki/issue deletion (just like in repo delete case)
+
+6. hg bitbucket_create --push  (and fix docs)
+
+7. hg bitbucket_push, hg bitbucket_pull
