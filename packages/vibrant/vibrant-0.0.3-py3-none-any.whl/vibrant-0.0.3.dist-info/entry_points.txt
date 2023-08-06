@@ -1,0 +1,9 @@
+[console_scripts]
+clean=scripts:clean
+docs=scripts:docs
+format=scripts:format
+lint=scripts:lint
+retest=scripts:retest
+servedocs=scripts:servedocs
+test=scripts:test
+

@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: vibrant
+Version: 0.0.3
+Summary: PyTorch powered Finite Elements
+Home-page: https://pypi.org/project/vibrant
+License: MIT
+Author: German Capuano
+Author-email: e@gcapu.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Dist: pyvista (>=0.24,<0.25)
+Requires-Dist: torch (>=1.2,<2.0)
+Project-URL: Documentation, https://gcapu.github.io
+Project-URL: Repository, https://github.com/gcapu/vibrant
+Description-Content-Type: text/markdown
+
+# Vibrant
+
+PyTorch powered Finite Elements
+
+Warning: Work in progress.
+
+[![Unix Build Status](https://img.shields.io/travis/gcapu/vibrant/master.svg?label=unix)](https://travis-ci.org/gcapu/vibrant)
+[![Windows Build Status](https://img.shields.io/appveyor/ci/gcapu/vibrant/master.svg?label=windows)](https://ci.appveyor.com/project/gcapu/vibrant)
+[![Coverage Status](https://img.shields.io/coveralls/gcapu/vibrant/master.svg)](https://coveralls.io/r/gcapu/vibrant)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/gcapu/vibrant.svg)](https://scrutinizer-ci.com/g/gcapu/vibrant/?branch=master)
+[![PyPI Version](https://img.shields.io/pypi/v/vibrant.svg)](https://pypi.org/project/vibrant)
+[![PyPI License](https://img.shields.io/pypi/l/vibrant.svg)](https://pypi.org/project/vibrant)
+
+## Setup
+
+### Requirements
+
+* Python 3.7+
+
+### Installation
+
+Install it directly into an activated virtual environment:
+
+```text
+pip install vibrant
+```
+
+or add it to your [Poetry](https://poetry.eustace.io/) project:
+
+```text
+poetry add vibrant
+```
+
+## Usage
+
+After installation, the package can imported:
+
+```text
+$ python
+>>> import vibrant
+>>> vibrant.__version__
+```
+
+## Documentation
+
+For more information about advanced features, see the official vibrant [documentation](https://gcapu.github.io/).
+
