@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: ccorp-yaml-include-relative-path
+Version: 0.0.2
+Summary: Exactly ccorp-yaml-include package with a bug fix and support of relative paths for included aliases
+Home-page: https://github.com/marsoloGit/ccorp_yaml_include
+Author: Marina Lalazarova
+Author-email: marsolo@mail.ru
+License: UNKNOWN
+Description: # CCorp Ruamel.YAML Include Extension
+        
+        This package is exactly ccorp-yaml-include package(a fork of ccorp-yaml-include) that contains a bug fix (init of YAML didn't accept a 'typ' kwargs that was a list)
+        It also allows to use `!include` tag with a relative path for aliases, e.g.
+        instead of just writing:
+        <p> <em>!include bear_common.yaml</em> <br>(which means that bear_common.yaml should be located in the same directory as your yaml file) </p>
+        
+        you can have:
+        <p><em>!include ../common_data/bear_common.yaml</em> <br>(which means that bear_common.yaml in now located in a separate folder 'common_data')</p>
+        - version 0.0.1: a bug related to ExcludingConstructor.construct_sequence() method to miss a parameter called 'deep', fixed.
+         
+         
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
