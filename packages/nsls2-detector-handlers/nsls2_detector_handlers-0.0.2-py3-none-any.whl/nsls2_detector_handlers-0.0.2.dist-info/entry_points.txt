@@ -1,0 +1,11 @@
+[databroker.handlers]
+ELECTROMETER = nsls2_detector_handlers.electrometer:ElectrometerBinFileHandler
+PIZZABOX_AN_FILE_TXT = nsls2_detector_handlers.pizzabox:PizzaBoxAnHandlerTxt
+PIZZABOX_AN_FILE_TXT_PD = nsls2_detector_handlers.pizzabox:PizzaBoxAnHandlerTxtPD
+PIZZABOX_DI_FILE_TXT = nsls2_detector_handlers.pizzabox:PizzaBoxDIHandlerTxt
+PIZZABOX_DI_FILE_TXT_PD = nsls2_detector_handlers.pizzabox:PizzaBoxDIHandlerTxtPD
+PIZZABOX_ENC_FILE_TXT = nsls2_detector_handlers.pizzabox:PizzaBoxEncHandlerTxt
+PIZZABOX_ENC_FILE_TXT_PD = nsls2_detector_handlers.pizzabox:PizzaBoxEncHandlerTxtPD
+SIS_HDF51 = nsls2_detector_handlers.srx_flyscans:ZebraHDF5Handler
+ZEBRA_HDF51 = nsls2_detector_handlers.srx_flyscans:ZebraHDF5Handler
+

@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: nsls2-detector-handlers
+Version: 0.0.2
+Summary: Staging repo for handlers specific to NSLS-II
+Home-page: https://github.com/bluesky/nsls2-detector-handlers
+Author: Brookhaven National Laboratory
+Author-email: dama@bnl.gov
+License: BSD (3-clause)
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: h5py
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+=======================
+nsls2-detector-handlers
+=======================
+
+.. image:: https://img.shields.io/travis/bluesky/nsls2-detector-handlers.svg
+        :target: https://travis-ci.org/bluesky/nsls2-detector-handlers
+
+.. image:: https://img.shields.io/pypi/v/nsls2-detector-handlers.svg
+        :target: https://pypi.python.org/pypi/nsls2-detector-handlers
+
+
+Staging repo for handlers specific to NSLS-II
+
+* Free software: 3-clause BSD license
+* Documentation: (COMING SOON!) https://bluesky.github.io/nsls2-detector-handlers.
+
+Features
+--------
+
+* TODO
+
+
