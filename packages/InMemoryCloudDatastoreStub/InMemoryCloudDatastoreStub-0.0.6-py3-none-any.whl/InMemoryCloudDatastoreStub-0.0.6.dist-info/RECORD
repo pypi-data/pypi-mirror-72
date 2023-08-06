@@ -1,0 +1,17 @@
+InMemoryCloudDatastoreStub/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+InMemoryCloudDatastoreStub/_in_memory_store.py,sha256=IVVo63JVDhzyoK2aBkXARMZl75-9W31sgmaeb0doirs,5874
+InMemoryCloudDatastoreStub/_request_wrapper.py,sha256=E9RkaUHa3NaVesbSC0Y3wvvYVLpAu6tOW8K_2w5_N-g,487
+InMemoryCloudDatastoreStub/_stored_object.py,sha256=-FsgmEvtR0hxmHXTGhndpLJM_Lt8-H2aPVJ0YCbyPCk,151
+InMemoryCloudDatastoreStub/_transactions.py,sha256=u6XNr8KLhcIkTcjoN7a0arGYAQzoTFd7FtiPshzev7I,381
+InMemoryCloudDatastoreStub/datastore_stub.py,sha256=SNMWvC-LtV3LxyAb81dZIOC2KzGPtwqrLUIDtXDTyhY,8596
+InMemoryCloudDatastoreStub/futures.py,sha256=os_e4Y7MgEdntQXDhDgZO1wipj9oi1NEg98sZxUA8z8,517
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=4hZh7KBZZ7P8gr3Ga8cIeQntgS2YMoBVKJwoA_P_h8g,1172
+tests/models.py,sha256=606KaJA490r3ZqV3Fffp3UA-fRroMxH_IP3pD873vEw,314
+tests/query_test.py,sha256=6F5epmS0AnlCKKyWyuFaXGqCiFY5oKI5A9b1omOmexk,8719
+tests/transaction_test.py,sha256=Nkb2pr5_g3ahzywug84PTW8Xru__wp7cwyyU1ml49xE,752
+InMemoryCloudDatastoreStub-0.0.6.dist-info/LICENSE.md,sha256=wFSYjwFDQQDpaju8yxe1d1J9veUvaz_0r7t30TtZriA,1071
+InMemoryCloudDatastoreStub-0.0.6.dist-info/METADATA,sha256=n0-IqFIR5kXSOPAQoShOxn0H-owW4VL19HK1h6yySOY,422
+InMemoryCloudDatastoreStub-0.0.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+InMemoryCloudDatastoreStub-0.0.6.dist-info/top_level.txt,sha256=TSx7CYh0RNmJ7LaqlRG7gidBwDzyf7pw06-_oniO0j8,33
+InMemoryCloudDatastoreStub-0.0.6.dist-info/RECORD,,
