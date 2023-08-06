@@ -1,0 +1,13 @@
+pymeshfix/__init__.py,sha256=Sc8appvhjeoFX8Q22uubkCs7iE-itJ4xMQ3JPYePPFQ,106
+pymeshfix/_meshfix.cpython-38-darwin.so,sha256=veg2A3gJG8QjogvrJVF7iL5XKgo3soN77YPN3Ps_3IM,640280
+pymeshfix/_version.py,sha256=L1ikbpTZ-Al1BQPoxo_KBKdRFd_5NJTj9I3nEmfzv0o,95
+pymeshfix/meshfix.py,sha256=5jAMoktBWTzeHJu4hflgwbmPUq79ydQr0K748JfTrYQ,6457
+pymeshfix/examples/StanfordBunny.ply,sha256=BK3gkor-PzB4Uby3-pMtb5N119_4QyYVyBBYKCCd6z8,1897462
+pymeshfix/examples/__init__.py,sha256=ggQzVOqWHHGJlOcbr0XTefGu5ncP1vfwvK2BEy53C5s,240
+pymeshfix/examples/fix.py,sha256=mFtrhUCcal3Ptg61ABKcIQLW1SiQLLLiOGwpNkC8MRs,1619
+pymeshfix/examples/planar_mesh.ply,sha256=HC9H3crzIFGsObW2CnoaO5qf8MpA6tshhyih9ArjtSY,50280
+pymeshfix-0.14.1.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+pymeshfix-0.14.1.dist-info/METADATA,sha256=ZzIjqKfVsz9Wyf7VdifiA-UtAnfAqU3jUrlU_m3YSIw,6503
+pymeshfix-0.14.1.dist-info/WHEEL,sha256=Hic4Br7HyqQlo_WBiWK58UvEogCnWnn00TOHJ0MUqpc,109
+pymeshfix-0.14.1.dist-info/top_level.txt,sha256=UwkbgnJw1YWdCJLKz78XfFSiG0jitpw5mLOQDA7V9a4,29
+pymeshfix-0.14.1.dist-info/RECORD,,
