@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Usage &#8212; cloud-functions-dispatch 0.9.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Other Considerations" href="considerations.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<p>A very simple example is shown below. It is broken into three parts:</p>
+<ul class="simple">
+<li><p>definition</p></li>
+<li><p>invocation (calling)</p></li>
+<li><p>execution (receiving)</p></li>
+</ul>
+<p>Note however that this is (nearly) a single codebase; though you are deploying to two places (some application and a cloud function to dispatch to) the deployable artifacts only differ in <code class="docutils literal notranslate"><span class="pre">main.py</span></code>, if at all.</p>
+<div class="section" id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
+<p>Defining a dispatchable function looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@dispatch</span>
+<span class="k">def</span> <span class="nf">my_func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">cheer</span><span class="o">=</span><span class="s1">&#39;hooray!&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;a is too large!&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;a is just right: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">cheer</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">my_func</span></code> is just a normal Python function that takes arguments. Arguments can be anything that <code class="docutils literal notranslate"><span class="pre">pickle</span></code> knows how to serialize, which covers all primitives, dataclasses, and many other structures, but does <em>not</em> include generators or callables (among other things). The only thing you need to do to any Python function to cause it to dispatch is to apply the <code class="docutils literal notranslate"><span class="pre">&#64;dispatch</span></code> decorator.</p>
+</div>
+<div class="section" id="invocation">
+<h2>Invocation<a class="headerlink" href="#invocation" title="Permalink to this headline">¶</a></h2>
+<p>Once your function is defined in your application, you call it just like any other function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">call_dispatched_function</span><span class="p">():</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">my_func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When you execute this code by calling <code class="docutils literal notranslate"><span class="pre">my_module.call_dispatched_function()</span></code>, your cloud function will be invoked and the specified function will be executed remotely.</p>
+<p><strong>Note:</strong> for obvious reasons, the dispatched execution won’t work until the cloud function is properly deployed as specified below.</p>
+</div>
+<div class="section" id="execution">
+<h2>Execution<a class="headerlink" href="#execution" title="Permalink to this headline">¶</a></h2>
+<p>Your cloud function will need an entry point. You should use the provided <code class="docutils literal notranslate"><span class="pre">execute</span></code> method:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># this file is the entrypoint for dispatched functions; the only purpose is to</span>
+<span class="c1"># provide a function (`execute_dispatched`) for cloud functions to call,</span>
+<span class="c1"># and to ensure all the functions are imported and registered (any function</span>
+<span class="c1"># that is not imported at startup will not be visible to</span>
+<span class="c1"># `cloud_functions_dispatch`)</span>
+
+<span class="kn">from</span> <span class="nn">cloud_functions_dispatch</span> <span class="kn">import</span> <span class="n">execute</span> <span class="k">as</span> <span class="n">execute_dispatched</span>  <span class="c1"># noqa</span>
+<span class="kn">import</span> <span class="nn">functions</span>  <span class="c1"># noqa</span>
+</pre></div>
+</div>
+<p><strong>Note:</strong> the <code class="docutils literal notranslate"><span class="pre">main.py</span></code> file deployed with the executor may or may not be the same as that deployed with the invoker; this is really dependent on whether your main application <strong>also</strong> deploys as a cloud function or as something else.</p>
+<p>Your codebase can then be deployed to Cloud Functions with the entrypoint specified:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ gcloud functions deploy <span class="si">${</span><span class="nv">FUNCTION_NAME</span><span class="si">}</span> --trigger-topic<span class="o">=</span><span class="si">${</span><span class="nv">TOPIC_NAME</span><span class="si">}</span> --source<span class="o">=</span><span class="si">${</span><span class="nv">SOURCE_DIR</span><span class="si">}</span> --entry-point<span class="o">=</span>execute_dispatched ...
+</pre></div>
+</div>
+</div>
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<p>Once your function is deployed, you can call it and you will see something like the following in your logs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">13</span><span class="n">T22</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="mf">35.427</span><span class="n">Z</span> <span class="n">my</span><span class="o">-</span><span class="n">topic</span> <span class="mi">1043501608491014</span> <span class="n">pushing</span> <span class="n">function</span> <span class="n">call</span> <span class="n">to</span> <span class="n">pubsub</span><span class="p">:</span> <span class="n">functions</span><span class="o">.</span><span class="n">my_func</span>
+</pre></div>
+</div>
+<p>… followed shortly by something like this in your cloud function logs, showing execution of the function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>D 2020-03-13T22:24:35.436Z my-topic 1043501608491013 Function execution started
+I 2020-03-13T22:24:35.526Z my-topic 1043501608491013 received event 1043501608491013 sent at 2020-03-13T22:24:35.095Z
+I 2020-03-13T22:24:35.526Z my-topic 1043501608491013 executing: functions.my_func
+I 2020-03-13T22:24:35.526Z my-topic 1043501608491013 a is just right: hooray!
+D 2020-03-13T22:24:35.527Z my-topic 1043501608491013 Function execution took 92 ms, finished with status: &#39;ok&#39;
+</pre></div>
+</div>
+</div>
+<div class="section" id="deployable-example">
+<h2>Deployable Example<a class="headerlink" href="#deployable-example" title="Permalink to this headline">¶</a></h2>
+<p>A complete, working sample can be found in the <code class="docutils literal notranslate"><span class="pre">./sample</span></code> directory. To see it in action:</p>
+<ul class="simple">
+<li><p>Enable Cloud Functions and PubSub in GCP (see Google documentation for this)</p></li>
+<li><p>Create a pubsub topic in GCP (the command below assumes it’s <code class="docutils literal notranslate"><span class="pre">my-topic</span></code>)</p></li>
+<li><p>Pick an unused name for your function (the command below assumes it’s <code class="docutils literal notranslate"><span class="pre">my-func</span></code>)</p></li>
+</ul>
+<p>Then run the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gcloud functions deploy my-func --trigger-topic=my-topic --source=sample --entry-point=execute_dispatched --runtime=python37 --memory=128MB --max-instances=1 --set-env-vars CLOUD_FUNCTIONS_DISPATCH_GCP_PUBSUB_TOPIC=my-topic
+</pre></div>
+</div>
+<p>Now set <cite>GCP_PROJECT</cite> and <cite>CLOUD_FUNCTIONS_DISPATCH_GCP_PUBSUB_TOPIC</cite> locally and:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd sample
+$ PYTHONPATH=..:$PYTHONPATH python -c &quot;import functions; functions.echo(1, &#39;a&#39;, x=7); functions.my_func(1, 2)&quot;
+</pre></div>
+</div>
+<p>After a few seconds you will see the output of your cloud function showing the arguments passed in your cloud logging tools.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">cloud-functions-dispatch</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security Considerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#definition">Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#invocation">Invocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#execution">Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#output">Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deployable-example">Deployable Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="considerations.html">Other Considerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="installation.html" title="previous chapter">Installation</a></li>
+      <li>Next: <a href="considerations.html" title="next chapter">Other Considerations</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, jeffrey k eliasen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/usage.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
