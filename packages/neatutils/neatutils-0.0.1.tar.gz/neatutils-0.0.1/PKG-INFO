@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: neatutils
+Version: 0.0.1
+Summary: NeatUtils - a simple reference utility for awesome lists and machine learning estimators and algorithms
+Home-page: https://github.com/Jcharis/neatutils
+License: MIT
+Keywords: neatutils,awesome list,machine learning estimators,ml algorithms list,sklearn estimators,neat,jcharis,list pycaret estimators,distutils
+Author: Jesse E.Agbe(JCharis)
+Author-email: jcharistech@gmail.com
+Requires-Python: >=3.3,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: click-help-colors (>=0.8,<0.9)
+Project-URL: Repository, https://github.com/Jcharis/neatutils
+Description-Content-Type: text/markdown
+
+### neatutils
+A Simple Reference Utility for Getting the Abbreviation of ML Estimators,Algorithms and Awesome List
+
+### Installation
+```bash
+pip install neatutils
+```
+
+### Benefits
++ Simplify finding ML estimator name for pycaret
+
+### Why Neatutils?
++ During usage of the powerful ML library Pycaret, I noticed that it was difficult to know which abbreviation/short name can be used each ML Estimator, hence we decided to build something simple to make it easier to know the most common name/abbreviation for most Machine Learning/Data Science Algorithms and Estimators used.
+
+### Usage
+#### Get Abbreviations
++ Neatutils offers the ability to analyse sequences for more insight
+
+```python
+>>> import neatutils
+>>> neatutils.get_abbrev('Logistic Regression')
+>>> lr
+```
+
+#### Get Full Name of Estimators
+```python
+>>> import neatutils
+>>> neatutils.get_fullname('lr')
+'Logistic Regression'
+
+```
+#### Documentation
++ Please read the [documentation](https://github.com/Jcharis/neatutils/wiki) for more information on what neatutils does and how to use is for your needs.
+
+#### More Features To Add
++ awesome list
++ support for more file formats
+
+
+
+#### Acknowledgements
+   + Inspired by packages like PyCaret,Awesome-hub
+
+### NB
++ Contributions Are Welcomed
++ Notice a bug, please let us know.
++ Thanks A lot
+
+### By
++ Jesse E.Agbe(JCharis)
++ Jesus Saves @JCharisTech
+
