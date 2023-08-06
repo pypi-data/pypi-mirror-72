@@ -1,0 +1,11 @@
+.gitignore
+LICENSE
+README.rst
+requirements.txt
+setup.py
+pykoopman/__init__.py
+pykoopman.egg-info/PKG-INFO
+pykoopman.egg-info/SOURCES.txt
+pykoopman.egg-info/dependency_links.txt
+pykoopman.egg-info/requires.txt
+pykoopman.egg-info/top_level.txt
