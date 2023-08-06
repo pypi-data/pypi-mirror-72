@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+commands_generator.egg-info/PKG-INFO
+commands_generator.egg-info/SOURCES.txt
+commands_generator.egg-info/dependency_links.txt
+commands_generator.egg-info/top_level.txt
+scripts/commands-generator
