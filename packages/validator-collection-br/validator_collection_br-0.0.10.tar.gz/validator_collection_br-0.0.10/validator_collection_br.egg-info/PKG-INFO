@@ -1,0 +1,30 @@
+Metadata-Version: 1.2
+Name: validator-collection-br
+Version: 0.0.10
+Summary: Validators for common business needs of Brazil
+Home-page: https://github.com/rvnovaes/validator-collection-br
+Author: Roberto Vasconcelos Novaes, Luis Guilherme Paim, Iasmini Gomes, Helena Gomes, Germain Pereira
+Author-email: rnovaes@ufmg.br, luis.paimadv@gmail.com, iasmini@silexsistemas.com.br, helena.gomes@silexsistemas.com.br, pereira.germain@outlook.com
+License: MIT
+Project-URL: Documentation, https://github.com/rvnovaes/validator-collection-br
+Project-URL: Bug Reports, https://github.com/rvnovaes/validator-collection-br/issues
+Project-URL: Source, https://github.com/rvnovaes/validator-collection-br
+Description: validator-collection-br
+        =======================
+        
+        Validadores para campos específicos do Brasil
+        
+        - CPF - Cadastro de Pessoas Físicas
+        - CNPJ - Cadastro Nacional da Pessoa Jurídica
+        - CNJ - Numeração única do Conselho Nacional de Justiça - Em progresso
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
