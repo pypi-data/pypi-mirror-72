@@ -1,0 +1,10 @@
+setup.py
+iterwrapper/__init__.py
+iterwrapper/misc.py
+iterwrapper/wrapper.py
+iterwrapper.egg-info/PKG-INFO
+iterwrapper.egg-info/SOURCES.txt
+iterwrapper.egg-info/dependency_links.txt
+iterwrapper.egg-info/top_level.txt
+iterwrapper/data/__init__.py
+iterwrapper/data/mutated.py
