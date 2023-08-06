@@ -1,0 +1,16 @@
+udp/__init__.py,sha256=iMnahcGk6OGTxRCBiu_ldbfFT23Kf4b5eQ6E__eVIDE,1768
+udp/connection.py,sha256=_tvSL9vdGzaXQmdC2u787L-FQKvIzi4rpvMwON-aWh8,9808
+udp/hub.py,sha256=nZqkZHCT7QjcXUApsnB0YNAV39xI6q59SEDiLeECS6Y,17445
+udp/socket.py,sha256=FajOt7gbsoA6-W-FPYKO6m8ZpG7PEgEljQnJ6JoRZWI,13024
+udp/mtp/__init__.py,sha256=UVx4mNqVsnoWUoE1imVl2xuorhSw5n4quW8j9uFAOys,1916
+udp/mtp/peer.py,sha256=r4wtAhr_43Oy6MnAsLXKCMbNpY7tOsYLGPZa0BVb4RE,14394
+udp/mtp/pool.py,sha256=XzEk7LBKGrfqkfY5rkCp4UhSkK-LcUNkJoI1YmaOnco,12920
+udp/mtp/protocol.py,sha256=kngM0JP57J7wKvIJpU8gZJ211-6-V-BoL76XHxrZbH4,16944
+udp/mtp/task.py,sha256=LhelXv7lRKjVcftg6YHb6mgBrlj_eLQL1SU2eAb-8PY,4767
+udp/tlv/__init__.py,sha256=J_41GU-AzJvuIvGZ0IXpWCZvBV2Mxf_8ZZ913mt-CTE,1696
+udp/tlv/data.py,sha256=EVXuvA0Ja_pge-Gi68YDCj8f00zGeVqoyum6yENWv1o,6455
+udp/tlv/item.py,sha256=rzNVdT9R3ZMSFzAGPegoUcSRicCd7_XVBMPcCStXL0g,5115
+udp-0.2.5.dist-info/METADATA,sha256=sF_ktRIWrCzdxBfXEJHTUVAx7SNR1Ixv7aKdFL8OO40,419
+udp-0.2.5.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+udp-0.2.5.dist-info/top_level.txt,sha256=yFUB6ASUbIR0DLyv7VcdbYGwBmgKs_Q2E22Lmezvi80,4
+udp-0.2.5.dist-info/RECORD,,
