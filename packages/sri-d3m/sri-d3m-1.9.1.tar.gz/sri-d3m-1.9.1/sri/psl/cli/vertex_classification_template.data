@@ -1,0 +1,12 @@
+predicates:
+   LocalSim/2: closed
+   Link/2: closed
+   Label/2: open
+
+observations:
+   LocalSim: {data_dir}/local_sim_obs.txt
+   Link: {data_dir}/link_obs.txt
+   Label: {data_dir}/label_obs.txt
+
+targets:
+   Label: {data_dir}/label_target.txt
