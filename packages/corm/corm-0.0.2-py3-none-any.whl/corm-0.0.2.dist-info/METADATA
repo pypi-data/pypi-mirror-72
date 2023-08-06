@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: corm
+Version: 0.0.2
+Summary: Relationships between data structures
+Home-page: https://github.com/angru/corm
+Author: Andrey Shevchuk
+Author-email: angru@list.ru
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# corm
+
+_Data structures relationships made easy_
+
+corm is in early development. API can change.
+
+
+[![build](https://github.com/angru/corm/workflows/build/badge.svg)](https://github.com/angru/corm/actions?query=workflow%3Abuild+branch%3Amaster++)
+[![codecov](https://codecov.io/gh/angru/corm/branch/master/graph/badge.svg)](https://codecov.io/gh/angru/corm)
+
+## Help
+
+See [documentation](https://angru.github.io/corm/) for more details.
+
+## Installation
+
+`pip install corm`
+
+# Rationate
+
+* сложно помнить ключи словарей, если структура данных большая
+* организация двусторонних связей между сущностями, особенно иерархических структурах данных
+* возможность разделить безнес-логику и технические детали связывания сущностей друг с другом и поиска связанной сущности
+
+
