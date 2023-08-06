@@ -1,0 +1,13 @@
+README.md
+requirements.txt
+setup.py
+image_embeddings/__init__.py
+image_embeddings/version.py
+image_embeddings.egg-info/PKG-INFO
+image_embeddings.egg-info/SOURCES.txt
+image_embeddings.egg-info/dependency_links.txt
+image_embeddings.egg-info/entry_points.txt
+image_embeddings.egg-info/requires.txt
+image_embeddings.egg-info/top_level.txt
+image_embeddings/downloader/__init__.py
+image_embeddings/downloader/tf_datasets_saver.py
