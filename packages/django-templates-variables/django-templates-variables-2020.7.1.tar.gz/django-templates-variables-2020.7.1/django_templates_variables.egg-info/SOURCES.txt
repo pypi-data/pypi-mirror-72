@@ -1,0 +1,9 @@
+requirements.txt
+setup.py
+django_templates_variables/__init__.py
+django_templates_variables/context_processors.py
+django_templates_variables.egg-info/PKG-INFO
+django_templates_variables.egg-info/SOURCES.txt
+django_templates_variables.egg-info/dependency_links.txt
+django_templates_variables.egg-info/requires.txt
+django_templates_variables.egg-info/top_level.txt
