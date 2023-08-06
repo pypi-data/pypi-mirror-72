@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: ipynb-path
+Version: 0.1.4
+Summary: A simple python package to get the path of the current IPython / Jupyter Notebook file.
+Home-page: https://github.com/kzm4269/ipynb-path
+License: MIT
+Author: Kazuma Takahara
+Author-email: 4269kzm@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Requires-Dist: ipykernel (>=4.0)
+Requires-Dist: notebook (>=4.0)
+Requires-Dist: requests (>=2.0)
+Description-Content-Type: text/x-rst
+
+ipynb-path
+==========
+
+A simple python package to get the path of the current IPython / Jupyter Notebook file.
+
+Installation
+------------
+
+.. code:: bash
+
+    pip install ipynb-path
+
+Usage
+-----
+
+If you can access to your Jupyter Notebook/Lab server without a password, 
+you can use just ``ipynb_path.get()`` in a ``.ipynb`` file.
+
+.. code:: python
+
+    import ipynb_path
+    __file__ = ipynb_path.get()
+
+If you need a password to access the server, you should specify it.
+
+.. code:: python
+
+    import ipynb_path
+    __file__ = ipynb_path.get(password='foo')
+
+You can also specify ``__name__`` for compatibility between ``.py`` and ``.ipynb``.
+In this case, ``ipynb_path.get()`` does not overwrite ``__file__`` even if it is called in a ``.py`` file.
+
+.. code:: python
+
+    import ipynb_path
+    __file__ = ipynb_path.get(__name__)
+
