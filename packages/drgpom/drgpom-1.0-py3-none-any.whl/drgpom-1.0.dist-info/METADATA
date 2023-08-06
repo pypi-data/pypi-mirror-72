@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: drgpom
+Version: 1.0
+Summary: Population of models simulations for dorsal root ganglion neurons
+Home-page: https://github.com/oliverbritton/drg-pom
+Author: Oliver Britton
+Author-email: oliverjbritton@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/oliverbritton/drg-pom/archive/master.zip
+Platform: UNKNOWN
+Requires-Dist: nose2
+Requires-Dist: numpy (<1.16.3)
+Requires-Dist: pandas
+Requires-Dist: pyDOE
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+
+UNKNOWN
+
+
