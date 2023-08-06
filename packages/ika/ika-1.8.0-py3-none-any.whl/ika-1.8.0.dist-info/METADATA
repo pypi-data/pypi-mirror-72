@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: ika
+Version: 1.8.0
+Summary: Package to control IKA products via Python
+Home-page: https://gitlab.com/heingroup/ika
+Author: Veronica Lai // Hein Group
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: ftdi-serial
+Requires-Dist: matplotlib (==3.1.3)
+Requires-Dist: seaborn
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: hein-utilities
+
+# ika
+
+Package to control IKA products via Python
+
+## Products supported
+- IKA Magnetic Stirrer model C-MAG HS 7
+    - https://www.ika.com/en/Products-Lab-Eq/Magnetic-Stirrers-Hot-Plate-Lab-Mixer-Stirrer-Blender-csp-188/C-MAG-HS-7-control-Downloads-cpdl-20002694/
+- IKA RCT 5 digital
+    - https://www.ika.com/en/Products-Lab-Eq/Magnetic-Stirrers-Hot-Plate-Lab-Mixer-Stirrer-Blender-csp-188/RCT-5-digital-cpdt-20002704/
+
+### Basics
+
+To control a magnetic stirrer with the `ika` package, you need to identify the comport the device is when connected to
+your computer.
+
+#### Example usage
+
+There is an example script [ika/tests/temperature_stabilization_test.py](ika/tests/temperature_stabilization_test.py) 
+
+
