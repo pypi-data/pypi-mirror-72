@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: tweezepy
+Version: 0.1.2
+Summary: Single-molecule pulling analysis package
+Home-page: https://github.com/pypa/tweezepy
+Author: Ian Morgan
+Author-email: ilmorgan@ucsb.edu
+License: LICENSE.txt
+Project-URL: Source, https://github.com/ianlmorgan/tweezepy/
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: autograd
+
+UNKNOWN
+
+
