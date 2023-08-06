@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: starfile
+Version: 0.12
+Summary: Read and write STAR files as pandas DataFrames
+Home-page: https://github.com/alisterburt/starfile
+Author: Alister Burt
+Author-email: alisterburt@gmail.com
+License: BSD 3-Clause License
+Download-URL: https://github.com/alisterburt/starfile/archive/v0.12.tar.gz
+Description: UNKNOWN
+Keywords: io,STAR,star,starfile
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
