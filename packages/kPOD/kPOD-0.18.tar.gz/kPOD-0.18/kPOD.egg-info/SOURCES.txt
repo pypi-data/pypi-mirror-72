@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+kPOD/__init__.py
+kPOD/examples.py
+kPOD/initial_helpers.py
+kPOD/kpod_implementation.py
+kPOD/utils.py
+kPOD.egg-info/PKG-INFO
+kPOD.egg-info/SOURCES.txt
+kPOD.egg-info/dependency_links.txt
+kPOD.egg-info/not-zip-safe
+kPOD.egg-info/requires.txt
+kPOD.egg-info/top_level.txt
