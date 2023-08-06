@@ -1,0 +1,37 @@
+service: {parameter-projetc-name}
+
+provider:
+  name: aws
+  runtime: python3.8
+  stage: ${opt:stage, 'dev'}
+  environment:
+    SENTRY_URL: ${opt:sentry_url}
+    EXAMPLE_VARIABLE_ENV: ${opt:example_variable_env}
+    STAGE: ${opt:stage}
+  memorySize: 256
+  timeout: 100
+
+functions:
+  function-name:
+    handler: main.entrypoint_lambda
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
+
+package:
+  exclude:
+    - node_modules/**
+    - venv/**
+    - requirement*
+    - package*
+    - README.md
+    - .env*
+    - .vscode/**
+    - Makefile
+    - .editorconfig
+    - JenkinsFile
+    - tests/**

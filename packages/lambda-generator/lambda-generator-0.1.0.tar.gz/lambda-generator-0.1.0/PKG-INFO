@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: lambda-generator
+Version: 0.1.0
+Summary: 
+Author: matheusfrancisco
+Author-email: matheusmachadoufsc@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: python-decouple (>=3.3,<4.0)
+Requires-Dist: pyyaml (==5.3.1)
+Requires-Dist: sentry_sdk (>=0.15.0,<0.16.0)
+Requires-Dist: typer (>=0.3.0,<0.4.0)
+Requires-Dist: yamllint (>=1.23.0,<2.0.0)

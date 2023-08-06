@@ -1,0 +1,62 @@
+pipeline {
+    agent any
+    parameters {
+      choice(choices: 'none\nprod\nstage',  name: 'DEPLOY_ENV')
+      booleanParam (defaultValue: false, name: 'DEPLOY_PROD', description: 'Do you want deploy to prod?')
+    }
+    stages {
+
+        stage('Lint') {
+            steps {
+                sh 'make lint'
+            }
+        }
+
+        stage('Unit Test') {
+            environment {
+                SENTRY_URL="https://foo@sentry.io/123"
+            }
+            steps {
+                sh 'make test'
+            }
+        }
+
+        stage('Deploy Lambda to stage dev') {
+            when {
+              expression { params.DEPLOY_ENV == 'stage' }
+            }
+            environment {
+                SENTRY_URL="https://your@sentry-url.io/"
+                AWS_ACCESS_KEY_ID=credentials('YOUR_AWS_ACCESS_KEY_TO_STAGE_FROM_JENKINSCI')
+                AWS_SECRET_ACCESS_KEY=credentials('YOUR_AWS_SECRET_ACCESS_KEY_TO_STAGE_FROM_JENKINSCI')
+                EXAMPLE_VARIABLE_ENV='PUT_YOUR_VALUE_HERE'
+                STAGE="stage"
+            }
+            steps {
+                sh "make deploy"
+            }
+        }
+
+        stage('Deploy Lambda function') {
+            when {
+              expression { params.DEPLOY_PROD == true && params.DEPLOY_ENV == 'prod' }
+            }
+            environment {
+                SENTRY_URL="https://your@sentry-url.io/"
+                EXAMPLE_VARIABLE_ENV='PUT_YOUR_VALUE_HERE'
+                STAGE="prod"
+            }
+            steps {
+                withCredentials([[
+                    $class: 'AmazonWebServicesCredentialsBinding',
+                    credentialsId: 'webhook_iam',
+                    accessKeyVariable: 'AWS_ACCESS_KEY_ID',
+                    secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
+                ]])
+                {
+                    sh "make deploy"
+                }
+            }
+        }
+    }
+}
