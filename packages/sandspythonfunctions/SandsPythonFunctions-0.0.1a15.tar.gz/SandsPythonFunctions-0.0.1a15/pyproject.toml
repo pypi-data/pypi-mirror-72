@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "SandsPythonFunctions"
+version = "0.0.1a15"
+description = "Functions I use regularly with my python projects"
+authors = ["ldsands <ldsands@outlook.com>"]
+repository = "https://github.com/ldsands/SandsPythonFunctions"
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "SandsPythonFunctions", from = "src" },
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.poetry.dependencies]
+#python
+python = "^3.7"
+# data file management and manipulation
+numpy = "^1.18.5"
+pandas = "^1.0.3"
+pyarrow = "^0.16.0"
+zstandard = "^0.13.0"
+# development packages that are useful
+black = "^19.10b0"
+flake8 = "^3.8.1"
+isort = "^4.3.21"
+# graphing
+matplotlib = "^3.2.1"
+seaborn = "^0.10.1"
+# nlp
+gensim = "^3.8.3"
+nltk = "^3.5"
+# jupyter/ipython stuff
+notebook = "^6.0.3"
+
+# old packages that were used at one point but no longer are used
+# altair = "^4.1.0"
+# altair_saver = "^0.5.0"
+# pyemd = "^0.5.1"
+# wmd = "^1.3.2" # for word mover distance alternative
+
+[tool.poetry.dev-dependencies]
+# here you put any packages that would be used in development of the package such as packages used in testing
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+# [[tool.poetry.source]]
+# name = "TestPyPI"
+# url = "https://test.pypi.org/legacy/"
+# default = true
