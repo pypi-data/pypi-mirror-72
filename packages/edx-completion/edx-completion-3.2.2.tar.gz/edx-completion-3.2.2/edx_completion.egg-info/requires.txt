@@ -1,0 +1,7 @@
+edx-drf-extensions>=1.11.0
+djangorestframework
+django-model-utils
+pytz
+XBlock>=1.2.2
+Django
+edx-opaque-keys[django]
