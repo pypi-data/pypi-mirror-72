@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: EasyConversion
+Version: 0.3.1
+Summary: Easily converting binary and decimal (early) Updated the way you import
+Home-page: https://github.com/Coolo22/EasyConversion
+Author: Coolo2
+Author-email: itsxcoolo2@gmail.com
+License: MIT
+Download-URL: https://github.com/Coolo2/EasyConversion/archive/v_031.tar.gz
+Description: 
+        A python package for easily converting between python and decimal. Mostly a test of packaging. This is an early project so there may be bugs.
+        0.3.1 - Patched some bugs with docs.
+        
+Keywords: Decimal,Binary,Convert
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
