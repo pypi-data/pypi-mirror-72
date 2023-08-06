@@ -1,0 +1,12 @@
+gimmebio.data_manager-0.1.0-py3.6-nspkg.pth,sha256=pxTb1jWsCspdqoPmV2TGBVot_a6QmHbVwKXbDN4rHTs,549
+gimmebio/data_manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gimmebio/data_manager/api.py,sha256=y591tvTnkHO-4Xi6dlHda8IAs63m6Z4cxwYBxWlqzwo,160
+gimmebio/data_manager/cli.py,sha256=C9OpyBlXt03cRao0Ax0cVwVrTxWJOvTV1Uz4LO20Fno,3597
+gimmebio/data_manager/constants.py,sha256=1z4AiPAsGdb-KC3irEhxcw7-Md9ANssGZbdgznWH_vo,46
+gimmebio/data_manager/db.py,sha256=QAQJOTP96ZCoS_V4XUMfhZKjRCl2M-Ltj-ua-x64JKI,1157
+gimmebio/data_manager/models.py,sha256=w-NzT73lWFJkmQ6Bbf432tCBZt_xuCFOBdLDZj1_oDc,2132
+gimmebio.data_manager-0.1.0.dist-info/METADATA,sha256=cjnfV_Y25K7Nxw6vHiXnlLTwK8SYjjxiV6TQImI4G8g,387
+gimmebio.data_manager-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+gimmebio.data_manager-0.1.0.dist-info/namespace_packages.txt,sha256=ZtXh7YhZv8YK6bNlKCHwVooOVbYqdaS6-ibUenEYqgA,9
+gimmebio.data_manager-0.1.0.dist-info/top_level.txt,sha256=ZtXh7YhZv8YK6bNlKCHwVooOVbYqdaS6-ibUenEYqgA,9
+gimmebio.data_manager-0.1.0.dist-info/RECORD,,
