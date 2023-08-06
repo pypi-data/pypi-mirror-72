@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: yaqd_control
+Version: 2020.6.0
+Summary: Command line tools for inspecting and controlling yaq daemons.
+Home-page: https://yaq.fyi
+License: UNKNOWN
+Author: yaq developers
+Author-email: git@ksunden.space
+Requires-Python: >3.7
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: appdirs
+Requires-Dist: toml
+Requires-Dist: click
+Requires-Dist: prettytable
+Requires-Dist: colorama
+Requires-Dist: yaqc
+Requires-Dist: black ; extra == "dev"
+Requires-Dist: pre-commit ; extra == "dev"
+Project-URL: Documentation, https://control.yaq.fyi
+Project-URL: Issues, https://gitlab.com/yaq/yaqd-control/issues
+Project-URL: Source, https://gitlab.com/yaq/yaqd-control
+Provides-Extra: dev
+
+# yaqd-control
+
+[![PyPI](https://img.shields.io/pypi/v/yaqd-control)](https://pypi.org/project/yaqd-control)
+[![Conda](https://img.shields.io/conda/vn/conda-forge/yaqd-control)](https://anaconda.org/conda-forge/yaqd-control)
+[![yaq](https://img.shields.io/badge/framework-yaq-orange)](https://yaq.fyi/)
+[![black](https://img.shields.io/badge/code--style-black-black)](https://black.readthedocs.io/)
+[![ver](https://img.shields.io/badge/calver-YYYY.0M.MICRO-blue)](https://calver.org/)
+[![log](https://img.shields.io/badge/change-log-informational)](https://gitlab.com/yaq/yaqd-control/-/blob/master/CHANGELOG.md)
+
+Command line tools for inspecting and controlling yaq daemons.
+https://control.yaq.fyi/
+
