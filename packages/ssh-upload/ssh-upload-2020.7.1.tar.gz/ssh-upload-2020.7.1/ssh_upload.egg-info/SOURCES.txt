@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+scripts/ssh-upload
+ssh_upload.egg-info/PKG-INFO
+ssh_upload.egg-info/SOURCES.txt
+ssh_upload.egg-info/dependency_links.txt
+ssh_upload.egg-info/top_level.txt
