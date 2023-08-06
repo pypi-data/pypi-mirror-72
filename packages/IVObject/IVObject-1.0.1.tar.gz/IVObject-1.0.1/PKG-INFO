@@ -1,0 +1,33 @@
+Metadata-Version: 1.1
+Name: IVObject
+Version: 1.0.1
+Summary: A Immutable Value Object implementation in Python.
+Home-page: https://github.com/othercodes/ivobject
+Author: Unay Santisteban
+Author-email: usantisteban@othercode.es
+License: MIT
+Download-URL: https://github.com/othercodes/ivobject/releases
+Description: # IVObject
+        
+        Forked from: https://github.com/quiqueporta/simple-value-object
+        
+        A value object is a small object that represents a simple entity whose equality isn't based on 
+        identity: i.e. two value objects are equal when they have the same value, not necessarily being 
+        the same object.
+        
+        Installation
+        ------------
+        
+        ```bash 
+        > pip install ivobject
+        ```
+        
+Keywords: python,ddd,value object,hexagonal architecture
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
