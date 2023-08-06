@@ -1,0 +1,3 @@
+[console_scripts]
+apex-voicelines=apex_legends_voicelines.__main__:main
+
