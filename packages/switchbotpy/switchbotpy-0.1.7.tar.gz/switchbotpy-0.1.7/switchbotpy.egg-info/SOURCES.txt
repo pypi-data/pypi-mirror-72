@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+switchbotpy/__init__.py
+switchbotpy/switchbot.py
+switchbotpy/switchbot_timer.py
+switchbotpy/switchbot_util.py
+switchbotpy.egg-info/PKG-INFO
+switchbotpy.egg-info/SOURCES.txt
+switchbotpy.egg-info/dependency_links.txt
+switchbotpy.egg-info/requires.txt
+switchbotpy.egg-info/top_level.txt
