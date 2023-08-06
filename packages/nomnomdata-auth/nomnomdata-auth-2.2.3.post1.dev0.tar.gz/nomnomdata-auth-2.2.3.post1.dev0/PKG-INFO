@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: nomnomdata-auth
+Version: 2.2.3.post1.dev0
+Summary: Handle authorization to Nom Nom Data services
+Home-page: https://gitlab.com/nomnomdata/tools/nomnomdata-auth
+License: LGPL-3.0-only
+Author: Nom Nom Data Inc
+Author-email: info@nomnomdata.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: dunamai (>=1.1.0,<2.0.0)
+Requires-Dist: nomnomdata-cli (>=0.1.0,<0.2.0)
+Requires-Dist: pycognito (>=0.1.2,<0.2.0)
+Requires-Dist: requests (>=2.23.0,<3.0.0)
+Project-URL: Repository, https://gitlab.com/nomnomdata/tools/nomnomdata-auth
+Description-Content-Type: text/markdown
+
+# nomnomdata-auth
+
+Tiny library that contains KeyAuth, a requests library authorizer that signs requests with a secret key.
+
