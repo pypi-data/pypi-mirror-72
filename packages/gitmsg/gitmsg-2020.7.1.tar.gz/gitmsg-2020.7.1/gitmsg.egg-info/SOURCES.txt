@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+gitmsg.egg-info/PKG-INFO
+gitmsg.egg-info/SOURCES.txt
+gitmsg.egg-info/dependency_links.txt
+gitmsg.egg-info/top_level.txt
+scripts/gitmsg
