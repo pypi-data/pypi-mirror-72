@@ -1,0 +1,22 @@
+{% load wagtailcore_tags social_share %}
+
+<div id="block-social-share" class="{% if block_num == 1 %}header-padding {% endif %}social-share theme-bg-space">
+    <div class="container content theme-space">
+        <div class="rich-text-container align-text-center">
+            {{ settings.cms.WebspaceSettings.social_share_text|richtext }}
+        </div>
+        <div class="socials">
+            {% post_to_facebook page %}
+            {% post_to_twitter "{{page.title}} : " page %}
+            {% post_to_linkedin page.title page %}
+            {% send_email page.title "{{page.title}} : " page %}
+        </div>
+
+        {% with newsletter=settings.cms.WebspaceSettings.newsletter %}
+            {% if newsletter %}
+                {% include 'cms/blocks/common/form.html' with form=newsletter %}
+            {% endif %}
+        {% endwith %}
+
+    </div>
+</div>

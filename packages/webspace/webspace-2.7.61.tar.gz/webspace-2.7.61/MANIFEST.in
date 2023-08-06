@@ -1,0 +1,6 @@
+include *.rst
+include AUTHORS
+include LICENSE
+recursive-include src/webspace/cms/templates *.txt *.html
+recursive-include src/webspace/cms/static *
+recursive-include src/webspace/cms/templatetags *
