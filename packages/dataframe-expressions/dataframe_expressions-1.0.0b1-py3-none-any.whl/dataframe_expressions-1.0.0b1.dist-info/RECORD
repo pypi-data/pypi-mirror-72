@@ -1,0 +1,12 @@
+dataframe_expressions/DataFrame.py,sha256=8nzCsN0Fievn33Y--_jpOVyhAgR32ADXWwuVy3DfwrI,15525
+dataframe_expressions/__init__.py,sha256=ghgmlNXsRDA7WEBp3HZRl6fvzWZkOormStESPtkjzfc,345
+dataframe_expressions/alias.py,sha256=fSWQliettx1qUNBqaGi2VZTsyIHTmBDRALBn8iGfPXg,4829
+dataframe_expressions/asts.py,sha256=90C6RdKudxNUuap__8lhx1xtv2jJpcJ4TD_KDUya8LA,1771
+dataframe_expressions/render.py,sha256=Pi9q7AuEkZeFT2CBJQi6u5e86gzC4XqYf0EbqvwP6Ec,6201
+dataframe_expressions/utils.py,sha256=YYhbcsLQ_q9yCu-dp8LXz6YQ4dg0T6FF6O5B8zSG9hE,3270
+dataframe_expressions/utils_ast.py,sha256=C9tbx6tWsNRgPf0N1LHirCbVVghJsI1mW7zI-TGPqac,3043
+dataframe_expressions-1.0.0b1.dist-info/LICENSE,sha256=K994wzUtwGDwZH3txL0jNsQxB0z37W5hYB1zZ3i4Ds0,1069
+dataframe_expressions-1.0.0b1.dist-info/METADATA,sha256=KyZyCX5yQyhXtM85eJCjM22MxLg9f4CY7TqM7Eytx9Q,14918
+dataframe_expressions-1.0.0b1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+dataframe_expressions-1.0.0b1.dist-info/top_level.txt,sha256=UWVgU2m9SfWjRvzL1Fk0J9Opjav_w9VdInFhcV4Nrp0,22
+dataframe_expressions-1.0.0b1.dist-info/RECORD,,
