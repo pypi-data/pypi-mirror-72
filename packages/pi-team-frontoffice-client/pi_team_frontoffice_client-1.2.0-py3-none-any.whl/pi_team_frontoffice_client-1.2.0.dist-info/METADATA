@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pi-team-frontoffice-client
+Version: 1.2.0
+Summary: MN Frontoffice CORE &amp; PERE
+Home-page: UNKNOWN
+Author: OpenAPI Generator community
+Author-email: team@openapitools.org
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,MN Frontoffice CORE & PERE
+Platform: UNKNOWN
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+
+Highly available and searchable datastore for MN  # noqa: E501
+
+
