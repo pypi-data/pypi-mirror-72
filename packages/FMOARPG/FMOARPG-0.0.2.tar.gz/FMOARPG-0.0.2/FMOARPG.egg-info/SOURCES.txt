@@ -1,0 +1,13 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+BIM360/__init__.py
+CLASSES/__init__.py
+DATAMANAGEMENT/__init__.py
+FMOARPG.egg-info/PKG-INFO
+FMOARPG.egg-info/SOURCES.txt
+FMOARPG.egg-info/dependency_links.txt
+FMOARPG.egg-info/top_level.txt
+Utils/__init__.py
