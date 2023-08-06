@@ -1,0 +1,12 @@
+requirements.txt
+setup.py
+scripts/templates-s3
+scripts/templates-s3-create-bucket
+scripts/templates-s3-create-full-access-env
+scripts/templates-s3-create-read-only-env
+scripts/templates-s3-download
+scripts/templates-s3-upload
+templates_s3.egg-info/PKG-INFO
+templates_s3.egg-info/SOURCES.txt
+templates_s3.egg-info/dependency_links.txt
+templates_s3.egg-info/top_level.txt
