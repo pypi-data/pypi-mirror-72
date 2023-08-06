@@ -1,0 +1,4 @@
+include thorsky/observatories_rev.dat
+include thorsky/cartesian_bright.dat
+include thorskyclasses_py2.ipynb 
+include thorskyclasses_py3.ipynb 
