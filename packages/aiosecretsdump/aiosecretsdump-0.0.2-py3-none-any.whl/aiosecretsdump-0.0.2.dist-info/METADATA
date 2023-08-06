@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: aiosecretsdump
+Version: 0.0.2
+Summary: Secretsdump for aiosmb
+Home-page: https://github.com/skelsec/aiosecretsdump
+Author: Tamas Jos
+Author-email: info@skelsecprojects.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: aiosmb (>=0.2.22)
+Requires-Dist: pypykatz (>=0.3.11)
+Requires-Dist: tqdm
+
+Secretsdump for aiosmb
+
+
