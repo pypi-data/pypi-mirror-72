@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+AMQPStorm_Pool.egg-info/PKG-INFO
+AMQPStorm_Pool.egg-info/SOURCES.txt
+AMQPStorm_Pool.egg-info/dependency_links.txt
+AMQPStorm_Pool.egg-info/requires.txt
+AMQPStorm_Pool.egg-info/top_level.txt
+amqpstorm_pool/__init__.py
+amqpstorm_pool/tests/__init__.py
