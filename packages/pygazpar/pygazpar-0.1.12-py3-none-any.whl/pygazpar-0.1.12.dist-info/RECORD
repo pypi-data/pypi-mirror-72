@@ -1,0 +1,12 @@
+pygazpar/__init__.py,sha256=UH7OC3PAmr_a4H3EJk7FyUIOgK8RD4HNEkjbko7esLk,120
+pygazpar/__main__.py,sha256=9Nn37qwQczocea5WsuxNPlRClNYkL6eNF0EAT49jDOI,1489
+pygazpar/client.py,sha256=SnkeCBZmwNuVyOaaPV5cTMHCOBqCSFmtvSLnYQNuUe0,6681
+pygazpar/enum.py,sha256=lQktX_3tCBHba0sPZizl_QUT1_Z58P188kLT6cQO9Pg,345
+test/__init__.py,sha256=lnB6CW_tnw1n4rdcjuebVcQ09mrkKu4pG_11JaRyQcg,34
+test/test_client.py,sha256=QxFDDT7JzHIE4Hsl7jR7iS5nlNt8UrRrefAFbtTOLII,1695
+pygazpar-0.1.12.dist-info/LICENSE.txt,sha256=NpXXOOCYmUmZVBdsveNkMieT5_C9O78QHd_M_319mF0,1094
+pygazpar-0.1.12.dist-info/METADATA,sha256=CPxlaPa1is6IsRvNLZikZxTw9zZj2m4VScLg_qQOS6w,4408
+pygazpar-0.1.12.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+pygazpar-0.1.12.dist-info/entry_points.txt,sha256=c_FMZPYlRv1w9EqfgWhlkdJOoje7FcglI0UMm2oRLoI,53
+pygazpar-0.1.12.dist-info/top_level.txt,sha256=IAEv0wRUdR1eygoQs2efTQ0yUHt9wL-3qOeoHpHnA9Q,14
+pygazpar-0.1.12.dist-info/RECORD,,
