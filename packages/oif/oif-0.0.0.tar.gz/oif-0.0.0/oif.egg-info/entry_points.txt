@@ -1,0 +1,3 @@
+[console_scripts]
+oif = oif.__main__:main
+
