@@ -1,0 +1,20 @@
+[runperf.profiles]
+DefaultLibvirt = runperf.profiles:DefaultLibvirt
+Localhost = runperf.profiles:Localhost
+Overcommit1_5 = runperf.profiles:Overcommit1p5
+TunedLibvirt = runperf.profiles:TunedLibvirt
+
+[runperf.provisioners]
+Beaker = runperf.provisioners:Beaker
+
+[runperf.tests]
+Linpack = runperf.tests:Linpack
+PBenchFio = runperf.tests:PBenchFio
+UPerf = runperf.tests:UPerf
+
+[runperf.utils.cloud_image_providers]
+Fedora = runperf.utils.cloud_image_providers:Fedora
+
+[runperf.utils.pbench]
+Dnf = runperf.utils.pbench:Dnf
+
