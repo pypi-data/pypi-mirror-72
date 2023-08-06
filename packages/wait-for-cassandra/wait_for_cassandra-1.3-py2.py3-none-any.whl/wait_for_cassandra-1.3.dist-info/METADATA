@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: wait-for-cassandra
+Version: 1.3
+Summary: An utility to wait for a Cassandra instance to become available
+Home-page: https://github.com/smok-serwis/wait-for-cassandra
+Author: Piotr Maślanka
+Author-email: piotrm@smok.co
+License: UNKNOWN
+Project-URL: Code, https://github.com/smok-serwis/wait-for-cassandra
+Project-URL: Issue tracker, https://github.com/smok-serwis/wait-for-cassandra/issues
+Keywords: cassandra,ci,utility
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown; charset=UTF-8
+Requires-Dist: cassandra-driver
+
+wait-for-cassandra
+==================
+
+[![Build Status](https://travis-ci.org/smok-serwis/wait-for-cassandra.svg)](https://travis-ci.org/smok-serwis/wait-for-cassandra)
+[![PyPI](https://img.shields.io/pypi/pyversions/wait-for-cassandra.svg)](https://pypi.python.org/pypi/wait-for-cassandra)
+[![PyPI version](https://badge.fury.io/py/wait-for-cassandra.svg)](https://badge.fury.io/py/wait-for-cassandra)
+[![PyPI](https://img.shields.io/pypi/implementation/wait-for-cassandra.svg)](https://pypi.python.org/pypi/wait-for-cassandra)
+
+This is a quick'n'dirty utility to wait for a Cassandra instance 
+to become available. This proves to be an issue in CI development,
+where jobs that are tested for Cassandra need to wait for it
+to become available. Well, no problem with that!
+
+# Installation
+
+`pip install wait-for-cassandra`
+
+# Usage
+
+`wait-for-cassandra <optional hostname> <optional timeout>`
+
+Default hostname is localhost, and default timeout is 5 minutes 
+(300 seconds).
+
+If you need to specify an user and a password, call this tool like this:
+
+`wait-for-cassandra <hostname> <timeout> <login> <password>`
+
+
