@@ -1,0 +1,5 @@
+ckanapi==4.3
+deepdiff==4.3.2
+json_delta==2.0
+requests-futures==1.0.0
+requests==2.23.0
