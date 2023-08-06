@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+backup_to_s3.egg-info/PKG-INFO
+backup_to_s3.egg-info/SOURCES.txt
+backup_to_s3.egg-info/dependency_links.txt
+backup_to_s3.egg-info/top_level.txt
+scripts/backup-to-s3
