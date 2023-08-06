@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+pypi_register.egg-info/PKG-INFO
+pypi_register.egg-info/SOURCES.txt
+pypi_register.egg-info/dependency_links.txt
+pypi_register.egg-info/top_level.txt
+scripts/pypi-register
