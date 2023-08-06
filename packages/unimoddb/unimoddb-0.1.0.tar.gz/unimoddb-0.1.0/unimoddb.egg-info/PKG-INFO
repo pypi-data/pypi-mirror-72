@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: unimoddb
+Version: 0.1.0
+Summary: A library for SQLite access to the Unimod modification database
+Home-page: https://github.com/ikcgroup/unimoddb
+Author: Daniel Spencer
+Author-email: danielspencer305@hotmail.co.uk
+License: MIT
+Description: # UnimodDB
+        
+        ![Python package](https://github.com/ikcgroup/unimoddb/workflows/Python%20package/badge.svg)
+        [![codecov](https://codecov.io/gh/ikcgroup/unimoddb/branch/master/graph/badge.svg)](https://codecov.io/gh/ikcgroup/unimoddb)
+        
+        
+        UnimodDB is a library for providing a SQLite interface to the Unimod database of
+        protein modifications.
+        
+        # Table of Contents
+        
+        - [Installation](#installation)
+        - [License](#license)
+        
+        # Installation
+        
+        `unimoddb` can be installed from [PyPI](https://pypi.org/project/unimoddb/).
+        
+        ### Compatibility
+        
+        `unimoddb` is written using Python 3 and should be compatible with most 
+        operating systems. The package has been tested on
+        - Windows 10
+        - MacOS 10.15
+        - Ubuntu 18.04 LTS
+        
+        ### Instructions
+        
+        1. Install Python 3 (>= version 3.6).
+        2. Install the latest version of the `unimoddb` library using `pip`:
+        ```shell script
+        pip install unimoddb
+        ```
+        
+        # License
+        
+        `unimoddb` is released under the terms of the [MIT license](https://github.com/ikcgroup/unimoddb/blob/master/LICENSE).
+Keywords: UNIMOD,PROTEOMICS
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
