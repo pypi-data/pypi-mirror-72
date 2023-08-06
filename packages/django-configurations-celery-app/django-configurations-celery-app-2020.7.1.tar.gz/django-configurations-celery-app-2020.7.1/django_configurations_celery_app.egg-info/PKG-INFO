@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: django-configurations-celery-app
+Version: 2020.7.1
+Summary: django-configurations Celery app
+Home-page: https://github.com/andrewp-as-is/django-configurations-celery-app.py
+License: Unlicense
+Description: <!--
+        https://readme42.com
+        -->
+        
+        
+        [![](https://img.shields.io/pypi/v/django-configurations-celery-app.svg?maxAge=3600)](https://pypi.org/project/django-configurations-celery-app/)
+        [![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
+        
+        ### Installation
+        ```bash
+        $ [sudo] pip install django-configurations-celery-app
+        ```
+        
+        #### Examples
+        ```python
+        from django_configurations_celery_app import app
+        ```
+        
+        ```bash
+        $ celery -A django_configurations_celery_app worker -P gevent -c 20 -Q celery
+        ```
+        
+        P.S.: app source
+        ```python
+        import os
+        
+        from celery import Celery
+        
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
+        os.environ.setdefault('DJANGO_CONFIGURATION', 'Dev')
+        
+        import configurations
+        configurations.setup()
+        
+        app = Celery()
+        app.config_from_object('django.conf:settings')
+        ```
+        
+        #### Links
+        +   [django-configurations](https://github.com/jazzband/django-configurations)
+        
+        <p align="center">
+            <a href="https://readme42.com/">readme42.com</a>
+        </p>
+Keywords: django django-configurations celery
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
