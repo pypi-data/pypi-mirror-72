@@ -1,0 +1,16 @@
+Welcome To  Bitlocate
+
+A Python package to get reports for any geo coordinates .
+
+Usage
+
+```
+bit-locate -h
+```
+
+```
+bit-locate -lat 23.259933 -lon 77.412613
+```
+
+
+

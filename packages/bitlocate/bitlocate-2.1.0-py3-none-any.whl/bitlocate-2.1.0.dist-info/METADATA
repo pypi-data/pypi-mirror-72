@@ -1,0 +1,33 @@
+Metadata-Version: 2.0
+Name: bitlocate
+Version: 2.1.0
+Summary: Python Package to get the information from Geo Coordinates
+Home-page: https://github.com/mandiladitya
+Author: Aditya Mandil
+Author-email: adityamandil317@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: geopy
+Requires-Dist: requests
+Requires-Dist: wolframalpha
+
+Welcome To  Bitlocate
+
+A Python package to get reports for any geo coordinates .
+
+Usage
+
+```
+bit-locate -h
+```
+
+```
+bit-locate -lat 23.259933 -lon 77.412613
+```
+
+
+
