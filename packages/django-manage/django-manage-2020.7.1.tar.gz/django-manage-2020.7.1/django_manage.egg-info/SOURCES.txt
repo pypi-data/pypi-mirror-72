@@ -1,0 +1,9 @@
+requirements.txt
+setup.py
+django_manage.egg-info/PKG-INFO
+django_manage.egg-info/SOURCES.txt
+django_manage.egg-info/dependency_links.txt
+django_manage.egg-info/requires.txt
+django_manage.egg-info/top_level.txt
+scripts/.django
+scripts/manage.py
