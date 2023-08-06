@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: django-context-extra-view
+Version: 2020.7.1
+Summary: context extra data
+Home-page: https://github.com/andrewp-as-is/django-context-extra-view.py
+License: Unlicense
+Description: <!--
+        https://readme42.com
+        -->
+        
+        
+        [![](https://img.shields.io/pypi/v/django-context-extra-view.svg?maxAge=3600)](https://pypi.org/project/django-context-extra-view/)
+        [![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
+        
+        ### Installation
+        ```bash
+        $ [sudo] pip install django-context-extra-view
+        ```
+        
+        #### Examples
+        ```python
+        from django_context_extra_view.views import ContextExtraViewMixin
+        
+        class View(ContextExtraViewMixin,...):
+            context_extra = {"my_page":{"active":True}}
+        ```
+        
+        ```html
+        {% if my_page.active %}...{% endif %}
+        ```
+        
+        <p align="center">
+            <a href="https://readme42.com/">readme42.com</a>
+        </p>
+Keywords: django view context
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

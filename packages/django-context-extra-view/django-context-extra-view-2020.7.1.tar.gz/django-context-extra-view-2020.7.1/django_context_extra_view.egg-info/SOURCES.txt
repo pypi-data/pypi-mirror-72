@@ -1,0 +1,8 @@
+requirements.txt
+setup.py
+django_context_extra_view/__init__.py
+django_context_extra_view/views.py
+django_context_extra_view.egg-info/PKG-INFO
+django_context_extra_view.egg-info/SOURCES.txt
+django_context_extra_view.egg-info/dependency_links.txt
+django_context_extra_view.egg-info/top_level.txt
