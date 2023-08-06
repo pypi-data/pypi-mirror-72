@@ -1,0 +1,3 @@
+[console_scripts]
+luamb = luamb._entrypoint:main
+
