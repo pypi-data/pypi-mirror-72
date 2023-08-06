@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+Flask_Autoversion.egg-info/PKG-INFO
+Flask_Autoversion.egg-info/SOURCES.txt
+Flask_Autoversion.egg-info/dependency_links.txt
+Flask_Autoversion.egg-info/namespace_packages.txt
+Flask_Autoversion.egg-info/not-zip-safe
+Flask_Autoversion.egg-info/requires.txt
+Flask_Autoversion.egg-info/top_level.txt
+flaskext/__init__.py
+flaskext/autoversion/__init__.py
