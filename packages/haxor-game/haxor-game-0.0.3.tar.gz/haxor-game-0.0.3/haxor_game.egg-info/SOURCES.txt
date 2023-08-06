@@ -1,0 +1,10 @@
+README.md
+setup.py
+haxor/__init__.py
+haxor/__main__.py
+haxor/command_line.py
+haxor/haxor.py
+haxor_game.egg-info/PKG-INFO
+haxor_game.egg-info/SOURCES.txt
+haxor_game.egg-info/dependency_links.txt
+haxor_game.egg-info/top_level.txt
