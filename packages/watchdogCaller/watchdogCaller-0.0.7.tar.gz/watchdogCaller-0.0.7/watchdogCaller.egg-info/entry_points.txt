@@ -1,0 +1,3 @@
+[console_scripts]
+watchdog-caller = watchdogCaller.main:cli
+
