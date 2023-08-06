@@ -1,0 +1,171 @@
+#!python
+# encoding: utf-8
+
+# --                                                            ; {{{1
+#
+# File        : proudcat
+# Maintainer  : Felix C. Stegerman <flx@obfusk.net>
+# Date        : 2020-07-02
+#
+# Copyright   : Copyright (C) 2020  Felix C. Stegerman
+# Version     : v0.2.0
+# License     : GPLv3+
+#
+# --                                                            ; }}}1
+
+__version__ = "0.2.0"
+
+import itertools, os, sys
+from collections import namedtuple
+
+import click
+
+rgb = namedtuple("rgb", "r g b".split())
+
+def rgbto8(c): return 16 + c.r*6//256*36 + c.g*6//256*6 + c.b*6//256
+
+COLORTERM = os.environ.get("COLORTERM", "")
+TRUECOLOR = "truecolor" in COLORTERM or "24bit" in COLORTERM
+
+DFLAG = "pride"
+
+# https://en.wikipedia.org/wiki/Pride_flag#Gallery
+FLAGS = dict(                                                   # {{{1
+  pride       = (rgb(228, 3, 3), rgb(255, 140, 0), rgb(255, 237, 0),
+                 rgb(0, 128, 38), rgb(0, 77, 255), rgb(117, 7, 135)),
+  agender     = (rgb(0, 0, 0), rgb(185, 185, 185), rgb(255, 255, 255),
+                 rgb(184, 244, 131),
+                 rgb(255, 255, 255), rgb(185, 185, 185), rgb(0, 0, 0)),
+  aromantic   = (rgb(61, 165, 66), rgb(167, 211, 121),
+                 rgb(255, 255, 255), rgb(169, 169, 169), rgb(0, 0, 0)),
+  asexual     = (rgb(0, 0, 0), rgb(163, 163, 163),
+                 rgb(255, 255, 255), rgb(128, 0, 128)),
+  bisexual    = (rgb(214, 2, 112), rgb(214, 2, 112), rgb(155, 79, 150),
+                 rgb(0, 56, 168), rgb(0, 56, 168)),
+  genderfluid = (rgb(255, 117, 162), rgb(255, 255, 255),
+                 rgb(190, 24, 214), rgb(0, 0, 0), rgb(51, 62, 189)),
+  genderqueer = (rgb(181, 126, 220), rgb(255, 255, 255), rgb(74, 129, 35)),
+  lesbian     = (rgb(213, 45, 0), rgb(255, 154, 86), rgb(255, 255, 255),
+                 rgb(211, 98, 164), rgb(163, 2, 98)),
+  nonbinary   = (rgb(255, 244, 48), rgb(255, 255, 255),
+                 rgb(156, 89, 209), rgb(0, 0, 0)),
+  pansexual   = (rgb(255, 33, 140), rgb(255, 216, 0), rgb(33, 177, 255)),
+  polysexual  = (rgb(246, 28, 185), rgb(7, 213, 105), rgb(28, 146, 246)),
+  transgender = (rgb(91, 206, 250), rgb(245, 169, 184), rgb(255, 255, 255),
+                 rgb(245, 169, 184), rgb(91, 206, 250)),
+)                                                               # }}}1
+
+ALIASES = dict(
+  lgbt = "pride", aro = "aromantic", ace = "asexual", bi = "bisexual",
+  enby = "nonbinary", nb = "nonbinary", pan = "pansexual",
+  trans = "transgender",
+)
+
+# TODO
+BLACK, WHITE = rgb(0, 0, 0), rgb(255, 255, 255)
+
+def colours(flag):
+  cs = FLAGS[flag if flag in FLAGS else ALIASES[flag]]
+  return cs if len(cs) > 3 else [ d for c in cs for d in [c] * 2 ]
+
+def with_colour(bg, tc, c, s, clear = True):
+  sc, rc, cl = (48, 49, "\x1b[2K" if clear else "") if bg else (38, 39, "")
+  code = (lambda c: "2;{};{};{}".format(c.r, c.g, c.b)) if tc else \
+         (lambda c: "5;{}".format(rgbto8(c)))
+  return "\x1b[{};{}m{}{}\x1b[{};m".format(sc, code(c), cl, s, rc)
+
+def colour(bg, tc, li, c, s, clear = True):
+  da = bg if li else not bg
+  if (da and brightness(c) < 0.20) or (not da and brightness(c) > 0.75):
+    s = with_colour(not bg, tc, WHITE if da else BLACK, s, clear)
+  return with_colour(bg, tc, c, s, clear)
+
+def brightness(c):
+  return (c.r * 299 + c.g * 587 + c.b * 114) // 1000 / 255
+
+def frame_header(width, name = None):
+  return "┌" + ("[" + name + "]" if name else "").center(width, '─') + "┐"
+
+def frame_line(line):
+  return "│" + line + "│"
+
+def frame_footer(width):
+  return "└" + "─" * width + "┘"
+
+def terminal_width(fallback = 80):
+  # NB: don't use shutil.get_terminal_size() as it only checks stdout
+  # (which is not a terminal when piped to less)
+  try:
+    return int(os.environ["COLUMNS"])
+  except (KeyError, ValueError):
+    pass
+  for n in ( getattr(sys, "__std" + x + "__").fileno()
+               for x in "out in err".split() ):
+    try:
+      return os.get_terminal_size(n).columns
+    except OSError:
+      pass
+  return fallback
+
+@click.command(help = """
+  proudcat - cat + rainbow
+
+  Flags: {}.
+
+  Aliases: {}.
+""".format(", ".join(FLAGS), ", ".join(ALIASES), DFLAG))
+@click.option("-f", "--flag", "flags", multiple = True, default = [DFLAG],
+              help = "Choose which flags to use;" +
+                     " default: {}.".format(DFLAG))
+@click.option("-b", "--background", "bg", is_flag = True,
+              help = "Set background colour (instead of foreground).")
+@click.option("-t/-T", "--truecolor/--no-truecolor", "tc",
+              default = TRUECOLOR,
+              help = "Explicitly enable/disable 24-bit colours;" +
+                     " default: autodetect.")
+@click.option("--light", is_flag = True, help = "Light terminal.")
+@click.option("--frame", is_flag = True, help = "Frame text.")
+@click.option("--demo" , is_flag = True, help = "Demonstrate flags.")
+@click.version_option(__version__)
+@click.argument("files", nargs = -1, type = click.File())
+@click.pass_context
+def cli(ctx, files, flags, bg, tc, light, frame, demo):
+  ctx.color   = True
+  tty, width  = sys.stdout.isatty(), terminal_width() - 2
+  flags       = [ c for f in flags for c in f.split(",") ]
+  if demo:
+    for flag in FLAGS:
+      click.echo(frame_header(width))
+      for c in colours(flag):
+        click.echo(frame_line(colour(bg, tc, light, c,
+                                     flag.center(width), False)))
+      click.echo(frame_footer(width))
+  else:
+    for flag in flags:
+      if flag not in FLAGS and flag not in ALIASES:
+        click.echo("unknown flag: " + flag, err = True)
+        ctx.exit(1)
+    it = itertools.cycle( c for f in flags for c in colours(f) )
+    for f in files or [sys.stdin]:
+      if frame:
+        name = None if f is sys.stdin else f.name
+        click.echo(frame_header(width, name))
+      for line in f:
+        sline = line.strip()
+        if frame:
+          line = (" " + line.rstrip("\n")).ljust(width)
+          if sline or bg:
+            line = colour(bg, tc, light, next(it), line, False)
+          click.echo(frame_line(line))
+        else:
+          if sline or (bg and tty):
+            i     = line.find(sline[0]) if sline else 0
+            s     = colour(bg, tc, light, next(it), sline)
+            line  = line[:i] + s + line[i+len(sline):]
+          click.echo(line, nl = False)
+      if frame: click.echo(frame_footer(width))
+
+if __name__ == "__main__":
+  cli()
+
+# vim: set tw=70 sw=2 sts=2 et fdm=marker :
