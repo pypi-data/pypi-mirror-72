@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: pymarszpace
+Version: 1.0.0
+Summary: Just a Marszpace package, nothing much.
+Home-page: https://github.com/pypa/sampleproject
+Author: CCSleep
+Author-email: admin@ccsleep.net
+License: UNKNOWN
+Description: # pymarszpace
+        
+        **pymarszpace** is just a python package that's all about Marszpace, one of my friend.
+        
+        ## Installation
+        It's just easy as
+        ```
+        pip install pymarszpace
+        ```
+        For Mac or Linux (without Virtual Environment), please use this instead:
+        ```
+        pip3 install pymarszpace
+        ```
+        
+        ## Example
+        Class For Marszpace
+        ```python
+        import pymarszpace
+        mz = pymarszpace.Marszpace()
+        mz.flexing() # Return a random flex
+        print(mz.alias) # print his alias
+        ```
+        Class For Friend
+        ```python
+        import pymarszpace
+        win = pymarszpace.friend("WinSK143")
+        print(win.name) # return his name
+        win.playGames("Bedwars") # play games, return ignoring if you don't play long enough, else he will go to sleep
+        ```
+        
+        Class For Preset Friends
+        ```python
+        import pymarszpace
+        thum = pymarszpace.Atom() # initialize AtomThum
+        algy = pymarszpace.Algy() # initialize AlgyCuber
+        thum.classicalMusic("Tchaikovsky Violin Concerto") # Listening to classical music, return ignoring or flexing (random)
+        algy.astronautTest("composing a symphony") # just an astronaut test bc Marszpace wants to be an astronaut, but he has a lot of mental breakdown.
+        ```
+        
+        ## Preset Values
+        There are some preset values for Marszpace as well.
+        ```python
+        import pymarszpace
+        mz = pymarszpace.Marszpace()
+        print(mz.name) # Marszpace
+        print(mz.alias) # ["Hikari","Tiaritsu","Rem"]
+        print(mz.addict) # ["osu!","Arcaea","Hypixel Skyblock","Rem",... 
+        print(mz.hate) # ["Classical Music","AlgyCuber","AtomThum",...
+        print(mz.flex) # ["osu! pp", "PP", "Fracture Ray",...
+        print(mz.emotions) # ["Sad","Mental Breakdown","A little bit sad","Very sad",... 
+        thum = pymarszpace.Atom()
+        print(thum.name) # AtomThum
+        algy = pymarszpace.Algy()
+        print(algy.name) # AlgyCuber
+        ```
+        ## Notes
+        This is for educational purposes only. For OOP example please look at the source code.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
