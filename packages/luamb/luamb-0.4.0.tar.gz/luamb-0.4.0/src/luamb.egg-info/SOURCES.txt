@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/luamb/__init__.py
+src/luamb/__main__.py
+src/luamb/_entrypoint.py
+src/luamb/_luamb.py
+src/luamb/_shell.py
+src/luamb/version.py
+src/luamb.egg-info/PKG-INFO
+src/luamb.egg-info/SOURCES.txt
+src/luamb.egg-info/dependency_links.txt
+src/luamb.egg-info/entry_points.txt
+src/luamb.egg-info/requires.txt
+src/luamb.egg-info/top_level.txt
+src/luamb.egg-info/zip-safe
