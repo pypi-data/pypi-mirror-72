@@ -1,0 +1,52 @@
+{% load wagtailimages_tags wagtailcore_tags %}
+
+<div id="block-blog-index" class="header-padding first_content theme-bg-space bg-pos-center"
+     {% if request.user_agent.is_pc %}
+            {% for media in page.bg_desktop %}
+                {% if media.block_type == 'svg' %}
+                    style="background-image: url({{ media.value.url }})"
+                {% elif media.block_type == 'image' %}
+                    {% image media.value fill-1920x1080 as img %}
+                    style="background-image: url({{ img.url }})"
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% if not request.user_agent.is_pc %}
+            {% for media in page.bg_mobile %}
+                {% if media.block_type == 'svg' %}
+                    style="background-image: url({{ media.value.url }})"
+                {% elif media.block_type == 'image' %}
+                    {% image media.value fill-1920x1080 as img %}
+                    style="background-image: url({{ img.url }})"
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+>
+    <div class="container regular theme-space">
+        <div class="align-text-center">
+            <h1>{{ page.h1 }}</h1>
+            <div class="rich-text-container">
+                {{ page.first_text|richtext }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="block-articles-search" class="articles theme-bg-light">
+    <div class="container content nopadbottom theme-light">
+        <div class="align-text-center">
+            {{ settings.cms.WebspaceSettings.search_text|richtext }}
+            {% include 'cms/blocks/common/tags_blog.html' with root_page=page checked=current_tag tags=tags links=1 %}
+        </div>
+    </div>
+</div>
+
+<div id="block-articles" class="articles theme-bg-light">
+    <div class="container regular theme-light">
+        <div class="articles-container">
+            {% for blog in blogs %}
+                {% include 'cms/blocks/common/article.html' with blog=blog %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
