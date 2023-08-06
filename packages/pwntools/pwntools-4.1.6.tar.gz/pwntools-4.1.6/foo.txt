@@ -1,0 +1,36 @@
+================================================================================
+= Started at 2020-06-30T01:30:56                                               =
+= sys.argv = [                                                                 =
+=   '/opt/hostedtoolcache/Python/2.7.18/x64/lib/python2.7/site-packages/sphinx/__main__.py',=
+=   '-b',                                                                      =
+=   'doctest',                                                                 =
+=   'docs/source',                                                             =
+=   'docs/build/doctest',                                                      =
+= ]                                                                            =
+================================================================================
+2020-06-30T01:30:56:DEBUG:pwnlib.context:Hello!
+2020-06-30T01:30:56:INFO:pwnlib.context:Hello again!
+2020-06-30T01:30:56:INFO:pwnlib.context:Hello from foo!
+2020-06-30T01:30:56:INFO:pwnlib.tubes.remote.remote.139775508772240:Opening connection to google.com on port 80
+2020-06-30T01:30:56:INFO:pwnlib.tubes.remote.remote.139775508772240:Opening connection to google.com on port 80: Trying 172.217.164.174
+2020-06-30T01:30:56:INFO:pwnlib.tubes.remote.remote.139775508772240:Opening connection to google.com on port 80: Failed
+================================================================================
+= Started at 2020-06-30T01:34:26                                               =
+= sys.argv = [                                                                 =
+=   '/opt/hostedtoolcache/Python/2.7.18/x64/lib/python2.7/site-packages/sphinx/__main__.py',=
+=   '-b',                                                                      =
+=   'doctest',                                                                 =
+=   'docs/source',                                                             =
+=   'docs/build/doctest',                                                      =
+= ]                                                                            =
+================================================================================
+================================================================================
+= Started at 2020-06-30T01:34:26                                               =
+= sys.argv = [                                                                 =
+=   '/opt/hostedtoolcache/Python/2.7.18/x64/lib/python2.7/site-packages/sphinx/__main__.py',=
+=   '-b',                                                                      =
+=   'doctest',                                                                 =
+=   'docs/source',                                                             =
+=   'docs/build/doctest',                                                      =
+= ]                                                                            =
+================================================================================
