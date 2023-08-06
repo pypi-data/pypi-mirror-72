@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+src/google_speech_addons.egg-info/PKG-INFO
+src/google_speech_addons.egg-info/SOURCES.txt
+src/google_speech_addons.egg-info/dependency_links.txt
+src/google_speech_addons.egg-info/top_level.txt
+src/speech_addons/__init__.py
+src/speech_addons/synth_addons.py
