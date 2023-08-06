@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: proteomeClusteringtest2
+Version: 0.0.4
+Summary: proteomeClustering test
+Home-page: https://github.com/zytyz/ProteomeClustering
+Author: Tse-Ming Chen
+Author-email: benben5514@gmail.com
+License: UNKNOWN
+Project-URL: Documentation, https://pillow.readthedocs.io
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# ProteomeClustering
+test from ben
+
+
