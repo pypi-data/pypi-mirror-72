@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: dvg-debug-functions
+Version: 2.0.0
+Summary: Functions to neatly print debug information to the terminal output, well-suited for multithreaded programs.
+Home-page: https://github.com/Dennis-van-Gils/python-dvg-debug-functions
+Author: Dennis van Gils
+Author-email: vangils.dennis@gmail.com
+License: MIT
+Project-URL: Issue Tracker, https://github.com/Dennis-van-Gils/python-dvg-debug-functions/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+
+.. image:: https://img.shields.io/pypi/v/dvg-debug-functions
+    :target: https://pypi.org/project/dvg-debug-functions
+.. image:: https://img.shields.io/pypi/pyversions/dvg-debug-functions
+    :target: https://pypi.org/project/dvg-debug-functions
+.. image:: https://travis-ci.org/Dennis-van-Gils/python-dvg-debug-functions.svg?branch=master
+    :target: https://travis-ci.org/Dennis-van-Gils/python-dvg-debug-functions
+.. image:: https://coveralls.io/repos/github/Dennis-van-Gils/python-dvg-debug-functions/badge.svg?branch=master
+    :target: https://coveralls.io/github/Dennis-van-Gils/python-dvg-debug-functions?branch=master
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+.. image:: https://img.shields.io/badge/License-MIT-purple.svg
+    :target: https://github.com/Dennis-van-Gils/python-dvg-debug-functions/blob/master/LICENSE.txt
+
+DvG_debug_functions
+===================
+Provides functions for printing debug information to the terminal output.
+
+dprint()
+--------
+::
+
+  dprint(str_msg, ANSI_color=None) 
+
+'Debug' print a single line to the terminal with optional ANSI color codes. The line will be terminated with a newline character and the terminal output buffer is forced to flush before and after every print. In addition, if PyQt5 is present in the Python environment, then a mutex lock will be obtained and released again for each dprint execution.
+
+There is a lot of overhead using this print statement, but it is particularly well-suited for multithreaded PyQt programs where multiple threads are each printing information to the same terminal. The ``dprint()`` function ensures that each line sent to the terminal will remain as a continious single line, whereas a regular ``print()`` statement will likely result in the lines getting mixed up.
+
+tprint()
+--------
+::
+
+  tprint(str_msg, ANSI_color=None) 
+
+Identical to ``dprint()``, but now prepended with a ``time.perf_counter()`` timestamp.
+
+print_fancy_traceback()
+-----------------------
+::
+
+  print_fancy_traceback(err, back=3)
+
+Prints the exception ``err`` to the terminal with a traceback that is ``back`` deep, using ANSI color codes that mimic the IPython command shell.
+
+Example output:
+
+.. image:: images/print_fancy_traceback.png
+
+Changelog
+=========
+
+0.0.1 (2020-05-13)
+------------------
+* First release on PyPI.
+
+1.1.0 (2020-06-04)
+------------------
+* Added `tprint(...)`
+
+1.1.1 (2020-06-06)
+------------------
+* Extended README
+
+1.1.2 (2020-06-08)
+------------------
+* Code style: black
+
+2.0.0 (2020-07-02)
+------------------
+* DvG module filenames changed to lowercase
+
+
