@@ -1,0 +1,1 @@
+Record your screen using the function start_screen_recording().
