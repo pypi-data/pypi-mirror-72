@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+oceanho/__init__.py
+oceanho/__pycache__/__init__.cpython-38.pyc
+oceanho/dj/__init__.py
+oceanho/dj/__pycache__/__init__.cpython-38.pyc
+oceanho/dj/share/__init__.py
+oceanho/dj/share/models.py
+oceanho/dj/share/__pycache__/__init__.cpython-38.pyc
+oceanho/dj/share/__pycache__/models.cpython-38.pyc
+oceanho_dj_share_lib.egg-info/PKG-INFO
+oceanho_dj_share_lib.egg-info/SOURCES.txt
+oceanho_dj_share_lib.egg-info/dependency_links.txt
+oceanho_dj_share_lib.egg-info/top_level.txt
