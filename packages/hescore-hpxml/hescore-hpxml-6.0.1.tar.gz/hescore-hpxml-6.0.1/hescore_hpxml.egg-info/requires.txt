@@ -1,0 +1,16 @@
+lxml
+future
+
+[dev]
+flake8
+coverage
+sphinx
+sphinx_rtd_theme
+sphinx-autobuild
+
+[test]
+flake8
+coverage
+sphinx
+sphinx_rtd_theme
+sphinx-autobuild
