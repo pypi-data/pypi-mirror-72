@@ -1,0 +1,3 @@
+[console_scripts]
+prism=cfg_cli.prism_cli:wrapper
+
