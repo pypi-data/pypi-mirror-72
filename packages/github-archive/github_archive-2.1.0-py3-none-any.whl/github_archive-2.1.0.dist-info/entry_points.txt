@@ -1,0 +1,3 @@
+[console_scripts]
+github_archive = githubarchive.github_archive:main
+
