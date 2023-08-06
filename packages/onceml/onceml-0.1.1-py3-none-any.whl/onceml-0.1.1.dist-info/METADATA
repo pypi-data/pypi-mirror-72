@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: onceml
+Version: 0.1.1
+Summary: 
+Author: DJ
+Author-email: dujun@ruiking.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: mlflow (>=1.9.1,<2.0.0)
+Requires-Dist: neptune-client (>=0.4.117,<0.5.0)
+Requires-Dist: path (>=14.0.1,<15.0.0)
+Requires-Dist: pendulum (>=2.1.0,<3.0.0)
+Requires-Dist: typer (>=0.3.0,<0.4.0)
