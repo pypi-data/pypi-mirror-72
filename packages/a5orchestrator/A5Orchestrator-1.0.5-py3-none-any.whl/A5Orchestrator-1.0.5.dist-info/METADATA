@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: A5Orchestrator
+Version: 1.0.5
+Summary: This module helps to intigrate Orchestrator with python scripts 
+Home-page: https://github.com/akvdkharnath/A5Orchestrator.git
+Author: Harnath Atmakuri
+Author-email: akvdkharnath@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: json
+
+This module helps to intigrate Orchestrator with python scripts 
+
+
