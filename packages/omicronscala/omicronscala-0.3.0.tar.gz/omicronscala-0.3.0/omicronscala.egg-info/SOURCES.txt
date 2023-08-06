@@ -1,0 +1,11 @@
+README.md
+setup.py
+omicronscala/__init__.py
+omicronscala/_methods.py
+omicronscala/_scala.py
+omicronscala/_version.py
+omicronscala.egg-info/PKG-INFO
+omicronscala.egg-info/SOURCES.txt
+omicronscala.egg-info/dependency_links.txt
+omicronscala.egg-info/requires.txt
+omicronscala.egg-info/top_level.txt
