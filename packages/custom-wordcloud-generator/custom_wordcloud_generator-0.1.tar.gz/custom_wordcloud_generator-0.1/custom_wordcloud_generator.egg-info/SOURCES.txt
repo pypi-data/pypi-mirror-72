@@ -1,0 +1,14 @@
+setup.cfg
+setup.py
+custom_wordcloud_generator/__init__.py
+custom_wordcloud_generator/__main__.py
+custom_wordcloud_generator/_version.py
+custom_wordcloud_generator/color_from_image.py
+custom_wordcloud_generator/tokenization.py
+custom_wordcloud_generator/wordcloud.py
+custom_wordcloud_generator.egg-info/PKG-INFO
+custom_wordcloud_generator.egg-info/SOURCES.txt
+custom_wordcloud_generator.egg-info/dependency_links.txt
+custom_wordcloud_generator.egg-info/not-zip-safe
+custom_wordcloud_generator.egg-info/requires.txt
+custom_wordcloud_generator.egg-info/top_level.txt
