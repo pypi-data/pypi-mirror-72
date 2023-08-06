@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+find_python_packages.egg-info/PKG-INFO
+find_python_packages.egg-info/SOURCES.txt
+find_python_packages.egg-info/dependency_links.txt
+find_python_packages.egg-info/top_level.txt
+scripts/find-python-packages
