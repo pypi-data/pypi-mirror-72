@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "cfg-cli"
+version = "0.1.12"
+description = "Command-line tool for Cofactor Genomics' products and services."
+authors = ["Alex Bode <alex_bode@cofactorgenomics.com>"]
+license = "MIT"
+
+packages = [
+    { include="src", from="." },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+requests = "^2.23.0"
+python-jose = "^3.1.0"
+fire = "^0.2.1"
+tabulate = "^0.8.7"
+boto3 = "^1.14.11"
+prompt-toolkit = "^3.0.5"
+
+[tool.poetry.dev-dependencies]
+requests = "^2.23.0"
+python-jose = "^3.1.0"
+fire = "^0.2.1"
+pytest = "^4.6"
+coverage = "^5.0.3"
+black = "^19.10b0"
+isort = "^4.3.21"
+tabulate = "^0.8.7"
+boto3 = "^1.14.11"
+prompt-toolkit = "^3.0.5"
+
+[tool.poetry.scripts]
+cfg = "cfg:wrapper"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+# poetry config pypi-token.pypi my-token
+# poetry publish
+
