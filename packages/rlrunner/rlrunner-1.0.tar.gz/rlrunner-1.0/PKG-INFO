@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: rlrunner
+Version: 1.0
+Summary: A framework for Reinforcement Learning experimentation and run simulation
+Home-page: https://github.com/PriestTheBeast/RLRunner
+Author: Miguel Martins
+Author-email: mfmartins1996@gmail.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Description: # Example Package
+        
+        This is a simple example package. You can use
+        [Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+        to write your content.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
