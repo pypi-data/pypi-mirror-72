@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pyDGSA/__init__.py
+pyDGSA/cluster.py
+pyDGSA/dgsa.py
+pyDGSA/interact_util.py
+pyDGSA/plot.py
+pyDGSA.egg-info/PKG-INFO
+pyDGSA.egg-info/SOURCES.txt
+pyDGSA.egg-info/dependency_links.txt
+pyDGSA.egg-info/not-zip-safe
+pyDGSA.egg-info/requires.txt
+pyDGSA.egg-info/top_level.txt
