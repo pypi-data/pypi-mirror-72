@@ -1,0 +1,10 @@
+setup.py
+Mah_lib/Binomialdistribution.py
+Mah_lib/Gaussiandistribution.py
+Mah_lib/Generaldistribution.py
+Mah_lib/__init__.py
+Mah_lib.egg-info/PKG-INFO
+Mah_lib.egg-info/SOURCES.txt
+Mah_lib.egg-info/dependency_links.txt
+Mah_lib.egg-info/not-zip-safe
+Mah_lib.egg-info/top_level.txt
