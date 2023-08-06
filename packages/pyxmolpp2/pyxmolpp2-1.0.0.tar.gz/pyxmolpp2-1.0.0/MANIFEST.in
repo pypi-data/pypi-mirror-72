@@ -1,0 +1,25 @@
+global-include CMakeLists.txt
+
+recursive-include external *
+include ./ *.py
+include ./ VERSION
+include ./ *.cmake
+include ./tools/*.py
+
+
+graft include
+graft src
+graft tests
+graft _pyxmolpp2
+graft pyxmolpp2
+graft cmake
+
+global-exclude *.py[cod]
+global-exclude *.git
+global-exclude *.js
+global-exclude *.html
+global-exclude *.png
+global-exclude *.dox
+global-exclude __pycache__
+
+
