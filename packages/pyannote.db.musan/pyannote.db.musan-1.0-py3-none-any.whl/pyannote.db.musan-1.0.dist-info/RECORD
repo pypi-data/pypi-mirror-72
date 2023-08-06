@@ -1,0 +1,13 @@
+MUSAN/__init__.py,sha256=M_6R_n2ulJQn2IILKPqmqNbROkHI6SCXIXoRdg7eles,3042
+MUSAN/_version.py,sha256=XppEv6VxRcswmfugw9I5k0ZezpNTZh4hny_XpdSOn74,495
+MUSAN/data/all.txt,sha256=CQtNp1Q36CBSTo3W2F-M0rMagb9oX8dSX11i-_wISa0,71425
+MUSAN/data/background_noise.txt,sha256=CAeWW4GbXMv_IPFRREDcRKJtuO1sTyBdc7P4AL-KmFc,1443
+MUSAN/data/music.txt,sha256=3qb71lt7n0LpJpdKPaXJpWUFDoJu6BRK3rx8_DXSqHA,20231
+MUSAN/data/noise.txt,sha256=35Dqmjnp2juRKe6ucEhft4Nb1NFB1-kT2okPpdpL6Os,36444
+MUSAN/data/speech.txt,sha256=YSeN_k92ddQ59NMh32k0vtp4rqG8PqOF3irmWReXtnQ,14750
+pyannote.db.musan-1.0.dist-info/LICENSE,sha256=XbTT_z7UnzRPojryrFdYUGOka_jzLF2XbWGeCcSt6KI,1110
+pyannote.db.musan-1.0.dist-info/METADATA,sha256=CaWQpd58j3AKkRONBIo34KEtuLAiypQF1qFS2MxI5U4,639
+pyannote.db.musan-1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pyannote.db.musan-1.0.dist-info/entry_points.txt,sha256=1FpbTAfvMo63i-bS-GoW1FkWYvs7h8mKGYDewkhzXbI,69
+pyannote.db.musan-1.0.dist-info/top_level.txt,sha256=83KCuv5MOnHM0XVg-QgW6puDK7PH7Me6Zce4cfS0hSE,6
+pyannote.db.musan-1.0.dist-info/RECORD,,

@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pyannote.db.musan
+Version: 1.0
+Summary: MUSAN plugin for pyannote-database
+Home-page: UNKNOWN
+Author: Hervé Bredin
+Author-email: bredin@limsi.fr
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: pyannote.database (>=4.0.1)
+
+UNKNOWN
+
+
