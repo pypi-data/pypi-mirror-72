@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+pyretroicor/__init__.py
+pyretroicor/__main__.py
+pyretroicor/prepro.py
+pyretroicor/retroicor.py
+pyretroicor/util.py
+pyretroicor.egg-info/PKG-INFO
+pyretroicor.egg-info/SOURCES.txt
+pyretroicor.egg-info/dependency_links.txt
+pyretroicor.egg-info/entry_points.txt
+pyretroicor.egg-info/requires.txt
+pyretroicor.egg-info/top_level.txt
+pyretroicor.egg-info/zip-safe
