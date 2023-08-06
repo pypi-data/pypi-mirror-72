@@ -1,0 +1,3 @@
+[console_scripts]
+video_anonymize = video_anonymize.commands.run:main
+
