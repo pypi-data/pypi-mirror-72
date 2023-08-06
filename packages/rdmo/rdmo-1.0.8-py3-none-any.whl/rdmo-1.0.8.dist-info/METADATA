@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: rdmo
+Version: 1.0.8
+Summary: RDMO is a tool to support the systematic planning, organisation and implementation of the data management throughout the course of a research project.
+Home-page: https://github.com/rdmorganiser/rdmo
+Author: Jochen Klar
+Author-email: jklar@aip.de
+Maintainer: Jochen Klar
+Maintainer-email: jklar@aip.de
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 2.2
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: coverage (~=4.5)
+Requires-Dist: defusedxml (~=0.6)
+Requires-Dist: Django (~=2.2)
+Requires-Dist: django-allauth (~=0.39)
+Requires-Dist: django-compressor (~=2.3)
+Requires-Dist: django-extensions (~=2.1)
+Requires-Dist: django-filter (~=2.2)
+Requires-Dist: django-libsass (~=0.7)
+Requires-Dist: django-mathfilters (==1.0.0)
+Requires-Dist: django-mptt (~=0.10)
+Requires-Dist: django-rest-swagger (~=2.2)
+Requires-Dist: django-settings-export (~=1.2)
+Requires-Dist: django-widget-tweaks (~=1.4)
+Requires-Dist: djangorestframework (~=3.10)
+Requires-Dist: drf-extensions (~=0.5)
+Requires-Dist: iso8601 (~=0.1)
+Requires-Dist: jsonfield (~=2.0)
+Requires-Dist: Markdown (~=3.1)
+Requires-Dist: pypandoc (~=1.4)
+Requires-Dist: pytest (~=5.3)
+Requires-Dist: pytest-cov (~=2.8)
+Requires-Dist: pytest-django (~=3.7)
+Requires-Dist: pytest-dotenv (~=0.4)
+Requires-Dist: pytest-mock (~=1.13)
+Requires-Dist: pytest-pythonpath (~=0.7)
+Requires-Dist: rules (~=2.0)
+
+RDMO - Research Data Management Organiser
+=========================================
+
+.. image:: https://travis-ci.org/rdmorganiser/rdmo.svg?branch=master
+   :alt: Build Status
+   :target: https://travis-ci.org/rdmorganiser/rdmo
+
+.. image:: https://coveralls.io/repos/rdmorganiser/rdmo/badge.svg?branch=master&service=github
+   :alt: Coverage Status
+   :target: https://coveralls.io/github/rdmorganiser/rdmo?branch=master
+
+.. image:: https://img.shields.io/pypi/v/rdmo.svg?style=flat
+   :alt: Latest Version
+   :target: https://pypi.python.org/pypi/rdmo/
+
+.. image:: https://readthedocs.org/projects/rdmo/badge/?version=latest
+   :alt: Documentation status
+   :target: http://rdmo.readthedocs.io/en/latest/?badge=latest
+
+.. image:: http://img.shields.io/badge/license-APACHE-blue.svg?style=flat
+   :alt: License
+   :target: https://github.com/rdmorganiser/rdmo/blob/master/LICENSE
+
+.. image:: https://pyup.io/repos/github/rdmorganiser/rdmo/shield.svg
+     :target: https://pyup.io/repos/github/rdmorganiser/rdmo/
+     :alt: Updates
+
+RDMO is a tool to support the systematic planning, organisation and implementation of the data management throughout the course of a research project. RDMO is funded by the Deutsche Forschungsgemeinschaft (DFG).
+
+Home Page
+  https://rdmorganiser.github.io
+
+Source code
+  https://github.com/rdmorganiser/rdmo
+
+Documentation
+  http://rdmo.readthedocs.io
+
+Mailing list
+  https://www.listserv.dfn.de/sympa/subscribe/rdmo
+
+Slack
+  https://rdmo.slack.com
+
+Demo
+  https://rdmo.aip.de
+
+
