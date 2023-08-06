@@ -1,0 +1,5 @@
+resourcetype = "samples"
+name = "example_impulse_response"
+
+[waves]
+st_marys_abbey = "phase1_stereo.wav"
