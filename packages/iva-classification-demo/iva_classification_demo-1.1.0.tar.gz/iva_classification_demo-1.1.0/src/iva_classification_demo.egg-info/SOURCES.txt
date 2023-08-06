@@ -1,0 +1,11 @@
+setup.py
+src/iva_classification_demo/__init__.py
+src/iva_classification_demo/class_computer.py
+src/iva_classification_demo/comp_view.py
+src/iva_classification_demo/main.py
+src/iva_classification_demo.egg-info/PKG-INFO
+src/iva_classification_demo.egg-info/SOURCES.txt
+src/iva_classification_demo.egg-info/dependency_links.txt
+src/iva_classification_demo.egg-info/entry_points.txt
+src/iva_classification_demo.egg-info/requires.txt
+src/iva_classification_demo.egg-info/top_level.txt

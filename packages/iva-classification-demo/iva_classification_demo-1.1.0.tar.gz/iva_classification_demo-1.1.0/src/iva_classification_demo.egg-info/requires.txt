@@ -1,0 +1,9 @@
+iva_applications
+iva_tpu
+qtmodern
+tensorflow==1.15.0
+keras==2.2.4
+Cython
+PyQt5
+PyQt5-sip
+pyqtgraph
