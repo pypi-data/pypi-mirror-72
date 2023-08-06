@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+overlay/__init__.py
+overlay/window.py
+overlay.egg-info/PKG-INFO
+overlay.egg-info/SOURCES.txt
+overlay.egg-info/dependency_links.txt
+overlay.egg-info/top_level.txt
+overlay/template/__init__.py
+overlay/template/asset_finder.py
+overlay/template/futuristic.py
+overlay/template/prefab.py
+overlay/template/ui/futuristic/TextWindow.png
