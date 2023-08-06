@@ -1,0 +1,116 @@
+#!python
+import argparse
+import pkg_resources
+import os
+import pkgutil
+import json
+
+import card_trick
+
+def print_description():
+	print ("""
+A package to search the CARD ontology information for: 
+	+ genes that confer resistance to an antibiotic 
+	+ antibiotic to which a gene confers resistance or it is targeted
+	+ a specific ARO term entry in the database
+
+It retrieves all the information available for each entry. Input can be a single term ("-i x") or a batch file containing multiple terms, one per line ("-b -i file.txt"). 
+
+Type of terms ("-t" option) to search are:
+	ARO:	Retrieves entries for this specific ARO (Antibiotic Resistante Ontology) term. (exact match)
+	gene:	Retrieves entries for this gene name. It can be a partial string, no case distinction.
+	antibiotic:	Retrieves entries for genes conferring resisntace to this antibiotics (partial, no case distinction)
+	target:	Retrieves entries for genes target by this antibiotic (partial, no case distinction)
+	any:	Retrieves any entry in the database containing the string provided (partial, no case distinction)
+
+It also provides multiple options to perform multiple chained searches (options: -i2, -t2, -b2): e.g. CTX genes & resistance to ceftazidime
+
+There is a module to update the database if desired. Provide a path or use a default location under home directory.
+
+#################
+Examples:
+#################
+[Module: search]
+
+## Different term options:
+card-trick search -t antibiotic -i tigecycline
+card-trick search -t target -i tigecycline
+card-trick search -t gene -i ctx
+card-trick search -t aro -i ARO:3003032
+card-trick search -t any -i ctx
+
+## Using path database provided
+card-trick search -t gene -i ctx --path /folder/to/card_ontology
+
+## Batch example
+card-trick search -t aro --batch -i batch_entry_file.txt
+
+## Multiple search
+card-trick search -t gene -i ctx --path /folder/to/card_ontology -i2 ceftazidime -t2 antibiotic
+card-trick search -t gene -i ctx --path /folder/to/card_ontology --batch_2 -i2 file.txt -t2 any 
+
+## Output
+card-trick search -t aro --batch -i batch_entry_file.txt -f tsv -o example_name
+
+[Module: update]
+## Store database in default path
+card-trick update
+
+## Provide a path
+card-trick update --path /folder/to/save/card_ontology
+	""")
+	
+
+def parse_arguments():
+	
+	#############################
+	#### parse all arguments ####
+	#############################
+	parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter)
+	parser.add_argument('-v', '--version', help='display the version number', action='store_true')
+	parser.add_argument('--man', help='Additional information', action='store_true')
+	subparsers = parser.add_subparsers(help='The following commands are available. Type card-trick <COMMAND> -h for more help on a specific commands', dest='command')
+
+	############################
+	#### update database	####
+	############################
+	update_ontology_command = subparsers.add_parser('update', 	help='Get latest CARD ontology')
+	update_ontology_command.add_argument('--path', 				help="Path to store CARD ontology.", required= False) ## provide a path to store database
+	update_ontology_command.add_argument('-q', '--quiet', 		help='Do not print process information', default = False, required=False)
+
+	########################
+	#### search module	####
+	########################
+	search_ontology_command = subparsers.add_parser('search', 		help='Search CARD ontology')
+	search_ontology_command.add_argument('-i', '--input', 			help='Input term to search in CARD ontology. Provide a unique term o several using --batch option', required=True)
+	search_ontology_command.add_argument('-f', '--format_output', 	help='Output format. stdout, csv, tsv or json', type = str, default = 'tsv', choices=['stdout', 'json', 'csv', 'tsv', 'all'])
+	search_ontology_command.add_argument('-o', '--output_name', 	help='Output name.', type = str, default = 'results', required=False)
+	search_ontology_command.add_argument('-p', '--path', 			help="Path containing CARD ontology. Default is user’s home directory.", required= False)
+	search_ontology_command.add_argument('-t', '--term', 			help='The type of term provided to search.', type = str, choices=['ARO', 'gene', 'antibiotic', 'target', 'any'], required=True)
+	search_ontology_command.add_argument('-b', '--batch',			help="Provide this option if input is a file containing multiple terms, one per line.", action="store_true", default=False)	
+	search_ontology_command.add_argument('-i2', '--input_2',		help='Input term to search in results retrieved from first input. Provide a unique term o several using --batch option', required=False)
+	search_ontology_command.add_argument('-t2', '--term_2', 		help='The type of term provided to search for the second input. Default: any', type = str, default = 'any', choices=['ARO', 'gene', 'antibiotic', 'target', 'any'], required=False)
+	search_ontology_command.add_argument('-b2', '--batch_2',		help="Provide this option if input_2 is a file containing multiple terms, one per line.", action="store_true", default=False)	
+	search_ontology_command.add_argument('-q', '--quiet', 			help='Do not print process information', action="store_true", default = False, required=False)
+	
+	options = parser.parse_args()
+	return options
+
+
+if __name__ == '__main__':
+	options = parse_arguments()
+	
+	if options.command == 'update':
+		card_trick.commands.update(options)
+
+	elif options.command == 'search':
+		card_trick.commands.search(options)
+
+	elif options.version:
+		print(pkg_resources.get_distribution('card_trick').version)
+
+	elif options.man:
+		print_description()
+	
+		
+	
