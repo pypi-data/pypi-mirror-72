@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+thaifortrading/__init__.py
+thaifortrading/thaistock.py
+thaifortrading.egg-info/PKG-INFO
+thaifortrading.egg-info/SOURCES.txt
+thaifortrading.egg-info/dependency_links.txt
+thaifortrading.egg-info/requires.txt
+thaifortrading.egg-info/top_level.txt
