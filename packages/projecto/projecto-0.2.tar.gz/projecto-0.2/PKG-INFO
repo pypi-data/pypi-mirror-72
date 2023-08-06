@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: projecto
+Version: 0.2
+Summary: Projeto vazio ainda mas pode ser usado futuramente
+Home-page: https://github.com/v5ctor/projetomeu/
+Author: Víctor De Rosa
+Author-email: victorbitt00@gmail.com
+License: GNU AFFERO GENERAL PUBLIC LICENSE
+Description: # projetomeu
+        Projeto vazio ainda mas pode ser usado futuramente, essa parte do curso explica o dia-a-dia de um open source 
+        
+        DisponÃ­vel em Blu-Ray
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Framework :: Pytest
+Description-Content-Type: text/markdown
