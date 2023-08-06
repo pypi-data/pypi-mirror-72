@@ -1,0 +1,13 @@
+igmov/__init__.py,sha256=B1Wdq7POTRbqAKUgDQuGma0QcdqCwkBcwTpiSyWMHgY,42
+igmov/analyzer.py,sha256=sTUIYxhoKm3xns1O45ULayNCN41Ux1FMSW7dqVWS-Jg,1328
+igmov/dl.py,sha256=lav4TD8XvhLVCV8zV6CNsJwCTmiRIsjFL6n59-9__jM,1552
+igmov/draw.py,sha256=ZFo3lgAlYKOYx8T2nuAUnY5NTi97eqi9SjDl6t281XE,4611
+igmov/template/__init__.py,sha256=zcGnMpWXMp541I2f60F0omrN0ICojEz4GzMM5k6fYYs,26
+igmov/template/ig.py,sha256=8o0lUnJR-roqMiQMMBxITCYyxS409A3QJHj_bFVicSk,7101
+igmov/template/igtv.py,sha256=KYvkHyr4NhjsiVMeWzoZtwhO9ckedMfuHXkJz58pSE8,2860
+igmov/template/youtube.py,sha256=Cvw98FrM-AxzAteFQG84VkG9SBa_8iuHF-0CYdnBwGE,4554
+igmov-0.0.2b0.dist-info/LICENSE,sha256=iYJ8xk9gbNxD5_ivUdeCBtKSbEIlVUVPJLKVMDytQlE,1063
+igmov-0.0.2b0.dist-info/METADATA,sha256=VKyIBDlb9T-VJsPTreAhS3x6PmFyJBdgxEEa4eUEzOY,775
+igmov-0.0.2b0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+igmov-0.0.2b0.dist-info/top_level.txt,sha256=ExuUZm2CkBYRUM2jxOn_nSN91SZpg-1eXY5gmofBV0k,6
+igmov-0.0.2b0.dist-info/RECORD,,
