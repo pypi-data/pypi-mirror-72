@@ -1,0 +1,13 @@
+pg_copy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pg_copy/apps.py,sha256=PdRYmFGSe4d7Xo_O8yVk-wNFf1ept7LdXzqVdiss2ZQ,88
+pg_copy/settings.py,sha256=yb-NY2g78pQ7AropuFhq-HTdmPqR8DdLXwBexZ5M-cc,235
+pg_copy/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pg_copy/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pg_copy/management/commands/pg_backup.py,sha256=4zIJi6Nw39JDJzVLP1l2oYtVQvmX6kiAyS8y7T5fZQk,2500
+pg_copy/management/commands/pg_restore.py,sha256=mZYzoB8n8PBoHTCi2tWfeB47I83--x-0GsEHqMOVM1o,3893
+pg_copy/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_pg_copy-0.3.0.dist-info/LICENSE,sha256=XIT9paUoQoD7ObBEYLJGEuE8T8NzcwfBQ2TjfUy_5cU,1539
+django_pg_copy-0.3.0.dist-info/METADATA,sha256=qts8HyfI55lO3InyA4ECmjaLCqF0yhsO3cDeOxJULas,4705
+django_pg_copy-0.3.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+django_pg_copy-0.3.0.dist-info/top_level.txt,sha256=ADx2vroeOOzXbfxd-vUtUjcA3uvzQAfc8IGDQakKi5k,8
+django_pg_copy-0.3.0.dist-info/RECORD,,
