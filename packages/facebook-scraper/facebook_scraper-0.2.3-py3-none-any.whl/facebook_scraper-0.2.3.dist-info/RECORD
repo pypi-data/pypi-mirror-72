@@ -1,0 +1,13 @@
+facebook_scraper/__init__.py,sha256=16EAPozYB6NXGcjPPj1mUGQ8br6h7eoaAtriOr00s5M,3557
+facebook_scraper/__main__.py,sha256=cNoV262xYOBdrc8go-wdowaQQrwNM_TnoCuw1Aahf5g,1444
+facebook_scraper/constants.py,sha256=FhcCw7YsH7zyz9fLDh81v-c18bZRU-DIExV2jjBXoI4,101
+facebook_scraper/extractors.py,sha256=xmvvJmwPHpCgkTLIRh_zoYK0HSDERqx1E99fjYh5xuU,13352
+facebook_scraper/facebook_scraper.py,sha256=PBDUDJJ202baMW9iCCh9thODAf-Q1l67JFj0A9b0a0U,3502
+facebook_scraper/fb_types.py,sha256=tfxQMRYXNO3KJZtdnMG2W8XQlpGfH9xkNZ_FPQEAX0E,314
+facebook_scraper/page_iterators.py,sha256=m_TNpRYFr2QRKvCGFRCUdg60nBf-0hAYscc1-__HvlU,4607
+facebook_scraper/utils.py,sha256=kQU9Bp9yz3froBYAc9AD8EEFFg934ohlSPEKj7HRDL4,1438
+facebook_scraper-0.2.3.dist-info/entry_points.txt,sha256=lZI7SwVyrG2uJcTMdGSA2PvsvZDLEWBJ4xXL2Znspso,66
+facebook_scraper-0.2.3.dist-info/LICENSE,sha256=k8sMkOWYTD1zVOH2uBqe3mg_lMPKmXt2WHGHtG8tl68,1071
+facebook_scraper-0.2.3.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+facebook_scraper-0.2.3.dist-info/METADATA,sha256=9pFW89DIjIyXg064EMqh-CPQohtC9MYL3vw8G9vHq2A,4817
+facebook_scraper-0.2.3.dist-info/RECORD,,
