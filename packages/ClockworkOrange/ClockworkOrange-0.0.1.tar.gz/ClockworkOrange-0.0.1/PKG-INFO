@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ClockworkOrange
+Version: 0.0.1
+Summary: A lightweight digital circuit simulation package for humans.
+Home-page: https://github.com/Eathoublu/ClockWorkOrange
+Author: Yixiao Lan
+Author-email: yixiaolan@foxmail.com
+License: UNKNOWN
+Description: A lightweight digital circuit simulation package for humans. In memory of Stanley Kubrick's A Clockwork Orange.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
