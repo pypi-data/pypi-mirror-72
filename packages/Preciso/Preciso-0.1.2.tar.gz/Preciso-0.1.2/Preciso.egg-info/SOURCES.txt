@@ -1,0 +1,16 @@
+README.rst
+setup.py
+Preciso.egg-info/PKG-INFO
+Preciso.egg-info/SOURCES.txt
+Preciso.egg-info/dependency_links.txt
+Preciso.egg-info/requires.txt
+Preciso.egg-info/top_level.txt
+preciso/HDF5.py
+preciso/__init__.py
+preciso/distributions.py
+preciso/preciso.py
+preciso/results.py
+preciso/run.py
+preciso/bin/PreciSo-linux
+preciso/bin/PreciSo-macOS
+preciso/bin/preciso.exe
