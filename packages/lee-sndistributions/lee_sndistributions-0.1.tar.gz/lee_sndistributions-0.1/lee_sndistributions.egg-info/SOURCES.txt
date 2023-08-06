@@ -1,0 +1,10 @@
+setup.py
+lee_sndistributions/Binomialdistribution.py
+lee_sndistributions/Gaussiandistribution.py
+lee_sndistributions/Generaldistribution.py
+lee_sndistributions/__init__.py
+lee_sndistributions.egg-info/PKG-INFO
+lee_sndistributions.egg-info/SOURCES.txt
+lee_sndistributions.egg-info/dependency_links.txt
+lee_sndistributions.egg-info/not-zip-safe
+lee_sndistributions.egg-info/top_level.txt
