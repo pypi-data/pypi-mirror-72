@@ -1,0 +1,11 @@
+README.md
+setup.py
+scripts/tt
+typing_test/__init__.py
+typing_test/__main__.py
+typing_test/typing_test.py
+typing_test.egg-info/PKG-INFO
+typing_test.egg-info/SOURCES.txt
+typing_test.egg-info/dependency_links.txt
+typing_test.egg-info/top_level.txt
+typing_test/data/vocab
