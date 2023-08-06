@@ -1,0 +1,3 @@
+[console_scripts]
+pgp-utils = pgp_utils:main
+
