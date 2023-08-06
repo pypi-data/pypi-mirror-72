@@ -1,0 +1,13 @@
+<!-- fenix-json.php -->
+
+<?php
+    $conn = pg_connect("host=127.0.0.1 port=5432 dbname=… user=… password=…");
+    $address = pg_escape_literal($_SERVER["REMOTE_ADDR"]);
+    $ress = pg_query($conn, "SELECT 1 FROM networks WHERE inet $address << prefix");
+
+    header("Access-Control-Allow-Origin: *");
+    header("Content-type: application/json");
+    print $_GET["callback"]."{\"result\": " . pg_num_rows($ress) . "}";
+
+    pg_close($conn);
+?>

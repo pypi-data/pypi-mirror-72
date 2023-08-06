@@ -1,0 +1,16 @@
+.editorconfig
+.flake8
+.gitignore
+.gitlab-ci.yml
+LICENSE
+README.md
+config.example.yml
+legacy_php_code.txt
+requirements.txt
+setup.py
+fenix_checker/server.py
+fenix_checker.egg-info/PKG-INFO
+fenix_checker.egg-info/SOURCES.txt
+fenix_checker.egg-info/dependency_links.txt
+fenix_checker.egg-info/requires.txt
+fenix_checker.egg-info/top_level.txt
