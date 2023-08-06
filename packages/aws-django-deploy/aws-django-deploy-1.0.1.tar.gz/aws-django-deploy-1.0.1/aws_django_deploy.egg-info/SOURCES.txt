@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+aws_django_deploy.egg-info/PKG-INFO
+aws_django_deploy.egg-info/SOURCES.txt
+aws_django_deploy.egg-info/dependency_links.txt
+aws_django_deploy.egg-info/entry_points.txt
+aws_django_deploy.egg-info/top_level.txt
+awsdjangodeploy/cc.py
