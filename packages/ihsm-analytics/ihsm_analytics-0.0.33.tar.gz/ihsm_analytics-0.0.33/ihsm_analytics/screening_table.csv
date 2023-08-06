@@ -1,0 +1,166 @@
+ScreeningParam,EorMethod,Min,Max,Stopper
+Average Horizontal Permeability,Horz. Misc. CO2,0.1,10000,FALSE
+Average Horizontal Permeability,Horz. Misc. HC,0.1,10000,FALSE
+Average Horizontal Permeability,Horz. Misc. N2,0.1,10000,FALSE
+Average Horizontal Permeability,Vert. Misc. CO2,0.1,10000,FALSE
+Average Horizontal Permeability,Vert. Misc. HC,0.1,10000,FALSE
+Average Horizontal Permeability,Vert. Misc. N2,0.1,10000,FALSE
+Average Horizontal Permeability,Vert. Immisc. CO2,0.1,10000,FALSE
+Average Horizontal Permeability,Vert. Immisc. HC,0.1,10000,FALSE
+Average Horizontal Permeability,Vert. Immisc. N2,0.1,10000,FALSE
+Average Horizontal Permeability,Steam Flooding,250,10000,FALSE
+Average Horizontal Permeability,CSS,250,10000,FALSE
+Average Horizontal Permeability,SAGD,5000,10000,FALSE
+Average Horizontal Permeability,Hot Water,35,10000,FALSE
+Average Horizontal Permeability,Polymer Flooding,100,10000,FALSE
+Average Horizontal Permeability,ASP,100,10000,FALSE
+Average Vertical Permeability,Horz. Misc. CO2,0.1,100,FALSE
+Average Vertical Permeability,Horz. Misc. HC,0.1,100,FALSE
+Average Vertical Permeability,Horz. Misc. N2,0.1,100,FALSE
+Average Vertical Permeability,Vert. Misc. CO2,100,10000,FALSE
+Average Vertical Permeability,Vert. Misc. HC,100,10000,FALSE
+Average Vertical Permeability,Vert. Misc. N2,100,10000,FALSE
+Average Vertical Permeability,Vert. Immisc. CO2,100,10000,FALSE
+Average Vertical Permeability,Vert. Immisc. HC,100,10000,FALSE
+Average Vertical Permeability,Vert. Immisc. N2,100,10000,FALSE
+Average Vertical Permeability,Steam Flooding,0.1,10000,FALSE
+Average Vertical Permeability,CSS,0.1,10000,FALSE
+Average Vertical Permeability,SAGD,0.1,10000,FALSE
+Average Vertical Permeability,Hot Water,0.1,10000,FALSE
+Average Vertical Permeability,Polymer Flooding,100,10000,FALSE
+Average Vertical Permeability,ASP,0.1,10000,FALSE
+Current Oil Saturation,Horz. Misc. CO2,20,100,FALSE
+Current Oil Saturation,Horz. Misc. HC,30,100,FALSE
+Current Oil Saturation,Horz. Misc. N2,40,100,FALSE
+Current Oil Saturation,Vert. Misc. CO2,20,100,FALSE
+Current Oil Saturation,Vert. Misc. HC,30,100,FALSE
+Current Oil Saturation,Vert. Misc. N2,40,100,FALSE
+Current Oil Saturation,Vert. Immisc. CO2,35,100,FALSE
+Current Oil Saturation,Vert. Immisc. HC,35,100,FALSE
+Current Oil Saturation,Vert. Immisc. N2,35,100,FALSE
+Current Oil Saturation,Steam Flooding,40,100,FALSE
+Current Oil Saturation,CSS,50,100,FALSE
+Current Oil Saturation,SAGD,50,100,FALSE
+Current Oil Saturation,Hot Water,50,100,FALSE
+Current Oil Saturation,Polymer Flooding,30,100,FALSE
+Current Oil Saturation,ASP,45,100,FALSE
+Current Reservoir Pressure,Horz. Misc. CO2,MMP,20000,TRUE
+Current Reservoir Pressure,Horz. Misc. HC,MMP,20000,TRUE
+Current Reservoir Pressure,Horz. Misc. N2,MMP,20000,TRUE
+Current Reservoir Pressure,Vert. Misc. CO2,MMP,20000,TRUE
+Current Reservoir Pressure,Vert. Misc. HC,MMP,20000,TRUE
+Current Reservoir Pressure,Vert. Misc. N2,MMP,20000,TRUE
+Current Reservoir Pressure,Vert. Immisc. CO2,0.01,MMP,TRUE
+Current Reservoir Pressure,Vert. Immisc. HC,0.01,MMP,TRUE
+Current Reservoir Pressure,Vert. Immisc. N2,0.01,MMP,TRUE
+Current Reservoir Pressure,Steam Flooding,500,1500,TRUE
+Current Reservoir Pressure,CSS,400,1500,TRUE
+Current Reservoir Pressure,SAGD,100,1500,TRUE
+Current Reservoir Pressure,Hot Water,2000,5000,FALSE
+Current Reservoir Pressure,Polymer Flooding,500,5000,FALSE
+Current Reservoir Pressure,ASP,500,5000,FALSE
+Formation Salinity,Horz. Misc. CO2,0.1,1000000,FALSE
+Formation Salinity,Horz. Misc. HC,0.1,1000000,FALSE
+Formation Salinity,Horz. Misc. N2,0.1,1000000,FALSE
+Formation Salinity,Vert. Misc. CO2,0.1,1000000,FALSE
+Formation Salinity,Vert. Misc. HC,0.1,1000000,FALSE
+Formation Salinity,Vert. Misc. N2,0.1,1000000,FALSE
+Formation Salinity,Vert. Immisc. CO2,0.1,1000000,FALSE
+Formation Salinity,Vert. Immisc. HC,0.1,1000000,FALSE
+Formation Salinity,Vert. Immisc. N2,0.1,1000000,FALSE
+Formation Salinity,Steam Flooding,0.1,1000000,FALSE
+Formation Salinity,CSS,0.1,1000000,FALSE
+Formation Salinity,SAGD,0.1,1000000,FALSE
+Formation Salinity,Hot Water,0.1,1000000,FALSE
+Formation Salinity,Polymer Flooding,0.1,1000,FALSE
+Formation Salinity,ASP,0.1,50000,FALSE
+Net Pay Thickness,Horz. Misc. CO2,0.1,500,FALSE
+Net Pay Thickness,Horz. Misc. HC,0.1,500,FALSE
+Net Pay Thickness,Horz. Misc. N2,0.1,500,FALSE
+Net Pay Thickness,Vert. Misc. CO2,0.1,500,FALSE
+Net Pay Thickness,Vert. Misc. HC,0.1,500,FALSE
+Net Pay Thickness,Vert. Misc. N2,0.1,500,FALSE
+Net Pay Thickness,Vert. Immisc. CO2,0.1,500,FALSE
+Net Pay Thickness,Vert. Immisc. HC,0.1,500,FALSE
+Net Pay Thickness,Vert. Immisc. N2,0.1,500,FALSE
+Net Pay Thickness,Steam Flooding,15,150,FALSE
+Net Pay Thickness,CSS,20,150,FALSE
+Net Pay Thickness,SAGD,50,100,FALSE
+Net Pay Thickness,Hot Water,20,500,FALSE
+Net Pay Thickness,Polymer Flooding,0.1,500,FALSE
+Net Pay Thickness,ASP,0.1,500,FALSE
+Oil Gravity,Horz. Misc. CO2,22,60,FALSE
+Oil Gravity,Horz. Misc. HC,30,60,FALSE
+Oil Gravity,Horz. Misc. N2,40,60,FALSE
+Oil Gravity,Vert. Misc. CO2,22,60,FALSE
+Oil Gravity,Vert. Misc. HC,30,60,FALSE
+Oil Gravity,Vert. Misc. N2,40,60,FALSE
+Oil Gravity,Vert. Immisc. CO2,10,60,FALSE
+Oil Gravity,Vert. Immisc. HC,10,60,FALSE
+Oil Gravity,Vert. Immisc. N2,10,60,FALSE
+Oil Gravity,Steam Flooding,8,20,FALSE
+Oil Gravity,CSS,8,35,FALSE
+Oil Gravity,SAGD,7,12,FALSE
+Oil Gravity,Hot Water,10,35,FALSE
+Oil Gravity,Polymer Flooding,15,60,FALSE
+Oil Gravity,ASP,20,60,FALSE
+Oil Viscosity (in situ),Horz. Misc. CO2,0.1,10,FALSE
+Oil Viscosity (in situ),Horz. Misc. HC,0.1,3,FALSE
+Oil Viscosity (in situ),Horz. Misc. N2,0.1,0.4,FALSE
+Oil Viscosity (in situ),Vert. Misc. CO2,0.1,10,FALSE
+Oil Viscosity (in situ),Vert. Misc. HC,0.1,3,FALSE
+Oil Viscosity (in situ),Vert. Misc. N2,0.1,0.4,FALSE
+Oil Viscosity (in situ),Vert. Immisc. CO2,0.1,600,FALSE
+Oil Viscosity (in situ),Vert. Immisc. HC,0.1,600,FALSE
+Oil Viscosity (in situ),Vert. Immisc. N2,0.1,600,FALSE
+Oil Viscosity (in situ),Steam Flooding,1000,10000,TRUE
+Oil Viscosity (in situ),CSS,1000,1000000,TRUE
+Oil Viscosity (in situ),SAGD,4000,1000000,TRUE
+Oil Viscosity (in situ),Hot Water,1000,10000,TRUE
+Oil Viscosity (in situ),Polymer Flooding,10,1000,FALSE
+Oil Viscosity (in situ),ASP,0.1,35,FALSE
+Reservoir Depth,Horz. Misc. CO2,2500,40000,FALSE
+Reservoir Depth,Horz. Misc. HC,4000,16000,FALSE
+Reservoir Depth,Horz. Misc. N2,10000,40000,FALSE
+Reservoir Depth,Vert. Misc. CO2,2500,40000,FALSE
+Reservoir Depth,Vert. Misc. HC,4000,16000,FALSE
+Reservoir Depth,Vert. Misc. N2,10000,40000,FALSE
+Reservoir Depth,Vert. Immisc. CO2,500,2500,FALSE
+Reservoir Depth,Vert. Immisc. HC,500,2500,FALSE
+Reservoir Depth,Vert. Immisc. N2,500,2500,FALSE
+Reservoir Depth,Steam Flooding,400,4500,TRUE
+Reservoir Depth,CSS,400,3000,TRUE
+Reservoir Depth,SAGD,250,3000,TRUE
+Reservoir Depth,Hot Water,500,3000,TRUE
+Reservoir Depth,Polymer Flooding,800,9000,FALSE
+Reservoir Depth,ASP,500,9000,FALSE
+Reservoir Dip,Horz. Misc. CO2,0.1,10,FALSE
+Reservoir Dip,Horz. Misc. HC,0.1,10,FALSE
+Reservoir Dip,Horz. Misc. N2,0.1,10,FALSE
+Reservoir Dip,Vert. Misc. CO2,10,90,FALSE
+Reservoir Dip,Vert. Misc. HC,10,90,FALSE
+Reservoir Dip,Vert. Misc. N2,10,90,FALSE
+Reservoir Dip,Vert. Immisc. CO2,10,90,FALSE
+Reservoir Dip,Vert. Immisc. HC,10,90,FALSE
+Reservoir Dip,Vert. Immisc. N2,10,90,FALSE
+Reservoir Dip,Steam Flooding,0.1,90,FALSE
+Reservoir Dip,CSS,0.1,90,FALSE
+Reservoir Dip,SAGD,0.1,90,FALSE
+Reservoir Dip,Hot Water,0.1,90,FALSE
+Reservoir Dip,Polymer Flooding,0.1,90,FALSE
+Reservoir Dip,ASP,0.1,90,FALSE
+Reservoir Temperature,Horz. Misc. CO2,50,400,FALSE
+Reservoir Temperature,Horz. Misc. HC,50,400,FALSE
+Reservoir Temperature,Horz. Misc. N2,50,400,FALSE
+Reservoir Temperature,Vert. Misc. CO2,50,400,FALSE
+Reservoir Temperature,Vert. Misc. HC,50,400,FALSE
+Reservoir Temperature,Vert. Misc. N2,50,400,FALSE
+Reservoir Temperature,Vert. Immisc. CO2,50,400,FALSE
+Reservoir Temperature,Vert. Immisc. HC,50,400,FALSE
+Reservoir Temperature,Vert. Immisc. N2,50,400,FALSE
+Reservoir Temperature,Steam Flooding,50,400,FALSE
+Reservoir Temperature,CSS,50,400,FALSE
+Reservoir Temperature,SAGD,50,400,FALSE
+Reservoir Temperature,Hot Water,50,400,TRUE
+Reservoir Temperature,Polymer Flooding,50,170,TRUE
+Reservoir Temperature,ASP,50,200,TRUE
