@@ -1,0 +1,3 @@
+[console_scripts]
+tvipsconverter = tvipsconverter.widgets:main
+
