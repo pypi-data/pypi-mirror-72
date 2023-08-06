@@ -1,0 +1,8 @@
+openwisp-users<=0.4.0,>=0.2.0
+openwisp-utils~=0.5.0
+swapper~=1.1
+django<3.1,>=2.2
+djangorestframework<3.12,>=3.3
+django-model-utils~=4.0.0
+netdiff~=0.8.0
+jsonfield<4.0.0,>=3.1.0
