@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+bigbrain/__init__.py
+bigbrain/ai.py
+bigbrain.egg-info/PKG-INFO
+bigbrain.egg-info/SOURCES.txt
+bigbrain.egg-info/dependency_links.txt
+bigbrain.egg-info/requires.txt
+bigbrain.egg-info/top_level.txt
