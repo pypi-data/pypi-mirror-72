@@ -1,0 +1,4 @@
+include readme.md
+include libvis-mod.conf
+recursive-include packagedMod *
+prune packagedMod/.libvis_publish
