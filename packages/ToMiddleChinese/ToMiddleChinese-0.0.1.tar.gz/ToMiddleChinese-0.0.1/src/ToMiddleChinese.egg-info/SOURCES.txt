@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/ToMiddleChinese/ToMiddleChinese.py
+src/ToMiddleChinese/__init__.py
+src/ToMiddleChinese/version.py
+src/ToMiddleChinese.egg-info/PKG-INFO
+src/ToMiddleChinese.egg-info/SOURCES.txt
+src/ToMiddleChinese.egg-info/dependency_links.txt
+src/ToMiddleChinese.egg-info/not-zip-safe
+src/ToMiddleChinese.egg-info/requires.txt
+src/ToMiddleChinese.egg-info/top_level.txt

@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: ToMiddleChinese
+Version: 0.0.1
+Summary: 中古漢語自動標註工具 | Middle Chinese Pronunciation Automatic Labeling Tool
+Home-page: https://github.com/sgalal/ToMiddleChinese
+Author: sgalal
+Author-email: sgalal.me@outlook.com
+License: Other
+Project-URL: Bug Reports, https://github.com/sgalal/ToMiddleChinese/issues
+Project-URL: Source, https://github.com/sgalal/ToMiddleChinese
+Description: # ToMiddleChinese
+        
+        Install:
+        
+        ```sh
+        $ pip install ToMiddleChinese
+        ```
+        
+        Usage:
+        
+        ```python
+        >>> import ToMiddleChinese
+        >>> ToMiddleChinese.get_unt('一天')
+        '一(ʔit˥)天(tʰen˦)'
+        ```
+        
+        Functions:
+        
+        - `ToMiddleChinese.get_qimyonhmieuzsjyt_list`
+        - `ToMiddleChinese.get_kuxyonh_list`
+        - `ToMiddleChinese.get_unt_list`
+        - `ToMiddleChinese.get_qimyonhmieuzsjyt`
+        - `ToMiddleChinese.get_kuxyonh`
+        - `ToMiddleChinese.get_unt`
+        
+        # License
+        
+        Source code is distributed under MIT license.
+        
+        Dictionary data follows the original license.
+        
+Keywords: chinese cantonese nlp natural-language-processing
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Natural Language :: Cantonese
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Natural Language :: Chinese (Traditional)
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.5, <4
+Description-Content-Type: text/markdown
