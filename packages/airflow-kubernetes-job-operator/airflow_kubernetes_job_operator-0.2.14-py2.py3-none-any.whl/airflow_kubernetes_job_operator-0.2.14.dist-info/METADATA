@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: airflow-kubernetes-job-operator
+Version: 0.2.14
+Summary: An airflow job operator that executes a task as a Kubernetes job on a cluster, given a job yaml configuration or an image uri.
+Home-page: https://github.com/LamaAni/KubernetesJobOperator
+Author: Zav Shotan
+Author-email: 
+License: LICENSE
+Platform: any
+Requires-Python: >=3.6
+Requires-Dist: PyYAML (>=5.0)
+Requires-Dist: kubernetes (>=9.0.0)
+Requires-Dist: urllib3 (>=1.25.0)
+
+Please see readme.md @ https://github.com/LamaAni/KubernetesJobOperator
+
+
