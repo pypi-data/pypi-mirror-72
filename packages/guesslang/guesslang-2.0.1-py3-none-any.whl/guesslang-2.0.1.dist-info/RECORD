@@ -1,0 +1,14 @@
+guesslang/__init__.py,sha256=_rCmp184uOfzK6yzxH6e5Aqb00BMs3JXS1mO99FqNYw,198
+guesslang/__main__.py,sha256=Geu-zG-1OeDkmuxX8UlGelrb5yuSu09005oTX5yqPOQ,5894
+guesslang/guess.py,sha256=WPhq_tr3mKdZzsKIrjaQ0yWzNyN93Lu14ilsP0Iv-0k,6273
+guesslang/model.py,sha256=mqcwN6JFyWbCrLFvrhQqCI8ZscKfqSV_sV_Sz4L5Hg8,6679
+guesslang/data/languages.json,sha256=_R7S5vJkNhOB-XNEOvdl9n89z67hs6ob28vg0ascmmA,721
+guesslang/data/model/saved_model.pb,sha256=70d9RV40BC0EOeKUYRfm8OeUufiPaDWBPSWii18OJMg,167547
+guesslang/data/model/variables/variables.data-00000-of-00001,sha256=wzSoneWZQAQkpFQbV5hC0LKennxkbw0d-9DYX_pHJ0k,2215160
+guesslang/data/model/variables/variables.index,sha256=8fLWEoe_8Ib3g_R1JZYQ-RL-2mBjJyWRVBF2RWgsOqk,539
+guesslang-2.0.1.dist-info/LICENSE,sha256=dn7iE-KLb7i6LhGCJrv-5wtCHIn9Y8ACeK69ItDp1O8,1075
+guesslang-2.0.1.dist-info/METADATA,sha256=AuvR7oAX56_UpzF0d1j-DZoAHpcOI5Uwk70i2qIhMXQ,3011
+guesslang-2.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+guesslang-2.0.1.dist-info/entry_points.txt,sha256=swnet8wyFbb6sFE_LolsC0kUtNZ69z72qo9oMWUuks0,55
+guesslang-2.0.1.dist-info/top_level.txt,sha256=dT6iyKdvnF6p48_l0-DwMHUExfNxa9Ibyk2x9jL5QE4,10
+guesslang-2.0.1.dist-info/RECORD,,
