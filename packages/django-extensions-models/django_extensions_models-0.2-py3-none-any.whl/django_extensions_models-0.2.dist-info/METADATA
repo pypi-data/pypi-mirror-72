@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: django-extensions-models
+Version: 0.2
+Summary: model extensions with timestamp and uuid and more
+Home-page: https://github.com/thomas545/django-extensions-models
+Author: Thomas Adel
+Author-email: thomas.adel31@gmail.com
+License: MIT
+Keywords: django-models-extensions model-extensions django-extensions
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: Django (>=2.0)
+
+# Django Model Extensions
+- A Django library for model extensions
+
+### Requirements
+- Python (3.5, 3.6, 3.7, 3.8)
+- Django (2.0, 3.0)
+
+We highly recommend and only officially support the latest patch release of each Python and Django series.
+
+### Installation
+Install using ```pip```...
+
+```
+pip install django-extensions-models
+```
+
+### Example
+Let's take a look at a quick example of using model extensions
+
+```
+from models_extensions.models import UUIDModel, TimeStampedModel, ActivatorModel
+
+class YourModel(UUIDModel, TimeStampedModel, ActivatorModel):
+    # ...
+
+```
+
+Don't forget ```makemigrations``` & ```migrate``` to apply models to your database.
+
+
+
