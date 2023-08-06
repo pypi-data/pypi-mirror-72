@@ -1,0 +1,9 @@
+requirements.txt
+setup.py
+github_repos/__init__.py
+github_repos/__main__.py
+github_repos.egg-info/PKG-INFO
+github_repos.egg-info/SOURCES.txt
+github_repos.egg-info/dependency_links.txt
+github_repos.egg-info/requires.txt
+github_repos.egg-info/top_level.txt
