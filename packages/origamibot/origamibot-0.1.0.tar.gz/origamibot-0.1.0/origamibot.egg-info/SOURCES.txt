@@ -1,0 +1,15 @@
+README.md
+setup.py
+origamibot/__init__.py
+origamibot/logutil.py
+origamibot.egg-info/PKG-INFO
+origamibot.egg-info/SOURCES.txt
+origamibot.egg-info/dependency_links.txt
+origamibot.egg-info/top_level.txt
+origamibot/core/__init__.py
+origamibot/core/api_request.py
+origamibot/core/bot.py
+origamibot/core/commands.py
+origamibot/core/sthread.py
+origamibot/core/teletypes.py
+origamibot/core/util.py
