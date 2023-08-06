@@ -1,0 +1,3 @@
+[console_scripts]
+jdauto = jdauto.jdauto:main
+

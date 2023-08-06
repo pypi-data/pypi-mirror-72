@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+jdauto/__init__.py
+jdauto/_version.py
+jdauto/jdauto.py
+jdauto.egg-info/PKG-INFO
+jdauto.egg-info/SOURCES.txt
+jdauto.egg-info/dependency_links.txt
+jdauto.egg-info/entry_points.txt
+jdauto.egg-info/requires.txt
+jdauto.egg-info/top_level.txt
+jdauto.egg-info/zip-safe
