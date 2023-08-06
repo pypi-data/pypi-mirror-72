@@ -1,0 +1,11 @@
+requirements.txt
+setup.py
+mac_login_items.egg-info/PKG-INFO
+mac_login_items.egg-info/SOURCES.txt
+mac_login_items.egg-info/dependency_links.txt
+mac_login_items.egg-info/top_level.txt
+scripts/login-items
+scripts/login-items-add
+scripts/login-items-names
+scripts/login-items-paths
+scripts/login-items-rm
