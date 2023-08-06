@@ -1,0 +1,13 @@
+README.md
+setup.py
+examples/__init__.py
+soco_core/__init__.py
+soco_core/convertors.py
+soco_core/examples.py
+soco_core/sentence_splitter.py
+soco_core/soco_client.py
+soco_core_python.egg-info/PKG-INFO
+soco_core_python.egg-info/SOURCES.txt
+soco_core_python.egg-info/dependency_links.txt
+soco_core_python.egg-info/requires.txt
+soco_core_python.egg-info/top_level.txt
