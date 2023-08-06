@@ -1,0 +1,6 @@
+lxml
+python-slugify
+click
+
+[:python_version < "3.7"]
+importlib_resources
