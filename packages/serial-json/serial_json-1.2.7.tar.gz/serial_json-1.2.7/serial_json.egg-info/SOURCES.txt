@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+serial_json/__init__.py
+serial_json/__meta__.py
+serial_json/bytes_support.py
+serial_json/dataclasses.py
+serial_json/datetime_support.py
+serial_json/interface.py
+serial_json/numpy_support.py
+serial_json/weekdays_list.py
+serial_json.egg-info/PKG-INFO
+serial_json.egg-info/SOURCES.txt
+serial_json.egg-info/dependency_links.txt
+serial_json.egg-info/top_level.txt
