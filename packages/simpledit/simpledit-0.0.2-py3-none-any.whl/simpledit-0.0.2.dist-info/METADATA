@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: simpledit
+Version: 0.0.2
+Summary: UNKNOWN
+Home-page: https://gitlab.com/torresed/simpledit
+Author: Programmers
+Author-email: noreply@ufl.edu
+License: GPL3
+Platform: UNKNOWN
+Requires-Dist: Pillow
+Requires-Dist: PyQt5
+Requires-Dist: PyQt5-sip
+
+UNKNOWN
+
+
