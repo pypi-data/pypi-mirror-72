@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p class="title_lead">
+    Request for Permission
+</p>
+
+<script>
+    setTimeout(function() {
+        document.getElementById("privacy_policy_acceptance").addEventListener( 'change', function() {
+            if(this.checked) {
+                document.getElementById("submit_authorization").classList = 'button_base';
+                document.getElementById("submit_authorization").removeAttribute('disabled');
+            } else {
+                document.getElementById("submit_authorization").classList = 'disabled';
+                document.getElementById("submit_authorization").disabled = true;
+            }
+        });
+    }, 1000);
+</script>
+
+<div>
+    <p class="flex">
+        The Knowledge Base Client&nbsp;<strong>{{ client.name }}</strong>&nbsp;would like to access some of your personal information.
+    </p>
+    
+    <p class="flex">
+        This is a normal part of the login process to the knowledge base.
+    </p>
+    
+    <div class="flex">
+        <form method="post" class="block_log" action="{% url 'oidc_provider:authorize' %}">
+
+            {% csrf_token %}
+
+            {{ hidden_inputs }}
+
+            <div class="checkbox">
+                <label for="privacy_policy_acceptance">
+                    <input type="checkbox" id="privacy_policy_acceptance" value="privacy_policy_acceptance">
+                    I hereby agree to the <a href="https://coopseurope.coop/privacy-policy" target="_blank">Cooperatives Europe privacy policy</a>
+                </label>
+            </div>
+
+            <input class="button_base" type="submit" value="Decline"/>
+            <input class="disabled" name="allow" id="submit_authorization" type="submit" value="Authorize" disabled="true"/>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
