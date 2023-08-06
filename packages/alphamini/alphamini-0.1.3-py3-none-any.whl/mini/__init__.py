@@ -1,0 +1,68 @@
+from .apis import *
+from .channels import *
+from .dns import *
+from .mini_sdk import *
+from .pb2 import *
+from .tool import *
+
+name = "mini"
+
+__all__ = [
+    'apis',
+    'channels',
+    'pb2',
+    'dns',
+    'mini_sdk',
+    'get_device_by_name',
+    'get_device_list',
+    'connect',
+    'release',
+    'register_msg_handler',
+    'unregister_msg_handler',
+    'WiFiDevice',
+    'WiFiDeviceListener',
+    'GetWiFiDeviceListListener',
+    'install_py_pkg',
+    'uninstall_py_pkg',
+    'run_py_pkg',
+    'query_py_pkg',
+    'list_py_pkg',
+    'setup_py_pkg',
+    'PCProgramCmdId',
+    'PCPyCmdId',
+    'COMMON',
+    'SPEECH',
+    'VISION',
+    'MessageHeader',
+    'Message',
+    'AbstractMsgHandler',
+    'CONTENT',
+    'MOTION',
+    'EXPRESS',
+    'get_common_error_str',
+    'get_vision_error_str',
+    'get_content_error_str',
+    'get_express_error_str',
+    'get_motion_error_str',
+    'get_speech_error_str',
+    'parse_body_msg',
+    'parse_msg',
+    'build_request_msg',
+    'build_response_msg',
+    'MiniApiResultType',
+    'MoveRobotDirection',
+    'RobotActionType',
+    'RobotAudioRecordControlType',
+    'RobotExpressionType',
+    'RobotBehaviorControlType',
+    'MouthLampColor',
+    'MouthLampMode',
+    'RobotPosture',
+    'HeadRacketType',
+    'ObjectRecogniseType',
+    'TakePictureType',
+    'TTSControlType',
+    'AudioStorageType',
+    'AudioSearchType',
+    'service_type'
+]
