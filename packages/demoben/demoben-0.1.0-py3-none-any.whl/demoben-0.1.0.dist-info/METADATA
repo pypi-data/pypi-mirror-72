@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: demoben
+Version: 0.1.0
+Summary: 
+Author: Ben-Cheng
+Author-email: bcheng@linz.govt.nz
+Requires-Python: >=3.6.1,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: pandas (>=1.0.5,<2.0.0)
