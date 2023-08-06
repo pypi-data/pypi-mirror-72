@@ -1,0 +1,12 @@
+numpy
+scipy
+pytest
+pyproj
+pygrib
+cdsapi
+matplotlib
+geos
+proj
+cartopy
+Pillow
+imageio
