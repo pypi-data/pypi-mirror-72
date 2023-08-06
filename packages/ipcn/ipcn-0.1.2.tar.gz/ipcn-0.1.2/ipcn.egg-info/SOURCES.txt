@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ipcn/__init__.py
+ipcn/format.py
+ipcn/geo.py
+ipcn/run.py
+ipcn.egg-info/PKG-INFO
+ipcn.egg-info/SOURCES.txt
+ipcn.egg-info/dependency_links.txt
+ipcn.egg-info/entry_points.txt
+ipcn.egg-info/not-zip-safe
+ipcn.egg-info/requires.txt
+ipcn.egg-info/top_level.txt
