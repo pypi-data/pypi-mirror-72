@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: xga
+Version: 0.1.0
+Summary: Python package to easily generate and analyse XMM data products
+Home-page: http://github.com/DavidT3/XGA
+Author: David Turner
+Author-email: david.turner@sussex.ac.uk
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3
