@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: xiaobanma
+Version: 2.0.1
+Summary: markdown editor
+Home-page: https://markdown.felinae.net
+Author: Shiweihao
+Author-email: shi-weihao@qq.com
+License: UNKNOWN
+Keywords: django markdown editor editormd
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Framework :: Django
+Description-Content-Type: text/markdown
+
+#xiaobanma Package
+
+This is a simple package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
