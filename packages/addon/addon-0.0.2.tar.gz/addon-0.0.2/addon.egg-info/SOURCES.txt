@@ -1,0 +1,7 @@
+README.txt
+setup.py
+addon/__init__.py
+addon.egg-info/PKG-INFO
+addon.egg-info/SOURCES.txt
+addon.egg-info/dependency_links.txt
+addon.egg-info/top_level.txt
