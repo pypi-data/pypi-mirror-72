@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+solvit/__init__.py
+solvit/models.py
+solvit.egg-info/PKG-INFO
+solvit.egg-info/SOURCES.txt
+solvit.egg-info/dependency_links.txt
+solvit.egg-info/requires.txt
+solvit.egg-info/top_level.txt
+solvit/tests/__init__.py
