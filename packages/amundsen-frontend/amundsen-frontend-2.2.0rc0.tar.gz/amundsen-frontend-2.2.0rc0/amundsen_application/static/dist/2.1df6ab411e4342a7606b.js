@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{eTFo:function(e,t,n){"use strict";n.r(t);var a=n("q1tI");t.default=({text:e})=>a.createElement("div",null,"Sad face")}}]);
+//# sourceMappingURL=2.1df6ab411e4342a7606b.js.map
