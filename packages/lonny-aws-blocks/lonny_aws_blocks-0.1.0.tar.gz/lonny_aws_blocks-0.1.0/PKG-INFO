@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: lonny-aws-blocks
+Version: 0.1.0
+Summary: 
+Author: tlonny
+Author-email: t@lonny.io
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: lonny_aws_blob (>=0.1.1,<0.2.0)
+Requires-Dist: lonny_aws_stack (>=0.2.1,<0.3.0)
+Requires-Dist: troposphere (>=2.6.1,<3.0.0)
