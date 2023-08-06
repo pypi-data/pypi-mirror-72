@@ -1,0 +1,9 @@
+README.md
+setup.py
+django_randomcharfield.egg-info/PKG-INFO
+django_randomcharfield.egg-info/SOURCES.txt
+django_randomcharfield.egg-info/dependency_links.txt
+django_randomcharfield.egg-info/requires.txt
+django_randomcharfield.egg-info/top_level.txt
+randomcharfield/__init__.py
+randomcharfield/fields.py
