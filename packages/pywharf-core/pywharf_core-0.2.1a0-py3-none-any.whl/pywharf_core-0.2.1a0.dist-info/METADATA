@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: pywharf-core
+Version: 0.2.1a0
+Summary: A private PyPI server powered by flexible backends.
+Home-page: https://github.com/pywharf/pywharf-core
+License: MIT
+Keywords: private,pypi,packaging,dependency
+Author: huntzhan
+Author-email: huntzhan.dev@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: Jinja2 (>=2.11.1,<3.0.0)
+Requires-Dist: Paste (>=3.4.0,<4.0.0)
+Requires-Dist: apscheduler (>=3.6.3,<4.0.0)
+Requires-Dist: cryptography (>=2.8,<3.0)
+Requires-Dist: dramatiq[redis] (>=1.8.1,<2.0.0)
+Requires-Dist: filelock (>=3.0.12,<4.0.0)
+Requires-Dist: fire (>=0.2.1,<0.3.0)
+Requires-Dist: flask (>=1.1.1,<2.0.0)
+Requires-Dist: flask-login (>=0.5.0,<0.6.0)
+Requires-Dist: lxml (>=4.5.1,<5.0.0)
+Requires-Dist: psutil (>=5.6.7,<6.0.0)
+Requires-Dist: pydantic (>=1.4,<2.0)
+Requires-Dist: redis-server (>=5.0.7,<6.0.0)
+Requires-Dist: shortuuid (>=0.5.0,<0.6.0)
+Requires-Dist: toml (>=0.10.0,<0.11.0)
+Requires-Dist: waitress (>=1.4.3,<2.0.0)
+Project-URL: Repository, https://github.com/pywharf/pywharf-core
+Description-Content-Type: text/markdown
+
+# pywharf-core
+
+The core of https://github.com/pywharf/pywharf
+
