@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: django-hotsauce
+Version: 1.2.2
+Summary: Scalable and heterogeneous web toolkit sitting on top of Django and others
+Home-page: UNKNOWN
+Author: Jack Bortone
+Author-email: tkadm30@yandex.com
+License: Apache License V2
+Description: The Django-hotsauce programming toolkit is a high-performance and scalable Python web framework derived from Django project.
+Keywords: django-hotsauce,django,uwsgi,oauth,werkzeug
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: C
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Server
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
