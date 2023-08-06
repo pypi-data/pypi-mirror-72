@@ -1,0 +1,13 @@
+quantastica_qiskit_forest-0.9.20-py3.7-nspkg.pth,sha256=p3lUkxQeaITkL9noRZHPwywH5LnTQq6Cn9tbiQK2jbM,564
+quantastica/qiskit_forest/ForestBackend.py,sha256=DMX9nKeaqkA-7rf4didTr7chw58bNJUQDgr5jYzJ0HA,3023
+quantastica/qiskit_forest/ForestJob.py,sha256=68QMJi8p2qCLMCeCmXM9XkyXyrCZxfvOA8HZyG_rCF4,7235
+quantastica/qiskit_forest/__init__.py,sha256=pdjDjhM9DaS81hf-LZQcpPXHrSEEaA8kEMSUCyzIV_4,530
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_forestbackend.py,sha256=gssnR2wL9_prq0iYi_JUupQb55ymOumxYCKgLWXSIfo,6722
+tests/test_qaoa.py,sha256=tSPF31lDNVFh8tRcE8jrh7Yvi3i-afP9Alqep_6kOYg,4448
+quantastica_qiskit_forest-0.9.20.dist-info/LICENSE,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+quantastica_qiskit_forest-0.9.20.dist-info/METADATA,sha256=qnetWM4IT2J3XgZvht4TNP9Yly4WmosELxg6i_TiDFg,3463
+quantastica_qiskit_forest-0.9.20.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+quantastica_qiskit_forest-0.9.20.dist-info/namespace_packages.txt,sha256=RVPTJvDEHMqmQsKjXPyvPZid65gHTI1ZpjdHtihbE2M,12
+quantastica_qiskit_forest-0.9.20.dist-info/top_level.txt,sha256=-fejzdHp8JCo8TaNcKmEl2A4nP3ZvCKqbzYsm87qC5Q,18
+quantastica_qiskit_forest-0.9.20.dist-info/RECORD,,
