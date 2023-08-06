@@ -1,0 +1,3 @@
+[console_scripts]
+ads2bibdesk = ads2bibdesk.ads2bibdesk:main
+
