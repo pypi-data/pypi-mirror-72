@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: os0
+Version: 0.2.15
+Summary: OS indipendent interface
+Home-page: http://wiki.zeroincombenze.org/en/Python/opt/os0
+Author: Antonio Maria Vigliotti
+Author-email: antoniomaria.vigliotti@gmail.com
+License: Affero: GPL
+Description: 
+        OS interface for Linux, OpenVMS and Windows
+        
+        This module expands standard os.py module.
+        os0 is platform independent and can run on Linux, OpenVMS and Linux.
+        os0 is the only package that intefaces OpenVMS and can execute OpenVMS command.
+        
+Keywords: os path linux windows openvms
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Operating System :: OS Independent
