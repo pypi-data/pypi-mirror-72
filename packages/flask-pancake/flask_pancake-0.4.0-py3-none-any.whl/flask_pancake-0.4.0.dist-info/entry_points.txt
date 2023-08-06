@@ -1,0 +1,3 @@
+[flask.commands]
+pancake = flask_pancake.commands:pancake_cli
+
