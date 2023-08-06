@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: aiqa
+Version: 0.0.0
+Summary: Quant Analysis Tool.
+Home-page: https://github.com/hscspring/aiqa
+Author: Yam
+Author-email: haoshaochun@gmail.com
+License: UNKNOWN
+Description: # qa
+        Quant Analysis.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
