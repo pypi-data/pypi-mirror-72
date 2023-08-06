@@ -1,0 +1,3 @@
+[console_scripts]
+mdg_generate = mdg.generate:main
+
