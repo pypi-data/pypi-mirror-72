@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: camera_intrinsics
+Version: 0.0.1
+Summary: A package for applying image transformations to the camera intrinsics.
+Home-page: https://lukaskoestler.com
+Author: Lukas Koestler
+Author-email: lkskstlr@gmail.com
+License: UNKNOWN
+Description: # Camera Intrinsics
+        A small package that supports applying image transformations, e.g. cropping or resizing, to the camera intrinsics.
+        
+        
+        ## Intrinsics
+        Camera intrinsics are python dicts with the keys `height, width, fx, fy, cx, cy, options`.
+        
+        ### Example
+        ```python
+        import camera_intrinsics as cam
+        
+        intr = cam.intrinsics(width=128, height=96, fx=128.0, fy=128.0, cx=63.5, cy=47.5)  # Make sure to be clear about half_pixel_centers! Read the doc below.
+        print(intr)
+        >>> {'height': 96, 'width': 128, 'fx': 128.0, 'fy': 128.0, 'cx': 63.5, 'cy': 47.5, 'options': ''}
+        ```
+        
+        ### Options
+        The options string is the `join` of the single options with a semincolon `,`. The available options are listed below.
+        
+        #### Pixel Coordinate Convention
+        There are mainly two conventions for the pixel coordinates. The preferred one within this package uses `(0,0)` as the coordinate for the top-left pixel and its options string is `""`. The other convention uses `(.5, .5)` as the coordinate for the top-left pixel and its options string is `"half_pixel_centers"` . Be careful to select the right convention when creating the intrinsics. Here is a list of toolboxes and their conventions
+        + No `half_pixel_centers`:
+        DSO ([link](https://github.com/JakobEngel/dso#geometric-calibration-file)),
+        MATLAb Calibration Toolbox ([link](http://www.vision.caltech.edu/bouguetj/calib_doc/htmls/parameters.html)),
+        Berkeley Automation ([link](https://github.com/BerkeleyAutomation/perception/blob/c7f8429600775c450d5d2ea6a2a10f1d4c508184/perception/camera_intrinsics.py#L335))
+        + `half_pixel_centers`:
+        COLMAP ([link](https://colmap.github.io/tutorial.html#feature-detection-and-extraction)),
+        FastMVSNet ([link](https://github.com/svip-lab/FastMVSNet/blob/ccb686dda2717613c67d8a289dfe7b2aeb60e2fd/fastmvsnet/functions/functions.py#L6))
+        
+        
+        ### Methods
+        Currently the following methods are supported:
+        + `intrinsics`: Make intrinsics
+        + `crop`: Crop intrinsics
+        + `resize`: Resize intrinsics
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown

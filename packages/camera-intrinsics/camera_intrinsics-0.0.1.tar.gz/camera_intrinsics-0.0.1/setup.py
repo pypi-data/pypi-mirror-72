@@ -1,0 +1,22 @@
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="camera_intrinsics",
+    version="0.0.1",
+    author="Lukas Koestler",
+    author_email="lkskstlr@gmail.com",
+    description="A package for applying image transformations to the camera intrinsics.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://lukaskoestler.com",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.5',
+)
