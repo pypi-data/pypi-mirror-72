@@ -1,0 +1,17 @@
+mailshake/__init__.py,sha256=Lyh6IpnKMndkUp2wWdf4K5xTttFzqKbg6pZ_qSYxP3w,458
+mailshake/message.py,sha256=UBM367Xksb74Nbk3VUVkbbxJriPitUhteLRX7B7ge_4,10715
+mailshake/utils.py,sha256=BysJsy1g2wl7T0e18cfHw5jN2eOyf0IXtYFttNn_Ll4,4696
+mailshake/version.py,sha256=th_8Ux0udhOgbFs-tL8Ug84yjgPtcRyQaOSy6Pqas7I,208
+mailshake/mailers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mailshake/mailers/amazon_ses.py,sha256=HF28U6IQKhyBr_8F8ezQtnoAUvmqX_uZydjiqoqJ4l4,2224
+mailshake/mailers/base.py,sha256=4bQXZ2kOp9C8vYD9Lf_JH5KqG8dN-NHo3RSgosOsfiY,1373
+mailshake/mailers/console.py,sha256=sn-oYpVj2AXXmdm_d_nhe7Eoq8Swz91xWtXkcZAzqQc,1503
+mailshake/mailers/dummy.py,sha256=Eno7R4ZoLQ2ldPrdm08arQI9vnGW4LVi1dVCKTffZyQ,187
+mailshake/mailers/filebased.py,sha256=vTTa9Zu6qG4dij4pomgx2-snc3auCH6vk3vuH4UaeVc,1971
+mailshake/mailers/memory.py,sha256=PoccPGFLzHVQj2hI3ktThYF1whZ3a8JDAmpmFBXr4MM,654
+mailshake/mailers/smtp.py,sha256=mzL2eU4bx42CaNTqxmFKyPcpdBBqAGV38tbW6DLr430,4945
+mailshake-2.1.dist-info/LICENSE,sha256=_Yaz9liOkSN0jf8u_B-LwIN0EUMllkJZ2etl6NvRAqo,10212
+mailshake-2.1.dist-info/METADATA,sha256=00ArhJxz4ZnT-7DZNN_dNW-ZgMaKyXSGykleIZo0DF8,2281
+mailshake-2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mailshake-2.1.dist-info/top_level.txt,sha256=yVxzR6WNW7l_xaZgtbT1iM6Z6vaaNXJiWdEjqCNTlHw,10
+mailshake-2.1.dist-info/RECORD,,
