@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: apex-legends-voicelines
+Version: 0.1.1
+Summary: 
+Home-page: https://justine.kizhak.com/projects/apex-legends-voicelines
+License: MIT
+Keywords: dotfile manager
+Author: Justine Kizhakkinedath
+Author-email: justine@kizhak.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Text Editors :: Emacs
+Project-URL: Bug Reports, https://gitlab.com/justinekizhak/devinstaller/issues
+Project-URL: Repository, https://gitlab.com/justinekizhak/apex-legends-voicelines
+Project-URL: Say Thanks!, https://saythanks.io/to/justine%40kizhak.com
+Description-Content-Type: text/markdown
+
+# Apex Legends voicelines
+
+[[_TOC_]]
+
+## Install
+
+Recommended way to install is by using [pipx](https://github.com/pipxproject/pipx/).
+
+Pipx will add isolation so that your system is always unaffected.
+
+```sh
+pipx install apex-legends-voicelines
+```
+
+## Usage
+
+To use just run
+
+```sh
+apex-voicelines
+```
+
+### Using inside Emacs
+
+These voicelines can be used inside Emacs.
+
+You can use the voicelines as the frame title.
+
+#### As frame title on startup
+
+Add this to your config
+
+```emacs-lisp
+(setq frame-title-format (shell-command-to-string "apex-voicelines"))
+```
+
+#### Use interactively
+
+You can also add this in your config and change the title on demand
+
+```emacs-lisp
+(defun change-emacs-title-apex ()
+  (interactive)
+  (setq frame-title-format (shell-command-to-string "apex-voicelines")))
+```
+
+Just run `M-x change-emacs-title-apex` to do so.
+
+## License
+
+MIT License
+
