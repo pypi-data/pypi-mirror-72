@@ -1,0 +1,7 @@
+albumentations==0.4.5
+tqdm
+numpy
+matplotlib
+torch
+torchvision
+torchsummary

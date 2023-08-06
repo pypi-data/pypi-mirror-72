@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pynoob
+Version: 0.1.0.7
+Summary: A n00b DeepLearning Package
+Home-page: https://github.com/abksyed/pynoob
+Author: Syed Abdul K
+Author-email: abdksyed@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/abksyed/pynoob/dist/pynoob-0.1.0.7.tar.gz
+Description: # pynoob
+        
+        This a DeepLeaning Package build on top of PyTorch for n00bs to get started with ComputerVision Applications.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
