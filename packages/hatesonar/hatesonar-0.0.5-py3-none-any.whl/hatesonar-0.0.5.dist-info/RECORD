@@ -1,0 +1,16 @@
+hatesonar/__init__.py,sha256=3sduuv8pBSpq-N4jLjCxyBfqmlWrsPvH3zJ3iuM9Hgk,32
+hatesonar/api.py,sha256=rNen42iK9mJJesmajd6cNOYHlxrXg9z0KBbNG7QA6io,1665
+hatesonar/crawler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hatesonar/crawler/blog.py,sha256=m_LgQxwx9y0LFl1aiANVv6j89cAput8UqrKzd26s950,105
+hatesonar/crawler/twitter.py,sha256=mVsG7RrqGrUIu1WTw0B0indbE3dFRJ-0gfoddkvArl0,1350
+hatesonar/data/model.pkl,sha256=nkkv2Mr2ynD6FjL5QK2IGOAe4kFGho8m_g0FxPhX1Jc,861363
+hatesonar/data/preprocess.pkl,sha256=HPGinB0R24my8o6diLO9TXP6KPlTrx7esChNwQjvpEo,3047438
+hatesonar/trainer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hatesonar/trainer/model.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hatesonar/trainer/preprocess.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hatesonar/trainer/task.py,sha256=oCSG0a2_PDAgYzHmrafqkawYWr2pQ6U1RJA0y4jY4Dw,1894
+hatesonar-0.0.5.dist-info/LICENSE,sha256=800gwaJFwZI5pZx7y8AkCelxu5xAEONfeLeOX5IKGHA,1071
+hatesonar-0.0.5.dist-info/METADATA,sha256=RBttqf0QY2MrpfNyvO4EPSaXeZuMIOrFVcr0AIYETPc,2773
+hatesonar-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+hatesonar-0.0.5.dist-info/top_level.txt,sha256=lVGOJFGOYQ8MU6RUsWZcMF1ek0EjptwBO9LpbC2G0hE,10
+hatesonar-0.0.5.dist-info/RECORD,,
