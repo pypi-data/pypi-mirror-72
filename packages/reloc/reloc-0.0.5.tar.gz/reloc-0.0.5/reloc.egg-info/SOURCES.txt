@@ -1,0 +1,14 @@
+README.md
+setup.py
+reloc/__init__.py
+reloc/__version__.py
+reloc/cli.py
+reloc/client.py
+reloc/server.py
+reloc/util.py
+reloc.egg-info/PKG-INFO
+reloc.egg-info/SOURCES.txt
+reloc.egg-info/dependency_links.txt
+reloc.egg-info/entry_points.txt
+reloc.egg-info/requires.txt
+reloc.egg-info/top_level.txt
