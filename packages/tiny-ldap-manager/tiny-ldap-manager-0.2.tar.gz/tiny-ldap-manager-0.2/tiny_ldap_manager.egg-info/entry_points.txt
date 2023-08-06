@@ -1,0 +1,3 @@
+[console_scripts]
+tiny-ldap-manager = tiny_ldap_manager.tiny_ldap_manager:main
+

@@ -1,0 +1,15 @@
+README.md
+setup.py
+tiny_ldap_manager/__init__.py
+tiny_ldap_manager/_version.py
+tiny_ldap_manager/delete_bulk.py
+tiny_ldap_manager/tiny_ldap_manager.py
+tiny_ldap_manager/tlmgr_core.py
+tiny_ldap_manager/tlmgr_csv.py
+tiny_ldap_manager/tlmgr_modify.py
+tiny_ldap_manager.egg-info/PKG-INFO
+tiny_ldap_manager.egg-info/SOURCES.txt
+tiny_ldap_manager.egg-info/dependency_links.txt
+tiny_ldap_manager.egg-info/entry_points.txt
+tiny_ldap_manager.egg-info/requires.txt
+tiny_ldap_manager.egg-info/top_level.txt
