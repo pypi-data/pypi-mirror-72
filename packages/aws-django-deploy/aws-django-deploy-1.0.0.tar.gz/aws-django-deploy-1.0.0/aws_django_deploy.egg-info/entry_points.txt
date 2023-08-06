@@ -1,0 +1,3 @@
+[console_script]
+aws_django_deploy = awsdjangodeploy.cc:main
+
