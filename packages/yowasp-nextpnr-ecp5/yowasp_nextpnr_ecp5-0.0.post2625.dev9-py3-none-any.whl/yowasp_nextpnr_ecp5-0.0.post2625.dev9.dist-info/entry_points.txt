@@ -1,0 +1,8 @@
+[console_scripts]
+yowasp-ecpbram = yowasp_nextpnr_ecp5.bin:run_ecpbram
+yowasp-ecpmulti = yowasp_nextpnr_ecp5.bin:run_ecpmulti
+yowasp-ecppack = yowasp_nextpnr_ecp5.bin:run_ecppack
+yowasp-ecppll = yowasp_nextpnr_ecp5.bin:run_ecppll
+yowasp-ecpunpack = yowasp_nextpnr_ecp5.bin:run_ecpunpack
+yowasp-nextpnr-ecp5 = yowasp_nextpnr_ecp5.bin:run_nextpnr_ecp5
+
