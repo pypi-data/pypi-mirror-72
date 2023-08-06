@@ -1,0 +1,3 @@
+[console_scripts]
+pymatrix-rain = pymatrix.pymatrix:main
+
