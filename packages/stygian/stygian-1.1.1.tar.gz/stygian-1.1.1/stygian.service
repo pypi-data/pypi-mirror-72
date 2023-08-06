@@ -1,0 +1,20 @@
+[Unit]
+Description=stygian service
+Conflicts=shutdown.target
+After=sysinit.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi
+ExecStart=/usr/bin/python3 -m stygian
+Environment="PYTHONPATH=/home/pi/repos/suprocktech_py:/home/pi/repos/asphodel_py:/home/pi/repos/asphodelgui:/home/pi/repos/asphodeltest:/home/pi/repos/stygian"
+User=pi
+Group=pi
+Restart=always
+TimeoutStartSec=0
+RestartSec=1
+StartLimitInterval=0
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
