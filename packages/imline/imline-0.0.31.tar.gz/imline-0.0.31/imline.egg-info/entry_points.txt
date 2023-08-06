@@ -1,0 +1,3 @@
+[console_scripts]
+imline = imline.__main__:initiate
+
