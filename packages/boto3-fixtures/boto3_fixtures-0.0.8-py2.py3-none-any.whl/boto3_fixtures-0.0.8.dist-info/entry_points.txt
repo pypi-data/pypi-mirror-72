@@ -1,0 +1,3 @@
+[pytest11]
+name_of_plugin = boto3_fixtures.contrib.pytest
+
