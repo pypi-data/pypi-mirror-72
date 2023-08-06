@@ -1,0 +1,15 @@
+numpy
+pandas
+scipy
+opencv-python
+sklearn
+tslearn
+tsfresh
+dtw
+fastdtw
+dtaidistance
+kneed
+matplotlib
+seaborn
+tqdm
+arrow
