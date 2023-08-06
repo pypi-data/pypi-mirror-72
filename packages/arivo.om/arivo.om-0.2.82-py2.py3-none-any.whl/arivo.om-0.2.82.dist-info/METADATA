@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: arivo.om
+Version: 0.2.82
+Summary: Util functions for om docker containers
+Home-page: UNKNOWN
+License: GPL-3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=2.6, !=3.0.*, !=3.1.*, !=3.2.*, <4
+Requires-Dist: six
+Requires-Dist: related
+Requires-Dist: editdistance
+Requires-Dist: sentry-sdk
+Requires-Dist: pyyaml
+Requires-Dist: pyzmq
+Requires-Dist: enum34 ; python_version < "3.0"
+
+VERSION=0.2.82
+GIT_BRANCH=master
+GIT_COMMIT=bddab3e32c7d4f88ba706b2edf85e8f62006aa05
+GIT_COMMIT_SHORT=bddab3e3
+
