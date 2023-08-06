@@ -1,0 +1,13 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+BIM360/__init__.py
+CLASSES/__init__.py
+DATAMANAGEMENT/__init__.py
+FrogPAM.egg-info/PKG-INFO
+FrogPAM.egg-info/SOURCES.txt
+FrogPAM.egg-info/dependency_links.txt
+FrogPAM.egg-info/top_level.txt
+Utils/__init__.py
