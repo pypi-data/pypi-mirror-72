@@ -1,0 +1,36 @@
+<input type="hidden"
+       name="${field.name}"
+       value="${cstruct}"
+       id="${field.oid}"/>
+<input type="hidden" name="__start__" value="${field.name}_autocomplete:ignore">
+<input type="text"
+       name="${field.name}_autocomplete"
+       value="${visible_cstruct}"
+       tal:attributes="class field.widget.css_class"
+       id="${field.oid}_autocomplete"/>
+<input type="hidden" name="__end__" value=""/>
+<script tal:condition="field.widget.values" type="text/javascript">
+  function renderItem(ul, item) {
+    if (item.dropdown === undefined) {
+      item.dropdown = item.displayed;
+    }
+    return $('<li></li>').data('item.autocomplete', item)
+                         .append('<a>' + item.dropdown + '</a>')
+                         .appendTo(ul);
+  }
+  deform.addCallback(
+    '${field.oid}',
+    function (oid) {
+      var options = ${options}
+      options.source = ${values}
+      options.select = function (event, ui) {
+        $('#' + oid).val(ui.item.stored)
+        $(this).val(ui.item.displayed)
+        return false
+      }
+      $('#' + oid + '_autocomplete')
+        .autocomplete(options)
+        .data('ui-autocomplete')._renderItem = renderItem
+    }
+  );
+</script>

@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: deform_ext_autocomplete
+Version: 1.0.1
+Summary: Deform Extended Autocomplete provides a Deform autocompletion widget that stores a value that may be different from the one shown to the user.
+Home-page: https://deform-ext-autocomplete.readthedocs.io/en/latest/
+Author: Damien Baty
+Author-email: damien.removethispart@damienbaty.com
+License: BSD-3-Clause
+Project-URL: Documentation, https://deform-ext-autocomplete.readthedocs.io/en/latest/
+Project-URL: Changelog, https://deform-ext-autocomplete.readthedocs.io/en/latest/changes.html
+Project-URL: Source, https://github.com/dbaty/deform_ext_autocomplete/
+Project-URL: Bug Tracker, https://github.com/dbaty/deform_ext_autocomplete/issues
+Description: Extended Autocomplete provides a few features that are not available
+        in the default autocomplete widget shipped with `Deform
+        <http://docs.pylonsproject.org/projects/deform/en/latest/>`_. Essentially,
+        Extended Autocomplete allows the developer to show a value to the user
+        that is different from the one that is returned by the widget (and
+        eventually stored).
+        
+        For further details, see the documentation at
+        `<https://deform-ext-autocomplete.readthedocs.io/en/latest/>`_.
+        
+Keywords: deform form widget autocomplete autocompletion
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
