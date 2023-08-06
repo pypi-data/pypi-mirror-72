@@ -1,0 +1,10 @@
+numpy<1.19.0
+scipy
+obspy
+sigpropy
+pandas
+shapely
+
+[dev]
+matplotlib
+coverage
