@@ -1,0 +1,79 @@
+Metadata-Version: 2.0
+Name: AMQPStorm-Pool
+Version: 1.0
+Summary: AMQPStorm connection pooling based on pika-pooling.
+Home-page: UNKNOWN
+Author: Erik Olof Gunnar Andersson
+Author-email: me@eandersson.net
+License: BSD
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Communications
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Networking
+Requires-Dist: amqpstorm
+
+AMQPStorm-Pool
+==============
+`AMQPStorm <https://github.com/eandersson/amqpstorm>`_ connection pooling based on `pika-pool <https://github.com/bninja/pika-pool>`_.
+
+usage
+-----
+
+Get it:
+
+.. code:: bash
+
+    pip install amqpstorm-pool
+
+and use it:
+
+.. code:: python
+
+    import json
+
+    import amqpstorm
+    import amqpstorm_pool
+
+    uri = 'amqp://guest:guest@localhost:5672/%2F?heartbeat=60'
+    pool = amqpstorm_pool.QueuedPool(
+        create=lambda: amqpstorm.UriConnection(uri),
+        max_size=10,
+        max_overflow=10,
+        timeout=10,
+        recycle=3600,
+        stale=45,
+    )
+
+    with pool.acquire() as cxn:
+        cxn.channel.queue.declare('fruits')
+        cxn.channel.basic.publish(
+            body=json.dumps({
+                'type': 'banana',
+                'description': 'they are yellow'
+            }),
+            exchange='',
+            routing_key='fruits',
+            properties={
+                'content_type': 'text/plain',
+                'headers': {'key': 'value'}
+            }
+        )
+
+
