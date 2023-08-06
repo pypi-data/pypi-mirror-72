@@ -1,0 +1,5 @@
+[console_scripts]
+generate_tile_makefile = lltiler.scripts.generate_tile_makefile:_main
+overlay_tiles = lltiler.scripts.overlay_tiles:_main
+pyramid_step = lltiler.scripts.pyramid_step:_main
+
