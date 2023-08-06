@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+distributions_jw369/Binomialdistribution.py
+distributions_jw369/Gaussiandistribution.py
+distributions_jw369/Generaldistribution.py
+distributions_jw369/__init__.py
+distributions_jw369.egg-info/PKG-INFO
+distributions_jw369.egg-info/SOURCES.txt
+distributions_jw369.egg-info/dependency_links.txt
+distributions_jw369.egg-info/not-zip-safe
+distributions_jw369.egg-info/top_level.txt
