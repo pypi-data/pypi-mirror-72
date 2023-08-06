@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+pipetest.egg-info/PKG-INFO
+pipetest.egg-info/SOURCES.txt
+pipetest.egg-info/dependency_links.txt
+pipetest.egg-info/top_level.txt
+scripts/pipetest
