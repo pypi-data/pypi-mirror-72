@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: float-on-py
+Version: 0.0.2
+Summary: Python Wrapper for Float API
+Home-page: https://github.com/NICD-UK/float-on-py
+Author: Stephen Dowsland
+Author-email: stephen.dowsland@newcastle.ac.uk
+License: UNKNOWN
+Description: # Float Python Wrapper
+        
+        This is a simple package to wrap the Float REST API
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
