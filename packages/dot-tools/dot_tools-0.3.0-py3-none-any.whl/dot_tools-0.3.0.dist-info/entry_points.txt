@@ -1,0 +1,4 @@
+[console_scripts]
+handle_envrc = dot_tools.scripts.handle_envrc:main
+release.py = dot_tools.scripts.release:main
+
