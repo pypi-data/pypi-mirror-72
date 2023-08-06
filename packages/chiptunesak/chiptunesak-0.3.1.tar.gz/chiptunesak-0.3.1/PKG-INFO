@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: chiptunesak
+Version: 0.3.1
+Summary: Generalized pipeline for processing music and targeting various constrained playback environments
+Home-page: https://github.com/c64cryptoboy/ChiptuneSAK
+Author: David Youd
+Author-email: CryptoBoy@gmail.com
+License: UNKNOWN
+Description: # ChiptuneSAK
+        
+        Coming August 2020!
+        
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
