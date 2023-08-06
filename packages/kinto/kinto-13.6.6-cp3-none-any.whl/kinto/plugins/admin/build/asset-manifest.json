@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/v1/admin/static/js/main.0e2382ef.chunk.js",
+    "main.js.map": "/v1/admin/static/js/main.0e2382ef.chunk.js.map",
+    "runtime-main.js": "/v1/admin/static/js/runtime-main.a1dda676.js",
+    "runtime-main.js.map": "/v1/admin/static/js/runtime-main.a1dda676.js.map",
+    "static/css/2.3c8e866b.chunk.css": "/v1/admin/static/css/2.3c8e866b.chunk.css",
+    "static/js/2.61bf0d41.chunk.js": "/v1/admin/static/js/2.61bf0d41.chunk.js",
+    "static/js/2.61bf0d41.chunk.js.map": "/v1/admin/static/js/2.61bf0d41.chunk.js.map",
+    "index.html": "/v1/admin/index.html",
+    "precache-manifest.d3fcbdace4d51a0a8f768ab12e2f1c7d.js": "/v1/admin/precache-manifest.d3fcbdace4d51a0a8f768ab12e2f1c7d.js",
+    "service-worker.js": "/v1/admin/service-worker.js",
+    "static/css/2.3c8e866b.chunk.css.map": "/v1/admin/static/css/2.3c8e866b.chunk.css.map",
+    "static/js/2.61bf0d41.chunk.js.LICENSE.txt": "/v1/admin/static/js/2.61bf0d41.chunk.js.LICENSE.txt",
+    "static/media/bootstrap.css": "/v1/admin/static/media/glyphicons-halflings-regular.fa277232.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a1dda676.js",
+    "static/css/2.3c8e866b.chunk.css",
+    "static/js/2.61bf0d41.chunk.js",
+    "static/js/main.0e2382ef.chunk.js"
+  ]
+}
