@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: twitchat
+Version: 1.3.11
+Summary: A simple Twitch chat bot that gives you the option to run complicated commands, to an extent that other bots don't allow.
+Home-page: https://github.com/Fittiboy/python-twitch-bot
+License: UNKNOWN
+Keywords: twitch, twitch.tv, chat bot, bot
+Author: Fitti
+Author-email: dev@fitti.io
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Communications :: Chat :: Internet Relay Chat
+Requires-Dist: requests>=2.24.0
+Requires-Dist: irc>=18.0.0
+
+# Python Twitch Bot
+There is currently no documentation for this project, as I have only recently decided to publish this.<br>
+Documentation will be added gradually.
+
