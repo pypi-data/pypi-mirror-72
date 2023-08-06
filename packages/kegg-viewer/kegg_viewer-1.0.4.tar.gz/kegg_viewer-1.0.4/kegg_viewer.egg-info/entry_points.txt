@@ -1,0 +1,3 @@
+[console_scripts]
+kegg_viewer = kegg_viewer.bin.main:main
+
