@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: o-must-gather
+Version: 0.7
+Summary: oc like tool that works with must-gather rather than OpenShift API
+Home-page: https://github.com/kxr/o-must-gather
+Author: Khizer Naeem
+Author-email: khizernaeem@gmail.com
+License: GPLv3
+Description: 
+        oc like tool that works with must-gather rather than OpenShift API
+        
+Platform: any
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
