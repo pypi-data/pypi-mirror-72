@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: goss-sdk-python
+Version: 0.5.1
+Summary: goss-sdk-python
+Home-page: https://www.gizwits.com/
+Author: jzhuang
+Author-email: jzhuang@gizwits.com
+License: Apache
+Platform: UNKNOWN
+Requires-Dist: esdk-obs-python (>=3.19.5)
+Requires-Dist: cos-python-sdk-v5 (>=1.8.0)
+Requires-Dist: oss2 (>=2.8.0)
+Requires-Dist: boto3 (>=1.10.15)
+
+UNKNOWN
+
+
