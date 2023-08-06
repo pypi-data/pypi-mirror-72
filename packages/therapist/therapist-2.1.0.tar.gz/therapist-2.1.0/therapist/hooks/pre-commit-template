@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# THERAPIST %hash% v2
+
+exitcode=0
+
+# Get the current working directory
+pushd "$(dirname "$0")" > /dev/null || exit 2
+CWD=$(pwd)
+popd > /dev/null || exit 2
+
+# Run the legacy pre-commit if it exists
+if [ -x "$CWD"/pre-commit.legacy ]; then
+    if ! "$CWD"/pre-commit.legacy; then
+        exitcode=1
+    fi
+fi
+
+if ! %therapist_bin% run %stage_modified_files% %fix%; then
+    exitcode=1
+fi
+
+exit ${exitcode}
