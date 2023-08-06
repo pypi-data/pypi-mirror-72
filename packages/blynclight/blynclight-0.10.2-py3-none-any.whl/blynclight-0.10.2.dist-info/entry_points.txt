@@ -1,0 +1,3 @@
+[console_scripts]
+blync=blynclight.__main__:cli
+
