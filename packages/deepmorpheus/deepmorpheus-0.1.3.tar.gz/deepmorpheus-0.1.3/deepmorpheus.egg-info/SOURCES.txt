@@ -1,0 +1,13 @@
+README.md
+setup.py
+deepmorpheus/__init__.py
+deepmorpheus/dataset.py
+deepmorpheus/model.py
+deepmorpheus/tag.py
+deepmorpheus/train.py
+deepmorpheus/util.py
+deepmorpheus.egg-info/PKG-INFO
+deepmorpheus.egg-info/SOURCES.txt
+deepmorpheus.egg-info/dependency_links.txt
+deepmorpheus.egg-info/requires.txt
+deepmorpheus.egg-info/top_level.txt
