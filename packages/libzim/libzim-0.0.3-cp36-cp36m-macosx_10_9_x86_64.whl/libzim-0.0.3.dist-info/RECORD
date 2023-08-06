@@ -1,0 +1,17 @@
+libzim/__init__.py,sha256=hhdUGd0VORdLbbI6QvQiKI7r74Y5ZoOi3JGLMXCK5F0,844
+libzim/lib.cxx,sha256=8icx4QabydHkW8yi8PRanThK7CjWtW3fUgGmYckhB3Q,6097
+libzim/lib.h,sha256=GVMSCI1KtWfEVBhzslbIf_W0Y1M2XBEdDlawOZ_GKug,2478
+libzim/libzim.6.dylib,sha256=dOncdogiiOzlNcFlSbbilqfeh-gDHbu5W5AdXR8vSyc,15723420
+libzim/reader.py,sha256=JkpXgVJZN455isyNChm-jKg2_WBDpcRKO0kZgkS9s_E,445
+libzim/wrapper.cpp,sha256=hbLcovfOLYeEV_Ai7gpcazdiIlA9ybX_TXjQ06GBqR0,556581
+libzim/wrapper.cpython-36m-darwin.so,sha256=GJDw6La5Jb7bYedwyG9-UjUKszzznGYUeztncyYDuj4,202464
+libzim/wrapper.h,sha256=Q8l8QwUVKUVhCgEJ9OL0nXSxE-s_D74DwcdqNFtT1eU,1051
+libzim/wrapper.pxd,sha256=QJFntGVNyo18wHEmLSdbzUgZ210WmaehY94rE4ecIJY,4603
+libzim/wrapper.pyx,sha256=V_TkwxXP_DtNJdMED9qktwTB9Wvuh5ASn7fgR8AjwhQ,18397
+libzim/wrapper_api.h,sha256=EOou7fEdesfTcK10jgKId5ztwwHPH26wS2MXBvThPWk,3782
+libzim/writer.py,sha256=xj0ZUVtDTcrM2ymperEV_-a5S4aG5wET8KScYQ_ehiU,7935
+libzim-0.0.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+libzim-0.0.3.dist-info/METADATA,sha256=cvBtCIm2xX2uYZ232DKg2BYLGtuP1Pm_Ew4kZ2ainjc,7725
+libzim-0.0.3.dist-info/WHEEL,sha256=lSU0w45QqfDJHTuhFZouPsIyI-GSJHfRV-2E-9aUKe4,110
+libzim-0.0.3.dist-info/top_level.txt,sha256=GdZ3eu3o1TZ8u4YE89CdUK2IPSei-1_pQ0Ipw32EMmo,7
+libzim-0.0.3.dist-info/RECORD,,
