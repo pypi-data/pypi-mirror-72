@@ -1,0 +1,15 @@
+aiohttp_i18n/__init__.py,sha256=Dtj4zLTrcG6KsNWGadZuHUvwHpDu7s-O-Zep-VxCGdE,286
+aiohttp_i18n/const.py,sha256=J3m44soOFSlZgnogP7rwESQcg_Lr2_DpYsRAlzQ2jQA,22
+aiohttp_i18n/i18n.py,sha256=-TgG3Fj5ui2Jp-gB0CEePKXoUqHw_JqpNp0TmVVR7hA,1560
+aiohttp_i18n/locale.py,sha256=uDPHRRyUHcak8VvS5ucpOMZvJDu1-CcvF8A3dq6tN0A,2910
+aiohttp_i18n/middleware.py,sha256=dfDWi4AyOqLK57PFoAyjFjYO3fI_t2WxDYj1EbGPLuQ,753
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__test.py,sha256=6sIvbssqVYKHY4xUHC7L35dNOv5S-pJeKv0IW6G5eoM,250
+tests/const_test.py,sha256=j5qAHRx7JpcoItbxattMtS6PxM082Pmw6kFiuY7mOhQ,115
+tests/i18n_test.py,sha256=LeXr1fES3lpnsQOWiajXJYtY2iB8utl0YrNiIuFvMlo,2887
+tests/locale_test.py,sha256=qD5nDD1GGJqI8pbpVInxX3NjuOXNRaVNGTtbw8juQjI,1046
+tests/middleware_test.py,sha256=-bmpynq9FsiCIjOziHjOtgumd6eZCMexvHoPWC6XRKE,2005
+aiohttp_i18n-0.0.7.dist-info/METADATA,sha256=FHrPFxNoZDdZzAD5w3Q7jMn276gTk0OtiGi-AEP9Nrg,1317
+aiohttp_i18n-0.0.7.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aiohttp_i18n-0.0.7.dist-info/top_level.txt,sha256=L2zGeh_itn4X5cPXIGNDuyWW0FkfyZn5vlzkjjcF44w,19
+aiohttp_i18n-0.0.7.dist-info/RECORD,,
