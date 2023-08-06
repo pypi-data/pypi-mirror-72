@@ -1,0 +1,16 @@
+README.md
+setup.py
+espnet_tts_frontend.egg-info/PKG-INFO
+espnet_tts_frontend.egg-info/SOURCES.txt
+espnet_tts_frontend.egg-info/dependency_links.txt
+espnet_tts_frontend.egg-info/requires.txt
+espnet_tts_frontend.egg-info/top_level.txt
+tacotron_cleaner/__init__.py
+tacotron_cleaner/cleaners.py
+tacotron_cleaner/cmudict.py
+tacotron_cleaner/numbers.py
+tacotron_cleaner/symbols.py
+vietnamese_cleaner/__init__.py
+vietnamese_cleaner/regex_tokenize.py
+vietnamese_cleaner/vietnameseNormUniStd.py
+vietnamese_cleaner/vietnamese_cleaners.py
