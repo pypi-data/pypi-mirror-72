@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="plone.staticresources">
+
+  <include file="2.zcml" />
+  <include file="3.zcml" />
+  <include file="4.zcml" />
+  <include file="5.zcml" />
+  <include file="6.zcml" />
+  <include file="7.zcml" />
+  <include file="8.zcml" />
+
+</configure>
