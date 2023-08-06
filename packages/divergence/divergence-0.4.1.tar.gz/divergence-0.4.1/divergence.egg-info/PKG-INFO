@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: divergence
+Version: 0.4.1
+Summary: Information Theoretic Measures of Entropy and Divergence
+Home-page: https://github.com/michaelnowotny/divergence
+Author: Michael Christoph Nowotny
+Author-email: nowotnym@gmail.com
+License: MIT
+Description: 
+        # Divergence
+        Divergence is a Python package to compute statistical measures of entropy and divergence from probability distributions and samples.
+        
+        The following functionality is provided:
+        * (Information) Entropy
+        * Cross Entropy 
+        * Relative Entropy or Kullback-Leibler (KL-) Divergence
+        * Jensen-Shannon Divergence
+        * Joint Entropy
+        * Conditional Entropy
+        * Mutual Information
+        
+        The units in which these entropy and divergence measures are calculated can be specified by the user. 
+        This is achieved by the argument `base`, to `2.0`, `10.0`, or `np.e`. 
+        
+        In a Bayesian context, relative entropy can be used as a measure of the information gained by moving 
+        from a prior distribution `q` to a posterior distribution `p`.
+        
+        ## Installation
+        
+        <pre>
+            pip install divergence
+        </pre>
+        
+        ## Examples
+        See the Jupyter notebook [Divergence](https://github.com/michaelnowotny/divergence/blob/master/notebooks/Divergence.ipynb).
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
