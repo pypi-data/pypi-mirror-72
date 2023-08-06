@@ -1,0 +1,15 @@
+{
+  "osu! path": "/Users/yuitora./pythonstuff/data",
+  "Skin path": "/Users/yuitora./Downloads/fierymod_v8_realest_ver[1]",
+  "Beatmap path": "/Users/yuitora./Downloads/kouma",
+  ".osr path": "/Users/yuitora./Downloads/kouma.osr",
+  "Output path": ".",
+  "Width": 1920,
+  "Height": 1080,
+  "FPS": 60,
+  "Start time": 0,
+  "End time": 10,
+  "Video codec": "X264",
+  "Process": 2,
+  "ffmpeg path": "ffmpeg"
+}
