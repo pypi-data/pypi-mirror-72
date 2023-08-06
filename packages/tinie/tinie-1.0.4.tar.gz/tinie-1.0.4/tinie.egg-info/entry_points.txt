@@ -1,0 +1,7 @@
+[console_scripts]
+make_system_files = tinie.scripts.make_system_files:user_interface
+tinie = tinie.scripts.tinie:main
+tinie_dos = tinie.scripts.tinie_dos:main
+tinie_draw = tinie.scripts.tinie_draw:main
+tinie_prepare = tinie.scripts.tinie_prepare:main
+
