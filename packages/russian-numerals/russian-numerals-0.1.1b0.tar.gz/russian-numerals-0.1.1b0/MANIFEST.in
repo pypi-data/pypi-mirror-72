@@ -1,0 +1,8 @@
+recursive-include bin *
+recursive-include russian_numerals *
+include AUTHORS
+include LICENSE
+include *.md
+include requirements.txt
+global-exclude __pycache__
+global-exclude *.py[co]

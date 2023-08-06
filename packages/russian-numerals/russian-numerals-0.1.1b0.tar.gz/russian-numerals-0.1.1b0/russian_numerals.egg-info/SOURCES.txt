@@ -1,0 +1,15 @@
+AUTHORS
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+bin/russian-numerals
+russian_numerals/__init__.py
+russian_numerals/handlers.py
+russian_numerals.egg-info/PKG-INFO
+russian_numerals.egg-info/SOURCES.txt
+russian_numerals.egg-info/dependency_links.txt
+russian_numerals.egg-info/not-zip-safe
+russian_numerals.egg-info/requires.txt
+russian_numerals.egg-info/top_level.txt
