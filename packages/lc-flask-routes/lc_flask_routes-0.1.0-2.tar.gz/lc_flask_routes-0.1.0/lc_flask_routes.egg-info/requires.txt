@@ -1,0 +1,11 @@
+Flask
+
+[all]
+lc-flask-reqparser
+lc-registry
+
+[registry]
+lc-registry
+
+[reqparser]
+lc-flask-reqparser
