@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: vci
+Version: 0.2.5
+Summary: version control management from an index of listed workspaces
+Home-page: http://github.com/stonier/vci
+Author: Daniel Stonier
+Author-email: d.stonier@gmail.com
+Maintainer: Daniel Stonier
+Maintainer-email: d.stonier@gmail.com
+License: BSD
+Description: Version control index handling from a yaml file on the internet (e.g. github).
+Keywords: catkin
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Version Control
+Classifier: Topic :: Utilities
