@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: elasticdl-client
+Version: 0.2.0rc1
+Summary: The client tool for ElasticDL.
+Home-page: https://elasticdl.org
+Author: Ant Financial
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
