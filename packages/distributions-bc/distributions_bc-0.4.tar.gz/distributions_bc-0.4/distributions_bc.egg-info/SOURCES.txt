@@ -1,0 +1,11 @@
+README.md
+setup.py
+distributions_bc/__init__.py
+distributions_bc/binomialdistribution.py
+distributions_bc/gaussiandistribution.py
+distributions_bc/generaldistribution.py
+distributions_bc.egg-info/PKG-INFO
+distributions_bc.egg-info/SOURCES.txt
+distributions_bc.egg-info/dependency_links.txt
+distributions_bc.egg-info/not-zip-safe
+distributions_bc.egg-info/top_level.txt
