@@ -1,0 +1,47 @@
+#!/usr/bin/env python
+from lightweight import Site, jinja, sass, directory, template, markdown, paths, GenContext, from_ctx, SiteCli
+
+from pathlib import Path
+
+
+module_dir = Path(__file__).parent
+
+
+def {! title_slug !}(url):
+    site = Site(
+        title='{! site.title !}',
+        url=url,
+    )
+
+    with directory(module_dir):
+        # Render an index page from Jinja2 template.
+        site.add('index.html', jinja('index.html'))
+
+        site.add('labs.html', jinja('labs.html'))
+
+        # Render markdown blog posts.
+        [site.add(f'blog/{post.source_path.stem}.html', post) for post in blog_posts('posts/**.md')]
+        site.add('blog.html', jinja('blog.html', posts=from_ctx(post_tasks)))
+
+        # Render SASS to CSS.
+        site.add('css/global.css', sass('styles/global.scss'))
+
+        # Include directory with all of its contents.
+        site.add('js')
+        site.add('img')
+
+    return site
+
+
+def blog_posts(source: str):
+    post_template = template('_templates_/blog/post.html')
+    return (markdown(path, post_template) for path in paths(source))
+
+
+def post_tasks(ctx: GenContext):
+    return [task for task in ctx.tasks if task.path.parts[0] == 'blog']
+
+
+if __name__ == '__main__':
+    cli = SiteCli({! title_slug !})
+    cli.run()

@@ -1,0 +1,109 @@
+{% extends "_templates_/base.html" %}
+
+{% block main %}
+    <p>Welcome to <a class="lw" href="https://lightweight.site">Lightweight</a>:
+        a static website generator without magic.</p>
+
+    <p>You’re running version <b>{{ ctx.version }}</b>.</p>
+
+    <h2>Code over configuration</h2>
+
+    <p>Since this is the core idea behind the framework,
+        start by checking out the <code>site.py</code> file. </p>
+
+    <p>This module contains a few examples of using library.</p>
+
+    <p>It’s located right in the root of the generated project directory.</p>
+
+    <h3>Next steps</h3>
+
+    <p>Having a project setup and a local dev server running we can play with some content:</p>
+
+    <h4>Include a new HTML page</h4>
+
+    <p>Including a regular HTML to the site is easy:</p>
+    <ol>
+        <li>Create an HTML file under the project directory.
+            We will assume it’s name to be <code>about.html</code>.
+        </li>
+
+        <li>Add a following line to <code>site.py</code> right next to other includes:
+            <pre><code class="python">site.include('about.html')</code></pre>
+        </li>
+
+        <li>Done! Check out the page at the location matching the file name,
+            e.g. <a href="/about">/about</a> for <code>about.html</code></li>
+    </ol>
+
+    <p>If your file is not located under the root of the project directory, then use the relative path.
+        For example file <code>&lt;project&gt;/docs/examples/space-invasion.html</code> is included via:
+    <pre><code class="python">site.include('docs/examples/space-invasion.html')</code></pre>
+    and will be accessible under <a href="/docs/examples/space-invasion">/docs/examples/space-invasion</a>.
+
+    <h4>Add a new page rendered by Jinja</h4>
+
+    <p><a href="https://jinja.palletsprojects.com/en/2.10.x/">Jinja</a> is a powerful template engine for Python.
+        You can see how its used in the <code>index.html</code>.</p>
+    <p>To render a Jinja template as part of the site use the <code>lightweight.jinja</code> method:</p>
+
+    <pre><code class="python">from lightweight import jinja
+...
+site.include('index.html', jinja('index.html'))
+...</code></pre>
+
+    <p>This piece of code creates content from rendering the provided <code>index.html</code> Jinja template
+        and places it under the same to the output directory.</p>
+
+    <p>You can also pass arguments to Jinja templates.
+        This is done via keyword arguments of <code>jinja(src, **kwargs)</code>.</p>
+
+    <details {%- if spoon is defined %} open{% endif %}>
+        <summary>For example, try controlling the spoon.</summary>
+        {% if spoon is defined and spoon is none %}
+            <img src="{{ site / 'img/matrix/no-spoon.jpg' }}"
+                 alt="A bent spoon"
+                 title="There is no spoon.">
+        {% else %}
+            <img src="{{ site / 'img/matrix/spoon.jpg' }}"
+                 alt="Matrix boy with an unbent spoon."
+                 title="Do not try and bend the spoon. That's impossible. Instead… only try to realize the truth.">
+        {% endif %}
+
+        <p>The code with the image looks like this:</p>
+
+        <pre><code class="html">
+{#- @formatter:off -#}
+    {%- raw -%}
+{% if spoon is defined and spoon is none %}
+    &lt;img src="{{ site / 'img/matrix/no-spoon.jpg' }}"
+         alt="A bent spoon"
+         title="There is no spoon."&gt;
+{% else %}
+    &lt;img src="{{ site / 'img/matrix/spoon.jpg' }}"
+         alt="Matrix boy with an unbent spoon."
+         title="Do not try and bend the spoon. That's impossible. Instead… only try to realize the truth."&gt;
+{% endif %}
+    {%- endraw -%}
+{#- @formatter:on -#}
+        </code></pre>
+
+        <p>We do not pass the <code>spoon</code> to the template, so it is undefined.
+            Let’s pass <code>None</code> to render the true branch of the if.</p>
+
+        <pre><code class="python">site.include('index.html', jinja('index.html', spoon=None))</code></pre>
+    </details>
+
+
+    <h4>Add some style</h4>
+
+    <p></p>
+    <pre><code class="sass"></code></pre>
+
+
+    <h4>Create Content of your own</h4>
+
+    <p></p>
+    <pre><code class="python"></code></pre>
+
+
+{% endblock %}
