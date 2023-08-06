@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: robotframework-slack-notifications
+Version: 0.0.1
+Summary: Send notifications to Slack or Mattermost using Robot Framework Listener..
+Home-page: https://github.com/
+Author: PJ Gevana
+Author-email: patdroidz@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+RobotSlackNotifications
+===============
+
+Send notifications to Slack or Mattermost using Robot Framework Listener.
+
+Installation
+------------
+
+The recommended installation method is pip:
+
+    pip install robotframework-notifications
+
+Running this command installs also the latest version of Requests
+
+Import Library
+-----
+
+To use RobotSlackNotifications in Robot Framework, the library needs to be imported using the ``Library`` setting as any other library. The library needs the webhook url from Slack or Mattermost as an argument.
+
+You can retrieve this webhook url in Slack or Mattermost.
+
+Slack
+
+> https://slack.com/intl/en-lv/help/articles/115005265063-incoming-webhooks-for-slack
+
+Mattermost
+
+>  https://docs.mattermost.com/developer/webhooks-incoming.html#simple-incoming-webhook 
+
+Usage
+-----
+
+Import library then add it on the listener during Robot Framework test run.
+
