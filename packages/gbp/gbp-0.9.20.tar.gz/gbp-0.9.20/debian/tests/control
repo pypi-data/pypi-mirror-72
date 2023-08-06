@@ -1,0 +1,3 @@
+Tests: smoke-rpm
+Depends: @, xsltproc
+Restrictions: allow-stderr
