@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+lpocv/__init__.py
+lpocv/_version.py
+lpocv/lpocv.py
+lpocv.egg-info/PKG-INFO
+lpocv.egg-info/SOURCES.txt
+lpocv.egg-info/dependency_links.txt
+lpocv.egg-info/requires.txt
+lpocv.egg-info/top_level.txt

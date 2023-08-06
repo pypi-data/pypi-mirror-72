@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: lpocv
+Version: 0.0.2
+Summary: Leave-pair-out cross-validation
+Home-page: http://github.com/mauliknariya/lpocv
+Author: Maulik Nariya
+Author-email: mauliknariya@gmail.com
+License: UNKNOWN
+Description: 
+        **lpocv** is a Python module that implements leave-pair-out cross-validation 
+        for machine learning classification and regression problems. It allows the user 
+        to match the samples by a confounding batch variable and also include errors 
+        on the labels (for regression problems).
+        
+Keywords: leave-pair-out,cross-validation,batch effects,bioinformatics
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
