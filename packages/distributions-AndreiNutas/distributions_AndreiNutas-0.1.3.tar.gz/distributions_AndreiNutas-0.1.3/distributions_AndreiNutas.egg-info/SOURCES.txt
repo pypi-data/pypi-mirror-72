@@ -1,0 +1,10 @@
+setup.py
+distributions_AndreiNutas/Binomialdistribution.py
+distributions_AndreiNutas/Gaussiandistribution.py
+distributions_AndreiNutas/Generaldistribution.py
+distributions_AndreiNutas/__init__.py
+distributions_AndreiNutas.egg-info/PKG-INFO
+distributions_AndreiNutas.egg-info/SOURCES.txt
+distributions_AndreiNutas.egg-info/dependency_links.txt
+distributions_AndreiNutas.egg-info/not-zip-safe
+distributions_AndreiNutas.egg-info/top_level.txt
