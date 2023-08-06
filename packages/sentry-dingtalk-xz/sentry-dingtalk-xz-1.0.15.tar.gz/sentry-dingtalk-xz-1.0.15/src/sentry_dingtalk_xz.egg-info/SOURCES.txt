@@ -1,0 +1,12 @@
+README.md
+setup.py
+src/sentry_dingtalk_xz/__init__.py
+src/sentry_dingtalk_xz/forms.py
+src/sentry_dingtalk_xz/plugin.py
+src/sentry_dingtalk_xz.egg-info/PKG-INFO
+src/sentry_dingtalk_xz.egg-info/SOURCES.txt
+src/sentry_dingtalk_xz.egg-info/dependency_links.txt
+src/sentry_dingtalk_xz.egg-info/entry_points.txt
+src/sentry_dingtalk_xz.egg-info/not-zip-safe
+src/sentry_dingtalk_xz.egg-info/requires.txt
+src/sentry_dingtalk_xz.egg-info/top_level.txt
