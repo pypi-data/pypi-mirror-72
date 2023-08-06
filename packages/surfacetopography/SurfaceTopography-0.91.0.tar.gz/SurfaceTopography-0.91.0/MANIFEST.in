@@ -1,0 +1,4 @@
+include tests/file_format_examples/*
+include examples/*.py
+include examples/*.ipynb
+include c/*.h
