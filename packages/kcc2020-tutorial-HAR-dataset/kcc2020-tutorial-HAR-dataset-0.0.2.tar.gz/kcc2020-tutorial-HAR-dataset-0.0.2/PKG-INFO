@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: kcc2020-tutorial-HAR-dataset
+Version: 0.0.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Auk Kim
+Author-email: kimauk@kaist.ac.kr
+License: UNKNOWN
+Description: # Dataset for KCC2020: Tutorial on Human Activity Recognition 
+        
+        ## Install
+        ```cmd
+        pip install kcc2020-tutorial-HAR-dataset
+        ```
+        ## How to use
+        * This dataset is for the KCC2020 tutorial on human activity recognition.  
+        * This dataset is originally from UCI's HAPT (Human Activities and Postural Transitions) an modified for KCC 2020 Sensing tutorial. 
+        * You can download original dataset from the [HAPT website](http://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions) (for details of the dataset, see [HAPT dataset website](http://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions)).
+        
+        ### load_all
+        * To download dataset of entire users, use 'load_all().' 
+        
+        * For example:
+        ```python
+        from kcc2020 import load_all
+        
+        entire_datase = load_all()
+        ```
+        
+        * It automatically removes any part of data that has no labels. 
+        
+        * To obtain data with the removal, please use 'load_all(remove_no_lavels = False).' 
+        
+        ### load_by_user
+        * To download dataset of a specific user, use 'load_by_user(uid).' 
+        
+        * It returns pandas's DataFrame that contains the dataset of the specific user with given uid. 
+        
+        * There is 30 users; it returns 'None' if uid is greater than 30.
+        
+        * For example:
+        ```python
+        from kcc2020 import load_by_user
+        
+        user1_datasett = load_by_user(1)
+        ```
+        
+        * It automatically removes any part of data that has no labels. 
+        
+        * To obtain data with the removal, please use 'load_by_user(uid, remove_no_lavels = False).' 
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
