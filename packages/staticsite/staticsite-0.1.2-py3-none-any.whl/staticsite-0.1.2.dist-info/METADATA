@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: staticsite
+Version: 0.1.2
+Summary: Super simple Jinja2 based staticsite generator.
+Home-page: https://thesage21.github.io/staticsite/
+Author: arjoonn sharma
+Author-email: arjoonn.94@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: Flask-Minify (>=0.23,<0.24)
+Requires-Dist: Jinja2 (>=2.11.2,<3.0.0)
+Requires-Dist: pyyaml (>=5.3.1,<6.0.0)
+Description-Content-Type: text/markdown
+
+# StaticSite
+
+Super simple static site builder.
+
+1. Create a folder called `src` (or spcify `--src` on CLI)
+2. Put your files there.
+3. `python -m staticsite`
+4. Find your built site in `docs` (or specify `--target` on CLI)
+
+[Documentation](https://thesage21.github.io/staticsite/)
+
