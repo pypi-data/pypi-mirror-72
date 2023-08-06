@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: hs_package
+Version: 0.0.7
+Summary: hs_httpController provides http protocol network request
+ hs_logController provides log output control
+
+Home-page: hs_httpController supports http protocol GET/POST/PATCH/PUT/DELETE method, the connection waiting time is 5s by default
+
+Author: hongs
+Author-email: li_shengyou@163.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
