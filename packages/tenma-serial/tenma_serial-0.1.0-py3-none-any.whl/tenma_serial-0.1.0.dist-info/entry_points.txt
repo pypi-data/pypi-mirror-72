@@ -1,0 +1,4 @@
+[console_scripts]
+gtkIndicator.py = tenma.gtkIndicator:main
+tenmaControl.py = tenma.tenmaControl:main
+
