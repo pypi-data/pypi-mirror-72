@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: one_fmt
+Version: 1.0.3
+Summary: A module to generate format string exploit shorter than a given length. Currently only supports python2
+Home-page: https://github.com/publicqi/one_fmt/
+Author: publicqi
+Author-email: qisu@ucsb.edu
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
