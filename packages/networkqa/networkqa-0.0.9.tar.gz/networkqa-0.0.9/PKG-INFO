@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: networkqa
+Version: 0.0.9
+Summary: A module to aid in automated qa of networking devices
+Home-page: http://naic-gitlab.wwt.com/lalonder/networkqa
+Author: Richard Lalonde
+Author-email: richard.lalonde@wwt.com
+License: UNKNOWN
+Description: ﻿# Network QA Module
+        
+        ## Purpose
+        
+        To provide OOP tools to automating the quality assurance checks against switches.
+        
+        ## About
+        
+        Lorem Ipsum
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
