@@ -1,0 +1,13 @@
+README.md
+classify_fasta.py
+setup.py
+plasclass/__init__.py
+plasclass/plasclass.py
+plasclass/plasclass_utils.py
+plasclass/train.py
+plasclass.egg-info/PKG-INFO
+plasclass.egg-info/SOURCES.txt
+plasclass.egg-info/dependency_links.txt
+plasclass.egg-info/requires.txt
+plasclass.egg-info/top_level.txt
+test/test.py
