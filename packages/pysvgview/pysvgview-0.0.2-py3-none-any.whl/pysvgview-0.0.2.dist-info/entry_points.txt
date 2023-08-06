@@ -1,0 +1,3 @@
+[console_scripts]
+pysvgview = pysvgview.endpoints.main:main
+
