@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: k0d-expert
+Version: 0.0.1
+Summary: Cli для школы k0d.expert
+Home-page: https://k0d.expert
+License: MIT
+Keywords: cli,k0d,education
+Author: Nikolay Baryshnikov
+Author-email: root@k0d.ru
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Russian
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/p141592/k0d_expert_cli
+Description-Content-Type: text/markdown
+
+# Cli для школы k0d.expert
+
+
