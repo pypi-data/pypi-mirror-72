@@ -1,0 +1,12 @@
+README.md
+setup.py
+split_normal/__init__.py
+split_normal/_base.py
+split_normal/jax.py
+split_normal/numpy.py
+split_normal/version.py
+split_normal.egg-info/PKG-INFO
+split_normal.egg-info/SOURCES.txt
+split_normal.egg-info/dependency_links.txt
+split_normal.egg-info/requires.txt
+split_normal.egg-info/top_level.txt
