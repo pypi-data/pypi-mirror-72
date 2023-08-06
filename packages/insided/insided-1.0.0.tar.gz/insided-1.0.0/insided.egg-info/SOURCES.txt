@@ -1,0 +1,14 @@
+README.md
+setup.py
+insided/__init__.py
+insided/api.py
+insided/api_helper.py
+insided/authorization.py
+insided/gamification.py
+insided/users.py
+insided/webhooks.py
+insided.egg-info/PKG-INFO
+insided.egg-info/SOURCES.txt
+insided.egg-info/dependency_links.txt
+insided.egg-info/requires.txt
+insided.egg-info/top_level.txt

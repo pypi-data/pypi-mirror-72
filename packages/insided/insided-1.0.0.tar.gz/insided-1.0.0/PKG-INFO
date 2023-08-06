@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: insided
+Version: 1.0.0
+Summary: Connect Python applications with the InSided API
+Home-page: https://github.com/remstone7/insided-python
+Author: Remington Stone
+Author-email: remstone7@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: insided,api
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
