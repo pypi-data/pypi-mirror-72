@@ -1,0 +1,11 @@
+mapscaler/__init__.py,sha256=V7REkhHVU98_aUWW1mUKGM1OVWyw7b6cLpnOlHt1bOw,98
+mapscaler/datasets.py,sha256=Jk6IHqhL_3vK7MDScd57PuriOyA4jC2NnRqwyX1jGcM,2136
+mapscaler/mapscaler.py,sha256=GX1HFco_p70FqhqiosDQBR_wQKLv3msrSkmKAvRYXu0,19682
+mapscaler/maputils.py,sha256=L1S9E4ERvgG5SiKRQZRSJ6W5zEAB3LqAKnbn_bkecHg,2838
+mapscaler/geojson/us_counties.json,sha256=PsG-NI-EASDAWpFenHMwpDjvQD_fugOsLPBRXwp9UgQ,3583496
+mapscaler/geojson/us_states.json,sha256=w5kK22huFDL-NMGsZSRUtpqqhGasREAkJ6IUjDXRkxQ,2517637
+mapscaler-0.0.4.dist-info/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+mapscaler-0.0.4.dist-info/METADATA,sha256=aOiuvMfKvsl-Bp5Rm7gNbXsxSvGumrlXpXF8f391i4Q,2442
+mapscaler-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mapscaler-0.0.4.dist-info/top_level.txt,sha256=MqvaE-6HcISZd3QokJZado9xt4fOgQBW1qGL5UsWPN8,10
+mapscaler-0.0.4.dist-info/RECORD,,
