@@ -1,0 +1,11 @@
+README.md
+setup.py
+imagekit_cli.egg-info/PKG-INFO
+imagekit_cli.egg-info/SOURCES.txt
+imagekit_cli.egg-info/dependency_links.txt
+imagekit_cli.egg-info/entry_points.txt
+imagekit_cli.egg-info/not-zip-safe
+imagekit_cli.egg-info/requires.txt
+imagekit_cli.egg-info/top_level.txt
+imagekitcli/__init__.py
+imagekitcli/migration.py
