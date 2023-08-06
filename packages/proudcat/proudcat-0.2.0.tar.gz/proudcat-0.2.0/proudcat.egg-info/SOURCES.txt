@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+proudcat
+screenshot-bg-frame.png
+screenshot.png
+setup.py
+proudcat.egg-info/PKG-INFO
+proudcat.egg-info/SOURCES.txt
+proudcat.egg-info/dependency_links.txt
+proudcat.egg-info/requires.txt
+proudcat.egg-info/top_level.txt
