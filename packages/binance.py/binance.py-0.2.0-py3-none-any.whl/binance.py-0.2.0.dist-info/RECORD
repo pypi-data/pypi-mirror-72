@@ -1,0 +1,11 @@
+binance/__init__.py,sha256=IJczOrD6okDkZaMsUcDbyv-pj4F_TXIYq0IPVqh7GiE,316
+binance/client.py,sha256=AORsh8shBw0_85gLtUUbhWV9XXhTpSjycNOpQi5A6y0,22401
+binance/definitions.py,sha256=Pe9SJcvTl8Wm4MGVD3Xm3cUdRYUGcoXQKtP4NfyGn_s,2600
+binance/events.py,sha256=ojF4FGTRF2ytXNU9uv2ka4RY0eWL4x0emly9oqbr1OY,5240
+binance/http.py,sha256=GryOGMAzgCxi28NweKqbtIKw_BHZB-gzx8asqtWThhs,3464
+binance/web_sockets.py,sha256=UgUW7eeICzt0KFzELMFkz6DYGDmvbMjUgje4Op4tELM,1702
+binance.py-0.2.0.dist-info/LICENSE.md,sha256=qqVcpRjE0LXLRmFKO7LC65TpFBLOooXMNeYUT0OmZao,1071
+binance.py-0.2.0.dist-info/METADATA,sha256=hU8BaEVBnDal8TURUgTVnDycIt9kaeGev96J10OtUZU,3402
+binance.py-0.2.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+binance.py-0.2.0.dist-info/top_level.txt,sha256=xMXwvXpjhx_3huR75xLUk8CBjUv0g4S8-TM8cROS1HA,8
+binance.py-0.2.0.dist-info/RECORD,,
