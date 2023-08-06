@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: mill-bin
+Version: 0.2
+Summary: Mill Binary is a fat JAR with all of its dependencies.
+Home-page: https://github.com/jlsemi
+Author: Leway Colin@JLSemi
+Author-email: colinlin@jlsemi.com
+License: Apache-2.0 License
+Description: UNKNOWN
+Keywords: mill
+Platform: UNKNOWN
+Requires-Python: >=3.6
