@@ -1,0 +1,7 @@
+numpy
+
+[test]
+pytest
+pytest-benchmark
+imageio
+quantized-mesh-tile
