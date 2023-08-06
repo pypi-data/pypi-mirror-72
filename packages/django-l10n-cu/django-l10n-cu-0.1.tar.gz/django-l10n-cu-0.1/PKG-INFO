@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: django-l10n-cu
+Version: 0.1
+Summary: A Django app for adapting a product for a cuban market.
+Home-page: https://mirage-tech-cuba.github.io/
+Author: Jorge Luis Alfonso Chavez
+Author-email: jlalfonso21@gmail.com
+License: GNU General Public License v3 (GPLv3)
+Description: UNKNOWN
+Keywords: django,cuba
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
