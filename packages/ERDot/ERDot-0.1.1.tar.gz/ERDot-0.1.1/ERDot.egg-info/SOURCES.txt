@@ -1,0 +1,12 @@
+README.md
+setup.py
+ERDot.egg-info/PKG-INFO
+ERDot.egg-info/SOURCES.txt
+ERDot.egg-info/dependency_links.txt
+ERDot.egg-info/entry_points.txt
+ERDot.egg-info/requires.txt
+ERDot.egg-info/top_level.txt
+erdot/__init__.py
+erdot/__main__.py
+erdot/b.py
+erdot/dTemplate.py
