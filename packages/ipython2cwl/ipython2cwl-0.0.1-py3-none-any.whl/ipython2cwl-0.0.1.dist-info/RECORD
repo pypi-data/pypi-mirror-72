@@ -1,0 +1,13 @@
+ipython2cwl/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+ipython2cwl/cwltoolextractor.py,sha256=WE5zTcADSKPbYZKTeAmSTqPaAYjr3muqHQuWByd6Pqs,9824
+ipython2cwl/iotypes.py,sha256=T0100LQbgxTA8AU9mdjXzPc2eeVAfCdFhlRTl1C_zjw,167
+ipython2cwl/ipython2cwl.py,sha256=K015G4n4GrZ-2YXhjkZoVvAtQyZKq5xC8ZaPldHFe4E,976
+ipython2cwl/repo2cwl.py,sha256=Z-DxXkwfhe5Z7ZfzQedKG5gjizo5mD8OXB6lMjNLPOI,6327
+ipython2cwl/requirements_manager.py,sha256=EZsp5NgzdPL9ZCP1TtNhl7hwcS27vqU0P4NR2ti5k-s,449
+ipython2cwl/templates/template.dockerfile,sha256=0kAWIZisz3mhz5ftiEbIEM5VuzP3BSwnH59lH5_zdfo,108
+ipython2cwl/templates/template.setup,sha256=1frPcUsjX8zPEHGCFWns7jO6AsU5-mhpM86HIkWuSMQ,242
+ipython2cwl-0.0.1.dist-info/METADATA,sha256=P2mSGMrEu3n5SJ0rt-GAsqlBCfs_SPw5OlNW0P5NSiY,2490
+ipython2cwl-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ipython2cwl-0.0.1.dist-info/entry_points.txt,sha256=mM5TklvQ8JXVbtyaAtt5IZJweLEJpycmO34oyLWY-rg,68
+ipython2cwl-0.0.1.dist-info/top_level.txt,sha256=sEjZQJYYRQQMhCL71Thhwk_JUL0m4vyH-hdTCKmVXBA,12
+ipython2cwl-0.0.1.dist-info/RECORD,,
