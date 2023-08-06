@@ -1,0 +1,3 @@
+[console_scripts]
+convert-embeddings = word_vectors.scripts.convert_embeddings:main
+
