@@ -1,0 +1,16 @@
+pyyaml
+faker
+randomio2
+requests
+
+[bluvalt]
+python-swiftclient
+
+[exoscale]
+boto3
+
+[s3]
+boto3
+
+[swift]
+python-swiftclient
