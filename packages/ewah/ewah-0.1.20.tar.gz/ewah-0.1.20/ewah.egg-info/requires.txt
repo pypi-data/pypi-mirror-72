@@ -1,0 +1,12 @@
+pyyaml
+psycopg2
+gspread
+pytz
+yahoofinancials
+google-api-python-client
+oauth2client
+cx_Oracle
+facebook_business
+mysql-connector-python
+snowflake-connector-python
+pymongo
