@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gym-robotorydownscale
+Version: 0.0.1
+Summary: A OpenAI Gym Env for Robotory downscale manipulator
+Home-page: https://github.com/shinhoang88/gym-robotorydownscale
+Author: Phi Tien Hoang
+Author-email: phitien@skku.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: gym
+Requires-Dist: pybullet
+Requires-Dist: numpy
+
+UNKNOWN
+
+
