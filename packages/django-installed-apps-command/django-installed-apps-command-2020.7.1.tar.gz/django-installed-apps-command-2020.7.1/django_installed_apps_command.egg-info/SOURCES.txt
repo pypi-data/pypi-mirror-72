@@ -1,0 +1,11 @@
+requirements.txt
+setup.py
+django_installed_apps_command/__init__.py
+django_installed_apps_command.egg-info/PKG-INFO
+django_installed_apps_command.egg-info/SOURCES.txt
+django_installed_apps_command.egg-info/dependency_links.txt
+django_installed_apps_command.egg-info/requires.txt
+django_installed_apps_command.egg-info/top_level.txt
+django_installed_apps_command/management/__init__.py
+django_installed_apps_command/management/commands/__init__.py
+django_installed_apps_command/management/commands/installed_apps.py
