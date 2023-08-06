@@ -1,0 +1,13 @@
+CHANGELOG.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+siginfo/__init__.py
+siginfo/localclass.py
+siginfo/siginfoclass.py
+siginfo/utils.py
+siginfo.egg-info/PKG-INFO
+siginfo.egg-info/SOURCES.txt
+siginfo.egg-info/dependency_links.txt
+siginfo.egg-info/top_level.txt
