@@ -1,0 +1,13 @@
+pyform/__init__.py,sha256=qY9VU0OJ1nrYxnyAJUTuuLcY8GEyl4Glvf-pNhR91jE,106
+pyform/_version.py,sha256=OkvD_FBkxSMQYcp6rk1_jHjZNYtbdWpJjJ1CY5L0RIs,497
+pyform/returnseries.py,sha256=BQ-c_feb7dhoeHrjcA9ZtHG6QEriOW7h_v3Ua4hUZvk,29878
+pyform/timeseries.py,sha256=Khuj3yBQa2WOa4F4MKVVxF6ZJsp-bOJFi66TJApQKNs,5336
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/unit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/unit/test_returnseries.py,sha256=6fQWI3Q-VEz__-GUUe6C4piU9OQC4Br_4SVRUxm_gG4,13851
+tests/unit/test_timeseries.py,sha256=3j0a2id7vbbhqTfLH-YKQGWpM-cvjFmit8-gdcIrDAA,4634
+pyform-0.0.7.dist-info/LICENSE,sha256=N5kcjfjqIU5avPfe33DzoJ4JWNAiC9KJZCg_5jAlDDo,1066
+pyform-0.0.7.dist-info/METADATA,sha256=s4tIGyvr1_RrT9VC9UsM3mqHEENiC930x9Bn-2ECVgw,928
+pyform-0.0.7.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pyform-0.0.7.dist-info/top_level.txt,sha256=Nq52RsdtD3RfNi4NctiXWg-u_TpDTjeRnVIXRRruJoM,13
+pyform-0.0.7.dist-info/RECORD,,
