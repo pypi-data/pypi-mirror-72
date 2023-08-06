@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: wf-process-ble-data
+Version: 0.0.1
+Summary: Tools for fetching, processing, visualizing, and analyzing Wildflower BLE data
+Home-page: https://github.com/WildflowerSchools/wf-process-ble-data
+Author: Theodore Quinn
+Author-email: ted.quinn@wildflowerschools.org
+License: UNKNOWN
+Keywords: Bluetooth,BLE,localization
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Dist: wf-minimal-honeycomb-python (>=0.5.1)
+Requires-Dist: wf-smcmodel-localize (>=0.0.1)
+Requires-Dist: pandas (>=1.0.5)
+Requires-Dist: numpy (>=1.19.0)
+Requires-Dist: tqdm (>=4.46.1)
+Requires-Dist: matplotlib (>=3.2.2)
+Requires-Dist: seaborn (>=0.10.1)
+Requires-Dist: python-slugify (>=4.0.0)
+
+# process_ble_data
+
+Tools for fetching, processing, visualizing, and analyzing Wildflower BLE data
+
+
