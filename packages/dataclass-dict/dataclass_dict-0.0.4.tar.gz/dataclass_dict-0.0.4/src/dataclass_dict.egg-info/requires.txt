@@ -1,0 +1,13 @@
+typing-extensions
+
+[docs]
+sphinx_rtd_theme
+sphinx_autodoc_typehints
+Sphinx
+
+[tests]
+pytest-localserver
+pytest-pylint
+pytest-runner
+python-coveralls
+mypy
