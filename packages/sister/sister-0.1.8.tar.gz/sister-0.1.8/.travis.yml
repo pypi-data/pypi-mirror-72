@@ -1,0 +1,19 @@
+language: python
+dist: xenial
+python:
+- 3.6
+- 3.7
+install:
+- pip install pipenv flake8 tox-travis importlib-resources
+- pipenv install
+script:
+- pipenv run flake8
+- pipenv run tox
+deploy:
+  provider: pypi
+  user: sobamchan
+  on:
+    tags: true
+  skip_existing: true
+  password:
+    secure: zPUT5pKtjNI2jawa0OpXOoQiplYzugGO/WyRNe6bdPSGjCQ3Eh1jLsmXV6UBS02hUxXXpIDMJxUF7rKDR5UU6/oaPZW7OdsoxK3NNWpYn85ISVxssaroSvJeVOEKLgkTervZnAPcIEQ5Xw8poFyYenio259fEjLyBRcleTiHEn2w//4JsR4EqP+mfSYzyUxttWt46zrFFxAbcberjkZ5BtWbRps1Nyut3/iGWz65DBcHY8Swzf2MvjFLGUxh3oOeJ39yp4xzgR/4CW6w2E1ivbAaGgFC+xQ3WZix4XAabuV8NVrDixXZ4sR72tprpLY9HB+mw0yXJONYFNqj5GoUb0Sq3rJUxsjk/2MsTdHaUFN8UpZNTVpOZj49kAVMNsF6TTxd+TAJ3HpSPKGQJRv7kq1glKStF44MF1Bv/WfMfk/CgCJ8y6FvLtzrwxBS4EO8YIpD5bwvJp2IU+9jAnkBIhQEEQag9HVhAiJjohEaDKRUDD2H4kq8TrmYTh+f2JjLHKvkeVs81pYcsYBpdsGUATC3SvB4HgP2bGQue9pj8EWWNiXXyjSpa23dvP10wiBW1p0m3Japnhj+r3/M/DP8kMMKf1MCK4eWmosfYEGodwl0eaYtOi/ctzO5oE0okhKmm2BSFybN31e5UDs15PLkU/ghIprMeiqgQF0/ICtabVU=
