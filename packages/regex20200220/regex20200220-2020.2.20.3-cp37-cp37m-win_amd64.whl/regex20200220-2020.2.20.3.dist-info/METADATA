@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: regex20200220
+Version: 2020.2.20.3
+Summary: Alternative regular expression module, to replace re.
+Home-page: https://bitbucket.org/mrabarnett/mrab-regex
+Author: Matthew Barnett
+Author-email: regex@mrabarnett.plus.com
+License: Python Software Foundation License
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: General
+Description-Content-Type: text/markdown
+
+
+# regex20200220
+
+- regex的20200220版本安装包
+
+## 安装方式
+
+- 下载此项目，进入项目根目录，执行如下命令安装：
+
+~~~shell
+python setup.py install
+~~~
+
+- 使用pip进行安装
+
+~~~shell
+pip install regex20200220
+pip install -U git+https://github.com/q759729997/regex20200220.git@master  # 使用git安装
+~~~
+
+## Python包操作
+
+- 当前用户根目录下创建`.pypirc`，配置pypi信息
+
+~~~shell
+[distutils]
+index-servers =
+    pypi
+
+[pypi]
+repository: https://upload.pypi.org/legacy/
+username: name
+password: xxxx
+~~~
+
+- 打包上传
+
+~~~shell
+python setup.py sdist bdist_wheel  # 打包
+twine upload dist/*.whl --verbose  # 将打包后的whl上传
+# Linux下文件改为：manylinux2010
+~~~
+
+
