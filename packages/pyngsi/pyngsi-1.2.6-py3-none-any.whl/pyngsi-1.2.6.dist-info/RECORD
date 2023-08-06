@@ -1,0 +1,16 @@
+pyngsi/__init__.py,sha256=vMQK58X8_YZGKzRm0ThvPAKFtpfyejGmUnDrY9RQ13w,22
+pyngsi/__main__.py,sha256=Yq0ijNNX0kBPGIL5S8CmOMMn_YuFOaTm4gEhiBi_zXQ,203
+pyngsi/agent.py,sha256=SzFDkweCN87ahiH0KHOu-N1g6X0vUxJaDApbjLMwwJM,7777
+pyngsi/ftpclient.py,sha256=lBjt4RRjP_8UudbL6vVvtZW35jfA8Rug3dxQk5v3CKc,2909
+pyngsi/more_sources.py,sha256=CYdj63iA72Vm3aYZfYxoZISt8X2xSpx2iw4EZdps_TI,675
+pyngsi/msexcel.py,sha256=jf8PtPPr3zoNZ-VEPb_F9NrsL-ybg4Gv9ykLfFvo8Cs,663
+pyngsi/ngsi.py,sha256=kV3aLBTMwkrgd9zfM938FaGpGJkEvBcUqyCIxS81B1Y,2864
+pyngsi/scheduler.py,sha256=5_o4v_C7tXyG4r2pMufxCKSx6WUitCVC0EIYzbkuYfo,4201
+pyngsi/server.py,sha256=A1ISHdWJPihzNlgM5gOkSySZqusyHb_nGlefaXe3jOI,8968
+pyngsi/sink.py,sha256=6X4bHYDUT6j7gV92mbq9Jw3CdVQNxf5bP1dAnkyfaf8,7201
+pyngsi/source.py,sha256=oGMLowJuHJQeUvC_lPeUd8fMW_--cXPVJHVPnE-iSJE,11942
+pyngsi-1.2.6.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pyngsi-1.2.6.dist-info/METADATA,sha256=3PEVUBiCiplLnYFl1wUXTyY3Vk2cN1zWOYKJx9HOhS8,3912
+pyngsi-1.2.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pyngsi-1.2.6.dist-info/top_level.txt,sha256=KVPflnXrvXSnpu3VEMH1mRFhFFtcRsa2IMwoMZYG1CE,7
+pyngsi-1.2.6.dist-info/RECORD,,
