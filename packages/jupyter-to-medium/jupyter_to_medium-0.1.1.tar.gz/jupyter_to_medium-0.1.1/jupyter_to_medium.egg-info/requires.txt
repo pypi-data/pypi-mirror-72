@@ -1,0 +1,5 @@
+nbconvert
+requests
+
+[matplotlib_conversion]
+matplotlib>=3.1
