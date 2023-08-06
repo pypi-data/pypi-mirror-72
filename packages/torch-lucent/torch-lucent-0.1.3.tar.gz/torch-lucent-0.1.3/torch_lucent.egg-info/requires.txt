@@ -1,0 +1,14 @@
+torch>=1.5.0
+torchvision
+kornia
+tqdm
+numpy
+ipython
+pillow
+future
+decorator
+pytest
+pytest-mock
+coverage
+coveralls
+scikit-learn
