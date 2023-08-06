@@ -1,0 +1,16 @@
+coiled/__init__.py,sha256=oRHZ5aj0NKQUhUfbwz2FRTj2WIcSqZWTLlkgDqACXOY,196
+coiled/_version.py,sha256=YFJnCFMfkfc2HyutlLSnpkSaVb8f0mk3nnSDiNH1MEU,497
+coiled/cli.py,sha256=9xciinfDZO40Z9jmQPTSiBssl4D23UQHNiwhJRK6KgA,2582
+coiled/cluster.py,sha256=Xx2C2Pg6orl8126JwJ-23u-bBCCcyEE3Crq7QteDMtI,4625
+coiled/coiled.yaml,sha256=27YNyScYYIf6pg7aCb5VMyuZHA9M3nRvVdxytdJZeqA,185
+coiled/config.py,sha256=6Nyb5n4zDzlhDgyPSv-Qb_JE7SLupnjkfbPKRl5tdXU,224
+coiled/core.py,sha256=rqVf2gSEscg1H_Y6_H8gnbzChUCrWgIq5KXmoWd3iF4,25024
+coiled/utils.py,sha256=gwvq_ors9TBKfYWSOalhG8fYFRPoo3y_XZK0E9Zon_8,1446
+coiled/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coiled/tests/test_core.py,sha256=x5yZv-oOEWlSGYrgMKxG9nIeQfw4DY6ePWnp3lPy27o,27416
+coiled-0.0.8.dist-info/LICENSE,sha256=FJgO21d4GMnyfFz72t9dL1uPTuR63kol1BNrWrQX8Lk,1524
+coiled-0.0.8.dist-info/METADATA,sha256=Ai9VmY9fJX-xL9ipPeKneFmrWeAt-4jFbyJuTuPzaSM,764
+coiled-0.0.8.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+coiled-0.0.8.dist-info/entry_points.txt,sha256=L7mtMBvWOlX0ZAtlGDHu_rrGZA6YbLj185xi_M7Hlqk,43
+coiled-0.0.8.dist-info/top_level.txt,sha256=XXhD_PRAu_HgbVm35FHd9jKJxFSA6mtD6mbRaNltDgI,7
+coiled-0.0.8.dist-info/RECORD,,
