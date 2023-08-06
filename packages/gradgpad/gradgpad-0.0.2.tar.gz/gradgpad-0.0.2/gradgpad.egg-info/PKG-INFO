@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: gradgpad
+Version: 0.0.2
+Summary: gradgpad
+Home-page: https://github.com/acostapazo/gradgpad
+Author: ALiCE Biometrics
+Author-email: acosta@alicebiometrics.com
+License: MIT
+Description: # grad-gpad :moyai: [![version](https://img.shields.io/github/release/acostapazo/gradgpad/all.svg)](https://github.com/acostapazo/gradgpad/releases) [![ci](https://github.com/acostapazo/gradgpad/workflows/ci/badge.svg)](https://github.com/acostapazo/gradgpad/actions) [![pypi](https://img.shields.io/pypi/dm/gradgpad)](https://pypi.org/project/gradgpad/)
+        
+        
+        
+        Insert project description here
+        
+        
+        ## Table of Contents
+        - [Installation :computer:](#installation-computer)
+        - [Testing :white_check_mark:](#testing-white_check_mark)
+        - [Contact :mailbox_with_mail:](#contact-mailbox_with_mail)
+        
+        
+        ## Installation :computer:
+        
+        Use [lume :fire:](https://github.com/alice-biometrics/lume) to install dependencies:
+        
+        Example:
+        
+        ```console
+        >> conda create -n myenv python=3.6
+        >> conda activate myenv
+        (myenv) >> pip install lume
+        (myenv) >> lume -install
+        ```
+        
+        ## Testing :white_check_mark:
+        
+        ### Unit, Integration and Acceptance
+        
+        ```console
+        (myenv) >> lume -test
+        ```
+        
+        
+        ## Contact :mailbox_with_mail:
+        
+        support@alicebiometrics.com
+        
+        
+Keywords: face-PAD,framework,evaluation
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
