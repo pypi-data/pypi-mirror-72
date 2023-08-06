@@ -1,0 +1,3 @@
+[kedro.global_commands]
+kedro-great = kedro_great:commands
+
