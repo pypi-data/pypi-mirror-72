@@ -1,0 +1,14 @@
+sqlalchemy~=1.3
+inflection~=0.4
+
+[dev]
+pytest
+pytest-cov
+mock
+tox
+sphinx
+
+[test]
+pytest
+pytest-cov
+mock

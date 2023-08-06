@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+sqla_wrapper/__init__.py
+sqla_wrapper/default_meta.py
+sqla_wrapper/default_model.py
+sqla_wrapper/main.py
+sqla_wrapper/representable.py
+sqla_wrapper/session_proxy.py
+sqla_wrapper/version.py
+sqla_wrapper.egg-info/PKG-INFO
+sqla_wrapper.egg-info/SOURCES.txt
+sqla_wrapper.egg-info/dependency_links.txt
+sqla_wrapper.egg-info/requires.txt
+sqla_wrapper.egg-info/top_level.txt
