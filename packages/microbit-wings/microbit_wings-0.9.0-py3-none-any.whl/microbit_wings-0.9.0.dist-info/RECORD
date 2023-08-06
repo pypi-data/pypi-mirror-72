@@ -1,0 +1,15 @@
+microbit_wings/__init__.py,sha256=ZpMg9wwwfMLtKb7ghDTOS8jv4iDPhL8IvcMqBr2wxD0,352
+microbit_wings/config.ini,sha256=TnrQixFuu0Jdd3C9mgS_hnDBcVVHWeydG2LiibK3rao,24
+microbit_wings/config.py,sha256=JmRQVSOyhP__7roV_WMhuTSlAhgNuWUS69eenMPbzdU,3752
+microbit_wings/db_microbit.py,sha256=JfRhwHplP4hhdykgfGvkRI7VXhsOV6v7SPzTJLF0n4o,5884
+microbit_wings/db_microbit.sqlite,sha256=dmSFRyTASHpP1TjZZq1sBsjOebHW6lDE6315K_h-UJU,24576
+microbit_wings/image_creator.py,sha256=K1Oja1Zhw2VdCpOYI5HsKk6WKPABbxO2TLx2kKvcP98,3530
+microbit_wings/images.py,sha256=Zdsv68SUqMo0RzqantFk7qJ16BJn9D0QqXF4_nr2Iec,22462
+microbit_wings/list_com_port.py,sha256=FILU9Mo6EygzHVCunnJ4unoyjuOZxfh9bSgh4lIAwqU,1098
+microbit_wings/microbit.py,sha256=lzvWnTJN5IhxzFo2RMjQ5Sf1OramUFhwFH2p9Z4KD1w,6375
+microbit_wings/toolbox.py,sha256=Z2XNGWIPlsOs_37xRi-pHOQ5XX4kbtQnhPisW-nb66k,1726
+microbit_wings-0.9.0.dist-info/LICENSE.txt,sha256=ceC9ZJOV9H6CtQDcYmHOS46NA3dHJ_WD4J9blH513pc,1081
+microbit_wings-0.9.0.dist-info/METADATA,sha256=yKnlWpabPN7PkuLtgvqzpLm6X6vYTaYq4PvsMH8yt08,761
+microbit_wings-0.9.0.dist-info/WHEEL,sha256=qB97nP5e4MrOsXW5bIU5cUn_KSVr10EV0l-GCHG9qNs,97
+microbit_wings-0.9.0.dist-info/top_level.txt,sha256=vIJnj6o_gCouC8d_HcmXNZr3qwhbHqWg0dzDYfpzyJ8,15
+microbit_wings-0.9.0.dist-info/RECORD,,
