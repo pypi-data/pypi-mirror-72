@@ -1,0 +1,13 @@
+spym/__init__.py,sha256=XNzzn_oOOyKf3nrl4SujbsDKanAFKmLspSunY2Grlc0,88
+spym/_version.py,sha256=uW-OKKuxQGqsY8O1MB4zBX2hMAshggZrTlBsZAxZewo,172
+spym/_accessors/__init__.py,sha256=QY03KJc4h7lkT3YbTnPduXRZAAcL1Um8hsBqLTTURSk,1080
+spym/_accessors/filters.py,sha256=3CAcodmYJ5VeIbjypig_wXXP-vEezgIfgjVD14QL5rw,2289
+spym/_accessors/level.py,sha256=Y4D55otqtfWZIwkUYbBndI1Bv-SylT5QcGDz0oVforQ,1416
+spym/process/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spym/process/filters.py,sha256=URp3bNPfRD79Q40Nz86ubzTWSSxYwIkzsf0mDiEzMIE,4085
+spym/process/level.py,sha256=O2QNmg9n8oKzLiqofez_RH5TWg3E3jvESDZtc_YLYdA,1987
+spym-0.1.0.dist-info/LICENSE,sha256=LveK7S_LBIG0nwa5D0RwNUcEaNbqy8jznE3eGAQlE_s,1075
+spym-0.1.0.dist-info/METADATA,sha256=3SpdVXuxmjRF8vfe2swZ5GEupmz4TrgPOUkGlS0E1SI,726
+spym-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+spym-0.1.0.dist-info/top_level.txt,sha256=LckOra8SukSp_1xQ07iKo_9eFxrdd0wuuVlpmX462bw,5
+spym-0.1.0.dist-info/RECORD,,
