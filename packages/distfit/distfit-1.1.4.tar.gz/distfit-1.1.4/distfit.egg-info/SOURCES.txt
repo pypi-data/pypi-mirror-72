@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+distfit/__init__.py
+distfit/distfit.py
+distfit/examples.py
+distfit.egg-info/PKG-INFO
+distfit.egg-info/SOURCES.txt
+distfit.egg-info/dependency_links.txt
+distfit.egg-info/requires.txt
+distfit.egg-info/top_level.txt
+distfit/utils/__init__.py
+distfit/utils/picklefast.py
+distfit/utils/smoothline.py
