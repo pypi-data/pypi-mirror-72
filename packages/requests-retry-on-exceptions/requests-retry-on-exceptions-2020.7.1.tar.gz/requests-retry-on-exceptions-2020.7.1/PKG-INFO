@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: requests-retry-on-exceptions
+Version: 2020.7.1
+Summary: requests retry on exceptions
+Home-page: https://github.com/andrewp-as-is/requests-retry-on-exceptions.py
+License: Unlicense
+Description: <!--
+        https://readme42.com
+        -->
+        
+        
+        [![](https://img.shields.io/pypi/v/requests-retry-on-exceptions.svg?maxAge=3600)](https://pypi.org/project/requests-retry-on-exceptions/)
+        [![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
+        
+        ### Installation
+        ```bash
+        $ [sudo] pip install requests-retry-on-exceptions
+        ```
+        
+        #### Features
+        +   default `backoff_factor`: `0.1`
+        +   default `retries`: `3`
+        +   default `exceptions`:
+            +   `http.client.IncompleteRead`
+            +   `requests.exceptions.ChunkedEncodingError`
+            +   `requests.exceptions.ConnectionError`
+            +   `requests.exceptions.HTTPError`
+            +   `requests.exceptions.ReadTimeout`
+            +   `requests.exceptions.SSLError`
+            +   `requests.exceptions.TooManyRedirects`
+            +   `ssl.SSLEOFError`
+            +   `urllib3.exceptions.MaxRetryError`
+            +   `urllib3.exceptions.ProtocolError`
+            +   `urllib3.exceptions.ReadTimeoutError`
+        
+        #### Examples
+        ```python
+        import requests_retry_on_exceptions as requests
+        
+        r = requests.get('https://pypi.org/project/django/')
+        ```
+        
+        options:
+        ```python
+        r = requests.get(url,exceptions=(requests.exceptions.SSLError,),backoff_factor=0.1,retries=3)
+        ```
+        
+        <p align="center">
+            <a href="https://readme42.com/">readme42.com</a>
+        </p>
+Keywords: requests retry
+Platform: UNKNOWN
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
