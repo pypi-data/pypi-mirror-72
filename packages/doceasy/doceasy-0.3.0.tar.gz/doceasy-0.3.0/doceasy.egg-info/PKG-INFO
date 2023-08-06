@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: doceasy
+Version: 0.3.0
+Summary: Wrapper around docopt and schema
+Home-page: https://github.com/jpcsmith/doceasy
+Author: Jean-Pierre Smith
+Author-email: rougesprit@gmail.com
+License: UNKNOWN
+Description: # doceasy
+        
+        doceasy is (currently) a simple wrapper around docopt and schema to make working with them in scientific papers a bit less cumbersome.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Provides-Extra: dev
+Provides-Extra: test

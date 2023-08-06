@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.md
+doceasy.py
+setup.py
+test_doceasy.py
+.github/workflows/python-publish.yml
+doceasy.egg-info/PKG-INFO
+doceasy.egg-info/SOURCES.txt
+doceasy.egg-info/dependency_links.txt
+doceasy.egg-info/requires.txt
+doceasy.egg-info/top_level.txt
