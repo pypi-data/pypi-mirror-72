@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyconcord
+Version: 0.3
+Summary: Python implemetation of the concord algorithm for pseudo-likelihood graphical model selection
+Home-page: http://web.stanford.edu/~sangoh
+Author: Sang-Yun Oh, Aydin Buluc, Onkar Dalal, Kshitij Khare, Bala Rajaratnam
+Author-email: syoh@lbl.gov
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.19.0)
+Requires-Dist: scipy (>=1.5.0)
+
+UNKNOWN
+
+
