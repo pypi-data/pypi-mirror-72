@@ -1,0 +1,11 @@
+README.md
+setup.py
+blastpy3/BlastHit.py
+blastpy3/Blastn.py
+blastpy3/__init__.py
+blastpy3/test_pyBlast.py
+blastpy3.egg-info/PKG-INFO
+blastpy3.egg-info/SOURCES.txt
+blastpy3.egg-info/dependency_links.txt
+blastpy3.egg-info/requires.txt
+blastpy3.egg-info/top_level.txt
