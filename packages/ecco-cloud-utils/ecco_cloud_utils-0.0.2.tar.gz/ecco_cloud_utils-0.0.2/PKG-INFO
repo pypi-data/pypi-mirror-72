@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: ecco_cloud_utils
+Version: 0.0.2
+Summary: Estimating the Circulation and Climate of the Ocean (ECCO) - Cloud Package
+Home-page: https://github.com/ECCO-GROUP/ECCO-CLOUD/ecco-cloud-utils
+Author: Ian Fenty
+Author-email: ian.fenty@jpl.nasa.gov
+License: UNKNOWN
+Download-URL: http://github.com/ECCO-GROUP/ECCO-ACCESS/archive/0.0.2.zip
+Description: UNKNOWN
+Keywords: ecco,mitgcm,estimate,circulation,climate
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Physics
