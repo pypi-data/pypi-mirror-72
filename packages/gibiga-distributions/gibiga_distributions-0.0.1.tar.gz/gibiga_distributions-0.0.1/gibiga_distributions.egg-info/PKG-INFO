@@ -1,0 +1,23 @@
+Metadata-Version: 1.0
+Name: gibiga-distributions
+Version: 0.0.1
+Summary: Gaussian distributions
+Home-page: UNKNOWN
+Author: Greg Izzo
+Author-email: greg.izzo@gmail.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: # gibiga Distributions
+        
+        Gaussian and Binomial Distribution Classes
+        
+        ### Installing
+        
+        ```
+        pip install gibiga_distributions
+        ```
+        ## License
+        
+        This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+        
+Platform: UNKNOWN
