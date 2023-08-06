@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+Readme.md
+setup.py
+dist/loremipsumpy-0.0.2-py3-none-any.whl
+src/loremipsumpy.py
+src/__pycache__/lorem.cpython-38-pytest-5.4.3.pyc
+src/__pycache__/lorem.cpython-38.pyc
+src/loremipsumpy.egg-info/PKG-INFO
+src/loremipsumpy.egg-info/SOURCES.txt
+src/loremipsumpy.egg-info/dependency_links.txt
+src/loremipsumpy.egg-info/requires.txt
+src/loremipsumpy.egg-info/top_level.txt
