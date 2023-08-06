@@ -1,0 +1,10 @@
+setup.py
+probab_distributions_reek/Binomialdistribution.py
+probab_distributions_reek/Gaussiandistribution.py
+probab_distributions_reek/Generaldistribution.py
+probab_distributions_reek/__init__.py
+probab_distributions_reek.egg-info/PKG-INFO
+probab_distributions_reek.egg-info/SOURCES.txt
+probab_distributions_reek.egg-info/dependency_links.txt
+probab_distributions_reek.egg-info/not-zip-safe
+probab_distributions_reek.egg-info/top_level.txt
