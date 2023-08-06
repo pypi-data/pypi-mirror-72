@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: bootstraphistogram
+Version: 0.3
+Summary: Poisson bootstrap histogram.
+Home-page: https://github.com/davehadley/bootstraphistogram
+Author: David Hadley
+Author-email: d.r.hadley@warwick.ac.uk
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Operating System :: POSIX
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: boost-histogram (>=0.7.0)
+Requires-Dist: numpy (>=1.18.5)
+Requires-Dist: matplotlib (>=3.1.0)
+
+# bootstraphistogram
+
+A python package that provides a multi-dimensional histogram with automatic Poisson bootstrap re-sampling.
+See the documentation at: <https://bootstraphistogram.readthedocs.io>.
+
