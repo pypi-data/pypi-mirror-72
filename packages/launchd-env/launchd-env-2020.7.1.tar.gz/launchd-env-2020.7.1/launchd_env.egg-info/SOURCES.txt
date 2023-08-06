@@ -1,0 +1,10 @@
+requirements.txt
+setup.py
+launchd_env/__init__.py
+launchd_env/__main__.py
+launchd_env/plist.py
+launchd_env.egg-info/PKG-INFO
+launchd_env.egg-info/SOURCES.txt
+launchd_env.egg-info/dependency_links.txt
+launchd_env.egg-info/requires.txt
+launchd_env.egg-info/top_level.txt
