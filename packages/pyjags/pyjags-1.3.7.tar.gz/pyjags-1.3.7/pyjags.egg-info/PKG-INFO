@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: pyjags
+Version: 1.3.7
+Summary: Python interface to JAGS library for Bayesian data analysis.
+Home-page: https://github.com/michaelnowotny/pyjags
+Author: Michael Nowotny
+Author-email: nowotnym@gmail.com
+License: GPLv2
+Description: 
+        # PyJAGS: The Python Interface to JAGS
+        PyJAGS provides a Python interface to JAGS, a program for analysis of Bayesian
+        hierarchical models using Markov Chain Monte Carlo (MCMC) simulation.
+        
+        PyJAGS adds the following features on top of JAGS:
+        
+        * Multicore support for parallel simulation of multiple Markov chains (See Jupyter Notebook [Advanced Functionality](notebooks/Advanced%20Functionality.ipynb)
+        * Saving sample MCMC chains to and restoring from HDF5 files
+        * Functionality to merge samples along iterations or across chains so that sampling can be resumed in consecutive chunks until convergence criteria are satisfied
+        * Connectivity to the Bayesian analysis and visualization package Arviz
+        
+        License: GPLv2
+        
+        ## Supported Platforms
+        PyJAGS works on MacOS and Linux. Windows is not currently supported.
+        
+        ## Installation
+        A working JAGS installation is required.
+        
+        <pre>
+            pip install pyjags
+        </pre>
+        
+        ## Useful Links
+        * Package on the Python Package Index <https://pypi.python.org/pypi/pyjags>
+        * Project page on github <https://github.com/michaelnowotny/pyjags>
+        * JAGS manual and examples <http://sourceforge.net/projects/mcmc-jags/files/>
+        
+        
+        ## Acknowledgements
+        
+        
+        * JAGS was created by Martyn Plummer
+        * PyJAGS was originally created by Tomasz Miasko
+        * As of May 2020, PyJAGS is developed by Michael Nowotny
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
