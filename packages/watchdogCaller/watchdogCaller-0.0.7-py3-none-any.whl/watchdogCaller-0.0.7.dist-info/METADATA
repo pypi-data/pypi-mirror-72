@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: watchdogCaller
+Version: 0.0.7
+Summary: A Python script that calls an API when a directory is not modified in a especified timeout-time.
+Home-page: https://github.com/KurtCoVayne/Watchdog-api-caller
+Author: John Alejandro González
+Author-email: johnalejandrog.g4@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/KurtCoVayne/Watchdog-api-caller
+Project-URL: Documentation, https://github.com/KurtCoVayne/Watchdog-api-caller
+Project-URL: Source Code, https://github.com/KurtCoVayne/Watchdog-api-caller
+Keywords: watchdog security python script filesystem api http https auth auditory timeout
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Requires-Dist: watchdog (==0.10.2)
+
+UNKNOWN
+
+
