@@ -1,0 +1,535 @@
+Metadata-Version: 2.1
+Name: wagascianpy
+Version: 0.3.2
+Summary: WAGASCI ANPAN for Python
+Home-page: https://git.t2k.org/wagasci_babymind/WagasciAnpy
+Author: Pintaudi Giorgio
+Author-email: giorgio-pintaudi-kx@ynu.jp
+License: GPLv3
+Keywords: WAGASCI ANPAN for Python
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: Unix
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools (>=44.1.1)
+Requires-Dist: bitarray (>=1.2.2)
+Requires-Dist: six (<=1.14.0,>=1.7.0)
+Requires-Dist: paramiko (>=2.7.1)
+Requires-Dist: scp (>=0.13.2)
+Requires-Dist: pytz (>=2020.1)
+Requires-Dist: tinydb (>=3.15.2)
+Requires-Dist: recordclass (>=0.13.2)
+Requires-Dist: pyfakefs (>=3.7.2)
+Requires-Dist: numpy (>=1.16.6)
+Requires-Dist: undecorated (>=0.3.0)
+Requires-Dist: dependency-injector (>=3.15.6)
+Requires-Dist: inflection (>=0.3.1)
+Requires-Dist: pygubu (<=0.9.8.6)
+Requires-Dist: typing
+Requires-Dist: configparser
+Provides-Extra: with_borg
+Requires-Dist: borgbackup (>=1.1.11) ; extra == 'with_borg'
+
+# WAGASCI ANPAN for Python v0.3.2
+
+This collective package contains all the Python modules used by the ANPAN
+ framework of the WAGASCI/T2K experiment.
+
+
+
+
+## T2K experiment
+
+T2K (Tokai-to-Kamioka) is a long-baseline off-axis neutrino oscillation
+experiment that focuses on measuring muon (anti)-neutrinos oscillating into
+electron (anti)-neutrinos. A very pure muon neutrino beam is produced at J-PARC
+accelerator complex and detected 295 km away at the Super-Kamiokande (SK) far
+detector. T2K uses a set of near detectors in order to reduce the large
+uncertainties on the oscillation parameters that come from the neutrino fluxes
+and interaction models.
+
+
+
+
+## WAGASCI experiment
+
+WAGASCI (WAter-Grid-SCIintilator-Detector) is proposed to
+
+- reduce the T2K systematic error
+- measurement of the charge current cross-section ratio between water and
+  scintillator targets with 3% accuracy
+- measurement of different charged current neutrino interaction channels with
+  high precision and large acceptance.
+
+
+
+
+## ANPAN
+
+ANPAN (Acquisition Network Program for Accelerated Neutrinos) is a collective
+ name to identify all the software used to acquire data and analyze it for
+  the WAGASCI experiment. It is composed of many packages:
+  - [Pyrame](http://llr.in2p3.fr/sites/pyrame/) (C/Python2)
+  - [Calicoes](http://llr.in2p3.fr/sites/pyrame/calicoes/) (C/Python2)
+  - [WagasciCalibration](https://git.t2k.org/wagasci_babymind/WagasciCalibration) (C++11)
+  - [WagasciRunControl](https://git.t2k.org/wagasci_babymind/WagasciRunControl) (Python2)
+  - [WagasciAnpy (this package)](https://git.t2k.org/wagasci_babymind/WagasciAnpy) (Python2/3)
+
+![](../WagasciAnpy/docs/images/wagascidb_viewer.gif)
+
+
+
+
+## Python compatibility
+
+ - **Python2.7 or Python3.4+**
+ - **pip**
+
+ This package is compatible with both Python2.7 and Python3.4+. It is tested
+ usually with Python 3.8 and sporadically with other Python versions.
+ Therefore, it may happen that the compatibility with Python2.7 is not
+ perfect.
+
+ To install Python, please google _"Install Python \<Your favourite OS\>"_.
+ All the other Python dependencies can be installed using Pip. I personally 
+ recommend to use the Python version provided by your distribution if possible.
+
+
+
+
+## Dependencies
+
+To use the raw data decoder and spill number fixer, you have to install ROOT
+and the WagasciCalibration package. Please refer to the links for an in-depth
+explanation about the installation process.
+  - [ROOT 6](https://root.cern.ch/)
+  - [WagasciCalibration](https://git.t2k.org/wagasci_babymind/WagasciCalibration)
+
+  To update the WAGASCI run database you need
+  - [BorgBackup](https://borgbackup.readthedocs.io/en/stable/installation.html)
+
+If you do not plan to use those features you can avoid installing these
+dependencies.
+
+### ROOT
+
+If you are using Python 3 you need a Python 3 compatible version of ROOT 6. At
+the time of writing, the ROOT precompiled binaries are still not Python3
+compatible, so you need to compile ROOT yourself. To do that, in the same
+shell where you are going to compile ROOT, type:
+```shell script
+alias python='python3'
+```
+and then follow the [usual procedure](https://root.cern.ch/building-root) but 
+add to the cmake command the following options:
+
+```shell script
+-Dminuit2=On -Dpython=On -DPYTHON_EXECUTABLE=$(command -v python3)
+```
+
+To double-check that ROOT was compile with Python3 support indeed, open a
+ terminal and type:
+ ```shell script
+python3
+>>> import ROOT
+```
+You should not see any error. If you see an exception it means that the
+ installed version of ROOT is not compatible with Python3.
+
+### WAGASCI Calibration Software (optional)
+
+You can visualize the WAGASCI database even without the C++ WAGASCI
+ Calibration software but you will be unable to do any analysis or modification.
+ To install the WAGASCI Calibration Software refer to 
+ [this page](https://git.t2k.org/wagasci_babymind/WagasciCalibration).  
+
+
+
+
+
+## Installation (Linux)
+
+Open a terminal and issue
+```shell script
+python -m pip install --upgrade --user wagascianpy
+```
+
+
+
+
+## Installation (MacOS)
+
+Currently the support for MacOS is only partial. The SSH connection is broken
+because of some issues internal to the [Python paramiko
+module](http://www.paramiko.org/), so the program can be used in local mode
+only. I tried to fix the issue but the problem is beyond my skills.  Probably in
+the following months the paramiko developers will come up with a solution. At
+the time of writing, the current (broken) version of paramiko is 2.7.1. When a
+new version of paramiko is released, try again to run the software and see what
+happens.
+
+I have tested the program only in MacOS Mojave and MacOS Catalina. Both showed
+more or less the same problems. You can try older versions of MacOS and might
+have better luck.
+
+#### MacOS Mojave/Catalina
+
+Because MacOS Mojave does not bundle Python3 we need to install it manually. The
+easiest way is by using the package manager brew. The following commands are
+taken from this [webpage](https://installpython3.com/mac/).
+
+The first step is to install the Apple's Xcode suite. Most probably you already
+have it already installed, in that case you can skip this step. In your Terminal
+app, run the following command to install XCode and its command-line tools:
+
+```shell script
+$ xcode-select --install
+```
+
+Next install Homebrew by copy/pasting the following command into Terminal and
+then type Enter:
+
+```shell script
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+```
+
+To confirm Homebrew installed correctly, run this command:
+```shell script
+$ brew doctor
+Your system is ready to brew.
+```
+
+Now we can install the latest version of Python 3. Type the following command
+into Terminal and press Enter:
+
+```shell script
+$ brew install python3
+```
+
+To confirm which version of Python was installed, run the following command in
+Terminal:
+
+```shell script
+$ /usr/local/bin/python3 --version
+Python 3.7.7
+```
+
+Many functions of the WAGASCI database viewer use borgbackup. We can easily
+install it using brew.
+
+```shell script
+brew cask install borgbackup
+```
+
+For other ways of installing borg refer to the 
+[borg website](https://borgbackup.readthedocs.io/en/stable/installation.html).
+
+Then we can finally install the wagascidb package
+
+```shell script
+python3 -m pip install --user --upgrade .
+```
+
+To run the GUI open a Terminal and type the command
+
+```shell script
+python3 wagascidb_viewer.py
+```
+
+If you use MacOS Catalina continue reading the next section.
+
+#### MacOS Catalina - troubleshooting
+
+**MacOS Catalina comes with its own version of Python3. However 
+[as stated in the Python website](https://www.python.org/download/mac/tcltk/) 
+the Apple-supplied Tcl/Tk 8.5 has serious bugs that can cause application crashes.**
+
+So follow the same instructions as MacOS Mojave but also install tkinter:
+```shell script
+brew install tcl-tk
+```
+
+## Configuration
+
+You can easily configure all the parameters from the GUI itself (or from the
+command line if you run the program from the shell). However, because
+inserting the same values over and over again can be tedius, you can modify the
+configuration file called `wagasci.ini`. This file is created in the 
+`${HOME}/.wagasci` folder on the first execution of the program and filled with
+the default values. Open it and edit the fields with a text editor. The options
+names and values are in one to one correlation with the GUI fields and CLI
+arguments.
+
+Upon start, the program tries to load the configuration file from the following
+ directories in this order:
+- Environment : `${WAGASCI_CONFIGDIR}`
+- User : `${HOME}/.wagasci`
+- System : `/usr/local/wagasci`
+- Installation directory
+
+
+### GUI
+The GUI can be partially customized using the 
+[PyGubu](https://github.com/alejandroautalan/pygubu) program. PyGubu is
+ automatically installed by pip as a dependence of this package.
+
+ To customize the GUI, locate the package installation folder and the gui.ui
+  file inside it, open a terminal and
+ ```shell script
+mkdir -p $HOME/.wagasci
+cp gui.ui $HOME/.wagasci/
+pygubu-designer $HOME/.wagasci/gui.ui
+```
+
+The program tries to load the GUI file `gui.ui` in the same way as the
+ configuration file as explained above.
+
+
+
+
+## Usage
+
+This sections explains the usage of the GUI program.
+
+### WAGASCI run repository
+
+The word repository refers to the place where the runs are backed up. It might
+be a simple repository where the runs are stored without encription (plain file
+and folders), or a borg repository where all the files are encripted. The
+repository can be either local (same machine) or remote (remote machine
+reachable by SSH). In case of a borg repository it is necessary for borgbackup
+to be installed on both the local machine and the remote machine.
+
+* **Simple repository** : Unencripted repository
+* **Borg repository** : Borg repository
+* **Repository location** : For a remote repository the syntax is
+  `<hostname>:<path of repository>`. The SSH configuration is taken from the
+  user `~/.ssh/config` file by looking for `<hostname>`, so make sure that you
+  can connect to the remote machine by just opening the terminal and `ssh
+  <hostname>`. In case of local repository just insert the repository path. For
+  more info about how to connect to KEKCC by SSH refer to the [WAGASCI expert
+  shifter manual](https://ja.overleaf.com/7887288445tmqmnjknrynm)
+  (Troubleshooting - KEKCC (8.6)).
+
+#### Disclaimer about WAGASCI run repository
+
+Simple remote WAGASCI repositories are not implemented yet. For the time being you can
+only use one of the following three combinations:
+
+* Simple local: OK
+* Borg local: OK
+* Borg remote: OK
+* Simple remote: not implemented
+
+### WAGASCI run database
+
+Location of the WAGASCI run database. The database is a file (usually named
+`wagascidb.db`) that contains some info about each run. If the update database
+checkbox is checked, the software checks if the database is synchronized with
+the repository (if the database describes the current state of the repository).
+
+* **Database location**: location of the database file. Usually it is the same
+  as the repository. In case you specify a different location, enter the
+  filename too. Leave as it is if in doubt.
+* **Update database**: If left unchecked the database is read as is. If checked,
+  the runs that are present in both the repository and database the database are
+  not updated and only the runs that are present in the repository but not in
+  the database are added. Leave disabled if in doubt.
+* **Rebuild database**: If checked each run in the repository is
+  inserted/overwritten into the database even if already present. Leave disabled
+  if in doubt.
+* **WAGASCI library**: local path to the `libwagasci.so` library. It is used to get
+  the topology information about the detectors. Useful only if you are adding
+  new runs to the database. You need to install the WAGASCI analysis software if
+  you want to use this feature.
+
+### Beam Summary Data repository
+
+The word repository refers to the place where the Beam Summary Data files are
+stored.  The local repository can be an empty folder or a folder containing
+the BSD files.  If the remote repository field is left empty the program assumes
+that the BSD files are already present in the local folder. If the remote
+repository field is filled, the remote repository and the local repository are
+synchronized using rsync.
+
+
+* **Local repository** : Location of BSD files in the local machine.
+* **Remote repository** : Location of the BSD files in the remote machine (the
+  syntax is the same as the WAGASCI run repository). If left empty only the
+  local repository is used.
+
+### Beam Summary Data database
+
+Location of the BSD database. The database is a file (usually named `bsddb.db`)
+that contains some info about each BSD file. If the update or rebuild database
+checkbox is checked, the software checks if the database is synchronized with
+the repository (if the database describes the current state of the repository).
+
+* **Database location**: location of the database file. Usually it is the same
+  as the repository. In case you specify a different location, enter the
+  filename too. Leave as it is if in doubt.
+* **Update database**: If left unchecked the database is read as is. If checked,
+  the runs that are present in both the repository and database the database are
+  not updated and only the runs that are present in the repository but not in
+  the database are added. Leave disabled if in doubt.
+* **Rebuild database**: If checked each run in the repository is
+  inserted/overwritten into the database even if already present. Leave disabled
+  if in doubt.
+
+### Query
+
+#### Getters
+* **Get time interval**: Select an interval and the push the Get interval 
+ button. In the Run list frame will appear all the runs in that period.
+* **Get run interval**: Select all runs whose number is within the interval.
+* **Get all**: Get all runs regardless of the interval.
+
+#### Conditions:
+* **Include overlapping runs**: If unchecked only the runs that start AND stop
+  inside the time interval are shown. If checked all the runs that start OR stop
+  inside the interval are shown.
+* **Only good runs**: select only the runs marked as good (all the runs for the 
+ time being). This may change in future when the runs are analyzed.
+
+#### Analyzers:
+* **Download**: download the selected runs from the WAGASCI run repository into 
+ a local directory selected by the user (both borg and simple repositories
+  are supported)
+* **Decoder**: decode the downloaded runs using the wgDecoder program
+* **Spill Number Fixer**: fix the spill number for the decoded runs using the
+ wgFixSpillNumber program
+* **Beam Summary Data**: integrate the BSD info into the decoded runs using the 
+ wgBeamSummaryData program
+* **Temperature**: integrate the temperature info into the decoded runs using
+ the wgTemperature program
+* **Data Quality**: insert PEU information in the decoded data TTree using
+ the wgDataQuality program
+* **Analyze**: apply all the selected analyzers above to the downloaded runs
+
+#### Topology
+* **Topology**: select which sub-detectors to download (not used for analysis)
+
+### Run list
+
+List of runs that meet the conditions in the query. You can click on the run
+name to show more info about that particular run.
+
+### Run info
+
+Show all the info about one particular run.
+
+
+
+## Modules
+
+To run the GUI program open a terminal and type:
+
+```shell script
+wagascidb_viewer.py
+````
+
+Python modules
+
+- `wagascianpy.analysis`
+
+  Contains modules for analysing the WAGASCI raw data, decoded data and slow
+   data. 
+  - `wagascianpy.analysis.analysis` : Ctypes wrappers around
+   WagasciCalibration libraries. 
+  - `wagascianpy.analysis.analyzer` : Takes the Ctypes wrappers and organize
+   them in a abstract factory design patter.
+  - `wagascianpy.analysis.beam_summary_data` : module to integrate the BSD
+   information inside the decoded WAGASCI data. It can be used as a
+    standalone program or as a analyzer of `wagascianpy.analysis.analyzer`.
+  - `wagascianpy.analysis.mhistory2sqlite` : module to convert many mhistory
+   files containing slow devices data into a SQLite database.
+  - `wagascianpy.analysis.spill` : factory design patter to generate
+   various spill objects. A spill object contains information about the spill
+   number. It is useful when fixing the spill number bugs or when
+   integrating the BSD information.
+
+- `wagascianpy.database`
+
+    Modules to manage the WAGASCI run database and the BSD database.
+
+  - `wagascianpy.database.bsddb` : BSD database creation and access.
+  - `wagascianpy.database.db_record` : Virtual database record that is
+   inherited by the WAGASCI run record and BSD record.
+  - `wagascianpy.database.my_tinydb` : Virtual database build upon the
+   `tinydb` external module. It is inherited by the WAGASCI run database and
+    BSD database.
+  - `wagascianpy.database.wagascidb` : WAGASCI run database creation and access.
+
+- `wagascianpy.plotting`
+
+    Modules to generate history plots (plots where the X axis is time).
+
+  - `wagascianpy.plotting.colors` : manage plot colors
+  - `wagascianpy.plotting.detector` : class to store the read TTrees for each
+   subdetector and to iterate over them.
+  - `wagascianpy.plotting.graph` : class to build a generic graph
+  - `wagascianpy.plotting.harvest` : class to harvest the needed data from the
+   TTrees. It returns the X points and Y points. It is implemented using the
+    strategy design pattern.
+  - `wagascianpy.plotting.marker` : class to plot time markers as the
+   maintenance days, WAGASCI runs start and stop time, electronics troubles
+   , etc...
+  - `wagascianpy.plotting.plotter` : class to plot the actual TMultiGraph
+  - `wagascianpy.plotting.topology` : class to specify which subdetectors to
+   plot and which not
+
+- `wagascianpy.program`
+
+    Modules to generate a runnable program using the analyzers of
+    `wagascianpy.analysis.analyzer`. Implemented using the builder design
+     pattern.
+
+  - `wagascianpy.program.director` : director of the builder design pattern.
+  - `wagascianpy.program.program` : final program that is builded.
+  - `wagascianpy.program.program_builder` : builder that builds the program.
+
+- `wagascianpy.utils`
+
+    Utilities.
+
+  - `wagascianpy.utils.change_bitstream` : module to change the configuration of
+   the SPIROC chip for all the chips in one go.
+  - `wagascianpy.utils.classproperty` : implement Python property for classes
+   and not only for instances
+  - `wagascianpy.utils.configuration` : parse the configuration file and
+   create a global configuration class
+  - `wagascianpy.utils.environment` : module to read the WAGASCI
+   environmental variables from a file or from the shell environment.
+  - `wagascianpy.utils.utils` : all other utilities are gathered here.
+
+- `wagascianpy.viewer`
+
+    Module used by the GUI program. They are not supposed to be used anywhere
+     else.
+
+   - `wagascianpy.viewer.configuration` : fill the global configuration
+   - `wagascianpy.viewer.downloader` : download runs from remote repository
+   - `wagascianpy.viewer.parse_args` : parse the CLI arguments
+   - `wagascianpy.viewer.show_run_info` : build the 'run info' tab in the GUI
+   - `wagascianpy.viewer.topology` : little class to select which sub
+   -detectors are enabled and which not
+   - `wagascianpy.viewer.utils` - GUI utilities
+
+  ### Troubleshooting
+
+- If you get an error about SSH trying to set a different locale in the KEKCC 
+repository try the solution explained in this 
+[stackoverflow post](https://stackoverflow.com/questions/29609371/how-do-not-pass-locale-through-ssh).
+
