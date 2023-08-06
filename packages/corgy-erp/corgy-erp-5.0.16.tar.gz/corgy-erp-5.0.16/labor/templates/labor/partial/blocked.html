@@ -1,0 +1,32 @@
+{% load i18n material_frontend humanize corgy.commons %}
+
+{% if object.blocked.count > 0 %}
+    <div class="card">
+        <div class="card-content">
+            <div class="card-title">{% trans 'Letiltás' %}</div>
+
+            <table class="table bordered">
+                <tr>
+                    <th>{% trans 'Összeg' %}</th>
+                    <th>{% trans 'Százalék' %}</th>
+                    <th>{% trans 'Kedvezményezett' %}</th>
+                    <th>{% trans 'Bankszámlaszám' %}</th>
+                </tr>
+                {% for item in object.blocked.all %}
+                <tr>
+                    <td>{{ item.summary }}</td>
+                    <td>{{ item.in_percent|percentage }}</td>
+                    <td>{{ item.account.beneficiary }}</td>
+                    <td>{{ item.account.account_number }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <div class="card-action">
+                <div class="right-align">
+                    <b>{% trans 'Összes levonás' %}: {{ object.subtraction|intcomma }}</b>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
