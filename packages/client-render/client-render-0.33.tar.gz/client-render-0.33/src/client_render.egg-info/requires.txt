@@ -1,0 +1,5 @@
+boto3==1.14.6
+celery==4.4.3
+mss==5.1.0
+pyscreenshot==2.2
+wxPython==4.1.0
