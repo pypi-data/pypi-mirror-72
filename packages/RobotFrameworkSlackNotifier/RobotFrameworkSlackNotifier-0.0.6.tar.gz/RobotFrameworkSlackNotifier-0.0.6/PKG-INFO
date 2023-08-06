@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: RobotFrameworkSlackNotifier
+Version: 0.0.6
+Summary: RobotFrameworkSlackNotifier
+Home-page: UNKNOWN
+Author: Patdroidz
+Author-email: patdroidz@gmail.com
+License: UNKNOWN
+Description: RF Notifier for Slack
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
