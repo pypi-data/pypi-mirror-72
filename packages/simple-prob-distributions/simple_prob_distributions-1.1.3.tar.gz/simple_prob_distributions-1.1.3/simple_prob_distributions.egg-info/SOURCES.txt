@@ -1,0 +1,12 @@
+README.txt
+setup.py
+simple_prob_distributions/Binomialdistribution.py
+simple_prob_distributions/Gaussiandistribution.py
+simple_prob_distributions/Generaldistribution.py
+simple_prob_distributions/__init__.py
+simple_prob_distributions.egg-info/PKG-INFO
+simple_prob_distributions.egg-info/SOURCES.txt
+simple_prob_distributions.egg-info/dependency_links.txt
+simple_prob_distributions.egg-info/not-zip-safe
+simple_prob_distributions.egg-info/requires.txt
+simple_prob_distributions.egg-info/top_level.txt
