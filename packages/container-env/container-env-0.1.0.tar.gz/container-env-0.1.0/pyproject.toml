@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "container-env"
+version = "0.1.0"
+description = ""
+authors = ["Lior Kummer"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://lkummer.github.io/container-env/"
+repository = "https://github.com/LKummer/container-env"
+documentation = "https://lkummer.github.io/container-env/guide/"
+keywords = ["Container", "Docker", "Environment", "Configuration", "Secrets"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Topic :: Software Development",
+    "Intended Audience :: Developers",
+    "Framework :: Django",
+    "Framework :: Flask",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+coverage = "^5.1"
+pylint = "^2.5.3"
+flake8 = "^3.8.3"
+black = "^19.10b0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
