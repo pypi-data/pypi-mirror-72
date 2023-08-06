@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: django-findcar
+Version: 0.0.2
+Summary: A Django app to identify car models using machine learning.
+Home-page: https://www.example.com/
+Author: Gabriel Fernandez, Bao Nguyem, Kyle Bradley, Ziyad Morsi, Eric Gorday
+Author-email: yourname@example.com
+License: MIT License  # Example license
+Description: "We understand the struggle of seeing a car and not knowing the make or model of the car. So we decided to come up with a solution for that.All what you need to do is take a picture of the car you are interested to know the model and make of and upload it to our website and the rest is on us!
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content

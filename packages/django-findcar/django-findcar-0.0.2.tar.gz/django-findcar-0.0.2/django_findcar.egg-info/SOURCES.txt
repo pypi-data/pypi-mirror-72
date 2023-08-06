@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+setup.cfg
+setup.py
+django_findcar.egg-info/PKG-INFO
+django_findcar.egg-info/SOURCES.txt
+django_findcar.egg-info/dependency_links.txt
+django_findcar.egg-info/top_level.txt
+migrations/__init__.py
