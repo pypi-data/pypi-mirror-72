@@ -1,0 +1,26 @@
+Metadata-Version: 2.0
+Name: infi.ramen-client
+Version: 1.40.post3
+Summary: A client library for sending data to Ramen.
+Home-page: https://git.infinidat.com/host-internal/infi.ramen_client
+Author: Itay Galea
+Author-email: igalea@infinidat.com
+License: PSF
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: future
+Requires-Dist: requests
+Requires-Dist: schematics
+Requires-Dist: setuptools
+Requires-Dist: six
+
+A client library for sending data to Ramen.
+
+
