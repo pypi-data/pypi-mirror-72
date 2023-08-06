@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyIlluminate
+Version: 0.5.1
+Summary: UNKNOWN
+Home-page: https://bitbucket.org/opticalwavefrontlabs/pyilluminate
+Author: Ramona Optics, Inc.
+Author-email: info@ramonaoptics.com
+License: BSD
+Platform: UNKNOWN
+Requires-Dist: pyserial
+Requires-Dist: xarray
+
+UNKNOWN
+
+
