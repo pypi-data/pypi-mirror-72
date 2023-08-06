@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: greeclimate
+Version: 0.3.1
+Summary: Discover, connect and control Gree based minisplit systems
+Home-page: https://github.com/cmroche/greeclimate
+Author: Clifford Roche
+Author-email: 
+License: UNKNOWN
+Description: ## Gree Climate
+        
+        Discover, connect and control Gree based mini-split systems.
+        
+        **greenclimat** is a Python3 based package for controll Gree mini-split ACs and heat pumps. Gree is a common brand for minisplit systems and is licensed and resold under many product names. This module may (or may not) work for any of those system, but has been tested on
+        
+        - Trane mini-split heat pump (4TXK38)
+        
+        _If you have tested and know of others systems that work, please fork and submit a PR with the make and model_
+        
+        **Based on the following work**
+        
+        - [Gree Remote by tomikaa87](https://github.com/tomikaa87/gree-remote)
+        
+        ## Getting the package
+        
+        The easiest way to grab **greeclimate** is through PyPI
+        `pip3 install greeclimate`
+        
+        ## Use Gree Climate
+        
+        ### Findind and binding to devices
+        
+        Scan the network for devices, select a device and immediately bind. See the notes below for caveats.
+        
+        ```python
+        try:
+            gree = GreeClimate()
+            if not self._device_key:
+                devices = await gree.search_devices()
+                if self._mac:
+                    deviceinfo = next((d for d in devices if d.mac == self._mac), None)
+                else:
+                    deviceinfo = next((d for d in devices if d.ip == self._ip), None)
+            else:
+                deviceinfo = DeviceInfo(self._ip, self._port, self._mac, self._name)
+            device = Device(deviceinfo)
+            await device.bind(key=self._device_key)
+        except Exception:
+            raise CannotConnect
+        ```
+        
+        #### Caveats
+        
+        Devices have and use 2 encryption keys. 1 for discovery and setup which is the same on all gree devices, and a second which is negotiated during the binding process.
+        
+        Binding is incredibly finnicky, if you do not have the device key you must first scan and re-bind. The device will not responding to binding requests immediately proceeding a scan.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
