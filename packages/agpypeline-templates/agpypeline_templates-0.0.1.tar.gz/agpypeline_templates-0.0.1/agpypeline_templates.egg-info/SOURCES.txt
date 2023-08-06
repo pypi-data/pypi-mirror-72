@@ -1,0 +1,10 @@
+README.md
+setup.py
+agpipeline_templates/__init__.py
+agpipeline_templates/algorithm.py
+agpipeline_templates/testing.py
+agpypeline_templates.egg-info/PKG-INFO
+agpypeline_templates.egg-info/SOURCES.txt
+agpypeline_templates.egg-info/dependency_links.txt
+agpypeline_templates.egg-info/requires.txt
+agpypeline_templates.egg-info/top_level.txt
