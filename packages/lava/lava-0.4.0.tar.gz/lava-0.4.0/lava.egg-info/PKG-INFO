@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: lava
+Version: 0.4.0
+Summary: Highlevel Wrapper for Vulkan's Compute API
+Home-page: https://github.com/osanj/lava
+Author: Jonas Schuepfer
+Author-email: jonasschuepfer@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: Vulkan,Parallel Computing,Numpy
+Platform: UNKNOWN
