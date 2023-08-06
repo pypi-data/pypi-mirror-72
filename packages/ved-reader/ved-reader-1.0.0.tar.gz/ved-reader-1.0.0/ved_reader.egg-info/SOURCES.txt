@@ -1,0 +1,12 @@
+README.md
+setup.py
+reader/__init__.py
+reader/__main__.py
+reader/feed.py
+reader/viewer.py
+ved_reader.egg-info/PKG-INFO
+ved_reader.egg-info/SOURCES.txt
+ved_reader.egg-info/dependency_links.txt
+ved_reader.egg-info/entry_points.txt
+ved_reader.egg-info/requires.txt
+ved_reader.egg-info/top_level.txt
