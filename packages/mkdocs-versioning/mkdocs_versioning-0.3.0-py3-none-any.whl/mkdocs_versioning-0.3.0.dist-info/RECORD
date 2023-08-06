@@ -1,0 +1,13 @@
+mkversion/__init__.py,sha256=Bf42FStYmZAxzG2Yipi87-kTC4sohzwQpy_tjfoCs9c,1884
+mkversion/__main__.py,sha256=pUxCJ7B9EmUMR-uwh-x5h2app2X-6E7zIUzYWRU53nI,5574
+mkversion/entry.py,sha256=vQ90HQU_LvBYF_w_e75y3cR3zrPz2X_GYg6vhUv56bg,6250
+mkversion/utils.py,sha256=SrDKGiEctKkCasicHoUeTUASXMCRDMqeOoGBBIto7so,2086
+mkversion/version.py,sha256=s1PuLelhuqsr1zGEvPVQrCtQ6Uveg9WZZqD6qymZp5M,6471
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_entry.py,sha256=2hrQgGTJVGZpyFjnlfKvqpvmelBPnFxvWZr1GALJcuI,2379
+mkdocs_versioning-0.3.0.dist-info/LICENSE,sha256=2IP67ZEPnBVgWENthKAOMWqTdSZk2UkrIQ8W7EBX8qs,1067
+mkdocs_versioning-0.3.0.dist-info/METADATA,sha256=CxeNrCvFyNsOJHcyUcwqFtpfxw2zflbvrvVAqAfIEIo,2353
+mkdocs_versioning-0.3.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mkdocs_versioning-0.3.0.dist-info/entry_points.txt,sha256=q2Yf2LB1T3fGePqxLGHM-cdQOSuBlsFEmni-8UIMRG8,123
+mkdocs_versioning-0.3.0.dist-info/top_level.txt,sha256=kP9cU15gPwX-4WEhIQFzJLs09MpurPM8QuQ6uBAPUVk,16
+mkdocs_versioning-0.3.0.dist-info/RECORD,,
