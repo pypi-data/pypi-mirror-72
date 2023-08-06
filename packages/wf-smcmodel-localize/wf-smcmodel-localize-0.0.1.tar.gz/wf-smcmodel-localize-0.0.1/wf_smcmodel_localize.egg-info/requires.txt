@@ -1,0 +1,12 @@
+wf-smcmodel>=0.0.1
+wf-datetime-conversion>=0.0.1
+tensorflow>=2.2
+tensorflow-probability>=0.10.0
+pandas>=1.0.5
+scipy==1.4.1
+numpy>=1.19.0
+tqdm>=4.46.1
+python-slugify>=4.0.0
+matplotlib>=3.2.2
+seaborn>=0.10.1
+python-slugify>=4.0.0
