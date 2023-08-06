@@ -1,0 +1,69 @@
+Metadata-Version: 1.1
+Name: russian-numerals
+Version: 0.1.2b0
+Summary: Python package for working with quantitative numerals in Russian.
+Home-page: https://gitlab.com/djbaldey/russian-numerals/
+Author: Grigoriy Kramarenko
+Author-email: root@rosix.ru
+License: BSD License
+Description: ================
+        russian-numerals
+        ================
+        
+        Пакет Python для работы с количественными числительными русского языка.
+        
+        Установка
+        ---------
+        
+        .. code-block:: shell
+        
+            pip install russian-numerals
+            # or
+            pip install git+https://gitlab.com/djbaldey/russian-numerals.git@master#egg=russian-numerals
+        
+        
+        Использование в консоли
+        -----------------------
+        
+        .. code-block:: shell
+        
+            russian-numerals "1234567890"
+            russian-numerals --handler=tons "1234567890.123456"
+            russian-numerals "восемь девятьсот двадцать четыре шестьсот сорок четыре девяносто девять сорок четыре"
+            russian-numerals --help
+        
+        
+        Использование в коде Python
+        ---------------------------
+        
+        .. code-block:: python
+        
+            from russian_numerals import prepare
+        
+            print(prepare("1234567890"))
+            print(prepare("1234567890.123456", "tons"))
+            print(prepare("восемь девятьсот двадцать четыре шестьсот сорок четыре девяносто девять сорок четыре"))
+        
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: Russian
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Communications :: Telephony
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Office/Business :: Financial :: Accounting
