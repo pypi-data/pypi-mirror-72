@@ -1,0 +1,2 @@
+recursive-include ann_solo *.cpp *.h *.py *.pyx
+include README.md

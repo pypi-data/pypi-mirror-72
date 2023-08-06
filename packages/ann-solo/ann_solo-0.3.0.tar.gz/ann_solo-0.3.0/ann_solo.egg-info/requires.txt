@@ -1,0 +1,14 @@
+ConfigArgParse
+Cython
+faiss
+joblib
+matplotlib
+mmh3
+numba>=0.41
+numexpr
+numpy
+pandas
+pyteomics
+scipy
+spectrum_utils>=0.3.0
+tqdm

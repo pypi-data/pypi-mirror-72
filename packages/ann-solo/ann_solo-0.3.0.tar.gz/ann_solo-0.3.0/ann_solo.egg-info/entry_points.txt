@@ -1,0 +1,4 @@
+[console_scripts]
+ann_solo = ann_solo.ann_solo:main
+ann_solo_plot = ann_solo.plot_ssm:main
+
