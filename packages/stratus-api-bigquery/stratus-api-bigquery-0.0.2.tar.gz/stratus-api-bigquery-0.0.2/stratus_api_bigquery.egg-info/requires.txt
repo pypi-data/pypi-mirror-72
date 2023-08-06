@@ -1,0 +1,3 @@
+stratus-api-core>=0.0.6
+stratus-api-jobs>=0.0.2
+celery[redis]==4.4.2
