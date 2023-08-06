@@ -1,0 +1,15 @@
+blockmatching/__init__.py,sha256=FcxCw1AZ0G8izLf9oWu7OjNYZ16KeHY5KOTnaCQzTGw,1529
+blockmatching/background.py,sha256=40TEdTysrh3fIKEtmte7yU1SoHIdqX0rGQseGzQSiqE,5052
+blockmatching/blockmatching.py,sha256=P6IYRvaYP9-C4DPn22C-N2YgwZekQehHCXkwZf70xso,12088
+blockmatching/clustering.py,sha256=b9zbx4YWxK3XK4nYxSERAvaND7XTGafFvA78DGqTPbo,6615
+blockmatching/dlayers.py,sha256=afpNfON6e-9M56gF05sxH5uiW-F0OxGRE973mp03kr4,6059
+blockmatching/forecast.py,sha256=Le5F3O9Ni_T_IrKnHDh40IAlP9DQfweI5psSp1WZadM,7556
+blockmatching/motionlayers.py,sha256=fXnAGgTZxRq0BeNkLtfrR6UqKJczadBCQYDb5uQ4xdU,2672
+blockmatching/savevideo.py,sha256=hTPhxyNIv-RvC44T6YG5Q0_Cf_EUeq0o4mL3MhGJt4Y,768
+blockmatching/vectormask.py,sha256=C2H8N5co7b3AtuCzqrCxJQzERKNuig9fl40flL1q1Es,2812
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_layers.py,sha256=vHP9JtBxcNAM59ktDLyMzYsNr8RIhl70GxJTD_ER8Kc,902
+blockmatching-1.1.0.dist-info/METADATA,sha256=hnfMBfl5OktOgHCj0aVTNuuG-Tk5FIEHqgiDx4BFqtg,7715
+blockmatching-1.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+blockmatching-1.1.0.dist-info/top_level.txt,sha256=qgy3Zj33yptVIih4KkUOoJTL-8Xlu239a-eKUYr78vw,19
+blockmatching-1.1.0.dist-info/RECORD,,
