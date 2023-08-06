@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: airsimdroneracinglab
+Version: 0.1.0
+Summary: Python package for AirSim Drone Racing Lab, built on Microsoft AirSim - an open source simulator based on Unreal Engine for autonomous vehicles from Microsoft AI & Research
+Home-page: https://github.com/microsoft/AirSim-Drone-Racing-Lab
+Author: Ratnesh Madaan, Nicholas Gyde, Sai Vemprala
+Author-email: ratnesh.madaan@microsoft.com, v-nigyde@microsoft.com, sai.vemprala@microsoft.com
+License: MIT
+Description: # Python API for AirSim Drone Racing Lab
+        
+        This package contains Python APIs for [AirSim Drone Racing Lab](https://github.com/microsoft/AirSim-Drone-Racing-Lab), built on [Microsoft AirSim](https://github.com/microsoft/AirSim)
+        
+        ## Dependencies
+        This package depends on `msgpack` and would automatically install `msgpack-rpc-python` (this may need administrator/sudo prompt):
+        ```
+        pip install msgpack-rpc-python
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
