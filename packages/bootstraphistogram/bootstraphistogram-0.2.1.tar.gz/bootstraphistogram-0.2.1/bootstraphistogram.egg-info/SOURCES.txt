@@ -1,0 +1,12 @@
+README.md
+setup.py
+bootstraphistogram/__init__.py
+bootstraphistogram/_version.py
+bootstraphistogram/bootstraphistogram.py
+bootstraphistogram/plot.py
+bootstraphistogram.egg-info/PKG-INFO
+bootstraphistogram.egg-info/SOURCES.txt
+bootstraphistogram.egg-info/dependency_links.txt
+bootstraphistogram.egg-info/requires.txt
+bootstraphistogram.egg-info/top_level.txt
+bootstraphistogram.egg-info/zip-safe
