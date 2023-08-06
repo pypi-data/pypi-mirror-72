@@ -1,0 +1,1 @@
+Basic Package that will create guassian and binomial objects
