@@ -1,0 +1,12 @@
+{% extends 'djangoadmin/base/body/index_admin.html' %}
+
+{% block body %}
+{% include "djangoadmin/widgets/alerts.html" %}
+{% include "djangoadmin/widgets/search.html" %}
+{% include "djangoadmin/widgets/dashboard_accordian_list.html" with data=category_list is_category="False" %}
+{% include "djangoadmin/widgets/pagination.html" %}
+{% endblock body %}
+
+{% block sidebar_right %}
+{% include "djangoadmin/widgets/promo-window.html" %}
+{% endblock sidebar_right %}
