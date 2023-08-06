@@ -1,0 +1,9 @@
+README.md
+setup.py
+maxinopdf/__init__.py
+maxinopdf/pdf2image.py
+maxinopdf/pdf2text.py
+maxinopdf.egg-info/PKG-INFO
+maxinopdf.egg-info/SOURCES.txt
+maxinopdf.egg-info/dependency_links.txt
+maxinopdf.egg-info/top_level.txt
