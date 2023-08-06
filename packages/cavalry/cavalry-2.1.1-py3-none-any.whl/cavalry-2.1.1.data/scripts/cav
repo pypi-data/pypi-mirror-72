@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SCRIPT=cavalry
+
+if [ $# = "0" ] || [ $(echo $* | grep '\-h\|\-\-help' | wc -l) -gt 0 ]
+then
+    python3 -Bm $SCRIPT $@ -h
+elif [ $1 = "load" ] || [ $1 = "clear" ]
+then
+    eval $(python3 -Bm $SCRIPT $@)
+else
+    python3 -Bm $SCRIPT $@
+fi
