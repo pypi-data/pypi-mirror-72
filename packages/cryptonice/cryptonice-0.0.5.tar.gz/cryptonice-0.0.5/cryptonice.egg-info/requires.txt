@@ -1,0 +1,9 @@
+sslyze>=3.0.0
+cryptography>=2.6
+nassl>=3.0.0
+dnspython>=1.16.0
+http-client>=0.1.22
+tls-parser>=1.2.1
+urllib3>=1.25.9
+ipaddress>=1.0.22pathlib~=1.0.1
+pycurl~=7.43.0.5
