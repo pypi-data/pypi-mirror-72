@@ -1,0 +1,7 @@
+jax==0.1.71
+jaxlib
+tensorflow==2.2.0
+tfp-nightly==0.11.0.dev20200629
+
+[:python_version < "3.7"]
+dataclasses
