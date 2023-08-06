@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: loremipsumpy
+Version: 0.0.2
+Summary: This module generates lorem ipsum placeholder Text
+Home-page: https://github.com/Ammyy9908/loremipsumpy
+Author: Sumit
+Author-email: sb78639@gmai.com
+License: GNU General Public License v2 or later (GPLv2+)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest (>=3.7) ; extra == 'dev'
+
+<h1>LoremipsumPy</h1>
+# This Package Generates Placeholder Text i Python that can be use anywhere where you need to put some lorem ipsum
+
+## Installation
+
+Run the follwoing to install
+
+pip install loremipsumpy
+
+## Usage
+
+from loremipsumpy import Lorem
+
+lorem = Lorem()
+data = lorem.get_lorem_default(count=1)
+print(data)
+data = lorem.get_lorem_large(count=1)
+print(data)
+data = lorem.get_xlarge(count=1)
+print(data)
+data = lorem.get_xxlarge(count=1)
+print(data)
+
