@@ -1,0 +1,32 @@
+{
+  "properties": {
+    "libraryVersion": "1.4.2",
+    "apiVersion": "0.0.18-SNAPSHOT",
+    "isolatedFrame": ""
+  },
+  "link": "https://github.com/JetBrains/lets-plot-kotlin",
+  "repositories": [
+    "https://jetbrains.bintray.com/lets-plot-maven"
+  ],
+  "dependencies": [
+    "org.jetbrains.lets-plot:lets-plot-kotlin-api:$apiVersion"
+  ],
+  "imports": [
+    "jetbrains.letsPlot.*",
+    "jetbrains.letsPlot.geom.*",
+    "jetbrains.letsPlot.stat.*"
+  ],
+  "init": [
+    "import jetbrains.letsPlot.LetsPlot",
+    "import jetbrains.letsPlot.frontend.NotebookFrontendContext",
+    "val isolatedFrameParam = if(\"$isolatedFrame\".isNotEmpty()) \"$isolatedFrame\".toBoolean() else null",
+    "val frontendContext = LetsPlot.setupNotebook(\"$libraryVersion\", isolatedFrameParam) {DISPLAY(HTML(it))}",
+    "LetsPlot.apiVersion = \"$apiVersion\"",
+    "// Load library JS",
+    "DISPLAY(HTML(frontendContext.getConfigureHtml()))"
+  ],
+  "renderers": {
+    "jetbrains.letsPlot.intern.Plot": "HTML(frontendContext.getHtml($it))",
+    "jetbrains.letsPlot.GGBunch": "HTML(frontendContext.getHtml($it))"
+  }
+}
