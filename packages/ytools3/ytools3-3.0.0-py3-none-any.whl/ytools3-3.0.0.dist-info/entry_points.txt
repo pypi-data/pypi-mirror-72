@@ -1,0 +1,3 @@
+[console_scripts]
+ytools = ytools.__main__:main
+
