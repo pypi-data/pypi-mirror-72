@@ -1,0 +1,11 @@
+LICENSE
+README.md
+requirements.txt
+setup.py
+gravityai/__init__.py
+gravityai/gravityai.py
+gravityai.egg-info/PKG-INFO
+gravityai.egg-info/SOURCES.txt
+gravityai.egg-info/dependency_links.txt
+gravityai.egg-info/requires.txt
+gravityai.egg-info/top_level.txt
