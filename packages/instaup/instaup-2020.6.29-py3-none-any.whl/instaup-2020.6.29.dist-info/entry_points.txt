@@ -1,0 +1,3 @@
+[console_scripts]
+instaup = instaup.instaup:main
+

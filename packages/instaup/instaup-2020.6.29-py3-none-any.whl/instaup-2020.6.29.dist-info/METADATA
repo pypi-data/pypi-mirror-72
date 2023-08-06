@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: instaup
+Version: 2020.6.29
+Summary: An auto downloader and uploader for Instagram profiles.
+Home-page: https://github.com/Coloradohusky/InstaUp
+Author: Coloradohusky
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5, <4
+Description-Content-Type: text/x-rst
+Requires-Dist: internetarchive (>=1.9.3)
+Requires-Dist: instaloader (>=4.4.3)
+
+InstaUp
+=======
+
+An auto downloader and uploader for Instagram profiles.
+
+**Requirements**
+  `Instaloader <https://instaloader.github.io>`__ and `internetarchive <https://archive.org/services/docs/api/internetarchive/index.html>`__ on Python 3.
+
+**How to use**
+  Install with ``pip install instaup``.
+
+
