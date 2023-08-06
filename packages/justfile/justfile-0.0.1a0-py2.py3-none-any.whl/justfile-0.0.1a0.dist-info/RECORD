@@ -1,0 +1,8 @@
+justfile/__init__.py,sha256=CRqQvC9AAaSjMWOZ5IMwo5MMappIH7CuwdTirAFnScw,23
+justfile/exception.py,sha256=ZeLeU-d9qnQwlRnQgEzFECSMk91u99RaJDIRAbVDUfQ,54
+justfile/io.py,sha256=seuLtZRIWsEF3VGQKuWZZz9PaAhBtzJPHG44p55yecw,1774
+justfile/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+justfile-0.0.1a0.dist-info/LICENSE,sha256=iPQFPe_CF7uOd6fzRckapm-YBU9gU43e-m3W47ObMGA,1101
+justfile-0.0.1a0.dist-info/WHEEL,sha256=BcHwX75L5o9y8NN94BU-O_IP_7AP-vrh-M6RWGoded0,87
+justfile-0.0.1a0.dist-info/METADATA,sha256=kFv5XfLfjHV1_iZ4bCbnJXDtSEsX7VjwJQQfv1xLOTs,2426
+justfile-0.0.1a0.dist-info/RECORD,,
