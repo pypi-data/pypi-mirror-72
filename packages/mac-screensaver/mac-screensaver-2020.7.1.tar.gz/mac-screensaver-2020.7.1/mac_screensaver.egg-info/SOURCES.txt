@@ -1,0 +1,15 @@
+requirements.txt
+setup.py
+mac_screensaver.egg-info/PKG-INFO
+mac_screensaver.egg-info/SOURCES.txt
+mac_screensaver.egg-info/dependency_links.txt
+mac_screensaver.egg-info/top_level.txt
+scripts/.screensaver-name.applescript
+scripts/.screensaver-names.applescript
+scripts/screensaver
+scripts/screensaver-name
+scripts/screensaver-names
+scripts/screensaver-pid
+scripts/screensaver-start
+scripts/screensaver-stop
+scripts/screensaver-wait
