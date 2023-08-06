@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: aws-emr-launch
+Version: 1.2.1
+Summary: AWS EMR Launch modules
+Home-page: https://code.amazon.com/packages/AWSProServe_project_EMRLaunch/trees/mainline
+Author: chamcca
+Author-email: chamcca@amazon.com
+License: UNKNOWN
+Keywords: aws
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: logzero (>=1.5.0)
+Requires-Dist: boto3 (>=1.12.23)
+Requires-Dist: aws-cdk.core (>=1.29.0)
+Requires-Dist: aws-cdk-aws.iam (>=1.29.0)
+Requires-Dist: aws-cdk.aws-s3 (>=1.29.0)
+Requires-Dist: aws-cdk.aws-s3.deployment (>=1.29.0)
+Requires-Dist: aws-cdk.aws-kms (>=1.29.0)
+Requires-Dist: aws-cdk.aws-ec2 (>=1.29.0)
+Requires-Dist: aws-cdk.aws-emr (>=1.29.0)
+Requires-Dist: aws-cdk.aws-sns (>=1.29.0)
+Requires-Dist: aws-cdk.aws-sqs (>=1.29.0)
+Requires-Dist: aws-cdk.aws-ssm (>=1.29.0)
+Requires-Dist: aws-cdk.aws-secretsmanager (>=1.29.0)
+Requires-Dist: aws-cdk.aws-lambda (>=1.29.0)
+Requires-Dist: aws-cdk.aws-lambda-event-sources (>=1.29.0)
+Requires-Dist: aws-cdk.aws-stepfunctions (>=1.29.0)
+Requires-Dist: aws-cdk.aws-stepfunctions-tasks (>=1.29.0)
+Requires-Dist: aws-cdk.aws-events (>=1.29.0)
+Requires-Dist: aws-cdk.aws-events-targets (>=1.29.0)
+
+# EMR Launch
+
+## READ THIS FIRST
+__This project is currently in Beta testing with select customers. 
+It is considered INTERNAL ONLY and should not be shared with customers outside of a paid ProServe engagement.__
+
+If you're interested in using this library on an engagement, contact __chamcca@__  
+
+## Development
+See the __docs/__!
+
+And the __examples/__...
+
+
+### Install Project Dependencies
+
+Install [aws cdk](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html)
+```sh
+npm install -g aws-cdk
+```
+
+Install [pipenv](https://github.com/pypa/pipenv)
+
+Then install this project's development dependencies using
+
+```sh
+pipenv install --dev
+```
+
+Install this project's dependencies using
+
+```sh
+pipenv install '-e .'
+```
+
+#### Installing New Layer Packages
+The following will install 
+1. Update the `lambda_layer_requirements.txt` adding the new package(s)
+2. Install new package(s): `pipenv run pip install -r lambda_layer_requirements.txt --target=aws_emr_launch/lambda_sources/layers/emr_config_utils/python/lib/python3.7/site-packages/`
+   - This will skip upgrades of previously installed packages
+
+#### Updating Lambda Layer Packages
+To Update the Lambda Layer packages it is recommended that you first delete the entire layer contents to eliminate bloat.
+1. Remove packages: `rm -fr aws_emr_launch/lambda_sources/layers/emr_config_utils/*`
+2. Update the `lambda_layer_requirements.txt`
+3. Reinstall packages: `pipenv run pip install -r lambda_layer_requirements.txt --target=aws_emr_launch/lambda_sources/layers/emr_config_utils/python/lib/python3.7/site-packages/`
+
+### Testing
+
+To run the test suite (be sure to deactivate the examples virtualenv)
+```sh
+pipenv run pytest
+```
+
+#### After running tests
+
+View test coverage reports by opening `htmlcov/index.html` in your web browser.
+
+#### To write a test
+* start a file named test_[the module you want to test].py
+* import the module you want to test at the top of the file
+* write test case functions that match either `test_*` or `*_test`
+
+For more information refer to [pytest docs](https://docs.pytest.org/en/latest/getting-started.html)
+
+
