@@ -1,0 +1,12 @@
+admin_menu/__init__.py,sha256=PWJctUb-6B89kzdhSRk8gsFDoGvRoIOPuEs8izhFwdg,20
+admin_menu/sass/admin-menu.scss,sha256=x4hAlNfRHgl8yMzjTr7tdksGE5FWctJJGWF7W0zFarI,5714
+admin_menu/templates/admin/base_site.html,sha256=jj_W7HfrTt5yNoUe10MtUVeQrS0ha6LFJmOX6HvYvT0,2057
+admin_menu/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+admin_menu/templatetags/custom_admin_css.py,sha256=4cVtwxwSyri22KvqPvzMwHse-34YwvaTcRGKUkFV5kU,1833
+admin_menu/templatetags/custom_admin_logo.py,sha256=1R-i5Fq0TIe6ZVkt40U3Pc95MDTvc5MHSdJokBMl_eY,187
+admin_menu/templatetags/custom_admin_menu.py,sha256=GTq1VUe7rjEcIWiIAbWSAA9mdASNd6qUVRnOYPo7NKQ,6749
+django_admin_menu-1.3.dist-info/LICENSE,sha256=KOqHOEOA0ny0UEZzgrFrw71a8ucWBE81PVhZGam2XsE,1064
+django_admin_menu-1.3.dist-info/METADATA,sha256=r4DL0AUu_sq6v3EqB3_srhodZPQuhUC4BpORWTWuDz8,4696
+django_admin_menu-1.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_admin_menu-1.3.dist-info/top_level.txt,sha256=EdjQqW7P3Avngy7InNRv4DtrdSJng2Mxbgh5O9KJcc0,11
+django_admin_menu-1.3.dist-info/RECORD,,
