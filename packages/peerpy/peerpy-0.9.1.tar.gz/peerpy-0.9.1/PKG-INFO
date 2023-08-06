@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: peerpy
+Version: 0.9.1
+Summary: p2p connection over TCP made dead simple!
+Home-page: https://github.com/Rubilmax/peerpy
+Author: Rubilmax
+Author-email: rmilon@gmail.com
+License: UNKNOWN
+Description: # peerpy package
+        
+        This library is still in active development! A steady release will soon be ready.
+        
+        ## Installation
+        
+        `pip install peerpy`
+        
+        ## Usage
+        
+        While the steady release is coming, you can use the [Hello World example](https://github.com/Rubilmax/peerpy/blob/master/examples/hello_world.py) given.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
