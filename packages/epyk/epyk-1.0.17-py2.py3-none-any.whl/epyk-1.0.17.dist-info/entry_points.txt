@@ -1,0 +1,3 @@
+[console_scripts]
+epyk = epyk.core.cli.command_line_fncs:main
+
