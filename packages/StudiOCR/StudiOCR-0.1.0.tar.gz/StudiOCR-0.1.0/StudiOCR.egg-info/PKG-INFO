@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: StudiOCR
+Version: 0.1.0
+Summary: Index documents using OCR
+Home-page: https://github.com/BSpwr/StudiOCR
+Author: Index Zero Heroes
+License: UNKNOWN
+Description:  
+        # TODO
+        
+Keywords: ocr,index,document
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
