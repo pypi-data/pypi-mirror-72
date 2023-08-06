@@ -1,0 +1,10 @@
+robotframework>=3.0
+robotframework-databaselibrary
+robotframework-imaplibrary
+robotframework-seleniumlibrary
+gspread
+unicodecsv
+oauth2client
+robotframework-httplibrary
+openpyxl
+PyPDF2
