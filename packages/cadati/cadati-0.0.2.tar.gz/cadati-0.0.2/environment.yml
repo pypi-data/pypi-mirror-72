@@ -1,0 +1,8 @@
+name: cadati_env
+channels:
+  - default
+  - conda-forge
+dependencies:
+  - numpy
+  - pandas
+  - pip
