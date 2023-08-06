@@ -1,0 +1,12 @@
+README.md
+setup.py
+sremail/__init__.py
+sremail/address.py
+sremail/email_date_field.py
+sremail/message.py
+sremail/smtp.py
+sremail.egg-info/PKG-INFO
+sremail.egg-info/SOURCES.txt
+sremail.egg-info/dependency_links.txt
+sremail.egg-info/requires.txt
+sremail.egg-info/top_level.txt
