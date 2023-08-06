@@ -1,0 +1,8 @@
+astropy>=3
+
+[docs]
+sphinx-astropy
+sphinx_rtd_theme
+
+[test]
+pytest-astropy-header
