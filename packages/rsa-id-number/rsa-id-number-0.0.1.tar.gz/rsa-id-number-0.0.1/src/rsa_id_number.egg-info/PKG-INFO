@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: rsa-id-number
+Version: 0.0.1
+Summary: South African ID number utilities
+Home-page: https://github.com/teamgeek-io/rsa-id-number
+Author: Teamgeek
+Author-email: support@teamgeek.io
+License: MIT
+Description: 
+        # rsa-id-number
+        
+        Utilities for working with South African ID numbers.
+        
+Keywords: utilities,development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
