@@ -1,0 +1,11 @@
+README.md
+setup.py
+curatedMetagenomicsDataPipeline/cli.py
+curatedMetagenomicsDataPipeline/curatedMetagenomicData_pipeline.py
+curatedMetagenomicsDataPipeline/utils.py
+curatedmetagenomicspipeline.egg-info/PKG-INFO
+curatedmetagenomicspipeline.egg-info/SOURCES.txt
+curatedmetagenomicspipeline.egg-info/dependency_links.txt
+curatedmetagenomicspipeline.egg-info/entry_points.txt
+curatedmetagenomicspipeline.egg-info/requires.txt
+curatedmetagenomicspipeline.egg-info/top_level.txt
