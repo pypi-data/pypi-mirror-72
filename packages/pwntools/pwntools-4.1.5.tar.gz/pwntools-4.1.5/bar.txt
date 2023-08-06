@@ -1,0 +1,11 @@
+================================================================================
+= Started at 2020-06-27T20:55:53                                               =
+= sys.argv = [                                                                 =
+=   '/opt/hostedtoolcache/Python/2.7.18/x64/lib/python2.7/site-packages/sphinx/__main__.py',=
+=   '-b',                                                                      =
+=   'doctest',                                                                 =
+=   'docs/source',                                                             =
+=   'docs/build/doctest',                                                      =
+= ]                                                                            =
+================================================================================
+2020-06-27T20:55:53:DEBUG:pwnlib.context:Hello from bar!
