@@ -1,0 +1,11 @@
+README.md
+setup.py
+pyaxepta/__init__.py
+pyaxepta/axepta.py
+pyaxepta/signature.py
+python_axepta.egg-info/PKG-INFO
+python_axepta.egg-info/SOURCES.txt
+python_axepta.egg-info/dependency_links.txt
+python_axepta.egg-info/not-zip-safe
+python_axepta.egg-info/requires.txt
+python_axepta.egg-info/top_level.txt
