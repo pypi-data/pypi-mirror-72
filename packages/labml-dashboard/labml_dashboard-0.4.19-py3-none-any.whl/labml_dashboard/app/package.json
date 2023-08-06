@@ -1,0 +1,30 @@
+{
+  "name": "labml_dashboard",
+  "version": "0.4.7",
+  "description": "LabML Dashboard",
+  "main": "app.js",
+  "repository": "https://github.com/lab-ml/dashboard",
+  "author": "Varuna Jayasiri",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/sqlite3": "latest",
+    "typescript": "latest",
+    "sass": "latest"
+  },
+  "dependencies": {
+    "sqlite3": "latest",
+    "yaml": "latest"
+  },
+  "scripts": {
+    "build": "$npm_execpath run build:server && $npm_execpath run build:ui && $npm_execpath run build:sass",
+    "watch": "$npm_execpath run watch:server & $npm_execpath run watch:ui & $npm_execpath run watch:sass",
+    "build:ui": "tsc -p tsconfig.ui.json",
+    "watch:ui": "tsc -w -p tsconfig.ui.json",
+    "build:server": "tsc -p tsconfig.server.json",
+    "watch:server": "tsc -w -p tsconfig.server.json",
+    "build:sass": "sass ui/style.scss:app/ui/css/style.css",
+    "watch:sass": "sass --watch ui/style.scss:app/ui/css/style.css",
+    "clean": "rm -rf app/"
+  }
+}
