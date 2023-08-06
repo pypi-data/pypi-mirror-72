@@ -1,0 +1,14 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+bejjo/__init__.py
+bejjo/acak/__init__.py
+bejjo/acak/acakhuruf.py
+bejjo/acak/acaktanggal.py
+bejjo/statistika/statistika.py
+bejjoeqq.egg-info/PKG-INFO
+bejjoeqq.egg-info/SOURCES.txt
+bejjoeqq.egg-info/dependency_links.txt
+bejjoeqq.egg-info/top_level.txt
