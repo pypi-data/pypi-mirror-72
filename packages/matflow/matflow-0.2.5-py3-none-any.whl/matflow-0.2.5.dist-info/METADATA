@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: matflow
+Version: 0.2.5
+Summary: Computational workflow management for materials science.
+Home-page: UNKNOWN
+Author: Adam J. Plowman
+Author-email: adam.plowman@manchester.ac.uk
+License: UNKNOWN
+Project-URL: Github, https://github.com/Lightform-group/matflow
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: matflow-demo-extension
+Requires-Dist: hpcflow (>=0.1.9)
+Requires-Dist: click (>7.0)
+Requires-Dist: hickle (==3.4.6)
+Requires-Dist: ruamel.yaml
+Requires-Dist: numpy
+Requires-Dist: pyperclip
+
+[![DOI](https://zenodo.org/badge/219949875.svg)](https://zenodo.org/badge/latestdoi/219949875) [![PyPI version](https://badge.fury.io/py/matflow.svg)](https://badge.fury.io/py/matflow)
+
+# MatFlow
+
+MatFlow is a computational workflow management code for materials science.
+
+
