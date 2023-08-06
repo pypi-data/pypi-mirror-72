@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: wy-sentry-dingding
+Version: 0.0.1
+Summary: send sentry messages to dingding
+Home-page: https://404.com
+Author: 404
+Author-email: 404@gmail.com
+License: MIT
+Description: # sentry-dingding
+        
+        `Sentry`的`钉钉`通知插件。
+        
+        代码 copy from https://github.com/anshengme/sentry-dingding 。然后自定义一下钉钉消息的内容。
+        
+Keywords: sentry dingding
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
