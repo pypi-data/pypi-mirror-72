@@ -1,0 +1,10 @@
+numpy
+scipy
+imageio
+Pillow
+docutils
+requests
+colour-demosaicing
+colour
+color-matcher
+color-space-converter
