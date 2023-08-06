@@ -1,0 +1,3 @@
+[console_scripts]
+jmetermetrics = jmeter_metrics.runner:main
+
