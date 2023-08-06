@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: spdx-py-build-tool-ek6
+Version: 0.2
+Summary: Support a continuous integration (CI) generation of SPDX files by creating a plugins or extensions to build tools
+Home-page: https://github.com/spdx/
+Author: Ekong Obie Philip
+Author-email: ekongobiephilip@gmail.com
+Maintainer: Ekong Obie Philip
+Maintainer-email: ekongobiephilip@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+Python Pip build tool
+
+
