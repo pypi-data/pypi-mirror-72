@@ -1,0 +1,8 @@
+setup.py
+nearset/__init__.c
+nearset/metrics.c
+nearset.egg-info/PKG-INFO
+nearset.egg-info/SOURCES.txt
+nearset.egg-info/dependency_links.txt
+nearset.egg-info/requires.txt
+nearset.egg-info/top_level.txt
