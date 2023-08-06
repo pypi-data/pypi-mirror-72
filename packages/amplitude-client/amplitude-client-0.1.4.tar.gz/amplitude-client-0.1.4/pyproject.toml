@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "amplitude-client"
+version = "0.1.4"
+description = "A simple aiohttp based python client for Amplitude"
+authors = ["Ismael Alaoui <ismael@onna.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+aiohttp = "^3.6.2"
+aiohttp-client-manager = "^1.1.1"
+json-schema-env-validator = "^1.0.5"
+aioresponses = "^0.6.4"
+jsonschema = "^3.2.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
