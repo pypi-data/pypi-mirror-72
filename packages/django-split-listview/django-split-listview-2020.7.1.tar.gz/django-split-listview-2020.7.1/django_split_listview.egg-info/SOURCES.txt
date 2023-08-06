@@ -1,0 +1,9 @@
+requirements.txt
+setup.py
+django_split_listview/__init__.py
+django_split_listview/views.py
+django_split_listview.egg-info/PKG-INFO
+django_split_listview.egg-info/SOURCES.txt
+django_split_listview.egg-info/dependency_links.txt
+django_split_listview.egg-info/requires.txt
+django_split_listview.egg-info/top_level.txt
