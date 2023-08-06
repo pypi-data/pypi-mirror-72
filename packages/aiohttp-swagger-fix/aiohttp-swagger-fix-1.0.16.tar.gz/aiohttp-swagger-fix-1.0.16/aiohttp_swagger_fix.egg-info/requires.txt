@@ -1,0 +1,6 @@
+pyYAML>=5.1
+jinja2~=2.8
+aiohttp>=2.3.10
+
+[performance]
+ujson

@@ -1,0 +1,30 @@
+Version 1.0.13
+=============
+- Updated swagger ui version to 3.24.3
+
+Version 1.0.13
+=============
+- Increased OpenApi document version to 3.0.1 for Swagger UI 3
+
+Version 1.0.12
+=============
+- Dropped support for python 3.4
+- Added possibility to use Swagger UI 3
+
+Version 1.0.0
+=============
+
+Internal modifications
+----------------------
+
+- First Version
+
+Improvements and fixes
+----------------------
+
+- First Version
+
+New features
+------------
+
+- First Version
