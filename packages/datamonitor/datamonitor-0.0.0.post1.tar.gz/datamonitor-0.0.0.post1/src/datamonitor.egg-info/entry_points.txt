@@ -1,0 +1,3 @@
+[console_scripts]
+datamonitor = datamonitor.cli:main
+
