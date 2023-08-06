@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+percolation/__init__.py
+percolation/ds.py
+percolation/grid.py
+percolation/monte_carlo.py
+percolation/naive.py
+percolation_threshold.egg-info/PKG-INFO
+percolation_threshold.egg-info/SOURCES.txt
+percolation_threshold.egg-info/dependency_links.txt
+percolation_threshold.egg-info/requires.txt
+percolation_threshold.egg-info/top_level.txt
