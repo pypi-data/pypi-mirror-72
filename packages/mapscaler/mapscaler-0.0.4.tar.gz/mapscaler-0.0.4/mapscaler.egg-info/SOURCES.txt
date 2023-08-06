@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+mapscaler/__init__.py
+mapscaler/datasets.py
+mapscaler/mapscaler.py
+mapscaler/maputils.py
+mapscaler.egg-info/PKG-INFO
+mapscaler.egg-info/SOURCES.txt
+mapscaler.egg-info/dependency_links.txt
+mapscaler.egg-info/requires.txt
+mapscaler.egg-info/top_level.txt
+mapscaler/geojson/us_counties.json
+mapscaler/geojson/us_states.json
