@@ -1,0 +1,14 @@
+setup.py
+automl-machine/__init__.py
+automl-machine/machine.py
+automl-machine/metrics.py
+automl-machine/models.py
+automl-machine/models_generation.py
+automl-machine/transformation_pipelines.py
+automl-machine/transformation_utils.py
+automl-machine/transformer.py
+modelcreator.egg-info/PKG-INFO
+modelcreator.egg-info/SOURCES.txt
+modelcreator.egg-info/dependency_links.txt
+modelcreator.egg-info/requires.txt
+modelcreator.egg-info/top_level.txt
