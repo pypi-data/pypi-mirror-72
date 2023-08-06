@@ -1,0 +1,4 @@
+
+[jsonfield]
+django-jsonfield>=1.0.1
+django-jsonfield-compat>=0.4.4
