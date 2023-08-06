@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+libzim/__init__.py
+libzim/lib.cxx
+libzim/lib.h
+libzim/reader.py
+libzim/wrapper.cpp
+libzim/wrapper.h
+libzim/wrapper.pxd
+libzim/wrapper.pyx
+libzim/wrapper_api.h
+libzim/writer.py
+tests/test_libzim.py
+tests/test_libzim_file_reader.py
