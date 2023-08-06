@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: aliro-honeywell
+Version: 1.0.0
+Summary: Honeywell
+Home-page: UNKNOWN
+Author: OpenAPI Generator community
+Author-email: nick@aliroquantum.com
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,Honeywell
+Platform: UNKNOWN
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+Requires-Dist: six (>=1.10)
+Requires-Dist: sseclient-py (>=1.7)
+Requires-Dist: urllib3 (>=1.15)
+
+This is an api to connect to the Honeywell backend  # noqa: E501
+
+
