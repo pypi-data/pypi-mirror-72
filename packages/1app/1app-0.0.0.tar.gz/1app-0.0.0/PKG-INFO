@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: 1app
+Version: 0.0.0
+Summary: Simple data saver for App.
+Home-page: https://github.com/0oio/1app
+Author: Mindey
+Author-email: ~@mindey.com
+License: MIT
+Description: Hello, ONE
+        ----------
+        この小さいモジュールの目的はツィキャスのコメントなどの情報を、興味のあるチャンネルについて、自分のディスクに保存することです。
+        
+        それぞれのクラウドプログラムから情報を研究や分析ためにディスクに保存することには新しい標準を作りたいから、このパッケージは一例になる。
+        
+        それには、僕はツィキャスのコメントをTelegramでみたいからさ。
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: test

@@ -1,0 +1,12 @@
+README.md
+setup.py
+1app/__init__.py
+1app/main.py
+1app/settings.py
+1app.egg-info/PKG-INFO
+1app.egg-info/SOURCES.txt
+1app.egg-info/dependency_links.txt
+1app.egg-info/entry_points.txt
+1app.egg-info/not-zip-safe
+1app.egg-info/requires.txt
+1app.egg-info/top_level.txt
