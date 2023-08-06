@@ -1,0 +1,3 @@
+[console_scripts]
+mrks = mrks.cli:main
+
