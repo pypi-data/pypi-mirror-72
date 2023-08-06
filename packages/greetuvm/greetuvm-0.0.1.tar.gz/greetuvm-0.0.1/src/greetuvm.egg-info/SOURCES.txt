@@ -1,0 +1,13 @@
+.gitignore
+LICENSE.txt
+MANIFEST.in
+Makefile
+README.md
+setup.py
+src/hello.py
+src/greetuvm.egg-info/PKG-INFO
+src/greetuvm.egg-info/SOURCES.txt
+src/greetuvm.egg-info/dependency_links.txt
+src/greetuvm.egg-info/requires.txt
+src/greetuvm.egg-info/top_level.txt
+test/test_hello.py

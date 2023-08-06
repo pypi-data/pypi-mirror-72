@@ -1,0 +1,4 @@
+include *.in
+include *.txt
+include COPYING
+include Makefile
