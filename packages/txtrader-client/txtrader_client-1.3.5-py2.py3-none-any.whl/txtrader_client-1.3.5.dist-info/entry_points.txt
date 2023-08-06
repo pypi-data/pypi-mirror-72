@@ -1,0 +1,3 @@
+[console_scripts]
+txtrader = txtrader_client:cli
+
