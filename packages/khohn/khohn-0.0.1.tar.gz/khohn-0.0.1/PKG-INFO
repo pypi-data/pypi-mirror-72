@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: khohn
+Version: 0.0.1
+Summary: A library for searching and analyzing Thai data
+Home-page: https://github.com/jweinst1/khohn
+Author: Joshua Weinstein
+Author-email: jweinst1@berkeley.edu
+License: MIT
+Download-URL: https://github.com/jweinst1/khohn/archive/master.zip
+Description: # à¸„à¹‰à¸™ (khohn)
+        
+        A library for searching and analyzing Thai text and data
+        
+Keywords: thai,thailand,thai language,thai nlp,thai search,big data,full text,text search,data science
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Natural Language :: Thai
+Classifier: License :: OSI Approved :: MIT License
