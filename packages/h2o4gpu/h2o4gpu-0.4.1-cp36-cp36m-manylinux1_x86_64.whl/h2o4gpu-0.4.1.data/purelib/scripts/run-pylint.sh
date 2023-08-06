@@ -1,0 +1,3 @@
+#!/bin/bash
+
+find h2o4gpu -name "*.py" -type f ! -path "h2o4gpu/__init__.py" ! -path "h2o4gpu/util/roc_opt.py" ! -path "h2o4gpu/solvers/daal_solver/utils/__init__.py" ! -path "h2o4gpu/solvers/__init__.py" ! -path "h2o4gpu/typecheck/compatibility.py" ! -path "h2o4gpu/typecheck/typechecks.py" ! -path "h2o4gpu/libs/ch2o4gpu_gpu.py" ! -path "h2o4gpu/libs/ch2o4gpu_cpu.py" ! -path "h2o4gpu/util/daicx.py" | xargs pylint --rcfile=../../tools/pylintrc -j 0
