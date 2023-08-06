@@ -1,0 +1,3 @@
+[console_scripts]
+gw2pvo = gw2pvo.__main__:run
+
