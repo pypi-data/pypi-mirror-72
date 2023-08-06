@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "4711"
+version = "0.0.1"
+description = "A collection of CLI tools for working with data structures, parsing and formatting"
+authors = ["Carl Oscar Aaro <hello@carloscar.com>"]
+homepage = "https://github.com/kalaspuff/4711"
+repository = "https://github.com/kalaspuff/4711"
+packages = [
+    { include = "_4711/**/*.py" },
+]
+keywords = ["4711", "data structures", "data", "structure"]
+readme = "README.md"
+license = "MIT"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Testing",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "License :: OSI Approved :: MIT License"
+]
+
+[tool.poetry.dependencies]
+python = "^3.6 || ^3.7 || ^3.8"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.8.3"
+flake8-black = "^0.2.0"
+flake8-isort = "^3.0.0"
+isort = { version = "^4.3.21", extras = ["pyproject"] }
+pytest = "^5.4.3"
+pytest-cov = "^2.10.0"
+black = "=19.10b0"
+codecov = "^2.1.7"
+
+[tool.poetry.scripts]
+4711 = "_4711:cli"
+
+[tool.black]
+line-length = 120
+target_version = ["py36", "py37", "py38"]
+
+[tool.isort]
+line_length = 120
+multi_line_output = 3
+use_parentheses = true
+include_trailing_comma = true
+known_first_party = "4711"
