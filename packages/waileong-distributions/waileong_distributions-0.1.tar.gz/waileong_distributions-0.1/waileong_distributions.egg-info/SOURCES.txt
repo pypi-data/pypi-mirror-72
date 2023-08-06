@@ -1,0 +1,10 @@
+setup.py
+waileong_distributions/Binomialdistribution.py
+waileong_distributions/Gaussiandistribution.py
+waileong_distributions/Generaldistribution.py
+waileong_distributions/__init__.py
+waileong_distributions.egg-info/PKG-INFO
+waileong_distributions.egg-info/SOURCES.txt
+waileong_distributions.egg-info/dependency_links.txt
+waileong_distributions.egg-info/not-zip-safe
+waileong_distributions.egg-info/top_level.txt
