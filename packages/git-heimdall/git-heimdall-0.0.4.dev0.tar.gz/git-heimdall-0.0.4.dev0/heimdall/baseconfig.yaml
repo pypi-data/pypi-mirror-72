@@ -1,0 +1,7 @@
+heimdall:
+    secret: res/secrets.json
+
+    templates:
+      -
+        file: res/example.json.mustache
+        extension: json
