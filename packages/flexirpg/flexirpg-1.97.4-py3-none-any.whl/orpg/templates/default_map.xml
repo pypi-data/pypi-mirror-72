@@ -1,0 +1,6 @@
+<!-- FlexiRPG - default map -->
+<map version='1.0' action='new'>
+    <bg color='#E5E5E5'/>
+    <grid snap='1' color='#BFBFBF' line='2'  mode='0' size='20'/>
+    <whiteboard serial='0'/>
+</map>

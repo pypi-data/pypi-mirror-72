@@ -1,0 +1,6 @@
+<!-- FlexiRPG - default map for the lobby -->
+<map version='1.0' action='new'>
+  <bg color='#E5E5E5' type='3'/>
+  <grid snap='1' color='#BFBFBF' line='0' mode='0' size='20'/>
+  <whiteboard serial='0'/>
+</map>
