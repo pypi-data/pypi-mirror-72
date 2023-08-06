@@ -1,0 +1,9 @@
+numpy
+pandas
+geopandas
+rasterio
+scipy
+statsmodels
+rasterstats
+libpysal
+tqdm
