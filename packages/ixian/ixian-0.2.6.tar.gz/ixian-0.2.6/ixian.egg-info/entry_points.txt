@@ -1,0 +1,3 @@
+[console_scripts]
+ix = ixian.runner:cli
+
