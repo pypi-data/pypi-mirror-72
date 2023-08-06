@@ -1,0 +1,11 @@
+README.md
+setup.py
+gibiga_distributions/Binomialdistribution.py
+gibiga_distributions/Gaussiandistribution.py
+gibiga_distributions/Generaldistribution.py
+gibiga_distributions/__init__.py
+gibiga_distributions.egg-info/PKG-INFO
+gibiga_distributions.egg-info/SOURCES.txt
+gibiga_distributions.egg-info/dependency_links.txt
+gibiga_distributions.egg-info/not-zip-safe
+gibiga_distributions.egg-info/top_level.txt
