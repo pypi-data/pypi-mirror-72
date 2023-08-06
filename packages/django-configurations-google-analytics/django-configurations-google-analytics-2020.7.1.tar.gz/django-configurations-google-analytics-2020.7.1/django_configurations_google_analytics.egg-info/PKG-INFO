@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: django-configurations-google-analytics
+Version: 2020.7.1
+Summary: django-configurations Google Analytics settings
+Home-page: https://github.com/andrewp-as-is/django-configurations-google-analytics.py
+License: Unlicense
+Description: <!--
+        https://readme42.com
+        -->
+        
+        
+        [![](https://img.shields.io/pypi/v/django-configurations-google-analytics.svg?maxAge=3600)](https://pypi.org/project/django-configurations-google-analytics/)
+        [![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
+        
+        ### Installation
+        ```bash
+        $ [sudo] pip install django-configurations-google-analytics
+        ```
+        
+        ##### `settings.py`
+        ```python
+        from django_configurations_google_analytics import GoogleAnalyticsConfiguration
+        
+        class Base(GoogleAnalyticsConfiguration,...):
+            # GA_ID = 'UA-XXXXXXXX-Y'
+        ```
+        
+        ##### `.env`
+        ```bash
+        DJANGO_GA_ID="UA-XXXXXXXX-Y"
+        ```
+        
+        ##### Templates
+        ```html
+        {% load google_analytics %}
+        ...
+        {% google_analytics %}
+        ```
+        
+        #### Links
+        +   [django-configurations](https://github.com/jazzband/django-configurations)
+        
+        <p align="center">
+            <a href="https://readme42.com/">readme42.com</a>
+        </p>
+Keywords: django google analytics
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

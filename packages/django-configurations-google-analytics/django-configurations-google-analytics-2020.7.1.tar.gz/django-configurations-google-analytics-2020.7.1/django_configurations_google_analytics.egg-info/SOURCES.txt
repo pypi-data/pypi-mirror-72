@@ -1,0 +1,10 @@
+requirements.txt
+setup.py
+django_configurations_google_analytics/__init__.py
+django_configurations_google_analytics.egg-info/PKG-INFO
+django_configurations_google_analytics.egg-info/SOURCES.txt
+django_configurations_google_analytics.egg-info/dependency_links.txt
+django_configurations_google_analytics.egg-info/requires.txt
+django_configurations_google_analytics.egg-info/top_level.txt
+django_configurations_google_analytics/templatetags/__init__.py
+django_configurations_google_analytics/templatetags/google_analytics.py
