@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+pid_trap.egg-info/PKG-INFO
+pid_trap.egg-info/SOURCES.txt
+pid_trap.egg-info/dependency_links.txt
+pid_trap.egg-info/top_level.txt
+scripts/pid-trap
