@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: dimensigon
+Version: 0.1b11
+Summary: Dimensigon (DM) is a Distributed Management and Automation RESTful framework to make easier heterogeneous/polyglot orchestrations in a Hybrid Multi-Cloud environment.
+Home-page: https://github.com/dimensigon/dimensigon
+Author: Joan Prat
+Author-email: joan.prat@dimensigon.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: PyYAML
+Requires-Dist: six
+Requires-Dist: flask
+Requires-Dist: flask-JWT-Extended
+Requires-Dist: flask-Migrate
+Requires-Dist: flask-RESTFul
+Requires-Dist: flask-SQLAlchemy
+Requires-Dist: requests
+Requires-Dist: rsa
+Requires-Dist: coverage
+Requires-Dist: jsonschema
+Requires-Dist: aiohttp
+Requires-Dist: dataclasses
+Requires-Dist: cryptography
+Requires-Dist: psutil
+Requires-Dist: python-dotenv
+Requires-Dist: netifaces
+Requires-Dist: apscheduler
+Requires-Dist: passlib
+Requires-Dist: jinja2
+Requires-Dist: SQLAlchemy
+Requires-Dist: Werkzeug
+Requires-Dist: jinja2schema
+Requires-Dist: RestrictedPython
+Requires-Dist: setuptools
+Requires-Dist: click
+
+# dimensigon
+Dimensigon (Core, AutoUpgrader, DShell)
+
+####Launch Coverage report for tests
+````gitignore
+coverage run --source=dm -m unittest
+coverage report -m
+````
+
+
+Query to check routes from database
+```sqlite
+select s1.name "destination", 
+       r.proxy_server_id,
+       r.cost,
+       s2.name "server_gate", 
+       g.dns, 
+       g.ip, 
+       g.port 
+  from l_route r 
+ inner join d_gate g on r.gate_id = g.id 
+ inner join d_server s1 on r.destination_id = s1.id 
+ inner join d_server s2 on g.server_id = s2.id;
+```
+
+Query server and gates
+```sqlite
+select s.name, g.dns, g.ip, g.port 
+  from d_server s 
+ inner join d_gate g on s.id = g.server_id 
+ order by s.name;
+```
+
+"dimensigon-node1": "ba81a3a0-3a76-47cc-b1bd-4e62e95f0586"
+"dimensigon-node2": "a47b2dd4-7961-417c-a4e3-293cc97ac056"
+"dimensigon-node3": "d3a98a9f-31d4-43c7-8316-2a8fb2f338e1"
+
+
+
