@@ -1,0 +1,3 @@
+[console_scripts]
+geoextent = geoextent.__main__:main
+
