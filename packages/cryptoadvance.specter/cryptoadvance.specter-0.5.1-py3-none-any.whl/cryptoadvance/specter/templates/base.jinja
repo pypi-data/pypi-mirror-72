@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" type="image/png" href="/static/img/icon.png"/>
+		<title>Specter Desktop</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="/static/styles.css?{{rand}}">
+	</head>
+	<body>
+	{% if specter.config.auth == "none" or current_user.is_authenticated %}
+		{% include "includes/overlay/overlay.html" %}
+		{% include "includes/qr-code.html" %}
+		{% include "includes/message-box.html" %}
+	{% endif %}
+	<div class="row holder">
+		{% block sidebar %}
+			{% include "includes/sidebar/sidebar.jinja" %}
+		{% endblock %}
+		<main>		
+			{% if specter.config.auth != "none" and current_user.is_authenticated and not hwi_bridge %}
+				<a class="logout" href="{{ url_for('logout') }}">
+					<img src="/static/img/exit_from_app-24px.svg" style="width: 24px;"/><div>Logout</div>
+				</a>
+			{% else %}
+				<div><br><br></div>
+			{% endif %}
+			<img id="menubtn" src="/static/img/menu.svg"/>
+
+			<div id="messages">
+			{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					{% for message in messages | unique %}
+						<message-box type="error">{{ message }}</message-box>
+					{% endfor %}
+				{% endif %}
+			{% endwith %}
+			{% if error %}
+				<message-box type="error">ERROR: {{error}}</message-box>
+			{% endif %}
+			</div>
+
+			{% block main %}
+				{% if error %}
+					<br><br>Something went wrong :(<br><br>{{error}}
+				{% else %}
+					<br><br>Nothing here
+				{% endif %}
+			{% endblock %}
+		</main>
+	</div>
+
+	<script type="text/javascript">
+		window.addEventListener('load', (event) => {
+			let main = document.getElementsByTagName("main")[0];
+			main.addEventListener('click', (event) => {
+				document.getElementById("side-content").classList.remove("active");
+			});
+			let menubtn = document.getElementById("menubtn");
+			menubtn.addEventListener('click', (event) => {
+				document.getElementById("side-content").classList.add("active");
+				event.stopPropagation();
+			});
+		});
+
+		document.addEventListener("errormsg", (e)=>{
+			if(!("timeout" in e.detail)){
+				e.detail.timeout = 0;
+			}
+			showError(e.detail.message, e.detail.timeout);
+		});
+		document.addEventListener("notification", (e)=>{
+			if(!("timeout" in e.detail)){
+				e.detail.timeout = 0;
+			}
+			showNotification(e.detail.message, e.detail.timeout);
+		});
+		function showError(msg, timeout=0) {
+			return showNotification(msg, timeout, "error");
+		}
+		function showNotification(msg, timeout=3000, type="primary") {
+			let el = document.createElement("message-box");
+			el.setAttribute("type", type);
+			el.setAttribute("timeout", timeout);
+			el.innerHTML = msg;
+			document.getElementById("messages").appendChild(el);
+			el.addEventListener('click', (e)=>{
+				document.getElementById("messages").removeChild(el);
+			});
+			return el;
+		}
+
+		function copyText(value, msg) {
+			try {
+				var element = document.createElement("p");
+				document.getElementsByTagName("body")[0].appendChild(element);
+				element.textContent = value
+				var selection = document.getSelection();
+				var range = document.createRange();
+				range.selectNode(element);
+				selection.removeAllRanges();
+				selection.addRange(range);
+				document.execCommand("copy");
+				selection.removeAllRanges();
+				document.getElementsByTagName("body")[0].removeChild(element);
+				showNotification(msg);
+			}
+			catch (err) {
+				showError('Unable to copy text');
+			}
+		}
+	</script>
+
+	{% block scripts %}
+	{% endblock %}
+	</body>
+</html>
