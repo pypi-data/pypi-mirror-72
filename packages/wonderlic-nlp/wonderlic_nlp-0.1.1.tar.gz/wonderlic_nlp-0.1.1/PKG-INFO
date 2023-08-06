@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: wonderlic_nlp
+Version: 0.1.1
+Summary: General-purpose NLP toolkit for accessing popular psycholinguistics databases.
+Home-page: https://github.com/Wonderlic-AI/wonderlic_nlp
+Author: Ross Piper, Abdallah Aboelela
+Author-email: ross.piper@wonderlic.com, abdallah.aboelela@wonderlic.com
+License: gpl-3.0
+Download-URL: https://github.com/Wonderlic-AI/wonderlic_nlp/archive/v_0_1_1.tar.gz
+Description: UNKNOWN
+Keywords: NLP,Python,Natural,Language,Processing,English,Python,tfidf,MRC,SUBTLEX,SUBTLEXus,Psycholinguistics
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3.7

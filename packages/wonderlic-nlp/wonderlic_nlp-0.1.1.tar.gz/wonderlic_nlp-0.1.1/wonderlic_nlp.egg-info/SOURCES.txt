@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+wonderlic_nlp/__init__.py
+wonderlic_nlp/psycholinguistics.py
+wonderlic_nlp/wonderlic.py
+wonderlic_nlp.egg-info/PKG-INFO
+wonderlic_nlp.egg-info/SOURCES.txt
+wonderlic_nlp.egg-info/dependency_links.txt
+wonderlic_nlp.egg-info/requires.txt
+wonderlic_nlp.egg-info/top_level.txt
+wonderlic_nlp/psycholinguistics/mrc.pickle
+wonderlic_nlp/psycholinguistics/subtl.pickle
