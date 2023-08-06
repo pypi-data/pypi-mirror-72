@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+mac_tag_sync.egg-info/PKG-INFO
+mac_tag_sync.egg-info/SOURCES.txt
+mac_tag_sync.egg-info/dependency_links.txt
+mac_tag_sync.egg-info/top_level.txt
+scripts/tag-sync
