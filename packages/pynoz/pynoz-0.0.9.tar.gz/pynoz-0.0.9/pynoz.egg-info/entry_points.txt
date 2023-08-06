@@ -1,0 +1,3 @@
+[console_scripts]
+pynoz = pynoz.bin:main
+
