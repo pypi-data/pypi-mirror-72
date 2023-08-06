@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pyln-bolt4
+Version: 1.0.1.137
+Summary: BOLT #4: Onion Routing Protocol
+Home-page: http://github.com/ElementsProject/lightning
+Author: Rusty Russell
+Author-email: rusty@rustcorp.com.au
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: pyln.proto (==0.8.4)
+
+UNKNOWN
+
+
