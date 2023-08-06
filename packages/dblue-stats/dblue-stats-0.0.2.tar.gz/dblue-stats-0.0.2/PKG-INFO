@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: dblue-stats
+Version: 0.0.2
+Summary: Dblue's stats library for generating baseline statistics of ML features
+Home-page: https://github.com/dblueai/dblue-stats
+Author: Rajesh Hegde
+Author-email: rh@dblue.ai
+Maintainer: Rajesh Hegde
+Maintainer-email: rh@dblue.ai
+License: Apache2
+Description: # Dblue Stats
+        
+        Generate baseline statistics for ML training data. 
+        This will be used for measuring the drifts over time. 
+Keywords: dblue,machine-learning,drift,monitoring,mlwatch,statistics
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Description-Content-Type: text/markdown
