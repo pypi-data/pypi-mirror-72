@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+env_strip.egg-info/PKG-INFO
+env_strip.egg-info/SOURCES.txt
+env_strip.egg-info/dependency_links.txt
+env_strip.egg-info/top_level.txt
+scripts/env-strip
