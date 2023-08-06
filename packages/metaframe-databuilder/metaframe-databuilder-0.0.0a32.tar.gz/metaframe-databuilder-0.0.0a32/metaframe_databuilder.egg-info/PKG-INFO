@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: metaframe-databuilder
+Version: 0.0.0a32
+Summary: A pared-down metadata ETL library.
+Home-page: https://github.com/rsyi/metaframe
+Author: Robert Yi
+Author-email: robert@ryi.me
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6

@@ -1,0 +1,5 @@
+amundsen-databuilder>=2.0.0
+pyhocon>=0.3.42
+tabulate
+pyaml
+google-api-python-client
