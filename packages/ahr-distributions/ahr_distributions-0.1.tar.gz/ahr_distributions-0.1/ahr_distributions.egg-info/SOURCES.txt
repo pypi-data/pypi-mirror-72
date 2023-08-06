@@ -1,0 +1,10 @@
+setup.py
+ahr_distributions/Binomialdistribution.py
+ahr_distributions/Gaussiandistribution.py
+ahr_distributions/Generaldistribution.py
+ahr_distributions/__init__.py
+ahr_distributions.egg-info/PKG-INFO
+ahr_distributions.egg-info/SOURCES.txt
+ahr_distributions.egg-info/dependency_links.txt
+ahr_distributions.egg-info/not-zip-safe
+ahr_distributions.egg-info/top_level.txt
