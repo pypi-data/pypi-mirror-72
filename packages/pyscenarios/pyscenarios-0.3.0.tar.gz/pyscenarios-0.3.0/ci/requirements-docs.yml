@@ -1,0 +1,13 @@
+name: pyscenarios-docs
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - dask
+  - numba
+  - numpy
+  - pandas
+  - scipy
+
+  - sphinx<3
+  - sphinx_rtd_theme

@@ -1,0 +1,14 @@
+name: pyscenarios
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - dask
+  - numba
+  - numpy
+  - pandas
+  - scipy
+
+  - coverage
+  - pytest
+
