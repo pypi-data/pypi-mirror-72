@@ -1,0 +1,3 @@
+[console_scripts]
+autodl = autodl.cli.cli:main
+
