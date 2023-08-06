@@ -1,0 +1,10 @@
+fastavro
+toml
+click
+prettytable
+colorama
+
+[dev]
+black
+pre-commit
+pydocstyle
