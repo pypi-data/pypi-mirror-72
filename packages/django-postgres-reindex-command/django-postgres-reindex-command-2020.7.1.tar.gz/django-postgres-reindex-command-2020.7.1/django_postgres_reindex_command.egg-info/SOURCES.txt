@@ -1,0 +1,11 @@
+requirements.txt
+setup.py
+django_postgres_reindex_command/__init__.py
+django_postgres_reindex_command.egg-info/PKG-INFO
+django_postgres_reindex_command.egg-info/SOURCES.txt
+django_postgres_reindex_command.egg-info/dependency_links.txt
+django_postgres_reindex_command.egg-info/requires.txt
+django_postgres_reindex_command.egg-info/top_level.txt
+django_postgres_reindex_command/management/__init__.py
+django_postgres_reindex_command/management/commands/__init__.py
+django_postgres_reindex_command/management/commands/reindex.py
