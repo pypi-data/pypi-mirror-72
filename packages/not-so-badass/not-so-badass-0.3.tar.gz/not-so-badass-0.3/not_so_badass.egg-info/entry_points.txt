@@ -1,0 +1,3 @@
+[console_scripts]
+badass = badass.__main__:main
+
