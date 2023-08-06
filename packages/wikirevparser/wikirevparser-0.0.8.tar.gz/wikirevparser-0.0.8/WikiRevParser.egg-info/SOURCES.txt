@@ -1,0 +1,13 @@
+README.md
+setup.py
+WikiRevParser.egg-info/PKG-INFO
+WikiRevParser.egg-info/SOURCES.txt
+WikiRevParser.egg-info/dependency_links.txt
+WikiRevParser.egg-info/top_level.txt
+wikirevparser/__init__.py
+wikirevparser/wikirevparser.py
+wikirevparser.egg-info/PKG-INFO
+wikirevparser.egg-info/SOURCES.txt
+wikirevparser.egg-info/dependency_links.txt
+wikirevparser.egg-info/requires.txt
+wikirevparser.egg-info/top_level.txt
