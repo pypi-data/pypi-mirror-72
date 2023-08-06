@@ -1,0 +1,71 @@
+MANIFEST.in
+build_config.py
+ihsm_analytics/__init__.py
+ihsm_analytics/ar.cp37-win_amd64.pyd
+ihsm_analytics/eor.cp37-win_amd64.pyd
+ihsm_analytics/screening_table.csv
+ihsm_analytics/screening_table_2019.csv
+ihsm_analytics.egg-info/PKG-INFO
+ihsm_analytics.egg-info/SOURCES.txt
+ihsm_analytics.egg-info/dependency_links.txt
+ihsm_analytics.egg-info/requires.txt
+ihsm_analytics.egg-info/top_level.txt
+ihsm_analytics/DataFiles/Marcellus Shale/GeoModel/isip (psia) median blended.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/GeoModel/tvd (ft) blended.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/GeoModel/youngs modulus.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/10/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/10/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/12/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/12/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/14/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/14/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/16/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/16/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/18/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/18/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/20/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/20/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/22/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/22/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/24/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/24/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/26/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/26/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/28/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/28/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/30/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/30/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/32/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/32/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/34/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/34/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/36/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/36/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/38/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/38/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/40/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/40/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/42/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/42/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/44/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/44/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/46/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/46/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/48/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/48/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/50/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/50/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/52/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/52/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/54/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/54/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/56/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/56/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/58/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/58/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/6/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/6/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/60/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/60/modelPredictTest.csv
+ihsm_analytics/DataFiles/Marcellus Shale/Model/8/model.pickle
+ihsm_analytics/DataFiles/Marcellus Shale/Model/8/modelPredictTest.csv

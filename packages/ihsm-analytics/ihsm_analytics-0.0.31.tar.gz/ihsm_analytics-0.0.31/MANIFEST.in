@@ -1,0 +1,2 @@
+recursive-include ihsm_analytics *.pyd *.csv *.pickle *.xgb
+recursive-exclude test *.*
