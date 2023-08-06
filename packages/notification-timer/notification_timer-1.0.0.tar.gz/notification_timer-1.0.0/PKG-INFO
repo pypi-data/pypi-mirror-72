@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: notification_timer
+Version: 1.0.0
+Summary: Package To Push Notification and Keep User Motivated
+Home-page: https://github.com/TheMLEngineer/notification_timer
+Author: KARTHIKEYAN MUTHU
+Author-email: phenomenalkarthikeyan@gmail.com
+License: UNKNOWN
+Description: # notification_timer
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
