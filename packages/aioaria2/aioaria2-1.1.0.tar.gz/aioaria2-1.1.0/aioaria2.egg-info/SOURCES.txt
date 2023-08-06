@@ -1,0 +1,16 @@
+README.md
+setup.py
+aioaria2/__init__.py
+aioaria2/client.py
+aioaria2/exceptions.py
+aioaria2/server.py
+aioaria2/utils.py
+aioaria2.egg-info/PKG-INFO
+aioaria2.egg-info/SOURCES.txt
+aioaria2.egg-info/dependency_links.txt
+aioaria2.egg-info/requires.txt
+aioaria2.egg-info/top_level.txt
+aioaria2/tests/__init__.py
+aioaria2/tests/test.py
+aioaria2/tests/test_server.py
+aioaria2/tests/test_websocket.py
