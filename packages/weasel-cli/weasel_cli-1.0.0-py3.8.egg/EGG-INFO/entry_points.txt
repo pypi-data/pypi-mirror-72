@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        weasel=weasel:cli
+    
