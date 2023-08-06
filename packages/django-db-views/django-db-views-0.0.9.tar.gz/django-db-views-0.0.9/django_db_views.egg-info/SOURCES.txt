@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+django_db_views/__init__.py
+django_db_views/autodetector.py
+django_db_views/db_view.py
+django_db_views/migration_functions.py
+django_db_views/operations.py
+django_db_views.egg-info/PKG-INFO
+django_db_views.egg-info/SOURCES.txt
+django_db_views.egg-info/dependency_links.txt
+django_db_views.egg-info/requires.txt
+django_db_views.egg-info/top_level.txt
+django_db_views/management/__init__.py
+django_db_views/management/commands/__init__.py
+django_db_views/management/commands/makeviewmigrations.py
