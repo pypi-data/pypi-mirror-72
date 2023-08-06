@@ -1,0 +1,10 @@
+README.md
+setup.py
+modbus4mqtt/__init__.py
+modbus4mqtt/modbus4mqtt.py
+modbus4mqtt/modbus_interface.py
+modbus4mqtt.egg-info/PKG-INFO
+modbus4mqtt.egg-info/SOURCES.txt
+modbus4mqtt.egg-info/dependency_links.txt
+modbus4mqtt.egg-info/requires.txt
+modbus4mqtt.egg-info/top_level.txt
