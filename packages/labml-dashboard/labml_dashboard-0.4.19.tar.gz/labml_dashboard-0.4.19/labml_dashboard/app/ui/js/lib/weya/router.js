@@ -1,0 +1,330 @@
+define(["require", "exports"], function (require, exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    class Router {
+        constructor(options) {
+            this.optionalParam = /\((.*?)\)/g;
+            this.namedParam = /(\(\?)?:\w+/g;
+            this.splatParam = /\*\w+/g;
+            this.escapeRegExp = /[\-{}\[\]+?.,\\\^$|#\s]/g;
+            this.event = null;
+            this.history = [];
+            this.controller = new Controller(options);
+        }
+        start(startState, silent) {
+            let fragment = this.controller.getFragment();
+            this.controller.start(startState, silent);
+            if (silent === true) {
+                this.history.push({
+                    fragment: fragment,
+                    title: document.title
+                });
+            }
+        }
+        back() {
+            if (this.history.length > 1) {
+                return this.controller.back();
+            }
+        }
+        canBack() {
+            if (this.history.length > 1 && this.controller.canBack()) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        route(route, callbacks) {
+            if ((Object.prototype.toString.call(route)) !== '[object RegExp]') {
+                route = this._routeToRegExp(route);
+            }
+            this.controller.route(route, (fragment, event) => {
+                let args = this._extractParameters(route, fragment);
+                this.event = event;
+                if (this.event != null && this.event.type === "popstate") {
+                    this.history.pop();
+                    if (this.history.length === 0) {
+                        this.history.push({
+                            fragment: fragment,
+                            title: document.title,
+                            state: this.getState()
+                        });
+                    }
+                }
+                else {
+                    this.history.push({
+                        fragment: fragment,
+                        title: document.title,
+                        state: this.getState()
+                    });
+                }
+                for (let callback of callbacks) {
+                    if (!callback.apply(this, args)) {
+                        break;
+                    }
+                }
+            });
+        }
+        getState() {
+            if (this.event == null)
+                return null;
+            else if (this.event.originalEvent == null)
+                return null;
+            else
+                return this.event.originalEvent;
+        }
+        navigate(fragment, options) {
+            const def = { replace: false, trigger: true, title: '', state: null };
+            if (!options) {
+                options = def;
+            }
+            for (let k in def) {
+                if (!(k in options)) {
+                    options[k] = def[k];
+                }
+            }
+            if (options.replace) {
+                this.history.pop();
+            }
+            if (!options.trigger) {
+                this.history.push({
+                    fragment: fragment,
+                    title: options.title,
+                    state: options.state
+                });
+            }
+            return this.controller.navigate(fragment, options);
+        }
+        _routeToRegExp(route) {
+            route = route
+                .replace(this.escapeRegExp, '\\$&')
+                .replace(this.optionalParam, '(?:$1)?')
+                .replace(this.namedParam, (match, optional) => {
+                if (optional) {
+                    return match;
+                }
+                else {
+                    return '([^\/]+)';
+                }
+            }).replace(this.splatParam, '(.*?)');
+            return new RegExp("^" + route + "$");
+        }
+        _extractParameters(route, fragment) {
+            let params = route.exec(fragment).slice(1);
+            let results = [];
+            for (let p of params) {
+                if (p != null)
+                    results.push(decodeURIComponent(p));
+            }
+            return results;
+        }
+        getParams(search) {
+            let vars = search.substr(1)
+                .split('&');
+            let params = {};
+            for (let v of vars) {
+                let pair = v.split('=');
+                params[pair[0]] = decodeURIComponent(pair[1]);
+            }
+            return params;
+        }
+    }
+    exports.Router = Router;
+    class Controller {
+        constructor(options) {
+            this.routeStripper = /^[#\/]|\s+$/g;
+            this.rootStripper = /^\/+|\/+$/g;
+            this.trailingSlash = /\/$/;
+            this.pathStripper = /[?#].*$/;
+            this.interval = 50;
+            this.handlers = [];
+            this.checkUrl = this.checkUrl.bind(this);
+            this.history = window.history;
+            this.location = window.location;
+            this.stateList = [];
+            this.started = false;
+            this.emulateState = options.emulateState || false;
+            this.wantsHashChange = this.emulateState === false && options.hashChange === true;
+            let wantsPushState = this.emulateState === false && options.pushState === true;
+            this.hasPushState = wantsPushState && this.history && this.history.pushState != null;
+            this.root = options.root || '/';
+            this.root = ("/" + this.root + "/").replace(this.rootStripper, '/');
+            if (options.onerror) {
+                this.onerror = options.onerror;
+            }
+        }
+        start(startState, silent) {
+            this.started = true;
+            if (this.emulateState && (startState != null)) {
+                this.pushEmulateState(startState.state, startState.title, startState.fragment);
+            }
+            if (this.hasPushState) {
+                window.onpopstate = this.checkUrl;
+            }
+            else if (this.wantsHashChange && (window.onhashchange != null)) {
+                window.onhashchange = this.checkUrl;
+            }
+            else if (this.wantsHashChange) {
+                this.checkUrlInterval = setInterval(this.checkUrl, this.interval);
+            }
+            this.fragment = this.getFragment();
+            if (!silent) {
+                return this.loadUrl(null, null);
+            }
+        }
+        getHash() {
+            let match = this.location.href.match(/#(.*)$/);
+            return (match != null ? match[1] : '');
+        }
+        getEmulateState() {
+            if (this.stateList.length > 0) {
+                return this.stateList[this.stateList.length - 1];
+            }
+            else {
+                return {
+                    fragment: "",
+                    state: null,
+                    title: ""
+                };
+            }
+        }
+        popEmulateState() {
+            return this.stateList.pop();
+        }
+        pushEmulateState(state, title, fragment) {
+            return this.stateList.push({
+                state: state,
+                title: title,
+                fragment: fragment
+            });
+        }
+        getFragment(fragment = null, forcePushState = false) {
+            let root = '';
+            if (fragment == null) {
+                if (this.emulateState) {
+                    fragment = this.getEmulateState().fragment;
+                }
+                else if (this.hasPushState || !this.wantsHashChange || forcePushState) {
+                    fragment = this.location.pathname;
+                    root = this.root.replace(this.trailingSlash, '');
+                    if ((fragment.indexOf(root)) === 0) {
+                        fragment = fragment.slice(root.length);
+                    }
+                }
+                else {
+                    fragment = this.getHash();
+                }
+            }
+            return fragment.replace(this.routeStripper, '');
+        }
+        back() {
+            if (this.emulateState === true) {
+                this.popEmulateState();
+                return this.loadUrl(null, null);
+            }
+            else {
+                if (this.history == null)
+                    return;
+                if (typeof this.history.back === "function")
+                    this.history.back();
+            }
+        }
+        canBack() {
+            if (this.emulateState === true) {
+                return this.stateList.length > 1;
+            }
+            else {
+                if (this.history == null)
+                    return false;
+                return typeof this.history.back === "function";
+            }
+        }
+        route(route, callback) {
+            return this.handlers.unshift({
+                route: route,
+                callback: callback
+            });
+        }
+        checkUrl(e) {
+            let fragment = this.getFragment();
+            if (fragment === this.fragment) {
+                return;
+            }
+            return this.loadUrl(fragment, e);
+        }
+        loadUrl(fragment, e) {
+            try {
+                fragment = this.fragment = this.getFragment(fragment);
+                for (let handler of this.handlers) {
+                    if (handler.route.test(fragment)) {
+                        return handler.callback(fragment, e);
+                    }
+                }
+            }
+            catch (error) {
+                if (typeof this.onerror === "function") {
+                    this.onerror(error);
+                }
+            }
+        }
+        navigate(fragment, options) {
+            if (!this.started) {
+                return false;
+            }
+            fragment = this.getFragment(fragment || '');
+            let url = this.root + fragment;
+            fragment = fragment.replace(this.pathStripper, '');
+            if (this.fragment === fragment) {
+                return;
+            }
+            this.fragment = fragment;
+            if (fragment === '' && url !== '/') {
+                url = url.slice(0, -1);
+            }
+            if (this.emulateState) {
+                if (options.replace === true) {
+                    this.popEmulateState();
+                }
+                let state = {};
+                if (options.state != null) {
+                    state = options.state;
+                }
+                let title = '';
+                if (options.title != null) {
+                    title = options.title;
+                }
+                this.pushEmulateState(state, title, fragment);
+            }
+            else if (this.hasPushState) {
+                let method = options.replace ? 'replaceState' : 'pushState';
+                let state = {};
+                if (options.state != null) {
+                    state = options.state;
+                }
+                let title = '';
+                if (options.title != null) {
+                    title = options.title;
+                }
+                this.history[method](state, title, url);
+            }
+            else if (this.wantsHashChange) {
+                this._updateHash(this.location, fragment, options.replace);
+            }
+            else {
+                return this.location.assign(url);
+            }
+            if (options.trigger) {
+                return this.loadUrl(fragment, null);
+            }
+        }
+        _updateHash(location, fragment, replace) {
+            if (replace) {
+                let href = location.href.replace(/(javascript:|#).*$/, '');
+                return location.replace(href + "#" + fragment);
+            }
+            else {
+                return location.hash = "#" + fragment;
+            }
+        }
+    }
+});

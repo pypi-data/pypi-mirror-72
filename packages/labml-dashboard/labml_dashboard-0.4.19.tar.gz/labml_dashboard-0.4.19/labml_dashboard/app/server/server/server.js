@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const node_1 = require("../lib/io/node");
+const static_1 = require("../lib/io/static");
+const PATH = require("path");
+let static_path = PATH.resolve(__dirname, '../../ui');
+let SERVER = new node_1.NodeHttpServerPort(8082, null, true);
+exports.SERVER = SERVER;
+let STATIC_SERVER = new static_1.StaticServer(static_path, new Set(['/api']));
+exports.STATIC_SERVER = STATIC_SERVER;
+SERVER.handleRequest = STATIC_SERVER.handleRequest;
