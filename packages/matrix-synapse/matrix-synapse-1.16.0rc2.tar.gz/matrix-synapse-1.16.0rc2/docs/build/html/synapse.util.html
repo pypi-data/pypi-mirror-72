@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>synapse.util package &#8212; Synapse 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="synapse.util.async module" href="synapse.util.async.html" />
+    <link rel="prev" title="synapse.rest.room module" href="synapse.rest.room.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="synapse.util.async.html" title="synapse.util.async module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="synapse.rest.room.html" title="synapse.rest.room module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Synapse 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="synapse.html" accesskey="U">synapse package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="synapse-util-package">
+<h1>synapse.util package<a class="headerlink" href="#synapse-util-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="synapse.util.async.html">synapse.util.async module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="synapse.util.http.html">synapse.util.http module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="synapse.util.lockutils.html">synapse.util.lockutils module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="synapse.util.logutils.html">synapse.util.logutils module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="synapse.util.stringutils.html">synapse.util.stringutils module</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="module-synapse.util">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-synapse.util" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="synapse.util.Clock">
+<em class="property">class </em><code class="sig-prename descclassname">synapse.util.</code><code class="sig-name descname">Clock</code><span class="sig-paren">(</span><em class="sig-param">reactor</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.util.Clock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A Clock wraps a Twisted reactor and provides utilities on top of it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>reactor</strong> – The Twisted reactor to use.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="synapse.util.Clock.call_later">
+<code class="sig-name descname">call_later</code><span class="sig-paren">(</span><em class="sig-param">delay</em>, <em class="sig-param">callback</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.util.Clock.call_later" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call something later</p>
+<p>Note that the function will be called with no logcontext, so if it is anything
+other than trivial, you probably want to wrap it in run_as_background_process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>delay</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – How long to wait in seconds.</p></li>
+<li><p><strong>callback</strong> (<em>function</em>) – Function to call</p></li>
+<li><p><strong>*args</strong> – Postional arguments to pass to function.</p></li>
+<li><p><strong>**kwargs</strong> – Key arguments to pass to function.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="synapse.util.Clock.cancel_call_later">
+<code class="sig-name descname">cancel_call_later</code><span class="sig-paren">(</span><em class="sig-param">timer</em>, <em class="sig-param">ignore_errs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.util.Clock.cancel_call_later" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="synapse.util.Clock.looping_call">
+<code class="sig-name descname">looping_call</code><span class="sig-paren">(</span><em class="sig-param">f</em>, <em class="sig-param">msec</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.util.Clock.looping_call" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call a function repeatedly.</p>
+<p>Waits <cite>msec</cite> initially before calling <cite>f</cite> for the first time.</p>
+<p>Note that the function will be called with no logcontext, so if it is anything
+other than trivial, you probably want to wrap it in run_as_background_process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>f</strong> (<em>function</em>) – The function to call repeatedly.</p></li>
+<li><p><strong>msec</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – How long to wait between calls in milliseconds.</p></li>
+<li><p><strong>*args</strong> – Postional arguments to pass to function.</p></li>
+<li><p><strong>**kwargs</strong> – Key arguments to pass to function.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="synapse.util.Clock.sleep">
+<code class="sig-name descname">sleep</code><span class="sig-paren">(</span><em class="sig-param">seconds</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.util.Clock.sleep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="synapse.util.Clock.time">
+<code class="sig-name descname">time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#synapse.util.Clock.time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current system time in seconds since epoch.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="synapse.util.Clock.time_msec">
+<code class="sig-name descname">time_msec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#synapse.util.Clock.time_msec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current system time in miliseconds since epoch.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="synapse.util.glob_to_regex">
+<code class="sig-prename descclassname">synapse.util.</code><code class="sig-name descname">glob_to_regex</code><span class="sig-paren">(</span><em class="sig-param">glob</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.util.glob_to_regex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a glob to a compiled regex object.</p>
+<p>The regex is anchored at the beginning and end of the string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>glob</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>re.RegexObject</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="synapse.util.log_failure">
+<code class="sig-prename descclassname">synapse.util.</code><code class="sig-name descname">log_failure</code><span class="sig-paren">(</span><em class="sig-param">failure</em>, <em class="sig-param">msg</em>, <em class="sig-param">consumeErrors=True</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.util.log_failure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a function suitable for passing to <cite>Deferred.addErrback</cite> that
+logs any failures that occur.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msg</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Message to log</p></li>
+<li><p><strong>consumeErrors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – If true consumes the failure, otherwise passes
+on down the callback chain</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>func(Failure)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="synapse.util.unwrapFirstError">
+<code class="sig-prename descclassname">synapse.util.</code><code class="sig-name descname">unwrapFirstError</code><span class="sig-paren">(</span><em class="sig-param">failure</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.util.unwrapFirstError" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">synapse.util package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-synapse.util">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="synapse.rest.room.html"
+                        title="previous chapter">synapse.rest.room module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="synapse.util.async.html"
+                        title="next chapter">synapse.util.async module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/synapse.util.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="synapse.util.async.html" title="synapse.util.async module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="synapse.rest.room.html" title="synapse.rest.room module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Synapse 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="synapse.html" >synapse package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Copyright 2014-2017 OpenMarket Ltd, 2017 Vector Creations Ltd, 2017 New Vector Ltd.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>synapse.api.errors module &#8212; Synapse 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="synapse.api.notifier module" href="synapse.api.notifier.html" />
+    <link rel="prev" title="synapse.api.constants module" href="synapse.api.constants.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="synapse.api.notifier.html" title="synapse.api.notifier module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="synapse.api.constants.html" title="synapse.api.constants module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Synapse 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="synapse.html" >synapse package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="synapse.api.html" accesskey="U">synapse.api package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-synapse.api.errors">
+<span id="synapse-api-errors-module"></span><h1>synapse.api.errors module<a class="headerlink" href="#module-synapse.api.errors" title="Permalink to this headline">¶</a></h1>
+<p>Contains exceptions and error codes.</p>
+<dl class="exception">
+<dt id="synapse.api.errors.AuthError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">AuthError</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.AuthError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>An error raised when there was a problem authorising an event, and at various
+other poorly-defined times.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.CodeMessageException">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">CodeMessageException</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">msg</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.CodeMessageException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code></a></p>
+<p>An exception with integer code and message string attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – HTTP error code</p></li>
+<li><p><strong>msg</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – string describing the error</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="synapse.api.errors.Codes">
+<em class="property">class </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">Codes</code><a class="headerlink" href="#synapse.api.errors.Codes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.BAD_JSON">
+<code class="sig-name descname">BAD_JSON</code><em class="property"> = 'M_BAD_JSON'</em><a class="headerlink" href="#synapse.api.errors.Codes.BAD_JSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.BAD_PAGINATION">
+<code class="sig-name descname">BAD_PAGINATION</code><em class="property"> = 'M_BAD_PAGINATION'</em><a class="headerlink" href="#synapse.api.errors.Codes.BAD_PAGINATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.BAD_STATE">
+<code class="sig-name descname">BAD_STATE</code><em class="property"> = 'M_BAD_STATE'</em><a class="headerlink" href="#synapse.api.errors.Codes.BAD_STATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.CANNOT_LEAVE_SERVER_NOTICE_ROOM">
+<code class="sig-name descname">CANNOT_LEAVE_SERVER_NOTICE_ROOM</code><em class="property"> = 'M_CANNOT_LEAVE_SERVER_NOTICE_ROOM'</em><a class="headerlink" href="#synapse.api.errors.Codes.CANNOT_LEAVE_SERVER_NOTICE_ROOM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.CAPTCHA_INVALID">
+<code class="sig-name descname">CAPTCHA_INVALID</code><em class="property"> = 'M_CAPTCHA_INVALID'</em><a class="headerlink" href="#synapse.api.errors.Codes.CAPTCHA_INVALID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.CAPTCHA_NEEDED">
+<code class="sig-name descname">CAPTCHA_NEEDED</code><em class="property"> = 'M_CAPTCHA_NEEDED'</em><a class="headerlink" href="#synapse.api.errors.Codes.CAPTCHA_NEEDED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.CONSENT_NOT_GIVEN">
+<code class="sig-name descname">CONSENT_NOT_GIVEN</code><em class="property"> = 'M_CONSENT_NOT_GIVEN'</em><a class="headerlink" href="#synapse.api.errors.Codes.CONSENT_NOT_GIVEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.EXCLUSIVE">
+<code class="sig-name descname">EXCLUSIVE</code><em class="property"> = 'M_EXCLUSIVE'</em><a class="headerlink" href="#synapse.api.errors.Codes.EXCLUSIVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.EXPIRED_ACCOUNT">
+<code class="sig-name descname">EXPIRED_ACCOUNT</code><em class="property"> = 'ORG_MATRIX_EXPIRED_ACCOUNT'</em><a class="headerlink" href="#synapse.api.errors.Codes.EXPIRED_ACCOUNT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.FORBIDDEN">
+<code class="sig-name descname">FORBIDDEN</code><em class="property"> = 'M_FORBIDDEN'</em><a class="headerlink" href="#synapse.api.errors.Codes.FORBIDDEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.GUEST_ACCESS_FORBIDDEN">
+<code class="sig-name descname">GUEST_ACCESS_FORBIDDEN</code><em class="property"> = 'M_GUEST_ACCESS_FORBIDDEN'</em><a class="headerlink" href="#synapse.api.errors.Codes.GUEST_ACCESS_FORBIDDEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.INCOMPATIBLE_ROOM_VERSION">
+<code class="sig-name descname">INCOMPATIBLE_ROOM_VERSION</code><em class="property"> = 'M_INCOMPATIBLE_ROOM_VERSION'</em><a class="headerlink" href="#synapse.api.errors.Codes.INCOMPATIBLE_ROOM_VERSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.INVALID_PARAM">
+<code class="sig-name descname">INVALID_PARAM</code><em class="property"> = 'M_INVALID_PARAM'</em><a class="headerlink" href="#synapse.api.errors.Codes.INVALID_PARAM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.INVALID_SIGNATURE">
+<code class="sig-name descname">INVALID_SIGNATURE</code><em class="property"> = 'M_INVALID_SIGNATURE'</em><a class="headerlink" href="#synapse.api.errors.Codes.INVALID_SIGNATURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.INVALID_USERNAME">
+<code class="sig-name descname">INVALID_USERNAME</code><em class="property"> = 'M_INVALID_USERNAME'</em><a class="headerlink" href="#synapse.api.errors.Codes.INVALID_USERNAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.LIMIT_EXCEEDED">
+<code class="sig-name descname">LIMIT_EXCEEDED</code><em class="property"> = 'M_LIMIT_EXCEEDED'</em><a class="headerlink" href="#synapse.api.errors.Codes.LIMIT_EXCEEDED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.MISSING_PARAM">
+<code class="sig-name descname">MISSING_PARAM</code><em class="property"> = 'M_MISSING_PARAM'</em><a class="headerlink" href="#synapse.api.errors.Codes.MISSING_PARAM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.MISSING_TOKEN">
+<code class="sig-name descname">MISSING_TOKEN</code><em class="property"> = 'M_MISSING_TOKEN'</em><a class="headerlink" href="#synapse.api.errors.Codes.MISSING_TOKEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.NOT_FOUND">
+<code class="sig-name descname">NOT_FOUND</code><em class="property"> = 'M_NOT_FOUND'</em><a class="headerlink" href="#synapse.api.errors.Codes.NOT_FOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.NOT_JSON">
+<code class="sig-name descname">NOT_JSON</code><em class="property"> = 'M_NOT_JSON'</em><a class="headerlink" href="#synapse.api.errors.Codes.NOT_JSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.RESOURCE_LIMIT_EXCEEDED">
+<code class="sig-name descname">RESOURCE_LIMIT_EXCEEDED</code><em class="property"> = 'M_RESOURCE_LIMIT_EXCEEDED'</em><a class="headerlink" href="#synapse.api.errors.Codes.RESOURCE_LIMIT_EXCEEDED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.ROOM_IN_USE">
+<code class="sig-name descname">ROOM_IN_USE</code><em class="property"> = 'M_ROOM_IN_USE'</em><a class="headerlink" href="#synapse.api.errors.Codes.ROOM_IN_USE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.SERVER_NOT_TRUSTED">
+<code class="sig-name descname">SERVER_NOT_TRUSTED</code><em class="property"> = 'M_SERVER_NOT_TRUSTED'</em><a class="headerlink" href="#synapse.api.errors.Codes.SERVER_NOT_TRUSTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.THREEPID_AUTH_FAILED">
+<code class="sig-name descname">THREEPID_AUTH_FAILED</code><em class="property"> = 'M_THREEPID_AUTH_FAILED'</em><a class="headerlink" href="#synapse.api.errors.Codes.THREEPID_AUTH_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.THREEPID_DENIED">
+<code class="sig-name descname">THREEPID_DENIED</code><em class="property"> = 'M_THREEPID_DENIED'</em><a class="headerlink" href="#synapse.api.errors.Codes.THREEPID_DENIED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.THREEPID_IN_USE">
+<code class="sig-name descname">THREEPID_IN_USE</code><em class="property"> = 'M_THREEPID_IN_USE'</em><a class="headerlink" href="#synapse.api.errors.Codes.THREEPID_IN_USE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.THREEPID_NOT_FOUND">
+<code class="sig-name descname">THREEPID_NOT_FOUND</code><em class="property"> = 'M_THREEPID_NOT_FOUND'</em><a class="headerlink" href="#synapse.api.errors.Codes.THREEPID_NOT_FOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.TOO_LARGE">
+<code class="sig-name descname">TOO_LARGE</code><em class="property"> = 'M_TOO_LARGE'</em><a class="headerlink" href="#synapse.api.errors.Codes.TOO_LARGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.UNAUTHORIZED">
+<code class="sig-name descname">UNAUTHORIZED</code><em class="property"> = 'M_UNAUTHORIZED'</em><a class="headerlink" href="#synapse.api.errors.Codes.UNAUTHORIZED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.UNKNOWN">
+<code class="sig-name descname">UNKNOWN</code><em class="property"> = 'M_UNKNOWN'</em><a class="headerlink" href="#synapse.api.errors.Codes.UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.UNKNOWN_TOKEN">
+<code class="sig-name descname">UNKNOWN_TOKEN</code><em class="property"> = 'M_UNKNOWN_TOKEN'</em><a class="headerlink" href="#synapse.api.errors.Codes.UNKNOWN_TOKEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.UNRECOGNIZED">
+<code class="sig-name descname">UNRECOGNIZED</code><em class="property"> = 'M_UNRECOGNIZED'</em><a class="headerlink" href="#synapse.api.errors.Codes.UNRECOGNIZED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.UNSUPPORTED_ROOM_VERSION">
+<code class="sig-name descname">UNSUPPORTED_ROOM_VERSION</code><em class="property"> = 'M_UNSUPPORTED_ROOM_VERSION'</em><a class="headerlink" href="#synapse.api.errors.Codes.UNSUPPORTED_ROOM_VERSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.USER_DEACTIVATED">
+<code class="sig-name descname">USER_DEACTIVATED</code><em class="property"> = 'M_USER_DEACTIVATED'</em><a class="headerlink" href="#synapse.api.errors.Codes.USER_DEACTIVATED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.USER_IN_USE">
+<code class="sig-name descname">USER_IN_USE</code><em class="property"> = 'M_USER_IN_USE'</em><a class="headerlink" href="#synapse.api.errors.Codes.USER_IN_USE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.errors.Codes.WRONG_ROOM_KEYS_VERSION">
+<code class="sig-name descname">WRONG_ROOM_KEYS_VERSION</code><em class="property"> = 'M_WRONG_ROOM_KEYS_VERSION'</em><a class="headerlink" href="#synapse.api.errors.Codes.WRONG_ROOM_KEYS_VERSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.ConsentNotGivenError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">ConsentNotGivenError</code><span class="sig-paren">(</span><em class="sig-param">msg</em>, <em class="sig-param">consent_uri</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.ConsentNotGivenError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>The error returned to the client when the user has not consented to the
+privacy policy.</p>
+<dl class="method">
+<dt id="synapse.api.errors.ConsentNotGivenError.error_dict">
+<code class="sig-name descname">error_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.ConsentNotGivenError.error_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.EventSizeError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">EventSizeError</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.EventSizeError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>An error raised when an event is too big.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.EventStreamError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">EventStreamError</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.EventStreamError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>An error raised when there a problem with the event stream.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.FederationDeniedError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">FederationDeniedError</code><span class="sig-paren">(</span><em class="sig-param">destination</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.FederationDeniedError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>An error raised when the server tries to federate with a server which
+is not on its federation whitelist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>destination</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – The destination which has been denied</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.FederationError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">FederationError</code><span class="sig-paren">(</span><em class="sig-param">level</em>, <em class="sig-param">code</em>, <em class="sig-param">reason</em>, <em class="sig-param">affected</em>, <em class="sig-param">source=None</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.FederationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code></a></p>
+<p>This class is used to inform remote homeservers about erroneous
+PDUs they sent us.</p>
+<dl class="simple">
+<dt>FATAL: The remote server could not interpret the source event.</dt><dd><p>(e.g., it was missing a required field)</p>
+</dd>
+<dt>ERROR: The remote server interpreted the event, but it failed some other</dt><dd><p>check (e.g. auth)</p>
+</dd>
+<dt>WARN: The remote server accepted the event, but believes some part of it</dt><dd><p>is wrong (e.g., it referred to an invalid event)</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="synapse.api.errors.FederationError.get_dict">
+<code class="sig-name descname">get_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.FederationError.get_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.HttpResponseException">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">HttpResponseException</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">msg</em>, <em class="sig-param">response</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.HttpResponseException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.CodeMessageException" title="synapse.api.errors.CodeMessageException"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.CodeMessageException</span></code></a></p>
+<p>Represents an HTTP-level failure of an outbound request</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>response</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.8)"><em>bytes</em></a>) – body of response</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="synapse.api.errors.HttpResponseException.to_synapse_error">
+<code class="sig-name descname">to_synapse_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.HttpResponseException.to_synapse_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a SynapseError based on an HTTPResponseException</p>
+<p>This is useful when a proxied request has failed, and we need to
+decide how to map the failure onto a matrix error to send back to the
+client.</p>
+<p>An attempt is made to parse the body of the http response as a matrix
+error. If that succeeds, the errcode and error message from the body
+are used as the errcode and error message in the new synapse error.</p>
+<p>Otherwise, the errcode is set to M_UNKNOWN, and the error message is
+set to the reason code from the HTTP response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError">SynapseError</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.IncompatibleRoomVersionError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">IncompatibleRoomVersionError</code><span class="sig-paren">(</span><em class="sig-param">room_version</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.IncompatibleRoomVersionError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>A server is trying to join a room whose version it does not support.</p>
+<p>Unlike UnsupportedRoomVersionError, it is specific to the case of the make_join
+failing.</p>
+<dl class="method">
+<dt id="synapse.api.errors.IncompatibleRoomVersionError.error_dict">
+<code class="sig-name descname">error_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.IncompatibleRoomVersionError.error_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.InteractiveAuthIncompleteError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">InteractiveAuthIncompleteError</code><span class="sig-paren">(</span><em class="sig-param">result</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.InteractiveAuthIncompleteError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+<p>An error raised when UI auth is not yet complete</p>
+<p>(This indicates we should return a 401 with ‘result’ as the body)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>result</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><em>dict</em></a>) – the server response to the request, which should be
+passed back to the client</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.InvalidCaptchaError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">InvalidCaptchaError</code><span class="sig-paren">(</span><em class="sig-param">code=400</em>, <em class="sig-param">msg='Invalid captcha.'</em>, <em class="sig-param">error_url=None</em>, <em class="sig-param">errcode='M_CAPTCHA_INVALID'</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.InvalidCaptchaError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<dl class="method">
+<dt id="synapse.api.errors.InvalidCaptchaError.error_dict">
+<code class="sig-name descname">error_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.InvalidCaptchaError.error_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.InvalidClientCredentialsError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">InvalidClientCredentialsError</code><span class="sig-paren">(</span><em class="sig-param">msg</em>, <em class="sig-param">errcode</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.InvalidClientCredentialsError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>An error raised when there was a problem with the authorisation credentials
+in a client request.</p>
+<p><a class="reference external" href="https://matrix.org/docs/spec/client_server/r0.5.0#using-access-tokens">https://matrix.org/docs/spec/client_server/r0.5.0#using-access-tokens</a>:</p>
+<p>When credentials are required but missing or invalid, the HTTP call will
+return with a status of 401 and the error code, M_MISSING_TOKEN or
+M_UNKNOWN_TOKEN respectively.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.InvalidClientTokenError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">InvalidClientTokenError</code><span class="sig-paren">(</span><em class="sig-param">msg='Unrecognised access token'</em>, <em class="sig-param">soft_logout=False</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.InvalidClientTokenError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.InvalidClientCredentialsError" title="synapse.api.errors.InvalidClientCredentialsError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.InvalidClientCredentialsError</span></code></a></p>
+<p>Raised when we didn’t understand the access token in a request</p>
+<dl class="method">
+<dt id="synapse.api.errors.InvalidClientTokenError.error_dict">
+<code class="sig-name descname">error_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.InvalidClientTokenError.error_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.LimitExceededError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">LimitExceededError</code><span class="sig-paren">(</span><em class="sig-param">code=429</em>, <em class="sig-param">msg='Too Many Requests'</em>, <em class="sig-param">retry_after_ms=None</em>, <em class="sig-param">errcode='M_LIMIT_EXCEEDED'</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.LimitExceededError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>A client has sent too many requests and is being throttled.</p>
+<dl class="method">
+<dt id="synapse.api.errors.LimitExceededError.error_dict">
+<code class="sig-name descname">error_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.LimitExceededError.error_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.LoginError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">LoginError</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">msg</em>, <em class="sig-param">errcode='M_UNKNOWN'</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.LoginError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>An error raised when there was a problem logging in.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.MissingClientTokenError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">MissingClientTokenError</code><span class="sig-paren">(</span><em class="sig-param">msg='Missing access token'</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.MissingClientTokenError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.InvalidClientCredentialsError" title="synapse.api.errors.InvalidClientCredentialsError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.InvalidClientCredentialsError</span></code></a></p>
+<p>Raised when we couldn’t find the access token in a request</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.NotFoundError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">NotFoundError</code><span class="sig-paren">(</span><em class="sig-param">msg='Not found'</em>, <em class="sig-param">errcode='M_NOT_FOUND'</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.NotFoundError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>An error indicating we can’t find the thing you asked for</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.ProxiedRequestError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">ProxiedRequestError</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">msg</em>, <em class="sig-param">errcode='M_UNKNOWN'</em>, <em class="sig-param">additional_fields=None</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.ProxiedRequestError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>An error from a general matrix endpoint, eg. from a proxied Matrix API call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>errcode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Matrix error code e.g ‘M_FORBIDDEN’</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="synapse.api.errors.ProxiedRequestError.error_dict">
+<code class="sig-name descname">error_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.ProxiedRequestError.error_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.RedirectException">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">RedirectException</code><span class="sig-paren">(</span><em class="sig-param">location: bytes</em>, <em class="sig-param">http_code: int = 302</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.RedirectException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.CodeMessageException" title="synapse.api.errors.CodeMessageException"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.CodeMessageException</span></code></a></p>
+<p>A pseudo-error indicating that we want to redirect the client to a different
+location</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>cookies</strong> – a list of set-cookies values to add to the response. For example:
+b”sessionId=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT”</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.RequestSendFailed">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">RequestSendFailed</code><span class="sig-paren">(</span><em class="sig-param">inner_exception</em>, <em class="sig-param">can_retry</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.RequestSendFailed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code></a></p>
+<p>Sending a HTTP request over federation failed due to not being able to
+talk to the remote server for some reason.</p>
+<p>This exception is used to differentiate “expected” errors that arise due to
+networking (e.g. DNS failures, connection timeouts etc), versus unexpected
+errors (like programming errors).</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.ResourceLimitError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">ResourceLimitError</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">msg</em>, <em class="sig-param">errcode='M_RESOURCE_LIMIT_EXCEEDED'</em>, <em class="sig-param">admin_contact=None</em>, <em class="sig-param">limit_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.ResourceLimitError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>Any error raised when there is a problem with resource usage.
+For instance, the monthly active user limit for the server has been exceeded</p>
+<dl class="method">
+<dt id="synapse.api.errors.ResourceLimitError.error_dict">
+<code class="sig-name descname">error_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.ResourceLimitError.error_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.RoomKeysVersionError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">RoomKeysVersionError</code><span class="sig-paren">(</span><em class="sig-param">current_version</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.RoomKeysVersionError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>A client has tried to upload to a non-current version of the room_keys store</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.StoreError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">StoreError</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">msg</em>, <em class="sig-param">errcode='M_UNKNOWN'</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.StoreError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>An error raised when there was a problem storing some data.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.SynapseError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">SynapseError</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">msg</em>, <em class="sig-param">errcode='M_UNKNOWN'</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.SynapseError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.CodeMessageException" title="synapse.api.errors.CodeMessageException"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.CodeMessageException</span></code></a></p>
+<p>A base exception type for matrix errors which have an errcode and error
+message (as well as an HTTP status code).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>errcode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Matrix error code e.g ‘M_FORBIDDEN’</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="synapse.api.errors.SynapseError.error_dict">
+<code class="sig-name descname">error_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.SynapseError.error_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.ThreepidValidationError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">ThreepidValidationError</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.ThreepidValidationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>An error raised when there was a problem authorising an event.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.UnrecognizedRequestError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">UnrecognizedRequestError</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.UnrecognizedRequestError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>An error indicating we don’t understand the request you’re trying to make</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.UnsupportedRoomVersionError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">UnsupportedRoomVersionError</code><a class="headerlink" href="#synapse.api.errors.UnsupportedRoomVersionError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>The client’s request to create a room used a room version that the server does
+not support.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="synapse.api.errors.UserDeactivatedError">
+<em class="property">exception </em><code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">UserDeactivatedError</code><span class="sig-paren">(</span><em class="sig-param">msg</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.UserDeactivatedError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#synapse.api.errors.SynapseError" title="synapse.api.errors.SynapseError"><code class="xref py py-class docutils literal notranslate"><span class="pre">synapse.api.errors.SynapseError</span></code></a></p>
+<p>The error returned to the client when the user attempted to access an
+authenticated endpoint, but the account has been deactivated.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="synapse.api.errors.cs_error">
+<code class="sig-prename descclassname">synapse.api.errors.</code><code class="sig-name descname">cs_error</code><span class="sig-paren">(</span><em class="sig-param">msg</em>, <em class="sig-param">code='M_UNKNOWN'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#synapse.api.errors.cs_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utility method for constructing an error response for client-server
+interactions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msg</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – The error message.</p></li>
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – The error code.</p></li>
+<li><p><strong>kwargs</strong> – Additional keys to add to the response.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the error response JSON.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="synapse.api.constants.html"
+                        title="previous chapter">synapse.api.constants module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="synapse.api.notifier.html"
+                        title="next chapter">synapse.api.notifier module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/synapse.api.errors.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="synapse.api.notifier.html" title="synapse.api.notifier module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="synapse.api.constants.html" title="synapse.api.constants module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Synapse 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="synapse.html" >synapse package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="synapse.api.html" >synapse.api package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Copyright 2014-2017 OpenMarket Ltd, 2017 Vector Creations Ltd, 2017 New Vector Ltd.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+    </div>
+  </body>
+</html>
