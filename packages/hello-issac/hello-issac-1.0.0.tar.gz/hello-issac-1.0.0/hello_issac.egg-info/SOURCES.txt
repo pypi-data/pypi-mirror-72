@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+hello_issac/cli.py
+hello_issac.egg-info/PKG-INFO
+hello_issac.egg-info/SOURCES.txt
+hello_issac.egg-info/dependency_links.txt
+hello_issac.egg-info/entry_points.txt
+hello_issac.egg-info/requires.txt
+hello_issac.egg-info/top_level.txt
