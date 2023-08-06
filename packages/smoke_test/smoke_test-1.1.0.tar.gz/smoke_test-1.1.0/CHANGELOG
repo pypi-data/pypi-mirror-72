@@ -1,0 +1,29 @@
+smoke_test 1.1.0 (June 28, 2020)
+================================
+
+Feature additions
+-----------------
+
+    * Added the ``--error-code`` CLI argument.
+
+smoke_test 1.0.2 (December 1, 2019)
+===================================
+
+Bugfixes
+--------
+
+    * Switched to "fake" libc headers, for improved compatibility with newer
+      versions of GCC.
+
+smoke_test 1.0.1 (September 2, 2019)
+====================================
+
+Bugfixes
+--------
+
+    * Migrated from Bitbucket (Mercurial) to GitHub (Git).
+
+smoke_test 1.0.0 (December 17, 2018)
+====================================
+
+    * Initial release.

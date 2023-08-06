@@ -1,0 +1,8 @@
+friendly_name_mixin~=1.0
+pycparser==2.19
+pycparser_fake_libc==2.19
+PyYAML~=3.11
+simple_plugins~=1.0
+
+[dev]
+pex~=1.6.0
