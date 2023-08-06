@@ -1,0 +1,11 @@
+README.md
+setup.py
+schema_checker/__init__.py
+schema_checker/extras.py
+schema_checker/jschema.py
+schema_checker.egg-info/PKG-INFO
+schema_checker.egg-info/SOURCES.txt
+schema_checker.egg-info/dependency_links.txt
+schema_checker.egg-info/top_level.txt
+tests/__init__.py
+tests/jschema.py
