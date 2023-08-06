@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+src/pecs/__init__.py
+src/pecs/__main__.py
+src/pecs/generate.py
+src/pecs/supported_command.py
+src/pecs.egg-info/PKG-INFO
+src/pecs.egg-info/SOURCES.txt
+src/pecs.egg-info/dependency_links.txt
+src/pecs.egg-info/entry_points.txt
+src/pecs.egg-info/top_level.txt

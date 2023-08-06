@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: pecs
+Version: 0.0.1
+Summary: A type-safe, customizable DAO generator for Python 3 connecting to PostgreSQL
+Home-page: https://github.com/EricBorczuk/pecs
+Author: Eric Borczuk
+Author-email: kuzcrob@gmail.com
+License: MIT
+Description: TBA
+Keywords: python sql dao dal generator
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Database :: Front-Ends
