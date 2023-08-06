@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: arequest
+Version: 0.0.1
+Summary: arequest is a simple async HTTP library, with more flexible.
+Home-page: https://github.com/p7e4/arequest
+Author: p7e4
+Author-email: p7e4@qq.com
+License: Apache 2.0
+Description: # arequest
+        _arequest is a simple async HTTP library, with more flexible._  
+          
+        ## Installation
+        `pip3 install arequest`  
+          
+        *note: python3.8 or higher is required.*  
+          
+        ## Usage
+        ``` python
+        import asyncio
+        import arequest
+        
+        async def main():
+            r = await arequest.get("https://github.com")
+            print(r.headers)
+            print(r.status_code)
+            print(r.url)
+            print(r.encoding)
+            print(r.text)
+            # print(r.content)
+            # bytes response content
+        
+        asyncio.run(main())
+        ```
+        or use `post/head` method.
+        
+        ### Parameters
+        ``` python
+        params = {"key1": "value", "key2": "value"}
+        
+        # data and cookies also accept a str, but will not auto urlencode
+        data = {"key": "value"}
+        cookies = {"key": "value"}
+        
+        headers = {"referer": "test","user-agent":"test"}
+        
+        r = await arequest.post("https://httpbin.org/post", params=params, data=data,
+                                headers=headers, cookies=cookies)
+        
+        ```
+        
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
