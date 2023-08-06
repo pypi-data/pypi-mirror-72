@@ -1,0 +1,15 @@
+scrapy_new/__init__.py,sha256=xyZNv6YEZJ7ThKzg6oIP_f0oW7F-xHc-LIJRPmzN4WM,52
+scrapy_new/new.py,sha256=piJ5mf7UIMmpW6_kob1t2Nf3tb5DkUTGdgGdu6uyWJI,16957
+scrapy_new/templates/command.py.mako,sha256=jERdT_K6TDUng-BguOFSRh9LKFCjhRrv3XkeKLjw2s4,1790
+scrapy_new/templates/extension.py.mako,sha256=t2lUZ5cOzAX_Vu52h5PCdl0VbBl4wydt9q1echawmkE,939
+scrapy_new/templates/item.py.mako,sha256=UNpjd9Jv8U7vO3sVTtfQ9KGBB-Iw14UAYQRkedv_SHo,136
+scrapy_new/templates/middleware.py.mako,sha256=_qIr8QcvLgFUhjal09m8xSJCQWFgs41x-a9l3_d-E7I,810
+scrapy_new/templates/model.py.mako,sha256=uopxAj39QrKkXbbSklv_z0cpsXk9EyG__gqckw9_bTE,539
+scrapy_new/templates/pipeline.py.mako,sha256=k7FYrhJNAj3L73w21L1lHsFWPHZBbMj7RzazoW9rTBU,1448
+scrapy_new/templates/spider.py.mako,sha256=OD-35iOIsrTRAAZjSIdiQn26Mz0aIOMPTwfdWPYOhd0,1522
+scrapy_new/templates/spider_middleware.py.mako,sha256=JfZat_1gJJXgLuVzjRi91Ben8tbpnL1xeOwod3B_jdI,1099
+scrapy_new-0.2.1.dist-info/entry_points.txt,sha256=iamrxWOfdi26yWRaSzuo_I2SUhICnOC5LLsrJLNPyuc,49
+scrapy_new-0.2.1.dist-info/LICENSE,sha256=lN97jZ3ZHgXSH1rri89pZAQbqLX8YUdedKxd7yUFXdk,1072
+scrapy_new-0.2.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+scrapy_new-0.2.1.dist-info/METADATA,sha256=DcH5Kag_L7wpJeNpEH3Jd9ug-osB_6fm5kTmtJ24yC4,3508
+scrapy_new-0.2.1.dist-info/RECORD,,
