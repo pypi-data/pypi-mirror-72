@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: rfApiTestLibrary
+Version: 0.1.5
+Summary: robot framework自动化开发基础库:重写json比较函数
+Home-page: UNKNOWN
+Author: wu weiping
+Author-email: 115773673@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: APScheduler (==3.6.3)
+Requires-Dist: atomicwrites (==1.3.0)
+Requires-Dist: attrs (==19.3.0)
+Requires-Dist: bleach (==3.1.0)
+Requires-Dist: certifi (==2019.11.28)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: click (==7.1.1)
+Requires-Dist: colorama (==0.4.3)
+Requires-Dist: docopt (==0.6.2)
+Requires-Dist: docutils (==0.16)
+Requires-Dist: Flask (==1.1.1)
+Requires-Dist: Flask-APScheduler (==1.11.0)
+Requires-Dist: idna (==2.9)
+Requires-Dist: importlib-metadata (==1.5.0)
+Requires-Dist: itsdangerous (==1.1.0)
+Requires-Dist: Jinja2 (==2.11.1)
+Requires-Dist: json-tools (==0.4.1)
+Requires-Dist: keyring (==21.1.0)
+Requires-Dist: MarkupSafe (==1.1.1)
+Requires-Dist: more-itertools (==8.2.0)
+Requires-Dist: packaging (==20.3)
+Requires-Dist: pika (==1.1.0)
+Requires-Dist: pkginfo (==1.5.0.1)
+Requires-Dist: pluggy (==0.13.1)
+Requires-Dist: prometheus-client (==0.7.1)
+Requires-Dist: py (==1.8.1)
+Requires-Dist: pycryptodome (==3.9.7)
+Requires-Dist: pyDes (==2.0.1)
+Requires-Dist: Pygments (==2.5.2)
+Requires-Dist: PyMySQL (==0.9.3)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: pytest (==5.4.1)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2019.3)
+Requires-Dist: pywin32-ctypes (==0.2.0)
+Requires-Dist: PyYAML (==5.3.1)
+Requires-Dist: readme-renderer (==24.0)
+Requires-Dist: redis (==3.4.1)
+Requires-Dist: requests (==2.23.0)
+Requires-Dist: requests-toolbelt (==0.9.1)
+Requires-Dist: robotframework (==3.1.2)
+Requires-Dist: six (==1.14.0)
+Requires-Dist: stomp.py (==6.0.0)
+Requires-Dist: toml (==0.10.0)
+Requires-Dist: tqdm (==4.41.1)
+Requires-Dist: twine (==3.1.1)
+Requires-Dist: tzlocal (==2.0.0)
+Requires-Dist: urllib3 (==1.25.8)
+Requires-Dist: wcwidth (==0.1.9)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: websocket-client (==0.57.0)
+Requires-Dist: Werkzeug (==1.0.0)
+Requires-Dist: zipp (==3.1.0)
+
+UNKNOWN
+
+
