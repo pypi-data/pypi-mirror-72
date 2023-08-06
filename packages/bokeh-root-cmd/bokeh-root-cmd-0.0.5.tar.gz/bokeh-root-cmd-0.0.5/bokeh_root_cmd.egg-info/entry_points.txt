@@ -1,0 +1,3 @@
+[console_scripts]
+bokeh-root-cmd = bokeh_root_cmd.main:run
+
