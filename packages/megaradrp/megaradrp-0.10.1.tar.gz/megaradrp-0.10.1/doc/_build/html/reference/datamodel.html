@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>megaradrp.datamodel — MEGARA datamodel &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="megaradrp.utils — MEGARA utilities" href="utils.html" />
+    <link rel="prev" title="megaradrp.ntypes — MEGARA data types" href="ntypes.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="utils.html" title="megaradrp.utils — MEGARA utilities"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ntypes.html" title="megaradrp.ntypes — MEGARA data types"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.datamodel</span></code> — MEGARA datamodel</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-megaradrp.datamodel">
+<span id="megaradrp-datamodel-megara-datamodel"></span><h1><a class="reference internal" href="#module-megaradrp.datamodel" title="megaradrp.datamodel"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.datamodel</span></code></a> — MEGARA datamodel<a class="headerlink" href="#module-megaradrp.datamodel" title="Permalink to this headline">¶</a></h1>
+<p>Data model for MEGARA</p>
+<dl class="py class">
+<dt id="megaradrp.datamodel.MegaraDataModel">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.datamodel.</code><code class="sig-name descname">MegaraDataModel</code><a class="headerlink" href="#megaradrp.datamodel.MegaraDataModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data model of MEGARA images</p>
+<dl class="py attribute">
+<dt id="megaradrp.datamodel.MegaraDataModel.PLATESCALE">
+<code class="sig-name descname">PLATESCALE</code><em class="property"> = 1.212</em><a class="headerlink" href="#megaradrp.datamodel.MegaraDataModel.PLATESCALE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.datamodel.MegaraDataModel.db_info_keys">
+<code class="sig-name descname">db_info_keys</code><em class="property"> = ['instrument', 'object', 'observation_date', 'uuid', 'type', 'mode', 'exptime', 'darktime', 'insconf', 'blckuuid', 'quality_control', 'vph', 'insmode']</em><a class="headerlink" href="#megaradrp.datamodel.MegaraDataModel.db_info_keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.datamodel.MegaraDataModel.db_info_keys_extra">
+<code class="sig-name descname">db_info_keys_extra</code><em class="property"> = ['vph', 'insmode']</em><a class="headerlink" href="#megaradrp.datamodel.MegaraDataModel.db_info_keys_extra" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.datamodel.MegaraDataModel.fiber_scale_unit">
+<code class="sig-name descname">fiber_scale_unit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">img</span></em>, <em class="sig-param"><span class="n">unit</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.datamodel.MegaraDataModel.fiber_scale_unit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.datamodel.MegaraDataModel.gather_info_oresult">
+<code class="sig-name descname">gather_info_oresult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.datamodel.MegaraDataModel.gather_info_oresult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.datamodel.MegaraDataModel.get_fiberconf">
+<code class="sig-name descname">get_fiberconf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">img</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.datamodel.MegaraDataModel.get_fiberconf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain FiberConf from image</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.datamodel.MegaraDataModel.meta_dinfo_headers">
+<code class="sig-name descname">meta_dinfo_headers</code><em class="property"> = ['exptime', 'observation_date', 'vph', 'vphpos', 'insmode', 'focus', 'osfilter', 'uuid', 'temp', 'block_uuid', 'insconf_uuid', 'speclamp', 'imgid']</em><a class="headerlink" href="#megaradrp.datamodel.MegaraDataModel.meta_dinfo_headers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.datamodel.MegaraDataModel.meta_info_headers">
+<code class="sig-name descname">meta_info_headers</code><em class="property"> = ['instrument', 'object', 'observation_date', 'uuid', 'type', 'mode', 'exptime', 'darktime', 'insconf', 'blckuuid', 'quality_control', 'vph', 'insmode']</em><a class="headerlink" href="#megaradrp.datamodel.MegaraDataModel.meta_info_headers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.datamodel.MegaraDataModel.query_attrs">
+<code class="sig-name descname">query_attrs</code><em class="property"> = {'confid': &lt;numina.datamodel.QueryAttribute object&gt;, 'insconf': &lt;numina.datamodel.QueryAttribute object&gt;, 'insmode': &lt;numina.datamodel.QueryAttribute object&gt;, 'speclamp': &lt;numina.datamodel.QueryAttribute object&gt;, 'temp': &lt;numina.datamodel.QueryAttribute object&gt;, 'vph': &lt;numina.datamodel.QueryAttribute object&gt;}</em><a class="headerlink" href="#megaradrp.datamodel.MegaraDataModel.query_attrs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="megaradrp.datamodel.check_obj_megara">
+<code class="sig-prename descclassname">megaradrp.datamodel.</code><code class="sig-name descname">check_obj_megara</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="n">astype</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">level</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.datamodel.check_obj_megara" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="megaradrp.datamodel.create_default_fiber_header">
+<code class="sig-prename descclassname">megaradrp.datamodel.</code><code class="sig-name descname">create_default_fiber_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">insmode</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.datamodel.create_default_fiber_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain default FIBER header</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="megaradrp.datamodel.describe_hdulist_megara">
+<code class="sig-prename descclassname">megaradrp.datamodel.</code><code class="sig-name descname">describe_hdulist_megara</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hdulist</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.datamodel.describe_hdulist_megara" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="megaradrp.datamodel.get_fiberconf">
+<code class="sig-prename descclassname">megaradrp.datamodel.</code><code class="sig-name descname">get_fiberconf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">img</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.datamodel.get_fiberconf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain FiberConf from image</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="megaradrp.datamodel.get_fiberconf_default">
+<code class="sig-prename descclassname">megaradrp.datamodel.</code><code class="sig-name descname">get_fiberconf_default</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">insmode</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.datamodel.get_fiberconf_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain default FiberConf object</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="megaradrp.datamodel.megara_inferr_datatype">
+<code class="sig-prename descclassname">megaradrp.datamodel.</code><code class="sig-name descname">megara_inferr_datatype</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.datamodel.megara_inferr_datatype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="megaradrp.datamodel.megara_inferr_datetype_from_dict">
+<code class="sig-prename descclassname">megaradrp.datamodel.</code><code class="sig-name descname">megara_inferr_datetype_from_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.datamodel.megara_inferr_datetype_from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="megaradrp.datamodel.megara_inferr_datetype_from_image">
+<code class="sig-prename descclassname">megaradrp.datamodel.</code><code class="sig-name descname">megara_inferr_datetype_from_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hdulist</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.datamodel.megara_inferr_datetype_from_image" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="megaradrp.datamodel.read_fibers_extension">
+<code class="sig-prename descclassname">megaradrp.datamodel.</code><code class="sig-name descname">read_fibers_extension</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hdr</span></em>, <em class="sig-param"><span class="n">insmode</span><span class="o">=</span><span class="default_value">'LCB'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.datamodel.read_fibers_extension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the FIBERS extension</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>hdr :</strong></dt><dd><p>FITS header</p>
+</dd>
+<dt><strong>insmode</strong><span class="classifier">str</span></dt><dd><p>default INSMODE</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>FibersConf</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ntypes.html"
+                        title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.ntypes</span></code> — MEGARA data types</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="utils.html"
+                        title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.utils</span></code> — MEGARA utilities</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/reference/datamodel.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="utils.html" title="megaradrp.utils — MEGARA utilities"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ntypes.html" title="megaradrp.ntypes — MEGARA data types"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.datamodel</span></code> — MEGARA datamodel</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

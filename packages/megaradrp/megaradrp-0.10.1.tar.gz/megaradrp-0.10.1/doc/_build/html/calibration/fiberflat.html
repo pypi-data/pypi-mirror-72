@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiber-flat &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Twilight fiber-flat" href="twilight.html" />
+    <link rel="prev" title="Arc" href="arc.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="twilight.html" title="Twilight fiber-flat"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="arc.html" title="Arc"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Calibration Modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Fiber-flat</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="fiber-flat">
+<h1>Fiber-flat<a class="headerlink" href="#fiber-flat" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>Fiber-flat</p>
+</dd>
+<dt class="field-even">Usage</dt>
+<dd class="field-even"><p>Offline, Online</p>
+</dd>
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>MegaraFiberFlatImage</p>
+</dd>
+<dt class="field-even">Product</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MasterFiberFlat</span></code></p>
+</dd>
+<dt class="field-odd">Recipe</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#megaradrp.recipes.calibration.flat.FiberFlatRecipe" title="megaradrp.recipes.calibration.flat.FiberFlatRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">FiberFlatRecipe</span></code></a></p>
+</dd>
+<dt class="field-even">Recipe input</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">FiberFlatRecipeInput</span></code></p>
+</dd>
+<dt class="field-odd">Recipe result</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">FiberFlatRecipeResult</span></code></p>
+</dd>
+</dl>
+<p>In fiber-fed spectrographs such as MEGARA each optical fiber behaves like a
+different optical system, and therefore, its optical transmission is different
+and individual, with different wavelength dependence. In the Preliminary Design
+phase this mode was named “Lamp fiber flat”.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>This observing mode should include the actions to calibrate the low-frequency
+variations in transmission in between fibers and as a function of wavelength in
+MEGARA. A fiber-flat should be used to perform this correction and is the
+result of illuminating the instrument focal plane with a flat source that can
+be either a continuum (halogen) lamp that is part of the GTC Instrument
+Calibration Module (ICM) or the twilight sky. The fiber-flat observing mode
+discussed here assumes that the focal plane is illuminated with a halogen lamp
+located at the ICM. The ICM beam has to have the same focal ratio arriving to
+the first MEGARA optical element (the MEGARA telecentricity-correction lens in
+this case) simulating as much as possible the real GTC mirrors beam at F-C.</p>
+<p>These fiber-flat images are also used to trace the fiber spectra on the
+detector for each specific spectral setup. Finally, they are also useful to
+verify the status of the optical link between the F-C focal plane and the
+platform where the spectrographs are located.</p>
+<p>This mode requires having the ICM turned on, one of the halogen lamps at the
+ICM also turned on, to configure the focal-plane cover (at least one of the
+sides should be open), to have the instrument shutter open, to move the
+pseudo-slit to that of the instrument mode of choice, to configure the VPH
+wheel mechanism in order to select the grating to be used, to move the
+focusing mechanism to the position pre-defined for the specific VPH of choice
+and to expose a certain time and to readout the detector a series of exposures,
+being this series the fiber-flat image set.</p>
+</div>
+<div class="section" id="procedure">
+<h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
+<p>The “User” processes an observing block obtained in the observing mode
+Fiber-flat. This mode includes the required actions to obtain a master
+fiber-flat field. The master fiber-flat field generated is used in other stages
+of the data processing.</p>
+</div>
+<div class="section" id="products">
+<h2>Products<a class="headerlink" href="#products" title="Permalink to this headline">¶</a></h2>
+<p>Fiber-flat image sets are to be obtained both as part of the activities related
+to the verification of the instrument status and for processing data for
+scientific exploitation.</p>
+</div>
+<div class="section" id="recipe-inputs-and-results">
+<span id="ff-mode-label"></span><h2>Recipe, inputs and results<a class="headerlink" href="#recipe-inputs-and-results" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.flat.FiberFlatRecipe">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.calibration.flat.</code><code class="sig-name descname">FiberFlatRecipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.flat.FiberFlatRecipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process FIBER_FLAT images and create MASTER_FIBER_FLAT product.</p>
+<p>This recipe process a set of continuum flat images obtained in
+<strong>Fiber Flat</strong> mode and returns the master fiber flat product
+The recipe also returns the result of processing the input images up to
+slitflat correction. and the result RSS of the processing
+up to wavelength calibration.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.products.MasterFiberFlat</span></code></dt><dd><p>description of MasterFiberFlat product</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.processing.aperture</span></code></dt><dd><p>aperture extraction</p>
+</dd>
+<dt><a class="reference internal" href="../reference/processing.html#module-megaradrp.processing.wavecalibration" title="megaradrp.processing.wavecalibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.processing.wavecalibration</span></code></a></dt><dd><p>resampling for wavelength calibration</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>Images provided in <cite>obresult</cite> are trimmed and corrected from overscan,
+bad pixel mask (if <cite>master_bpm</cite> is not None), bias and dark current
+(if <cite>master_dark</cite> is not None) and corrected from pixel-to-pixel flat
+if <cite>master_slitflat</cite> is not None.
+Images thus corrected are the stacked using the median.</p>
+<p>The result of the combination is saved as an intermediate result, named
+‘reduced_image.fits’. This combined image is also returned in the field
+<cite>reduced_image</cite> of the recipe result.</p>
+<p>The apertures in the 2D image are extracted, using the information in
+<cite>master_apertures</cite> and resampled accoding to the wavelength calibration in
+<cite>master_wlcalib</cite>. The resulting RSS is saved as an intermediate
+result named ‘reduced_rss.fits’. This RSS is also returned in the field
+<cite>reduced_rss</cite> of the recipe result.</p>
+<p>To normalize the <cite>master_fiberflat</cite>, each fiber is divided by a smoothed
+version (using a Savitzky-Golay filter) of the average of the valid fibers.
+Finally, all the pixels with information are fiiled with ones. This RSS
+image is returned in the field <cite>master_fiberflat</cite> of the recipe result.</p>
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.flat.FiberFlatRecipe.FiberFlatRecipeInput">
+<em class="property">class </em><code class="sig-name descname">FiberFlatRecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.flat.FiberFlatRecipe.FiberFlatRecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>FiberFlatRecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>extraction_offset</strong><span class="classifier">ListOfType, requirement, optional, default=[0.0]</span></dt><dd><p>Offset traces for extraction</p>
+</dd>
+<dt><strong>master_apertures</strong><span class="classifier">MultiType, requirement</span></dt><dd><p>Apertures information for extraction</p>
+</dd>
+<dt><strong>master_bias</strong><span class="classifier">MasterBias, requirement</span></dt><dd><p>Master BIAS image</p>
+</dd>
+<dt><strong>master_bpm</strong><span class="classifier">MasterBPM, requirement, optional</span></dt><dd><p>Master Bad Pixel Mask</p>
+</dd>
+<dt><strong>master_dark</strong><span class="classifier">MasterDark, requirement, optional</span></dt><dd><p>Master DARK image</p>
+</dd>
+<dt><strong>master_slitflat</strong><span class="classifier">MasterSlitFlat, requirement, optional</span></dt><dd><p>Master slit flat calibration</p>
+</dd>
+<dt><strong>master_wlcalib</strong><span class="classifier">WavelengthCalibration, requirement</span></dt><dd><p>Wavelength calibration table</p>
+</dd>
+<dt><strong>method</strong><span class="classifier">str, requirement, optional, default=median</span></dt><dd><p>Combination method</p>
+</dd>
+<dt><strong>method_kwargs</strong><span class="classifier">dict, requirement, optional</span></dt><dd><p>Arguments for combination method</p>
+</dd>
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+<dt><strong>smoothing_window</strong><span class="classifier">int, requirement, optional, default=31</span></dt><dd><p>Window for smoothing (must be odd)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.flat.FiberFlatRecipe.FiberFlatRecipeInput.master_apertures">
+<code class="sig-name descname">master_apertures</code><a class="headerlink" href="#megaradrp.recipes.calibration.flat.FiberFlatRecipe.FiberFlatRecipeInput.master_apertures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.flat.FiberFlatRecipe.FiberFlatRecipeInput.master_bpm">
+<code class="sig-name descname">master_bpm</code><a class="headerlink" href="#megaradrp.recipes.calibration.flat.FiberFlatRecipe.FiberFlatRecipeInput.master_bpm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.flat.FiberFlatRecipe.FiberFlatRecipeInput.master_dark">
+<code class="sig-name descname">master_dark</code><a class="headerlink" href="#megaradrp.recipes.calibration.flat.FiberFlatRecipe.FiberFlatRecipeInput.master_dark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.flat.FiberFlatRecipe.FiberFlatRecipeInput.master_slitflat">
+<code class="sig-name descname">master_slitflat</code><a class="headerlink" href="#megaradrp.recipes.calibration.flat.FiberFlatRecipe.FiberFlatRecipeInput.master_slitflat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.flat.FiberFlatRecipe.FiberFlatRecipeInput.master_wlcalib">
+<code class="sig-name descname">master_wlcalib</code><a class="headerlink" href="#megaradrp.recipes.calibration.flat.FiberFlatRecipe.FiberFlatRecipeInput.master_wlcalib" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.flat.FiberFlatRecipe.FiberFlatRecipeResult">
+<em class="property">class </em><code class="sig-name descname">FiberFlatRecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.flat.FiberFlatRecipe.FiberFlatRecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>FiberFlatRecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_fiberflat</strong><span class="classifier">MasterFiberFlat, product</span></dt><dd></dd>
+<dt><strong>reduced_image</strong><span class="classifier">ProcessedFrame, product</span></dt><dd></dd>
+<dt><strong>reduced_rss</strong><span class="classifier">ProcessedRSS, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.flat.FiberFlatRecipe.RecipeInput">
+<code class="sig-name descname">RecipeInput</code><a class="headerlink" href="#megaradrp.recipes.calibration.flat.FiberFlatRecipe.RecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.FiberFlatRecipeInput</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.flat.FiberFlatRecipe.RecipeResult">
+<code class="sig-name descname">RecipeResult</code><a class="headerlink" href="#megaradrp.recipes.calibration.flat.FiberFlatRecipe.RecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.FiberFlatRecipeResult</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.recipes.calibration.flat.FiberFlatRecipe.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">rinput</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.flat.FiberFlatRecipe.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the recipe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>rinput</strong><span class="classifier">RecipeInput</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>RecipeResult</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.recipes.calibration.flat.FiberFlatRecipe.set_base_headers">
+<code class="sig-name descname">set_base_headers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">hdr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.flat.FiberFlatRecipe.set_base_headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set metadata in FITS headers.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Fiber-flat</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#procedure">Procedure</a></li>
+<li><a class="reference internal" href="#products">Products</a></li>
+<li><a class="reference internal" href="#recipe-inputs-and-results">Recipe, inputs and results</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="arc.html"
+                        title="previous chapter">Arc</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="twilight.html"
+                        title="next chapter">Twilight fiber-flat</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/calibration/fiberflat.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="twilight.html" title="Twilight fiber-flat"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="arc.html" title="Arc"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Calibration Modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Fiber-flat</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

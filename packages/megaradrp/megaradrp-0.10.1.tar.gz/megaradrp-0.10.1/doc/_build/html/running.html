@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running the pipeline &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Observing modes" href="modes.html" />
+    <link rel="prev" title="Testing" href="testing.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modes.html" title="Observing modes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="testing.html" title="Testing"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Running the pipeline</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="running-the-pipeline">
+<h1>Running the pipeline<a class="headerlink" href="#running-the-pipeline" title="Permalink to this headline">¶</a></h1>
+<p>The MEGARA DRP is run through a command line interface
+provided by <strong class="program">numina</strong>.</p>
+<p>The run mode of numina requires:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A observation result file in <a class="reference external" href="http://www.yaml.org">YAML</a> format</p></li>
+<li><p>A requirements file in YAML format</p></li>
+<li><p>The raw images obtained in the observing block</p></li>
+<li><p>The calibrations required by the recipe</p></li>
+</ul>
+</div></blockquote>
+<p>The observation result file and the requirements file are created by the user,
+the format is described in the following sections.</p>
+<div class="section" id="format-of-the-observation-result">
+<h2>Format of the observation result<a class="headerlink" href="#format-of-the-observation-result" title="Permalink to this headline">¶</a></h2>
+<p>The contents of the file is a serialized dictionary with the
+following keys:</p>
+<dl class="simple">
+<dt><em>id</em>: not required, string, defaults to 1</dt><dd><p>Unique identifier of the observing block</p>
+</dd>
+<dt><em>instrument</em>: required, string</dt><dd><p>Name of the instrument, as it is returned by <code class="docutils literal notranslate"><span class="pre">numina</span> <span class="pre">show-instruments</span></code></p>
+</dd>
+<dt><em>mode</em>: required, string</dt><dd><p>Name of the observing mode, as returned by <code class="docutils literal notranslate"><span class="pre">numina</span> <span class="pre">show-modes</span></code></p>
+</dd>
+<dt><em>frames</em>: required, list of strings</dt><dd><p>List of images names</p>
+</dd>
+<dt><em>children</em>: not required, list of integers, defaults to empty list</dt><dd><p>Identifications of nested observing blocks</p>
+</dd>
+</dl>
+<p>This is an example of the observation result file</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">dark-test-21</span>
+<span class="nt">instrument</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MEGARA</span>
+<span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MegaraDarkImage</span>
+<span class="nt">images</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">r0121.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">r0122.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">r0123.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">r0124.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">r0125.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">r0126.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">r0127.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">r0128.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">r0129.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">r0130.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">r0131.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">r0132.fits</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="format-of-the-requirements-file">
+<h2>Format of the requirements file<a class="headerlink" href="#format-of-the-requirements-file" title="Permalink to this headline">¶</a></h2>
+<p>This file contains calibrations obtained by running recipes (called <strong>products</strong>)
+and other parameters (numeric or otherwise) required by the recipes (named <strong>requirements</strong>). The file
+is serialized using <a class="reference external" href="http://www.yaml.org">YAML</a></p>
+<p>Example requirements file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1                                             (1)</span>
+<span class="nt">products</span><span class="p">:</span>                                              <span class="l l-Scalar l-Scalar-Plain">(2)</span>
+  <span class="l l-Scalar l-Scalar-Plain">EMIR</span><span class="p p-Indicator">:</span>
+   <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">id</span><span class="p">:</span> <span class="nv">1</span><span class="p p-Indicator">,</span><span class="nt"> content</span><span class="p">:</span> <span class="s">&#39;file1.fits&#39;</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span> <span class="s">&#39;MasterFlat&#39;</span><span class="p p-Indicator">,</span><span class="nt"> tags</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="s">&#39;filter&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;J&#39;</span><span class="p p-Indicator">},</span><span class="nt"> ob</span><span class="p">:</span> <span class="nv">200</span><span class="p p-Indicator">}</span>     <span class="l l-Scalar l-Scalar-Plain">(3)</span>
+   <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">id</span><span class="p">:</span> <span class="nv">4</span><span class="p p-Indicator">,</span><span class="nt"> content</span><span class="p">:</span> <span class="s">&#39;file4.fits&#39;</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span> <span class="s">&#39;MasterBias&#39;</span><span class="p p-Indicator">,</span><span class="nt"> tags</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="s">&#39;readmode&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;cds&#39;</span><span class="p p-Indicator">},</span><span class="nt"> ob</span><span class="p">:</span> <span class="nv">400</span><span class="p p-Indicator">}</span> <span class="l l-Scalar l-Scalar-Plain">(3)</span>
+<span class=" -Error">  </span><span class="nt">MEGARA</span><span class="p">:</span>
+   <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">id</span><span class="p">:</span> <span class="nv">1</span><span class="p p-Indicator">,</span><span class="nt"> content</span><span class="p">:</span> <span class="s">&#39;file1.fits&#39;</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span> <span class="s">&#39;MasterFiberFlat&#39;</span><span class="p p-Indicator">,</span><span class="nt"> tags</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="s">&#39;vph&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;LR-U&#39;</span><span class="p p-Indicator">},</span><span class="nt"> ob</span><span class="p">:</span> <span class="nv">1200</span><span class="p p-Indicator">}</span> <span class="l l-Scalar l-Scalar-Plain">(3)</span>
+   <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">id</span><span class="p">:</span> <span class="nv">2</span><span class="p p-Indicator">,</span><span class="nt"> content</span><span class="p">:</span> <span class="s">&#39;file2.yml&#39;</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span> <span class="s">&#39;TraceMap&#39;</span><span class="p p-Indicator">,</span><span class="nt"> tags</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="s">&#39;vph&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;LR2&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;readmode&#39;</span><span class="p p-Indicator">:</span> <span class="s">&#39;fast&#39;</span><span class="p p-Indicator">},</span><span class="nt"> ob</span><span class="p">:</span> <span class="nv">1203</span><span class="p p-Indicator">}</span> <span class="l l-Scalar l-Scalar-Plain">(3)</span>
+<span class="nt">requirements</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">(4)</span>
+  <span class="l l-Scalar l-Scalar-Plain">MEGARA</span><span class="p p-Indicator">:</span>
+     <span class="nt">default</span><span class="p">:</span>
+       <span class="nt">MegaraArcImage</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">(5)</span>
+          <span class="l l-Scalar l-Scalar-Plain">polynomial_degree</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">5 (6)</span>
+          <span class="l l-Scalar l-Scalar-Plain">nlines</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">5</span><span class="p p-Indicator">,</span> <span class="nv">5</span><span class="p p-Indicator">]</span>       <span class="l l-Scalar l-Scalar-Plain">(6)</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Mandatory entry, <code class="docutils literal notranslate"><span class="pre">version</span></code> must be 1</p></li>
+<li><p>Products of other recipes are list, by instrument</p></li>
+<li><dl class="simple">
+<dt>The products of the reduction recipes are listed. Each result must contain:</dt><dd><ul class="simple">
+<li><p>A <code class="docutils literal notranslate"><span class="pre">type</span></code>, one of the types of the products of the DRP in string format</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">tags</span></code> field, used to select the correct calibration based on the keywords of
+the input.</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">content</span></code> field, a pointer to the serialized version of the calibration.</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">id</span></code> field, unique integer</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">ob</span></code> field, optional integer, used to store the observation id of the images that
+created the calibration.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Numerical parameters of the recipes are stored in <code class="docutils literal notranslate"><span class="pre">requirements</span></code>, with different sections
+per instrument.</p></li>
+<li><p>The name of the observing mode.</p></li>
+<li><p>Different parameters for the recipe corresponding to the observing mode in (5)</p></li>
+</ol>
+</div>
+<div class="section" id="id1">
+<h2>Running the pipeline<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><strong class="program">numina</strong> copies the images (calibrations and raw data) from directory
+<code class="docutils literal notranslate"><span class="pre">datadir</span></code> to directory <code class="docutils literal notranslate"><span class="pre">workdir</span></code>, where the processing happens.
+The result is stored in directory <code class="docutils literal notranslate"><span class="pre">resultsdir</span></code>.
+The default values are for each directory are <code class="docutils literal notranslate"><span class="pre">data</span></code>, <code class="docutils literal notranslate"><span class="pre">obsid&lt;id_of_obs&gt;_work</span></code> and <code class="docutils literal notranslate"><span class="pre">obsid&lt;id_of_obs&gt;_results</span></code>.
+All these directories can be defined in the command line using flags:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ numina run --workdir /tmp/test1 --datadir /scrat/obs/run12222 obs.yaml -r requires.yaml
+</pre></div>
+</div>
+<p>See <a class="reference external" href="https://numina.readthedocs.io/en/latest/user/cli.html#cli" title="(in Numina v0.22)"><span>Command Line Interface</span></a> for a full description of the command line interface.</p>
+<p>Following the example, we create a directory <code class="docutils literal notranslate"><span class="pre">data</span></code> in our current directory and copy
+there the raw frames from <code class="docutils literal notranslate"><span class="pre">r0121.fits</span></code> to <code class="docutils literal notranslate"><span class="pre">r0132.fits</span></code> and the master bias <code class="docutils literal notranslate"><span class="pre">master_bias-1.fits</span></code>.</p>
+<p>The we run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ numina run obsresult.yaml -r requirements.yaml
+INFO: Numina simple recipe runner version 0.15
+INFO: Loading observation result from &#39;obsrun.yaml&#39;
+INFO: Identifier of the observation result: 1
+INFO: instrument name: MEGARA
+...
+numina.recipes.megara INFO stacking 4 images using median
+numina.recipes.megara INFO bias reduction ended
+INFO: result: BiasRecipeResult(qc=Product(type=QualityControlProduct(), dest=&#39;qc&#39;), biasframe=Product(type=MasterBias(), dest=&#39;biasframe&#39;))
+INFO: storing result
+</pre></div>
+</div>
+<p>We get information of what’s going on through logging messages. In the end, the result and log files are stored in <code class="docutils literal notranslate"><span class="pre">obsid&lt;id_of_obs&gt;_results</span></code>.
+The working directory <code class="docutils literal notranslate"><span class="pre">obsid&lt;id_of_obs&gt;_work</span></code> can be inspected too. Intermediate results will be saved here.</p>
+<p>On the other hand, in the following we attach a short code to run megaradrp
+by using a Python script. This is useful to use the Python debugger.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numina.user.cli</span> <span class="kn">import</span> <span class="n">main</span>
+<span class="kn">from</span> <span class="nn">megaradrp.loader</span> <span class="kn">import</span> <span class="n">load_drp</span>
+
+<span class="k">def</span> <span class="nf">run_recipe</span><span class="p">():</span>
+    <span class="n">main</span><span class="p">([</span><span class="s1">&#39;run&#39;</span><span class="p">,</span> <span class="s1">&#39;obsresult.yaml&#39;</span><span class="p">,</span> <span class="s1">&#39;-r&#39;</span><span class="p">,</span> <span class="s1">&#39;requirements.yaml&#39;</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">run_recipe</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="pipeline-s-flow-example">
+<h3>Pipeline’s Flow Example<a class="headerlink" href="#pipeline-s-flow-example" title="Permalink to this headline">¶</a></h3>
+<p>In this subsection, we detail an example about how to generate a called Master
+Fiber Flat Image. To achieve our goal, a schematic flow can be seen in the next
+Figure:</p>
+<div class="graphviz"><img src="_images/graphviz-28fe0a0fade2d14cc7bb82e0f458ab7ff02f907c.png" alt="digraph G {
+    rankdir=LR;
+    subgraph cluster_0 {
+        style=filled;
+        color=lightgrey;
+        node [style=filled,color=white];
+        edge[style=invis]
+        a0 -&gt; a5,a1 -&gt; a4,a2 -&gt; a3;
+        #label = &quot;Observing\nModes&quot;;
+    }
+
+    a0 -&gt; a1 [rank=same];
+    a1 -&gt; a2 [rank=same];
+    a1 -&gt; a4 [rank=same];
+    a2 -&gt; a3 [rank=same];
+    a4 -&gt; a3 [rank=same];
+    a5 -&gt; a4 [rank=same];
+
+    a0 [label=&quot;MegaraBiasImage&quot;];
+    a1 [label=&quot;MegaraTraceMap&quot;];
+    a2 [label=&quot;MegaraArcCalibration&quot;];
+    a3 [label=&quot;MegaraModelMap&quot;];
+    a4 [label=&quot;MegaraFiberFlat&quot;];
+    a5 [label=&quot;MegaraSlitFlat&quot;];
+
+}" class="graphviz" /></div>
+<p>It is important to emphasize the fact that each time a Recipe is run, the results must be
+renamed and copied to the <code class="docutils literal notranslate"><span class="pre">data</span></code> directory in order to be the input of the
+next Recipe if it is needed. Taking this in mind, the content of the
+<code class="docutils literal notranslate"><span class="pre">requirements.yaml</span></code> file might well be and is common to all Recipes:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">products</span><span class="p">:</span>
+  <span class="nt">MEGARA</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">id</span><span class="p">:</span> <span class="nv">1</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span> <span class="s">&#39;LinesCatalog&#39;</span><span class="p p-Indicator">,</span><span class="nt"> tags</span><span class="p">:</span> <span class="p p-Indicator">{},</span><span class="nt"> content</span><span class="p">:</span> <span class="s">&#39;ThAr_arc_LR-U.txt&#39;</span><span class="p p-Indicator">}</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">id</span><span class="p">:</span> <span class="nv">2</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span> <span class="s">&#39;MasterBias&#39;</span><span class="p p-Indicator">,</span><span class="nt"> tags</span><span class="p">:</span> <span class="p p-Indicator">{},</span><span class="nt"> content</span><span class="p">:</span> <span class="s">&#39;master_bias.fits&#39;</span><span class="p p-Indicator">}</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">id</span><span class="p">:</span> <span class="nv">3</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span> <span class="s">&#39;TraceMap&#39;</span><span class="p p-Indicator">,</span><span class="nt"> tags</span><span class="p">:</span> <span class="p p-Indicator">{},</span><span class="nt"> content</span><span class="p">:</span> <span class="s">&#39;master_traces.json&#39;</span><span class="p p-Indicator">}</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">id</span><span class="p">:</span> <span class="nv">4</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span> <span class="s">&#39;MasterFiberFlat&#39;</span><span class="p p-Indicator">,</span><span class="nt"> tags</span><span class="p">:</span> <span class="p p-Indicator">{},</span><span class="nt"> content</span><span class="p">:</span> <span class="s">&#39;master_fiberflat.fits&#39;</span><span class="p p-Indicator">}</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">id</span><span class="p">:</span> <span class="nv">5</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span> <span class="s">&#39;WavelengthCalibration&#39;</span><span class="p p-Indicator">,</span><span class="nt"> tags</span><span class="p">:</span> <span class="p p-Indicator">{},</span><span class="nt"> content</span><span class="p">:</span> <span class="s">&#39;master_wlcalib.json&#39;</span><span class="p p-Indicator">}</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">id</span><span class="p">:</span> <span class="nv">6</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span> <span class="s">&#39;MasterFiberFlatFrame&#39;</span><span class="p p-Indicator">,</span><span class="nt"> tags</span><span class="p">:</span> <span class="p p-Indicator">{},</span><span class="nt"> content</span><span class="p">:</span> <span class="s">&#39;fiberflat_frame.fits&#39;</span><span class="p p-Indicator">}</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">id</span><span class="p">:</span> <span class="nv">7</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span> <span class="s">&#39;ModelMap&#39;</span><span class="p p-Indicator">,</span><span class="nt"> tags</span><span class="p">:</span> <span class="p p-Indicator">{},</span><span class="nt"> content</span><span class="p">:</span> <span class="s">&#39;master_model.json&#39;</span><span class="p p-Indicator">}</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">id</span><span class="p">:</span> <span class="nv">8</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span> <span class="s">&#39;MasterSlitFlat&#39;</span><span class="p p-Indicator">,</span><span class="nt"> tags</span><span class="p">:</span> <span class="p p-Indicator">{},</span><span class="nt"> content</span><span class="p">:</span> <span class="s">&#39;master_slitflat.fits&#39;</span><span class="p p-Indicator">}</span>
+<span class="nt">requirements</span><span class="p">:</span> <span class="p p-Indicator">{}</span>
+</pre></div>
+</div>
+<p>In order to run the next example, the user should execute the next command
+at least 6 times taking into account that the file <code class="docutils literal notranslate"><span class="pre">obsresult-%step.yaml</span></code> should
+change with each execution:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ numina run obsresult-1.yaml -r requirements.yaml
+$ numina run obsresult-2.yaml -r requirements.yaml
+...
+$ numina run obsresult-6.yaml -r requirements.yaml
+</pre></div>
+</div>
+<p>MegaraBiasImage file, obsresult-1.yaml:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">instrument</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MEGARA</span>
+<span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MegaraBiasImage</span>
+<span class="nt">images</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">bias1.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">bias2.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">bias3.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">bias4.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">bias5.fits</span>
+</pre></div>
+</div>
+<p>MegaraTraceMap, obsresult-2.yaml:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="nt">instrument</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MEGARA</span>
+<span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MegaraTraceMap</span>
+<span class="nt">images</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat1.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat2.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat3.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat4.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat5.fits</span>
+</pre></div>
+</div>
+<p>MegaraArcCalibration, obsresult-3.yaml:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">instrument</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MEGARA</span>
+<span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MegaraArcCalibration</span>
+<span class="nt">images</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">arc1.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">arc2.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">arc3.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">arc4.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">arc5.fits</span>
+</pre></div>
+</div>
+<p>MegaraSlitFlat, obsresult-4.yaml:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="nt">instrument</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MEGARA</span>
+<span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MegaraSlitFlat</span>
+<span class="nt">images</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat1.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat2.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat3.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat4.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat5.fits</span>
+</pre></div>
+</div>
+<p>MegaraModel, obsresult-5.yaml:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">instrument</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MEGARA</span>
+<span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MegaraModelMap</span>
+<span class="nt">images</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat1.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat2.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat3.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat4.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat5.fits</span>
+</pre></div>
+</div>
+<p>MegaraFiberFlat, obsresult-6.yaml:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">6</span>
+<span class="nt">instrument</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MEGARA</span>
+<span class="nt">mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MegaraFiberFlat</span>
+<span class="nt">images</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat1.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat2.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat3.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat4.fits</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">flat5.fits</span>
+</pre></div>
+</div>
+<p>Notice that if you would want to execute this example automatically, you could
+code a script (following the same skeleton as shown above) with a loop flow to
+read the .yaml files and the outputs that each recipe generates.</p>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Running the pipeline</a><ul>
+<li><a class="reference internal" href="#format-of-the-observation-result">Format of the observation result</a></li>
+<li><a class="reference internal" href="#format-of-the-requirements-file">Format of the requirements file</a></li>
+<li><a class="reference internal" href="#id1">Running the pipeline</a><ul>
+<li><a class="reference internal" href="#pipeline-s-flow-example">Pipeline’s Flow Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="testing.html"
+                        title="previous chapter">Testing</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="modes.html"
+                        title="next chapter">Observing modes</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/running.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modes.html" title="Observing modes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="testing.html" title="Testing"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Running the pipeline</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

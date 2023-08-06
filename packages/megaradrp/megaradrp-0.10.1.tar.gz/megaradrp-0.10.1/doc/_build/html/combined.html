@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Modes &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data Products" href="products.html" />
+    <link rel="prev" title="Scientific Modes" href="scientific.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="products.html" title="Data Products"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="scientific.html" title="Scientific Modes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modes.html" accesskey="U">Observing modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Combined Modes</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="combined-modes">
+<h1>Combined Modes<a class="headerlink" href="#combined-modes" title="Permalink to this headline">¶</a></h1>
+<p>The observing modes described in this section are those that require
+the outputs of previous observing blocks.</p>
+<div class="section" id="compute-sensitivity-from-std-stars">
+<h2>Compute Sensitivity from Std Stars<a class="headerlink" href="#compute-sensitivity-from-std-stars" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">Usage</dt>
+<dd class="field-even"><p>Offline</p>
+</dd>
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>MegaraSensitivityStar</p>
+</dd>
+<dt class="field-even">Product</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MasterSensitivity</span></code></p>
+</dd>
+<dt class="field-odd">Recipe</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#megaradrp.recipes.combined.sensstar.Recipe" title="megaradrp.recipes.combined.sensstar.Recipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">Recipe</span></code></a></p>
+</dd>
+<dt class="field-even">Recipe input</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RecipeInput</span></code></p>
+</dd>
+<dt class="field-odd">Recipe result</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RecipeResult</span></code></p>
+</dd>
+</dl>
+<div class="section" id="recipe-inputs-and-results">
+<h3>Recipe, inputs and results<a class="headerlink" href="#recipe-inputs-and-results" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="megaradrp.recipes.combined.sensstar.Recipe">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.combined.sensstar.</code><code class="sig-name descname">Recipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.combined.sensstar.Recipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process Sensitivity Star Recipe.</p>
+<p>This recipe processes a set of images
+processed by the recipes of
+<strong>Standard star with the FIBER MOS</strong> or
+<strong>Standard star with the LCB IFU</strong>
+and returns the sensitivity correction required
+for flux calibration.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#megaradrp.recipes.combined.extinctionstar.Recipe" title="megaradrp.recipes.combined.extinctionstar.Recipe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.recipes.combined.extinctionstar.Recipe</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<dl class="py class">
+<dt id="megaradrp.recipes.combined.sensstar.Recipe.RecipeInput">
+<em class="property">class </em><code class="sig-name descname">RecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.combined.sensstar.Recipe.RecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>RecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_extinction</strong><span class="classifier">ReferenceExtinctionTable, requirement</span></dt><dd><p>Atmospheric extinction</p>
+</dd>
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+<dt><strong>reference_spectra</strong><span class="classifier">ListOfType, requirement</span></dt><dd><p>Reference spectra of Std stars</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.combined.sensstar.Recipe.RecipeResult">
+<em class="property">class </em><code class="sig-name descname">RecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.combined.sensstar.Recipe.RecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>RecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_sensitivity</strong><span class="classifier">MasterSensitivity, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="compute-extinction-and-sensitivity-from-std-stars">
+<h2>Compute Extinction and Sensitivity from Std Stars<a class="headerlink" href="#compute-extinction-and-sensitivity-from-std-stars" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>Compute Extinction from Std Stars</p>
+</dd>
+<dt class="field-even">Usage</dt>
+<dd class="field-even"><p>Offline</p>
+</dd>
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>MegaraExtinctionStar</p>
+</dd>
+<dt class="field-even">Product</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MasterSensitivity</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Extinction</span></code></p>
+</dd>
+<dt class="field-odd">Recipe</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#megaradrp.recipes.combined.extinctionstar.Recipe" title="megaradrp.recipes.combined.extinctionstar.Recipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">Recipe</span></code></a></p>
+</dd>
+<dt class="field-even">Recipe input</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RecipeInput</span></code></p>
+</dd>
+<dt class="field-odd">Recipe result</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RecipeResult</span></code></p>
+</dd>
+</dl>
+<div class="section" id="id1">
+<h3>Recipe, inputs and results<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="megaradrp.recipes.combined.extinctionstar.Recipe">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.combined.extinctionstar.</code><code class="sig-name descname">Recipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.combined.extinctionstar.Recipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process Sensitivity Star Recipe.</p>
+<p>This recipe processes a set of images
+processed by the recipes of
+<strong>Standard star with the FIBER MOS</strong> or
+<strong>Standard star with the LCB IFU</strong>
+and returns the sensitivity correction
+and the atmospheric extinction required
+for flux calibration.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#megaradrp.recipes.combined.sensstar.Recipe" title="megaradrp.recipes.combined.sensstar.Recipe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.recipes.combined.sensstar.Recipe</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<dl class="py class">
+<dt id="megaradrp.recipes.combined.extinctionstar.Recipe.RecipeInput">
+<em class="property">class </em><code class="sig-name descname">RecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.combined.extinctionstar.Recipe.RecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>RecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+<dt><strong>reference_spectra</strong><span class="classifier">ListOfType, requirement</span></dt><dd><p>Reference spectra of Std stars</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.combined.extinctionstar.Recipe.RecipeResult">
+<em class="property">class </em><code class="sig-name descname">RecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.combined.extinctionstar.Recipe.RecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>RecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_extinction</strong><span class="classifier">ReferenceExtinctionTable, product</span></dt><dd><p>Atmospheric extinction</p>
+</dd>
+<dt><strong>master_sensitivity</strong><span class="classifier">MasterSensitivity, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Combined Modes</a><ul>
+<li><a class="reference internal" href="#compute-sensitivity-from-std-stars">Compute Sensitivity from Std Stars</a><ul>
+<li><a class="reference internal" href="#recipe-inputs-and-results">Recipe, inputs and results</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#compute-extinction-and-sensitivity-from-std-stars">Compute Extinction and Sensitivity from Std Stars</a><ul>
+<li><a class="reference internal" href="#id1">Recipe, inputs and results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="scientific.html"
+                        title="previous chapter">Scientific Modes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="products.html"
+                        title="next chapter">Data Products</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/combined.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="products.html" title="Data Products"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="scientific.html" title="Scientific Modes"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modes.html" >Observing modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Combined Modes</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

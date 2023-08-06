@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGARA DRP documentation &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Overview" href="intro.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Overview"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MEGARA DRP documentation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="megara-drp-documentation">
+<span id="contents"></span><h1>MEGARA DRP documentation<a class="headerlink" href="#megara-drp-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Welcome. This is the Documentation for MEGARA DRP (version 0.10).</p>
+<p>MEGARA (Multi-Espectrógrafo en GTC de Alta Resolución para Astronomía) is
+an optical Integral-Field Unit (IFU) and Multi-Object Spectrograph (MOS)
+designed for the GTC 10.4m telescope in La Palma.</p>
+<p>MEGARA DRP is the official Data Reduction Pipeline for MEGARA. It can
+be run as a standalone module (via a command line interface) or
+integrated in the GTC Control System.</p>
+<div class="section" id="user-documentation">
+<h2>User documentation<a class="headerlink" href="#user-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installing-megara-drp">Installing MEGARA DRP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing.html#running-tests">Running tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">Running the pipeline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="running.html#format-of-the-observation-result">Format of the observation result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="running.html#format-of-the-requirements-file">Format of the requirements file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="running.html#id1">Running the pipeline</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modes.html">Observing modes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="calibration/index.html">Calibration Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auxiliary.html">Auxiliary Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scientific.html">Scientific Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="combined.html">Combined Modes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="products.html">Data Products</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="keywords.html">FITS Keywords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="images.html">Data products</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="developer-documentation">
+<h2>Developer documentation<a class="headerlink" href="#developer-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="recipes.html">Reduction Recipes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="recipes.html#execution-environment-of-the-recipes">Execution environment of the Recipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recipes.html#recipe-parameters">Recipe Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recipes.html#recipe-products">Recipe Products</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference/index.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/core.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.core</span></code> — Base classes for processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/instrument.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.instrument</span></code> — Static configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/processing.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.processing</span></code> — Processing functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/processing.html#module-megaradrp.processing.wavecalibration"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.processing.wavecalibration</span></code> —</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/products.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.products</span></code> — Data products of the MEGARA pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/recipes.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.recipes</span></code> — Reduction Recipes for MEGARA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/ntypes.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.ntypes</span></code> — MEGARA data types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/datamodel.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.datamodel</span></code> — MEGARA datamodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/datatype.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.datatype</span></code> — MEGARA types of data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/utils.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.utils</span></code> — MEGARA utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/validators.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.validators</span></code> — MEGARA validators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/visualization.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.visualization</span></code> — MEGARA visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/simulation.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.simulation</span></code> — Simulation modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+</div>
+<p>Maintainers: Sergio Pascual <a class="reference external" href="mailto:sergiopr&#37;&#52;&#48;fis&#46;ucm&#46;es">sergiopr<span>&#64;</span>fis<span>&#46;</span>ucm<span>&#46;</span>es</a>, Nicolás Cardiel <a class="reference external" href="mailto:cardiel&#37;&#52;&#48;ucm&#46;es">cardiel<span>&#64;</span>ucm<span>&#46;</span>es</a></p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">MEGARA DRP documentation</a><ul>
+<li><a class="reference internal" href="#user-documentation">User documentation</a></li>
+<li><a class="reference internal" href="#developer-documentation">Developer documentation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="next chapter">Overview</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Overview"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MEGARA DRP documentation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

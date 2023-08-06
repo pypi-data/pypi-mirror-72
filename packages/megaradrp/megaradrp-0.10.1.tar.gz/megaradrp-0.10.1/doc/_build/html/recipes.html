@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduction Recipes &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Reference" href="reference/index.html" />
+    <link rel="prev" title="Data products" href="images.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="reference/index.html" title="Reference"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="images.html" title="Data products"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Reduction Recipes</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="reduction-recipes">
+<h1>Reduction Recipes<a class="headerlink" href="#reduction-recipes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="execution-environment-of-the-recipes">
+<h2>Execution environment of the Recipes<a class="headerlink" href="#execution-environment-of-the-recipes" title="Permalink to this headline">¶</a></h2>
+<p>Recipes have different execution environments. Some recipes are designed to
+process observing modes required while observing at the telescope. These modes
+are related to visualization, acquisition and focusing. The corresponding
+Recipes are integrated in the GTC environment. We call these recipes the <strong>Data
+Factory Pipeline</strong>, (DFP).</p>
+<p>Other group of recipes are devoted to scientific observing modes and auxiliary calibrations.
+These Recipes constitute the <strong>Data Reduction Pipeline</strong>, (DRP). The software is meant to be standalone,
+users shall download the software and run it in their own computers, with
+reduction parameters and calibrations provided by the instrument team.</p>
+<p>Users of the DRP may use the simple Numina CLI (Command Line Interface).
+Users of the DFP shall interact with the software through the GTC Inspector.</p>
+</div>
+<div class="section" id="recipe-parameters">
+<h2>Recipe Parameters<a class="headerlink" href="#recipe-parameters" title="Permalink to this headline">¶</a></h2>
+<p>MEGARA Recipes based on Numina have a list of required parameters needed to configure the Recipe properly.
+The Recipe announces the required parameters with the following syntax (the syntax is subject to changes).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SomeRecipeInput</span><span class="p">(</span><span class="n">RecipeInput</span><span class="p">):</span>
+    <span class="n">master_dark</span> <span class="o">=</span> <span class="n">DataProductParameter</span><span class="p">(</span><span class="n">MasterDark</span><span class="p">,</span> <span class="s1">&#39;Master dark image&#39;</span><span class="p">)</span>
+    <span class="n">some_numeric_value</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="mf">0.45</span><span class="p">,</span> <span class="s1">&#39;Some numeric value&#39;</span><span class="p">),</span>
+
+<span class="nd">@define_input</span><span class="p">(</span><span class="n">SomeRecipeInput</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">SomeRecipe</span><span class="p">(</span><span class="n">RecipeBase</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>When the Recipe is configured properly, it is executed with an observing block
+data structure as input. When is run using Numina CLI, this data structure is
+created from an user-provided text file. The recipe requirements values are
+either provided in a text file or have default values.</p>
+</div>
+<div class="section" id="recipe-products">
+<h2>Recipe Products<a class="headerlink" href="#recipe-products" title="Permalink to this headline">¶</a></h2>
+<p>Recipes based on Numina provide a list of products created by the recipe.
+The Recipe announces the required parameters with the following syntax
+(the syntax is subject to changes).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SomeRecipeInput</span><span class="p">(</span><span class="n">RecipeInput</span><span class="p">):</span>
+    <span class="n">master_dark</span> <span class="o">=</span> <span class="n">DataProductParameter</span><span class="p">(</span><span class="n">MasterDark</span><span class="p">,</span> <span class="s1">&#39;Master dark image&#39;</span><span class="p">)</span>
+    <span class="n">some_numeric_value</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="mf">0.45</span><span class="p">,</span> <span class="s1">&#39;Some numeric value&#39;</span><span class="p">),</span>
+
+<span class="k">class</span> <span class="nc">SomeRecipeResult</span><span class="p">(</span><span class="n">RecipeResult</span><span class="p">):</span>
+    <span class="n">master_flat</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="n">MasterDark</span><span class="p">)</span>
+
+<span class="nd">@define_input</span><span class="p">(</span><span class="n">SomeRecipeInput</span><span class="p">)</span>
+<span class="nd">@define_result</span><span class="p">(</span><span class="n">SomeRecipeResult</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">SomeRecipe</span><span class="p">(</span><span class="n">RecipeBase</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>The data products of the MEGARA DRP are describe in <a class="reference internal" href="products.html"><span class="doc">Data Products</span></a></p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Reduction Recipes</a><ul>
+<li><a class="reference internal" href="#execution-environment-of-the-recipes">Execution environment of the Recipes</a></li>
+<li><a class="reference internal" href="#recipe-parameters">Recipe Parameters</a></li>
+<li><a class="reference internal" href="#recipe-products">Recipe Products</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="images.html"
+                        title="previous chapter">Data products</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="reference/index.html"
+                        title="next chapter">Reference</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/recipes.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="reference/index.html" title="Reference"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="images.html" title="Data products"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Reduction Recipes</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

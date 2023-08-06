@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>megaradrp.processing — Processing functions &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="megaradrp.products — Data products of the MEGARA pipeline" href="products.html" />
+    <link rel="prev" title="megaradrp.instrument — Static configuration" href="instrument.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="products.html" title="megaradrp.products — Data products of the MEGARA pipeline"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="instrument.html" title="megaradrp.instrument — Static configuration"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.processing</span></code> — Processing functions</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-megaradrp.processsing">
+<span id="megaradrp-processing-processing-functions"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.processing</span></code> — Processing functions<a class="headerlink" href="#module-megaradrp.processsing" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="module-megaradrp.processing.wavecalibration">
+<span id="megaradrp-processing-wavecalibration"></span><h1><a class="reference internal" href="#module-megaradrp.processing.wavecalibration" title="megaradrp.processing.wavecalibration"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.processing.wavecalibration</span></code></a> —<a class="headerlink" href="#module-megaradrp.processing.wavecalibration" title="Permalink to this headline">¶</a></h1>
+<p>Corrector for wavelength calibration</p>
+<dl class="py class">
+<dt id="megaradrp.processing.wavecalibration.SimpleWcs1D">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.processing.wavecalibration.</code><code class="sig-name descname">SimpleWcs1D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">crval</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">crpix</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">cdelt</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">ctype</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">cunit</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.processing.wavecalibration.SimpleWcs1D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Store parameters of a simple 1D WCS</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.processing.wavecalibration.WavelengthCalibrator">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.processing.wavecalibration.</code><code class="sig-name descname">WavelengthCalibrator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">solutionwl</span></em>, <em class="sig-param"><span class="n">datamodel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="o">=</span><span class="default_value">'float32'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.processing.wavecalibration.WavelengthCalibrator" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Node that applies wavelength calibration.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="megaradrp.processing.wavecalibration.calibrate_wl_rss">
+<code class="sig-prename descclassname">megaradrp.processing.wavecalibration.</code><code class="sig-name descname">calibrate_wl_rss</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">rss</span></em>, <em class="sig-param"><span class="n">solutionwl</span></em>, <em class="sig-param"><span class="n">npix</span></em>, <em class="sig-param"><span class="n">targetwcs</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="o">=</span><span class="default_value">'float32'</span></em>, <em class="sig-param"><span class="n">span</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">inplace</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.processing.wavecalibration.calibrate_wl_rss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply wavelength calibration to a RSS</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>rss: astropy.io.fits.HDUList</strong></dt><dd><p>A Row stacked Spectra MEGARA image, not WL calibrated</p>
+</dd>
+<dt><strong>solutionwl: megaradrp.products.wavecalibration.WavelengthCalibration</strong></dt><dd><p>A wavelength calibration solution</p>
+</dd>
+<dt><strong>npix: int</strong></dt><dd><p>Number of channels of the calibrated RSS</p>
+</dd>
+<dt><strong>targetwcs: SimpleWcs1D</strong></dt><dd><p>Common WCS solution</p>
+</dd>
+<dt><strong>dtype: str</strong></dt><dd><p>Convertible to numpy.dtype</p>
+</dd>
+<dt><strong>span: int</strong></dt><dd><p>Remove <cite>span</cite> pixels at both sides of the resampled image</p>
+</dd>
+<dt><strong>inplace: bool</strong></dt><dd><p>The input RSS is modified inplace, if False, a copy is made</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>rss: astropy.io.fits.HDUList</dt><dd><p>A Row stacked Spectra MEGARA image, WL calibrated</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="megaradrp.processing.wavecalibration.calibrate_wl_rss_megara">
+<code class="sig-prename descclassname">megaradrp.processing.wavecalibration.</code><code class="sig-name descname">calibrate_wl_rss_megara</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">rss</span></em>, <em class="sig-param"><span class="n">solutionwl</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="o">=</span><span class="default_value">'float32'</span></em>, <em class="sig-param"><span class="n">span</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">inplace</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.processing.wavecalibration.calibrate_wl_rss_megara" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply wavelength calibration to a RSS</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>rss: astropy.io.fits.HDUList</strong></dt><dd><p>A Row stacked Spectra MEGARA image, not WL calibrated</p>
+</dd>
+<dt><strong>solutionwl: megaradrp.products.wavecalibration.WavelengthCalibration</strong></dt><dd><p>A wavelength calibration solution</p>
+</dd>
+<dt><strong>dtype: str</strong></dt><dd><p>Convertible to numpy.dtype</p>
+</dd>
+<dt><strong>span: int</strong></dt><dd><p>Remove <cite>span</cite> pixels at both sides of the resampled image</p>
+</dd>
+<dt><strong>inplace: bool</strong></dt><dd><p>The input RSS is modified inplace, if False, a copy is made</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>rss: astropy.io.fits.HDUList</dt><dd><p>A Row stacked Spectra MEGARA image, WL calibrated</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="megaradrp.processing.wavecalibration.header_add_barycentric_correction">
+<code class="sig-prename descclassname">megaradrp.processing.wavecalibration.</code><code class="sig-name descname">header_add_barycentric_correction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hdr</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">'B'</span></em>, <em class="sig-param"><span class="n">out</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.processing.wavecalibration.header_add_barycentric_correction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add WCS keywords with barycentric correction</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>KeyError</dt><dd><p>If a required keyword is missing</p>
+</dd>
+<dt>TypeError</dt><dd><p>If the header does not contain a spectral axis</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="megaradrp.processing.wavecalibration.resample_rss_flux">
+<code class="sig-prename descclassname">megaradrp.processing.wavecalibration.</code><code class="sig-name descname">resample_rss_flux</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arr</span></em>, <em class="sig-param"><span class="n">solutionwl</span></em>, <em class="sig-param"><span class="n">npix</span></em>, <em class="sig-param"><span class="n">finalwcs</span></em>, <em class="sig-param"><span class="n">span</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">fill</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.processing.wavecalibration.resample_rss_flux" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resample array according to a wavelength calibration solution</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>arr: numpy.ndarray</strong></dt><dd><p>A Row stacked Spectra MEGARA image, not WL calibrated</p>
+</dd>
+<dt><strong>solutionwl: megaradrp.products.wavecalibration.WavelengthCalibration</strong></dt><dd><p>A wavelength calibration solution</p>
+</dd>
+<dt><strong>npix: int</strong></dt><dd><p>Number of channels of the calibrated RSS</p>
+</dd>
+<dt><strong>finalwcs: astropy.wcs.WCS</strong></dt><dd><p>WCS solution of the final array</p>
+</dd>
+<dt><strong>span: int</strong></dt><dd><p>Remove <cite>span</cite> pixels at both sides of the resampled image</p>
+</dd>
+<dt><strong>fill: int</strong></dt><dd><p>Value used to fill the values removed by <cite>span</cite></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>rss_resampled:  numpy.ndarray</dt><dd><p>A resample array</p>
+</dd>
+<dt>limits: a list of tuples</dt><dd><p>Contains the fiberid and a pair with the first and last valid pixel (0-based)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="megaradrp.processing.wavecalibration.rss_add_wcs">
+<code class="sig-prename descclassname">megaradrp.processing.wavecalibration.</code><code class="sig-name descname">rss_add_wcs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hdr</span></em>, <em class="sig-param"><span class="n">crval</span></em>, <em class="sig-param"><span class="n">cdelt</span></em>, <em class="sig-param"><span class="n">crpix</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.processing.wavecalibration.rss_add_wcs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add MEGARA 2D wavelength calibration headers</p>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.processing</span></code> — Processing functions</a></li>
+<li><a class="reference internal" href="#module-megaradrp.processing.wavecalibration"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.processing.wavecalibration</span></code> —</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="instrument.html"
+                        title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.instrument</span></code> — Static configuration</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="products.html"
+                        title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.products</span></code> — Data products of the MEGARA pipeline</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/reference/processing.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="products.html" title="megaradrp.products — Data products of the MEGARA pipeline"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="instrument.html" title="megaradrp.instrument — Static configuration"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">megaradrp.processing</span></code> — Processing functions</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

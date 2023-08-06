@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard star with the Fiber MOS &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Auxiliary Modes" href="../auxiliary.html" />
+    <link rel="prev" title="Standard star with the LCB IFU" href="lcbstd.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../auxiliary.html" title="Auxiliary Modes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="lcbstd.html" title="Standard star with the LCB IFU"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Calibration Modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Standard star with the Fiber MOS</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="standard-star-with-the-fiber-mos">
+<h1>Standard star with the Fiber MOS<a class="headerlink" href="#standard-star-with-the-fiber-mos" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>Standard star with the FIBER MOS</p>
+</dd>
+<dt class="field-even">Usage</dt>
+<dd class="field-even"><p>Offline, Online</p>
+</dd>
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>MegaraMosStdStar</p>
+</dd>
+<dt class="field-even">Recipe</dt>
+<dd class="field-even"><p><a class="reference internal" href="#megaradrp.recipes.calibration.mosstdstar.MOSStandardRecipe" title="megaradrp.recipes.calibration.mosstdstar.MOSStandardRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">MOSStandardRecipe</span></code></a></p>
+</dd>
+<dt class="field-odd">Recipe input</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MOSStandardRecipeInput</span></code></p>
+</dd>
+<dt class="field-even">Recipe result</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MOSStandardRecipeResult</span></code></p>
+</dd>
+</dl>
+<p>This observing mode includes the required actions to obtain those calibration
+images needed to correct for the variation in the response of the system along
+the spectral direction. The difference between this mode and the two precedent
+observing modes is that in this case the spectrophotometric standard star is
+observed through one of the robotic positioners of the Fiber-MOS subsystem.</p>
+<p>As in Standard star with the IFUs observing modes, the calibration is performed
+by observing one or several spectrophotometric stars with the same instrument
+configuration that for the scientific observations. Depending on the number of
+standard stars observed and the weather conditions two different types of
+calibration could be achieved, absolute or relative. In the case of the former
+calibration an aperture correction should be applied to take into account the
+possible flux losses from the standard stars when observed through one of the
+~1.6-arcsec-wide robotic positioners.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>This mode requires having the focal-plane cover configured, the instrument
+shutter open, to configure the VPH mechanism to select the grating to be used,
+to set the instrument mode to Fiber MOS, to move the focusing mechanism to the
+position pre-defined for the specific VPH of choice, to move one of the robotic
+positioners to the position of the spectrophotometric standard star (other
+positioners could be also moved if needed) and to expose a certain time and to
+readout the detector in a series of exposures, being this series the image set
+containing the spectral energy distribution of the spectrophotometric standard
+star.</p>
+<p>This observing mode could still be carried out with one of the sides of the
+focal-plane cover closed. However, as the (commonly rather bright)
+spectrophotometric standard star is the only object of interest in the field,
+the other positioners would not be observing scientific targets, so the level
+of cross-talk between these and the positioner devoted to the standard star
+should be negligible. Thus, the use of the focal-plane cover, although
+considered, is not recommended for this specific observing mode.</p>
+<p>In order to place the robotic positioner(s) on the corresponding target(s) a
+set of input catalogues previously generated by the observer using MOPSS
+(MEGARA Observing Preparation Software Suite) are needed.</p>
+</div>
+<div class="section" id="products">
+<h2>Products<a class="headerlink" href="#products" title="Permalink to this headline">¶</a></h2>
+<p>Standard star image sets are to be obtained only as part of the routine
+calibration activities performed by the observer that are needed for processing
+data for scientific exploitation.</p>
+</div>
+<div class="section" id="recipe-inputs-and-results">
+<h2>Recipe, inputs and results<a class="headerlink" href="#recipe-inputs-and-results" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.mosstdstar.MOSStandardRecipe">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.calibration.mosstdstar.</code><code class="sig-name descname">MOSStandardRecipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.mosstdstar.MOSStandardRecipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process MOS Standard Star Recipe.</p>
+<p>This recipe processes a set of images
+obtained in <strong>MOS Stardard Star image</strong> mode and returns
+the total flux of the star.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="lcbstd.html#megaradrp.recipes.calibration.lcbstdstar.LCBStandardRecipe" title="megaradrp.recipes.calibration.lcbstdstar.LCBStandardRecipe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.recipes.calibration.lcbstdstar.LCBStandardRecipe</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>Images provided by <cite>obresult</cite> are trimmed and corrected
+from overscan, bad pixel mask (if <cite>master_bpm</cite> is not None),
+bias, dark current (if <cite>master_dark</cite> is not None) and
+slit-flat (if <cite>master_slitflat</cite> is not None).</p>
+<p>Images thus corrected are then stacked using the median.
+The result of the combination is saved as an intermediate result, named
+‘reduced_image.fits’. This combined image is also returned in the field
+<cite>reduced_image</cite> of the recipe result.</p>
+<p>The apertures in the 2D image are extracted, using the information in
+<cite>master_apertures</cite> and resampled according to the wavelength calibration in
+<cite>master_wlcalib</cite>. Then is divided by the <cite>master_fiberflat</cite>.
+The resulting RSS is saved as an intermediate
+result named ‘reduced_rss.fits’. This RSS is also returned in the field
+<cite>reduced_rss</cite> of the recipe result.</p>
+<p>The sky is subtracted by combining the the fibers marked as <cite>SKY</cite>
+in the fibers configuration. The RSS with sky subtracted is returned ini the
+field <cite>final_rss</cite> of the recipe result.</p>
+<p>The flux of the star is computed by adding the 7 fibers corresponding to the bundle
+containing the star and returned as <cite>star_spectrum</cite>.</p>
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.mosstdstar.MOSStandardRecipe.MOSStandardRecipeInput">
+<em class="property">class </em><code class="sig-name descname">MOSStandardRecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.mosstdstar.MOSStandardRecipe.MOSStandardRecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>MOSStandardRecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>degrade_resolution_method</strong><span class="classifier">str, requirement, optional, default=fixed</span></dt><dd><p>Method to degrade the resolution</p>
+</dd>
+<dt><strong>degrade_resolution_target</strong><span class="classifier">str, requirement, optional, default=object</span></dt><dd><p>Spectrum with higher resolution</p>
+</dd>
+<dt><strong>diffuse_light_image</strong><span class="classifier">DiffuseLightCorrection, requirement, optional</span></dt><dd><p>Diffuse light correction image</p>
+</dd>
+<dt><strong>extraction_offset</strong><span class="classifier">ListOfType, requirement, optional, default=[0.0]</span></dt><dd><p>Offset traces for extraction</p>
+</dd>
+<dt><strong>ignored_sky_bundles</strong><span class="classifier">ListOfType, requirement, optional</span></dt><dd><p>Ignore these sky bundles</p>
+</dd>
+<dt><strong>master_apertures</strong><span class="classifier">MultiType, requirement</span></dt><dd><p>Apertures information for extraction</p>
+</dd>
+<dt><strong>master_bias</strong><span class="classifier">MasterBias, requirement</span></dt><dd><p>Master BIAS image</p>
+</dd>
+<dt><strong>master_bpm</strong><span class="classifier">MasterBPM, requirement, optional</span></dt><dd><p>Master Bad Pixel Mask</p>
+</dd>
+<dt><strong>master_dark</strong><span class="classifier">MasterDark, requirement, optional</span></dt><dd><p>Master DARK image</p>
+</dd>
+<dt><strong>master_fiberflat</strong><span class="classifier">MasterFiberFlat, requirement</span></dt><dd><p>Master fiber flat calibration</p>
+</dd>
+<dt><strong>master_sensitivity</strong><span class="classifier">MasterSensitivity, requirement, optional</span></dt><dd><p>Master sensitivity for flux calibration</p>
+</dd>
+<dt><strong>master_slitflat</strong><span class="classifier">MasterSlitFlat, requirement, optional</span></dt><dd><p>Master slit flat calibration</p>
+</dd>
+<dt><strong>master_twilight</strong><span class="classifier">MasterTwilightFlat, requirement, optional</span></dt><dd><p>Master twlight flat calibration</p>
+</dd>
+<dt><strong>master_wlcalib</strong><span class="classifier">WavelengthCalibration, requirement</span></dt><dd><p>Wavelength calibration table</p>
+</dd>
+<dt><strong>method</strong><span class="classifier">str, requirement, optional, default=median</span></dt><dd><p>Combination method</p>
+</dd>
+<dt><strong>method_kwargs</strong><span class="classifier">dict, requirement, optional</span></dt><dd><p>Arguments for combination method</p>
+</dd>
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+<dt><strong>position</strong><span class="classifier">list, requirement</span></dt><dd><p>Position of the reference object</p>
+</dd>
+<dt><strong>reference_extinction</strong><span class="classifier">ReferenceExtinctionTable, requirement</span></dt><dd><p>Reference extinction</p>
+</dd>
+<dt><strong>reference_spectrum</strong><span class="classifier">ReferenceSpectrumTable, requirement</span></dt><dd><p>Spectrum of reference star</p>
+</dd>
+<dt><strong>reference_spectrum_velocity</strong><span class="classifier">float, requirement, optional</span></dt><dd><p>Radial velocity of reference spectrum</p>
+</dd>
+<dt><strong>relative_threshold</strong><span class="classifier">float, requirement, optional, default=0.3</span></dt><dd><p>Threshold for peak detection</p>
+</dd>
+<dt><strong>sigma_resolution</strong><span class="classifier">float, requirement, optional, default=20.0</span></dt><dd><p>sigma Gaussian filter to degrade resolution</p>
+</dd>
+<dt><strong>sky_rss</strong><span class="classifier">SkyRSS, requirement, optional</span></dt><dd><p>Row Stacked Spectra of the sky</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.mosstdstar.MOSStandardRecipe.MOSStandardRecipeResult">
+<em class="property">class </em><code class="sig-name descname">MOSStandardRecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.mosstdstar.MOSStandardRecipe.MOSStandardRecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>MOSStandardRecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fiber_ids</strong><span class="classifier">ArrayType, product</span></dt><dd></dd>
+<dt><strong>final_rss</strong><span class="classifier">ProcessedRSS, product</span></dt><dd></dd>
+<dt><strong>master_sensitivity</strong><span class="classifier">MasterSensitivity, product</span></dt><dd></dd>
+<dt><strong>reduced_image</strong><span class="classifier">ProcessedFrame, product</span></dt><dd></dd>
+<dt><strong>reduced_rss</strong><span class="classifier">ProcessedRSS, product</span></dt><dd></dd>
+<dt><strong>sensitivity_raw</strong><span class="classifier">ProcessedSpectrum, product</span></dt><dd></dd>
+<dt><strong>sigma</strong><span class="classifier">float, product</span></dt><dd></dd>
+<dt><strong>sky_rss</strong><span class="classifier">ProcessedRSS, product</span></dt><dd></dd>
+<dt><strong>star_spectrum</strong><span class="classifier">ProcessedSpectrum, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.mosstdstar.MOSStandardRecipe.RecipeInput">
+<code class="sig-name descname">RecipeInput</code><a class="headerlink" href="#megaradrp.recipes.calibration.mosstdstar.MOSStandardRecipe.RecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.MOSStandardRecipeInput</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.mosstdstar.MOSStandardRecipe.RecipeResult">
+<code class="sig-name descname">RecipeResult</code><a class="headerlink" href="#megaradrp.recipes.calibration.mosstdstar.MOSStandardRecipe.RecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.MOSStandardRecipeResult</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Standard star with the Fiber MOS</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#products">Products</a></li>
+<li><a class="reference internal" href="#recipe-inputs-and-results">Recipe, inputs and results</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="lcbstd.html"
+                        title="previous chapter">Standard star with the LCB IFU</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../auxiliary.html"
+                        title="next chapter">Auxiliary Modes</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/calibration/mosstd.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../auxiliary.html" title="Auxiliary Modes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="lcbstd.html" title="Standard star with the LCB IFU"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Calibration Modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Standard star with the Fiber MOS</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

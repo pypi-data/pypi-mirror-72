@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data products &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Reduction Recipes" href="recipes.html" />
+    <link rel="prev" title="FITS Keywords" href="keywords.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="recipes.html" title="Reduction Recipes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="keywords.html" title="FITS Keywords"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="products.html" accesskey="U">Data Products</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Data products</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="data-products">
+<h1>Data products<a class="headerlink" href="#data-products" title="Permalink to this headline">¶</a></h1>
+<p>These data products are saved to disk as FITS files. MEGARA DRP makes use of the FITS headers
+to record information about the data processing. This information may be recorded using other
+methods as well, such as the GTC Database.</p>
+<p>The following headers are included in all image data products and record information
+about the version of Numina and the name and version of the recipe used.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NUMXVER</span> <span class="o">=</span> <span class="s1">&#39;0.13.0   &#39;</span>           <span class="o">/</span> <span class="n">Numina</span> <span class="n">package</span> <span class="n">version</span>
+<span class="n">NUMRNAM</span> <span class="o">=</span> <span class="s1">&#39;BiasRecipe&#39;</span>          <span class="o">/</span> <span class="n">Numina</span> <span class="n">recipe</span> <span class="n">name</span>
+<span class="n">NUMRVER</span> <span class="o">=</span> <span class="s1">&#39;0.1.0   &#39;</span>            <span class="o">/</span> <span class="n">Numina</span> <span class="n">recipe</span> <span class="n">version</span>
+<span class="n">NUMTYP</span>  <span class="o">=</span> <span class="s1">&#39;TARGET  &#39;</span>            <span class="o">/</span> <span class="n">Data</span> <span class="n">product</span> <span class="nb">type</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">HISTORY</span></code> keywords may be used also, but the information in these keyword may not be easily indexed.</p>
+<div class="section" id="generic-types">
+<h2>Generic types<a class="headerlink" href="#generic-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="processed-frame">
+<h3>Processed Frame<a class="headerlink" href="#processed-frame" title="Permalink to this headline">¶</a></h3>
+<p>Processed Frame is the type of any image produced by the pipeline that represents a view of the detector.
+Its size may be 4096x4112 for trimmed images or 4196x4212 for unprocessed, raw images.</p>
+<p>Processed Frame is represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">ProcessedFrame</span></code>.</p>
+</div>
+<div class="section" id="processed-rss">
+<h3>Processed RSS<a class="headerlink" href="#processed-rss" title="Permalink to this headline">¶</a></h3>
+<p>Processed Row Stacked Spectra is the type of any image produced by the pipeline that represents
+a view of the focal plane, using extracted fibers. It will have 623 rows in LCB mode and 644 rows
+in MOS mode, each row representing the extracted spectrum of one fiber. The number of columns
+will be 4112 or larger, depending on the stage of the reduction.</p>
+<p>Procesed RSS images will tipically have a <cite>FIBERS</cite> extension.</p>
+<p>Processed RSS is represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">ProcessedRSS</span></code>.</p>
+</div>
+<div class="section" id="processed-spectrum">
+<h3>Processed Spectrum<a class="headerlink" href="#processed-spectrum" title="Permalink to this headline">¶</a></h3>
+<p>Processed spectrum is the type of any image produced by the pipeline that represents
+the spectrum of one object. Its data content will be a 1D array.</p>
+<p>Processed Spectrum is represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">ProcessedSpectrum</span></code>.</p>
+</div>
+</div>
+<div class="section" id="calibrations">
+<h2>Calibrations<a class="headerlink" href="#calibrations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="master-bias-frames">
+<h3>Master Bias frames<a class="headerlink" href="#master-bias-frames" title="Permalink to this headline">¶</a></h3>
+<p>Bias frames are produced by the recipe <a class="reference internal" href="calibration/bias.html#megaradrp.recipes.calibration.bias.BiasRecipe" title="megaradrp.recipes.calibration.bias.BiasRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">BiasRecipe</span></code></a>. Each bias frame is a
+multiextension FITS file with the following extensions.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Extension name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>Contents</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code></p></td>
+<td><p>Primary</p></td>
+<td></td>
+<td><p>The bias level</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">VARIANCE</span></code></p></td>
+<td><p>Image</p></td>
+<td></td>
+<td><p>Variance of the bias level</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">MAP</span></code></p></td>
+<td><p>Image</p></td>
+<td></td>
+<td><p>Number of pixels used to compute the bias level</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Master bias frames are represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">MasterBias</span></code>.</p>
+</div>
+<div class="section" id="master-dark-frames">
+<h3>Master Dark frames<a class="headerlink" href="#master-dark-frames" title="Permalink to this headline">¶</a></h3>
+<p>Master dark frames are produced by the recipe <a class="reference internal" href="calibration/dark.html#megaradrp.recipes.calibration.dark.DarkRecipe" title="megaradrp.recipes.calibration.dark.DarkRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">DarkRecipe</span></code></a>. Each dark frame is a
+multiextension FITS file with the following extensions.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Extension name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>Contents</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code></p></td>
+<td><p>Primary</p></td>
+<td></td>
+<td><p>The dark level</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">VARIANCE</span></code></p></td>
+<td><p>Image</p></td>
+<td></td>
+<td><p>Variance of the dark level</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">MAP</span></code></p></td>
+<td><p>Image</p></td>
+<td></td>
+<td><p>Number of pixels used to compute the dark level</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Master dark frames are represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">MasterDark</span></code>.</p>
+</div>
+<div class="section" id="master-bad-pixel-mask">
+<h3>Master Bad Pixel Mask<a class="headerlink" href="#master-bad-pixel-mask" title="Permalink to this headline">¶</a></h3>
+<p>Master Bad Pixel Mask is produced by the recipe <a class="reference internal" href="calibration/bpm.html#megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe" title="megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">BadPixelsMaskRecipe</span></code></a>.
+Each bad pixel mask frame is a multiextension FITS file with the following extensions.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 13%" />
+<col style="width: 15%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Extension name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>Contents</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code></p></td>
+<td><p>Primary</p></td>
+<td></td>
+<td><p>The Bad Pixel Mask level</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Master bad pixel mask frames are represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">MasterBPM</span></code>.</p>
+</div>
+<div class="section" id="master-slit-flat">
+<h3>Master Slit Flat<a class="headerlink" href="#master-slit-flat" title="Permalink to this headline">¶</a></h3>
+<p>Master Slit Flat is produced by the recipe <a class="reference internal" href="calibration/slitflat.html#megaradrp.recipes.calibration.slitflat.SlitFlatRecipe" title="megaradrp.recipes.calibration.slitflat.SlitFlatRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">SlitFlatRecipe</span></code></a>.
+Each slit flat frame is a multiextension FITS file with the following extensions.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 16%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Extension name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Contents</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code></p></td>
+<td><p>Primary</p></td>
+<td><p>The Slit Flat level</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Masterslit flat frames are represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">MasterSlitFlat</span></code>.</p>
+</div>
+<div class="section" id="master-traces">
+<h3>Master Traces<a class="headerlink" href="#master-traces" title="Permalink to this headline">¶</a></h3>
+<p>Master Fiber Flat is produced by the recipe <a class="reference internal" href="calibration/trace.html#megaradrp.recipes.calibration.trace.TraceMapRecipe" title="megaradrp.recipes.calibration.trace.TraceMapRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">TraceMapRecipe</span></code></a>.
+The result is a <a class="reference external" href="http://www.json.org/">JSON</a> file where each one of the records belongs to a given fiber
+in the RSS file. Moreover, each one of the records has the next information:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 13%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Contents</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">boxid</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>Number of the box</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">fibid</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>Number of the fiber</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fitparms</span></code></p></td>
+<td><p>Primary</p></td>
+<td><p>Polyfit algorithm result</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">start</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>X-Coordenate in the Flat image</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">stop</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>X-Coordenate in the Flat image</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>In the following, a real example of the fourth fiber which is in the first box  can be seen in the yaml format:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">boxid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">fibid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+  <span class="nt">fitparms</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">2.6909627476636523e-18</span><span class="p p-Indicator">,</span> <span class="nv">-3.0949058966515047e-14</span><span class="p p-Indicator">,</span> <span class="nv">1.872326137294402e-10</span><span class="p p-Indicator">,</span><span class="nv">1.1602592442769502e-06</span><span class="p p-Indicator">,</span> <span class="nv">-0.0009443161994027746</span><span class="p p-Indicator">,</span> <span class="nv">262.01840282676613</span><span class="p p-Indicator">]</span>
+  <span class="nt">start</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+  <span class="nt">stop</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3594</span>
+</pre></div>
+</div>
+<p>Master Tracemap files are represented by <a class="reference internal" href="reference/products.html#megaradrp.products.tracemap.TraceMap" title="megaradrp.products.tracemap.TraceMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">TraceMap</span></code></a>.</p>
+</div>
+<div class="section" id="master-wavelength-calibration">
+<h3>Master Wavelength Calibration<a class="headerlink" href="#master-wavelength-calibration" title="Permalink to this headline">¶</a></h3>
+<p>Master wavelength calibration is produced by the recipe <a class="reference internal" href="calibration/arc.html#megaradrp.recipes.calibration.arc.ArcCalibrationRecipe" title="megaradrp.recipes.calibration.arc.ArcCalibrationRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">ArcCalibrationRecipe</span></code></a>.
+The result is a <a class="reference external" href="http://www.json.org/">JSON</a> file where each one of the records belongs to a given fiber
+in the RSS file. Moreover, each one of the records or <code class="docutils literal notranslate"><span class="pre">apertures</span></code> has the next fields:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 14%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Contents</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">features</span></code></p></td>
+<td><p>List</p></td>
+<td><p>List with the arc’s information</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">function</span></code></p></td>
+<td><p>Dictionary</p></td>
+<td><p>Number of pixels used to compute the dark level</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">id</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>Number the corresponding fiber</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Additionally, each one of the elements that belongs to the <code class="docutils literal notranslate"><span class="pre">features</span></code>
+corresponds to each one of the arc lines that has been found in the RSS image.
+The dictionary that each element has, contains the next information:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 11%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Contents</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">category</span></code></p></td>
+<td><p>String</p></td>
+<td><p>Type of the arc</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">flux</span></code></p></td>
+<td><p>Float</p></td>
+<td><p>Flux of the arc</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fwhm</span></code></p></td>
+<td><p>Float</p></td>
+<td><p>Full Width at Half Maximum of the arc</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">reference</span></code></p></td>
+<td><p>Float</p></td>
+<td><p>Line in the Catalog lines</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">wavelength</span></code></p></td>
+<td><p>Float</p></td>
+<td><p>Predicted line</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">xpos</span></code></p></td>
+<td><p>Float</p></td>
+<td><p>X-coordenate of the arc in the RSS image</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ypos</span></code></p></td>
+<td><p>Float</p></td>
+<td><p>Y-coordenate of the arc in the RSS image</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Finally, the <code class="docutils literal notranslate"><span class="pre">function</span></code> dictionary has three elements: <code class="docutils literal notranslate"><span class="pre">coefficients</span></code>,
+<code class="docutils literal notranslate"><span class="pre">method</span></code> and <code class="docutils literal notranslate"><span class="pre">order</span></code> fields. Coefficients has the result of executing
+the <code class="docutils literal notranslate"><span class="pre">polynomial.polyfit</span></code> numpy method. Method field has the name of the
+algorithm used. Order field has the polynomial degree.</p>
+<p>In the following, an example of the first fiber of a real JSON file with only
+two arc lines can be seen:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;aperture&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;flux&quot;</span><span class="p">:</span> <span class="mf">50212.563405324945</span><span class="p">,</span>
+        <span class="nt">&quot;fwhm&quot;</span><span class="p">:</span> <span class="mf">3.438967092459162</span><span class="p">,</span>
+        <span class="nt">&quot;reference&quot;</span><span class="p">:</span> <span class="mf">6013.2816999999995</span><span class="p">,</span>
+        <span class="nt">&quot;wavelength&quot;</span><span class="p">:</span> <span class="mf">6013.2847301957181</span><span class="p">,</span>
+        <span class="nt">&quot;xpos&quot;</span><span class="p">:</span> <span class="mf">33.267395825699928</span><span class="p">,</span>
+        <span class="nt">&quot;ypos&quot;</span><span class="p">:</span> <span class="mf">251.10097403866305</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;function&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;coefficients&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">6001.573165443434</span><span class="p">,</span><span class="mf">0.35298729563735487</span><span class="p">,</span><span class="mf">-2.898410563853586e-05</span><span class="p">,</span><span class="mf">1.858317850662985e-08</span><span class="p">,</span><span class="mf">-8.411429549924489e-12</span><span class="p">,</span><span class="mf">1.4341696725726076e-15</span><span class="p">],</span>
+      <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;least squares&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="mi">5</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+<p>Master Wavelength calibration file is represented by <a class="reference internal" href="reference/products.html#megaradrp.products.wavecalibration.WavelengthCalibration" title="megaradrp.products.wavecalibration.WavelengthCalibration"><code class="xref py py-class docutils literal notranslate"><span class="pre">WavelengthCalibration</span></code></a>.</p>
+</div>
+<div class="section" id="master-fiber-flat">
+<h3>Master Fiber Flat<a class="headerlink" href="#master-fiber-flat" title="Permalink to this headline">¶</a></h3>
+<p>Master Fiber Flat is produced by the recipe <a class="reference internal" href="calibration/fiberflat.html#megaradrp.recipes.calibration.flat.FiberFlatRecipe" title="megaradrp.recipes.calibration.flat.FiberFlatRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">FiberFlatRecipe</span></code></a>.
+Each master fiber flat frame is a multiextension FITS file with the following extensions.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 12%" />
+<col style="width: 13%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Extension name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>Contents</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code></p></td>
+<td><p>Primary</p></td>
+<td></td>
+<td><p>The Fiber Flat level</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">FIBERS</span></code></p></td>
+<td><p>Image</p></td>
+<td></td>
+<td><p>Description of the focal plane</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Master fiber flats frames are represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">MasterFiberFlat</span></code>.</p>
+</div>
+<div class="section" id="master-twilight-flat">
+<h3>Master Twilight Flat<a class="headerlink" href="#master-twilight-flat" title="Permalink to this headline">¶</a></h3>
+<p>Master Twilight Flat is produced by the recipe <a class="reference internal" href="calibration/twilight.html#megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe" title="megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">TwilightFiberFlatRecipe</span></code></a>.
+Each twilight flat frame is a multiextension FITS file with the following extensions.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 12%" />
+<col style="width: 13%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Extension name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>Contents</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code></p></td>
+<td><p>Primary</p></td>
+<td></td>
+<td><p>The Twilight Flat level</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">FIBERS</span></code></p></td>
+<td><p>Image</p></td>
+<td></td>
+<td><p>Description of the focal plane</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Master twilight flat frames are represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">MasterTwilightFlat</span></code>.</p>
+</div>
+<div class="section" id="master-sensitivity">
+<h3>Master Sensitivity<a class="headerlink" href="#master-sensitivity" title="Permalink to this headline">¶</a></h3>
+<p>Master sensitivity star image is produced by the recipe <code class="xref py py-class docutils literal notranslate"><span class="pre">Recipe</span></code>.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Extension name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>Contents</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code></p></td>
+<td><p>Primary</p></td>
+<td></td>
+<td><p>The Sensitivity Star Image level</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Master sensitivity star image is represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">MasterSensitivity</span></code>.</p>
+</div>
+<div class="section" id="master-extinction">
+<h3>Master Extinction<a class="headerlink" href="#master-extinction" title="Permalink to this headline">¶</a></h3>
+<p>Master extinction star image is produced by the recipe <code class="xref py py-class docutils literal notranslate"><span class="pre">Recipe</span></code>.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Extension name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Version</p></th>
+<th class="head"><p>Contents</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code></p></td>
+<td><p>Primary</p></td>
+<td></td>
+<td><p>The Extinction Star Image level</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Master extinction star image is represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">Extinction</span></code>.</p>
+</div>
+</div>
+<div class="section" id="reference-calibrations">
+<h2>Reference calibrations<a class="headerlink" href="#reference-calibrations" title="Permalink to this headline">¶</a></h2>
+<p>The following types represent types used for calibration, but that are not the
+result of any recipe. Examples of this type are the spectra of flux standars
+or the tables of spectral lines of calibration lamps.</p>
+<div class="section" id="reference-spectrum">
+<h3>Reference Spectrum<a class="headerlink" href="#reference-spectrum" title="Permalink to this headline">¶</a></h3>
+<p>A tabular representation of the spectral energy distribution of a standard star.
+The first column contains wavelength (in Angstroms) and the second column
+the flux in erg/s/cm^2/Angstrom</p>
+<p>Reference spectrum is represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">ReferenceSpectrum</span></code>.</p>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Data products</a><ul>
+<li><a class="reference internal" href="#generic-types">Generic types</a><ul>
+<li><a class="reference internal" href="#processed-frame">Processed Frame</a></li>
+<li><a class="reference internal" href="#processed-rss">Processed RSS</a></li>
+<li><a class="reference internal" href="#processed-spectrum">Processed Spectrum</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#calibrations">Calibrations</a><ul>
+<li><a class="reference internal" href="#master-bias-frames">Master Bias frames</a></li>
+<li><a class="reference internal" href="#master-dark-frames">Master Dark frames</a></li>
+<li><a class="reference internal" href="#master-bad-pixel-mask">Master Bad Pixel Mask</a></li>
+<li><a class="reference internal" href="#master-slit-flat">Master Slit Flat</a></li>
+<li><a class="reference internal" href="#master-traces">Master Traces</a></li>
+<li><a class="reference internal" href="#master-wavelength-calibration">Master Wavelength Calibration</a></li>
+<li><a class="reference internal" href="#master-fiber-flat">Master Fiber Flat</a></li>
+<li><a class="reference internal" href="#master-twilight-flat">Master Twilight Flat</a></li>
+<li><a class="reference internal" href="#master-sensitivity">Master Sensitivity</a></li>
+<li><a class="reference internal" href="#master-extinction">Master Extinction</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reference-calibrations">Reference calibrations</a><ul>
+<li><a class="reference internal" href="#reference-spectrum">Reference Spectrum</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="keywords.html"
+                        title="previous chapter">FITS Keywords</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="recipes.html"
+                        title="next chapter">Reduction Recipes</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/images.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="recipes.html" title="Reduction Recipes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="keywords.html" title="FITS Keywords"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="products.html" >Data Products</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Data products</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

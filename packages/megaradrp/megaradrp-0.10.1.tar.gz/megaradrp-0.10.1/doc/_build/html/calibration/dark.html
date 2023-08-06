@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Image &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Slit-flat" href="slitflat.html" />
+    <link rel="prev" title="Bias Image" href="bias.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="slitflat.html" title="Slit-flat"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="bias.html" title="Bias Image"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Calibration Modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Dark Image</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="dark-image">
+<h1>Dark Image<a class="headerlink" href="#dark-image" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>Dark</p>
+</dd>
+<dt class="field-even">Usage</dt>
+<dd class="field-even"><p>Offline, Online</p>
+</dd>
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>MegaraDarkImage</p>
+</dd>
+<dt class="field-even">Product</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MasterDark</span></code></p>
+</dd>
+<dt class="field-odd">Recipe</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#megaradrp.recipes.calibration.dark.DarkRecipe" title="megaradrp.recipes.calibration.dark.DarkRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">DarkRecipe</span></code></a></p>
+</dd>
+<dt class="field-even">Recipe input</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DarkRecipeInput</span></code></p>
+</dd>
+<dt class="field-odd">Recipe result</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DarkRecipeResult</span></code></p>
+</dd>
+</dl>
+<p>The potential wells in CCD detectors spontaneously generate electron-ion pairs
+at a rate that is a function of temperature. For very long exposures this
+translates into a current that is associated with no light source and that is
+commonly referred to as dark current.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>While in imaging or low-resolution spectroscopy this is nowadays a negligible
+effect thanks to the extremely low dark current levels of state-of-the-art CCDs
+(typically &lt; 1 e-/hour) when working at intermediate-to-high spectral
+resolutions where the emission per pixel coming from the sky background and the
+astronomical source can be very low this is worth considering.</p>
+<p>The sequence for this observing mode should include the actions to measure the
+variation of the intrinsic signal of the system by taking images under zero
+illumination condition and long integration time. This mode requires that the
+focal-plane cover is configured (it should be fully closed), the shutter is
+closed and to expose a certain time and readout the detector a series of
+exposures, being this series the dark image set.</p>
+</div>
+<div class="section" id="procedure">
+<h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
+<p>The “User” processes an observing block obtained in the observing mode Dark.
+This mode includes the required actions to obtain a master dark frame. The
+master dark generated is used in other stages of the data processing.</p>
+</div>
+<div class="section" id="products">
+<h2>Products<a class="headerlink" href="#products" title="Permalink to this headline">¶</a></h2>
+<p>Dark image sets are to be obtained both as part of the activities related to
+the verification of the instrument status and for processing data for
+scientific exploitation.</p>
+<p>A bidimensional dark image, QA flag, a text log file of the processing and a
+structured text file containing information about the processing.</p>
+</div>
+<div class="section" id="recipe-inputs-and-results">
+<h2>Recipe, inputs and results<a class="headerlink" href="#recipe-inputs-and-results" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.dark.DarkRecipe">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.calibration.dark.</code><code class="sig-name descname">DarkRecipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.dark.DarkRecipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process DARK images and provide MASTER_DARK.</p>
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.dark.DarkRecipe.DarkRecipeInput">
+<em class="property">class </em><code class="sig-name descname">DarkRecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.dark.DarkRecipe.DarkRecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>DarkRecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_bias</strong><span class="classifier">MasterBias, requirement</span></dt><dd><p>Master BIAS image</p>
+</dd>
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.dark.DarkRecipe.DarkRecipeResult">
+<em class="property">class </em><code class="sig-name descname">DarkRecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.dark.DarkRecipe.DarkRecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>DarkRecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_dark</strong><span class="classifier">MasterDark, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.dark.DarkRecipe.RecipeInput">
+<code class="sig-name descname">RecipeInput</code><a class="headerlink" href="#megaradrp.recipes.calibration.dark.DarkRecipe.RecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.DarkRecipeInput</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.dark.DarkRecipe.RecipeResult">
+<code class="sig-name descname">RecipeResult</code><a class="headerlink" href="#megaradrp.recipes.calibration.dark.DarkRecipe.RecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.DarkRecipeResult</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.recipes.calibration.dark.DarkRecipe.set_base_headers">
+<code class="sig-name descname">set_base_headers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">hdr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.dark.DarkRecipe.set_base_headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set metadata in FITS headers.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Dark Image</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#procedure">Procedure</a></li>
+<li><a class="reference internal" href="#products">Products</a></li>
+<li><a class="reference internal" href="#recipe-inputs-and-results">Recipe, inputs and results</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="bias.html"
+                        title="previous chapter">Bias Image</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="slitflat.html"
+                        title="next chapter">Slit-flat</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/calibration/dark.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="slitflat.html" title="Slit-flat"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="bias.html" title="Bias Image"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Calibration Modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Dark Image</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

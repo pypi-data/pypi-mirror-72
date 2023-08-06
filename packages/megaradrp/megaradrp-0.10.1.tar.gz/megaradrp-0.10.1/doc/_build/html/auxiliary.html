@@ -1,0 +1,947 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auxiliary Modes &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Scientific Modes" href="scientific.html" />
+    <link rel="prev" title="Standard star with the Fiber MOS" href="calibration/mosstd.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="scientific.html" title="Scientific Modes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="calibration/mosstd.html" title="Standard star with the Fiber MOS"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modes.html" accesskey="U">Observing modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Auxiliary Modes</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="auxiliary-modes">
+<h1>Auxiliary Modes<a class="headerlink" href="#auxiliary-modes" title="Permalink to this headline">¶</a></h1>
+<p>The auxiliary modes refer to those tasks that are carried out in preparation
+for other observing modes and that are needed to ensure the quality of the
+MEGARA observations. In general, these observing modes are not useful per se,
+neither for straight scientific exploitation nor even data-processing purposes.</p>
+<p>These Auxiliary modes are intended to (1) allow the observatory staff to
+prepare the instrument for its optimal exploitation or (2) to improve the
+performance of the telescope procedures in terms of the target acquisition and
+focus.</p>
+<p>With regard to the former, the following modes are defined:</p>
+<ul class="simple">
+<li><p>Telescope focus</p></li>
+<li><p>Spectrograph focus</p></li>
+</ul>
+<p>These observing modes might have to be run before any observing run (in case of
+visitor mode observations) and certainly after a long period of inactivity of
+the instrument. Below we provide a detailed description of each of these
+observing modes. Regarding the auxiliary observing modes defined to improve the
+default telescope procedures these are:</p>
+<ul class="simple">
+<li><p>(The two previous observing modes)</p></li>
+<li><p>Fine acquisition with the LCB IFU</p></li>
+<li><p>Fine acquisition with the Fiber MOS</p></li>
+</ul>
+<p>These latter three observing modes should be run before any observing run (in
+case of visitor mode observations) and after a long period of inactivity of the
+instrument; at least in the instrument mode to be used (LCB or MOS).</p>
+<div class="section" id="telescope-focus">
+<h2>Telescope focus<a class="headerlink" href="#telescope-focus" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>Telescope Focus</p>
+</dd>
+<dt class="field-even">Usage</dt>
+<dd class="field-even"><p>Online</p>
+</dd>
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>MegaraFocusTelescope</p>
+</dd>
+<dt class="field-even">Recipe</dt>
+<dd class="field-even"><p><a class="reference internal" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe" title="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">FocusTelescopeRecipe</span></code></a></p>
+</dd>
+<dt class="field-odd">Recipe input</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeInput" title="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FocusTelescopeRecipeInput</span></code></a></p>
+</dd>
+<dt class="field-even">Recipe result</dt>
+<dd class="field-even"><p><a class="reference internal" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeResult" title="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">FocusTelescopeRecipeResult</span></code></a></p>
+</dd>
+</dl>
+<p>This observing mode includes the required actions to focus GTC using MEGARA. A
+bright point source should be identified for this purpose. This mode is an
+alternative to obtain the best focus of the telescope using the A&amp;G system.
+Since this mode requires having precise information on the spatial distribution
+of the flux coming from a point source in a region a few arcsec in diameter the
+use of the LCB  IFU bundle.</p>
+<div class="section" id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
+<p>This mode requires the observation of a bright point source on the sky
+continuously while the observing mode is being run. Although photometric
+conditions are not needed the transparency should allow to properly measure the
+source FWHM on the sky in any exposure of the series. The FOV of the LCB IFU is
+large enough for these observations to be carried out with one of the sides of
+the focal-plane cover closed. However, as the default configuration of the
+instrument with the focal-plane cover in the open position the alignment will
+be more likely carried out with the cover in that position.</p>
+<p>This mode requires having the focal-plane cover configured (at least one of the
+sides should be open; the most likely configuration will be with the
+focal-plane cover fully open), the instrument
+shutter open, to configure the VPH mechanism to select the grating to be used,
+to set the instrument mode to LCB IFU, to move the focusing
+mechanism to the position pre-defined for the specific VPH of choice, to expose
+a certain time and to readout the detector in a series of exposures, being this
+series the telescope focus image set. A pause in between every exposure in the
+series should be introduced in order to give time for the M2 to adjust each new
+focus position in the series and for the M2 control system to inform about its
+new position, which should then re-start the observing sequence.</p>
+</div>
+<div class="section" id="products">
+<h3>Products<a class="headerlink" href="#products" title="Permalink to this headline">¶</a></h3>
+<p>The observatory staff should obtain the telescope focus image sets as part of
+standard preparatory observations (according to GRANTECAN this is usually done
+every night). Should the focus offset between the ASG and SFS arms (or an
+imaging instrument in other focus) and that of the MEGARA FC be stable
+overtime, the use of this mode would be limited to the early stages of
+characterization of the optimal telescope configuration for MEGARA, or after
+major changes in the instrument, or if any problem arises. The observatory
+staff should obtain the telescope focus image sets as part of standard
+preparatory observations obtained at twilight (although not necessarily every
+night) or when problems with the telescope focus model are suspected. Also,
+telescope focus should be revised periodically (e.g. monthly) to correct for
+potential temperature effects. In general, Auxiliary modes will be typically
+run once every observing run (e.g. the fine-acquisition ones) or, in the best
+(most relaxed) case, after a long period of inactivity.</p>
+</div>
+<div class="section" id="recipe-inputs-and-results">
+<h3>Recipe, inputs and results<a class="headerlink" href="#recipe-inputs-and-results" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.auxiliary.focustel.</code><code class="sig-name descname">FocusTelescopeRecipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process telescope focus images and find best focus.</p>
+<p>This recipe process a set of focus images obtained in
+<strong>Focus Telescope</strong> mode and returns an estimation
+of the telescope best focus.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe" title="megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe</span></code></a></dt><dd><p>recipe to measure the focus of the spectrograph</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>Images provided in <cite>obresult</cite> are grouped by the value of their
+FOCUST keyword. Groups of images are trimmed and corrected from overscan,
+bad pixel mask (if <cite>master_bpm</cite> is not None), bias and dark current
+(if <cite>master_dark</cite> is not None). Each group is then stacked using the median.</p>
+<p>The result of the combination is saved as an intermediate result, named
+‘focus2d-#focus.fits’, with #focus being the value of the focus
+of each group. Apertures are extracted in each combined image, and the
+resulting RSS file is saved as an intermediate result, named
+‘focus1-#focus.fits’.</p>
+<p>For each image, the FWHM of the object at <cite>position</cite> is computed.</p>
+<p>Then, the FWHM  is fitted to a 2nd degree polynomial, and the focus
+corresponding to its minimum is obtained and returned in <cite>focus_table</cite></p>
+<dl class="py class">
+<dt id="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeInput">
+<em class="property">class </em><code class="sig-name descname">FocusTelescopeRecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>FocusTelescopeRecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>diffuse_light_image</strong><span class="classifier">DiffuseLightCorrection, requirement, optional</span></dt><dd><p>Diffuse light correction image</p>
+</dd>
+<dt><strong>extraction_offset</strong><span class="classifier">ListOfType, requirement, optional, default=[0.0]</span></dt><dd><p>Offset traces for extraction</p>
+</dd>
+<dt><strong>ignored_sky_bundles</strong><span class="classifier">ListOfType, requirement, optional</span></dt><dd><p>Ignore these sky bundles</p>
+</dd>
+<dt><strong>master_apertures</strong><span class="classifier">MultiType, requirement</span></dt><dd><p>Apertures information for extraction</p>
+</dd>
+<dt><strong>master_bias</strong><span class="classifier">MasterBias, requirement</span></dt><dd><p>Master BIAS image</p>
+</dd>
+<dt><strong>master_bpm</strong><span class="classifier">MasterBPM, requirement, optional</span></dt><dd><p>Master Bad Pixel Mask</p>
+</dd>
+<dt><strong>master_dark</strong><span class="classifier">MasterDark, requirement, optional</span></dt><dd><p>Master DARK image</p>
+</dd>
+<dt><strong>master_fiberflat</strong><span class="classifier">MasterFiberFlat, requirement</span></dt><dd><p>Master fiber flat calibration</p>
+</dd>
+<dt><strong>master_sensitivity</strong><span class="classifier">MasterSensitivity, requirement, optional</span></dt><dd><p>Master sensitivity for flux calibration</p>
+</dd>
+<dt><strong>master_slitflat</strong><span class="classifier">MasterSlitFlat, requirement, optional</span></dt><dd><p>Master slit flat calibration</p>
+</dd>
+<dt><strong>master_twilight</strong><span class="classifier">MasterTwilightFlat, requirement, optional</span></dt><dd><p>Master twlight flat calibration</p>
+</dd>
+<dt><strong>master_wlcalib</strong><span class="classifier">WavelengthCalibration, requirement</span></dt><dd><p>Wavelength calibration table</p>
+</dd>
+<dt><strong>method</strong><span class="classifier">str, requirement, optional, default=median</span></dt><dd><p>Combination method</p>
+</dd>
+<dt><strong>method_kwargs</strong><span class="classifier">dict, requirement, optional</span></dt><dd><p>Arguments for combination method</p>
+</dd>
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+<dt><strong>position</strong><span class="classifier">list, requirement</span></dt><dd><p>Position of the reference object</p>
+</dd>
+<dt><strong>reference_extinction</strong><span class="classifier">ReferenceExtinctionTable, requirement, optional</span></dt><dd><p>Reference extinction</p>
+</dd>
+<dt><strong>relative_threshold</strong><span class="classifier">float, requirement, optional, default=0.3</span></dt><dd><p>Threshold for peak detection</p>
+</dd>
+<dt><strong>sky_rss</strong><span class="classifier">SkyRSS, requirement, optional</span></dt><dd><p>Row Stacked Spectra of the sky</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeInput.master_apertures">
+<code class="sig-name descname">master_apertures</code><a class="headerlink" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeInput.master_apertures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeInput.master_bpm">
+<code class="sig-name descname">master_bpm</code><a class="headerlink" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeInput.master_bpm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeInput.master_dark">
+<code class="sig-name descname">master_dark</code><a class="headerlink" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeInput.master_dark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeInput.master_wlcalib">
+<code class="sig-name descname">master_wlcalib</code><a class="headerlink" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeInput.master_wlcalib" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeResult">
+<em class="property">class </em><code class="sig-name descname">FocusTelescopeRecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.FocusTelescopeRecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>FocusTelescopeRecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>focus_table</strong><span class="classifier">float, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.RecipeInput">
+<code class="sig-name descname">RecipeInput</code><a class="headerlink" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.RecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.FocusTelescopeRecipeInput</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.RecipeResult">
+<code class="sig-name descname">RecipeResult</code><a class="headerlink" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.RecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.FocusTelescopeRecipeResult</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.reorder_and_fit">
+<code class="sig-name descname">reorder_and_fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">all_images</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.reorder_and_fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit all the values of FWHM to a 2nd degree polynomial and return minimum.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.run_on_image">
+<code class="sig-name descname">run_on_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">img</span></em>, <em class="sig-param"><span class="n">coors</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe.run_on_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract spectra, find peaks and compute FWHM.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="spectrograph-focus">
+<h2>Spectrograph focus<a class="headerlink" href="#spectrograph-focus" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>Spectrograph Focus</p>
+</dd>
+<dt class="field-even">Usage</dt>
+<dd class="field-even"><p>Online</p>
+</dd>
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>MegaraFocusSpectrograph</p>
+</dd>
+<dt class="field-even">Recipe</dt>
+<dd class="field-even"><p><a class="reference internal" href="#megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe" title="megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">FocusSpectrographRecipe</span></code></a></p>
+</dd>
+<dt class="field-odd">Recipe input</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeInput" title="megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">FocusSpectrographRecipeInput</span></code></a></p>
+</dd>
+<dt class="field-even">Recipe result</dt>
+<dd class="field-even"><p><a class="reference internal" href="#megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeResult" title="megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">FocusSpectrographRecipeResult</span></code></a></p>
+</dd>
+</dl>
+<p>This mode sequence includes the required actions to focus the MEGARA
+spectrograph. The arc lamps from the ICM will be used for this purpose. MEGARA
+includes a focusing mechanism at the position of the pseudo-slits. The best
+image quality for the spectrograph is achieved by using a different focus
+position for each disperser element (VPH). The focus position is independent of
+the instrument mode in use (TBC; see next paragraph).</p>
+<p>As said above, the two pseudo-slits (LCB and MOS) have to be at the same
+exact place at the spectrograph entrance to yield the same focus position. If
+this is not the case MEGARA can correct from this effect by focusing with a
+fixed offset for all the VPHs. This value has to be added to the nominal
+focusing position of a VPH with the pseudo-slit used as reference and shall be
+taken into account in the MEGARA Control System look-up table. Whether these
+should be one look-up table (i.e. a different focus compromise) for each
+focal-plane cover configuration is TBD.</p>
+<div class="section" id="id1">
+<h3>Requirements<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>This mode requires having the focal-plane cover configured (at least one of the
+sides should be open), the instrument shutter
+open, to configure the VPH mechanism to select the grating to be used, to set
+the instrument mode to use, to move the focusing mechanism to the pre-defined
+focus position for specific VPH of choice, to expose a certain time and to
+readout the detector in a series of exposures, being this series the
+spectrograph focus image-sets. The focusing mechanism should be able to change
+its position in between every two exposures in the series. A pause in between
+every exposure should be introduced in order to give time for the focusing
+mechanism to adjust to the new focus position in the series and for the MEGARA
+control system to inform about its new position, which should then re-start the
+observing sequence (see below). Whether the focus positions (or range) for each
+VPH are already pre-defined is TBD.</p>
+<p>As part of the on-line quick-look software all images in the series should be
+pre-processed and several spectra along the pseudo-slit should be extracted and
+analyzed. This analysis should include the computation of the FWHM of a few
+unresolved spectra lines at different wavelengths. This software should then
+decide based on the FWHM values computed at different wavelengths and positions
+along the pseudo-slit the best focus compromise. The best focus obtained for
+the VPH of choice should then be stored and used to determine the best foci for
+all spectral configurations (and instrument modes; TBC).</p>
+</div>
+<div class="section" id="procedure">
+<h3>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h3>
+<p>Spectrograph focus image sets through; at least, one of the MEGARA VPHs should
+be obtained at the beginning of every observing night by either the observer or
+the staff of the observatory (TBD). Once a VPH is checked, the rest of the
+values could be corrected relative to this one. It is expected that minor focus
+corrections should be done as the temperature changes. This could be modeled in
+further phases and checked at laboratory and/or at the telescope. The
+observatory staff should obtain an entire sequence of spectrograph focus image
+sets through all VPHs (and instrument modes; TBC) after major changes in the
+instrument, long periods of inactivity or when the relative-focus prescriptions
+(i.e. the spectrograph focus model) are suspected to be inaccurate.</p>
+<p>The focus difference (obtained by measuring a particular VPH) will provide the
+offset focus (due to temperature) and this value will be the same for all VPHs.
+The Control System will be prepared to update the look-up table with this
+offset focus value due to temperature.</p>
+</div>
+<div class="section" id="id2">
+<h3>Products<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>The best focus, the goodness of the fit of the best focus, a table with the
+FWHM of the spectral line corresponding to each focus, position along the slit
+and wavelength, the collapsed PSFs, QA flag, a text log file of the processing
+and a structured text file containing information about the processing.</p>
+</div>
+<div class="section" id="id3">
+<h3>Recipe, inputs and results<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.auxiliary.focusspec.</code><code class="sig-name descname">FocusSpectrographRecipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process spectrograph focus images and find best focus.</p>
+<p>This recipe process a set of focus images obtained in
+<strong>Focus Spectrograph</strong> mode and returns different
+measurements of the spectrograph focus along de detector.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe" title="megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.recipes.auxiliary.focustel.FocusTelescopeRecipe</span></code></a></dt><dd><p>recipe to measure the focus of the telescope</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>Images provided in <cite>obresult</cite> are grouped by the value of their
+FOCUS keyword. Groups of images are trimmed and corrected from overscan,
+bad pixel mask (if <cite>master_bpm</cite> is not None), bias and dark current
+(if <cite>master_dark</cite> is not None). Each group is then stacked using the median.</p>
+<p>The result of the combination is saved as an intermediate result, named
+‘focus2d-#focus.fits’, with #focus being the value of the focus
+of each group. Apertures are extracted in each combined image, and the
+resulting RSS file is saved as an intermediate result, named
+‘focus1-#focus.fits’.</p>
+<p>For each image, peaks are detected every <cite>nfibers</cite> fibers, and their
+position, peak flux and FWHM is computed. The image with median
+focus is taken as reference image, and the peaks of every other
+image are matched against it.</p>
+<p>Then, for each line matched in the series of images, its FWHM
+is fitted to a 2nd degree polynomial, and the focus corresponding
+to its minimum is obtained.</p>
+<p>The recipe returns:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt><cite>focus_table</cite>: a table with (x,y,best_focus) for each matched peak,</dt><dd><p>with x,y measured in the reference bidimensional image</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><cite>focus_wavelength</cite>: a structure containing measurements of every</dt><dd><p>matched peak in each image</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><cite>focus_image</cite>: a bidimensional image representing the spatial</dt><dd><p>variation of the best focus, using a Voronoi diagram.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<dl class="py class">
+<dt id="megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeInput">
+<em class="property">class </em><code class="sig-name descname">FocusSpectrographRecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>FocusSpectrographRecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>extraction_offset</strong><span class="classifier">ListOfType, requirement, optional, default=[0.0]</span></dt><dd><p>Offset traces for extraction</p>
+</dd>
+<dt><strong>master_apertures</strong><span class="classifier">MultiType, requirement</span></dt><dd><p>Apertures information for extraction</p>
+</dd>
+<dt><strong>master_bias</strong><span class="classifier">MasterBias, requirement</span></dt><dd><p>Master BIAS image</p>
+</dd>
+<dt><strong>master_bpm</strong><span class="classifier">MasterBPM, requirement, optional</span></dt><dd><p>Master Bad Pixel Mask</p>
+</dd>
+<dt><strong>master_dark</strong><span class="classifier">MasterDark, requirement, optional</span></dt><dd><p>Master DARK image</p>
+</dd>
+<dt><strong>master_wlcalib</strong><span class="classifier">WavelengthCalibration, requirement</span></dt><dd><p>Wavelength calibration table</p>
+</dd>
+<dt><strong>nfibers</strong><span class="classifier">int, requirement, optional, default=10</span></dt><dd><p>The results are sampled every nfibers</p>
+</dd>
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+<dt><strong>tsigma</strong><span class="classifier">int, requirement, optional, default=50</span></dt><dd><p>Scale factor for row threshold</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeInput.master_apertures">
+<code class="sig-name descname">master_apertures</code><a class="headerlink" href="#megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeInput.master_apertures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeInput.master_bpm">
+<code class="sig-name descname">master_bpm</code><a class="headerlink" href="#megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeInput.master_bpm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeInput.master_dark">
+<code class="sig-name descname">master_dark</code><a class="headerlink" href="#megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeInput.master_dark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeInput.master_wlcalib">
+<code class="sig-name descname">master_wlcalib</code><a class="headerlink" href="#megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeInput.master_wlcalib" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeResult">
+<em class="property">class </em><code class="sig-name descname">FocusSpectrographRecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.auxiliary.focusspec.FocusSpectrographRecipe.FocusSpectrographRecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>FocusSpectrographRecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>focus_image</strong><span class="classifier">ProcessedFrame, product</span></dt><dd></dd>
+<dt><strong>focus_table</strong><span class="classifier">ArrayType, product</span></dt><dd></dd>
+<dt><strong>focus_wavelength</strong><span class="classifier">FocusWavelength, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="fine-acquisition-with-the-lcb-ifu">
+<h2>Fine acquisition with the LCB IFU<a class="headerlink" href="#fine-acquisition-with-the-lcb-ifu" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>LCB Acquisition</p>
+</dd>
+<dt class="field-even">Usage</dt>
+<dd class="field-even"><p>Online</p>
+</dd>
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>MegaraLcbAcquisition</p>
+</dd>
+<dt class="field-even">Recipe</dt>
+<dd class="field-even"><p><a class="reference internal" href="#megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe" title="megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">AcquireLCBRecipe</span></code></a></p>
+</dd>
+<dt class="field-odd">Recipe input</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe.RecipeInput" title="megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe.RecipeInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">RecipeInput</span></code></a></p>
+</dd>
+<dt class="field-even">Recipe result</dt>
+<dd class="field-even"><p><a class="reference internal" href="#megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe.RecipeResult" title="megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe.RecipeResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">RecipeResult</span></code></a></p>
+</dd>
+</dl>
+<p>This mode sequence includes the required actions to acquire a target with known
+celestial coordinates and place it at a reference position inside the LCB IFU
+instrument mode. The reference position for each mode is defined as the center
+of the fibers (or its associated microlens) that is closest to the bundle
+footprint geometrical center. In the case of the LCB the reference position
+will depend on the focal-plane cover configuration. This mode is a refinement
+of acquisition performed by the telescope or A&amp;G systems.</p>
+<div class="section" id="id4">
+<h3>Requirements<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>This mode requires having the focal-plane cover configured, the instrument
+shutter open, to configure the VPH mechanism to select the grating to be used,
+to set the instrument mode to LCB, to move the focusing mechanism to the
+position pre-defined for the specific VPH of choice, and to expose a certain
+time and to readout the detector in a series of exposures, being this series
+the fine acquisition image set.</p>
+<p>As part of the MEGARA on-line quick-look software the image (or images)
+obtained as part of this observing mode should be processed and the spectra
+extracted so to determine the position of the centroid of the target in the
+corresponding field of view. A view of the field should be also produced in
+order to evaluate whether or not the angle of the Folded-Cass rotator matches
+that specified by the observer.</p>
+</div>
+<div class="section" id="id5">
+<h3>Products<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Fine acquisition image sets should be obtained at the beginning of the
+observing night by either the observer or the staff of the observatory (TBD) or
+every time a problem with the telescope absolute pointing is suspected. Such
+image sets should be also obtained when an absolute positioning precision of
+the order of a fraction of the spaxel size is required, better than 0.62 arcsec
+in this case for the LCB.</p>
+<p>The observatory staff should decide whether or not the corrections derived
+must be applied to the acquisition of other targets during the same observing
+night or exclusively to the target currently being observed.</p>
+</div>
+<div class="section" id="id6">
+<h3>Recipe, inputs and results<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.auxiliary.acquisitionlcb.</code><code class="sig-name descname">AcquireLCBRecipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process Acquisition LCB images.</p>
+<p>This recipe processes a set of acquisition images
+obtained in <strong>LCB Acquisition</strong> mode and returns
+the offset and rotation required to center the
+fiduciary object in its reference positions.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe" title="megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>Images provided by <cite>obresult</cite> are trimmed and corrected
+from overscan, bad pixel mask (if <cite>master_bpm</cite> is not None),
+bias, dark current (if <cite>master_dark</cite> is not None) and
+slit-flat (if <cite>master_slitflat</cite> is not None).</p>
+<p>Images thus corrected are the stacked using the median.
+The result of the combination is saved as an intermediate result, named
+‘reduced_image.fits’. This combined image is also returned in the field
+<cite>reduced_image</cite> of the recipe result.</p>
+<p>The apertures in the 2D image are extracted, using the information in
+<cite>master_apertures</cite> and resampled according to the wavelength calibration in
+<cite>master_wlcalib</cite>. Then is divided by the <cite>master_fiberflat</cite>.
+The resulting RSS is saved as an intermediate
+result named ‘reduced_rss.fits’. This RSS is also returned in the field
+<cite>reduced_rss</cite> of the recipe result.</p>
+<p>The sky is subtracted by combining the the fibers marked as <cite>SKY</cite>
+in the fibers configuration. The RSS with sky subtracted is returned ini the
+field <cite>final_rss</cite> of the recipe result.</p>
+<p>Then, the centroid of the fiduciary object nearest to the center of the field
+is computed. The offset needed to center
+the fiduciary object in the center of the LCB is returned.</p>
+<dl class="py class">
+<dt id="megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe.AcquireLCBRecipeInput">
+<em class="property">class </em><code class="sig-name descname">AcquireLCBRecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe.AcquireLCBRecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>AcquireLCBRecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>diffuse_light_image</strong><span class="classifier">DiffuseLightCorrection, requirement, optional</span></dt><dd><p>Diffuse light correction image</p>
+</dd>
+<dt><strong>extraction_offset</strong><span class="classifier">ListOfType, requirement, optional, default=[0.0]</span></dt><dd><p>Offset traces for extraction</p>
+</dd>
+<dt><strong>extraction_region</strong><span class="classifier">ListOfType, requirement, optional, default=[1000, 3000]</span></dt><dd><p>Region used to compute a mean flux</p>
+</dd>
+<dt><strong>ignored_sky_bundles</strong><span class="classifier">ListOfType, requirement, optional</span></dt><dd><p>Ignore these sky bundles</p>
+</dd>
+<dt><strong>master_apertures</strong><span class="classifier">MultiType, requirement</span></dt><dd><p>Apertures information for extraction</p>
+</dd>
+<dt><strong>master_bias</strong><span class="classifier">MasterBias, requirement</span></dt><dd><p>Master BIAS image</p>
+</dd>
+<dt><strong>master_bpm</strong><span class="classifier">MasterBPM, requirement, optional</span></dt><dd><p>Master Bad Pixel Mask</p>
+</dd>
+<dt><strong>master_dark</strong><span class="classifier">MasterDark, requirement, optional</span></dt><dd><p>Master DARK image</p>
+</dd>
+<dt><strong>master_fiberflat</strong><span class="classifier">MasterFiberFlat, requirement</span></dt><dd><p>Master fiber flat calibration</p>
+</dd>
+<dt><strong>master_sensitivity</strong><span class="classifier">MasterSensitivity, requirement, optional</span></dt><dd><p>Master sensitivity for flux calibration</p>
+</dd>
+<dt><strong>master_slitflat</strong><span class="classifier">MasterSlitFlat, requirement, optional</span></dt><dd><p>Master slit flat calibration</p>
+</dd>
+<dt><strong>master_twilight</strong><span class="classifier">MasterTwilightFlat, requirement, optional</span></dt><dd><p>Master twlight flat calibration</p>
+</dd>
+<dt><strong>master_wlcalib</strong><span class="classifier">WavelengthCalibration, requirement</span></dt><dd><p>Wavelength calibration table</p>
+</dd>
+<dt><strong>method</strong><span class="classifier">str, requirement, optional, default=median</span></dt><dd><p>Combination method</p>
+</dd>
+<dt><strong>method_kwargs</strong><span class="classifier">dict, requirement, optional</span></dt><dd><p>Arguments for combination method</p>
+</dd>
+<dt><strong>nrings</strong><span class="classifier">int, requirement, optional, default=3</span></dt><dd><p>Number of rings to extract the star</p>
+</dd>
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+<dt><strong>points</strong><span class="classifier">ListOfType, requirement, optional, default=[(0, 0)]</span></dt><dd><p>Coordinates</p>
+</dd>
+<dt><strong>reference_extinction</strong><span class="classifier">ReferenceExtinctionTable, requirement, optional</span></dt><dd><p>Reference extinction</p>
+</dd>
+<dt><strong>relative_threshold</strong><span class="classifier">float, requirement, optional, default=0.3</span></dt><dd><p>Threshold for peak detection</p>
+</dd>
+<dt><strong>sky_rss</strong><span class="classifier">SkyRSS, requirement, optional</span></dt><dd><p>Row Stacked Spectra of the sky</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe.AcquireLCBRecipeResult">
+<em class="property">class </em><code class="sig-name descname">AcquireLCBRecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe.AcquireLCBRecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>AcquireLCBRecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>final_rss</strong><span class="classifier">ProcessedRSS, product</span></dt><dd></dd>
+<dt><strong>offset</strong><span class="classifier">list, product</span></dt><dd></dd>
+<dt><strong>reduced_image</strong><span class="classifier">ProcessedImage, product</span></dt><dd></dd>
+<dt><strong>reduced_rss</strong><span class="classifier">ProcessedRSS, product</span></dt><dd></dd>
+<dt><strong>rotang</strong><span class="classifier">float, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe.RecipeInput">
+<code class="sig-name descname">RecipeInput</code><a class="headerlink" href="#megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe.RecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.AcquireLCBRecipeInput</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe.RecipeResult">
+<code class="sig-name descname">RecipeResult</code><a class="headerlink" href="#megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe.RecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.AcquireLCBRecipeResult</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="fine-acquisition-with-the-fiber-mos">
+<h2>Fine acquisition with the Fiber MOS<a class="headerlink" href="#fine-acquisition-with-the-fiber-mos" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>MOS Acquisition</p>
+</dd>
+<dt class="field-even">Usage</dt>
+<dd class="field-even"><p>Online</p>
+</dd>
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>MegaraLcbAcquisition</p>
+</dd>
+<dt class="field-even">Recipe</dt>
+<dd class="field-even"><p><a class="reference internal" href="#megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe" title="megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">AcquireMOSRecipe</span></code></a></p>
+</dd>
+<dt class="field-odd">Recipe input</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe.RecipeInput" title="megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe.RecipeInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">RecipeInput</span></code></a></p>
+</dd>
+<dt class="field-even">Recipe result</dt>
+<dd class="field-even"><p><a class="reference internal" href="#megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe.RecipeResult" title="megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe.RecipeResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">RecipeResult</span></code></a></p>
+</dd>
+</dl>
+<p>The sequence for this observing mode includes the required actions to acquire a
+list of targets with known celestial coordinates and place each target at the
+center of a different robotic positioner. The information on the assignment of
+targets and positioners is included in the form of a set of input catalogues
+generated off-line by the MEGARA Observing Preparation Software Suite (MOPSS).
+The reference position for each positioner is the center of the central fiber
+of the 7-fiber minibundle. This mode is a refinement of the acquisition
+performed by the telescope or A&amp;G systems.</p>
+<div class="section" id="id7">
+<h3>Requirements<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>This mode requires having the focal-plane cover configured, the instrument
+shutter open, to configure the VPH mechanism to select the grating to be used,
+to set the instrument mode to Fiber MOS, to move the focusing mechanism to the
+position pre-defined for the specific VPH of choice, to move all robotic
+positioners with a target associated in the input catalogues to the position of
+the corresponding target and to expose a certain time and to readout the
+detector in a series of exposures, being this series the Fiber-MOS fine
+acquisition image set.</p>
+<p>As part of the MEGARA on-line quick-look software, the image (or images)
+obtained should be processed and the spectra extracted so to determine the
+position of the centroid of a number of reference targets included in the
+corresponding field of view and identified as such in the set of input
+catalogues used for this observing mode. A minimum of three reference sources
+should be included in each Fiber MOS configuration block in order for this
+observing mode to generate a solution. The quick-look software should compare
+the expected and the actual positions of these reference sources in order to
+determine the best-fitting set of offsets (both in X and Y) and rotation angle
+to apply to the telescope and Folded-Cass rotator, respectively, to then
+continue with one of the scientific observing modes described in next Section.</p>
+</div>
+<div class="section" id="id8">
+<h3>Products<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Fine acquisition image sets should be obtained by the observer at the beginning
+of the observation of each field with the Fiber MOS. The observatory staff
+should decide whether or not the corrections derived (telescope offset and
+Folded-Cass rotator angle) must be applied to the acquisition of other fields
+with the Fiber MOS during the same observing night or exclusively to the target
+currently being observed.</p>
+</div>
+<div class="section" id="id9">
+<h3>Recipe, inputs and results<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.auxiliary.acquisitionmos.</code><code class="sig-name descname">AcquireMOSRecipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process Acquisition MOS images.</p>
+<p>This recipe processes a set of acquisition images
+obtained in <strong>MOS Acquisition</strong> mode and returns
+the offset and rotation required to center the
+fiducial objects in their reference positions.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe" title="megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.recipes.auxiliary.acquisitionlcb.AcquireLCBRecipe</span></code></a></dt><dd></dd>
+<dt><a class="reference external" href="https://numina.readthedocs.io/en/latest/reference/array.html#module-numina.array.offrot" title="(in Numina v0.22)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numina.array.offrot</span></code></a></dt><dd><p>Kabsch algorithm for offset and rotation</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>Images provided by <cite>obresult</cite> are trimmed and corrected
+from overscan, bad pixel mask (if <cite>master_bpm</cite> is not None),
+bias, dark current (if <cite>master_dark</cite> is not None) and
+slit-flat (if <cite>master_slitflat</cite> is not None).</p>
+<p>Images thus corrected are the stacked using the median.
+The result of the combination is saved as an intermediate result, named
+‘reduced_image.fits’. This combined image is also returned in the field
+<cite>reduced_image</cite> of the recipe result.</p>
+<p>The apertures in the 2D image are extracted, using the information in
+<cite>master_apertures</cite> and resampled according to the wavelength calibration in
+<cite>master_wlcalib</cite>. Then is divided by the <cite>master_fiberflat</cite>.
+The resulting RSS is saved as an intermediate
+result named ‘reduced_rss.fits’. This RSS is also returned in the field
+<cite>reduced_rss</cite> of the recipe result.</p>
+<p>The sky is subtracted by combining the the fibers marked as <cite>SKY</cite>
+in the fibers configuration. The RSS with sky subtracted is returned ini the
+field <cite>final_rss</cite> of the recipe result.</p>
+<p>Then, the centroid of each fiducial object, marked as <cite>REFERENCE</cite> in the fibers
+configuration, is computed. The offset and rotation needed to center
+each fiducial object in its bundle is computed and returned</p>
+<dl class="py class">
+<dt id="megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe.AcquireMOSRecipeInput">
+<em class="property">class </em><code class="sig-name descname">AcquireMOSRecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe.AcquireMOSRecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>AcquireMOSRecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>diffuse_light_image</strong><span class="classifier">DiffuseLightCorrection, requirement, optional</span></dt><dd><p>Diffuse light correction image</p>
+</dd>
+<dt><strong>extraction_offset</strong><span class="classifier">ListOfType, requirement, optional, default=[0.0]</span></dt><dd><p>Offset traces for extraction</p>
+</dd>
+<dt><strong>extraction_region</strong><span class="classifier">ListOfType, requirement, optional, default=[1000, 3000]</span></dt><dd><p>Region used to compute a mean flux</p>
+</dd>
+<dt><strong>ignored_sky_bundles</strong><span class="classifier">ListOfType, requirement, optional</span></dt><dd><p>Ignore these sky bundles</p>
+</dd>
+<dt><strong>master_apertures</strong><span class="classifier">MultiType, requirement</span></dt><dd><p>Apertures information for extraction</p>
+</dd>
+<dt><strong>master_bias</strong><span class="classifier">MasterBias, requirement</span></dt><dd><p>Master BIAS image</p>
+</dd>
+<dt><strong>master_bpm</strong><span class="classifier">MasterBPM, requirement, optional</span></dt><dd><p>Master Bad Pixel Mask</p>
+</dd>
+<dt><strong>master_dark</strong><span class="classifier">MasterDark, requirement, optional</span></dt><dd><p>Master DARK image</p>
+</dd>
+<dt><strong>master_fiberflat</strong><span class="classifier">MasterFiberFlat, requirement</span></dt><dd><p>Master fiber flat calibration</p>
+</dd>
+<dt><strong>master_sensitivity</strong><span class="classifier">MasterSensitivity, requirement, optional</span></dt><dd><p>Master sensitivity for flux calibration</p>
+</dd>
+<dt><strong>master_slitflat</strong><span class="classifier">MasterSlitFlat, requirement, optional</span></dt><dd><p>Master slit flat calibration</p>
+</dd>
+<dt><strong>master_twilight</strong><span class="classifier">MasterTwilightFlat, requirement, optional</span></dt><dd><p>Master twlight flat calibration</p>
+</dd>
+<dt><strong>master_wlcalib</strong><span class="classifier">WavelengthCalibration, requirement</span></dt><dd><p>Wavelength calibration table</p>
+</dd>
+<dt><strong>method</strong><span class="classifier">str, requirement, optional, default=median</span></dt><dd><p>Combination method</p>
+</dd>
+<dt><strong>method_kwargs</strong><span class="classifier">dict, requirement, optional</span></dt><dd><p>Arguments for combination method</p>
+</dd>
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+<dt><strong>reference_extinction</strong><span class="classifier">ReferenceExtinctionTable, requirement, optional</span></dt><dd><p>Reference extinction</p>
+</dd>
+<dt><strong>relative_threshold</strong><span class="classifier">float, requirement, optional, default=0.3</span></dt><dd><p>Threshold for peak detection</p>
+</dd>
+<dt><strong>sky_rss</strong><span class="classifier">SkyRSS, requirement, optional</span></dt><dd><p>Row Stacked Spectra of the sky</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe.AcquireMOSRecipeResult">
+<em class="property">class </em><code class="sig-name descname">AcquireMOSRecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe.AcquireMOSRecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>AcquireMOSRecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>final_rss</strong><span class="classifier">ProcessedRSS, product</span></dt><dd></dd>
+<dt><strong>offset</strong><span class="classifier">list, product</span></dt><dd></dd>
+<dt><strong>reduced_image</strong><span class="classifier">ProcessedFrame, product</span></dt><dd></dd>
+<dt><strong>reduced_rss</strong><span class="classifier">ProcessedRSS, product</span></dt><dd></dd>
+<dt><strong>rotang</strong><span class="classifier">float, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe.RecipeInput">
+<code class="sig-name descname">RecipeInput</code><a class="headerlink" href="#megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe.RecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.AcquireMOSRecipeInput</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe.RecipeResult">
+<code class="sig-name descname">RecipeResult</code><a class="headerlink" href="#megaradrp.recipes.auxiliary.acquisitionmos.AcquireMOSRecipe.RecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.AcquireMOSRecipeResult</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Auxiliary Modes</a><ul>
+<li><a class="reference internal" href="#telescope-focus">Telescope focus</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#products">Products</a></li>
+<li><a class="reference internal" href="#recipe-inputs-and-results">Recipe, inputs and results</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#spectrograph-focus">Spectrograph focus</a><ul>
+<li><a class="reference internal" href="#id1">Requirements</a></li>
+<li><a class="reference internal" href="#procedure">Procedure</a></li>
+<li><a class="reference internal" href="#id2">Products</a></li>
+<li><a class="reference internal" href="#id3">Recipe, inputs and results</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fine-acquisition-with-the-lcb-ifu">Fine acquisition with the LCB IFU</a><ul>
+<li><a class="reference internal" href="#id4">Requirements</a></li>
+<li><a class="reference internal" href="#id5">Products</a></li>
+<li><a class="reference internal" href="#id6">Recipe, inputs and results</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fine-acquisition-with-the-fiber-mos">Fine acquisition with the Fiber MOS</a><ul>
+<li><a class="reference internal" href="#id7">Requirements</a></li>
+<li><a class="reference internal" href="#id8">Products</a></li>
+<li><a class="reference internal" href="#id9">Recipe, inputs and results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="calibration/mosstd.html"
+                        title="previous chapter">Standard star with the Fiber MOS</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="scientific.html"
+                        title="next chapter">Scientific Modes</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/auxiliary.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="scientific.html" title="Scientific Modes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="calibration/mosstd.html" title="Standard star with the Fiber MOS"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modes.html" >Observing modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Auxiliary Modes</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

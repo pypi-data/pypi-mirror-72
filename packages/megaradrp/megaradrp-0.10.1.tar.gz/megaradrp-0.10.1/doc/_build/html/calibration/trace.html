@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trace &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Model Map" href="model.html" />
+    <link rel="prev" title="Slit-flat" href="slitflat.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="model.html" title="Model Map"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="slitflat.html" title="Slit-flat"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Calibration Modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Trace</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="trace">
+<h1>Trace<a class="headerlink" href="#trace" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>Trace</p>
+</dd>
+<dt class="field-even">Usage</dt>
+<dd class="field-even"><p>Offline, Online</p>
+</dd>
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>MegaraTraceMap</p>
+</dd>
+<dt class="field-even">Product</dt>
+<dd class="field-even"><p><a class="reference internal" href="../reference/products.html#megaradrp.products.tracemap.TraceMap" title="megaradrp.products.tracemap.TraceMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">TraceMap</span></code></a>.</p>
+</dd>
+<dt class="field-odd">Recipe</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#megaradrp.recipes.calibration.trace.TraceMapRecipe" title="megaradrp.recipes.calibration.trace.TraceMapRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">TraceMapRecipe</span></code></a></p>
+</dd>
+<dt class="field-even">Recipe input</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TraceMapRecipeInput</span></code></p>
+</dd>
+<dt class="field-odd">Recipe result</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TraceMapRecipeResult</span></code></p>
+</dd>
+</dl>
+<p>Although for the majority of the observing modes described elsewhere in this
+document the MEGARA off-line pipeline will perform its own fiber spectra
+extraction from the 2D CCD FITS frame, there are cases where an archival master
+“trace map” should be used instead. Note that a different “trace map” should be
+available for each pseudo-slit and VPH combination.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>This observing mode should include the actions needed to obtain a series of
+Fiber-flats that should be combined to generate a master “trace map”. This will
+be done by means of illuminating the instrument focal plane with a continuum
+(halogen) lamp that is part of the GTC Instrument Calibration Module (ICM). The
+use of the twilight sky is not recommended in this case as the twilight sky can
+present strong absorption lines that could lead to errors in the resulting
+trace map at specific wavelengths.</p>
+<p>This mode requires having the ICM turned on, one of the halogen lamps at the
+ICM also turned on, to configure the focal-plane cover (at least one of the
+sides should be open), to have the instrument shutter open, to move the
+pseudo-slit to that of the instrument mode of choice, to configure the VPH
+wheel mechanism in order to select the grating to be used, to move the focusing
+mechanism to the position pre-defined for the specific VPH of choice and to
+expose a certain time and to readout the detector a series of exposures, being
+this series the trace map image set.</p>
+</div>
+<div class="section" id="procedure">
+<h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
+<p>The “User” processes an observing block obtained in the observing mode Trace.
+This mode includes the required actions to obtain a mapping of the trace of the
+fibers. The master trace map generated is used in other stages of the data
+processing.</p>
+</div>
+<div class="section" id="products">
+<h2>Products<a class="headerlink" href="#products" title="Permalink to this headline">¶</a></h2>
+<p>Trace map image sets are to be obtained both as part of the activities related
+to the verification of the instrument status and for processing data for
+scientific exploitation. Note, however, that the use of this observing mode for
+scientific exploitation should be limited as it could affect to the general
+performance of the on-line quick-look software.</p>
+<p>This mode produces the tracing information required to extract the flux of the fibers.
+The result is stored in an object named  <code class="docutils literal notranslate"><span class="pre">master_traces</span></code>
+of type <a class="reference internal" href="../reference/products.html#megaradrp.products.tracemap.TraceMap" title="megaradrp.products.tracemap.TraceMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">TraceMap</span></code></a>.</p>
+<div class="section" id="recipe">
+<h3>Recipe<a class="headerlink" href="#recipe" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.trace.TraceMapRecipe">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.calibration.trace.</code><code class="sig-name descname">TraceMapRecipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.trace.TraceMapRecipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides tracing information from continuum flat images.</p>
+<p>This recipe process a set of continuum flat images obtained in
+<em>Trace Map</em> mode and returns the tracing information required
+to perform fiber extraction in other recipes. The recipe also
+returns the result of processing the input images upto dark correction.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="../reference/products.html#megaradrp.products.tracemap.TraceMap" title="megaradrp.products.tracemap.TraceMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.products.tracemap.TraceMap</span></code></a></dt><dd><p>description of TraceMap product</p>
+</dd>
+<dt><a class="reference internal" href="model.html#megaradrp.recipes.calibration.modelmap.ModelMapRecipe" title="megaradrp.recipes.calibration.modelmap.ModelMapRecipe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.recipes.calibration.modelmap.ModelMapRecipe</span></code></a></dt><dd><p>description of ModelMap recipe</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">numina.array.trace.traces</span></code></dt><dd><p>tracing algorithm</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.instrument.configs</span></code></dt><dd><p>instrument configuration</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>Images provided in <cite>obresult</cite> are trimmed and corrected from overscan,
+bad pixel mask (if <cite>master_bpm</cite> is not None), bias and dark current
+(if <cite>master_dark</cite> is not None).
+Images thus corrected are the stacked using the median.</p>
+<p>The result of the combination is saved as an intermediate result, named
+‘reduced_image.fits’. This combined image is also returned in the field
+<cite>reduced_image</cite> of the recipe result and will be used for
+tracing the position of the fibers.</p>
+<p>The fibers are grouped in packs of different numbers of fibers. To match
+the traces in the image with the corresponding fibers is neccessary
+to know how fibers are packed and where the different groups of fibers
+appear in the detector. This information is provided by the fields
+‘pseudoslit.boxes’ and ‘pseudoslit.boxes_positions’ of the instrument
+configuration.</p>
+<p>Using the column reference provided by ‘pseudoslit.boxes_positions’, peaks
+are detected (using an average of 7 columns) and matched to the layout
+of fibers provided by ‘pseudoslit.boxes_positions’. Fibers without a matching peak
+are counted and their ids stored in the final <cite>master_traces</cite> object.</p>
+<p>Once the peaks in the reference column are found, each one is traced
+until the border of the image is reached. The trace may be lost before
+reaching the border. In all cases, the beginning and the end of the trace
+are stored.</p>
+<p>The Y position of the trace is fitted to a polynomial
+of degree <cite>polynomial_degree</cite>. The coefficients of the polynomial are
+stored in the final <cite>master_traces</cite> object.</p>
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.trace.TraceMapRecipe.RecipeInput">
+<code class="sig-name descname">RecipeInput</code><a class="headerlink" href="#megaradrp.recipes.calibration.trace.TraceMapRecipe.RecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.TraceMapRecipeInput</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.trace.TraceMapRecipe.RecipeResult">
+<code class="sig-name descname">RecipeResult</code><a class="headerlink" href="#megaradrp.recipes.calibration.trace.TraceMapRecipe.RecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.TraceMapRecipeResult</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.trace.TraceMapRecipe.TraceMapRecipeInput">
+<em class="property">class </em><code class="sig-name descname">TraceMapRecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.trace.TraceMapRecipe.TraceMapRecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>TraceMapRecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>debug_plot</strong><span class="classifier">int, requirement, optional</span></dt><dd><p>Save intermediate tracing plots</p>
+</dd>
+<dt><strong>master_bias</strong><span class="classifier">MasterBias, requirement</span></dt><dd><p>Master BIAS image</p>
+</dd>
+<dt><strong>master_bpm</strong><span class="classifier">MasterBPM, requirement, optional</span></dt><dd><p>Master Bad Pixel Mask</p>
+</dd>
+<dt><strong>master_dark</strong><span class="classifier">MasterDark, requirement, optional</span></dt><dd><p>Master DARK image</p>
+</dd>
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+<dt><strong>polynomial_degree</strong><span class="classifier">int, requirement, optional, default=5</span></dt><dd><p>Polynomial degree of trace fitting</p>
+</dd>
+<dt><strong>relative_threshold</strong><span class="classifier">float, requirement, optional, default=0.3</span></dt><dd><p>Threshold for peak detection</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.trace.TraceMapRecipe.TraceMapRecipeInput.master_bpm">
+<code class="sig-name descname">master_bpm</code><a class="headerlink" href="#megaradrp.recipes.calibration.trace.TraceMapRecipe.TraceMapRecipeInput.master_bpm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.trace.TraceMapRecipe.TraceMapRecipeInput.master_dark">
+<code class="sig-name descname">master_dark</code><a class="headerlink" href="#megaradrp.recipes.calibration.trace.TraceMapRecipe.TraceMapRecipeInput.master_dark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.trace.TraceMapRecipe.TraceMapRecipeResult">
+<em class="property">class </em><code class="sig-name descname">TraceMapRecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.trace.TraceMapRecipe.TraceMapRecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>TraceMapRecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_traces</strong><span class="classifier">TraceMap, product</span></dt><dd></dd>
+<dt><strong>reduced_image</strong><span class="classifier">ProcessedImage, product</span></dt><dd></dd>
+<dt><strong>reduced_rss</strong><span class="classifier">ProcessedRSS, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.recipes.calibration.trace.TraceMapRecipe.refine_boxes_from_image">
+<code class="sig-name descname">refine_boxes_from_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">reduced</span></em>, <em class="sig-param"><span class="n">expected</span></em>, <em class="sig-param"><span class="n">cstart</span><span class="o">=</span><span class="default_value">2000</span></em>, <em class="sig-param"><span class="n">nsearch</span><span class="o">=</span><span class="default_value">20</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.trace.TraceMapRecipe.refine_boxes_from_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refine boxes using a filtered Fourier image</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.recipes.calibration.trace.TraceMapRecipe.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">rinput</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.trace.TraceMapRecipe.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the recipe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>rinput</strong><span class="classifier">TraceMapRecipe.RecipeInput</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>TraceMapRecipe.RecipeResult</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>ValidationError</dt><dd><p>if the recipe input is invalid</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.recipes.calibration.trace.TraceMapRecipe.run_qc">
+<code class="sig-name descname">run_qc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">recipe_input</span></em>, <em class="sig-param"><span class="n">recipe_result</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.trace.TraceMapRecipe.run_qc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run quality control checks</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Trace</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#procedure">Procedure</a></li>
+<li><a class="reference internal" href="#products">Products</a><ul>
+<li><a class="reference internal" href="#recipe">Recipe</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="slitflat.html"
+                        title="previous chapter">Slit-flat</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="model.html"
+                        title="next chapter">Model Map</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/calibration/trace.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="model.html" title="Model Map"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="slitflat.html" title="Slit-flat"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Calibration Modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Trace</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

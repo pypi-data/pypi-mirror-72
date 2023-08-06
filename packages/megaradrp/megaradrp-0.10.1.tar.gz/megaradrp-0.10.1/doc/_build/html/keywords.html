@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITS Keywords &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data products" href="images.html" />
+    <link rel="prev" title="Data Products" href="products.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="images.html" title="Data products"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="products.html" title="Data Products"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="products.html" accesskey="U">Data Products</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FITS Keywords</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="fits-keywords">
+<h1>FITS Keywords<a class="headerlink" href="#fits-keywords" title="Permalink to this headline">¶</a></h1>
+<p>The FITS keywords used by MEGARA are described in full detail
+elsewhere (document TEC/MEG/146).</p>
+<p>In the following sections, we describe the keywords that are used by the pipeline.</p>
+<div class="section" id="primary-header">
+<h2>Primary header<a class="headerlink" href="#primary-header" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 10%" />
+<col style="width: 30%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Keyword</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>SIMPLE</p></td>
+<td><p>T</p></td>
+<td><p>Standard FITS format</p></td>
+</tr>
+<tr class="row-odd"><td><p>I</p></td>
+<td><p>BITPIX</p></td>
+<td><p>16</p></td>
+<td><p>One of -64,-32,8,16,32</p></td>
+</tr>
+<tr class="row-even"><td><p>I</p></td>
+<td><p>NAXIS</p></td>
+<td><p>2</p></td>
+<td><p># of axes in frame</p></td>
+</tr>
+<tr class="row-odd"><td><p>I</p></td>
+<td><p>NAXIS1</p></td>
+<td><p>2048</p></td>
+<td><p># of pixels per row</p></td>
+</tr>
+<tr class="row-even"><td><p>I</p></td>
+<td><p>NAXIS2</p></td>
+<td><p>2048</p></td>
+<td><p># of rows</p></td>
+</tr>
+<tr class="row-odd"><td><p>S</p></td>
+<td><p>ORIGIN</p></td>
+<td><p>‘GTC’</p></td>
+<td><p>FITS originator</p></td>
+</tr>
+<tr class="row-even"><td><p>S</p></td>
+<td><p>OBSERVAT</p></td>
+<td><p>‘ORM’</p></td>
+<td><p>Observatory</p></td>
+</tr>
+<tr class="row-odd"><td><p>S</p></td>
+<td><p>TELESCOP</p></td>
+<td><p>‘GTC’</p></td>
+<td><p>The telescope</p></td>
+</tr>
+<tr class="row-even"><td><p>S</p></td>
+<td><p>INSTRUME</p></td>
+<td><p>‘MEGARA’</p></td>
+<td><p>The instrument</p></td>
+</tr>
+<tr class="row-odd"><td><p>S</p></td>
+<td><p>OBJECT</p></td>
+<td><p>‘NGC 4594’</p></td>
+<td><p>Target designation</p></td>
+</tr>
+<tr class="row-even"><td><p>S</p></td>
+<td><p>OBSERVER</p></td>
+<td><p>‘OBSERVER’</p></td>
+<td><p>Who adquired the data</p></td>
+</tr>
+<tr class="row-odd"><td><p>S</p></td>
+<td><p>DATE-OBS</p></td>
+<td><p>‘2012-09-20T12:00:11.50’</p></td>
+<td><p>Date of the start of the observation</p></td>
+</tr>
+<tr class="row-even"><td><p>S</p></td>
+<td><p>DATE</p></td>
+<td><p>‘2012-09-20T12:14:12.78’</p></td>
+<td><p>Date the file was written</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="required-by-the-pipeline">
+<h2>Required by the pipeline<a class="headerlink" href="#required-by-the-pipeline" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 10%" />
+<col style="width: 30%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Keyword</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>R</p></td>
+<td><p>AIRMASS</p></td>
+<td><p>1.1908</p></td>
+<td><p>Mean airmass of the observation</p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>MJD-OBS</p></td>
+<td><p>72343.34324</p></td>
+<td><p>Modified JD of the start of the observation</p></td>
+</tr>
+<tr class="row-even"><td><p>S</p></td>
+<td><p>IMAGETYP</p></td>
+<td><p>‘FLAT’</p></td>
+<td><p>Type of the image</p></td>
+</tr>
+<tr class="row-odd"><td><p>S</p></td>
+<td><p>VPH</p></td>
+<td><p>‘LR-R’</p></td>
+<td><p>Type of VPH</p></td>
+</tr>
+<tr class="row-even"><td><p>S</p></td>
+<td><p>OBSTYPE</p></td>
+<td><p>‘SLITFLAT’</p></td>
+<td><p>Type of observation</p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>EXPOSED</p></td>
+<td></td>
+<td><p>Exposure time in seconds</p></td>
+</tr>
+<tr class="row-even"><td><p>R</p></td>
+<td><p>EXPTIME</p></td>
+<td></td>
+<td><p>Exposure time in seconds (synonim)</p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>DARKTIME</p></td>
+<td></td>
+<td><p>TBD</p></td>
+</tr>
+<tr class="row-even"><td><p>S</p></td>
+<td><p>OBSMODE</p></td>
+<td><p>‘SLITFLAT</p></td>
+<td><p>Identifier of the observing mode</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fibers-extension">
+<h2>FIBERS extension<a class="headerlink" href="#fibers-extension" title="Permalink to this headline">¶</a></h2>
+<p>The state of the focal plane of MEGARA is stored in a dedicated extension names <cite>FIBERS</cite>.
+This extension contains only headers, the data part will be empty.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 9%" />
+<col style="width: 27%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Keyword</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>I</p></td>
+<td><p>NFIBERS</p></td>
+<td><p>643</p></td>
+<td><p>Number of fibers</p></td>
+</tr>
+<tr class="row-odd"><td><p>I</p></td>
+<td><p>NSPAXEL</p></td>
+<td><p>644</p></td>
+<td><p>Number of spaxels</p></td>
+</tr>
+<tr class="row-even"><td><p>I</p></td>
+<td><p>NBUNDLES</p></td>
+<td><p>92</p></td>
+<td><p>Number of fiber bundles</p></td>
+</tr>
+<tr class="row-odd"><td><p>S</p></td>
+<td><p>INSMODE</p></td>
+<td><p>LCB</p></td>
+<td><p>Name of active pseudo slit</p></td>
+</tr>
+<tr class="row-even"><td><p>S</p></td>
+<td><p>CONFID</p></td>
+<td><p>‘b7d35e7df0274fde..’</p></td>
+<td><p>Unique identificator of the configuration</p></td>
+</tr>
+<tr class="row-odd"><td><p>I</p></td>
+<td><p>BUNnnn_P</p></td>
+<td><p>0</p></td>
+<td><p>Priority of the target in this bundle</p></td>
+</tr>
+<tr class="row-even"><td><p>S</p></td>
+<td><p>BUNnnn_I</p></td>
+<td><p>‘unknown ‘</p></td>
+<td><p>Name of the target</p></td>
+</tr>
+<tr class="row-odd"><td><p>S</p></td>
+<td><p>BUNnnn_T</p></td>
+<td><p>‘UNASSIGNED’</p></td>
+<td><p>Type of target (‘STAR’, ‘SKY’, ‘TARGET’, ‘UNASSIGNED’</p></td>
+</tr>
+<tr class="row-even"><td><p>I</p></td>
+<td><p>FIBmmm_B</p></td>
+<td><p>nnn</p></td>
+<td><p>ID of the bundle</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>FIBmmm_D</p></td>
+<td><p>+3.34565</p></td>
+<td><p>Declination of the spaxel</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>FIBmmm_R</p></td>
+<td><p>12.342223</p></td>
+<td><p>Right Ascension of the spaxel</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>FIBmmm_O</p></td>
+<td><p>0.0</p></td>
+<td><p>Position Angle of the Fiber</p></td>
+</tr>
+<tr class="row-even"><td><p>L</p></td>
+<td><p>FIBmmm_A</p></td>
+<td><p>T</p></td>
+<td><p>Is fiber active?</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>FIBmmm_X</p></td>
+<td><p>-0.4646226291303512</p></td>
+<td><p>X position of the fiber in the focal plane</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>FIBmmm_Y</p></td>
+<td><p>63.63025</p></td>
+<td><p>Y position of the fiber in the focal plane</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">FITS Keywords</a><ul>
+<li><a class="reference internal" href="#primary-header">Primary header</a></li>
+<li><a class="reference internal" href="#required-by-the-pipeline">Required by the pipeline</a></li>
+<li><a class="reference internal" href="#fibers-extension">FIBERS extension</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="products.html"
+                        title="previous chapter">Data Products</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="images.html"
+                        title="next chapter">Data products</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/keywords.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="images.html" title="Data products"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="products.html" title="Data Products"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="products.html" >Data Products</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FITS Keywords</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

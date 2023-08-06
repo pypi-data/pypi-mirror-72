@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twilight fiber-flat &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bad-pixels mask" href="bpm.html" />
+    <link rel="prev" title="Fiber-flat" href="fiberflat.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="bpm.html" title="Bad-pixels mask"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="fiberflat.html" title="Fiber-flat"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Calibration Modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Twilight fiber-flat</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="twilight-fiber-flat">
+<h1>Twilight fiber-flat<a class="headerlink" href="#twilight-fiber-flat" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>Twilight fiber-flat</p>
+</dd>
+<dt class="field-even">Usage</dt>
+<dd class="field-even"><p>Offline, Online</p>
+</dd>
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>MegaraTwilightFlatImage</p>
+</dd>
+<dt class="field-even">Product</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MasterTwilightFlat</span></code></p>
+</dd>
+<dt class="field-odd">Recipe</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe" title="megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">TwilightFiberFlatRecipe</span></code></a></p>
+</dd>
+<dt class="field-even">Recipe input</dt>
+<dd class="field-even"><p><a class="reference internal" href="#megaradrp.recipes.calibration.twilight.RecipeInput" title="megaradrp.recipes.calibration.twilight.RecipeInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">megaradrp.recipes.calibration.twilight.RecipeInput</span></code></a></p>
+</dd>
+<dt class="field-odd">Recipe result</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#megaradrp.recipes.calibration.twilight.RecipeResult" title="megaradrp.recipes.calibration.twilight.RecipeResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">megaradrp.recipes.calibration.twilight.RecipeResult</span></code></a></p>
+</dd>
+</dl>
+<p>Depending on the final performance of the ICM (provided by the GTC) at F-C the
+twilight fiber-flat mode (proposed in this section) might be offered as
+optional to the observer or a must should a proper data reduction be required.
+In any case this must be always available as an observing mode.</p>
+<p>The twilight fiber-flat observing mode should include the actions required to
+calibrate the low-frequency sensitivity variation in the spatial direction of
+the detector. In principle, the lamp fiber-flat should suffice to correct the
+change in sensitivity along both the spatial (fiber-to-fiber relative
+transmission) and the spectral direction of the system. The latter only
+combined with flux standard-star observations since the spectral shape of the
+ICM lamps is not known with enough accuracy.</p>
+<p>The twilight fiber-flat is based on the observation of the blank twilight sky.
+This can safely assume to homogeneously illuminate the entire MEGARA field of
+view (3.5 arcmin x 3.5 arcmin).</p>
+<div class="section" id="requeriments">
+<h2>Requeriments<a class="headerlink" href="#requeriments" title="Permalink to this headline">¶</a></h2>
+<p>The focal plane should be uniformly illuminated with twilight-sky light. As the
+illumination conditions change during twilight, each image set has a different
+exposure time. The purpose is to obtain a similar (linear) level of DUs at the
+detector (counts) under different illumination conditions.</p>
+<p>This mode requires having the focal-plane cover configured (at least one of the
+sides should be open), the instrument shutter open, the telescope tracking, to
+move the pseudo-slit to that of the instrument mode of choice, to configure the
+VPH wheel mechanism in order to select the grating to be used, to move the
+focusing mechanism to the position pre-defined for the specific VPH of choice
+and to take a series of exposures with different exposure times and to readout
+the detector for this series of exposures, being these series the twilight
+image set, each with a different exposure time, but with similar level of
+counts.</p>
+</div>
+<div class="section" id="procedure">
+<h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
+<p>The “User” processes an observing block obtained in the observing mode Twilight
+Fiber Flat. This mode includes the required actions to obtain a master
+illumination flat field. The master illumination flat field generated is used
+in other stages of the data processing.</p>
+</div>
+<div class="section" id="products">
+<h2>Products<a class="headerlink" href="#products" title="Permalink to this headline">¶</a></h2>
+<p>Twilight-sky fiber-flat image sets are expected to be obtained as part of the
+routine calibration activities performed by the observer since are needed for
+processing any scientific-valid data. Therefore, this observing mode should be
+considered as part of the “Daily Calibration Modes”.</p>
+<p>A RSS master illumination flat field, QA flag, a text log file of the
+processing and a structured text file containing information about the
+processing.</p>
+</div>
+<div class="section" id="recipe-inputs-and-results">
+<h2>Recipe, inputs and results<a class="headerlink" href="#recipe-inputs-and-results" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.twilight.RecipeInput">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.calibration.twilight.</code><code class="sig-name descname">RecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.twilight.RecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>RecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>continuum_region</strong><span class="classifier">ListOfType, requirement, optional, default=[1900, 1900]</span></dt><dd><p>Subtract this region before normalize the flat-field</p>
+</dd>
+<dt><strong>extraction_offset</strong><span class="classifier">ListOfType, requirement, optional, default=[0.0]</span></dt><dd><p>Offset traces for extraction</p>
+</dd>
+<dt><strong>master_apertures</strong><span class="classifier">MultiType, requirement</span></dt><dd><p>Apertures information for extraction</p>
+</dd>
+<dt><strong>master_bias</strong><span class="classifier">MasterBias, requirement</span></dt><dd><p>Master BIAS image</p>
+</dd>
+<dt><strong>master_bpm</strong><span class="classifier">MasterBPM, requirement, optional</span></dt><dd><p>Master Bad Pixel Mask</p>
+</dd>
+<dt><strong>master_dark</strong><span class="classifier">MasterDark, requirement, optional</span></dt><dd><p>Master DARK image</p>
+</dd>
+<dt><strong>master_fiberflat</strong><span class="classifier">MasterFiberFlat, requirement</span></dt><dd><p>Master fiber flat calibration</p>
+</dd>
+<dt><strong>master_slitflat</strong><span class="classifier">MasterSlitFlat, requirement, optional</span></dt><dd><p>Master slit flat calibration</p>
+</dd>
+<dt><strong>master_wlcalib</strong><span class="classifier">WavelengthCalibration, requirement</span></dt><dd><p>Wavelength calibration table</p>
+</dd>
+<dt><strong>normalize_region</strong><span class="classifier">ListOfType, requirement, optional, default=[1900, 2100]</span></dt><dd><p>Region used to normalize the flat-field</p>
+</dd>
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.twilight.RecipeResult">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.calibration.twilight.</code><code class="sig-name descname">RecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.twilight.RecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>RecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_twilightflat</strong><span class="classifier">MasterTwilightFlat, product</span></dt><dd></dd>
+<dt><strong>reduced_image</strong><span class="classifier">ProcessedFrame, product</span></dt><dd></dd>
+<dt><strong>reduced_rss</strong><span class="classifier">ProcessedRSS, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.calibration.twilight.</code><code class="sig-name descname">TwilightFiberFlatRecipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process TWILIGHT_FLAT images and create MASTER_TWILIGHT_FLAT product.</p>
+<p>This recipe process a set of continuum flat images obtained in
+<strong>Twilight Fiber Flat</strong> mode and returns the master twilight flat product
+The recipe also returns the result of processing the input images up to
+slitflat correction. and the result RSS of the processing
+up to wavelength calibration.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.types.MasterTwilightFlat</span></code></dt><dd><p>description of MasterTwilightFlat product</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>Images provided in <cite>obresult</cite> are trimmed and corrected from overscan,
+bad pixel mask (if <cite>master_bpm</cite> is not None), bias and dark current
+(if <cite>master_dark</cite> is not None) and corrected from pixel-to-pixel flat
+if <cite>master_slitflat</cite> is not None.
+Images thus corrected are the stacked using the median.</p>
+<p>The result of the combination is saved as an intermediate result, named
+‘reduced_image.fits’. This combined image is also returned in the field
+<cite>reduced_image</cite> of the recipe result.</p>
+<p>The apertures in the 2D image are extracted, using the information in
+<cite>master_apertures</cite> and resampled according to the wavelength calibration in
+<cite>master_wlcalib</cite>. Then is divided by the <cite>master_fiberflat</cite>.
+The resulting RSS is saved as an intermediate
+result named ‘reduced_rss.fits’. This RSS is also returned in the field
+<cite>reduced_rss</cite> of the recipe result.</p>
+<p>To normalize the <cite>master_twilight_flat</cite>, each fiber is divided by the average
+of the column range given in <cite>normalize_region</cite>. This RSS
+image is returned in the field <cite>master_twilightflat</cite> of the recipe result.</p>
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.MegaraBaseRecipeInput">
+<em class="property">class </em><code class="sig-name descname">MegaraBaseRecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.MegaraBaseRecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>MegaraBaseRecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeInput">
+<em class="property">class </em><code class="sig-name descname">RecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>RecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>continuum_region</strong><span class="classifier">ListOfType, requirement, optional, default=[1900, 1900]</span></dt><dd><p>Subtract this region before normalize the flat-field</p>
+</dd>
+<dt><strong>extraction_offset</strong><span class="classifier">ListOfType, requirement, optional, default=[0.0]</span></dt><dd><p>Offset traces for extraction</p>
+</dd>
+<dt><strong>master_apertures</strong><span class="classifier">MultiType, requirement</span></dt><dd><p>Apertures information for extraction</p>
+</dd>
+<dt><strong>master_bias</strong><span class="classifier">MasterBias, requirement</span></dt><dd><p>Master BIAS image</p>
+</dd>
+<dt><strong>master_bpm</strong><span class="classifier">MasterBPM, requirement, optional</span></dt><dd><p>Master Bad Pixel Mask</p>
+</dd>
+<dt><strong>master_dark</strong><span class="classifier">MasterDark, requirement, optional</span></dt><dd><p>Master DARK image</p>
+</dd>
+<dt><strong>master_fiberflat</strong><span class="classifier">MasterFiberFlat, requirement</span></dt><dd><p>Master fiber flat calibration</p>
+</dd>
+<dt><strong>master_slitflat</strong><span class="classifier">MasterSlitFlat, requirement, optional</span></dt><dd><p>Master slit flat calibration</p>
+</dd>
+<dt><strong>master_wlcalib</strong><span class="classifier">WavelengthCalibration, requirement</span></dt><dd><p>Wavelength calibration table</p>
+</dd>
+<dt><strong>normalize_region</strong><span class="classifier">ListOfType, requirement, optional, default=[1900, 2100]</span></dt><dd><p>Region used to normalize the flat-field</p>
+</dd>
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeInput.master_apertures">
+<code class="sig-name descname">master_apertures</code><a class="headerlink" href="#megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeInput.master_apertures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeInput.master_bpm">
+<code class="sig-name descname">master_bpm</code><a class="headerlink" href="#megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeInput.master_bpm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeInput.master_dark">
+<code class="sig-name descname">master_dark</code><a class="headerlink" href="#megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeInput.master_dark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeInput.master_fiberflat">
+<code class="sig-name descname">master_fiberflat</code><a class="headerlink" href="#megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeInput.master_fiberflat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeInput.master_slitflat">
+<code class="sig-name descname">master_slitflat</code><a class="headerlink" href="#megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeInput.master_slitflat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeInput.master_wlcalib">
+<code class="sig-name descname">master_wlcalib</code><a class="headerlink" href="#megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeInput.master_wlcalib" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeResult">
+<em class="property">class </em><code class="sig-name descname">RecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.RecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>RecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_twilightflat</strong><span class="classifier">MasterTwilightFlat, product</span></dt><dd></dd>
+<dt><strong>reduced_image</strong><span class="classifier">ProcessedFrame, product</span></dt><dd></dd>
+<dt><strong>reduced_rss</strong><span class="classifier">ProcessedRSS, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.set_base_headers">
+<code class="sig-name descname">set_base_headers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">hdr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.twilight.TwilightFiberFlatRecipe.set_base_headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set metadata in FITS headers.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Twilight fiber-flat</a><ul>
+<li><a class="reference internal" href="#requeriments">Requeriments</a></li>
+<li><a class="reference internal" href="#procedure">Procedure</a></li>
+<li><a class="reference internal" href="#products">Products</a></li>
+<li><a class="reference internal" href="#recipe-inputs-and-results">Recipe, inputs and results</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="fiberflat.html"
+                        title="previous chapter">Fiber-flat</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="bpm.html"
+                        title="next chapter">Bad-pixels mask</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/calibration/twilight.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="bpm.html" title="Bad-pixels mask"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="fiberflat.html" title="Fiber-flat"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Calibration Modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Twilight fiber-flat</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

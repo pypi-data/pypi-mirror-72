@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calibration Modes &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bias Image" href="bias.html" />
+    <link rel="prev" title="Observing modes" href="../modes.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="bias.html" title="Bias Image"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../modes.html" title="Observing modes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" accesskey="U">Observing modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Calibration Modes</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="calibration-modes">
+<h1>Calibration Modes<a class="headerlink" href="#calibration-modes" title="Permalink to this headline">¶</a></h1>
+<p>The calibration modes are those operating modes that are intended (1) to either
+analyze the state of the instrument or (2) to be used for processing scientific
+observations from raw to science-grade data.</p>
+<p>With respect to the determination of the status of the instrument the following
+calibration images should be acquired:</p>
+<ul class="simple">
+<li><p>Bias</p></li>
+<li><p>Dark</p></li>
+<li><p>Fiber-flat</p></li>
+<li><p>Arc</p></li>
+</ul>
+<p>Regarding the processing of scientific data this basically implies obtaining
+calibration images in number and quality required to remove the instrumental
+signatures so to obtain a science-grade image. These images, which are taken as
+part of routine scientific operations, include:</p>
+<ul class="simple">
+<li><p>Bias</p></li>
+<li><p>Dark</p></li>
+<li><p>Slit-flat</p></li>
+<li><p>Fiber-flat</p></li>
+<li><p>Twilight fiber-flat</p></li>
+<li><p>Arc</p></li>
+<li><p>Standard star</p></li>
+</ul>
+<p>Except for the slit-flat, that might be taken only occasionally, the rest of
+this latter set of observing modes will be taken routinely as part of either
+daytime or nighttime operations. We will refer to these as
+“Daily CalibrationModes”. Besides these modes we have identified a series of
+calibration modes (named “System Calibration Modes”) that are also necessary
+for processing MEGARA observations but that are only produced occasionally as
+part of long-term calibrations of the instrument to be carried out by the
+observatory staff.</p>
+<p>Thus, the “System Calibration Modes” will be:</p>
+<ul class="simple">
+<li><p>Bad-pixels mask</p></li>
+<li><p>Linearity Test</p></li>
+<li><p>Slit-flat. Whether the slit-flat should be considered as a “Daily Calibration” or “System Calibration” mode is TBD and will depend on the stability of the pixel-to-pixel efficiency of the MEGARA CCD.</p></li>
+</ul>
+<p>In this latter case, the difference between a “System Calibration Mode” and the
+corresponding “Auxiliary Mode” described in Section 3 depends on the frequency
+the observing mode has to be executed. Auxiliary modes are typically run once
+every observing run (e.g. the fine-acquisition ones) or, in the best case,
+after a long period of inactivity. System Calibration modes, on the other hand,
+are expected to be run only after major changes in the telescope or the
+instrument or if a degradation of any of the subsystems of the instrument is
+suspected.</p>
+<p>The need for obtaining all these sets of images drives the requirements and
+characteristics of the Calibration modes described below as defined by the
+MEGARA team.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bias.html">Bias Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dark.html">Dark Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slitflat.html">Slit-flat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trace.html">Trace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Model Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arc.html">Arc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fiberflat.html">Fiber-flat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="twilight.html">Twilight fiber-flat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bpm.html">Bad-pixels mask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcbstd.html">Standard star with the LCB IFU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mosstd.html">Standard star with the Fiber MOS</a></li>
+</ul>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../modes.html"
+                        title="previous chapter">Observing modes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="bias.html"
+                        title="next chapter">Bias Image</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/calibration/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="bias.html" title="Bias Image"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../modes.html" title="Observing modes"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Calibration Modes</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

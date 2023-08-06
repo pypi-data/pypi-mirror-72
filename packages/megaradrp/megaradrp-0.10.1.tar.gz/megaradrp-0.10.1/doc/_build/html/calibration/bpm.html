@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad-pixels mask &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Standard star with the LCB IFU" href="lcbstd.html" />
+    <link rel="prev" title="Twilight fiber-flat" href="twilight.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lcbstd.html" title="Standard star with the LCB IFU"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="twilight.html" title="Twilight fiber-flat"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Calibration Modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Bad-pixels mask</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bad-pixels-mask">
+<h1>Bad-pixels mask<a class="headerlink" href="#bad-pixels-mask" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>Bad-pixels mask</p>
+</dd>
+<dt class="field-even">Usage</dt>
+<dd class="field-even"><p>Offline, Online</p>
+</dd>
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>MegaraBadPixelMask</p>
+</dd>
+<dt class="field-even">Product</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MasterBPM</span></code></p>
+</dd>
+<dt class="field-odd">Recipe</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe" title="megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">BadPixelsMaskRecipe</span></code></a></p>
+</dd>
+<dt class="field-even">Recipe input</dt>
+<dd class="field-even"><p><a class="reference internal" href="#id0" title="megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.BadPixelsMaskRecipeInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">BadPixelsMaskRecipeInput</span></code></a></p>
+</dd>
+<dt class="field-odd">Recipe result</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#id2" title="megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.BadPixelsMaskRecipeResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">BadPixelsMaskRecipeResult</span></code></a></p>
+</dd>
+</dl>
+<p>Although science-grade CCD detectors show very few bad pixels / bad columns
+there will be a number of pixels (among the ~17 Million pixels in the MEGARA
+CCD) whose response could not be corrected by means of using calibration images
+such as dark frames or flat-field images. These pixels, commonly called either
+dead or hot pixels, should be identified and masked so their expected signal
+could be derived using dithered images or, alternatively, locally interpolated.
+While a bad-pixels mask will be generated as part of the AIV activities, an
+increase in the number of such bad pixels with time is expected. Therefore, we
+here define an observing mode that the observatory staff could use to generate
+an updated version of the bad-pixels masks should the number of bad pixels
+increase significantly.</p>
+<p>In the case of fiber-fed spectrographs the fiber flats (either lamp or twilight
+flats) are not optimal for generating bad-pixels masks as these leave many
+regions in the CCD not exposed to light. The whole CCD should be illuminated at
+different intensity levels in order to clearly identify both dead and hot
+pixels.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>In the case of MEGARA we will offset the pseudo-slit from its optical focus
+position to ensure that the gaps between fibers are also illuminated when a
+continuum (halogen) lamp at the ICM is used. The NSC zemax model of the
+spectrograph indicates that by offsetting 3mm the pseudo-slit we would already
+obtain a homogenous illumination of the CCD. A series of images with different
+count levels would be obtained.</p>
+<p>This mode requires having the ICM halogen lamp on, the instrument shutter open,
+to move the pseudo-slit to the open position, to configure the VPH wheel
+mechanism in order to select the grating to be used, to move the focusing
+mechanism to the position pre-defined for the specific VPH of choice but offset
+by 3mm and to expose a certain time and to readout the detector a series of
+exposures, being this series the slit-flat image set. Note that only one
+Bad-pixels mask will be used for all spectral setups. The specific choice for
+the VPH will depend on the actual color of the ICM halogen lamp and on the
+actual response of the VPHs. In principle, we should choose the VPH at the peak
+of the lamp spectral energy distribution but we should also consider the fact
+that the VPH should have the flattest spectral response possible. We call this
+specific VPH the “BPM VPH”. LR-R and LR-I are currently the best candidates for
+finally being the BPM VPH.</p>
+</div>
+<div class="section" id="procedure">
+<h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
+<p>The “User” processes an observing block obtained in the observing mode
+Bad-pixels mask. This mode includes the required actions to obtain a bad-pixel
+mask. The master bad pixel mask generated is used in other stages of the data
+processing.</p>
+</div>
+<div class="section" id="products">
+<h2>Products<a class="headerlink" href="#products" title="Permalink to this headline">¶</a></h2>
+<p>This Bad-pixels mask observing mode will be used only sporadically as it is
+considered part of the “System Calibration Modes”.</p>
+<p>A bidimensional mask of bad pixels, a QA flag, a text log file of the
+processing and a structured text file with information about the processing.</p>
+</div>
+<div class="section" id="recipe-inputs-and-results">
+<h2>Recipe, inputs and results<a class="headerlink" href="#recipe-inputs-and-results" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.calibration.bpm.</code><code class="sig-name descname">BadPixelsMaskRecipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process defocussed FIBER_FLAT images and create MASTER_BPM product.</p>
+<p>This recipe process a set of defocused continuum flat images obtained in
+<strong>Bad-pixels mask</strong> mode and returns the master bad-pixels mask product.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference external" href="https://numina.readthedocs.io/en/latest/reference/array.html#numina.array.cosmetics.ccdmask" title="(in Numina v0.22)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numina.array.cosmetics.ccdmask</span></code></a></dt><dd><p>algorithm to select bad-pixels</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">megaradrp.types.MasterBPM</span></code></dt><dd><p>description of MasterBPM product</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>Images provided in <cite>obresult</cite> are trimmed and corrected from overscan,
+bias and dark current (if <cite>master_dark</cite> is not None). The first
+half of the images are the stacked using the median and saved as
+intermediate result ‘reduced_image_1.fits’. The second half is also
+combined and saved as intermediate result ‘reduced_image_2.fits’</p>
+<p>These two images are passed to the <cite>ccdmask</cite> function, that selects
+bad-pixels by finding outliers in the ratio of the two images.</p>
+<p>The mask is returned in the field <cite>master_bpm</cite> of the recipe result.</p>
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.BadPixelsMaskRecipeInput">
+<em class="property">class </em><code class="sig-name descname">BadPixelsMaskRecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.BadPixelsMaskRecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>BadPixelsMaskRecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_bias</strong><span class="classifier">MasterBias, requirement</span></dt><dd><p>Master BIAS image</p>
+</dd>
+<dt><strong>master_dark</strong><span class="classifier">MasterDark, requirement, optional</span></dt><dd><p>Master DARK image</p>
+</dd>
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.BadPixelsMaskRecipeInput.master_dark">
+<code class="sig-name descname">master_dark</code><a class="headerlink" href="#megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.BadPixelsMaskRecipeInput.master_dark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.BadPixelsMaskRecipeResult">
+<em class="property">class </em><code class="sig-name descname">BadPixelsMaskRecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.BadPixelsMaskRecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>BadPixelsMaskRecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_bpm</strong><span class="classifier">MasterBPM, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.RecipeInput">
+<code class="sig-name descname">RecipeInput</code><a class="headerlink" href="#megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.RecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.BadPixelsMaskRecipeInput</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.RecipeResult">
+<code class="sig-name descname">RecipeResult</code><a class="headerlink" href="#megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.RecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.BadPixelsMaskRecipeResult</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.set_base_headers">
+<code class="sig-name descname">set_base_headers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">hdr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.set_base_headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set metadata in FITS headers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.validate_input">
+<code class="sig-name descname">validate_input</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">recipe_input</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.bpm.BadPixelsMaskRecipe.validate_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate input of the recipe.</p>
+<p>The number of frames in <cite>recipe_input.obresult</cite> must be even.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>numina.exceptions.ValidationError</dt><dd><p>If the number of frames in <cite>obresult</cite> is odd</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="id0">
+<em class="property">class </em><code class="sig-prename descclassname">BadPixelsMaskRecipe.</code><code class="sig-name descname">BadPixelsMaskRecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>BadPixelsMaskRecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_bias</strong><span class="classifier">MasterBias, requirement</span></dt><dd><p>Master BIAS image</p>
+</dd>
+<dt><strong>master_dark</strong><span class="classifier">MasterDark, requirement, optional</span></dt><dd><p>Master DARK image</p>
+</dd>
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="id1">
+<code class="sig-name descname">master_dark</code><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="id2">
+<em class="property">class </em><code class="sig-prename descclassname">BadPixelsMaskRecipe.</code><code class="sig-name descname">BadPixelsMaskRecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dd><p>BadPixelsMaskRecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_bpm</strong><span class="classifier">MasterBPM, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Bad-pixels mask</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#procedure">Procedure</a></li>
+<li><a class="reference internal" href="#products">Products</a></li>
+<li><a class="reference internal" href="#recipe-inputs-and-results">Recipe, inputs and results</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="twilight.html"
+                        title="previous chapter">Twilight fiber-flat</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="lcbstd.html"
+                        title="next chapter">Standard star with the LCB IFU</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/calibration/bpm.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lcbstd.html" title="Standard star with the LCB IFU"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="twilight.html" title="Twilight fiber-flat"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Calibration Modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Bad-pixels mask</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

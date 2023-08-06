@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slit-flat &#8212; MEGARA Data Reduction Pipeline 0.10.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Trace" href="trace.html" />
+    <link rel="prev" title="Dark Image" href="dark.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="trace.html" title="Trace"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="dark.html" title="Dark Image"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Calibration Modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Slit-flat</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="slit-flat">
+<h1>Slit-flat<a class="headerlink" href="#slit-flat" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Mode</dt>
+<dd class="field-odd"><p>Slit-flat</p>
+</dd>
+<dt class="field-even">Usage</dt>
+<dd class="field-even"><p>Offline, Online</p>
+</dd>
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>MegaraSlitFlat</p>
+</dd>
+<dt class="field-even">Product</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MasterSlitFlat</span></code></p>
+</dd>
+<dt class="field-odd">Recipe</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#megaradrp.recipes.calibration.slitflat.SlitFlatRecipe" title="megaradrp.recipes.calibration.slitflat.SlitFlatRecipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">SlitFlatRecipe</span></code></a></p>
+</dd>
+<dt class="field-even">Recipe input</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SlitFlatRecipeInput</span></code></p>
+</dd>
+<dt class="field-odd">Recipe result</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SlitFlatRecipeResult</span></code></p>
+</dd>
+</dl>
+<p>In the case of fiber-fed spectrographs the correction for the detector
+pixel-to-pixel variation of the sensibility is usually carried out using data
+from laboratory, where the change in efficiency of the detector at different
+wavelengths is computed and then used to correct for this effect for each
+specific instrument configuration (VPH setup in the case of MEGARA).</p>
+<div class="section" id="requeriments">
+<h2>Requeriments<a class="headerlink" href="#requeriments" title="Permalink to this headline">¶</a></h2>
+<p>In the case of MEGARA we will offset the pseudo-slit from its optical focus
+position to ensure that the gaps between fibers are also illuminated when a
+continuum (halogen) lamp at the ICM is used. The NSC zemax model of the
+spectrograph indicates that by offsetting 3mm the pseudo-slit we would already
+obtain a homogenous illumination of the CCD. A series of images with different
+count levels would be obtained.</p>
+<p>The quality of present-day CCDs leads to a rather small impact of these
+pixel-to-pixel variations in sensitivity on either the flux calibration and the
+cosmetics of the scientific images, especially considering that not one but a
+number of pixels along the spatial direction are extracted for each fiber and
+at each wavelength. Therefore, we anticipate that this correction might not be
+needed or that, as a maximum, a first-order correction based on laboratory data
+might suffice. However, before the results of the analysis of the
+pixel-to-pixel variations in sensitivity planned using our CCD230 e2V test CCD
+are obtained we will consider this observing mode as TBC.</p>
+<p>This mode requires having the ICM halogen lamp on, the instrument shutter open,
+to move the pseudo-slit to the open position, to configure the VPH wheel
+mechanism in order to select the grating to be used, to move the focusing
+mechanism to the position pre-defined for the specific VPH of choice but offset
+by 3mm and to expose a certain time and to readout the detector a series of
+exposures, being this series the slit-flat image set.</p>
+</div>
+<div class="section" id="procedure">
+<h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
+<p>The “User” processes an observing block obtained in the observing mode
+Slit-flat. This mode includes the required actions to obtain a master slit-flat
+field. The master slit-flat field generated is used in other stages of the data
+processing.</p>
+</div>
+<div class="section" id="products">
+<h2>Products<a class="headerlink" href="#products" title="Permalink to this headline">¶</a></h2>
+<p>Slit-flat image sets are to be obtained both as part of the activities related
+to the verification of the instrument status (such as for evaluating the status
+of the MEGARA spectrograph) and also for processing data for scientific
+exploitation (correction for the pixel-to-pixel variation in sensitivity). The
+frequency at which these detector flat images should be acquired is TBC.
+Although defined in this document as a mode to be considered part of the
+“Daily Calibration Modes” if it is finally used only sporadic it should be
+considered as part of the “System Calibration Modes” instead.</p>
+<p>A bidimensional master slit flat field, QA flag, a text log file of the
+processing and a structured text file containing information about the
+processing.</p>
+</div>
+<div class="section" id="recipe-inputs-and-results">
+<h2>Recipe, inputs and results<a class="headerlink" href="#recipe-inputs-and-results" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.slitflat.SlitFlatRecipe">
+<em class="property">class </em><code class="sig-prename descclassname">megaradrp.recipes.calibration.slitflat.</code><code class="sig-name descname">SlitFlatRecipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.slitflat.SlitFlatRecipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process SLIT_FLAT images and create MasterSlitFlat.</p>
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.slitflat.SlitFlatRecipe.RecipeInput">
+<code class="sig-name descname">RecipeInput</code><a class="headerlink" href="#megaradrp.recipes.calibration.slitflat.SlitFlatRecipe.RecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.SlitFlatRecipeInput</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.slitflat.SlitFlatRecipe.RecipeResult">
+<code class="sig-name descname">RecipeResult</code><a class="headerlink" href="#megaradrp.recipes.calibration.slitflat.SlitFlatRecipe.RecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numina.core.metaclass.SlitFlatRecipeResult</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.slitflat.SlitFlatRecipe.SlitFlatRecipeInput">
+<em class="property">class </em><code class="sig-name descname">SlitFlatRecipeInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.slitflat.SlitFlatRecipe.SlitFlatRecipeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>SlitFlatRecipeInput documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_bias</strong><span class="classifier">MasterBias, requirement</span></dt><dd><p>Master BIAS image</p>
+</dd>
+<dt><strong>master_bpm</strong><span class="classifier">MasterBPM, requirement, optional</span></dt><dd><p>Master Bad Pixel Mask</p>
+</dd>
+<dt><strong>master_dark</strong><span class="classifier">MasterDark, requirement, optional</span></dt><dd><p>Master DARK image</p>
+</dd>
+<dt><strong>obresult</strong><span class="classifier">ObservationResultType, requirement</span></dt><dd><p>Observation Result</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.slitflat.SlitFlatRecipe.SlitFlatRecipeInput.master_bpm">
+<code class="sig-name descname">master_bpm</code><a class="headerlink" href="#megaradrp.recipes.calibration.slitflat.SlitFlatRecipe.SlitFlatRecipeInput.master_bpm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="megaradrp.recipes.calibration.slitflat.SlitFlatRecipe.SlitFlatRecipeInput.master_dark">
+<code class="sig-name descname">master_dark</code><a class="headerlink" href="#megaradrp.recipes.calibration.slitflat.SlitFlatRecipe.SlitFlatRecipeInput.master_dark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="megaradrp.recipes.calibration.slitflat.SlitFlatRecipe.SlitFlatRecipeResult">
+<em class="property">class </em><code class="sig-name descname">SlitFlatRecipeResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.slitflat.SlitFlatRecipe.SlitFlatRecipeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>SlitFlatRecipeResult documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>master_slitflat</strong><span class="classifier">MasterSlitFlat, product</span></dt><dd></dd>
+<dt><strong>reduced_image</strong><span class="classifier">ProcessedFrame, product</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="megaradrp.recipes.calibration.slitflat.SlitFlatRecipe.set_base_headers">
+<code class="sig-name descname">set_base_headers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">hdr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#megaradrp.recipes.calibration.slitflat.SlitFlatRecipe.set_base_headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set metadata in FITS headers.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Slit-flat</a><ul>
+<li><a class="reference internal" href="#requeriments">Requeriments</a></li>
+<li><a class="reference internal" href="#procedure">Procedure</a></li>
+<li><a class="reference internal" href="#products">Products</a></li>
+<li><a class="reference internal" href="#recipe-inputs-and-results">Recipe, inputs and results</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="dark.html"
+                        title="previous chapter">Dark Image</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="trace.html"
+                        title="next chapter">Trace</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/calibration/slitflat.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="trace.html" title="Trace"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="dark.html" title="Dark Image"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MEGARA Data Reduction Pipeline 0.10.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modes.html" >Observing modes</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Calibration Modes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Slit-flat</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013-2019, Universidad Complutense de Madrid.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>
