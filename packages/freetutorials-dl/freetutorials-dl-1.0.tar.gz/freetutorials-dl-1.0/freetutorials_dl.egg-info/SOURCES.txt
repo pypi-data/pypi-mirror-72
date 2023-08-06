@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+freetutorials_dl/__init__.py
+freetutorials_dl/cli.py
+freetutorials_dl/course.py
+freetutorials_dl/downloader.py
+freetutorials_dl.egg-info/PKG-INFO
+freetutorials_dl.egg-info/SOURCES.txt
+freetutorials_dl.egg-info/dependency_links.txt
+freetutorials_dl.egg-info/entry_points.txt
+freetutorials_dl.egg-info/requires.txt
+freetutorials_dl.egg-info/top_level.txt

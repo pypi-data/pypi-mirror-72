@@ -1,0 +1,3 @@
+[console_scripts]
+fts-dl = freetutorials_dl.cli:fts
+
