@@ -1,0 +1,16 @@
+attrdict
+click
+cmocean
+dask
+gcsfs
+fsspec
+matplotlib
+numpy
+pandas
+python-dateutil
+pyyaml
+sortedcontainers
+scipy
+toolz
+xarray>=0.15
+zarr
