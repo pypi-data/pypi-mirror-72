@@ -1,0 +1,3 @@
+[console_scripts]
+tl = tl.cli_entry:cli_entry
+

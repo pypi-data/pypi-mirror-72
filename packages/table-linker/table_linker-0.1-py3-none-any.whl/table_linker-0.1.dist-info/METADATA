@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: table-linker
+Version: 0.1
+Summary: UNKNOWN
+Home-page: https://github.com/usc-isi-i2/table-linker
+Author: Amandeep Singh
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: ftfy
+Requires-Dist: sh
+Requires-Dist: scipy
+
+UNKNOWN
+
+
