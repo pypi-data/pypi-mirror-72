@@ -1,0 +1,10 @@
+recursive-exclude * __pycache__
+
+# Include the license file
+include LICENSE
+graft src
+include README.md
+include CHANGELOG.md
+
+# Include the data files
+# recursive-include data *

@@ -1,0 +1,3 @@
+[console_scripts]
+ldis-cli = ldis.cli:main
+
