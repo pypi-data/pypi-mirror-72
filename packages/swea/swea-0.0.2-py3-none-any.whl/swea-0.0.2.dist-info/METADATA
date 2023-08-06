@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: swea
+Version: 0.0.2
+Summary: SWEA Problem Set Generator
+Home-page: https://github.com/hp-hk/swea.git
+Author: John Kang
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# SWEA
+SWEA Problem Set Generator
+
+## 기능
+- d1 문제 템플릿 만들기
+```bash
+> swea d1
+```
+
