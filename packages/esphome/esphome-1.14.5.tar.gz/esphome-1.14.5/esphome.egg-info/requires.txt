@@ -1,0 +1,15 @@
+PyYAML==5.3.1
+colorlog==4.1.0
+esptool==2.8
+ifaddr==0.1.6
+paho-mqtt==1.5.0
+platformio==4.3.4
+protobuf==3.11.3
+pyserial==3.4
+pytz==2020.1
+tornado==5.1.1
+tzlocal==2.0.0
+voluptuous==0.11.7
+
+[:python_version < "3.6"]
+typing>=3.6.6
