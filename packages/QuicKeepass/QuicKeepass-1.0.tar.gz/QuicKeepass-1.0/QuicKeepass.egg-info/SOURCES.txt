@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+QuicKeepass.egg-info/PKG-INFO
+QuicKeepass.egg-info/SOURCES.txt
+QuicKeepass.egg-info/dependency_links.txt
+QuicKeepass.egg-info/entry_points.txt
+QuicKeepass.egg-info/requires.txt
+QuicKeepass.egg-info/top_level.txt
+quickeepass/__init__.py
+quickeepass/quickeepass.py

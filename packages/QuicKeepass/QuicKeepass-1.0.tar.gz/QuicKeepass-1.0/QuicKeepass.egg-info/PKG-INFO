@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: QuicKeepass
+Version: 1.0
+Summary: Efficiently autotype your password from keepass on i3 using rofi 
+Home-page: https://github.com/nongiach/QuicKeepass
+Author: @chaignc
+Author-email: use.twitter@chaignc.twitter
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: keepass,rofi,password,quick,manager,autotype,autofill
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
