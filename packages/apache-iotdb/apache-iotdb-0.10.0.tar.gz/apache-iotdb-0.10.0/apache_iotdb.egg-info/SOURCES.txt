@@ -1,0 +1,16 @@
+README.md
+setup.py
+apache_iotdb.egg-info/PKG-INFO
+apache_iotdb.egg-info/SOURCES.txt
+apache_iotdb.egg-info/dependency_links.txt
+apache_iotdb.egg-info/requires.txt
+apache_iotdb.egg-info/top_level.txt
+iotdb/__init__.py
+iotdb/rpc/TSIService.py
+iotdb/rpc/__init__.py
+iotdb/rpc/constants.py
+iotdb/rpc/ttypes.py
+iotdb/sync/SyncService.py
+iotdb/sync/__init__.py
+iotdb/sync/constants.py
+iotdb/sync/ttypes.py
