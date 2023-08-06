@@ -1,0 +1,9 @@
+README.md
+setup.py
+sentry_processor/__init__.py
+sentry_processor/raven_codes.py
+sentry_processor/sentry_event_processor.py
+sentry_processor.egg-info/PKG-INFO
+sentry_processor.egg-info/SOURCES.txt
+sentry_processor.egg-info/dependency_links.txt
+sentry_processor.egg-info/top_level.txt
