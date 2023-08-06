@@ -1,0 +1,4 @@
+attrs>=19.1.0
+
+[:python_version < "3.5"]
+typing>=3.7.4.1
