@@ -1,0 +1,13 @@
+gntp>=1.0.2
+chardet>=3.0.4
+backrefs<5.0,>=4.3
+wcmatch<7.0,>=6.1
+wxpython>=4.1.0
+filelock
+send2trash
+pymdown-extensions>=7.0
+pygments
+
+[extras]
+cchardet
+regex
