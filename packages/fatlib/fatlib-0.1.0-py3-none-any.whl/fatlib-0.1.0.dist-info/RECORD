@@ -1,0 +1,9 @@
+fatlib/__init__.py,sha256=WrjWZzzUuO0vl2CgEpgyXsyyksRsJNnJeeDUWSSiD0I,96
+fatlib/_fairness.py,sha256=tfFrRa8YBpiAZm5ibpVCwB6BU-w2DnsvsfqZ1yY1oro,2850
+fatlib/_preprocessing.py,sha256=Lck_3z0wKGzKZ1IlyzSSayp65ryoC8LVYX5aDtIGWc8,1463
+fatlib/_utils.py,sha256=E9WU1kmwBDeV72GRdth9RjSQz-4muf_X6Wc9C0NV3MI,520
+fatlib/tests/test_preprocessing.py,sha256=UETSu_gHcx6GBjb2c-E1Y9_Q_WVXmsXf1P97aI2s3Vg,1582
+fatlib/tests/test_utils.py,sha256=s1psV353iLwA4-YP4KAmJDaBkvDukhJpNNKLSq_ElaI,863
+fatlib-0.1.0.dist-info/WHEEL,sha256=G_NFpzHmv_dUXgCUSAWL0-bLL-eMzYU6DzDeGXbRXUk,83
+fatlib-0.1.0.dist-info/METADATA,sha256=_mjQU7MN6e6fpeb8zczQ4mt_t2CA6wIEvXneDwnWr78,420
+fatlib-0.1.0.dist-info/RECORD,,
