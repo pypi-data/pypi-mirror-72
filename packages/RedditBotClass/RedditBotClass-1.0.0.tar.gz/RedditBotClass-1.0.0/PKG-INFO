@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: RedditBotClass
+Version: 1.0.0
+Summary: A library used to create reddit bots, with some pre-written functions for the bots.
+Home-page: https://github.com/tom-pettit/RedditBotClass
+Author: Tom Pettit
+Author-email: tompettit36@gmail.com
+License: MIT
+Download-URL: https://github.com/tom-pettit/RedditBotClass/archive/v1.0.0.tar.gz
+Description: UNKNOWN
+Keywords: reddit bot,bot,reddit,praw,reddit-bot,bots
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
