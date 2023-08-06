@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: rfCloudTest
+Version: 0.0.7
+Summary: robot framework自动化开发基础库:定义执行命令，转换json用例文件为robot用例文件
+Home-page: UNKNOWN
+Author: wu weiping
+Author-email: 115773673@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: rfApiTestLibrary
+
+UNKNOWN
+
+

@@ -1,0 +1,3 @@
+[console_scripts]
+rfct = rfCloudTest.cloudTestMain:main
+
