@@ -1,0 +1,5 @@
+numpy>=1.16.1
+psutil
+
+[:sys_platform == "win32"]
+msvc-runtime
