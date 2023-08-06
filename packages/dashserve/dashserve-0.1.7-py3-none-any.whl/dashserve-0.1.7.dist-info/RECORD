@@ -1,0 +1,14 @@
+dashserve/__init__.py,sha256=20BSXiPOWq35gSwCwdD6raqgCggnCtjScrsYp2iei9w,88
+dashserve/__main__.py,sha256=_BGqS9ZPrE0mcT3BZKFSAQXxnP-_Vit6KsrQDKChO7I,629
+dashserve/jupyter.py,sha256=3wW9M-WFvfWGacwGKMzdA3ZU93Oa3rSImSOQeRklkFE,3549
+dashserve/serializer.py,sha256=6eZdGMnjrOLiZsVT6gjiwupQooZJRByIpJdAuYGqT5o,2340
+dashserve/server.py,sha256=YE3iEx5W7Gd7U7oYebHIN6eQpjhErOxW9DPMCkK12ko,2809
+dashserve/wsgi.py,sha256=_m0ngn547IpYa6Csg_98zv6WKY5EFX0GpxQOCmZl_iU,149
+dashserve/tests/__init__.py,sha256=4v9w2mnymwBvjr5MWSUW5HnhbQFRkn1xgM7-JwWVn0g,39
+dashserve/tests/myapp.py,sha256=gaRf7pdVcLi2Yt5taU0S9q9ayGqG7HPEPpwDSWURo2U,1592
+dashserve/tests/test_dashserve.py,sha256=i3vT6wWyOLdq8sFlY1Pv2SNJcH8o8OYj30Ux8SuZvQM,1641
+dashserve-0.1.7.dist-info/LICENSE,sha256=5Kd81I1CzC3kwZBLcBM4QVJn2f0u4lwWvApRFyCW8xQ,1119
+dashserve-0.1.7.dist-info/METADATA,sha256=NNoO7iUp6ZWOWa-PTHJvh3sazMSeQwSVG-I5BtKX4Cc,3218
+dashserve-0.1.7.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+dashserve-0.1.7.dist-info/top_level.txt,sha256=HiGjZugleadBxsKaThXuchUrdqjVanzxipN8qj_6EIc,10
+dashserve-0.1.7.dist-info/RECORD,,
