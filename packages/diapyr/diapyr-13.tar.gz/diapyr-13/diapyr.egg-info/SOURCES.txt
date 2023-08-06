@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+diapyr/__init__.py
+diapyr/start.py
+diapyr/util.py
+diapyr.egg-info/PKG-INFO
+diapyr.egg-info/SOURCES.txt
+diapyr.egg-info/dependency_links.txt
+diapyr.egg-info/entry_points.txt
+diapyr.egg-info/top_level.txt
