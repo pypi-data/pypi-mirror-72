@@ -1,0 +1,239 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$tkbYWCmWyBH2$E0BmAqHAliH3dnIvPCWpQTclESdIQI3EUK4GWjj5yWY=",
+        "last_login": "2020-06-05T10:11:39.193Z",
+        "is_superuser": true,
+        "username": "lordoftheflies",
+        "first_name": "",
+        "last_name": "",
+        "email": "laszlo.hegedus@cherubits.hu",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-06-03T10:07:34.553Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$GF7fDqc9CLpG$Cx3xfa2xmcxvatsZn5pYxMxbIA/1FIBesHGRiRer/lE=",
+        "last_login": "2020-06-08T05:37:09.215Z",
+        "is_superuser": true,
+        "username": "annamaria",
+        "first_name": "",
+        "last_name": "",
+        "email": "laky.szoftver@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-06-03T10:08:12Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$7bISmhfelK4E$dTjVjIb5gDNxpPWu2ZN5PaknwvvpFUmxIdeUTcIvwmo=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "ljozsef",
+        "first_name": "",
+        "last_name": "",
+        "email": "laki.konyveles@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-06-03T10:09:05.997Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$jJNc9CwCPJB0$hNzuRhniJiXZ4O/OylcN+72eYnYY6Ct6R9hM4YKA68s=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "hres",
+        "first_name": "",
+        "last_name": "",
+        "email": "corgy-crm@cherubits.hu",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-06-04T06:47:32Z",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$zcyS6UP0T9k1$tdcq4+RzRIVyI0HrSMPhfFGrKVuLRXEC/ViCYpUvMmc=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "penzugyes",
+        "first_name": "",
+        "last_name": "",
+        "email": "corgy-crm@cherubits.hu",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-06-04T06:48:05Z",
+        "groups": [
+            2
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$1NNxwiYnob8D$YNg307Zg5RtRsEp1C/ZLzNkUQQXJbQTU9opmNWpWWP0=",
+        "last_login": "2020-06-05T05:40:23Z",
+        "is_superuser": false,
+        "username": "berszamfejto",
+        "first_name": "",
+        "last_name": "",
+        "email": "corgy-crm@cherubits.hu",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-06-04T06:48:31Z",
+        "groups": [
+            7
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$TXeJbbMJ9CC6$MtT3/YbVouHUMEPb2wuPuQgBU08FB/JXdHuzUneOKLQ=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "konyvelo",
+        "first_name": "",
+        "last_name": "",
+        "email": "corgy-crm@cherubits.hu",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-06-04T06:49:41Z",
+        "groups": [
+            4
+        ],
+        "user_permissions": [
+            128,
+            129
+        ]
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$vANyYqQ6bMX8$Qf1XcQENdK35/PFDTQM2MpbXi+Lrv/L1rqtddwnAIXw=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "koordinator",
+        "first_name": "",
+        "last_name": "",
+        "email": "corgy-crm@cherubits.hu",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-06-04T06:50:08Z",
+        "groups": [
+            5
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$dIhX9cr8tCd1$DG+tMWuTQ6VsTc0KLFAjFFyAZyZ/8HyIxjhqdTD7b2Y=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "operator",
+        "first_name": "",
+        "last_name": "",
+        "email": "corgy-crm@cherubits.hu",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-06-04T06:50:47Z",
+        "groups": [
+            6
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$uhev088dwcHF$eDl6VUAWF+OPrW5x/WPhu89esyDNylwTXumk0K0TNPk=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "felhasznalo",
+        "first_name": "",
+        "last_name": "",
+        "email": "corgy-crm@cherubits.hu",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-06-04T06:51:12Z",
+        "groups": [
+            9
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 12,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$r6ntNSpMQmxw$FDbOsI9eWRbQklVMEAQ4iV3imqORO/DTa8B2k4AZIkM=",
+        "last_login": "2020-06-04T08:05:10Z",
+        "is_superuser": false,
+        "username": "ugyvezeto",
+        "first_name": "",
+        "last_name": "",
+        "email": "corgy-crm@cherubits.hu",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-06-04T08:03:16Z",
+        "groups": [
+            3
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 13,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$WacdCGV24Xbr$MHNsiL8lpz1M/gr8JOWcujyOLTZEgqWXke2FJQRq2lI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rendszer-adminisztrator",
+        "first_name": "",
+        "last_name": "",
+        "email": "corgy-crm@cherubits.hu",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-06-04T08:11:04Z",
+        "groups": [
+            8
+        ],
+        "user_permissions": []
+    }
+}
+]
