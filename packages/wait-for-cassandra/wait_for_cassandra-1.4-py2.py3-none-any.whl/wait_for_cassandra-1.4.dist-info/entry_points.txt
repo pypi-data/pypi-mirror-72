@@ -1,0 +1,3 @@
+[console_scripts]
+wait-for-cassandra = wait_for_cassandra.run:run
+
