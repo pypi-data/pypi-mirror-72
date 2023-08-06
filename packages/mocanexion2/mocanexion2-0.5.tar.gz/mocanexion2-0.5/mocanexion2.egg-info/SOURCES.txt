@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mocanexion/__init__.py
+mocanexion2.egg-info/PKG-INFO
+mocanexion2.egg-info/SOURCES.txt
+mocanexion2.egg-info/dependency_links.txt
+mocanexion2.egg-info/requires.txt
+mocanexion2.egg-info/top_level.txt
