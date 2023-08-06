@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: datasette-debug-asgi
+Version: 0.1.1
+Summary: Datasette plugin for dumping out the ASGI scope
+Home-page: https://github.com/simonw/datasette-debug-asgi
+Author: Simon Willison
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Requires-Dist: datasette ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-asyncio ; extra == 'test'
+Requires-Dist: httpx ; extra == 'test'
+Requires-Dist: asgi-lifespan (~=1.0) ; extra == 'test'
+
+# datasette-debug-asgi
+
+[![PyPI](https://img.shields.io/pypi/v/datasette-debug-asgi.svg)](https://pypi.org/project/datasette-debug-asgi/)
+[![CircleCI](https://circleci.com/gh/simonw/datasette-debug-asgi.svg?style=svg)](https://circleci.com/gh/simonw/datasette-debug-asgi)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/datasette-debug-asgi/blob/master/LICENSE)
+
+Datasette plugin for dumping out the ASGI scope.
+
+Adds a new URL at `/-/asgi-scope` which shows the current ASGI scope.
+
+Inspired by [asgi-scope](https://github.com/simonw/asgi-scope).
+
+## Installation
+
+    pip install datasette-debug-asgi
+
+
