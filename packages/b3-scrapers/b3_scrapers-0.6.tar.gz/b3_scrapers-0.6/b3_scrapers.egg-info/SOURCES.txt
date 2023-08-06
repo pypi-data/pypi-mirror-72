@@ -1,0 +1,14 @@
+setup.py
+b3_scrapers/__init__.py
+b3_scrapers/codigos_cvm.py
+b3_scrapers/codigos_negociacao.py
+b3_scrapers/eventos_acoes.py
+b3_scrapers/eventos_fii.py
+b3_scrapers/fii_listados.py
+b3_scrapers/negociacao.py
+b3_scrapers/proventos_fii.py
+b3_scrapers.egg-info/PKG-INFO
+b3_scrapers.egg-info/SOURCES.txt
+b3_scrapers.egg-info/dependency_links.txt
+b3_scrapers.egg-info/requires.txt
+b3_scrapers.egg-info/top_level.txt
