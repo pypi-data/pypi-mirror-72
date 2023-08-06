@@ -1,0 +1,10 @@
+setup.py
+sholz_distributions/Binomialdistribution.py
+sholz_distributions/Gaussiandistribution.py
+sholz_distributions/Generaldistribution.py
+sholz_distributions/__init__.py
+sholz_distributions.egg-info/PKG-INFO
+sholz_distributions.egg-info/SOURCES.txt
+sholz_distributions.egg-info/dependency_links.txt
+sholz_distributions.egg-info/not-zip-safe
+sholz_distributions.egg-info/top_level.txt
