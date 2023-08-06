@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: bare
+Version: 0.7.0
+Summary: Encoder/decoder for BARE messages
+Home-page: https://git.sr.ht/~martijbraam/bare-py
+Author: Martijn Braam
+Author-email: martijn@brixit.nl
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+
+UNKNOWN
+
+
