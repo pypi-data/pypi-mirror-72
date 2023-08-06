@@ -1,0 +1,10 @@
+setup.py
+razzpy/Binomialdistribution.py
+razzpy/Gaussiandistribution.py
+razzpy/Generaldistribution.py
+razzpy/__init__.py
+razzpy.egg-info/PKG-INFO
+razzpy.egg-info/SOURCES.txt
+razzpy.egg-info/dependency_links.txt
+razzpy.egg-info/not-zip-safe
+razzpy.egg-info/top_level.txt
