@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: algobin
+Version: 0.0.2
+Summary: Basic trading operations of binance to be used in algorithmic trading.
+Home-page: https://github.com/aticio/algobin
+Author: Özgür Atıcı
+Author-email: aticiozgur@gmail.com
+License: UNKNOWN
+Description: # algobin
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: dev
