@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: google-speech-addons
+Version: 1.0.0
+Summary: Google Text-to-Speech addons
+Home-page: https://github.com/vporton/google-speech-addons-python
+Author: Victor Porton
+Author-email: porton@narod.ru
+License: GPLv3
+Keywords: Google text-to-speech,Google tts,5000 character limit,max 5000 characters
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet
+Classifier: Topic :: Multimedia :: Sound/Audio :: Sound Synthesis
+Classifier: Topic :: Multimedia :: Sound/Audio :: Speech
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing
+
+Addons to Google Text-to-Speech (bypass 5000 character limit!)
+
+
