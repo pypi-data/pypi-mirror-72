@@ -1,0 +1,13 @@
+v0.1.5
+Features:
+- Tool kan nu worden geïnstalleerd via pip install viteezytool
+- Tool kan nu worden geüpdatet via pip install --upgrade viteezytool
+- Tool maakt een user configuration folder in <user home>/ViteezyTool
+v1.0.0
+Features: 
+- Kaarten worden nu ook gegenereerd met ingrediënten
+- Configuratie van pillen in .yaml bestand
+- Bij elke update wordt er een 'example' configuratie folder aangemaakt als referentie voor de nieuwe standaard
+Opletten:
+- Het word template is nu aangepast, deze tool werkt niet meer met de oude template. Zorg er voor dat je jouw template update naar het nieuwe format
+- lookup.csv wordt nu niet meer gebruikt (en mag verwijderd worden). Zorg voor een correcte 'pills.yaml' bestand in je configuratie
