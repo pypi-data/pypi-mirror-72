@@ -1,0 +1,3 @@
+[console_scripts]
+pecs = pecs.__main__:main
+
