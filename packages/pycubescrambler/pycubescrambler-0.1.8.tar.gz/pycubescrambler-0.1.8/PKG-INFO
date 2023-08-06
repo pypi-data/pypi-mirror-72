@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: pycubescrambler
+Version: 0.1.8
+Summary: a python module to generate scrambles for most wca puzzles
+Home-page: https://github.com/midnightcuberx/pycubescrambler
+Author: midnightcuberx
+Author-email: midnightcuberx@gmail.com
+License: GPLv3
+Download-URL: https://github.com/midnightcuberx/pycubescrambler/archive/v_0.1.8.tar.gz
+Description: UNKNOWN
+Keywords: CUBING,SCRAMBLES,RUBIKS
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
