@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>synapse.api.constants module &#8212; Synapse 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="synapse.api.errors module" href="synapse.api.errors.html" />
+    <link rel="prev" title="synapse.api.auth module" href="synapse.api.auth.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="synapse.api.errors.html" title="synapse.api.errors module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="synapse.api.auth.html" title="synapse.api.auth module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Synapse 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="synapse.html" >synapse package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="synapse.api.html" accesskey="U">synapse.api package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-synapse.api.constants">
+<span id="synapse-api-constants-module"></span><h1>synapse.api.constants module<a class="headerlink" href="#module-synapse.api.constants" title="Permalink to this headline">¶</a></h1>
+<p>Contains constants from the specification.</p>
+<dl class="class">
+<dt id="synapse.api.constants.EventContentFields">
+<em class="property">class </em><code class="sig-prename descclassname">synapse.api.constants.</code><code class="sig-name descname">EventContentFields</code><a class="headerlink" href="#synapse.api.constants.EventContentFields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Fields found in events’ content, regardless of type.</p>
+<dl class="attribute">
+<dt id="synapse.api.constants.EventContentFields.LABELS">
+<code class="sig-name descname">LABELS</code><em class="property"> = 'org.matrix.labels'</em><a class="headerlink" href="#synapse.api.constants.EventContentFields.LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventContentFields.SELF_DESTRUCT_AFTER">
+<code class="sig-name descname">SELF_DESTRUCT_AFTER</code><em class="property"> = 'org.matrix.self_destruct_after'</em><a class="headerlink" href="#synapse.api.constants.EventContentFields.SELF_DESTRUCT_AFTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="synapse.api.constants.EventTypes">
+<em class="property">class </em><code class="sig-prename descclassname">synapse.api.constants.</code><code class="sig-name descname">EventTypes</code><a class="headerlink" href="#synapse.api.constants.EventTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.Aliases">
+<code class="sig-name descname">Aliases</code><em class="property"> = 'm.room.aliases'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.Aliases" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.CanonicalAlias">
+<code class="sig-name descname">CanonicalAlias</code><em class="property"> = 'm.room.canonical_alias'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.CanonicalAlias" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.Create">
+<code class="sig-name descname">Create</code><em class="property"> = 'm.room.create'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.Create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.Encryption">
+<code class="sig-name descname">Encryption</code><em class="property"> = 'm.room.encryption'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.Encryption" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.GuestAccess">
+<code class="sig-name descname">GuestAccess</code><em class="property"> = 'm.room.guest_access'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.GuestAccess" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.JoinRules">
+<code class="sig-name descname">JoinRules</code><em class="property"> = 'm.room.join_rules'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.JoinRules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.Member">
+<code class="sig-name descname">Member</code><em class="property"> = 'm.room.member'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.Member" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.Message">
+<code class="sig-name descname">Message</code><em class="property"> = 'm.room.message'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.Message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.Name">
+<code class="sig-name descname">Name</code><em class="property"> = 'm.room.name'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.Name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.Pinned">
+<code class="sig-name descname">Pinned</code><em class="property"> = 'm.room.pinned_events'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.Pinned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.PowerLevels">
+<code class="sig-name descname">PowerLevels</code><em class="property"> = 'm.room.power_levels'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.PowerLevels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.Redaction">
+<code class="sig-name descname">Redaction</code><em class="property"> = 'm.room.redaction'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.Redaction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.RelatedGroups">
+<code class="sig-name descname">RelatedGroups</code><em class="property"> = 'm.room.related_groups'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.RelatedGroups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.Retention">
+<code class="sig-name descname">Retention</code><em class="property"> = 'm.room.retention'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.Retention" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.RoomAvatar">
+<code class="sig-name descname">RoomAvatar</code><em class="property"> = 'm.room.avatar'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.RoomAvatar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.RoomEncryption">
+<code class="sig-name descname">RoomEncryption</code><em class="property"> = 'm.room.encryption'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.RoomEncryption" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.RoomHistoryVisibility">
+<code class="sig-name descname">RoomHistoryVisibility</code><em class="property"> = 'm.room.history_visibility'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.RoomHistoryVisibility" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.ServerACL">
+<code class="sig-name descname">ServerACL</code><em class="property"> = 'm.room.server_acl'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.ServerACL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.ThirdPartyInvite">
+<code class="sig-name descname">ThirdPartyInvite</code><em class="property"> = 'm.room.third_party_invite'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.ThirdPartyInvite" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.Tombstone">
+<code class="sig-name descname">Tombstone</code><em class="property"> = 'm.room.tombstone'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.Tombstone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.EventTypes.Topic">
+<code class="sig-name descname">Topic</code><em class="property"> = 'm.room.topic'</em><a class="headerlink" href="#synapse.api.constants.EventTypes.Topic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="synapse.api.constants.JoinRules">
+<em class="property">class </em><code class="sig-prename descclassname">synapse.api.constants.</code><code class="sig-name descname">JoinRules</code><a class="headerlink" href="#synapse.api.constants.JoinRules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="attribute">
+<dt id="synapse.api.constants.JoinRules.INVITE">
+<code class="sig-name descname">INVITE</code><em class="property"> = 'invite'</em><a class="headerlink" href="#synapse.api.constants.JoinRules.INVITE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.JoinRules.KNOCK">
+<code class="sig-name descname">KNOCK</code><em class="property"> = 'knock'</em><a class="headerlink" href="#synapse.api.constants.JoinRules.KNOCK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.JoinRules.PRIVATE">
+<code class="sig-name descname">PRIVATE</code><em class="property"> = 'private'</em><a class="headerlink" href="#synapse.api.constants.JoinRules.PRIVATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.JoinRules.PUBLIC">
+<code class="sig-name descname">PUBLIC</code><em class="property"> = 'public'</em><a class="headerlink" href="#synapse.api.constants.JoinRules.PUBLIC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="synapse.api.constants.LimitBlockingTypes">
+<em class="property">class </em><code class="sig-prename descclassname">synapse.api.constants.</code><code class="sig-name descname">LimitBlockingTypes</code><a class="headerlink" href="#synapse.api.constants.LimitBlockingTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Reasons that a server may be blocked</p>
+<dl class="attribute">
+<dt id="synapse.api.constants.LimitBlockingTypes.HS_DISABLED">
+<code class="sig-name descname">HS_DISABLED</code><em class="property"> = 'hs_disabled'</em><a class="headerlink" href="#synapse.api.constants.LimitBlockingTypes.HS_DISABLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.LimitBlockingTypes.MONTHLY_ACTIVE_USER">
+<code class="sig-name descname">MONTHLY_ACTIVE_USER</code><em class="property"> = 'monthly_active_user'</em><a class="headerlink" href="#synapse.api.constants.LimitBlockingTypes.MONTHLY_ACTIVE_USER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="synapse.api.constants.LoginType">
+<em class="property">class </em><code class="sig-prename descclassname">synapse.api.constants.</code><code class="sig-name descname">LoginType</code><a class="headerlink" href="#synapse.api.constants.LoginType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="attribute">
+<dt id="synapse.api.constants.LoginType.APPLICATION_SERVICE">
+<code class="sig-name descname">APPLICATION_SERVICE</code><em class="property"> = 'm.login.application_service'</em><a class="headerlink" href="#synapse.api.constants.LoginType.APPLICATION_SERVICE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.LoginType.DUMMY">
+<code class="sig-name descname">DUMMY</code><em class="property"> = 'm.login.dummy'</em><a class="headerlink" href="#synapse.api.constants.LoginType.DUMMY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.LoginType.EMAIL_IDENTITY">
+<code class="sig-name descname">EMAIL_IDENTITY</code><em class="property"> = 'm.login.email.identity'</em><a class="headerlink" href="#synapse.api.constants.LoginType.EMAIL_IDENTITY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.LoginType.MSISDN">
+<code class="sig-name descname">MSISDN</code><em class="property"> = 'm.login.msisdn'</em><a class="headerlink" href="#synapse.api.constants.LoginType.MSISDN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.LoginType.PASSWORD">
+<code class="sig-name descname">PASSWORD</code><em class="property"> = 'm.login.password'</em><a class="headerlink" href="#synapse.api.constants.LoginType.PASSWORD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.LoginType.RECAPTCHA">
+<code class="sig-name descname">RECAPTCHA</code><em class="property"> = 'm.login.recaptcha'</em><a class="headerlink" href="#synapse.api.constants.LoginType.RECAPTCHA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.LoginType.SHARED_SECRET">
+<code class="sig-name descname">SHARED_SECRET</code><em class="property"> = 'org.matrix.login.shared_secret'</em><a class="headerlink" href="#synapse.api.constants.LoginType.SHARED_SECRET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.LoginType.TERMS">
+<code class="sig-name descname">TERMS</code><em class="property"> = 'm.login.terms'</em><a class="headerlink" href="#synapse.api.constants.LoginType.TERMS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="synapse.api.constants.Membership">
+<em class="property">class </em><code class="sig-prename descclassname">synapse.api.constants.</code><code class="sig-name descname">Membership</code><a class="headerlink" href="#synapse.api.constants.Membership" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Represents the membership states of a user in a room.</p>
+<dl class="attribute">
+<dt id="synapse.api.constants.Membership.BAN">
+<code class="sig-name descname">BAN</code><em class="property"> = 'ban'</em><a class="headerlink" href="#synapse.api.constants.Membership.BAN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.Membership.INVITE">
+<code class="sig-name descname">INVITE</code><em class="property"> = 'invite'</em><a class="headerlink" href="#synapse.api.constants.Membership.INVITE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.Membership.JOIN">
+<code class="sig-name descname">JOIN</code><em class="property"> = 'join'</em><a class="headerlink" href="#synapse.api.constants.Membership.JOIN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.Membership.KNOCK">
+<code class="sig-name descname">KNOCK</code><em class="property"> = 'knock'</em><a class="headerlink" href="#synapse.api.constants.Membership.KNOCK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.Membership.LEAVE">
+<code class="sig-name descname">LEAVE</code><em class="property"> = 'leave'</em><a class="headerlink" href="#synapse.api.constants.Membership.LEAVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.Membership.LIST">
+<code class="sig-name descname">LIST</code><em class="property"> = ('invite', 'join', 'knock', 'leave', 'ban')</em><a class="headerlink" href="#synapse.api.constants.Membership.LIST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="synapse.api.constants.PresenceState">
+<em class="property">class </em><code class="sig-prename descclassname">synapse.api.constants.</code><code class="sig-name descname">PresenceState</code><a class="headerlink" href="#synapse.api.constants.PresenceState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Represents the presence state of a user.</p>
+<dl class="attribute">
+<dt id="synapse.api.constants.PresenceState.OFFLINE">
+<code class="sig-name descname">OFFLINE</code><em class="property"> = 'offline'</em><a class="headerlink" href="#synapse.api.constants.PresenceState.OFFLINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.PresenceState.ONLINE">
+<code class="sig-name descname">ONLINE</code><em class="property"> = 'online'</em><a class="headerlink" href="#synapse.api.constants.PresenceState.ONLINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.PresenceState.UNAVAILABLE">
+<code class="sig-name descname">UNAVAILABLE</code><em class="property"> = 'unavailable'</em><a class="headerlink" href="#synapse.api.constants.PresenceState.UNAVAILABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="synapse.api.constants.RejectedReason">
+<em class="property">class </em><code class="sig-prename descclassname">synapse.api.constants.</code><code class="sig-name descname">RejectedReason</code><a class="headerlink" href="#synapse.api.constants.RejectedReason" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="attribute">
+<dt id="synapse.api.constants.RejectedReason.AUTH_ERROR">
+<code class="sig-name descname">AUTH_ERROR</code><em class="property"> = 'auth_error'</em><a class="headerlink" href="#synapse.api.constants.RejectedReason.AUTH_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="synapse.api.constants.RelationTypes">
+<em class="property">class </em><code class="sig-prename descclassname">synapse.api.constants.</code><code class="sig-name descname">RelationTypes</code><a class="headerlink" href="#synapse.api.constants.RelationTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>The types of relations known to this server.</p>
+<dl class="attribute">
+<dt id="synapse.api.constants.RelationTypes.ANNOTATION">
+<code class="sig-name descname">ANNOTATION</code><em class="property"> = 'm.annotation'</em><a class="headerlink" href="#synapse.api.constants.RelationTypes.ANNOTATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.RelationTypes.REFERENCE">
+<code class="sig-name descname">REFERENCE</code><em class="property"> = 'm.reference'</em><a class="headerlink" href="#synapse.api.constants.RelationTypes.REFERENCE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.RelationTypes.REPLACE">
+<code class="sig-name descname">REPLACE</code><em class="property"> = 'm.replace'</em><a class="headerlink" href="#synapse.api.constants.RelationTypes.REPLACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="synapse.api.constants.RoomCreationPreset">
+<em class="property">class </em><code class="sig-prename descclassname">synapse.api.constants.</code><code class="sig-name descname">RoomCreationPreset</code><a class="headerlink" href="#synapse.api.constants.RoomCreationPreset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="attribute">
+<dt id="synapse.api.constants.RoomCreationPreset.PRIVATE_CHAT">
+<code class="sig-name descname">PRIVATE_CHAT</code><em class="property"> = 'private_chat'</em><a class="headerlink" href="#synapse.api.constants.RoomCreationPreset.PRIVATE_CHAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.RoomCreationPreset.PUBLIC_CHAT">
+<code class="sig-name descname">PUBLIC_CHAT</code><em class="property"> = 'public_chat'</em><a class="headerlink" href="#synapse.api.constants.RoomCreationPreset.PUBLIC_CHAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.RoomCreationPreset.TRUSTED_PRIVATE_CHAT">
+<code class="sig-name descname">TRUSTED_PRIVATE_CHAT</code><em class="property"> = 'trusted_private_chat'</em><a class="headerlink" href="#synapse.api.constants.RoomCreationPreset.TRUSTED_PRIVATE_CHAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="synapse.api.constants.ThirdPartyEntityKind">
+<em class="property">class </em><code class="sig-prename descclassname">synapse.api.constants.</code><code class="sig-name descname">ThirdPartyEntityKind</code><a class="headerlink" href="#synapse.api.constants.ThirdPartyEntityKind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="attribute">
+<dt id="synapse.api.constants.ThirdPartyEntityKind.LOCATION">
+<code class="sig-name descname">LOCATION</code><em class="property"> = 'location'</em><a class="headerlink" href="#synapse.api.constants.ThirdPartyEntityKind.LOCATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.ThirdPartyEntityKind.USER">
+<code class="sig-name descname">USER</code><em class="property"> = 'user'</em><a class="headerlink" href="#synapse.api.constants.ThirdPartyEntityKind.USER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="synapse.api.constants.UserTypes">
+<em class="property">class </em><code class="sig-prename descclassname">synapse.api.constants.</code><code class="sig-name descname">UserTypes</code><a class="headerlink" href="#synapse.api.constants.UserTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Allows for user type specific behaviour. With the benefit of hindsight
+‘admin’ and ‘guest’ users should also be UserTypes. Normal users are type None</p>
+<dl class="attribute">
+<dt id="synapse.api.constants.UserTypes.ALL_USER_TYPES">
+<code class="sig-name descname">ALL_USER_TYPES</code><em class="property"> = ('support', 'bot')</em><a class="headerlink" href="#synapse.api.constants.UserTypes.ALL_USER_TYPES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.UserTypes.BOT">
+<code class="sig-name descname">BOT</code><em class="property"> = 'bot'</em><a class="headerlink" href="#synapse.api.constants.UserTypes.BOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="synapse.api.constants.UserTypes.SUPPORT">
+<code class="sig-name descname">SUPPORT</code><em class="property"> = 'support'</em><a class="headerlink" href="#synapse.api.constants.UserTypes.SUPPORT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="synapse.api.auth.html"
+                        title="previous chapter">synapse.api.auth module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="synapse.api.errors.html"
+                        title="next chapter">synapse.api.errors module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/synapse.api.constants.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="synapse.api.errors.html" title="synapse.api.errors module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="synapse.api.auth.html" title="synapse.api.auth module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Synapse 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="synapse.html" >synapse package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="synapse.api.html" >synapse.api package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Copyright 2014-2017 OpenMarket Ltd, 2017 Vector Creations Ltd, 2017 New Vector Ltd.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+    </div>
+  </body>
+</html>
