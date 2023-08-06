@@ -1,0 +1,3 @@
+[console_scripts]
+gitflow = gitflow_api.gitflow:main
+

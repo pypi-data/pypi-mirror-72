@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: gitflow-api
+Version: 0.3.8
+Summary: Gitflow-API library using a API as backend
+Home-page: https://github.com/mauyr/gitflow-api
+Author: Mauyr Alexandre Pereira
+Author-email: mauyr.pereira@inovapro.com.br
+License: GNU GPLv3
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.0
+Requires-Dist: GitPython (>=2.1.11)
+Requires-Dist: python-gitlab (>=1.6.0)
+Requires-Dist: slackclient (>=1.3.0)
+
+Gitflow-API is a python library used use a gitflow_methodology on development using a API like Gitlab or Github to execute most of process
+
+
