@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+h5sparse/__init__.py
+h5sparse/h5sparse.py
+h5sparse/tests.py
+h5sparse_tensor.egg-info/PKG-INFO
+h5sparse_tensor.egg-info/SOURCES.txt
+h5sparse_tensor.egg-info/dependency_links.txt
+h5sparse_tensor.egg-info/requires.txt
+h5sparse_tensor.egg-info/top_level.txt
