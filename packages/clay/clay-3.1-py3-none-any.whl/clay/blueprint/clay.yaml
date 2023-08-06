@@ -1,0 +1,23 @@
+---
+# Shell-style patterns files/folders that must not be rendered.
+exclude:
+  - "./**/*"
+  - "~*"
+  - "~*/*"
+  - "~*/**/*"
+  - "_*"
+  - "_*/*"
+  - "_*/**/*"
+
+# Shell-style patterns files/folders that *must be* rendered, even if
+# they are in the exclude list
+include:
+
+# Jinja extensions to use eg: `jinja2.ext.with_`
+jinja_extensions:
+  - jinja2.ext.with_
+
+# Shell-style patterns of files outside `static/` that
+# are binary and thus should not be interpreted as Jinja templates
+binaries:
+  - favicon.ico
