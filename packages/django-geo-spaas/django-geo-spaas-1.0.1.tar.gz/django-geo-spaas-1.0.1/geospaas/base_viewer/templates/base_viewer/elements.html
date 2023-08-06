@@ -1,0 +1,61 @@
+{% extends "base_viewer/page_structure.html" %}
+##############################################################################################################
+{% block content_result %}
+<table border=1 width='100%' height='100%'>
+    <tr>
+        {% block headers %}
+        <th>Filename</th>
+        {% endblock headers %}
+    </tr>
+
+    {% if page_obj %}
+
+    {% for ds in page_obj %}
+    <tr >
+        <td class="place_ds">
+            <div class="geometry_ref" id="{{ ds.geographic_location.pk }}">
+            {% for url in ds.dataseturi_set.all %}
+            {{ url.uri|urlizetrunc:64}} <br>
+            {% endfor %}
+            </div>
+        </td>
+
+    </tr>
+    {% endfor %}
+
+    {% else %}
+    <tr>
+        <td colspan=10 class="place_ds">No datasets found</td>
+    </tr>
+    {% endif %}
+</table>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock content_result %}
+##############################################################################################################
+{% block contentmap %}
+
+<form method="post" width='100%' height='100%'>
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+    <input type="submit" value="Search all meta-data" />
+</form>
+{% endblock contentmap %}
