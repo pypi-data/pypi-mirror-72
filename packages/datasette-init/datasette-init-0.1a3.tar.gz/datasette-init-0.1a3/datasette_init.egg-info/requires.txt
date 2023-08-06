@@ -1,0 +1,7 @@
+datasette>=0.45a3
+sqlite-utils
+
+[test]
+pytest
+pytest-asyncio
+httpx
