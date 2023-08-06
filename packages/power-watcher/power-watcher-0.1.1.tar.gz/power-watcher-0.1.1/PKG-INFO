@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: power-watcher
+Version: 0.1.1
+Summary: Python3 context manager to log power consumption of any ML-pipeline running on a Nvidia-GPU.
+Home-page: https://github.com/WGussev/PowerWatcher
+Author: Poima
+Author-email: author@example.com
+License: UNKNOWN
+Description: # PowerWatcher
+        
+        Python3 context manager to log power consumption of an ML-pipeline running on a Nvidia-GPU.
+        
+        ## Installation
+        
+        ```
+        pip install power-consumption
+        ```
+        
+        ## Usage
+        
+        ```{python}
+        from power_watcher import PowerWatcher
+        
+        
+        with PowerWatcher() as pw:
+            ...
+            your pipeline
+            ...
+        
+        total_consumption = pw.total  # total power consumption
+        ```
+        
+        ## Repo
+        
+        https://github.com/WGussev/PowerWatcher
+        
+        ## PyPI
+        
+        https://pypi.org/project/power-watcher/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
