@@ -1,0 +1,10 @@
+setup.py
+dnk_distributions/Binomialdistribution.py
+dnk_distributions/Gaussiandistribution.py
+dnk_distributions/Generaldistribution.py
+dnk_distributions/__init__.py
+dnk_distributions.egg-info/PKG-INFO
+dnk_distributions.egg-info/SOURCES.txt
+dnk_distributions.egg-info/dependency_links.txt
+dnk_distributions.egg-info/not-zip-safe
+dnk_distributions.egg-info/top_level.txt
