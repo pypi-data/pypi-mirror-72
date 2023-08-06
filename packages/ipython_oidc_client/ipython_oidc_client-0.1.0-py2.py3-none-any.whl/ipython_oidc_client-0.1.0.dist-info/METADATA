@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ipython_oidc_client
+Version: 0.1.0
+Summary: A Jupyter extension to 
+Home-page: https://github.com/jorgecarleitao/ipython-oidc-client
+License: UNKNOWN
+Author: Jorge C. Leitao
+Author-email: jorgecarleitao@gmail.com
+Classifier: License :: OSI Approved :: MIT License
