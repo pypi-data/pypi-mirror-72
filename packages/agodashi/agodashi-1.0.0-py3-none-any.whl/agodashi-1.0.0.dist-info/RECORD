@@ -1,0 +1,13 @@
+agodashi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+agodashi/app.py,sha256=63OrzQU9Gw2tCZxSo18UAUDDh6llBVHd-v6-AFuiBTY,4099
+agodashi/const.py,sha256=wYyRB47FnYHNsELcmqZzyKYuOrMux7SDm5FSBzh-dxU,176
+agodashi/controller.py,sha256=9bs4AD7OskrLDoCptZL3UFQUdzAplm6yGn2DC7unzzE,3588
+agodashi/cwl.py,sha256=Z3i_t--BZlWFqz2ZqCnzDgjp_13m5pNZx1YNI08SMWM,1731
+agodashi/type.py,sha256=t0ulR7wS0EeaLUDIdXCVi4IIJYiW3q7zOk9XUhl_DqA,1083
+agodashi/util.py,sha256=1j-4eC8UVCSxULaI9oy6WAfJ-fqvKdpBTYgDltVzi9k,3598
+agodashi-1.0.0.dist-info/LICENSE,sha256=XqiWIlBD6joNs735TRCnSPSDekf_dRMkujDxQO6xSYA,11363
+agodashi-1.0.0.dist-info/METADATA,sha256=j3o77gnVzskvTXDxnBuui9DN1fgVpk4EDOu2UayQ7MI,3878
+agodashi-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+agodashi-1.0.0.dist-info/entry_points.txt,sha256=KtA_FWPtMw9bUmKWJfrdMg8fj-zHLGBPnmBU-pizZeo,48
+agodashi-1.0.0.dist-info/top_level.txt,sha256=jqLC3coi9l2P4sJ1snphpBe1W9lRhPSOeZb_B2yISsU,9
+agodashi-1.0.0.dist-info/RECORD,,
