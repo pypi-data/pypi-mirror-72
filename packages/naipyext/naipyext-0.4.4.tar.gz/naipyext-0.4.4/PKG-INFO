@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: naipyext
+Version: 0.4.4
+Summary: Nasy IPython Extensions.
+Home-page: https://github.com/nasyxx/naipyext
+License: GPL-v3
+Author: Nasy
+Author-email: nasyxx+python@gmail.com
+Requires-Python: >=3.7

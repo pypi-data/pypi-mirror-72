@@ -1,0 +1,32 @@
+[build-system]
+build-backend = "pdm.builders.api"
+requires = ["pdm"]
+
+[tool]
+[tool.pdm]
+author = "Nasy <nasyxx+python@gmail.com>"
+description = "Nasy IPython Extensions."
+homepage = "https://github.com/nasyxx/naipyext"
+license = "GPL-v3"
+name = "naipyext"
+python_requires = ">=3.7"
+version = "0.4.4"
+include = ["README.org"]
+[tool.pdm.dependencies]
+ipython = "<8.0.0,>=7.15.0"
+better_exceptions = "<1.0.0,>=0.2.2"
+stackprinter = "<1.0.0,>=0.2.4"
+pendulum = "<3.0.0,>=2.1.0"
+requests_html = "<1.0.0,>=0.10.0"
+httpx = "<1.0.0,>=0.13.3"
+numpy = "<2.0.0,>=1.19.0"
+jupyter = "<2.0.0,>=1.0.0"
+sympy = "<2.0.0,>=1.6"
+pandas = "<2.0.0,>=1.0.5"
+tqdm = "<5.0.0,>=4.46.1"
+bs4 = "<1.0.0,>=0.0.1"
+jupyter_qtconsole_colorschemes = "<1.0.0,>=0.8.1"
+pdir2 = "<1.0.0,>=0.3.1.post2"
+rich = "<4.0.0,>=3.0.0"
+
+[tool.pdm.dev-dependencies]
