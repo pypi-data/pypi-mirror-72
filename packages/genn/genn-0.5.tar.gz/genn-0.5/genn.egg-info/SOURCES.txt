@@ -1,0 +1,15 @@
+README.md
+setup.py
+genn/__init__.py
+genn/embedding.py
+genn/generator.py
+genn/gpt2.py
+genn/gru.py
+genn/importers.py
+genn/lstm.py
+genn/preprocessing.py
+genn.egg-info/PKG-INFO
+genn.egg-info/SOURCES.txt
+genn.egg-info/dependency_links.txt
+genn.egg-info/requires.txt
+genn.egg-info/top_level.txt
