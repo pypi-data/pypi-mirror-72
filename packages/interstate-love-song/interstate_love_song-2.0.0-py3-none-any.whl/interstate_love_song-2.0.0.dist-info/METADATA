@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: interstate-love-song
+Version: 2.0.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Eric Hermelin, Simon Otter, Fredrik Brännbacka
+Author-email: eric.hermelin@ilpvfx.com, simon.otter@ilpvfx.com, fredrik.brannbacka@ilpvfx.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >3.6
+Requires-Dist: falcon (<3,>=2)
+Requires-Dist: defusedxml (==0.6.0)
+Requires-Dist: beaker (<2,>=1)
+Requires-Dist: falcon-middleware-beaker (==0.0.1)
+Requires-Dist: requests (<3,>=2)
+
+UNKNOWN
+
+
