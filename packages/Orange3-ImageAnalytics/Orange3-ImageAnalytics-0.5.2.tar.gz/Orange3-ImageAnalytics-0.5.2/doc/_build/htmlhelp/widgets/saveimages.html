@@ -1,0 +1,97 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <title>Save Images</title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="prev" title="Image Grid" href="imagegrid.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="imagegrid.html" title="Image Grid"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Orange3 Image Analytics  documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="save-images">
+<h1>Save Images</h1>
+<p>Save images in the directory structure.</p>
+<p><strong>Inputs</strong></p>
+<ul class="simple">
+<li>Data: images to save.</li>
+</ul>
+<p><strong>Save Images</strong> is a simple widget that saves images sent to its input. Images will be saved as separate files in their own directory. When a class is present in the data, images will be saved in subdirectories based on the class variable.</p>
+<p>![](images/SaveImages.png)</p>
+<ol class="arabic simple">
+<li>Attribute containing the path to the image.</li>
+<li>If <em>Scale images to</em> is ticked, images will be resized to the size used in the selected embedder:
+- Inception v3: 299x299
+- SqueezeNet: 227x227
+- VGG-16: 224x224
+- VGG-19: 224x224
+- Painters: 256x256
+- DeepLoc: 64x64
+- openface: 256x256</li>
+<li>File format to save images in. See the next section for information on supported formats.</li>
+<li>If <em>Autosave when receiving new data or settings change</em> is on, images will be saved upon every change. <em>Save</em> will save images, while <em>Save as…</em> enables the user to set the name and the folder where to save the images.</li>
+</ol>
+<div class="section" id="supported-formats">
+<h2>Supported Formats</h2>
+<p><strong>Save Images</strong> can save images in the following formats:</p>
+<ul class="simple">
+<li>.png</li>
+<li>.jpeg</li>
+<li>.gif</li>
+<li>.tiff</li>
+<li>.pdf</li>
+<li>.bmp</li>
+<li>.eps</li>
+<li>.ico</li>
+</ul>
+</div>
+<div class="section" id="example">
+<h2>Example</h2>
+<p>Here is a simple example how to use <strong>Save Images</strong>. We loaded 14 paintings from Picasso, sent them to [Image Embedding](imageembedding.md) using <em>Painters</em> embedder, then to [Distances](<a class="reference external" href="https://orange-visual-programming.readthedocs.io/widgets/unsupervised/distances.html" target="_blank">https://orange-visual-programming.readthedocs.io/widgets/unsupervised/distances.html</a>) using cosine distance and finally to [Hierarchical Clustering](<a class="reference external" href="https://orange-visual-programming.readthedocs.io/widgets/unsupervised/hierarchicalclustering.html" target="_blank">https://orange-visual-programming.readthedocs.io/widgets/unsupervised/hierarchicalclustering.html</a>) to construct a dendrogram. Then we selected a cluster from the plot and saved the images belonging to the selected cluster with <strong>Save Images</strong>.</p>
+<p>![](images/SaveImages-Example.png)</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="imagegrid.html" title="Image Grid"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Orange3 Image Analytics  documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, Laboratory of Bioinformatics, Faculty of Computer Science, University of Ljubljana.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+    </div>
+  </body>
+</html>
