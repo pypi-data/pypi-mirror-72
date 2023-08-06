@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: percolation-threshold
+Version: 0.0.2
+Summary: Computational tool to calculate percolation threshold for various lattices
+Home-page: https://github.com/MissingBrainException/PercolationThreshold
+Author: MissingBrainException, Khadir Mohamed Islam, Abdennour Slimane
+Author-email: muhammad.masud.1997@gmail.com, islam.islam.khadir6@gmail.com, slimaneabdennourphysics@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.3
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: psutil
+
+# PERCOLATION-THRESHOLD
+
+This package was created during [codeastro week](https://semaphorep.github.io/codeastro/) in the term of the group project following all the instruction given during this classes to give the basic 'SD/SE ' for astronomer in order to develop in release there 1st open source package
+
+## Installation
+
+To install the package, you need to execute the following command in your bash.
+
+```
+$ pip install percolation-threshold
+```
+## Documentation
+You can find the complete documentation [here.](https://missingbrainexception.github.io/PercolationThreshold/)
+
+## Acknowledgment
+
+We would like to thank the people who helped in making this modest package:
+
+- Codeastro team
+- Simon
+- And all the participants
+
+## LICENSE
+
+This work is licensed under the [MIT License](https://github.com/MissingBrainException/PercolationThreshold/blob/master/LICENSE)
+
+
