@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: imaps
+Version: 0.5.0
+Summary: Bioinformatic pipelines for analysis of CLIP data
+Home-page: https://github.com/jernejule/imaps
+Author: Ule lab and Genialis, Inc.
+Author-email: jernej.ule@crick.ac.uk
+License: Apache 2.0
+Keywords: imaps CLIP iCLIP bioinformatics protein
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6, <3.8
+Description-Content-Type: text/x-rst
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas (==0.24.2)
+Requires-Dist: plumbum
+Requires-Dist: pybedtools
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: sklearn
+Requires-Dist: resdk (>=11.0.1)
+Requires-Dist: textdistance
+Requires-Dist: wrapt (==1.11.*)
+Requires-Dist: xlrd
+Provides-Extra: docs
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Provides-Extra: package
+Requires-Dist: twine ; extra == 'package'
+Requires-Dist: wheel ; extra == 'package'
+Provides-Extra: test
+Requires-Dist: black ; extra == 'test'
+Requires-Dist: check-manifest ; extra == 'test'
+Requires-Dist: docutils ; extra == 'test'
+Requires-Dist: flake8 ; extra == 'test'
+Requires-Dist: isort ; extra == 'test'
+Requires-Dist: ngs-test-utils ; extra == 'test'
+Requires-Dist: pydocstyle ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: setuptools-scm ; extra == 'test'
+
+Bioinformatic pipelines powering `iMaps`_ platform.
+
+.. _iMaps: https://imaps.genialis.com
+
