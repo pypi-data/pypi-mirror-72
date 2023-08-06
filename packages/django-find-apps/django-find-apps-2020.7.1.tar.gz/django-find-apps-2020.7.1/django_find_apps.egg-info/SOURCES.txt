@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+django_find_apps/__init__.py
+django_find_apps.egg-info/PKG-INFO
+django_find_apps.egg-info/SOURCES.txt
+django_find_apps.egg-info/dependency_links.txt
+django_find_apps.egg-info/top_level.txt
