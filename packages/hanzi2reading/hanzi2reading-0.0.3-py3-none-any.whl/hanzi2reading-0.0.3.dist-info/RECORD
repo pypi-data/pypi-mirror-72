@@ -1,0 +1,12 @@
+hanzi2reading/__init__.py,sha256=8fuF09Sb6SVCwy7Zh_MD7Qac5esoLhSCNOyhVOQmy1M,31
+hanzi2reading/create_db.py,sha256=pXtoIlOMIl_fIYL8ukKQLQ1Ge-ytujPJArJ4_sVFPnk,2001
+hanzi2reading/create_moedict.py,sha256=6B4ANekpgHC9N492uXc1BRlKxm-kyqFEUxhfae70f2Y,2464
+hanzi2reading/read.py,sha256=1YOO0gfH7Ahd78t32ZYDzzQ8YGPxT6qO2wqzV6A-kvg,1539
+hanzi2reading/read_db.py,sha256=OyLrKU4pLhPeVW_3L5NZFWJX-SlDAC1zwIGr5JMv8e4,430
+hanzi2reading/trie.py,sha256=losKWNqqvv8dGjfEAra9wOhTsOZUuELCaqh6Y11hA8w,1013
+hanzi2reading/data/pinyin.txt,sha256=x6RDPxbT5hk8WZHYqp2HEcceDkTfZO9Aq_HzYfgM7LY,503748
+hanzi2reading-0.0.3.data/scripts/hanzi2reading,sha256=hroA7frwAazl7gHAesIN6ETE0agTFOdk_2PEO_RVrL8,108
+hanzi2reading-0.0.3.dist-info/METADATA,sha256=Ho49XhMN-tojf6vpYbBeHzg89622NqyA0UudKcOiosQ,494
+hanzi2reading-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+hanzi2reading-0.0.3.dist-info/top_level.txt,sha256=0g2rZ8BZ5mCg_doG9fZ1WJvMGdT9vn9NynmyF9iWTWA,14
+hanzi2reading-0.0.3.dist-info/RECORD,,
