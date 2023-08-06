@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: Questioned
+Version: 0.4.4
+Summary: Computer Architectures Exam Generator
+Home-page: UNKNOWN
+Author: David Visscher
+Author-email: pypi-dev@davidvisscher.nl
+License: UNKNOWN
+Keywords: Exam question generator
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.8
+Requires-Dist: click (==7.1.1)
+Requires-Dist: PyYAML (==5.3.1)
+
+UNKNOWN
+
+
