@@ -1,0 +1,13 @@
+README.md
+setup.py
+tispoon/__init__.py
+tispoon/__main__.py
+tispoon/__version__.py
+tispoon/core.py
+tispoon.egg-info/PKG-INFO
+tispoon.egg-info/SOURCES.txt
+tispoon.egg-info/dependency_links.txt
+tispoon.egg-info/entry_points.txt
+tispoon.egg-info/not-zip-safe
+tispoon.egg-info/requires.txt
+tispoon.egg-info/top_level.txt
