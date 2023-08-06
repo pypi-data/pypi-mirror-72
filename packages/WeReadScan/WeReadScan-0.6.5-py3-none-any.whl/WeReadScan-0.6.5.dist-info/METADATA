@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: WeReadScan
+Version: 0.6.5
+Summary: WeRead PDF Scanner
+Home-page: https://github.com/Algebra-FUN/WeReadScan
+Author: Algebra-FUN
+Author-email: 2593991307@qq.com
+License: GPL Licence
+Keywords: weread,scan,pdf,convert,selenium
+Platform: window
+Requires-Dist: pillow
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: img2pdf
+Requires-Dist: opencv-python
+
+Scan the book on WeRead and convert to pdf
+
+
