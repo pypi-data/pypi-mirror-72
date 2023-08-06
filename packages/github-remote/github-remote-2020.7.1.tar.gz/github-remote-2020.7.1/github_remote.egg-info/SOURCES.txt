@@ -1,0 +1,11 @@
+requirements.txt
+setup.py
+github_remote/__init__.py
+github_remote/name.py
+github_remote/rm.py
+github_remote/url.py
+github_remote.egg-info/PKG-INFO
+github_remote.egg-info/SOURCES.txt
+github_remote.egg-info/dependency_links.txt
+github_remote.egg-info/requires.txt
+github_remote.egg-info/top_level.txt
