@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: rasa-plus
+Version: 0.1.0
+Summary: An organizer for your rasa bot dialogs
+Home-page: https://github.com/alexandrebarbaruiva/rasa-plus
+Author: Alexandre Augusto de Sá dos Santos
+Author-email: alexandrebarbaruiva@gmail.com
+License: UNKNOWN
+Description: # rasa-plus
+        
+        It's a Rasa plugin that allows you to separate your dialogs and make them
+        more readable (and easier to find) and it will unify them in a single
+        final file that's ready for production.
+        
+        # domain.yml
+        
+        This file is composed by 
+        - responses
+        - entities
+        - forms
+        - intents
+        - session_config
+        - slots
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
