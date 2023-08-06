@@ -1,0 +1,4 @@
+[console_scripts]
+etna=etna_cli.etna:main
+etna-cli=etna_cli.etna:main
+
