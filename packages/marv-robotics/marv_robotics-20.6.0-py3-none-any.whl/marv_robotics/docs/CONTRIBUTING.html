@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Contribution guide &#8212; MARV Robotics 20.06.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_paramlinks.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="shortcut icon" href="_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Patterns and known issues" href="patterns.html" />
+    <link rel="prev" title="Tutorial: Write your own nodes" href="tutorial/write-your-own.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="contribution-guide">
+<h1>Contribution guide<a class="headerlink" href="#contribution-guide" title="Permalink to this headline">¶</a></h1>
+<p>Thank you for considering to contribute to MARV. Below is information on how to report issues and submit your contributions to MARV.</p>
+<div class="section" id="rights-to-and-license-of-contributions">
+<h2>Rights to and license of contributions<a class="headerlink" href="#rights-to-and-license-of-contributions" title="Permalink to this headline">¶</a></h2>
+<p>The MARV Community Edition is licensed under <a class="reference external" href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a> and <a class="reference external" href="https://ternaris.com">Ternaris</a> offers an Enterprise Edition with an extended feature set under the proprietary <a class="reference external" href="./LICENSES/MARV-License">MARV-License</a>.</p>
+<p>For one, we want to ensure that you have the rights to your contributions, for another we’d like to be able to use your contributions to either edition in both editions.</p>
+<p>To this end, beyond what is required by the license of the MARV edition you are contributing to, your submission of an issue, merge request, comment, or code to us is:</p>
+<ol class="arabic simple">
+<li><p>If your employer has rights in your contributions, your representation that your employer has authorized you to enter into this agreement on its behalf;</p></li>
+<li><p>Your agreement, or your employer’s agreement, with the terms and conditions in this document;</p></li>
+<li><p>Your signature of the <a class="reference external" href="https://developercertificate.org/">Developer Certificate of Origin</a> (details below); and</p></li>
+<li><p>Your grant of a license to your contributions under:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="./LICENSES/Apache-2.0">Apache-2.0</a> license for code,</p></li>
+<li><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license for documentation</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="reporting-issues-minimal-working-example">
+<h2>Reporting issues / minimal working example<a class="headerlink" href="#reporting-issues-minimal-working-example" title="Permalink to this headline">¶</a></h2>
+<p>In order to provide a minimal working example to reproduce issues you
+are seeing, please:</p>
+<ol class="arabic simple">
+<li><p>Create a fork of this repository and clone it.</p></li>
+<li><p>Create a site folder in <a class="reference external" href="./sites">./sites</a> containing your configuration.</p></li>
+<li><p>If there is custom code involved, please add a minimal working example based on it to a python package in <a class="reference external" href="./code">./code</a>. We don’t need to see your real code, but we cannot help without code. This will require a <em>sign-off</em>, which is explained below.</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">scanroot</span></code> folder within your site folder and add minimal bags or other files as needed.</p></li>
+<li><p>Make sure the issues you are seeing are exposed by this setup.</p></li>
+<li><p>Push your changes to your fork.</p></li>
+<li><p><a class="reference external" href="https://gitlab.com/ternaris/marv-robotics/issues/new">Submit an issue</a> and add a link to the minimal working example.</p></li>
+</ol>
+</div>
+<div class="section" id="contributing-code-merge-requests">
+<h2>Contributing code / merge requests<a class="headerlink" href="#contributing-code-merge-requests" title="Permalink to this headline">¶</a></h2>
+<p>In order to contribute code there are a few noteworthy things:</p>
+<ol class="arabic simple">
+<li><p>Especially for non-trivial contributions, please <strong>submit an issue first</strong> to discuss your ideas.</p></li>
+<li><p>If your merge requests relates to an existing issue, please reference it from your merge request.</p></li>
+<li><p>When creating a merge request, please <a class="reference external" href="https://docs.gitlab.com/ee/user/project/merge_requests/allow_collaboration.html">allow collaboration</a>. This enables us to make small adjustments and rebase the branch as needed. Please use dedicated branches for your merge request and don’t give us access to a branch that is dear to you.</p></li>
+<li><p>Stick to <em>The seven rules of a great Git commit message</em> (see below).</p></li>
+<li><p>As part of your merge request, please <strong>update the changelog</strong> accordingly in one dedicated final commit.</p></li>
+<li><p>We require you to <strong>sign-off your commits</strong> (see below). Your sign-off indicates that you agreed to the terms and conditions laid out in this document, if applicable on behalf of your employer.</p></li>
+</ol>
+<div class="section" id="the-seven-rules-of-a-great-git-commit-message">
+<h3>The seven rules of a great Git commit message<a class="headerlink" href="#the-seven-rules-of-a-great-git-commit-message" title="Permalink to this headline">¶</a></h3>
+<p>We like <a class="reference external" href="https://chris.beams.io/posts/git-commit/#seven-rules">The seven rules of a great Git commit message</a>, summarized here for completeness, follow links for further reading.</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://chris.beams.io/posts/git-commit/#separate">Separate subject from body with a blank line</a></p></li>
+<li><p><a class="reference external" href="https://chris.beams.io/posts/git-commit/#limit-50">Limit the subject line to 50 characters</a> (soft-limit 50, hard-limit 72)</p></li>
+<li><p><a class="reference external" href="https://chris.beams.io/posts/git-commit/#capitalize">Start subject line with uppercase letter</a></p></li>
+<li><p><a class="reference external" href="https://chris.beams.io/posts/git-commit/#end">Do not end the subject line with a period</a></p></li>
+<li><p><a class="reference external" href="https://chris.beams.io/posts/git-commit/#imperative">Use the imperative mood in the subject line</a></p></li>
+<li><p><a class="reference external" href="https://chris.beams.io/posts/git-commit/#wrap-72">Wrap the body at 72 characters</a></p></li>
+<li><p><a class="reference external" href="https://chris.beams.io/posts/git-commit/#why-not-how">Use the body to explain what and why vs. how</a></p></li>
+</ol>
+</div>
+<div class="section" id="update-changelog">
+<h3>Update changelog<a class="headerlink" href="#update-changelog" title="Permalink to this headline">¶</a></h3>
+<p>You know best what your changes are about, so please help us by updating the <a class="reference external" href="./CHANGES.rst">changelog</a> right away. Please do this in one commit that only updates the changelog and builds the final commit, the HEAD of your branch.</p>
+<p>The format of our changelog is based on <a class="reference external" href="https://keepachangelog.com/en/1.0.0/">Keep a changelog</a>. When writing changelog entries:</p>
+<ul class="simple">
+<li><p>imagine a novice person, another developer, and yourself as target audience;</p></li>
+<li><p>avoid using technical terms and only talking in general terms;</p></li>
+<li><p>write in terms of features, i.e. what, not how;</p></li>
+<li><p>reference relevant issues and merge requests.</p></li>
+</ul>
+<p>Inspiration taken from <a class="reference external" href="https://www.itsupportguides.com/blog/how-to-write-changelog-and-why-it-matters/">How to write a changelog and why it matters</a>.</p>
+</div>
+<div class="section" id="signing-off-a-commit">
+<h3>Signing off a commit<a class="headerlink" href="#signing-off-a-commit" title="Permalink to this headline">¶</a></h3>
+<p>You sign off a commit by adding a line like the following to the bottom of its commit message, separated by an empty line.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Signed</span><span class="o">-</span><span class="n">off</span><span class="o">-</span><span class="n">by</span><span class="p">:</span> <span class="n">Fullname</span> <span class="o">&lt;</span><span class="n">email</span><span class="nd">@example</span><span class="o">.</span><span class="n">net</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Make sure it reflects your real name and email address. Git does this automatically when using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-s</span></code>.</p>
+<p>Except for the licenses granted herein, you reserve all right, title, and interest in and to your contributions.</p>
+</div>
+</div>
+<div class="section" id="developer-certificate-of-origin">
+<h2>Developer Certificate of Origin<a class="headerlink" href="#developer-certificate-of-origin" title="Permalink to this headline">¶</a></h2>
+<p>Embedded and reformatted from <a class="reference external" href="https://developercertificate.org/">Developer Certificate of Origin</a>:</p>
+<p>Developer Certificate of Origin
+Version 1.1</p>
+<p>Copyright (C) 2004, 2006 The Linux Foundation and its contributors, 1 Letterman Drive, Suite D4700, San Francisco, CA, 94129</p>
+<p>Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.</p>
+<p>Developer’s Certificate of Origin 1.1</p>
+<p>By making a contribution to this project, I certify that:</p>
+<ol class="arabic simple">
+<li><p>The contribution was created in whole or in part by me and I have the right to submit it under the open source license indicated in the file; or</p></li>
+<li><p>The contribution is based upon previous work that, to the best of my knowledge, is covered under an appropriate open source license and I have the right under that license to submit that work with modifications, whether created in whole or in part by me, under the same open source license (unless I am permitted to submit under a different license), as indicated in the file; or</p></li>
+<li><p>The contribution was provided directly to me by some other person who certified (1), (2) or (3) and I have not modified it.</p></li>
+<li><p>I understand and agree that this project and the contribution are public and that a record of the contribution (including all personal information I submit with it, including my sign-off) is maintained indefinitely and may be redistributed consistent with this project or the open source license(s) involved.</p></li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MARV Robotics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/setup-basic-site.html">Tutorial: Setup basic site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/write-your-own.html">Tutorial: Write your own nodes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contribution guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rights-to-and-license-of-contributions">Rights to and license of contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reporting-issues-minimal-working-example">Reporting issues / minimal working example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contributing-code-merge-requests">Contributing code / merge requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#developer-certificate-of-origin">Developer Certificate of Origin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="patterns.html">Patterns and known issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="views.html">Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scan.html">Scanner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="widgets.html">Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="httpapi.html">HTTP API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload.html">Upload (EE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migrate/index.html">Migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/marv.html">marv</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="tutorial/write-your-own.html" title="previous chapter">Tutorial: Write your own nodes</a></li>
+      <li>Next: <a href="patterns.html" title="next chapter">Patterns and known issues</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2019  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/CONTRIBUTING.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Upload (EE) &#8212; MARV Robotics 20.06.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_paramlinks.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="shortcut icon" href="_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Deployment" href="deploy.html" />
+    <link rel="prev" title="HTTP API" href="httpapi.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="upload-ee">
+<span id="upload"></span><h1>Upload (EE)<a class="headerlink" href="#upload-ee" title="Permalink to this headline">¶</a></h1>
+<p>MARV is designed to process and manage continuous recordings performed by large fleets of robots. To ease the handling of a large influx of data MARV implements an upload functionality. It takes care that new data is quickly and securely handed into MARV management. Transmissions are automatically authenticated and encrypted.</p>
+<p>In the MARV ecosystem data providers that connect to the MARV server are called <code class="docutils literal notranslate"><span class="pre">leafs</span></code>. A leaf can be any potential source of data, e.g. a robot, a vehicle, a CI server, or any other technical system.</p>
+<div class="section" id="preparations">
+<h2>Preparations<a class="headerlink" href="#preparations" title="Permalink to this headline">¶</a></h2>
+<p>For secure operation some preparational steps are necessary.</p>
+<div class="section" id="create-a-leaf">
+<h3>Create a leaf<a class="headerlink" href="#create-a-leaf" title="Permalink to this headline">¶</a></h3>
+<p>To upload data to MARV the data providing robot has to be registered as a leaf.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(server)$ marv leaf add C3P0
+</pre></div>
+</div>
+</div>
+<div class="section" id="generate-an-authentication-token">
+<h3>Generate an authentication token<a class="headerlink" href="#generate-an-authentication-token" title="Permalink to this headline">¶</a></h3>
+<p>MARV does not allow anonymous uploads and all connections have to be authenticated. This is achieved by generating tokens on the server and storing those on the leafs.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(server)$ marv leaf regen-token C3P0
+New token for C3P0: &lt;secret_token&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="store-token-on-leaf">
+<h3>Store token on leaf<a class="headerlink" href="#store-token-on-leaf" title="Permalink to this headline">¶</a></h3>
+<p>The freshly created token has to be stored on the leaf. The command will prompt twice to paste the string from the server.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(leaf)$ marv set-leaf-token
+Token: &lt;secret_token&gt;
+Repeat for confirmation: &lt;secret_token&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="upload-datasets">
+<h2>Upload datasets<a class="headerlink" href="#upload-datasets" title="Permalink to this headline">¶</a></h2>
+<p>Once server and leaf have been prepared uploading datasets to MARV is straightforward.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(leaf)$ marv upload --url https://example.com --collection bags recording.bag
+</pre></div>
+</div>
+<p>This command will upload the file <code class="docutils literal notranslate"><span class="pre">recording.bag</span></code> to the MARV instance <code class="docutils literal notranslate"><span class="pre">example.com</span></code> and add the dataset to the <code class="docutils literal notranslate"><span class="pre">bags</span></code> collection. It is possible to specify any number of files to upload as a singular dataset. To upload multiple datasets call the command multiple times.</p>
+<div class="section" id="return-code">
+<h3>Return code<a class="headerlink" href="#return-code" title="Permalink to this headline">¶</a></h3>
+<p>On success the return value will be zero and the upload process will have made sure that the checksums of all uploaded files are correct.</p>
+<p>Rerunning <code class="docutils literal notranslate"><span class="pre">marv</span> <span class="pre">upload</span></code> on the same set of files will not create another dataset. Instead the MARV will recognize that the data already exists on the server and will indicate success by returning zero.</p>
+<p>If an upload is interrupted manually of by e.g. loss of network connectivity the return value will be non zero to indicate failure. Rerunning <code class="docutils literal notranslate"><span class="pre">marv</span> <span class="pre">upload</span></code> with the same parameters will resume the upload from where it was interrupted.</p>
+</div>
+</div>
+<div class="section" id="data-safety">
+<h2>Data safety<a class="headerlink" href="#data-safety" title="Permalink to this headline">¶</a></h2>
+<p>The uploaded datasets are stored in a subdirectory <code class="docutils literal notranslate"><span class="pre">leaf</span></code> in the collection’s scanroot. Independent of the upload feature all scanroots need to be backed up regularly, e.g. via cronjob. In addition to that a list of checkpoint commands can be run before MARV touches the scanroot as part of an upload. Please see <a class="reference internal" href="config.html#cfg-upload-checkpoint-commands"><span class="std std-ref">upload_checkpoint_commands</span></a> for more information.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MARV Robotics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/setup-basic-site.html">Tutorial: Setup basic site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/write-your-own.html">Tutorial: Write your own nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="patterns.html">Patterns and known issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="views.html">Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scan.html">Scanner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="widgets.html">Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="httpapi.html">HTTP API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Upload (EE)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#preparations">Preparations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upload-datasets">Upload datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-safety">Data safety</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migrate/index.html">Migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/marv.html">marv</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="httpapi.html" title="previous chapter">HTTP API</a></li>
+      <li>Next: <a href="deploy.html" title="next chapter">Deployment</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2019  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/upload.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

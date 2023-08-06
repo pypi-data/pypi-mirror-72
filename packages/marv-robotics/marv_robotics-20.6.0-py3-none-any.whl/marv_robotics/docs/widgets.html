@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Widgets &#8212; MARV Robotics 20.06.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_paramlinks.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="shortcut icon" href="_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="HTTP API" href="httpapi.html" />
+    <link rel="prev" title="Nodes" href="nodes.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="widgets">
+<span id="id1"></span><h1>Widgets<a class="headerlink" href="#widgets" title="Permalink to this headline">¶</a></h1>
+<p>The frontend detail view consists of sections displayed as tabs containing widgets. Specific nodes produce the output rendered by the frontend into sections and widgets. See <a class="reference internal" href="tutorial/write-your-own.html#write-your-own"><span class="std std-ref">Tutorial: Write your own nodes</span></a> for an introduction to this.</p>
+<p><a class="reference internal" href="nodes.html#section-nodes"><span class="std std-ref">Section nodes</span></a> are decorated with <code class="docutils literal notranslate"><span class="pre">&#64;marv.node(Section)</span></code> and push a dictionary with title and a list of widgets:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">section</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Section title&#39;</span><span class="p">,</span> <span class="s1">&#39;widgets&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">widget</span><span class="p">,</span> <span class="o">...</span><span class="p">]}</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="nodes.html#widget-nodes"><span class="std std-ref">Widget nodes</span></a> are decorated with <code class="docutils literal notranslate"><span class="pre">&#64;marv.node(Widget)</span></code> and push a dictionary with an optional title and one key corresponding to a <code class="docutils literal notranslate"><span class="pre">widget_type</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">image</span></code>) and <code class="docutils literal notranslate"><span class="pre">value</span></code> with data extracted from a dataset to be rendered by the widget (e.g. <code class="docutils literal notranslate"><span class="pre">{'src':</span> <span class="pre">'img/path'}</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">widget</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Widget title&#39;</span><span class="p">,</span> <span class="n">widget_type</span><span class="p">:</span> <span class="n">data</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Widgets are either rendered directly into a section or are used as part of another composite widget, e.g. an <code class="docutils literal notranslate"><span class="pre">image</span></code> in a <code class="docutils literal notranslate"><span class="pre">gallery</span></code> (see below).</p>
+<p>Valid values for <code class="docutils literal notranslate"><span class="pre">widget_type</span></code> are given in the following sections. The <code class="docutils literal notranslate"><span class="pre">title</span></code> key is optional and omitted for brevity.</p>
+<div class="section" id="image">
+<span id="widget-image"></span><h2>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;image&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;src&#39;</span><span class="p">:</span> <span class="n">img</span><span class="o">.</span><span class="n">relpath</span><span class="p">}}</span>
+</pre></div>
+</div>
+<p>Example: Image used inside gallery <a class="reference internal" href="nodes.html#marv_robotics.detail.galleries" title="marv_robotics.detail.galleries"><code class="xref py py-func docutils literal notranslate"><span class="pre">marv_robotics.detail.galleries()</span></code></a></p>
+</div>
+<div class="section" id="gallery">
+<span id="widget-gallery"></span><h2>Gallery<a class="headerlink" href="#gallery" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">gallery</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;gallery&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;images&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">image</span><span class="p">,</span> <span class="o">...</span><span class="p">]}}</span>
+</pre></div>
+</div>
+<p>Example: <a class="reference internal" href="nodes.html#marv_robotics.detail.galleries" title="marv_robotics.detail.galleries"><code class="xref py py-func docutils literal notranslate"><span class="pre">marv_robotics.detail.galleries()</span></code></a></p>
+</div>
+<div class="section" id="video">
+<span id="widget-video"></span><h2>Video<a class="headerlink" href="#video" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">video</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;video&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;src&#39;</span><span class="p">:</span> <span class="n">videofile</span><span class="o">.</span><span class="n">relpath</span><span class="p">}}</span>
+</pre></div>
+</div>
+<p>Example: <a class="reference internal" href="nodes.html#marv_robotics.detail.video_section" title="marv_robotics.detail.video_section"><code class="xref py py-func docutils literal notranslate"><span class="pre">marv_robotics.detail.video_section()</span></code></a></p>
+</div>
+<div class="section" id="dropdown-ee">
+<span id="widget-dropdown"></span><h2>Dropdown (EE)<a class="headerlink" href="#dropdown-ee" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dropdown</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;dropdown&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;widgets&#39;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;/cam1&#39;</span><span class="p">,</span> <span class="s1">&#39;video&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;src&#39;</span><span class="p">:</span> <span class="n">videofile</span><span class="o">.</span><span class="n">relpath</span><span class="p">}},</span>
+    <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;/cam2&#39;</span><span class="p">,</span> <span class="s1">&#39;video&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;src&#39;</span><span class="p">:</span> <span class="n">videofile</span><span class="o">.</span><span class="n">relpath</span><span class="p">}},</span>
+<span class="p">]}}</span>
+</pre></div>
+</div>
+<p>A dropdown menu selects one of a list of widgets to be displayed below; their titles are displayed in the dropdown.</p>
+</div>
+<div class="section" id="trajectory">
+<span id="widget-trajectory"></span><h2>Trajectory<a class="headerlink" href="#trajectory" title="Permalink to this headline">¶</a></h2>
+<p>The trajectory widget renders a list of layers on top of each other.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;zoom&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">},</span>
+ <span class="s1">&#39;layers&#39;</span><span class="p">:</span> <span class="p">[</span>
+     <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Vector floor map&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;geojson&#39;</span><span class="p">:</span> <span class="n">geojson_object1</span><span class="p">},</span>
+     <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Trajectory&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span>
+      <span class="s1">&#39;geojson&#39;</span><span class="p">:</span> <span class="n">geojson_object2</span><span class="p">},</span>
+ <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The zoom value defines the valid zoom range that will be enforced in the frontend. Each layer in the list is defined by its name that is displayed in the legend, an optional legend color, and its GeoJSON definition.</p>
+<p>The geojson value conforms the official <a class="reference external" href="https://tools.ietf.org/html/rfc7946">GeoJSON format specification</a>, and adds a few styling extensions. For now the widget supports a subset of the GeoJSON standard. The widget expects a feature collection as the toplevel GeoJSON object and the supported geometries are <cite>LineString</cite> and <cite>Polygon</cite>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;feature_collection&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="p">[</span>
+ <span class="p">{</span><span class="s1">&#39;geometry&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;line_string&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;coordinates&#39;</span><span class="p">:</span> <span class="n">coord_list</span><span class="p">}},</span>
+  <span class="s1">&#39;properties&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;coordinatesystem&#39;</span><span class="p">:</span> <span class="s1">&#39;WGS84&#39;</span><span class="p">,</span>      <span class="c1"># or `cartesian`</span>
+                 <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span>        <span class="c1"># per geometry color</span>
+                 <span class="s1">&#39;colors&#39;</span><span class="p">:</span> <span class="n">color_list</span><span class="p">,</span>             <span class="c1"># or per vertex color list</span>
+                 <span class="s1">&#39;fillcolor&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span>    <span class="c1"># per geometry fillcolor</span>
+                 <span class="s1">&#39;fillcolors&#39;</span><span class="p">:</span> <span class="n">fillcolor_list</span><span class="p">,</span>     <span class="c1"># or per vertex fillcolor list</span>
+                 <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mf">4.</span><span class="p">,</span>                      <span class="c1"># line or polygon stroke width</span>
+                 <span class="s1">&#39;timestamps&#39;</span><span class="p">:</span> <span class="n">timestamp_list</span><span class="p">,</span>     <span class="c1"># per vertex timestamp used for playback</span>
+                 <span class="s1">&#39;rotations&#39;</span><span class="p">:</span> <span class="n">rotations_list</span><span class="p">,</span>      <span class="c1"># per vertex rotations if markers are used</span>
+                 <span class="s1">&#39;markervertices&#39;</span> <span class="n">marker_geometry</span><span class="p">,</span> <span class="c1"># rotation marker polygon (e.g. `[0, 0, -1, .3, -1, -.3]`)</span>
+                 <span class="p">}},</span>
+<span class="p">]}}</span>
+</pre></div>
+</div>
+<p>The properties object holds styling and animation information for the trajectory player widget. Properties should at least define one of the color values, apart from that all entries are optional. The default coordinatesystem is <cite>WGS84</cite> which is used per default in the GeoJSON standard and in <cite>sensor_msgs/NavSatFix Message</cite>. The value <cite>cartesian</cite> allows the use of any Cartesian coordinate system.</p>
+<p><cite>Colors</cite> can be given either as a per geometry value or as a list of values for each vertex in the geometry.</p>
+<p>The <cite>width</cite> value corresponds to the rendered line width in pixels. When the geometry is of type <cite>polygon</cite> and either of <cite>color</cite> or <cite>colors</cite> is set, then a stroke of width pixels is rendered.</p>
+<p><em>EE only:</em> The presence of a <cite>timestamps</cite> list enables the player functionality. This option works only with geometries of type <cite>LineString</cite> and should hold one value per geometry vertex. The widget assumes that the timestamps are in ascending order, as usually delivered by a GPS sensor.</p>
+<p><em>EE only:</em> The presence of a <cite>markervertices</cite> enables rendering of a marker at the current trajectory location during playback. The triangle size is not affected by zoom. If not set explicitly its rotation is calculated by the last significant heading from the coordinates.</p>
+<p><em>EE only:</em> The <cite>rotations</cite> list can be used to set the rotation of the marker at each coordinate. Each value is a scalar indicating the rotation around the z axis, e.g. obtained from an IMU. The rotation angles have to be given counter clock wise in radians, with zero pointing in the direction of the x axis.</p>
+<p>Example: <a class="reference internal" href="nodes.html#marv_robotics.detail.trajectory_section" title="marv_robotics.detail.trajectory_section"><code class="xref py py-func docutils literal notranslate"><span class="pre">marv_robotics.detail.trajectory_section()</span></code></a></p>
+</div>
+<div class="section" id="table">
+<span id="widget-table"></span><h2>Table<a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h2>
+<p>Example: <a class="reference internal" href="nodes.html#marv_robotics.detail.bagmeta_table" title="marv_robotics.detail.bagmeta_table"><code class="xref py py-func docutils literal notranslate"><span class="pre">marv_robotics.detail.bagmeta_table()</span></code></a></p>
+</div>
+<div class="section" id="key-value">
+<span id="widget-keyval"></span><h2>Key/value<a class="headerlink" href="#key-value" title="Permalink to this headline">¶</a></h2>
+<p>Example: <a class="reference internal" href="nodes.html#marv_robotics.detail.summary_keyval" title="marv_robotics.detail.summary_keyval"><code class="xref py py-func docutils literal notranslate"><span class="pre">marv_robotics.detail.summary_keyval()</span></code></a></p>
+</div>
+<div class="section" id="preformatted">
+<span id="widget-pre"></span><h2>Preformatted<a class="headerlink" href="#preformatted" title="Permalink to this headline">¶</a></h2>
+<p>Wraps data into an html <code class="docutils literal notranslate"><span class="pre">&lt;pre&gt;&lt;/pre&gt;</span></code> tag.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pre</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;pre&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;foo</span><span class="se">\n</span><span class="s1">bar&#39;</span><span class="p">}}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="custom">
+<span id="widget-custom"></span><h2>Custom<a class="headerlink" href="#custom" title="Permalink to this headline">¶</a></h2>
+<p>Renders custom widgets.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">custom</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;custom&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)}}</span>
+</pre></div>
+</div>
+<p>Create <code class="docutils literal notranslate"><span class="pre">site/frontend/custom.js</span></code> and restart your instance to customize widgets and formatters.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="cm">/*!</span>
+<span class="cm"> * Copyright 2016 - 2018  Ternaris.</span>
+<span class="cm"> * SPDX-License-Identifier: CC0-1.0</span>
+<span class="cm"> */</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">marv_extensions</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">formats</span><span class="o">:</span> <span class="p">{</span>
+    <span class="c1">// replace default datetime formatter, show times in UTC</span>
+    <span class="s1">&#39;datetime&#39;</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">date</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">date</span><span class="p">).</span><span class="nx">toUTCString</span><span class="p">();</span> <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">widgets</span><span class="o">:</span> <span class="p">{</span>
+    <span class="c1">// rowcount widget displays the number of rows in a table</span>
+    <span class="s1">&#39;rowcount&#39;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="cm">/* insert callback, renders the data</span>
+
+<span class="cm">        @function insert</span>
+<span class="cm">        @param {HTMLElement} element The parent element</span>
+<span class="cm">        @param {Object} data The data to be rendered</span>
+<span class="cm">        @return {Object} state Any variable, if required by remove</span>
+<span class="cm">      */</span>
+      <span class="kd">function</span> <span class="nx">insert</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">doc</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">ownerDocument</span><span class="p">;</span>
+        <span class="kr">const</span> <span class="nx">el</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">rows</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="s1">&#39; rows&#39;</span><span class="p">);</span>
+        <span class="nx">element</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">el</span><span class="p">);</span>
+
+        <span class="kr">const</span> <span class="nx">state</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">el</span> <span class="p">};</span>
+        <span class="k">return</span> <span class="nx">state</span><span class="p">;</span>
+      <span class="p">},</span>
+
+      <span class="cm">/* remove callback, clean up if necessary</span>
+
+<span class="cm">        @function remove</span>
+<span class="cm">        @param {Object} state The state object returned by insert</span>
+<span class="cm">      */</span>
+      <span class="kd">function</span> <span class="nx">remove</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">state</span><span class="p">.</span><span class="nx">el</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Beginning with MARV <a class="reference internal" href="CHANGES.html#v18-04"><span class="std std-ref">18.04 (2018-04-30)</span></a> frontend styling is not based on Bootstrap v3 anymore. MARV now uses a custom style sheet with markup that is heavily inspired by Bootstrap v4 and is still undergoing improvements. Custom widgets can make use of existing CSS classes to achieve an identical look and feel to the native widgets. If stability is key, it is advisable to style custom widgets independently of MARV with their own style sheets to avoid migration pains during future MARV updates. Each widget is rendered in a container with the CSS class <code class="docutils literal notranslate"><span class="pre">.widget-${name}</span></code>, and any custom CSS should be scoped to children of these containers.</p>
+<p>Custom CSS is loaded from <code class="docutils literal notranslate"><span class="pre">site/frontend/custom.css</span></code> and <code class="docutils literal notranslate"><span class="pre">site/frontend/custom/</span></code> is mapped to the <code class="docutils literal notranslate"><span class="pre">/custom/</span></code> backend route to serve additional files.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MARV Robotics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/setup-basic-site.html">Tutorial: Setup basic site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/write-your-own.html">Tutorial: Write your own nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="patterns.html">Patterns and known issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="views.html">Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scan.html">Scanner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Widgets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#image">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gallery">Gallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#video">Video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dropdown-ee">Dropdown (EE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trajectory">Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table">Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-value">Key/value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preformatted">Preformatted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom">Custom</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="httpapi.html">HTTP API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload.html">Upload (EE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migrate/index.html">Migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/marv.html">marv</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="nodes.html" title="previous chapter">Nodes</a></li>
+      <li>Next: <a href="httpapi.html" title="next chapter">HTTP API</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2019  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/widgets.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

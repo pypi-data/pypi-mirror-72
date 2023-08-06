@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>marv_robotics.detail &#8212; MARV Robotics 20.06.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_paramlinks.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for marv_robotics.detail</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright 2016 - 2018  Ternaris.</span>
+<span class="c1"># SPDX-License-Identifier: AGPL-3.0-only</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">marv_api</span> <span class="k">as</span> <span class="nn">marv</span>
+<span class="kn">import</span> <span class="nn">marv_nodes</span>
+<span class="kn">from</span> <span class="nn">marv.types</span> <span class="kn">import</span> <span class="n">Section</span><span class="p">,</span> <span class="n">Widget</span>
+<span class="kn">from</span> <span class="nn">marv_detail</span> <span class="kn">import</span> <span class="n">make_map_dict</span>
+<span class="kn">from</span> <span class="nn">.bag</span> <span class="kn">import</span> <span class="n">bagmeta</span>
+<span class="kn">from</span> <span class="nn">.cam</span> <span class="kn">import</span> <span class="n">ffmpeg</span><span class="p">,</span> <span class="n">images</span>
+<span class="kn">from</span> <span class="nn">.gnss</span> <span class="kn">import</span> <span class="n">gnss_plots</span>
+<span class="kn">from</span> <span class="nn">.trajectory</span> <span class="kn">import</span> <span class="n">trajectory</span>
+
+<span class="c1"># pylint: disable=redefined-outer-name</span>
+
+
+<div class="viewcode-block" id="summary_keyval"><a class="viewcode-back" href="../../nodes.html#marv_robotics.detail.summary_keyval">[docs]</a><span class="nd">@marv</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">Widget</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">marv_nodes</span><span class="o">.</span><span class="n">dataset</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;bagmeta&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">bagmeta</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">summary_keyval</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">bagmeta</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Keyval widget summarizing bag metadata.</span>
+
+<span class="sd">    Useful for detail_summary_widgets.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dataset</span><span class="p">,</span> <span class="n">bagmeta</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull_all</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">bagmeta</span><span class="p">)</span>
+    <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">push</span><span class="p">({</span><span class="s1">&#39;keyval&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;items&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;size&#39;</span><span class="p">,</span> <span class="s1">&#39;formatter&#39;</span><span class="p">:</span> <span class="s1">&#39;filesize&#39;</span><span class="p">,</span> <span class="s1">&#39;list&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+             <span class="s1">&#39;cell&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uint64&#39;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">size</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">dataset</span><span class="o">.</span><span class="n">files</span><span class="p">)}},</span>
+            <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;files&#39;</span><span class="p">,</span> <span class="s1">&#39;list&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+             <span class="s1">&#39;cell&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uint64&#39;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">files</span><span class="p">)}},</span>
+            <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;start time&#39;</span><span class="p">,</span> <span class="s1">&#39;formatter&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;list&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+             <span class="s1">&#39;cell&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="n">bagmeta</span><span class="o">.</span><span class="n">start_time</span><span class="p">}},</span>
+            <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;end time&#39;</span><span class="p">,</span> <span class="s1">&#39;formatter&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;list&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+             <span class="s1">&#39;cell&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="n">bagmeta</span><span class="o">.</span><span class="n">end_time</span><span class="p">}},</span>
+            <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;duration&#39;</span><span class="p">,</span> <span class="s1">&#39;formatter&#39;</span><span class="p">:</span> <span class="s1">&#39;timedelta&#39;</span><span class="p">,</span> <span class="s1">&#39;list&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+             <span class="s1">&#39;cell&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;timedelta&#39;</span><span class="p">:</span> <span class="n">bagmeta</span><span class="o">.</span><span class="n">duration</span><span class="p">}},</span>
+        <span class="p">],</span>
+    <span class="p">}})</span></div>
+
+
+<div class="viewcode-block" id="bagmeta_table"><a class="viewcode-back" href="../../nodes.html#marv_robotics.detail.bagmeta_table">[docs]</a><span class="nd">@marv</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">Widget</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">marv_nodes</span><span class="o">.</span><span class="n">dataset</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;bagmeta&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">bagmeta</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">bagmeta_table</span><span class="p">(</span><span class="n">bagmeta</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Table widget listing metadata for each bag of dataset.</span>
+
+<span class="sd">    Useful for detail_summary_widgets.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dataset</span><span class="p">,</span> <span class="n">bagmeta</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull_all</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">bagmeta</span><span class="p">)</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;formatter&#39;</span><span class="p">:</span> <span class="s1">&#39;rellink&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Size&#39;</span><span class="p">,</span> <span class="s1">&#39;formatter&#39;</span><span class="p">:</span> <span class="s1">&#39;filesize&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Start time&#39;</span><span class="p">,</span> <span class="s1">&#39;formatter&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;End time&#39;</span><span class="p">,</span> <span class="s1">&#39;formatter&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Duration&#39;</span><span class="p">,</span> <span class="s1">&#39;formatter&#39;</span><span class="p">:</span> <span class="s1">&#39;timedelta&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Message count&#39;</span><span class="p">,</span> <span class="s1">&#39;align&#39;</span><span class="p">:</span> <span class="s1">&#39;right&#39;</span><span class="p">},</span>
+    <span class="p">]</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;cells&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s1">&#39;link&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;href&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">path</span><span class="p">)}},</span>
+        <span class="p">{</span><span class="s1">&#39;uint64&#39;</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">size</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="n">bag</span><span class="o">.</span><span class="n">start_time</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="n">bag</span><span class="o">.</span><span class="n">end_time</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;timedelta&#39;</span><span class="p">:</span> <span class="n">bag</span><span class="o">.</span><span class="n">duration</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;uint64&#39;</span><span class="p">:</span> <span class="n">bag</span><span class="o">.</span><span class="n">msg_count</span><span class="p">},</span>
+    <span class="p">]}</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="p">(</span><span class="n">bag</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">bagmeta</span><span class="o">.</span><span class="n">bags</span><span class="p">,</span> <span class="n">dataset</span><span class="o">.</span><span class="n">files</span><span class="p">))]</span>
+    <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">push</span><span class="p">({</span><span class="s1">&#39;table&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;columns&#39;</span><span class="p">:</span> <span class="n">columns</span><span class="p">,</span> <span class="s1">&#39;rows&#39;</span><span class="p">:</span> <span class="n">rows</span><span class="p">}})</span></div>
+
+
+<div class="viewcode-block" id="gnss_section"><a class="viewcode-back" href="../../nodes.html#marv_robotics.detail.gnss_section">[docs]</a><span class="nd">@marv</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">Section</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;Position and Orientation&#39;</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;plots&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">gnss_plots</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">gnss_section</span><span class="p">(</span><span class="n">plots</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Section displaying GNSS plots.&quot;&quot;&quot;</span>
+    <span class="c1"># tmps = []</span>
+    <span class="c1"># tmp = yield marv.pull(plots)</span>
+    <span class="c1"># while tmp:</span>
+    <span class="c1">#     tmps.append(tmp)</span>
+    <span class="c1">#     tmp = yield marv.pull(plots)</span>
+    <span class="c1"># plots = tmps</span>
+    <span class="c1"># TODO: no foreaching right now</span>
+    <span class="n">plots</span> <span class="o">=</span> <span class="p">[</span><span class="n">plots</span><span class="p">]</span>
+
+    <span class="n">widgets</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">plot</span> <span class="ow">in</span> <span class="n">plots</span><span class="p">:</span>
+        <span class="n">plotfile</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">plot</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">plotfile</span><span class="p">:</span>
+            <span class="n">widgets</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">plot</span><span class="o">.</span><span class="n">title</span><span class="p">,</span>
+                            <span class="s1">&#39;image&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;src&#39;</span><span class="p">:</span> <span class="n">plotfile</span><span class="o">.</span><span class="n">relpath</span><span class="p">}})</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">({</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">widgets</span><span class="p">})</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">widgets</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">widgets</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">push</span><span class="p">({</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="s1">&#39;widgets&#39;</span><span class="p">:</span> <span class="n">widgets</span><span class="p">})</span></div>
+
+
+<div class="viewcode-block" id="galleries"><a class="viewcode-back" href="../../nodes.html#marv_robotics.detail.galleries">[docs]</a><span class="nd">@marv</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">Widget</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;stream&#39;</span><span class="p">,</span> <span class="n">foreach</span><span class="o">=</span><span class="n">images</span><span class="p">)</span>  <span class="c1"># images is a stream of streams of images</span>
+<span class="k">def</span> <span class="nf">galleries</span><span class="p">(</span><span class="n">stream</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Galleries for all images streams.</span>
+
+<span class="sd">    Used by marv_robotics.detail.images_section.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">set_header</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">stream</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">images</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">img</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">images</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;src&#39;</span><span class="p">:</span> <span class="n">img</span><span class="o">.</span><span class="n">relpath</span><span class="p">})</span>
+    <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">push</span><span class="p">({</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">stream</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="s1">&#39;gallery&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;images&#39;</span><span class="p">:</span> <span class="n">images</span><span class="p">}})</span></div>
+
+
+<div class="viewcode-block" id="images_section"><a class="viewcode-back" href="../../nodes.html#marv_robotics.detail.images_section">[docs]</a><span class="nd">@marv</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">Section</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;Images&#39;</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;galleries&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">galleries</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">images_section</span><span class="p">(</span><span class="n">galleries</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Section with galleries of images for each images stream.&quot;&quot;&quot;</span>
+    <span class="n">tmp</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">galleries</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">msg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">tmp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="n">galleries</span> <span class="o">=</span> <span class="n">tmp</span>
+    <span class="n">galleries</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">galleries</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">widgets</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull_all</span><span class="p">(</span><span class="o">*</span><span class="n">galleries</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">widgets</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">push</span><span class="p">({</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="s1">&#39;widgets&#39;</span><span class="p">:</span> <span class="n">widgets</span><span class="p">})</span></div>
+
+
+<div class="viewcode-block" id="connections_section"><a class="viewcode-back" href="../../nodes.html#marv_robotics.detail.connections_section">[docs]</a><span class="nd">@marv</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">Section</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;Connections&#39;</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;bagmeta&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">bagmeta</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">marv_nodes</span><span class="o">.</span><span class="n">dataset</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">connections_section</span><span class="p">(</span><span class="n">bagmeta</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Section displaying information about ROS connections.&quot;&quot;&quot;</span>
+    <span class="n">dataset</span><span class="p">,</span> <span class="n">bagmeta</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull_all</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">bagmeta</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">bagmeta</span><span class="o">.</span><span class="n">topics</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">marv</span><span class="o">.</span><span class="n">Abort</span><span class="p">()</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Topic&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Type&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;MD5&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Latching&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Message count&#39;</span><span class="p">,</span> <span class="s1">&#39;align&#39;</span><span class="p">:</span> <span class="s1">&#39;right&#39;</span><span class="p">},</span>
+    <span class="p">]</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;cells&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="n">con</span><span class="o">.</span><span class="n">topic</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="n">con</span><span class="o">.</span><span class="n">datatype</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="n">con</span><span class="o">.</span><span class="n">md5sum</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;bool&#39;</span><span class="p">:</span> <span class="n">con</span><span class="o">.</span><span class="n">latching</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;uint64&#39;</span><span class="p">:</span> <span class="n">con</span><span class="o">.</span><span class="n">msg_count</span><span class="p">},</span>
+    <span class="p">]}</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">con</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bagmeta</span><span class="o">.</span><span class="n">connections</span><span class="p">)]</span>
+    <span class="n">widgets</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;table&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;columns&#39;</span><span class="p">:</span> <span class="n">columns</span><span class="p">,</span> <span class="s1">&#39;rows&#39;</span><span class="p">:</span> <span class="n">rows</span><span class="p">}}]</span>
+    <span class="c1"># TODO: Add text widget explaining what can be seen here: ROS bag</span>
+    <span class="c1"># files store connections. There can be multiple connections for</span>
+    <span class="c1"># one topic with the same or different message types and message</span>
+    <span class="c1"># types with the same name might have different md5s. For</span>
+    <span class="c1"># simplicity connections with the same topic, message type and md5</span>
+    <span class="c1"># are treated as one, within one bag file as well as across bags</span>
+    <span class="c1"># of one set. If one of such connections is latching, the</span>
+    <span class="c1"># aggregated connection will be latching.</span>
+    <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">push</span><span class="p">({</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="s1">&#39;widgets&#39;</span><span class="p">:</span> <span class="n">widgets</span><span class="p">})</span></div>
+
+
+<div class="viewcode-block" id="trajectory_section"><a class="viewcode-back" href="../../nodes.html#marv_robotics.detail.trajectory_section">[docs]</a><span class="nd">@marv</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">Section</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;Trajectory&#39;</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;geojson&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">trajectory</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;minzoom&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=-</span><span class="mi">30</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;maxzoom&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;tile_server_protocol&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">trajectory_section</span><span class="p">(</span><span class="n">geojson</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">minzoom</span><span class="p">,</span> <span class="n">maxzoom</span><span class="p">,</span> <span class="n">tile_server_protocol</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Section displaying trajectory on a map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        title (str): Detail section title.</span>
+<span class="sd">        geojson: Stream with one GeoJson message.</span>
+<span class="sd">        minzoom (int): Minimum zoom level.</span>
+<span class="sd">        maxzoom (int): Maximum zoom level.</span>
+<span class="sd">        tile_server_protocol (str): Set to ``https:`` if you host marv</span>
+<span class="sd">            behind http and prefer the tile requests to be secured.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">geojson</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">geojson</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">geojson</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">marv</span><span class="o">.</span><span class="n">Abort</span><span class="p">()</span>
+    <span class="n">layers</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Background&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;tiles&#39;</span><span class="p">:</span> <span class="p">[</span>
+             <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Roadmap&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="p">(</span>
+                  <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">//[abc].osm.ternaris.com/styles/osm-bright/rendered/</span><span class="si">{z}</span><span class="s1">/</span><span class="si">{x}</span><span class="s1">/</span><span class="si">{y}</span><span class="s1">.png&#39;</span>
+                  <span class="o">%</span> <span class="n">tile_server_protocol</span>
+              <span class="p">),</span>
+              <span class="s1">&#39;attribution&#39;</span><span class="p">:</span> <span class="p">(</span>
+                  <span class="s1">&#39;© &lt;a href=&quot;http://openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt; contributors&#39;</span>
+              <span class="p">),</span>
+              <span class="s1">&#39;retina&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+              <span class="s1">&#39;zoom&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}},</span>
+             <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Satellite&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="p">(</span>
+                  <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">//server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/</span><span class="si">{z}</span><span class="s1">/</span><span class="si">{y}</span><span class="s1">/</span><span class="si">{x}</span><span class="s1">.png&#39;</span>  <span class="c1"># pylint: disable=line-too-long</span>
+                  <span class="o">%</span> <span class="n">tile_server_protocol</span>
+              <span class="p">),</span>
+              <span class="s1">&#39;attribution&#39;</span><span class="p">:</span> <span class="p">(</span>
+                  <span class="s1">&#39;Sources: Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, &#39;</span>
+                  <span class="s1">&#39;USDA, USGS, AeroGRID, IGN, and the GIS User Community&#39;</span>
+              <span class="p">),</span>
+              <span class="s1">&#39;zoom&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">}},</span>
+         <span class="p">]},</span>
+        <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Trajectory&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span>
+         <span class="s1">&#39;geojson&#39;</span><span class="p">:</span> <span class="n">geojson</span><span class="p">},</span>
+    <span class="p">]</span>
+    <span class="n">dct</span> <span class="o">=</span> <span class="n">make_map_dict</span><span class="p">({</span>
+        <span class="s1">&#39;layers&#39;</span><span class="p">:</span> <span class="n">layers</span><span class="p">,</span>
+        <span class="s1">&#39;zoom&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="n">minzoom</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="n">maxzoom</span><span class="p">},</span>
+    <span class="p">})</span>
+    <span class="n">jsonfile</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">make_file</span><span class="p">(</span><span class="s1">&#39;data.json&#39;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">jsonfile</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dct</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">push</span><span class="p">({</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span>
+                     <span class="s1">&#39;widgets&#39;</span><span class="p">:</span> <span class="p">[{</span><span class="s1">&#39;map_partial&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;marv-partial:</span><span class="si">{</span><span class="n">jsonfile</span><span class="o">.</span><span class="n">relpath</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">}]})</span></div>
+
+
+<div class="viewcode-block" id="video_section"><a class="viewcode-back" href="../../nodes.html#marv_robotics.detail.video_section">[docs]</a><span class="nd">@marv</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">Section</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;Videos&#39;</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;videos&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">ffmpeg</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">video_section</span><span class="p">(</span><span class="n">videos</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Section displaying one video player per image stream.&quot;&quot;&quot;</span>
+    <span class="n">tmps</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">videos</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">tmp</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">tmps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+    <span class="n">videos</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">tmps</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">videos</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">marv</span><span class="o">.</span><span class="n">Abort</span><span class="p">()</span>
+
+    <span class="n">videofiles</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull_all</span><span class="p">(</span><span class="o">*</span><span class="n">videos</span><span class="p">)</span>
+    <span class="n">widgets</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">video</span><span class="o">.</span><span class="n">title</span><span class="p">,</span>
+            <span class="s1">&#39;video&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;src&#39;</span><span class="p">:</span> <span class="n">videofile</span><span class="o">.</span><span class="n">relpath</span><span class="p">},</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="n">video</span><span class="p">,</span> <span class="n">videofile</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">videos</span><span class="p">,</span> <span class="n">videofiles</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">videofile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+    <span class="p">]</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">({</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">widgets</span><span class="p">})</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">widgets</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">widgets</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">push</span><span class="p">({</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="s1">&#39;widgets&#39;</span><span class="p">:</span> <span class="n">widgets</span><span class="p">})</span></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">MARV Robotics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/setup-basic-site.html">Tutorial: Setup basic site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/write-your-own.html">Tutorial: Write your own nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../patterns.html">Patterns and known issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../debug.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../views.html">Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scan.html">Scanner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nodes.html">Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../widgets.html">Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../httpapi.html">HTTP API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../upload.html">Upload (EE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deploy.html">Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrate/index.html">Migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGES.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/marv.html">marv</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2019  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

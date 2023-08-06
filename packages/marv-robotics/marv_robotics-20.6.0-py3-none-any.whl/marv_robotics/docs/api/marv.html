@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>marv &#8212; MARV Robotics 20.06.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_paramlinks.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Changelog" href="../CHANGES.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="marv">
+<h1>marv<a class="headerlink" href="#marv" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-marv_webapi.acls">
+<span id="access-control-lists"></span><h2>Access control lists<a class="headerlink" href="#module-marv_webapi.acls" title="Permalink to this headline">¶</a></h2>
+<p>Access control lists.</p>
+<p>Use access control lists (ACLs) to control who can perform which
+actions. An ACL is a function that returns a dictionary mapping route
+function names to list of groups being allowed to access the
+route. The special groups <code class="docutils literal notranslate"><span class="pre">__authenticated__</span></code> and
+<code class="docutils literal notranslate"><span class="pre">__unauthenticated__</span></code> are automatically assigned within
+authenticated, resp. unauthenticated sessions.</p>
+<dl class="py function">
+<dt id="marv_webapi.acls.authenticated">
+<code class="sig-prename descclassname">marv_webapi.acls.</code><code class="sig-name descname">authenticated</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/marv_webapi/acls.html#authenticated"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_webapi.acls.authenticated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Require authentication.</p>
+<ul class="simple">
+<li><p>require authentication for everything</p></li>
+<li><p>only admins may delete datasets</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="marv_webapi.acls.public">
+<code class="sig-prename descclassname">marv_webapi.acls.</code><code class="sig-name descname">public</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/marv_webapi/acls.html#public"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_webapi.acls.public" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow public access.</p>
+<ul class="simple">
+<li><p>anyone can read anything</p></li>
+<li><p>authenticated users can comment, tag and compare</p></li>
+<li><p>only admins may delete datasets</p></li>
+</ul>
+</dd></dl>
+
+</div>
+<div class="section" id="module-marv_api.scanner">
+<span id="creating-datasets"></span><h2>Creating datasets<a class="headerlink" href="#module-marv_api.scanner" title="Permalink to this headline">¶</a></h2>
+<p>Dataset scanner.</p>
+<p>Datasets are created based on information provided by scanners.  A
+scanner is responsible to group files into named datasets:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">marv_api</span> <span class="kn">import</span> <span class="n">DatasetInfo</span>
+
+<span class="k">def</span> <span class="nf">scan</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span> <span class="n">dirnames</span><span class="p">,</span> <span class="n">filenames</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">DatasetInfo</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="p">[</span><span class="n">x</span><span class="p">])</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">filenames</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.csv&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>Scanners are called for every directory within the configured
+scanroots, while files and directories starting with a <code class="docutils literal notranslate"><span class="pre">.</span></code> and
+directories containing an (empty) <code class="docutils literal notranslate"><span class="pre">.marvignore</span></code> file are ignored and
+will not be traversed into.</p>
+<p>Further, traversal into subdirectories can be controlled by
+altering the <code class="xref py py-paramref docutils literal notranslate"><span class="pre">dirnames</span></code> list in-place. To block further
+traversal, e.g. for a directory-based dataset type, set it to an
+empty list – <a class="reference external" href="https://docs.python.org/3.7/library/os.html#os.walk" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.walk()</span></code></a> is used behind the scenes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dirnames</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt id="marv_api.scanner.DatasetInfo">
+<em class="property">class </em><code class="sig-prename descclassname">marv_api.scanner.</code><code class="sig-name descname">DatasetInfo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">files</span></em><span class="sig-paren">)</span><a class="headerlink" href="#marv_api.scanner.DatasetInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#tuple" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a></p>
+<dl class="py method">
+<dt id="marv_api.scanner.DatasetInfo.files">
+<em class="property">property </em><code class="sig-name descname">files</code><a class="headerlink" href="#marv_api.scanner.DatasetInfo.files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="marv_api.scanner.DatasetInfo.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#marv_api.scanner.DatasetInfo.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-marv_api">
+<span id="declaring-nodes"></span><h2>Declaring nodes<a class="headerlink" href="#module-marv_api" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="marv_api.node">
+<code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">schema</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/marv_api/decorators.html#node"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_api.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn function into node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="marv_api.node.params.schema"></span><strong>schema</strong><a class="paramlink headerlink reference internal" href="#marv_api.node.params.schema">¶</a> – capnproto schema describing the output messages format</p></li>
+<li><p><span class="target" id="marv_api.node.params.group"></span><strong>group</strong><a class="paramlink headerlink reference internal" href="#marv_api.node.params.group">¶</a> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – A boolean indicating whether the default stream
+of the node is a group, meaning it will be used to
+published handles for streams or further groups. In case
+of <code class="xref py py-paramref docutils literal notranslate"><span class="pre">marv.input.foreach</span></code> specifications this flag will
+default to <cite>True</cite>. This parameter is currently only for
+internal usage.</p></li>
+<li><p><span class="target" id="marv_api.node.params.version"></span><strong>version</strong><a class="paramlink headerlink reference internal" href="#marv_api.node.params.version">¶</a> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – This parameter currently has no effect.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code> instance according to the given
+arguments and <a class="reference internal" href="#marv_api.input" title="marv_api.input"><code class="xref py py-func docutils literal notranslate"><span class="pre">input()</span></code></a> decorators.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="marv_api.input">
+<code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">input</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">default=&lt;NOTSET&gt;</em>, <em class="sig-param">foreach=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/marv_api/decorators.html#input"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_api.input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declare input for a node.</p>
+<p>Plain inputs, that is plain python objects, are directly passed to
+the node. Whereas streams generated by other nodes are requested
+and once the handles of all input streams are available the node
+is instantiated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="marv_api.input.params.name"></span><strong>name</strong><a class="paramlink headerlink reference internal" href="#marv_api.input.params.name">¶</a> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Name of the node function argument the input will
+be passed to.</p></li>
+<li><p><span class="target" id="marv_api.input.params.default"></span><strong>default</strong><a class="paramlink headerlink reference internal" href="#marv_api.input.params.default">¶</a> – An optional default value for the input. This can be
+any python object or another node.</p></li>
+<li><p><span class="target" id="marv_api.input.params.foreach"></span><strong>foreach</strong><a class="paramlink headerlink reference internal" href="#marv_api.input.params.foreach">¶</a> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – This parameter is currently not supported and
+only for internal usage.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The original function decorated with this input
+specification. A function is turned into a node by the
+<a class="reference internal" href="#marv_api.node" title="marv_api.node"><code class="xref py py-func docutils literal notranslate"><span class="pre">node()</span></code></a> decorator.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="interacting-with-marv">
+<h2>Interacting with marv<a class="headerlink" href="#interacting-with-marv" title="Permalink to this headline">¶</a></h2>
+<dl class="py exception">
+<dt>
+<em class="property">exception </em><code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">Abort</code><a class="reference internal" href="../_modules/marv_node/io.html#Abort"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#Exception" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">DatasetInfo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">files</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#tuple" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a></p>
+<dl class="py method">
+<dt>
+<em class="property">property </em><code class="sig-name descname">files</code></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">property </em><code class="sig-name descname">name</code></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt>
+<em class="property">exception </em><code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">InputNameCollision</code><a class="reference internal" href="../_modules/marv_api/decorators.html#InputNameCollision"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#Exception" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+<p>An input with the same name already has been declared.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">create_group</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">header</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/marv_node/io.html#create_group"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">create_stream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">header</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/marv_node/io.html#create_stream"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Create a stream for publishing messages.</p>
+<p>All keyword arguments will be used to form the header.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">get_logger</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/marv_node/io.html#get_logger"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">get_requested</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/marv_node/io.html#get_requested"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">make_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/marv_node/io.html#make_file"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">pull</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">handle</span></em>, <em class="sig-param"><span class="n">enumerate</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/marv_node/io.html#pull"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Pull next message for handle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="marv_api.pull.params.handle"></span><strong>handle</strong><a class="paramlink headerlink reference internal" href="#marv_api.pull.params.handle">¶</a> – A <code class="xref py py-class docutils literal notranslate"><span class="pre">stream.Handle</span></code> or GroupHandle.</p></li>
+<li><p><span class="target" id="marv_api.pull.params.enumerate"></span><strong>enumerate</strong><a class="paramlink headerlink reference internal" href="#marv_api.pull.params.enumerate">¶</a> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – boolean to indicate whether a tuple <code class="docutils literal notranslate"><span class="pre">(idx,</span> <span class="pre">msg)</span></code>
+should be returned, not unlike Python’s enumerate().</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Pull</span></code> task to be yielded. Marv will send the
+corresponding message as soon as it is available. For groups
+this message will be a handle to a member of the
+group. Members of groups are either streams or groups.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Pulling (enumerated) message from stream:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+<span class="n">idx</span><span class="p">,</span> <span class="n">msg</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="nb">enumerate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Pulling stream from group and message from stream:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stream</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>  <span class="c1"># a group of streams</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">pull_all</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">handles</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/marv_node/io.html#pull_all"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Pull next message of all handles.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">push</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/marv_node/io.html#push"><span class="viewcode-link">[source]</span></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">select</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span></em>, <em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/marv_api/decorators.html#select"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Select specific stream of a node by name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="marv_api.select.params.node"></span><strong>node</strong><a class="paramlink headerlink reference internal" href="#marv_api.select.params.node">¶</a> – A node producing a group of streams.</p></li>
+<li><p><span class="target" id="marv_api.select.params.name"></span><strong>name</strong><a class="paramlink headerlink reference internal" href="#marv_api.select.params.name">¶</a> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Name of stream to select.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Node outputting selected stream.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt>
+<code class="sig-prename descclassname">marv_api.</code><code class="sig-name descname">set_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">header</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/marv_node/io.html#set_header"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Set the header of a stream or group.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">MARV Robotics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/setup-basic-site.html">Tutorial: Setup basic site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/write-your-own.html">Tutorial: Write your own nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../patterns.html">Patterns and known issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../debug.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../views.html">Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scan.html">Scanner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nodes.html">Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../widgets.html">Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../httpapi.html">HTTP API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upload.html">Upload (EE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy.html">Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migrate/index.html">Migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CHANGES.html">Changelog</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">marv</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-marv_webapi.acls">Access control lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-marv_api.scanner">Creating datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-marv_api">Declaring nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interacting-with-marv">Interacting with marv</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../CHANGES.html" title="previous chapter">Changelog</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2019  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/api/marv.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
