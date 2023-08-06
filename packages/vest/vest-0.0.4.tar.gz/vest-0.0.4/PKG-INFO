@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: vest
+Version: 0.0.4
+Summary: UNKNOWN
+Home-page: https://github.com/mattf1n/vest
+Author: mattf1n
+License: UNKNOWN
+Description: # Vest
+        My personal robo-advisor
+        
+        ## Install
+        
+        `pip install vest`
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
