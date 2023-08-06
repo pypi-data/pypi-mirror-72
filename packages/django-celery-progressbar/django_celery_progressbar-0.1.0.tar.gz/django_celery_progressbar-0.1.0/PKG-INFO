@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: django_celery_progressbar
+Version: 0.1.0
+Summary: Progress bar for Django Celery application
+Home-page: https://github.com/mora9715/django-celery-progressbar
+Author: Eugene Prodan
+Author-email: mora9715@gmail.com
+License: UNKNOWN
+Description: # Django Celery Progressbar
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
