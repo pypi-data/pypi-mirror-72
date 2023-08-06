@@ -1,0 +1,11 @@
+requirements.txt
+setup.py
+repo_config.egg-info/PKG-INFO
+repo_config.egg-info/SOURCES.txt
+repo_config.egg-info/dependency_links.txt
+repo_config.egg-info/top_level.txt
+scripts/.repo-config-fullname
+scripts/.repo-config-init
+scripts/.repo-config-load
+scripts/.repo-config-save
+scripts/repo-config
