@@ -1,0 +1,14 @@
+README.md
+setup.py
+strongtyping/__init__.py
+strongtyping/cached_dict.py
+strongtyping/cached_set.py
+strongtyping/docstring_typing.py
+strongtyping/strong_typing.py
+strongtyping.egg-info/PKG-INFO
+strongtyping.egg-info/SOURCES.txt
+strongtyping.egg-info/dependency_links.txt
+strongtyping.egg-info/top_level.txt
+strongtyping/tests/__init__.py
+strongtyping/tests/test_docstring.py
+strongtyping/tests/test_typing.py
