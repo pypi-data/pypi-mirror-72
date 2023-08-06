@@ -1,0 +1,26 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "rvnewop"
+author = "Pranoy Dutta, Tanvi Mehta, Nagendra Gulur"
+author-email = "pranoydll@gmail.com"
+home-page = "https://github.com/riscv-newop/riscv-newop"
+license = "BSD-2-Clause"
+requires = [
+    "bitarray >= 1.2.2"
+]
+description-file = "README.md"
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License"
+]
+
+[tool.flit.scripts]
+rvnewop = "rvnewop:main"
+rvunused = "rvnewop:unused"
+
+[dev-dependencies]
+black = "^19.10"
+
