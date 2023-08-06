@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: engineerquiz
+Version: 0.0.3
+Summary: The ultimate test of your engineerness
+Home-page: https://gitlab.com/jenx/engineerness/
+Author: Ivana Kellyerova
+Author-email: ivana.kellyerova+engineerquiz@amarion.net
+License: MIT
+Keywords: quiz
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
+Requires-Dist: click (>=7.1.2)
+
+# The Engineerness Test
+
+Until now, the internet has been largely divided on what makes one an exceptional engineer. Too many opinions. Too many
+hot takes. Too many questionable recommendations to follow.
+
+That doesn't really change now.
+
+I've just collected some of them into a quiz.
+
+
+## Getting the Quiz
+
+It's recommended -- but not necessary -- to run `engineerquiz` in a virtual environment:
+
+```bash
+$ python3 -m venv quiz.env
+$ source quiz.env/bin/activate
+```
+
+To install `engineerquiz` run:
+
+```bash
+(quiz) $ pip install engineerquiz
+```
+
+
+## Running the Quiz
+
+```bash
+(quiz) $ engineerquiz
+```
+
+
