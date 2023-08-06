@@ -1,0 +1,6 @@
+#!/bin/sh
+v_path1=`pip show VisualPython | grep Location | awk -F': ' '{print $2}'`
+v_path2=`jupyter --path | grep 'envs' | grep 'share'`
+
+jupyter nbextension disable VisualPython/Main
+rm -rf ${v_path2}/nbextensions/VisualPython
