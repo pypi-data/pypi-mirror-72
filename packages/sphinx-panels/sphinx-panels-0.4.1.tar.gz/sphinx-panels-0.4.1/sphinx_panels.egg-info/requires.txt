@@ -1,0 +1,14 @@
+docutils
+sphinx
+
+[code_style]
+flake8<3.8.0,>=3.7.0
+black
+pre-commit==1.17.0
+csscompressor
+
+[rtd]
+sphinx-rtd-theme
+
+[testing]
+pytest<4,>=3.6

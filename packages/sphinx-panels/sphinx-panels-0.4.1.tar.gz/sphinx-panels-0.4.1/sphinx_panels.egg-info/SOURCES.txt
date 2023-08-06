@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+sphinx_panels/__init__.py
+sphinx_panels/button.py
+sphinx_panels/dropdown.py
+sphinx_panels/icons.py
+sphinx_panels/panels.py
+sphinx_panels/utils.py
+sphinx_panels.egg-info/PKG-INFO
+sphinx_panels.egg-info/SOURCES.txt
+sphinx_panels.egg-info/dependency_links.txt
+sphinx_panels.egg-info/requires.txt
+sphinx_panels.egg-info/top_level.txt
+sphinx_panels/css/panels-bootstrap.min.css
+sphinx_panels/css/sphinx-dropdown.css
+sphinx_panels/data/opticons.json
