@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: amplitude-client
+Version: 0.1.4
+Summary: A simple aiohttp based python client for Amplitude
+Author: Ismael Alaoui
+Author-email: ismael@onna.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: aiohttp (>=3.6.2,<4.0.0)
+Requires-Dist: aiohttp-client-manager (>=1.1.1,<2.0.0)
+Requires-Dist: aioresponses (>=0.6.4,<0.7.0)
+Requires-Dist: json-schema-env-validator (>=1.0.5,<2.0.0)
+Requires-Dist: jsonschema (>=3.2.0,<4.0.0)
