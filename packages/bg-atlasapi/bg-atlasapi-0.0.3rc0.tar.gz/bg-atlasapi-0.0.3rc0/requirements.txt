@@ -1,0 +1,9 @@
+numpy
+tifffile
+treelib
+pandas
+requests
+meshio
+click
+rich
+tqdm>=4.46.1
