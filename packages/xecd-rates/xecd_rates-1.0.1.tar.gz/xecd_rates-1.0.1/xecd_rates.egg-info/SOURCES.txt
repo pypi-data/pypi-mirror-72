@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+xecd_rates/Xecd.py
+xecd_rates/__init__.py
+xecd_rates.egg-info/PKG-INFO
+xecd_rates.egg-info/SOURCES.txt
+xecd_rates.egg-info/dependency_links.txt
+xecd_rates.egg-info/requires.txt
+xecd_rates.egg-info/top_level.txt
+xecd_rates.egg-info/zip-safe
