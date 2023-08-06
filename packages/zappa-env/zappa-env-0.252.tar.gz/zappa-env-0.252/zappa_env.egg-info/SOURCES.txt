@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+zappa_env/__init__.py
+zappa_env/zappa_env.py
+zappa_env.egg-info/PKG-INFO
+zappa_env.egg-info/SOURCES.txt
+zappa_env.egg-info/dependency_links.txt
+zappa_env.egg-info/requires.txt
+zappa_env.egg-info/top_level.txt
