@@ -1,0 +1,14 @@
+termcolor>=1.1.0
+pyzmq==18.0.1
+pyarrow==0.13.0
+scipy>=1.0.0
+cloudpickle==1.2.1
+tensorboardX==1.8
+tb-nightly==1.15.0a20190801
+flask>=1.0.4
+click
+psutil>=5.6.2
+flask_cors
+
+[:python_version >= "3" and platform_system == "Linux"]
+visualdl>=2.0.0b
