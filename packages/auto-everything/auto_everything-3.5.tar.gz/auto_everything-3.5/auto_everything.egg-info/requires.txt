@@ -1,0 +1,8 @@
+setuptools
+fire
+pexpect
+psutil
+
+[video]
+librosa
+moviepy<1.0.1,>=1.0.0
