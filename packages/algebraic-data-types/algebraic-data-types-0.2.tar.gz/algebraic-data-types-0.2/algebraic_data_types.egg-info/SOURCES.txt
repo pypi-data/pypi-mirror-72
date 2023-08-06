@@ -1,0 +1,11 @@
+README.md
+setup.py
+adt/__init__.py
+adt/case.py
+adt/decorator.py
+adt/mypy_plugin.py
+adt/py.typed
+algebraic_data_types.egg-info/PKG-INFO
+algebraic_data_types.egg-info/SOURCES.txt
+algebraic_data_types.egg-info/dependency_links.txt
+algebraic_data_types.egg-info/top_level.txt
