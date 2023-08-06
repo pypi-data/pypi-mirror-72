@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+scripts/tar-diff
+tar_diff.egg-info/PKG-INFO
+tar_diff.egg-info/SOURCES.txt
+tar_diff.egg-info/dependency_links.txt
+tar_diff.egg-info/top_level.txt
