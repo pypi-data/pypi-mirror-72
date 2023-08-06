@@ -1,0 +1,6 @@
+[console_scripts]
+qppwg-compute-statistics = qppwg.bin.compute_statistics:main
+qppwg-decode = qppwg.bin.decode:main
+qppwg-preprocess = qppwg.bin.preprocess:main
+qppwg-train = qppwg.bin.train:main
+
