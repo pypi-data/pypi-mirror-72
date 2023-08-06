@@ -1,0 +1,16 @@
+cn2an/__init__.py,sha256=YmTlsvIJpfE46wHEuI-YSaH-WBdZ0kfK1Ca_kh9xO04,290
+cn2an/an2cn.py,sha256=Hx10ICR4qAx9EFxNuXDNJ9SgpbYukxavjS9ZTubUak4,7168
+cn2an/an2cn_test.py,sha256=-9kjt6vf_xS0zA5ESU0tHT-hCXrfbyDpKetQxDM6NfQ,4051
+cn2an/cn2an.py,sha256=WWexXGuhbNzVNOlrADwL4dje-2hqAkONEnN-XdUuDEI,10613
+cn2an/cn2an_test.py,sha256=ikzvs-YrjLv42RGVAYndPh3D8o4l2vw0z3viQwPmsB4,7495
+cn2an/config.yaml,sha256=Uq0onjN8k0TGxKyMyxZoUJpVx_PTCmPSGbtzhayO3Mg,1356
+cn2an/performance.py,sha256=t27xjFfxW9R1IafNi73Jc3TbBd-JPE60Ta1GeKKLfjY,614
+cn2an/transform.py,sha256=e300U-6XQvmiP_R8xx6eOesWB7s4zyNPD0qvTBPeXF4,914
+cn2an/transform_test.py,sha256=rHa08-vtMnVfo_hJ7Ctv5RRwLAc5u2COL6Fix33R2aU,692
+cn2an/utils.py,sha256=JM_Uj4hjyTA-_Al6lXCfkIJk9qwItsjqQA6BAlwug_U,1530
+cn2an/version.py,sha256=0JyWouQ58YsLrdg5DxQC7AKsjSp8_3Kr658bC1VLl4g,18
+cn2an-0.4.5.dist-info/LICENSE,sha256=k5WoygzAKNqPm1kcfbwQv6f0YO5Oi8vzlaBDEXrNRcI,1069
+cn2an-0.4.5.dist-info/METADATA,sha256=S763VZt7ULN0WoDgE56MwKxksiRtfk3CaNg_SqaU5Ug,10156
+cn2an-0.4.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+cn2an-0.4.5.dist-info/top_level.txt,sha256=VKYW5f3K0AnQnIbxVl7oIwZ_KK16Oz8XxlDGA7PQYSA,6
+cn2an-0.4.5.dist-info/RECORD,,
