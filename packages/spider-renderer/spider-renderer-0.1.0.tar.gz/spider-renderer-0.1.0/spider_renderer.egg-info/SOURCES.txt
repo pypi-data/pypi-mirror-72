@@ -1,0 +1,9 @@
+README.md
+setup.py
+renderer/__init__.py
+renderer/genspider.py
+spider_renderer.egg-info/PKG-INFO
+spider_renderer.egg-info/SOURCES.txt
+spider_renderer.egg-info/dependency_links.txt
+spider_renderer.egg-info/requires.txt
+spider_renderer.egg-info/top_level.txt
