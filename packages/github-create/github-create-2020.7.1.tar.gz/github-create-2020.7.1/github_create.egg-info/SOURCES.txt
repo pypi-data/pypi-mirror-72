@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+github_create.egg-info/PKG-INFO
+github_create.egg-info/SOURCES.txt
+github_create.egg-info/dependency_links.txt
+github_create.egg-info/top_level.txt
+scripts/github-create
