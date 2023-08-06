@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: markdownio
+Version: 0.0.1
+Summary: Python tool to write Markdown easily.
+Home-page: https://github.com/u8slvn/markdownio
+Author: u8slvn
+Author-email: u8slvn@gmail.com
+License: MIT
+Download-URL: https://github.com/u8slvn/markdownio/archive/0.0.1.tar.gz
+Description: # MarkdownIO
+        
+        [![Build Status](https://travis-ci.org/u8slvn/markdownio.svg?branch=master)](https://travis-ci.org/u8slvn/markdownio)
+        [![Coverage Status](https://coveralls.io/repos/github/u8slvn/markdownio/badge.svg?branch=master)](https://coveralls.io/github/u8slvn/markdownio?branch=master)
+        [![Project license](https://img.shields.io/pypi/l/sutoppu)](https://pypi.org/project/sutoppu/)
+        
+        Python tool to write Markdown easily.
+        
+Keywords: markdown,domain-specific-languagemarkup-language
+Platform: all
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
