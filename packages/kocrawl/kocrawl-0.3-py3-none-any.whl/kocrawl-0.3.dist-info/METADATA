@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: kocrawl
+Version: 0.3
+Summary: Korean web crawler collections
+Home-page: https://github.com/Kochat-framework/kocrawl
+Author: Hyunwoong Ko
+Author-email: gusdnd852@naver.com
+License: UNKNOWN
+Keywords: crawler,korean crawler,kochat
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+Requires-Dist: numpy
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
+
+UNKNOWN
+
+
