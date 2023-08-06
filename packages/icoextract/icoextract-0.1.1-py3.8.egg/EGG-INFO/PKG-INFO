@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: icoextract
+Version: 0.1.1
+Summary: Windows PE EXE icon extractor
+Home-page: https://github.com/jlu5/icoextract
+Author: James Lu
+Author-email: james@overdrivenetworks.com
+License: MIT/Expat
+Description: # icoextract
+        
+        **icoextract** is an icon extractor for Windows PE files (.exe/.dll), written in Python. It also includes a thumbnailer script (`exe-thumbnailer`) for Linux desktops.
+        
+        This project is inspired by [extract-icon-py](https://github.com/firodj/extract-icon-py), [icoutils](https://www.nongnu.org/icoutils/), and others.
+        
+        icoextract aims to be:
+        
+        - Lightweight
+        - Portable (cross-platform)
+        - Fast on large files
+        
+        ## Installation
+        
+        You can install the project via pip: `pip3 install icoextract`
+        
+        On Linux, you can optionally install the thumbnailer by copying [`exe-thumbnailer.thumbnailer`](/exe-thumbnailer.thumbnailer) into `/usr/local/share/thumbnailers/`
+        
+        
+        ## Usage
+        
+        icoextract ships `icoextract` and `icolist` scripts to extract and list icon resources in an executable:
+        
+        ```
+        usage: icoextract [-h] [-V] [-n NUM] [-v] input output
+        
+        Windows PE EXE icon extractor.
+        
+        positional arguments:
+          input              input filename
+          output             output filename
+        
+        optional arguments:
+          -h, --help         show this help message and exit
+          -V, --version      show program's version number and exit
+          -n NUM, --num NUM  index of icon to extract
+          -v, --verbose      enables debug logging
+        ```
+        
+        ```
+        usage: icolist [-h] [-V] [-v] input
+        
+        Lists group icons present in a program.
+        
+        positional arguments:
+          input          input filename
+        
+        optional arguments:
+          -h, --help     show this help message and exit
+          -V, --version  show program's version number and exit
+          -v, --verbose  enables debug logging
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
