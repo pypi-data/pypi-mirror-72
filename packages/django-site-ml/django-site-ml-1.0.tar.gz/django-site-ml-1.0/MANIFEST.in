@@ -1,0 +1,3 @@
+include requirements.txt
+include db.sqlite3
+include manage.py
