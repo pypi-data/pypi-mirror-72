@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: msgsplitter
+Version: 1.0
+Summary: Split messages (strings) to fit an arbitrary character limit
+Home-page: https://github.com/Elijas/msgsplitter
+Author: Elijas Dapšauskas
+Author-email: master.elijas@gmail.com
+License: UNKNOWN
+Platform: Any
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/x-rst
+
+message-splitter
+================
+
+.. image:: https://img.shields.io/travis/elijas/msgsplitter
+   :target: https://travis-ci.org/elijas/msgsplitter
+.. image:: https://img.shields.io/pypi/v/msgsplitter
+   :target: https://pypi.python.org/elijas/msgsplitter
+.. image:: https://img.shields.io/pypi/pyversions/msgsplitter
+   :target: https://github.com/elijas/msgsplitter
+.. image:: https://img.shields.io/github/license/elijas/msgsplitter
+   :target: https://github.com/elijas/msgsplitter
+
+
+Splits long message to multiple messages in order to fit within an arbitrary message length limit (useful for SMS, Twitter, etc.).
+
+
+Installation
+------------
+.. sourcecode:: bash
+
+   ~ $ pip install msgsplitter
+
+or you can install local version
+
+.. sourcecode:: bash
+
+   ~ $ pip install -e .
+
+Quick start
+-----------
+
+.. sourcecode:: python
+
+   >>> import msgsplitter
+   >>> result = msgsplitter.split("Hello, this is a really long message.", length_limit=30)
+   >>> result
+   ['Hello, this is a really (1/2)', 'long message. (2/2)']
+
+Run tests
+-----------
+
+.. sourcecode:: bash
+
+   $ pytest
+
+

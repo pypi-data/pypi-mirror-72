@@ -1,0 +1,14 @@
+msgsplitter/__init__.py,sha256=U2GdFlVv7-zvie7fRuj1Yy9MNF-Sowz-Zh-7EP7Efqk,137
+msgsplitter/_split_message.py,sha256=55KEs_MXu0cLTls4cT7YXvdD9OJg8TYCDkYHQymsjsA,1521
+msgsplitter/exceptions.py,sha256=JP4PD9hhCSv-hvDrI1tNP1YtWHa0GWziA9v9Iba5XLA,51
+msgsplitter/split.py,sha256=Hs0YP_51Peva8cvm-n7BEFL59aXDIM9aQgOTEruoSaQ,846
+msgsplitter/formatters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+msgsplitter/formatters/formatter_base.py,sha256=1IwYRJiNwmECmiBB9yYjR0e-vxP5Jk32xyhX_qnGJpo,512
+msgsplitter/formatters/indicator_formatter.py,sha256=PsVmBsnM0ooIz8P3NgJEJoDzOB-Vaw7njrDEzsgIHvI,2372
+msgsplitter/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+msgsplitter/tests/test_split.py,sha256=fdIydA4y45TrowIFgYSD0Gm_c4zZyVEytkihFlpsuog,1158
+msgsplitter-1.0.dist-info/LICENSE,sha256=w0RvDPc_Y0mzqbd-jvZBtR8oiZZBRfJrqp_1wRmzfBY,1075
+msgsplitter-1.0.dist-info/METADATA,sha256=zYDSZUhrPj_1kFnz8Toofk_TbKipf1v8fCO8sd_70d8,1587
+msgsplitter-1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+msgsplitter-1.0.dist-info/top_level.txt,sha256=sn16KUQZLWS5TE3CnFaRfR6Uor67fVa8zY8ZyYaFy-A,12
+msgsplitter-1.0.dist-info/RECORD,,
