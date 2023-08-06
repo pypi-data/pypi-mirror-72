@@ -1,0 +1,15 @@
+lxml>=4
+networkx>=2.1
+pint>=0.8.1
+rdflib>=4
+sympy>=1.4
+
+[docs]
+sphinx>=2.0
+
+[test]
+codecov
+flake8
+isort
+pytest>=4.6
+pytest-cov
