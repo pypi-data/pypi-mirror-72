@@ -1,0 +1,4 @@
+[d3m.primitives]
+classification.global_causal_discovery.RPI = rpi_d3m_primitives_part2.GlobalCausalDiscovery:GlobalCausalDiscovery
+classification.structured.RPI = rpi_d3m_primitives_part2.StructuredClassifier:StructuredClassifier
+
