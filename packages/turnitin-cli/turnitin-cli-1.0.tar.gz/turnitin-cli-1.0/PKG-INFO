@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: turnitin-cli
+Version: 1.0
+Summary: UNKNOWN
+Home-page: https://github.com/r2dev2bb8/Turnitin-CLI
+Author: Ronak Badhe
+Author-email: ronak.badhe@gmail.com
+License: UNKNOWN
+Description: # Turnitin-CLI
+        
+        A commandline interface to https://www.turnitin.com
+        
+        
+        # Usage
+        
+        ``python -m turnitin_cli``
+        
+        # Screenshots
+        
+        ## Courses
+        
+        ![view of courses](img/courses.png)
+        
+        ## Assignments
+        
+        ![view of assignments](img/assignments.png)
+        
+        ## Downloading an Assignment
+        
+        ![view of downloading interface](img/download.png)
+        
+        ## Submitting an Assignment
+        
+        ![view of submitting interface](img/submitting.png)
+        
+        # Setup
+        
+        ``pip install turnitin-cli``
+        
+        Default keybindings:
+        
+        | Key   | Function  |
+        | ----- | --------- |
+        | ``,`` | Menu down |
+        | ``.`` | Menu up   |
+        | ``q`` | Quit      |
+        
+        These keybindings can be changed in the configuration file located at ``$HOME/tiiconfig.ini``.
+        While submitting, one can type ``!ls {{folder}}`` to list the contents of the folder.
+        
+        Features to implement:
+         * A backwards button for history
+         * Displaying submission metadata
+         * Adding default filenames for downloads
+         * Adding a file browser
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
