@@ -1,0 +1,14 @@
+penchmark/__init__.py,sha256=oOvRO1yScbSi-cIvCPzZZjYd3rTHLCzAJbzTRTT8ScQ,372
+penchmark/_core.py,sha256=g1C9WqdrhMk8JTPb8NlpYbIpIfG6KQ6zbLS4TKVFf5o,5402
+penchmark/_defs.py,sha256=9gig79QGPaVqNaE09ZiifWFh26M5WIhTskX0iySxo9A,794
+penchmark/_helpers.py,sha256=i99yGwVicrUUBgL6GqTZPmXGewkK_fEA1pxaIbbBc3g,1357
+penchmark/_report.py,sha256=vJ-D1XbdqLPu4cQ7pl28FACGAKPy3gddQQLAKs4EtMQ,976
+penchmark/charts.py,sha256=EhUm3lApkVf3Q_z2ebfCSQX2hYJOtVeZ3YZJOCxUlUo,1469
+penchmark/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+penchmark/tests/test_benchmark.py,sha256=1H9m-_HT5gzmDLLKS9ZJ6NFAJ-cLIXwZt5zdF9SkyBI,2883
+penchmark/tests/test_name_generator.py,sha256=w9cNlAbKGTcPpa6H9I_rfyV9Hv5Xzqbs1RxwTNiCa7E,1338
+penchmark-0.0.1.dist-info/LICENSE.txt,sha256=Po-sbgJPpstcTt2l64RStfg_vjEUnCEUOCV8yN24Pw4,1083
+penchmark-0.0.1.dist-info/METADATA,sha256=TsqEqMI6ASu9VAv7YT9c-c7H54hb0o_L-11KDt836Ws,3774
+penchmark-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+penchmark-0.0.1.dist-info/top_level.txt,sha256=E5NUP5qWAaKrfjpP6hGFoJiohQ-Pyvged1To1lxqVL4,10
+penchmark-0.0.1.dist-info/RECORD,,

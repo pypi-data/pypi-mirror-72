@@ -1,0 +1,151 @@
+Metadata-Version: 2.1
+Name: penchmark
+Version: 0.0.1
+Summary: Python code benchmark library
+Home-page: https://github.com/ruzzz/penchmark
+Author: Ruslan Zaporojets
+Author-email: ruzzzua@gmail.com
+License: UNKNOWN
+Keywords: benchmark
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: System :: Benchmark
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: tabulate (>=0.8.7)
+Provides-Extra: charts
+Requires-Dist: matplotlib (>=3.2.2) ; extra == 'charts'
+Requires-Dist: pandas (>=1.0.5) ; extra == 'charts'
+Requires-Dist: seaborn (>=0.10.1) ; extra == 'charts'
+Provides-Extra: dev
+Requires-Dist: mypy (>=0.782) ; extra == 'dev'
+Requires-Dist: pylint (>=2.5.3) ; extra == 'dev'
+Requires-Dist: pylint-quotes (>=0.2.1) ; extra == 'dev'
+Requires-Dist: pytest (>=5.4.3) ; extra == 'dev'
+Requires-Dist: pytest-cov (>=2.10.0) ; extra == 'dev'
+
+# Python benchmark library
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Python package](https://github.com/Ruzzz/penchmark/workflows/Python%20package/badge.svg?branch=master)
+[![codecov](https://codecov.io/gh/Ruzzz/penchmark/branch/master/graph/badge.svg)](https://codecov.io/gh/Ruzzz/penchmark)
+
+## Installation
+
+```bash
+pip install penchmark
+pip install penchmark[charts]
+```
+
+## Example
+
+```python
+from penchmark import benchmark_and_print, Callee, InData
+
+callees = (
+    Callee(callee_name='mul', callee=lambda x: x[0] * x[1]),
+    Callee(callee_name='nop', callee=lambda x: x)
+)
+dataset = (
+    InData(name='small-data', data=(2, 1), count_of_call=100000),
+    InData(name='big-data', data=(200, 10), count_of_call=1000),
+    InData(name='skipped-data', data=(1, 1), count_of_call=0)
+)
+benchmark_and_print(callees, dataset)
+```
+
+or
+
+```python
+from penchmark import benchmark_and_print
+
+callees = (
+    ('mul', lambda x: x[0] * x[1]),
+    ('nop', lambda x: x)
+)
+dataset = (
+    ('small-data', (2, 1), 100000),
+    ('big-data', (200, 10), 1000),
+    ('skipped-data', (1, 1), 0)
+)
+benchmark_and_print(callees, dataset)
+```
+
+or
+
+```python
+from penchmark import benchmark_and_print
+
+def mul(x): return x[0] * x[1]
+def nop(x): return x
+
+dataset = (
+    ('small-data', (2, 1), 100000),
+    ('big-data', (200, 10), 1000),
+    ('skipped-data', (1, 1), 0)
+)
+benchmark_and_print((mul, nop), dataset)
+```
+
+### Markdown result
+
+#### small-data
+
+| callee_name   |   elapsed |   ratio |
+|:--------------|----------:|--------:|
+| nop           |    0.0050 |  1.0000 |
+| mul           |    0.0080 |  1.5842 |
+
+#### big-data
+
+| callee_name   |   elapsed |   ratio |
+|:--------------|----------:|--------:|
+| nop           |    0.0000 |  1.0000 |
+| mul           |    0.0001 |  1.7201 |
+
+#### Summary
+
+| callee_name   |   mean |   median |
+|:--------------|-------:|---------:|
+| nop           | 1.0000 |   1.0000 |
+| mul           | 1.6521 |   1.6521 |
+
+or
+
+```python
+...
+benchmark_and_print((mul, nop), dataset, markdown=False)
+```
+
+### Result
+
+```
+SMALL-DATA
+
+callee_name      elapsed    ratio
+-------------  ---------  -------
+nop               0.0050   1.0000
+mul               0.0079   1.5944
+
+BIG-DATA
+
+callee_name      elapsed    ratio
+-------------  ---------  -------
+nop               0.0001   1.0000
+mul               0.0001   1.7565
+
+SUMMARY
+
+callee_name      mean    median
+-------------  ------  --------
+nop            1.0000    1.0000
+mul            1.6754    1.6754
+```
+
+
