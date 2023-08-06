@@ -1,0 +1,16 @@
+datacatalogtordf/__init__.py,sha256=VSKopF1DNHisGcDrXZtpZ52Wk1ZlmHf99POj7yQigCs,855
+datacatalogtordf/catalog.py,sha256=9MpsrXS9b9yIdItIIvaBxe20xzZFzS7-ZtTWTqt1_rI,8189
+datacatalogtordf/catalogrecord.py,sha256=EzTwLCeU0TXabNGmeJj0_wWwUJSD5genm_emnQ2vPqM,7059
+datacatalogtordf/dataservice.py,sha256=1n4Gf6CHLjiyj1zXwxPbymC9k8YvKRottc8XChWLj98,4477
+datacatalogtordf/dataset.py,sha256=8sbUU8u7TPfFPgxVeoqCpxBB5_YzQaO5ppagtwlvDAA,9255
+datacatalogtordf/distribution.py,sha256=wU7ggirmTyQfnGUYeKZTN6ZXzlGgD3f_5GDk3NHPj4A,17605
+datacatalogtordf/exceptions.py,sha256=HLp58jwtXMYBlHinZrhYb6jURd3hOcm3r0tBIH0TkoM,1567
+datacatalogtordf/location.py,sha256=g8XWJknEc_vPMLC7iq1PZGkcy3DQwCAlDSLDaX7bxzM,4535
+datacatalogtordf/periodoftime.py,sha256=6vISGj1-aqp5p4sE3aI62zbeVlPygIfVm5qHkJqq9Sk,4859
+datacatalogtordf/relationship.py,sha256=qU5Ekh6ne0r0NOtAMhknZWbIqnBWAi8enlEtt64DVWc,3562
+datacatalogtordf/resource.py,sha256=D-NLfSnq9_2HlfbuWWUoYrnX6pNMcAQgURfjgaEvRwc,19561
+datacatalogtordf/uri.py,sha256=I4nRJvNRaUKAE5iGksLBWBbTk28eLGUSnzwf1qm2xTU,1244
+datacatalogtordf-1.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+datacatalogtordf-1.0.3.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+datacatalogtordf-1.0.3.dist-info/METADATA,sha256=lB3MFVs6pmwvrIOk1UlreLCkoSk2aDfEbkw47INSm1Q,3500
+datacatalogtordf-1.0.3.dist-info/RECORD,,
