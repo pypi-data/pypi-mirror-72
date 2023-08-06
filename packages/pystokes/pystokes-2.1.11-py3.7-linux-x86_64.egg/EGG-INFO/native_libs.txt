@@ -1,0 +1,10 @@
+pystokes/forceFields.cpython-37m-x86_64-linux-gnu.so
+pystokes/interface.cpython-37m-x86_64-linux-gnu.so
+pystokes/mima.cpython-37m-x86_64-linux-gnu.so
+pystokes/periodic.cpython-37m-x86_64-linux-gnu.so
+pystokes/phoreticUnbounded.cpython-37m-x86_64-linux-gnu.so
+pystokes/phoreticWallBounded.cpython-37m-x86_64-linux-gnu.so
+pystokes/twoWalls.cpython-37m-x86_64-linux-gnu.so
+pystokes/unbounded.cpython-37m-x86_64-linux-gnu.so
+pystokes/utils.cpython-37m-x86_64-linux-gnu.so
+pystokes/wallBounded.cpython-37m-x86_64-linux-gnu.so
