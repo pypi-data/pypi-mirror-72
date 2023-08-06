@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: btls3
+Version: 0.1.1
+Summary: Useful tools to work with Elastic stack in Python
+Home-page: https://github.com/ncthuc/elastictools
+Author: Thuc Nguyen
+Author-email: gthuc.nguyen@gmail.com
+License: MIT
+Download-URL: https://pypi.org/project/elastictools/
+Keywords: Elastic,ElasticSearch,Elastic Stack,Python 3,Elastic 7
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: elasticsearch (>=7.0.2)
+Requires-Dist: jinja2
+
+Useful tools to work with Elastic stack in Python
+
+# Description
+
+It consists of two main modules:
+
+- `indextools`: tools to work with Elastic indices
+- `doctools`: tools to work with Elastic documents
+
+# Installation
+
+## Normal installation
+
+```bash
+pip install elastictools
+```
+
+## Development installation
+
+```bash
+git clone https://github.com/ncthuc/elastictools.git
+cd elastictools
+pip install --editable .
+```
+
+# Change log
+
+## [0.2.3] - 2019-06-19
+- Fix multiple doc_type in mapping
+
+## [0.2.2] - 2019-06-18
+- Fix multiple error related to doc_type in ES7
+- Update elasticsearch-py to 7.0.2
+- Fix bug related to doctype while indexing document in ES 7
+
+
+## [0.2.1] - 2019-06-18
+- Update elasticsearch-py to 7.0.2
+- Fix bug related to doctype while indexing document in ES 7
+
+## [0.1.4] - 2018-12-07
+
+### Added
+- `DocTools.dump()`
+- `DocTools.bulk_insert_from_json()`
+
+## [0.1.3] - 2018-11-09
+
+### Added
+- `DocTools.bulk()`
+- `DocTools.bulk_insert_from_csv()`
+- `IndexTools.create_if_not_exists()`
+- `IndexTools.truncate()`
+
+## [0.1.2] - 2018-11-08
+
+### Added
+- `HISTORY.md`
+- `long_description` in setup.py that contains content of `README.md` and `HISTORY.md`
+
+### Changed
+- `N/A`
+
+### Removed
+- `N/A`
+
+## [0.0.1] - 2018-11-07
+
+### Added
+- `DocTools.make_search_body()`
+- `DocTools.search()`
+- `DocTools.msearch()`
+
+### Changed
+
+### Removed
+
