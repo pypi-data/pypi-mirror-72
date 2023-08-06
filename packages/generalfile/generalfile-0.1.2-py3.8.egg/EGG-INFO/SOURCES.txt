@@ -1,0 +1,15 @@
+setup.py
+generalfile/__init__.py
+generalfile.egg-info/PKG-INFO
+generalfile.egg-info/SOURCES.txt
+generalfile.egg-info/dependency_links.txt
+generalfile.egg-info/requires.txt
+generalfile.egg-info/top_level.txt
+generalfile/base/classfile.py
+generalfile/base/classpath.py
+generalfile/base/classpathlist.py
+test/__init__.py
+test/base/setUpWorkDir.py
+test/base/test_classfile.py
+test/base/test_classpath.py
+test/base/test_classpathlist.py
