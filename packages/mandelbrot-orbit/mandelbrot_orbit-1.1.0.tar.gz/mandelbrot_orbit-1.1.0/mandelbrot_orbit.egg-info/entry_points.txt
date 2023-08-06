@@ -1,0 +1,3 @@
+[console_scripts]
+mandelbrot-orbit = mandelbrot_orbit.mandelbrot_orbit:main
+

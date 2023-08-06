@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+mandelbrot_orbit/__init__.py
+mandelbrot_orbit/__main__.py
+mandelbrot_orbit/mandelbrot_orbit.py
+mandelbrot_orbit/orbit_calculator.py
+mandelbrot_orbit.egg-info/PKG-INFO
+mandelbrot_orbit.egg-info/SOURCES.txt
+mandelbrot_orbit.egg-info/dependency_links.txt
+mandelbrot_orbit.egg-info/entry_points.txt
+mandelbrot_orbit.egg-info/requires.txt
+mandelbrot_orbit.egg-info/top_level.txt
