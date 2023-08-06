@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: pycrontasks
+Version: 1.0.0
+Summary: A small wrapper for the croniter module to allow easy making of scheduled tasks.
+Home-page: https://github.com/dennthecafebabe/pycrontasks
+Author: dennthecafebabe
+Author-email: dany@cafebabe.date
+License: WTFPL
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
