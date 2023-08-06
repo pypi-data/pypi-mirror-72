@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: raplibs-f10
+Version: 0.8
+Summary: RaP Libs V10
+Home-page: https://github.com/pypa/sampleproject
+Author: Random Power
+Author-email: info@randompower.eu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: ftd2xx
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
