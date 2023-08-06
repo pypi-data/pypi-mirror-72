@@ -1,0 +1,13 @@
+origamibot/__init__.py,sha256=mOZ5U2YnXQX5QC04Wl7nPXZK_o3G91d5zJ_E-s8THfM,34
+origamibot/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+origamibot/core/api_request.py,sha256=xq4xrPT7Kofb-2dRywrRVqx8uXBUWX2KBpJ30Q6sHrU,17899
+origamibot/core/bot.py,sha256=_L1a74LRnn36RP1adzpIUmK2XrLyK-s5S0BJYXGoN-Y,18150
+origamibot/core/commands.py,sha256=qwTddYBjQ8--X_0gWvnkdGPin5kUrVN_Gf-AsznAI_0,977
+origamibot/core/sthread.py,sha256=WU0oipZZpY1mjj2JyvYXklOuyToISfzKNRr2uIXVOgA,614
+origamibot/core/teletypes.py,sha256=KO7OipSSdhX1bpUKizhxln6MXYMl0mWZJe4LVCBlsjA,14182
+origamibot/core/util.py,sha256=pZdY4Jlb5O23Usu5069mFXvU57q53dGZN2lhx2chah4,1322
+origamibot-0.0.1.dist-info/LICENSE,sha256=OKZibNPS_PzBKQRab3nTIbh7iHHw6HtG9MVT5SY1Ec8,1097
+origamibot-0.0.1.dist-info/METADATA,sha256=M44C1W9gRlRZiyQBSM9HHQoiqMV52a0OtXM1z5tu0n0,1779
+origamibot-0.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+origamibot-0.0.1.dist-info/top_level.txt,sha256=KRCFULGo8-YLLrLEFwRaLYxEEfhWpGgkSLkq1cbiJEY,11
+origamibot-0.0.1.dist-info/RECORD,,
