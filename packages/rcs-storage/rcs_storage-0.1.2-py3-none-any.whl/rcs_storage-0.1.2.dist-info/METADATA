@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: rcs-storage
+Version: 0.1.2
+Summary: Client for the Research Data Storage Registry, Research Computing Services, University of Melbourne.
+Home-page: https://gitlab.unimelb.edu.au/resplat-data/rcs-storage
+Author: Elyas Khan
+Author-email: elyas.khan@unimelb.edu.au
+License: MIT
+Keywords: unimelb
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: requests
+Requires-Dist: prettytable
+Requires-Dist: python-dateutil
+
+UNKNOWN
+
+
