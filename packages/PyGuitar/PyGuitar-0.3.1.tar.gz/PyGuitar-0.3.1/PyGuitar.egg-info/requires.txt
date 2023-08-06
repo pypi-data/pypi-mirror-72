@@ -1,0 +1,4 @@
+matplotlib>=2.2.4
+
+[tests]
+pytest
