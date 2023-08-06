@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "settingscascade"
+# Version is 0.3.4 in this file, it is updated during the publish process
+# based on the git tag (0.3.4 is the minimum version rye expects to work
+# properly, so we need this here for the install to work)
+version = "0.5.0"
+description = "Cascade settings from multiple levels of specificity"
+authors = ["Paul Becotte <pjbecotte@gmail.com>"]
+license = "MIT"
+readme = "README.rst"
+homepage = "https://gitlab.com/pjbecotte/settingscascade"
+repository = "https://gitlab.com/pjbecotte/settingscascade"
+keywords = ["config", "settings", "ini", "css", "specificity"]
+classifiers = [
+	"Development Status :: 4 - Beta",
+	"Intended Audience :: Developers",
+	"Topic :: Software Development :: Libraries",
+]
+
+packages = [
+    {include = "settingscascade", from = "src"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+jinja2 = "~2.10"
+sortedcontainers = "~2.1"
+
+
+[tool.poetry.dev-dependencies]
+black = {version = "^19.3b0", allows-prereleases = true, python = "^3.6"}
+# This is a subdep of sphinx, but the current latest package is broken
+docutils = "0.15"
+isort = "^4.3"
+mypy = "^0.710"
+pylint = "^2.3"
+pytest = "^4.6"
+pytest-cov = "^2.7"
+pyyaml = "^5.1"
+sphinx = "^2.1"
+sphinx-rtd-theme = "^0.4.3"
+toml = "~0.10"
+
+[tool.black]
+exclude = '\.rye'
+
+[build-system]
+requires = ["poetry"]
+build-backend = "poetry.masonry.api"
