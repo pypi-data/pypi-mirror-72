@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: MLStudio
+Version: 0.1.15
+Summary: Machine Learning Algorithms
+Home-page: https://github.com/decisionscients/MLStudio
+Author: John James
+Author-email: jjames@decisionscients.com
+License: BSD license
+Keywords: MLStudio
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+
+===========================
+Machine Learning Algorithms
+===========================
+
+
+.. image:: https://img.shields.io/pypi/v/MLStudio.svg
+        :target: https://pypi.python.org/pypi/MLStudio
+
+.. image:: https://readthedocs.org/projects/MLStudio/badge/?version=latest
+        :target: https://MLStudio.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+.. image:: https://pyup.io/repos/github/decisionscients/MLStudio/shield.svg
+     :target: https://pyup.io/repos/github/decisionscients/MLStudio/
+     :alt: Updates
+
+
+
+Machine Learning Algorithms
+
+
+* Free software: BSD license
+* Documentation: https://MLStudio.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+
+========
+BlackBox
+========
+
+0.1.0 (2020-03-15)
+0.1.1 (2020-04-01)
+0.1.2 (2020-06-10)
+------------------
+
+* Non-convex optimization
+
+
