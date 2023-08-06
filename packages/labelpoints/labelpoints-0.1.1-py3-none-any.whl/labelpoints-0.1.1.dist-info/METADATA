@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: labelpoints
+Version: 0.1.1
+Summary: a tool for only points
+Home-page: https://https://github.com/ScCcWe/labelpoints
+Author: ScCcEe
+Author-email: scccwe@qq.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pillow
+Requires-Dist: qtpy
+Requires-Dist: termcolor
+Requires-Dist: imgviz
+Requires-Dist: PyYAML
+Requires-Dist: PyQt5
+
+
+# ✒a simply tool for points 
+
+## 安装
+```commandline
+$ pip install labelpoints
+```
+
+## 使用
+```commandline
+$ labelpoints
+```
+
+## 总览
+![Image text](https://github.com/ScCcWe/labelpoints/blob/master/labelpoints/img/show1.png)
+
+
