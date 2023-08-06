@@ -1,0 +1,10 @@
+setup.py
+clvnshi_distributions.egg-info/PKG-INFO
+clvnshi_distributions.egg-info/SOURCES.txt
+clvnshi_distributions.egg-info/dependency_links.txt
+clvnshi_distributions.egg-info/not-zip-safe
+clvnshi_distributions.egg-info/top_level.txt
+clvnshi_probability/Binomialdistribution.py
+clvnshi_probability/Gaussiandistribution.py
+clvnshi_probability/Generaldistribution.py
+clvnshi_probability/__init__.py
