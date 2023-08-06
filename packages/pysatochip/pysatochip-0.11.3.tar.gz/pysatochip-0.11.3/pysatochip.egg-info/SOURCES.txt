@@ -1,0 +1,16 @@
+setup.py
+pysatochip/CardConnector.py
+pysatochip/CardDataParser.py
+pysatochip/JCconstants.py
+pysatochip/Satochip2FA.py
+pysatochip/SecureChannel.py
+pysatochip/TxParser.py
+pysatochip/__init__.py
+pysatochip/ecc.py
+pysatochip/util.py
+pysatochip/version.py
+pysatochip.egg-info/PKG-INFO
+pysatochip.egg-info/SOURCES.txt
+pysatochip.egg-info/dependency_links.txt
+pysatochip.egg-info/requires.txt
+pysatochip.egg-info/top_level.txt
