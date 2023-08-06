@@ -1,0 +1,3 @@
+[console_scripts]
+incap = cwafcli.__main__:main
+
