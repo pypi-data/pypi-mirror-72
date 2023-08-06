@@ -1,0 +1,26 @@
+[tool.poetry]
+
+name = "solvent"
+version = "0.0.4"
+description = "Kills off fake grass."
+authors = ["Solvent <solvent@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+
+python = "^3.7"
+
+pomace = "=0.0.17"
+
+[tool.poetry.dev-dependencies]
+
+black = {version = "^19.10b0", allow-prereleases = true}
+
+[tool.poetry.scripts]
+
+solvent = 'solvent:main'
+
+[build-system]
+
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
