@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+setup.cfg
+setup.py
+src/orion.algo.dumbalgo.egg-info/PKG-INFO
+src/orion.algo.dumbalgo.egg-info/SOURCES.txt
+src/orion.algo.dumbalgo.egg-info/dependency_links.txt
+src/orion.algo.dumbalgo.egg-info/entry_points.txt
+src/orion.algo.dumbalgo.egg-info/not-zip-safe
+src/orion.algo.dumbalgo.egg-info/requires.txt
+src/orion.algo.dumbalgo.egg-info/top_level.txt
+src/orion/algo/dumbalgo.py

@@ -1,0 +1,3 @@
+[BaseAlgorithm]
+dumbalgo = orion.algo.dumbalgo:DumbAlgo
+
