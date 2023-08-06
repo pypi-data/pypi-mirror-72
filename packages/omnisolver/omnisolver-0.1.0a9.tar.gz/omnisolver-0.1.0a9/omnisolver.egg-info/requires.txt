@@ -1,0 +1,6 @@
+dimod
+numpy>=1.17.0
+pluggy
+typing_extensions
+pyaml
+pandas
