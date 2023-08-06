@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: storagekit
+Version: 0.0.2
+Summary: object storage python sdk tools
+Home-page: https://github.com/pytoolkits/storagekit
+Author: hhr66
+Author-email: hhr66@qq.com
+License: MIT Licence
+Description: # storagekit
+        
+Keywords: storage,ceph,oss,s3,elasticsearch
+Platform: any
