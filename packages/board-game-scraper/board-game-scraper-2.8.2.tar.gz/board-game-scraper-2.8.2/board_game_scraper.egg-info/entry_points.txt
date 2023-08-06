@@ -1,0 +1,5 @@
+[console_scripts]
+bg-merge = board_game_scraper.merge:main
+bg-news = board_game_scraper.news:main
+bg-scraper = board_game_scraper.__main__:main
+
