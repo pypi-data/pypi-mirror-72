@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+scripts/temp-untar
+temp_untar.egg-info/PKG-INFO
+temp_untar.egg-info/SOURCES.txt
+temp_untar.egg-info/dependency_links.txt
+temp_untar.egg-info/top_level.txt
