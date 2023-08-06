@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+code128bgen.egg-info/PKG-INFO
+code128bgen.egg-info/SOURCES.txt
+code128bgen.egg-info/dependency_links.txt
+code128bgen.egg-info/requires.txt
+code128bgen.egg-info/top_level.txt
+code128cgen/__init__.py
