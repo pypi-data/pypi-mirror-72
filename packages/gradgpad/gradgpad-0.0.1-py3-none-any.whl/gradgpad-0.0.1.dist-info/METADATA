@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: gradgpad
+Version: 0.0.1
+Summary: gradgpad
+Home-page: https://github.com/acostapazo/gradgpad
+Author: ALiCE Biometrics
+Author-email: acosta@alicebiometrics.com
+License: MIT
+Keywords: face-PAD,framework,evaluation
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: black (==19.3b0)
+Requires-Dist: flake8 (==3.7.7)
+Requires-Dist: pytest-cov (==2.5.1)
+Requires-Dist: pytest-mock (==1.7.1)
+Requires-Dist: hypothesis (==4.34.0)
+Requires-Dist: pre-commit (==1.18.3)
+Requires-Dist: twine (==1.13.0)
+Requires-Dist: pytest-clarity (==0.2.0a1)
+Requires-Dist: petisco (==0.29.7)
+Requires-Dist: meiga (==1.2.9)
+
+# grad-gpad [![ci](https://github.com/acostapazo/gradgpad/workflows/ci/badge.svg)](https://github.com/acostapazo/gradgpad/actions)
+
+Insert project description here
+
+
+## Table of Contents
+- [Installation :computer:](#installation-computer)
+- [Testing :white_check_mark:](#testing-white_check_mark)
+- [Contact :mailbox_with_mail:](#contact-mailbox_with_mail)
+
+
+## Installation :computer:
+
+Use [lume :fire:](https://github.com/alice-biometrics/lume) to install dependencies:
+
+Example:
+
+```console
+>> conda create -n myenv python=3.6
+>> conda activate myenv
+(myenv) >> pip install lume
+(myenv) >> lume -install
+```
+
+## Testing :white_check_mark:
+
+### Unit, Integration and Acceptance
+
+```console
+(myenv) >> lume -test
+```
+
+
+## Contact :mailbox_with_mail:
+
+support@alicebiometrics.com
+
+
+
