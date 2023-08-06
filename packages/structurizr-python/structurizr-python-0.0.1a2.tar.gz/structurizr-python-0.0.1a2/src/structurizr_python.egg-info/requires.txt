@@ -1,0 +1,9 @@
+depinfo
+httpx
+pydantic
+python-dotenv
+
+[development]
+black
+isort
+tox
