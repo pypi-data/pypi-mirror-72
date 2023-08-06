@@ -1,0 +1,3 @@
+[console_scripts]
+saml2art = saml2art.commands.main:main
+
