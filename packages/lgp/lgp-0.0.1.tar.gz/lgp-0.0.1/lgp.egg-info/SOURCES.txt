@@ -1,0 +1,16 @@
+README.rst
+setup.py
+lgp.egg-info/PKG-INFO
+lgp.egg-info/SOURCES.txt
+lgp.egg-info/dependency_links.txt
+lgp.egg-info/requires.txt
+lgp.egg-info/top_level.txt
+linear_genetic_programming/__init__.py
+linear_genetic_programming/_evolve.py
+linear_genetic_programming/_genetic_operations.py
+linear_genetic_programming/_instruction.py
+linear_genetic_programming/_population.py
+linear_genetic_programming/_program.py
+linear_genetic_programming/lgp_classifier.py
+linear_genetic_programming/tests/__init__.py
+linear_genetic_programming/tests/test_lgp.py
