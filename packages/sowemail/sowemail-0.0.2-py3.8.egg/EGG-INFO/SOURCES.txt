@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+VERSION.txt
+install-requirements.pip
+setup.py
+test-requirements.pip
+sowemail/__init__.py
+sowemail/base_interface.py
+sowemail/sowemail.py
+sowemail.egg-info/PKG-INFO
+sowemail.egg-info/SOURCES.txt
+sowemail.egg-info/dependency_links.txt
+sowemail.egg-info/requires.txt
+sowemail.egg-info/top_level.txt
