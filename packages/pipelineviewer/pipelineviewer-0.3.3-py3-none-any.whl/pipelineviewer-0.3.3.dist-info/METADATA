@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pipelineviewer
+Version: 0.3.3
+Summary: CPU Pipeline Viewer
+Home-page: https://github.com/wallento/pipeline-viewer
+Author: Stefan Wallentowitz
+Author-email: stefan@wallentowitz.de
+License: UNKNOWN
+Keywords: cpu pipeline viewer
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: attrdict
+Requires-Dist: colorama
+Requires-Dist: pygments
+Requires-Dist: riscv-model (>=0.3)
+
+CPU Pipeline Viewer
+===================
+
+This is a CPU pipeline viewer, similar to gem5's o3-pipeview.
+
+
