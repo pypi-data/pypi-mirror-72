@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        modbus4mqtt=modbus4mqtt.modbus4mqtt:main
+    
