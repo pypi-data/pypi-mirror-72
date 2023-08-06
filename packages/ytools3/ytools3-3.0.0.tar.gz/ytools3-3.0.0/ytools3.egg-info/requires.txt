@@ -1,0 +1,7 @@
+jsonpath-ng>=1.5.1
+jsonschema>=3.2.0
+strict-rfc3339==0.7
+PyYAML>=5.1
+typing-extensions
+
+[all]

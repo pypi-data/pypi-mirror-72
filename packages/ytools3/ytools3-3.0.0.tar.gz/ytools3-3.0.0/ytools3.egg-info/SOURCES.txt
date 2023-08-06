@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+__pkginfo__.py
+requirements.txt
+setup.py
+ytools/__init__.py
+ytools/__main__.py
+ytools/py.typed
+ytools3.egg-info/PKG-INFO
+ytools3.egg-info/SOURCES.txt
+ytools3.egg-info/dependency_links.txt
+ytools3.egg-info/entry_points.txt
+ytools3.egg-info/not-zip-safe
+ytools3.egg-info/requires.txt
+ytools3.egg-info/top_level.txt
