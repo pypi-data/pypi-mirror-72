@@ -1,0 +1,14 @@
+xarray_leaflet/__init__.py,sha256=umrfhXMywo-ON1zb1-ni3gEo5eh1mJ-Gm5n0bwUPNfw,367
+xarray_leaflet/handler.py,sha256=_4XoExgOa_jLOQvxV9j3fb2dibcXZY9qZnlllWeQK38,1754
+xarray_leaflet/server_extension.py,sha256=_cvr7weNlWqtOjoA3II5XqpFGeM7Lg6IpbYVLlSb5Qg,874
+xarray_leaflet/transform.py,sha256=sdofvxKe0QhVYfAT2zBiGKtxx7QkuVXGptcVVooO_W0,966
+xarray_leaflet/utils.py,sha256=tBokmcuoP8MTZ_c75GE4RyYmJrQvcHvhl3hRYY6WM9g,1846
+xarray_leaflet/xarray_leaflet.py,sha256=y-cCDPNLjk-fs0d8wXXuLWhrWPbREy8Disa10QC3JFA,10737
+xarray_leaflet/xarray_leaflet_prev.py,sha256=YJeACqv35SME9yBCdnHZXRPT8g3IiNlO7s2IjLV7raE,6922
+xarray_leaflet-0.1.8.data/data/etc/jupyter/jupyter_notebook_config.d/xarray_leaflet.json,sha256=ZXaVtk1Ic1XKoHGnwfMMkLziBEwIh3k7EaNIIzlfRcY,109
+xarray_leaflet-0.1.8.data/data/etc/jupyter/jupyter_server_config.d/xarray_leaflet.json,sha256=3O1DkQdV-OMLS7gH9fbkbMJ2FI3bY7Lmh5M_IdjrlCg,107
+xarray_leaflet-0.1.8.dist-info/LICENSE,sha256=LZBuKg6bZN5gAJgBCFGBJLa1p1YPR-KGpXU5iXpUmTg,1073
+xarray_leaflet-0.1.8.dist-info/METADATA,sha256=Tk1_bHWCeSho1Skml8I080YSj1V5Pb8t93DpI-YAZcM,1016
+xarray_leaflet-0.1.8.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+xarray_leaflet-0.1.8.dist-info/top_level.txt,sha256=b2V3JMY8zQVKoiP_S7dn0edU5cy5geAGas1dLPMdB2E,15
+xarray_leaflet-0.1.8.dist-info/RECORD,,
