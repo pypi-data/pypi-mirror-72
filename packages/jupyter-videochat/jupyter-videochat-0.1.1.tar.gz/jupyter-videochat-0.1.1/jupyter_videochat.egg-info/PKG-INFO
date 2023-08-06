@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: jupyter-videochat
+Version: 0.1.1
+Summary: Video Chat with peers inside  JupyterLab
+Home-page: https://github.com/yuvipanda/jupyter-videochat
+Author: Yuvi Panda
+Author-email: UNKNOWN
+License: BSD-3-Clause
+Description: UNKNOWN
+Keywords: Jupyter,JupyterLab
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Jupyter
