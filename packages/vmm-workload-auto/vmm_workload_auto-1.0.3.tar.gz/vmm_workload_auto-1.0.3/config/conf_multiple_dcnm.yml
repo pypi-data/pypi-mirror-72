@@ -1,0 +1,22 @@
+LogFile: /tmp/workloadauto.log
+ListenPort: 9590
+AutoDeploy: false
+NwkMgr:
+- Ip: 172.28.10.156
+  User: admin
+  Password: C1sco_123
+  CsvFile: /etc/vmm_workload_auto/sample.csv
+  ServerCntrlr:
+    - Ip: 172.28.10.184
+      Type: vCenter
+      User: administrator@vsphere.local
+      Password: Cisc0!23
+- Ip: 172.28.10.157
+  User: admin
+  Password: C1sco_123
+  CsvFile: /etc/vmm_workload_auto/sample-157.csv
+  ServerCntrlr:
+    - Ip: 172.28.10.185
+      Type: vCenter
+      User: administrator@vsphere.local
+      Password: Cisc0!23
