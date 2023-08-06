@@ -1,0 +1,3 @@
+[console_scripts]
+ogr2pbf = ogr2pbf.ogr2pbf:main
+
