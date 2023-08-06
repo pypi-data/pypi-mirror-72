@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+KeePassLibrary/KeePassLibrary.py
+KeePassLibrary/__init__.py
+robotframework_keepasslibrary.egg-info/PKG-INFO
+robotframework_keepasslibrary.egg-info/SOURCES.txt
+robotframework_keepasslibrary.egg-info/dependency_links.txt
+robotframework_keepasslibrary.egg-info/requires.txt
+robotframework_keepasslibrary.egg-info/top_level.txt
