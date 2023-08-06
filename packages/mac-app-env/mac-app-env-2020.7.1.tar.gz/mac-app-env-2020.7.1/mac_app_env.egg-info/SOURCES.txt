@@ -1,0 +1,10 @@
+requirements.txt
+setup.py
+mac_app_env/__init__.py
+mac_app_env/__main__.py
+mac_app_env/plist.py
+mac_app_env.egg-info/PKG-INFO
+mac_app_env.egg-info/SOURCES.txt
+mac_app_env.egg-info/dependency_links.txt
+mac_app_env.egg-info/requires.txt
+mac_app_env.egg-info/top_level.txt
