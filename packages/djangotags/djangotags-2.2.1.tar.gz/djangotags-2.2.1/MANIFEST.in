@@ -1,0 +1,10 @@
+include LICENSE
+include README.md
+include requirements.txt
+recursive-include djangotags/contexts *
+recursive-include djangotags/migrations *
+recursive-include djangotags/rest_api *
+recursive-include djangotags/rest_api/serializers *
+recursive-include djangotags/rest_api/viewsets *
+recursive-include djangotags/templates/djangoadmin/djangotags *
+recursive-include djangotags/views *
