@@ -1,0 +1,9 @@
+astropy
+numpy
+ipdb
+tqdm
+matplotlib
+sklearn
+h5py
+wheel
+twine
