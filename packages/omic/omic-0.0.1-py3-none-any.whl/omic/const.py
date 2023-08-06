@@ -1,0 +1,1 @@
+GCP_ENDPOINT = 'https://storage.googleapis.com/storage/v1'
