@@ -1,0 +1,164 @@
+Metadata-Version: 2.1
+Name: scrapy-item
+Version: 0.0.3
+Summary: Item with general/unknown/dynamic fields
+Home-page: https://github.com/alex-ber/scrapy-item
+Author: Alexander Berkovich
+License: Apache 2.0
+Keywords: Scrapy dynamic item general unknown
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: Scrapy
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Natural Language :: English
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Scrapy
+Provides-Extra: tests
+Requires-Dist: alex-ber-utils (==0.5.2) ; extra == 'tests'
+Requires-Dist: atomicwrites (==1.3.0) ; extra == 'tests'
+Requires-Dist: attrs (==19.1.0) ; extra == 'tests'
+Requires-Dist: colorama (==0.4.1) ; extra == 'tests'
+Requires-Dist: mock (==2.0.0) ; extra == 'tests'
+Requires-Dist: more-itertools (==6.0.0) ; extra == 'tests'
+Requires-Dist: pbr (==5.1.3) ; extra == 'tests'
+Requires-Dist: pluggy (==0.9.0) ; extra == 'tests'
+Requires-Dist: py (==1.8.0) ; extra == 'tests'
+Requires-Dist: pytest (==4.3.1) ; extra == 'tests'
+Requires-Dist: pytest-assume (==1.2.2) ; extra == 'tests'
+Requires-Dist: pytest-mock (==1.10.1) ; extra == 'tests'
+Requires-Dist: PyYAML (==5.1) ; extra == 'tests'
+Requires-Dist: six (==1.12.0) ; extra == 'tests'
+
+## scrapy-item
+
+Item with general/unknown/dynamic fields.
+Variation of https://github.com/WilliamKinaan/ScrapyDynamicItems - extracting only essential part.
+See [https://medium.com/@alex_ber/scrapy-item-with-general-fields-7552bd6e4622] for description.
+See CHANGELOG.md for detail description.
+
+
+
+### Getting Help
+
+
+### QuickStart
+```bash
+python3 -m pip install -U scrapy-item
+```
+
+
+### Installing from Github
+
+```bash
+python3 -m pip install -U https://github.com/alex-ber/scrapy-item/archive/master.zip
+```
+Optionally installing tests requirements.
+
+```bash
+python3 -m pip install -U https://github.com/alex-ber/scrapy-item/archive/master.zip#egg=alex-ber-utils[tests]
+```
+
+Or explicitly:
+
+```bash
+wget https://github.com/alex-ber/scrapy-item/archive/master.zip -O master.zip; unzip master.zip; rm master.zip
+```
+And then installing from source (see below).
+
+
+### Installing from source
+```bash
+python3 -m pip install -r req.txt # only installs "required" (relaxed)
+```
+```bash
+python3 -m pip install . # only installs "required"
+```
+```bash
+python3 -m pip install .[tests] # installs dependencies for tests
+```
+
+#### Alternatively you install install from requirements file:
+```bash
+python3 -m pip install -r requirements.txt # only installs "required"
+```
+```bash
+python3 -m pip install -r requirements-tests.txt # installs dependencies for tests
+```
+
+##
+
+From the directory with setup.py
+```bash
+python3 setup.py test #run all tests
+```
+
+or
+
+```bash
+
+pytest
+```
+
+## Installing new version
+See https://docs.python.org/3.1/distutils/uploading.html 
+
+```bash
+python3 setup.py sdist upload
+```
+
+## Requirements
+
+
+scrapy-item requires the following modules.
+
+* Python 3.6+
+
+
+
+# Changelog
+
+Item with general/unknown/dynamic fields.
+Variation of https://github.com/WilliamKinaan/ScrapyDynamicItems - extracting only essential part.
+See [https://medium.com/@alex_ber/scrapy-item-with-general-fields-7552bd6e4622] for description.
+
+
+All notable changes to this project will be documented in this file.
+
+\#https://pypi.org/manage/project/scrapy-state/releases/
+
+## [Unrelased]
+## [0.0.2] - 01/07/2020
+### Added 
+- Unit-test for `GeneralItem` class in `alexber.scrapyitem` module is added.
+
+
+## [0.0.1] - 01/07/2020
+### Added 
+- `GeneralItem` class in `alexber.scrapyitem` module. Item with general/unknown/dynamic fields.
+Variation of [https://github.com/WilliamKinaan/ScrapyDynamicItems] - extracting only essential part.
+- See [https://medium.com/@alex_ber/scrapy-item-with-general-fields-7552bd6e4622] for description.
+
+
+<!--
+### Added 
+### Changed
+### Removed
+-->
+
+
