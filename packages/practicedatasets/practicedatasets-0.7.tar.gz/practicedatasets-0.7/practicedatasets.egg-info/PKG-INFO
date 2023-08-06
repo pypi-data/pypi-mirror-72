@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: practicedatasets
+Version: 0.7
+Summary: Practice Dataset
+Home-page: https://github.com/mehtarjt/practicedatasets
+Author: Rajat Mehta
+Author-email: mehtarjt@gmail.com
+License: MIT
+Description: This package contains different datasets like covid and world population. These datasets can be imported and acccessed as pandas dataframe or numpy array
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
