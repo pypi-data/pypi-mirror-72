@@ -1,0 +1,3 @@
+[console_scripts]
+bahram help = src.f:help
+
