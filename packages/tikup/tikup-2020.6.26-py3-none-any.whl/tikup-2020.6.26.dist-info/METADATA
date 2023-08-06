@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: tikup
+Version: 2020.6.26
+Summary: An auto downloader and uploader for TikTok videos.
+Home-page: https://github.com/Coloradohusky/TikUp
+Author: Coloradohusky
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5, <4
+Description-Content-Type: text/x-rst
+Requires-Dist: internetarchive (>=1.9.3)
+Requires-Dist: TikTokApi (>=3.3.1)
+Requires-Dist: youtube-dl (>=2020.06.16.1)
+
+TikUp
+=======
+
+An auto downloader and uploader for TikTok profiles.
+
+**Requirements**
+  `TikTok-Api <https://github.com/davidteather/TikTok-Api>`__ and `internetarchive <https://archive.org/services/docs/api/internetarchive/index.html>`__ on Python 3.
+
+**How to use**
+  Install with ``pip install tikup``.
+
+
