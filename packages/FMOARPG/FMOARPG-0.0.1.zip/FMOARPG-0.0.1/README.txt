@@ -1,0 +1,1 @@
+Biblioteca para importação de dados da plataforma BIM360 no ambiente do Power BI.
