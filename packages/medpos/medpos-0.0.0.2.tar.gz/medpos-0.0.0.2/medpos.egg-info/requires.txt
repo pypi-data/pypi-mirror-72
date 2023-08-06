@@ -1,0 +1,15 @@
+jieba==0.42.1
+nltk==3.5
+numpy==1.19.0
+pandas==1.0.5
+Pyphen==0.9.5
+smart-open==2.0.0
+tabulate==0.8.7
+
+[dev]
+check-manifest
+
+[test]
+coverage
+pytest
+pylint

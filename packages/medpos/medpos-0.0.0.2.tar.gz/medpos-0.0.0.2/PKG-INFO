@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: medpos
+Version: 0.0.0.2
+Summary: medical part-of-speech tagging
+Home-page: UNKNOWN
+Author: junjieluo
+Author-email: floydjjluo@gmail.com
+License: UNKNOWN
+Description: # Medical Part-Of-Speech
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
