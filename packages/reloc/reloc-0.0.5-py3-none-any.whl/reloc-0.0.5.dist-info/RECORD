@@ -1,0 +1,12 @@
+reloc/__init__.py,sha256=YNfmPLQLFRnZytG8kL68HgUEf93f0nsBc8kJxDTQrRA,75
+reloc/__version__.py,sha256=eB5tEg_BNHHsJgQexgmpZJr4c2VbfooQZMXAWuDHoIg,22
+reloc/cli.py,sha256=cz6e47XVgsYeDR4XhV9ID-DL2nXI4QEY7v7ocsl4gCE,3177
+reloc/client.py,sha256=yYphqOlFb_XaipJAGVYrLWjbXHm4xrmN_0gxA5au9EE,6938
+reloc/server.py,sha256=e82zFZ9irNtd4bTPLVuiAka-9W9Uv-P_i1e9gD77n9Y,13859
+reloc/util.py,sha256=A_JkFy9j6t1Uqf_md8yeeeURqdnjEEa6ynNtYwTKo1c,590
+reloc-0.0.5.dist-info/LICENSE,sha256=-8xt8Z2n7BRWsO-i83Zlg8vILHlBuQ--cJp8wANZty4,1073
+reloc-0.0.5.dist-info/METADATA,sha256=_qZy7iOJMiZdpmMI_cLeEux16yjFifbafJWVRAgak68,3214
+reloc-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+reloc-0.0.5.dist-info/entry_points.txt,sha256=ZJhLmpWXQHFfUz2HxZzskOlZsN-Uq0rW5U-POqYZE28,50
+reloc-0.0.5.dist-info/top_level.txt,sha256=aPaalEk-5HYoa2X9EhBjhRUdV6DyuZZVX77XiALcgRA,6
+reloc-0.0.5.dist-info/RECORD,,
