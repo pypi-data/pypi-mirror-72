@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "pkgstat"
+version = "0.1.1"
+description = "Exercise"
+authors = ["Jose C. Massón <jose.masson@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+click = "^7.1.2"
+requests = "^2.24.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4.3"
+black = "^19.10b0"
+flakehell = "^0.5.0"
+
+[tool.poetry.scripts]
+pkgstat = 'pkgstat:main'
+
+[tool.black]
+line-length = 78
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
