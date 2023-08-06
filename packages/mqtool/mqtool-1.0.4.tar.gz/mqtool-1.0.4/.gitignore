@@ -1,0 +1,50 @@
+#cache
+__pycache__/
+
+# eclipse #
+.settings
+.project
+.classpath
+*.log
+
+# windows #
+Thumbs.db
+
+# Mac #
+.DS_Store
+
+# idea #
+.idea
+*.iml
+*.ipr
+*.iws
+
+logs
+*.class
+*.bak
+*.tmp
+*.log
+
+# vscode #
+.vscode
+
+# Distribution / packaging
+develop-eggs/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+dist/
