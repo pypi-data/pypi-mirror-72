@@ -1,0 +1,11 @@
+__version__ = "1.40.post3"
+__git_commiter_name__ = "Itay Galea"
+__git_commiter_email__ = "igalea@infinidat.com"
+__git_branch__ = u'develop'
+__git_remote_tracking_branch__ = u'origin/develop'
+__git_remote_url__ = u'git@git.infinidat.com:host-internal/infi.ramen_client.git'
+__git_head_hash__ = '31d43f597249a25802b139f94fec7c095ec72739'
+__git_head_subject__ = u'RAMEN-297 Add a method to return current blacklist stored in ramen client reader'
+__git_head_message__ = u''
+__git_dirty_diff__ = u''
+__git_commit_date__ = '2020-07-02 09:36:12'
