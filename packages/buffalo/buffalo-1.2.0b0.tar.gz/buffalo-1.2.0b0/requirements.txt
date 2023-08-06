@@ -1,0 +1,10 @@
+setuptools>=1.3.2
+fire
+pathlib
+numpy
+psutil
+h5py
+hyperopt
+tensorflow==1.15.2
+n2==0.1.6
+pytest
