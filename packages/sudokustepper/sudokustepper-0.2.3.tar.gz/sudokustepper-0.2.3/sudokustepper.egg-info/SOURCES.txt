@@ -1,0 +1,14 @@
+README.md
+setup.py
+sudokustepper/__init__.py
+sudokustepper/__main__.py
+sudokustepper/grid.py
+sudokustepper/gui.py
+sudokustepper/resources.py
+sudokustepper/solvers.py
+sudokustepper.egg-info/PKG-INFO
+sudokustepper.egg-info/SOURCES.txt
+sudokustepper.egg-info/dependency_links.txt
+sudokustepper.egg-info/entry_points.txt
+sudokustepper.egg-info/requires.txt
+sudokustepper.egg-info/top_level.txt
