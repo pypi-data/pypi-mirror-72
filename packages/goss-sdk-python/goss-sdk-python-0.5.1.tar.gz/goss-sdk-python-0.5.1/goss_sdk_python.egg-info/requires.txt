@@ -1,0 +1,4 @@
+esdk-obs-python>=3.19.5
+cos-python-sdk-v5>=1.8.0
+oss2>=2.8.0
+boto3>=1.10.15
