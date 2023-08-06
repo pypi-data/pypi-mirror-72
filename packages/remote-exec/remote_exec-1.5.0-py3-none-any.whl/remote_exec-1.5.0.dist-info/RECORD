@@ -1,0 +1,16 @@
+remote/entrypoints.py,sha256=q1_xoX-VvF_qRT18GmHPVgVOTTflKfgXK-9ttZTM6_E,12801
+remote/exceptions.py,sha256=R0L88B-OmJt89Ce4RvLjqFgVZFouy1VXDT2YqH01GJc,576
+remote/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+remote/util.py,sha256=XuwpvIR6vVe-GaOAM6YtTNpPU3e9KwFz6yKhMBQ0vwc,8114
+remote/workspace.py,sha256=hZw3P6m8ynWY8ynCGtKuofuzD1lJUnU29WBoZIXvgUo,9560
+remote/configuration/__init__.py,sha256=WXv8MRBk3Z_l57z2_KGA65exOQXk-B4ooFoBZNy7I4c,4504
+remote/configuration/classic.py,sha256=zbvmjVD7w88lLo82rdcMIKgYHfBnR4N98o9zKISA8e0,8574
+remote/configuration/discovery.py,sha256=0JZklQ8BeuiBqhL-iGur8RAfYcomYLYZbBQWn5VmrGs,1802
+remote/configuration/shared.py,sha256=Gaj2PyYr_mT0H4Kvjo9NY13x_zDKpJTu-rmFeY9UssQ,240
+remote/configuration/toml.py,sha256=Q0mybDjGFV70pkVfxE0U2wV-Z-jHKy2WtlOLDcSFzps,10878
+remote_exec-1.5.0.dist-info/LICENSE,sha256=Svh4DeDwOSuLw2pzGrwqOfO1oMWPx_RAHkSIdQiXXLc,1320
+remote_exec-1.5.0.dist-info/METADATA,sha256=4ZoapRQhc_gRfXnV6CW58Eln3Gy2ZYw77yrzqUjFZ-E,18948
+remote_exec-1.5.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+remote_exec-1.5.0.dist-info/entry_points.txt,sha256=TESTIdRhBWo9LdeY-hyqOE_ih2T7Nr6fWiTrQgp1QHU,600
+remote_exec-1.5.0.dist-info/top_level.txt,sha256=yBZidJ6zCix_a2ubGlYaewvlzBFXWbckQt20dudxJ1E,7
+remote_exec-1.5.0.dist-info/RECORD,,
