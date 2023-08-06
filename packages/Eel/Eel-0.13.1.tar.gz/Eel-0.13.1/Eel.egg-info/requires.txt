@@ -1,0 +1,7 @@
+bottle
+bottle-websocket
+future
+whichcraft
+
+[jinja2]
+jinja2>=2.10
