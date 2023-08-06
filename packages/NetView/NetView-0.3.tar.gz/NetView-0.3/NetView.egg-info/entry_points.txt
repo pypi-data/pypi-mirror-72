@@ -1,0 +1,3 @@
+[console_scripts]
+runmyserver = src.sample.run:maininitmigrate = src.sample.init:main
+
