@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mongodb-dataset
+Version: 0.1.1
+Summary: 
+Author: InnovativeInventor
+Author-email: root@max.fan
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: dnspython (>=1.16.0,<2.0.0)
+Requires-Dist: pymongo (>=3.10.1,<4.0.0)
