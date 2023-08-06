@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: opensesame-plugin-media-player-mpy
+Version: 0.1.11
+Summary: Media player plugin for OpenSesame, based on MoviePy
+Home-page: https://github.com/dschreij/opensesame-plugin-mediaplayer
+Author: Daniel Schreij
+Author-email: dschreij@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Sound/Audio :: Players
+Classifier: Topic :: Multimedia :: Video :: Display
+Classifier: Topic :: Software Development :: Libraries :: pygame
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
