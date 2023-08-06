@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: Ecological-Name-Translator
+Version: 2.0
+Summary: A lightweight but powerful package for full management and translation of ecological names
+Home-page: https://github.com/Daniel-Davies/MedeinaTranslator
+Author: Daniel Davies
+Author-email: dd16785@bristol.ac.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+
+# The Ecological-Name-Translator
+
+This project has been ported to the [EcoNameTranslator](https://pypi.org/project/EcoNameTranslator/)- the lightweight but powerful package for full management and translation of ecological names
+
+
+
