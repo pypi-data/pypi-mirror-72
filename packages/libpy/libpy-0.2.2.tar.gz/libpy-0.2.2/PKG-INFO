@@ -1,0 +1,91 @@
+Metadata-Version: 1.1
+Name: libpy
+Version: 0.2.2
+Summary: Utilities for writing C++ extension modules.
+Home-page: https://github.com/quantopian/libpy
+Author: Quantopian Inc.
+Author-email: opensource@quantopian.com
+License: Apache 2.0
+Description: ``libpy``
+        =========
+        
+        .. image:: https://github.com/quantopian/libpy/workflows/CI/badge.svg
+            :alt: GitHub Actions status
+            :target: https://github.com/quantopian/libpy/actions?query=workflow%3ACI+branch%3Amaster
+        
+        .. image:: https://badge.fury.io/py/libpy.svg
+            :target: https://badge.fury.io/py/libpy
+        
+        Utilities for writing C++ extension modules for CPython.
+        
+        `Full documentation <https://quantopian.github.io/libpy/>`_
+        
+        Requirements
+        ------------
+        
+        libpy supports:
+        
+        - macOS/Linux
+        - Python >=3.5
+        
+        libpy requires:
+        
+        - gcc>=8 or clang>=10
+        - numpy>=1.11.3
+        
+        libpy also depends on:
+        
+        - pcre
+        - google sparsehash
+        
+        To install these dependencies:
+        
+        ubuntu
+        ~~~~~~
+        
+        .. code-block:: bash
+        
+            $ sudo apt install libpcre2-dev libsparsehash-dev
+        
+        macOS
+        ~~~~~
+        
+        .. code-block:: bash
+        
+            $ brew install pcre2 google-sparsehash
+        
+        Install
+        -------
+        
+        To install for development:
+        
+        .. code-block:: bash
+        
+           $ make
+        
+        Otherwise, ``pip install libpy``, making sure ``CC`` and ``CXX`` environment variables are set to the the right compiler.
+        
+        
+        Tests
+        -----
+        
+        To run the unit tests, invoke:
+        
+        .. code-block:: bash
+        
+           $ make test
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: C++
+Classifier: Operating System :: POSIX
+Classifier: Intended Audience :: Developers
