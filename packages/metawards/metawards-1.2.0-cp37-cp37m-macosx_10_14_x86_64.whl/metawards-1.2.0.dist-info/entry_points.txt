@@ -1,0 +1,5 @@
+[console_scripts]
+metawards = metawards.app.run:cli
+metawards-install = metawards.app.install:cli
+metawards-plot = metawards.app.plot:cli
+
