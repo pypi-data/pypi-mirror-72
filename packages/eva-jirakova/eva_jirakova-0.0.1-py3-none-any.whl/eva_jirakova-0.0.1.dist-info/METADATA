@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: eva-jirakova
+Version: 0.0.1
+Summary: EVA (Equation Visualisation Applet) displays and interlinks a set of equations.
+Home-page: https://repo.tok.ipp.cas.cz/jirakova/eva
+Author: Katerina Hromasova
+Author-email: jirakova@ipp.cas.cz
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: xarray
+
+# eva
+
+EVA = Equation Visualisation Applet
+
+EVA is a tool for describing complex sets of equations by linking each variable with its definition. It is developed to document the equations of B2.5, a principal component of the SOLPS-ITER code.
+
+
