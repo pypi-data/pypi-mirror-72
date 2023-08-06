@@ -1,0 +1,3 @@
+[console_scripts]
+distriploy = distriploy.__main__:main
+
