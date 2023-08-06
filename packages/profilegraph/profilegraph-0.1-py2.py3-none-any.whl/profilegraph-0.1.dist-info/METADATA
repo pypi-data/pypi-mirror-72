@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: profilegraph
+Version: 0.1
+Summary: IPython line magic showing cProfile SVG graphs using gprof2dot and graphviz.
+Home-page: https://github.com/stefco/profilegraph
+License: UNKNOWN
+Author: Stefan Countryman
+Author-email: stefan.countryman@gmail.com
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Dist: gprof2dot
