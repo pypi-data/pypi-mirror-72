@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: aos-signer
+Version: 0.4.0
+Summary: Aos service manager
+Home-page: UNKNOWN
+Author: EPAM Systems
+Author-email: support@aoscloud.io
+License: Apache License 2.0
+Platform: any
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: signxml (==2.7.2)
+Requires-Dist: pylint (==2.5.2)
+Requires-Dist: pytest-cov (==2.9.0)
+Requires-Dist: ruamel.yaml (==0.16.10)
+Requires-Dist: jsonschema (==3.2.0)
+Requires-Dist: requests (==2.23.0)
+
+Unit bootstrap tool
+--------------------------
+The tool that helps configure and sign Aos services.
+
+
