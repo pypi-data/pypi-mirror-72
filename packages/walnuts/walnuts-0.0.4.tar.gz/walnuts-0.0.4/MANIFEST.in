@@ -1,0 +1,2 @@
+recursive-include src/walnuts/templates *
+include src/walnuts/*.html
