@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: vaknl-gcp
+Version: 1.2.8
+Summary: Vakanties.nl pypi package
+Home-page: https://github.com/vakantiesnl/vaknl-PyPi.git
+Author: Wytze Bruinsma
+Author-email: wytze.bruinsma@vakanties.nl
+License: UNKNOWN
+Description: # Vaknl-gcp
+        Package for working with dataclasses and Google cloud instances as Bigquery and Storage. 
+        For this to work the dataclasses need to contain only basic python variables as: str, int, dict, list etc. 
+        
+        ## Prerequisites
+        These modules dependant on the environment variable GOOGLE_CLOUD_PROJECT a.k.a. gcp project id. 
+        
+        ## Bigquery
+        
+        #### execute_query(query):
+        Execute query and log errors
+        ```
+        returns query_job
+        ```
+        
+        #### stream_to_bigquery(objects: list, table_ref):
+        Cast python objects to json and stream them to GBQ
+        Note: this is more expensive compared to using buckets but also quicker
+        
+        ```
+        returns table ref
+        ```
+        
+        #### write_disposition_bucket(table_ref, blob_name, write_disposition):
+        Get data from bucket to GBQ using a write_disposition method
+        
+        Requires: bucket with name storage_to_bigquery-[project-id] 
+        
+        - WRITE_DISPOSITION_UNSPECIFIED	Unknown.
+        - WRITE_EMPTY	This job should only be writing to empty tables.
+        - WRITE_TRUNCATE	This job will truncate table data and write from the beginning.
+        - WRITE_APPEND	This job will append to a table.
+        
+        ```
+        returns load_job.result 
+        ```
+        
+        ## Storage
+        
+        #### storage_to_bigquery(objects: list, table_ref, write_disposition):
+        Function that stores data into multiple storage blobs. Afterwards these wil be composed into one storage blob
+        The reason for this process is to downsize the sie of the data send to Google Cloud Storage.
+        
+        Requires: bucket with name storage_to_bigquery-[project-id] 
+        
+        #### get_bucket(name_bucket: str):
+        ```
+        returns name_bucket
+        ```
+        
+        #### get_blobs_from_bucket(bucket):
+        ```
+        returns blobs:list
+        ```
+        
+        #### upload_from_string(blob, string):
+        ```
+        returns blob.public_url
+        ```
+        
+        ## Tasks
+        
+        #### def create_basic_task(url, queue, payload, task_name=None, in_seconds=None):
+        ```
+        returns Response
+        ```
+        
+        ## Secrets (beta)
+        
+        #### get_default_secret(secret_id):
+        ```
+        returns json
+        ```
+        
+Keywords: vaknl,pip
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
