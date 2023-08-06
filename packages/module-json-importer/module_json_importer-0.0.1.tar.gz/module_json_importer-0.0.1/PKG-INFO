@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: module_json_importer
+Version: 0.0.1
+Summary: Package to import json's like python modules
+Home-page: UNKNOWN
+Author: tourist
+Author-email: rickeyfsimple@gmail.com
+License: UNKNOWN
+Description: # Usage 
+        ```
+            import module_json_importer
+            from json_folder import json_file
+        
+            data = json_file.raw_data
+            print(data)
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
