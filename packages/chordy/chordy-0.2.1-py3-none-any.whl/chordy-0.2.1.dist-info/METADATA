@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: chordy
+Version: 0.2.1
+Summary: Small library to work with chords and chord-annotated songs
+License: MIT
+Author: L3viathan
+Author-email: git@l3vi.de
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: regex (>=2020.6.8,<2021.0.0)
