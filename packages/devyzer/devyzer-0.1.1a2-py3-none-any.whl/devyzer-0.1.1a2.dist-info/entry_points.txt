@@ -1,0 +1,3 @@
+[console_scripts]
+devyzer=devyzer.__main__:main
+

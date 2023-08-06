@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: devyzer
+Version: 0.1.1a2
+Summary: Devyzer Cli: a cli that connects to devyzer to enable developers using cli intelligently in addition to native devyzer featuers
+Author: Ayham Hassan
+Author-email: ayham@devyzer.io
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: GitPython (==3.1.1)
+Requires-Dist: briefcase (>=0.3.0,<0.4.0)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: configobj (==5.0.6)
+Requires-Dist: halo (==0.0.28)
+Requires-Dist: ordereddict (==1.1)
+Requires-Dist: prompt-toolkit (==2.0.10)
+Requires-Dist: pyfiglet (==0.8.post1)
+Requires-Dist: pygments (==2.5.2)
+Requires-Dist: python-dotenv (>=0.13.0,<0.14.0)
+Requires-Dist: python-socketio (==4.0.0)
+Requires-Dist: questionary (==1.4.0)
+Requires-Dist: requests (==2.23.0)
+Requires-Dist: six (==1.14.0)
+Requires-Dist: tornado (>=6.0.4,<7.0.0)
+Requires-Dist: yaspin (==0.15.0)
