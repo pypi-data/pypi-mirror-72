@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+protofuzz/__init__.py
+protofuzz/gen.py
+protofuzz/log.py
+protofuzz/pbimport.py
+protofuzz/protofuzz.py
+protofuzz/values.py
+protofuzz.egg-info/PKG-INFO
+protofuzz.egg-info/SOURCES.txt
+protofuzz.egg-info/dependency_links.txt
+protofuzz.egg-info/not-zip-safe
+protofuzz.egg-info/requires.txt
+protofuzz.egg-info/top_level.txt
