@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: blaster
+Version: 0.4.0
+Summary: Blast off a list of tasks concurrently calling each tasks methods defined
+Home-page: https://github.com/ryankwilliams/blaster
+Author: Ryan Williams
+Author-email: rwilliams5262@gmail.com
+License: GPLv3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
