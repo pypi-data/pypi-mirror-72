@@ -1,0 +1,10 @@
+apriori/__init__.py,sha256=TzPG4btXd5hsAbAyqjaYZ77Mixn5K7xFhGnToilWpDE,83
+apriori/apriori.py,sha256=th5h_DbGof4XXwYtI40m1Pl2XVdTSbv_nbLBj8LehAg,1580
+apriori/apriori_types.py,sha256=zR0nPXcP6x2kkrxwf_-uhaolRx5H4vK_n2SqsQUkwDw,214
+apriori/gh_ap.py,sha256=lpjYLCBFc_rDQEl_azy6_onQCzMnTmUevcDmywNU_ME,6564
+apriori/rule.py,sha256=zbzZ1z0P4vAG5WWW0dfc8W0IyncnhRkesnoUtSUJVco,1244
+apriori/transaction.py,sha256=FB3RRntlXsVm181OSTeFQPbIs6tVG6iWhcBPbh_RPsk,4505
+kiwi_apriori-0.3.0.dist-info/METADATA,sha256=iTZK_uai8gDs41ep_mHaHvnk3jj1qZwb50nQh-QYh1g,7139
+kiwi_apriori-0.3.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+kiwi_apriori-0.3.0.dist-info/top_level.txt,sha256=syYEcDBK9kEHFTCdMX_WijDXlL-TKs2Wnr1c45Km4QU,8
+kiwi_apriori-0.3.0.dist-info/RECORD,,
