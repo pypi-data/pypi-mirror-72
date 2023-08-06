@@ -1,0 +1,12 @@
+README.md
+setup.py
+pysec/__init__.py
+pysec/edgar.py
+pysec/filing_types.py
+pysec/parser.py
+pysec/xbrl.py
+python_sec.egg-info/PKG-INFO
+python_sec.egg-info/SOURCES.txt
+python_sec.egg-info/dependency_links.txt
+python_sec.egg-info/requires.txt
+python_sec.egg-info/top_level.txt
