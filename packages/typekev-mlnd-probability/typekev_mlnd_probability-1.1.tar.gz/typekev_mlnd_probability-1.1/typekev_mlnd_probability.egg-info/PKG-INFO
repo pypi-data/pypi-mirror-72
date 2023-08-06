@@ -1,0 +1,60 @@
+Metadata-Version: 1.0
+Name: typekev-mlnd-probability
+Version: 1.1
+Summary: Gaussian and Binomial distributions
+Home-page: UNKNOWN
+Author: Kevin Gonzalez
+Author-email: typekev@gmail.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Description: # MLND Probability Classes
+        
+        This package exposes two probability distribution classes, Gaussian and Binomial, and was made as part of the Udacity Machine Learning Engineer Nanodegree.
+        
+        This package was created for educational purposes.
+        
+        # Use of `Gaussian` and `Binomial`
+        
+        The classes can be imported as so: `from typekev_mlnd_probability import Gaussian` and `from typekev_mlnd_probability import Binomial`
+        
+        Both classes are initialized with the following attributes:
+        
+        - `mean`: The mean or average
+        - `stdev`: Standard deviation
+        - `data`: The list of data in which to calculate the other attributes
+        
+        Both classes also contain a `read_data_file` method.
+        
+        The `Gaussian` and `Binomial` classes also contain unique attributes and methods. Though names may overlap, implementation will differ.
+        
+        ## `Gaussian` attributes and methods
+        
+        The `Gaussian` class contains the following additional methods:
+        
+        - `calculate_mean`
+        - `calculate_stdev`
+        - `plot_histogram`
+        - `pdf`
+        - `plot_histogram_pdf`
+        
+        The magic methods `__add__` and `__repr__` have also been implemented.
+        
+        ## `Binomial` attributes and methods
+        
+        The `Binomial` class contains the following additional attributes:
+        
+        - `n`: The size of the data set
+        - `p`: The probability
+        
+        The `Binomial` class contains the following additional methods:
+        
+        - `calculate_mean`
+        - `calculate_stdev`
+        - `replace_stats_with_data`
+        - `plot_bar`
+        - `pdf`
+        - `plot_bar_pdf`
+        
+        The magic methods `__add__` and `__repr__` have also been implemented.
+        
+Platform: UNKNOWN
