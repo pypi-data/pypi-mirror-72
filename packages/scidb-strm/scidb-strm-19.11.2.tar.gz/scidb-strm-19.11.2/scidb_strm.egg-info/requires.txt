@@ -1,0 +1,4 @@
+dill
+feather-format
+pandas>=0.20.0
+pyarrow==0.16.0
