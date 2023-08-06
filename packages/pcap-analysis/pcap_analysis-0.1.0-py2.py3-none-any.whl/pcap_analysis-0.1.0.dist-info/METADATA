@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: pcap-analysis
+Version: 0.1.0
+Summary: Analyze packet capture format (pcap) files.
+Home-page: https://gitlab.com/TNThieding/pcap-analysis
+Author: Tyler N. Thieding
+Author-email: python@thieding.com
+Maintainer: Tyler N. Thieding
+Maintainer-email: python@thieding.com
+License: MIT License
+Download-URL: https://gitlab.com/TNThieding/pcap-analysis
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: System :: Networking
+Requires-Python: >=2.7
+Requires-Dist: dpkt
+
+#############
+pcap-analysis
+#############
+
+.. image:: https://gitlab.com/TNThieding/pcap-analysis/badges/master/pipeline.svg
+    :target: https://gitlab.com/TNThieding/pcap-analysis/-/commits/master
+
+.. image:: https://gitlab.com/TNThieding/pcap-analysis/badges/master/coverage.svg
+    :target: https://gitlab.com/TNThieding/pcap-analysis/-/commits/master
+
+Analyze packet capture format (``.pcap`` or ``.pcapng``) files.
+
+
