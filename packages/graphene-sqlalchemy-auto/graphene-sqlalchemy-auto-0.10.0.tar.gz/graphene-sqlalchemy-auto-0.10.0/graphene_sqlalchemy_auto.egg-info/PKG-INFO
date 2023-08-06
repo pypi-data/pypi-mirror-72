@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: graphene-sqlalchemy-auto
+Version: 0.10.0
+Summary: generate default graphene schema from sqlalchemy model base on graphene-sqlalchemy
+Home-page: https://github.com/goodking-bq/graphene-sqlalchemy-auto.git
+Author: golsee
+Author-email: z.shj726@gmail.com
+License: UNKNOWN
+Description: ![publish](https://github.com/goodking-bq/graphene-sqlalchemy-auto/workflows/Upload%20Python%20Package/badge.svg)
+        
+        
+        generate default graphene schema from sqlalchemy model base on [graphene-sqlalchemy](https://github.com/graphql-python/graphene-sqlalchemy.git)
+        
+        # Installation
+        
+        just run
+        ```shell script
+        pip install graphene_sqlalchemy_auto
+        ```
+        # Features
+        
+        - auto add `offset` `limit` `totalCount` to pagination
+        - auto add `dbId` for model's database id
+        - mutation auto return ok for success,message for more information and output for model data
+        
+        
+        # How To Use
+        example :
+        ```python
+        from graphene_sqlalchemy_auto import QueryObjectType,MutationObjectType
+        from sqlalchemy.ext.declarative import declarative_base
+        import graphene
+        from sqlalchemy.orm import sessionmaker
+        
+        Base = declarative_base() 
+        Session = sessionmaker()
+        
+        class Query(QueryObjectType):
+            class Meta:
+                declarative_base = Base
+                exclude_models = ["User"] # exclude models
+        
+        class Mutation(MutationObjectType):
+            class Meta:
+                declarative_base = Base
+                session=Session() # mutate used
+                
+                include_object = []# you can use yourself mutation UserCreateMutation, UserUpdateMutation
+        
+        
+        schema = graphene.Schema(query=Query, mutation=Mutation)
+        
+        ```
+        
+        about many-to-many mutation
+        
+        >now you can use schema everywhere.some like flask,fastapi
+        
+        >also more example you can find in [example](https://github.com/goodking-bq/graphene-sqlalchemy-auto/tree/master/example)
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
