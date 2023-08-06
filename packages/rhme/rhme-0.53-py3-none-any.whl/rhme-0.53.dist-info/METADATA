@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: rhme
+Version: 0.53
+Summary: UNKNOWN
+Home-page: https://github.com/carolreis/handwritten-mathematical-expressions-recognition
+Author: Caroline Reis
+Author-email: caroline.sreis@ulbra.edu.br
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: idx2numpy
+Requires-Dist: imageio
+Requires-Dist: imutils
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: tensorflow
+Requires-Dist: bison
+Requires-Dist: ply
+Requires-Dist: opencv-python
+Requires-Dist: h5py
+Requires-Dist: Markdown
+Requires-Dist: Pillow
+Requires-Dist: tensorflow (==2.2.0)
+Requires-Dist: tensorflow-estimator (==2.2.0)
+
+==========================================================
+RHME - Recognition of Handwritten Mathematical Expressions
+==========================================================
+API for handwritten mathematical expressions recognition
+---------------------------------------------------------
+
+GitHub `handwritten-mathematical-expressions-recognition <https://github.com/carolreis/handwritten-mathematical-expressions-recognition>`_.
+
+
