@@ -1,0 +1,3 @@
+[console_scripts]
+dicomgenerator = dicomgenerator.cli:main
+
