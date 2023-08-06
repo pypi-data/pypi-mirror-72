@@ -1,0 +1,4 @@
+[console_scripts]
+rvnewop=rvnewop:main
+rvunused=rvnewop:unused
+
