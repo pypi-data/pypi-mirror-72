@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: fmri_delay
+Version: 0.1.4
+Summary: Tool for measuring delay between sparse transitions in fmri BOLD signals
+Home-page: UNKNOWN
+Author: Alexandre Cionca
+Author-email: cionkito@gmail.com
+License: MIT
+Description: Tool for measuring delay between sparse transitions in fmri BOLD signals
+Keywords: fmri neuroimaging delay
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
