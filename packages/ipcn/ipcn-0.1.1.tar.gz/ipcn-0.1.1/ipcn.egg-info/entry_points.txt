@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    ipcn=ipcn.run:main
+    
