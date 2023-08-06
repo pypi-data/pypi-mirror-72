@@ -1,0 +1,3 @@
+[console_scripts]
+pyproperty = pyproperty.__main__:main
+
