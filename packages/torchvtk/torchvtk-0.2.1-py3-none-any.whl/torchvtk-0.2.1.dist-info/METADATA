@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: torchvtk
+Version: 0.2.1
+Summary: Efficient data loading and visualization for volumes in PyTorch
+Home-page: https://github.com/xeTaiz/torchvtk
+Author: Dominik Engel, Marc Mezger
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
