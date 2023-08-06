@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: tcp-proxy-server
+Version: 0.0.1
+Summary: tcp proxy server to intercept tcp
+Home-page: https://github.com/manfred-kaiser/tcp-proxy-server
+Author: Manfred Kaiser
+Author-email: manfred.kaiser@logfile.at
+License: UNKNOWN
+Description: # tcp-proxy-server - intercept tcp traffic
+        
+        [![Github version](https://img.shields.io/github/v/release/manfred-kaiser/tcp-proxy-server?label=github&logo=github)](https://github.com/manfred-kaiser/tcp-proxy-server/releases)
+        [![PyPI version](https://img.shields.io/pypi/v/tcp-proxy-server.svg?logo=pypi&logoColor=FFE873)](https://pypi.org/project/tcp-proxy-server/)
+        [![Supported Python versions](https://img.shields.io/pypi/pyversions/tcp-proxy-server.svg?logo=python&logoColor=FFE873)](https://pypi.org/project/tcp-proxy-server/)
+        [![PyPI downloads](https://pepy.tech/badge/tcp-proxy-server/week)](https://pepy.tech/project/tcp-proxy-server/week)
+        [![GitHub](https://img.shields.io/github/license/manfred-kaiser/tcp-proxy-server.svg)](LICENSE)
+        
+        
+        `tcp-proxy-server` is a python library and command line utility to intercept tcp traffic.
+        
+        
+        ## Installation
+        
+        `pip install tcp-proxy-server`
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: System :: Networking
+Requires-Python: >= 3.5
+Description-Content-Type: text/markdown
