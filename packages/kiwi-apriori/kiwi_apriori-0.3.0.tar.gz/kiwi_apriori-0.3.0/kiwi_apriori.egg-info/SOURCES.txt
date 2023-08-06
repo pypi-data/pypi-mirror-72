@@ -1,0 +1,13 @@
+README.md
+setup.py
+apriori/__init__.py
+apriori/apriori.py
+apriori/apriori_types.py
+apriori/gh_ap.py
+apriori/rule.py
+apriori/transaction.py
+kiwi_apriori.egg-info/PKG-INFO
+kiwi_apriori.egg-info/SOURCES.txt
+kiwi_apriori.egg-info/dependency_links.txt
+kiwi_apriori.egg-info/requires.txt
+kiwi_apriori.egg-info/top_level.txt
