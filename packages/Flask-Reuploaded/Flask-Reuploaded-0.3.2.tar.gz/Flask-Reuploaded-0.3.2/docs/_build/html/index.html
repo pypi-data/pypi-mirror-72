@@ -1,0 +1,732 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Flask-Reuploaded &mdash; Flask-Reuploaded 0.3.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home" alt="Documentation Home"> Flask-Reuploaded
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Flask-Reuploaded</a><ul>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#upload-sets">Upload Sets</a></li>
+<li><a class="reference internal" href="#app-configuration">App Configuration</a></li>
+<li><a class="reference internal" href="#file-upload-forms">File Upload Forms</a></li>
+<li><a class="reference internal" href="#api-documentation">API Documentation</a><ul>
+<li><a class="reference internal" href="#id1">Upload Sets</a></li>
+<li><a class="reference internal" href="#application-setup">Application Setup</a></li>
+<li><a class="reference internal" href="#extension-constants">Extension Constants</a></li>
+<li><a class="reference internal" href="#testing-utilities">Testing Utilities</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#backwards-compatibility">Backwards Compatibility</a><ul>
+<li><a class="reference internal" href="#version-0-1-3">Version 0.1.3</a></li>
+<li><a class="reference internal" href="#version-0-1-1">Version 0.1.1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Flask-Reuploaded</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Flask-Reuploaded</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="flask-reuploaded">
+<h1>Flask-Reuploaded<a class="headerlink" href="#flask-reuploaded" title="Permalink to this headline">¶</a></h1>
+<p>Flask-Reuploaded allows your application to flexibly and efficiently handle file
+uploading and serving the uploaded files.
+You can create different sets of uploads - one for document attachments, one
+for photos, etc. - and the application can be configured to save them all in
+different places and to generate different URLs for them.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#configuration" id="id2">Configuration</a></p></li>
+<li><p><a class="reference internal" href="#upload-sets" id="id3">Upload Sets</a></p></li>
+<li><p><a class="reference internal" href="#app-configuration" id="id4">App Configuration</a></p></li>
+<li><p><a class="reference internal" href="#file-upload-forms" id="id5">File Upload Forms</a></p></li>
+<li><p><a class="reference internal" href="#api-documentation" id="id6">API Documentation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id7">Upload Sets</a></p></li>
+<li><p><a class="reference internal" href="#application-setup" id="id8">Application Setup</a></p></li>
+<li><p><a class="reference internal" href="#extension-constants" id="id9">Extension Constants</a></p></li>
+<li><p><a class="reference internal" href="#testing-utilities" id="id10">Testing Utilities</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#backwards-compatibility" id="id11">Backwards Compatibility</a></p>
+<ul>
+<li><p><a class="reference internal" href="#version-0-1-3" id="id12">Version 0.1.3</a></p></li>
+<li><p><a class="reference internal" href="#version-0-1-1" id="id13">Version 0.1.1</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>If you’re just deploying an application that uses Flask-Reuploaded, you can
+customize its behavior extensively from the application’s configuration.
+Check the application’s documentation or source code to see how it loads its
+configuration.</p>
+<p>The settings below apply for a single set of uploads, replacing <cite>FILES</cite> with
+the name of the set (i.e. <cite>PHOTOS</cite>, <cite>ATTACHMENTS</cite>):</p>
+<dl class="simple">
+<dt><cite>UPLOADED_FILES_DEST</cite></dt><dd><p>This indicates the directory uploaded files will be saved to.</p>
+</dd>
+<dt><cite>UPLOADED_FILES_URL</cite></dt><dd><p>If you have a server set up to serve the files in this set, this should be
+the URL they are publicly accessible from. Include the trailing slash.</p>
+</dd>
+<dt><cite>UPLOADED_FILES_ALLOW</cite></dt><dd><p>This lets you allow file extensions not allowed by the upload set in the
+code.</p>
+</dd>
+<dt><cite>UPLOADED_FILES_DENY</cite></dt><dd><p>This lets you deny file extensions allowed by the upload set in the code.</p>
+</dd>
+</dl>
+<p>To save on configuration time, there are two settings you can provide
+that apply as “defaults” if you don’t provide the proper settings otherwise.</p>
+<dl class="simple">
+<dt><cite>UPLOADS_DEFAULT_DEST</cite></dt><dd><p>If you set this, then if an upload set’s destination isn’t otherwise
+declared, then its uploads will be stored in a subdirectory of this
+directory. For example, if you set this to <code class="docutils literal notranslate"><span class="pre">/var/uploads</span></code>, then a set
+named photos will store its uploads in <code class="docutils literal notranslate"><span class="pre">/var/uploads/photos</span></code>.</p>
+</dd>
+<dt><cite>UPLOADS_DEFAULT_URL</cite></dt><dd><p>If you have a server set up to serve from <cite>UPLOADS_DEFAULT_DEST</cite>, then
+set the server’s base URL here. Continuing the example above, if
+<code class="docutils literal notranslate"><span class="pre">/var/uploads</span></code> is accessible from <code class="docutils literal notranslate"><span class="pre">http://localhost:5001</span></code>, then you
+would set this to <code class="docutils literal notranslate"><span class="pre">http://localhost:5001/</span></code> and URLs for the photos set
+would start with <code class="docutils literal notranslate"><span class="pre">http://localhost:5001/photos</span></code>. Include the trailing
+slash.</p>
+</dd>
+</dl>
+<p>However, you don’t have to set any of the <code class="docutils literal notranslate"><span class="pre">_URL</span></code> settings - if you don’t,
+then they will be served internally by Flask. They are just there so if you
+have heavy upload traffic, you can have a faster production server like Nginx
+serve the uploads.</p>
+<p>Since Flask 0.6 you can set <cite>MAX_CONTENT_LENGTH</cite> to
+limit the size of uploaded files.</p>
+</div>
+<div class="section" id="upload-sets">
+<h2>Upload Sets<a class="headerlink" href="#upload-sets" title="Permalink to this headline">¶</a></h2>
+<p>An “upload set” is a single collection of files. You just declare them in the
+code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">photos</span> <span class="o">=</span> <span class="n">UploadSet</span><span class="p">(</span><span class="s1">&#39;photos&#39;</span><span class="p">,</span> <span class="n">IMAGES</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And then you can use the <cite>~UploadSet.save</cite> method to save uploaded files and
+<cite>~UploadSet.path</cite> and <cite>~UploadSet.url</cite> to access them. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/upload&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">upload</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span> <span class="ow">and</span> <span class="s1">&#39;photo&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">photos</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="s1">&#39;photo&#39;</span><span class="p">])</span>
+        <span class="n">rec</span> <span class="o">=</span> <span class="n">Photo</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">g</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="n">rec</span><span class="o">.</span><span class="n">store</span><span class="p">()</span>
+        <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;Photo saved.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">rec</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;upload.html&#39;</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/photo/&lt;id&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+    <span class="n">photo</span> <span class="o">=</span> <span class="n">Photo</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">photo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">photos</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="n">photo</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;show.html&#39;</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">photo</span><span class="o">=</span><span class="n">photo</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you have a “default location” for storing uploads - for example, if your
+app has an “instance” directory and uploads should be saved to
+the instance directory’s <code class="docutils literal notranslate"><span class="pre">uploads</span></code> folder - you can pass a <code class="docutils literal notranslate"><span class="pre">default_dest</span></code>
+callable to the set constructor. It takes the application as its argument.
+For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">media</span> <span class="o">=</span> <span class="n">UploadSet</span><span class="p">(</span><span class="s1">&#39;media&#39;</span><span class="p">,</span> <span class="n">default_dest</span><span class="o">=</span><span class="k">lambda</span> <span class="n">app</span><span class="p">:</span> <span class="n">app</span><span class="o">.</span><span class="n">instance_path</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This won’t prevent a different destination from being set in the config,
+though. It’s just to save your users a little configuration time.</p>
+</div>
+<div class="section" id="app-configuration">
+<h2>App Configuration<a class="headerlink" href="#app-configuration" title="Permalink to this headline">¶</a></h2>
+<p>An upload set’s configuration is stored on an app. That way, you can have
+upload sets being used by multiple apps at once. You use the
+<cite>configure_uploads</cite> function to load the configuration for the upload sets.
+You pass in the app and all of the upload sets you want configured. Calling
+<cite>configure_uploads</cite> more than once is safe.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">configure_uploads</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">(</span><span class="n">photos</span><span class="p">,</span> <span class="n">media</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>If your app has a factory function, that is a good place to call this
+function.</p>
+<p>By default, though, Flask doesn’t put any limits on the size of the uploaded
+data. To protect your application, you can use <cite>patch_request_class</cite>. If you
+call it with <cite>None</cite> as the second parameter, it will use the
+<cite>MAX_CONTENT_LENGTH</cite> setting to determine how large the upload can be.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">patch_request_class</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can also call it with a number to set an absolute limit, but that only
+exists for backwards compatibility reasons and is not recommended for
+production use. In addition, it’s not necessary for Flask 0.6 or greater, so
+if your application is only intended to run on Flask 0.6, you don’t need it.</p>
+</div>
+<div class="section" id="file-upload-forms">
+<h2>File Upload Forms<a class="headerlink" href="#file-upload-forms" title="Permalink to this headline">¶</a></h2>
+<p>To actually upload the files, you need to properly set up your form. A form
+that uploads files needs to have its method set to POST and its enctype
+set to <code class="docutils literal notranslate"><span class="pre">multipart/form-data</span></code>. If it’s set to GET, it won’t work at all, and
+if you don’t set the enctype, only the filename will be transferred.</p>
+<p>The field itself should be an <code class="docutils literal notranslate"><span class="pre">&lt;input</span> <span class="pre">type=file&gt;</span></code>.</p>
+<div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">POST</span> <span class="na">enctype</span><span class="o">=</span><span class="s">multipart/form-data</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">url_for</span><span class="o">(</span><span class="s1">&#39;upload&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="p">&gt;</span>
+    ...
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">file</span> <span class="na">name</span><span class="o">=</span><span class="s">photo</span><span class="p">&gt;</span>
+    ...
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-documentation">
+<h2>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h2>
+<p>This documentation is generated directly from the source code.</p>
+<div class="section" id="id1">
+<h3>Upload Sets<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="flask_uploads.UploadSet">
+<em class="property">class </em><code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">UploadSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'files'</span></em>, <em class="sig-param"><span class="n">extensions</span><span class="o">=</span><span class="default_value">'txt', 'rtf', 'odf', 'ods', 'gnumeric', 'abw', 'doc', 'docx', 'xls', 'xlsx', 'pdf', 'jpg', 'jpe', 'jpeg', 'png', 'gif', 'svg', 'bmp', 'webp', 'csv', 'ini', 'json', 'plist', 'xml', 'yaml', 'yml'</span></em>, <em class="sig-param"><span class="n">default_dest</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#flask_uploads.UploadSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>This represents a single set of uploaded files. Each upload set is
+independent of the others. This can be reused across multiple application
+instances, as all configuration is stored on the application object itself
+and found with <cite>flask.current_app</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name of this upload set. It defaults to <code class="docutils literal notranslate"><span class="pre">files</span></code>, but
+you can pick any alphanumeric name you want. (For simplicity,
+it’s best to use a plural noun.)</p></li>
+<li><p><strong>extensions</strong> – The extensions to allow uploading in this set. The
+easiest way to do this is to add together the extension
+presets (for example, <code class="docutils literal notranslate"><span class="pre">TEXT</span> <span class="pre">+</span> <span class="pre">DOCUMENTS</span> <span class="pre">+</span> <span class="pre">IMAGES</span></code>).
+It can be overridden by the configuration with the
+<cite>UPLOADED_X_ALLOW</cite> and <cite>UPLOADED_X_DENY</cite> configuration
+parameters. The default is <cite>DEFAULTS</cite>.</p></li>
+<li><p><strong>default_dest</strong> – If given, this should be a callable. If you call it
+with the app, it should return the default upload
+destination path for that app.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="flask_uploads.UploadSet.config">
+<em class="property">property </em><code class="sig-name descname">config</code><a class="headerlink" href="#flask_uploads.UploadSet.config" title="Permalink to this definition">¶</a></dt>
+<dd><p>This gets the current configuration. By default, it looks up the
+current application and gets the configuration from there. But if you
+don’t want to go to the full effort of setting an application, or it’s
+otherwise outside of a request context, set the <cite>_config</cite> attribute to
+an <cite>UploadConfiguration</cite> instance, then set it back to <cite>None</cite> when
+you’re done.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="flask_uploads.UploadSet.extension_allowed">
+<code class="sig-name descname">extension_allowed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ext</span></em><span class="sig-paren">)</span><a class="headerlink" href="#flask_uploads.UploadSet.extension_allowed" title="Permalink to this definition">¶</a></dt>
+<dd><p>This determines whether a specific extension is allowed. It is called
+by <cite>file_allowed</cite>, so if you override that but still want to check
+extensions, call back into this.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ext</strong> – The extension to check, without the dot.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="flask_uploads.UploadSet.file_allowed">
+<code class="sig-name descname">file_allowed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">storage</span></em>, <em class="sig-param"><span class="n">basename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#flask_uploads.UploadSet.file_allowed" title="Permalink to this definition">¶</a></dt>
+<dd><p>This tells whether a file is allowed. It should return <cite>True</cite> if the
+given <cite>werkzeug.FileStorage</cite> object can be saved with the given
+basename, and <cite>False</cite> if it can’t. The default implementation just
+checks the extension, so you can override this if you want.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>storage</strong> – The <cite>werkzeug.FileStorage</cite> to check.</p></li>
+<li><p><strong>basename</strong> – The basename it will be saved under.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="flask_uploads.UploadSet.path">
+<code class="sig-name descname">path</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#flask_uploads.UploadSet.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>This returns the absolute path of a file uploaded to this set. It
+doesn’t actually check whether said file exists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – The filename to return the path for.</p></li>
+<li><p><strong>folder</strong> – The subfolder within the upload set previously used
+to save to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="flask_uploads.UploadSet.resolve_conflict">
+<code class="sig-name descname">resolve_conflict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target_folder</span></em>, <em class="sig-param"><span class="n">basename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#flask_uploads.UploadSet.resolve_conflict" title="Permalink to this definition">¶</a></dt>
+<dd><p>If a file with the selected name already exists in the target folder,
+this method is called to resolve the conflict. It should return a new
+basename for the file.</p>
+<p>The default implementation splits the name and extension and adds a
+suffix to the name consisting of an underscore and a number, and tries
+that until it finds one that doesn’t exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_folder</strong> – The absolute path to the target.</p></li>
+<li><p><strong>basename</strong> – The file’s original basename.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="flask_uploads.UploadSet.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">storage</span></em>, <em class="sig-param"><span class="n">folder</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#flask_uploads.UploadSet.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>This saves a <cite>werkzeug.FileStorage</cite> into this upload set. If the
+upload is not allowed, an <cite>UploadNotAllowed</cite> error will be raised.
+Otherwise, the file will be saved and its name (including the folder)
+will be returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>storage</strong> – The uploaded file to save.</p></li>
+<li><p><strong>folder</strong> – The subfolder within the upload set to save to.</p></li>
+<li><p><strong>name</strong> – The name to save the file as. If it ends with a dot, the
+file’s extension will be appended to the end. (If you
+are using <cite>name</cite>, you can include the folder in the
+<cite>name</cite> instead of explicitly using <cite>folder</cite>, i.e.
+<code class="docutils literal notranslate"><span class="pre">uset.save(file,</span> <span class="pre">name=&quot;someguy/photo_123.&quot;)</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="flask_uploads.UploadSet.url">
+<code class="sig-name descname">url</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#flask_uploads.UploadSet.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function gets the URL a file uploaded to this set would be
+accessed at. It doesn’t check whether said file exists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> – The filename to return the URL for.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="flask_uploads.UploadConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">UploadConfiguration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">destination</span></em>, <em class="sig-param"><span class="n">base_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow</span><span class="o">=</span><span class="default_value">()</span></em>, <em class="sig-param"><span class="n">deny</span><span class="o">=</span><span class="default_value">()</span></em><span class="sig-paren">)</span><a class="headerlink" href="#flask_uploads.UploadConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>This holds the configuration for a single <cite>UploadSet</cite>. The constructor’s
+arguments are also the attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>destination</strong> – The directory to save files to.</p></li>
+<li><p><strong>base_url</strong> – The URL (ending with a /) that files can be downloaded
+from. If this is <cite>None</cite>, Flask-Reuploaded will serve the
+files itself.</p></li>
+<li><p><strong>allow</strong> – A list of extensions to allow, even if they’re not in the
+<cite>UploadSet</cite> extensions list.</p></li>
+<li><p><strong>deny</strong> – A list of extensions to deny, even if they are in the
+<cite>UploadSet</cite> extensions list.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="application-setup">
+<h3>Application Setup<a class="headerlink" href="#application-setup" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt id="flask_uploads.configure_uploads">
+<code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">configure_uploads</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app</span></em>, <em class="sig-param"><span class="n">upload_sets</span></em><span class="sig-paren">)</span><a class="headerlink" href="#flask_uploads.configure_uploads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call this after the app has been configured. It will go through all the
+upload sets, get their configuration, and store the configuration on the
+app. It will also register the uploads module if it hasn’t been set. This
+can be called multiple times with different upload sets.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.1.3: </span>The uploads module/blueprint will only be registered if it is needed
+to serve the upload sets.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>app</strong> – The <cite>~flask.Flask</cite> instance to get the configuration from.</p></li>
+<li><p><strong>upload_sets</strong> – The <cite>UploadSet</cite> instances to configure.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="flask_uploads.patch_request_class">
+<code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">patch_request_class</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">67108864</span></em><span class="sig-paren">)</span><a class="headerlink" href="#flask_uploads.patch_request_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>By default, Flask will accept uploads to an arbitrary size. While Werkzeug
+switches uploads from memory to a temporary file when they hit 500 KiB,
+it’s still possible for someone to overload your disk space with a
+gigantic file.</p>
+<p>This patches the app’s request class’s
+<cite>~werkzeug.BaseRequest.max_content_length</cite> attribute so that any upload
+larger than the given size is rejected with an HTTP error.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Flask 0.6, you can do this by setting the <cite>MAX_CONTENT_LENGTH</cite>
+setting, without patching the request class. To emulate this behavior,
+you can pass <cite>None</cite> as the size (you must pass it explicitly). That is
+the best way to call this function, as it won’t break the Flask 0.6
+functionality if it exists.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.1.1.</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>app</strong> – The app to patch the request class of.</p></li>
+<li><p><strong>size</strong> – The maximum size to accept, in bytes. The default is 64 MiB.
+If it is <cite>None</cite>, the app’s <cite>MAX_CONTENT_LENGTH</cite> configuration
+setting will be used to patch.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="extension-constants">
+<h3>Extension Constants<a class="headerlink" href="#extension-constants" title="Permalink to this headline">¶</a></h3>
+<p>These are some default sets of extensions you can pass to the <cite>UploadSet</cite>
+constructor.</p>
+<dl class="py class">
+<dt id="flask_uploads.AllExcept">
+<em class="property">class </em><code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">AllExcept</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">items</span></em><span class="sig-paren">)</span><a class="headerlink" href="#flask_uploads.AllExcept" title="Permalink to this definition">¶</a></dt>
+<dd><p>This can be used to allow all file types except certain ones. For example,
+to ban .exe and .iso files, pass:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AllExcept</span><span class="p">((</span><span class="s1">&#39;exe&#39;</span><span class="p">,</span> <span class="s1">&#39;iso&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>to the <cite>UploadSet</cite> constructor as <cite>extensions</cite>. You can use any container,
+for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AllExcept</span><span class="p">(</span><span class="n">SCRIPTS</span> <span class="o">+</span> <span class="n">EXECUTABLES</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt id="flask_uploads.DEFAULTS">
+<code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">DEFAULTS</code><em class="property"> = ('txt', 'rtf', 'odf', 'ods', 'gnumeric', 'abw', 'doc', 'docx', 'xls', 'xlsx', 'pdf', 'jpg', 'jpe', 'jpeg', 'png', 'gif', 'svg', 'bmp', 'webp', 'csv', 'ini', 'json', 'plist', 'xml', 'yaml', 'yml')</em><a class="headerlink" href="#flask_uploads.DEFAULTS" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default allowed extensions - <cite>TEXT</cite>, <cite>DOCUMENTS</cite>, <cite>DATA</cite>, and <cite>IMAGES</cite>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="flask_uploads.ALL">
+<code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">ALL</code><em class="property"> = &lt;flask_uploads.All object&gt;</em><a class="headerlink" href="#flask_uploads.ALL" title="Permalink to this definition">¶</a></dt>
+<dd><p>This “contains” all items. You can use it to allow all extensions to be
+uploaded.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="flask_uploads.TEXT">
+<code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">TEXT</code><em class="property"> = ('txt',)</em><a class="headerlink" href="#flask_uploads.TEXT" title="Permalink to this definition">¶</a></dt>
+<dd><p>This just contains plain text files (.txt).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="flask_uploads.IMAGES">
+<code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">IMAGES</code><em class="property"> = ('jpg', 'jpe', 'jpeg', 'png', 'gif', 'svg', 'bmp', 'webp')</em><a class="headerlink" href="#flask_uploads.IMAGES" title="Permalink to this definition">¶</a></dt>
+<dd><p>This contains basic image types that are viewable from most browsers (.jpg,
+.jpe, .jpeg, .png, .gif, .svg, .bmp and .webp).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="flask_uploads.AUDIO">
+<code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">AUDIO</code><em class="property"> = ('wav', 'mp3', 'aac', 'ogg', 'oga', 'flac')</em><a class="headerlink" href="#flask_uploads.AUDIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>This contains audio file types (.wav, .mp3, .aac, .ogg, .oga, and .flac).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="flask_uploads.DOCUMENTS">
+<code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">DOCUMENTS</code><em class="property"> = ('rtf', 'odf', 'ods', 'gnumeric', 'abw', 'doc', 'docx', 'xls', 'xlsx', 'pdf')</em><a class="headerlink" href="#flask_uploads.DOCUMENTS" title="Permalink to this definition">¶</a></dt>
+<dd><p>This contains various office document formats (.rtf, .odf, .ods, .gnumeric,
+.abw, .doc, .docx, .xls, .xlsx and .pdf). Note that the macro-enabled versions
+of Microsoft Office 2007 files are not included.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="flask_uploads.DATA">
+<code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">DATA</code><em class="property"> = ('csv', 'ini', 'json', 'plist', 'xml', 'yaml', 'yml')</em><a class="headerlink" href="#flask_uploads.DATA" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is for structured data files (.csv, .ini, .json, .plist, .xml, .yaml,
+and .yml).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="flask_uploads.SCRIPTS">
+<code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">SCRIPTS</code><em class="property"> = ('js', 'php', 'pl', 'py', 'rb', 'sh')</em><a class="headerlink" href="#flask_uploads.SCRIPTS" title="Permalink to this definition">¶</a></dt>
+<dd><p>This contains various types of scripts (.js, .php, .pl, .py .rb, and .sh).
+If your Web server has PHP installed and set to auto-run, you might want to
+add <code class="docutils literal notranslate"><span class="pre">php</span></code> to the DENY setting.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="flask_uploads.ARCHIVES">
+<code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">ARCHIVES</code><em class="property"> = ('gz', 'bz2', 'zip', 'tar', 'tgz', 'txz', '7z')</em><a class="headerlink" href="#flask_uploads.ARCHIVES" title="Permalink to this definition">¶</a></dt>
+<dd><p>This contains archive and compression formats (.gz, .bz2, .zip, .tar,
+.tgz, .txz, and .7z).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="flask_uploads.EXECUTABLES">
+<code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">EXECUTABLES</code><em class="property"> = ('so', 'exe', 'dll')</em><a class="headerlink" href="#flask_uploads.EXECUTABLES" title="Permalink to this definition">¶</a></dt>
+<dd><p>This contains shared libraries and executable files (.so, .exe and .dll).
+Most of the time, you will not want to allow this - it’s better suited for
+use with <cite>AllExcept</cite>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="testing-utilities">
+<h3>Testing Utilities<a class="headerlink" href="#testing-utilities" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="flask_uploads.TestingFileStorage">
+<em class="property">class </em><code class="sig-prename descclassname">flask_uploads.</code><code class="sig-name descname">TestingFileStorage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stream</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type</span><span class="o">=</span><span class="default_value">'application/octet-stream'</span></em>, <em class="sig-param"><span class="n">content_length</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">headers</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#flask_uploads.TestingFileStorage" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a helper for testing upload behavior in your application. You
+can manually create it, and its save method is overloaded to set <cite>saved</cite>
+to the name of the file it was saved to. All of these parameters are
+optional, so only bother setting the ones relevant to your application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stream</strong> – A stream. The default is an empty stream.</p></li>
+<li><p><strong>filename</strong> – The filename uploaded from the client. The default is the
+stream’s name.</p></li>
+<li><p><strong>name</strong> – The name of the form field it was loaded from. The default is
+<cite>None</cite>.</p></li>
+<li><p><strong>content_type</strong> – The content type it was uploaded as. The default is
+<code class="docutils literal notranslate"><span class="pre">application/octet-stream</span></code>.</p></li>
+<li><p><strong>content_length</strong> – How long it is. The default is -1.</p></li>
+<li><p><strong>headers</strong> – Multipart headers as a <cite>werkzeug.Headers</cite>. The default is
+<cite>None</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="backwards-compatibility">
+<h2>Backwards Compatibility<a class="headerlink" href="#backwards-compatibility" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="version-0-1-3">
+<h3>Version 0.1.3<a class="headerlink" href="#version-0-1-3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The <cite>_uploads</cite> module/blueprint will not be registered if it is not needed
+to serve uploads.</p></li>
+</ul>
+</div>
+<div class="section" id="version-0-1-1">
+<h3>Version 0.1.1<a class="headerlink" href="#version-0-1-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><cite>patch_request_class</cite> now changes <cite>max_content_length</cite> instead of
+<cite>max_form_memory_size</cite>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright Matthew &#34;LeafStorm&#34; Frazier(2010), Jürgen Gmach (2020)
+      <span class="lastupdated">
+        Last updated on 2020-06-29.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
