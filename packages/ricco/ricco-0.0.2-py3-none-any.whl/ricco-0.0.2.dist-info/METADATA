@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ricco
+Version: 0.0.2
+Summary: tools
+Home-page: UNKNOWN
+Author: Ricco Wang
+Author-email: wyk_0610@163.com
+License: UNKNOWN
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=0.17)
+Requires-Dist: pandas (>=0.24)
+
+# Ricco
+尝试发布并使用自己的第一个pypi包
+
