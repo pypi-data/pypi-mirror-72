@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+readme.rst
+setup.py
+ndsplines/__init__.py
+ndsplines/_bspl.c
+ndsplines/_bspl.h
+ndsplines/_bspl.pyx
+ndsplines/_npy_bspl.py
+ndsplines/ndsplines.py
+ndsplines/version.py
+ndsplines.egg-info/PKG-INFO
+ndsplines.egg-info/SOURCES.txt
+ndsplines.egg-info/dependency_links.txt
+ndsplines.egg-info/requires.txt
+ndsplines.egg-info/top_level.txt
