@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: twquant
+Version: 0.0.1
+Summary: retrieve financial-related data and use the data on investment decision making
+Home-page: https://github.com/gary136/twquant
+Author: Gary
+Author-email: sarcas0705@gmail.com
+License: MIT
+Keywords: SOME,MEANINGFULL,KEYWORDS
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# twquant
+This package aims for helping investment decision making. The functions include but are not limited as follows.
+
+1. Retrieve raw data by web scraping.
+2. Turn raw data into formatted data.
+3. Combine various source of data and get the whole picture.
+4. Calculate yearly return in given time period.
+5. Backtesting - import specific criteria and calculate correspondent yearly return.
+
+
