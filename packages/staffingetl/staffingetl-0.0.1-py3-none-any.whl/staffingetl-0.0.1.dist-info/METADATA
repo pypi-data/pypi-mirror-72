@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: staffingetl
+Version: 0.0.1
+Summary: Useful tools to work with Elastic stack in Python
+Home-page: https://github.com/ncthuc/elastictools
+Author: Thuc Nguyen
+Author-email: zhas@globus.ai
+License: MIT
+Download-URL: https://pypi.org/project/staffingetl/
+Keywords: Elastic,ElasticSearch,Elastic Stack,Python 3,Elastic 7
+Platform: UNKNOWN
+Requires-Dist: jinja2
+
+UNKNOWN
+
+
