@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: iva-classification-demo
+Version: 1.1.0
+Summary: UNKNOWN
+Home-page: https://iva-tech.ru/
+Author: Alexeev Eugene
+Author-email: e.alekseev@iva-tech.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: iva-applications
+Requires-Dist: iva-tpu
+Requires-Dist: qtmodern
+Requires-Dist: tensorflow (==1.15.0)
+Requires-Dist: keras (==2.2.4)
+Requires-Dist: Cython
+Requires-Dist: PyQt5
+Requires-Dist: PyQt5-sip
+Requires-Dist: pyqtgraph
+
+UNKNOWN
+
+

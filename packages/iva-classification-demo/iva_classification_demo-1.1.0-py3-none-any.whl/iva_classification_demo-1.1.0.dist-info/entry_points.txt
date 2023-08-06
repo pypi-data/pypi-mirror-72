@@ -1,0 +1,3 @@
+[console_scripts]
+iva_classes_demo = iva_classification_demo.main:main
+
