@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: nomad-envoy-cli
+Version: 1.40.0
+Summary: Nomad Envoy
+Home-page: UNKNOWN
+Author: OpenAPI Generator community
+Author-email: paul@samarkand.global
+License: UNKNOWN
+Description:     This is the API descriptor for the Nomad Envoy API, responsible for order creation and product lists.&lt;br&gt;&lt;br&gt; Developed by &lt;a href&#x3D;\&quot;https://samarkand.global\&quot;&gt;Samarkand Global&lt;/a&gt; in partnership with &lt;a href&#x3D;\&quot;https://www.sf-express.com/cn/sc/\&quot;&gt;SF Express&lt;/a&gt;&lt;br&gt;&lt;br&gt; Install for node with &lt;br&gt;&#x60;npm install nomad_envoy_cli&#x60;&lt;br&gt;&lt;br&gt; Install for python with &lt;br&gt;&#x60;pip install nomad-envoy-cli&#x60;&lt;br&gt;  # noqa: E501
+            
+Keywords: OpenAPI,OpenAPI-Generator,Nomad Envoy
+Platform: UNKNOWN
