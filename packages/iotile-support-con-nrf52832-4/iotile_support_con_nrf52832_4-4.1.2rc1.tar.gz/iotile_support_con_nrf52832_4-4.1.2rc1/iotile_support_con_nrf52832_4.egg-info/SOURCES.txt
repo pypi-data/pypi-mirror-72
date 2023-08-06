@@ -1,0 +1,10 @@
+MANIFEST.in
+setup.py
+iotile_support_con_nrf52832_4/__init__.py
+iotile_support_con_nrf52832_4/nrf52832_controller.py
+iotile_support_con_nrf52832_4.egg-info/PKG-INFO
+iotile_support_con_nrf52832_4.egg-info/SOURCES.txt
+iotile_support_con_nrf52832_4.egg-info/dependency_links.txt
+iotile_support_con_nrf52832_4.egg-info/entry_points.txt
+iotile_support_con_nrf52832_4.egg-info/requires.txt
+iotile_support_con_nrf52832_4.egg-info/top_level.txt
