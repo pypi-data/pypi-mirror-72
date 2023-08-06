@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+src/microbit_wings/__init__.py
+src/microbit_wings/config.py
+src/microbit_wings/image_creator.py
+src/microbit_wings/images.py
+src/microbit_wings/microbit.py
+src/microbit_wings/toolbox.py
+src/microbit_wings.egg-info/PKG-INFO
+src/microbit_wings.egg-info/SOURCES.txt
+src/microbit_wings.egg-info/dependency_links.txt
+src/microbit_wings.egg-info/requires.txt
+src/microbit_wings.egg-info/top_level.txt
