@@ -1,0 +1,2189 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molecular dynamics application example &#8212; cnnclustering  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<div class="section" id="Molecular-dynamics-application-example">
+<h1>Molecular dynamics application example<a class="headerlink" href="#Molecular-dynamics-application-example" title="Permalink to this headline">¶</a></h1>
+<h1><p>Contents</p>
+</h1><div class="toc"><ul class="toc-item"><li><p>1  Pre-requirements</p>
+<ul class="toc-item"><li><p>1.1  Import dependencies</p>
+</li><li><p>1.2  Notebook configuration</p>
+</li><li><p>1.3  Package configuration</p>
+</li></ul></li><li><p>2  MD showcase - Langerin</p>
+</li><li><p>3  Space A</p>
+<ul class="toc-item"><li><p>3.1  Clustering</p>
+</li><li><p>3.2  Coreset MSM estimation</p>
+<ul class="toc-item"><li><p>3.2.1  (MSM on train data dt = 10 ns)</p>
+</li></ul></li></ul></li><li><p>4  Space B</p>
+<ul class="toc-item"><li><p>4.1  Clustering</p>
+</li><li><p>4.2  Coreset MSM estimation</p>
+<ul class="toc-item"><li><p>4.2.1  (MSM on test data dt = 0.1 ns)</p>
+</li></ul></li></ul></li></ul></div></div>
+<div class="section" id="Pre-requirements">
+<h1>Pre-requirements<a class="headerlink" href="#Pre-requirements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Import-dependencies">
+<h2>Import dependencies<a class="headerlink" href="#Import-dependencies" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Primary imports
+import importlib  # Only needed for module editing
+import json
+import pandas as pd  # Optional dependency
+from pathlib import Path
+import pprint
+import sys
+import time
+import warnings
+warnings.simplefilter(&quot;always&quot;)  # Surpress or enable warnings
+
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+from sklearn import datasets  # For sklearn test data set creation
+from sklearn.preprocessing import StandardScaler
+
+# CNN clustering module
+import cnnclustering.cnn as cnn    # CNN clustering
+import cnnclustering.cmsm as cmsm  # Core-set MSM estimation
+</pre></div>
+</div>
+</div>
+<p>This notebook was created using Python 3.8.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Version information
+print(sys.version)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+3.8.3 (default, May 15 2020, 15:24:35)
+[GCC 8.3.0]
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Notebook-configuration">
+<h2>Notebook configuration<a class="headerlink" href="#Notebook-configuration" title="Permalink to this headline">¶</a></h2>
+<p>We use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> to create plots. A <code class="docutils literal notranslate"><span class="pre">&quot;matplotlibrc&quot;</span></code> file can be used to customise the appearance of the plots.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Matplotlib configuration
+mpl.rc_file(
+    &quot;matplotlibrc&quot;,
+    use_default_template=False
+)
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Axis property defaults for the plots
+ax_props = {
+    &quot;xlabel&quot;: None,
+    &quot;ylabel&quot;: None,
+    &quot;xlim&quot;: (-2.5, 2.5),
+    &quot;ylim&quot;: (-2.5, 2.5),
+    &quot;xticks&quot;: (),
+    &quot;yticks&quot;: (),
+    &quot;aspect&quot;: &quot;equal&quot;
+}
+
+# Line plot property defaults
+line_props = {
+    &quot;linewidth&quot;: 0,
+    &quot;marker&quot;: &#39;.&#39;,
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Package-configuration">
+<h2>Package configuration<a class="headerlink" href="#Package-configuration" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Configuration file found?
+cnn.settings.cfgfile  # If None, no file is provided
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Display default settings
+cnn.settings.defaults
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;default_cnn_cutoff&#39;: &#39;1&#39;,
+ &#39;default_cnn_offset&#39;: &#39;0&#39;,
+ &#39;default_radius_cutoff&#39;: &#39;1&#39;,
+ &#39;default_member_cutoff&#39;: &#39;2&#39;,
+ &#39;float_precision&#39;: &#39;sp&#39;,
+ &#39;int_precision&#39;: &#39;sp&#39;}
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="MD-showcase---Langerin">
+<h1>MD showcase - Langerin<a class="headerlink" href="#MD-showcase---Langerin" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>langerin = cnn.CNN(points=[x[::20, :6] for x in np.load(&quot;../data/md_showcase_langerin.npy&quot;, allow_pickle=True)])
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>fig, Ax = plt.subplots(
+    1, 3,
+    figsize=(mpl.rcParams[&#39;figure.figsize&#39;][0],
+             mpl.rcParams[&#39;figure.figsize&#39;][1]*0.5)
+    )
+
+for dim in range(3):
+    _ = langerin.evaluate(
+        ax=Ax[dim], plot=&quot;contourf&quot;,
+        ax_props=ax_props,
+        dim=(dim*2, dim*2 + 1)
+        )
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_16_0.png" src="../_images/tutorial_md_example_16_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>langerin.calc_dist()
+langerin.dist_hist()
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(&lt;Figure size 750x450 with 1 Axes&gt;,
+ &lt;matplotlib.axes._subplots.AxesSubplot at 0x7fac08cf7ac0&gt;,
+ [&lt;matplotlib.lines.Line2D at 0x7fac531bbeb0&gt;],
+ None)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_17_1.png" src="../_images/tutorial_md_example_17_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>langerin.fit(2, 5)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Execution time for call of fit: 0 hours, 0 minutes, 21.9658 seconds
+--------------------------------------------------------------------------------
+#points   R         N         M         max       #clusters %largest  %noise
+13541     2.000     5         2         None      4         0.977     0.000
+--------------------------------------------------------------------------------
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>fig, Ax = plt.subplots(
+    1, 3,
+    figsize=(mpl.rcParams[&#39;figure.figsize&#39;][0],
+             mpl.rcParams[&#39;figure.figsize&#39;][1]*0.5)
+    )
+
+for dim in range(3):
+    _ = langerin.evaluate(
+        ax=Ax[dim], plot=&quot;dots&quot;,
+        ax_props=ax_props,
+        dim=(dim*2, dim*2 + 1)
+        )
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_19_0.png" src="../_images/tutorial_md_example_19_0.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>langerin.isolate()
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[76]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>langerin._children[1].data.points.cKDtree()
+langerin._children[1].calc_neighbours_from_cKDTree(r=1)
+langerin._children[1].fit(1, 5)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Execution time for call of fit: 0 hours, 0 minutes, 0.9313 seconds
+--------------------------------------------------------------------------------
+#points   R         N         M         max       #clusters %largest  %noise
+13233     1.000     5         2         None      3         0.725     0.001
+--------------------------------------------------------------------------------
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>fig, Ax = plt.subplots(
+    1, 3,
+    figsize=(mpl.rcParams[&#39;figure.figsize&#39;][0],
+             mpl.rcParams[&#39;figure.figsize&#39;][1]*0.5)
+    )
+
+for dim in range(3):
+    _ = langerin._children[1].evaluate(
+        ax=Ax[dim], plot=&quot;dots&quot;,
+        ax_props=ax_props,
+        dim=(dim*2, dim*2 + 1)
+        )
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_22_0.png" src="../_images/tutorial_md_example_22_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Space-A">
+<h1>Space A<a class="headerlink" href="#Space-A" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[177]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Load the data
+# 130 replica of holo-langerin;
+# 100 ps time step;
+# 5 dimensional TICA projection;
+# 30 ns lag time, selected bb-dihedrals and H-bonds
+proj = np.load(&#39;p30_5.npy&#39;, allow_pickle=True)
+print(np.shape(proj), np.shape(proj[0]))
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-177-e6deacd00740&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      4</span> <span class="ansi-red-intense-fg ansi-bold"># 5 dimensional TICA projection;</span>
+<span class="ansi-green-fg">      5</span> <span class="ansi-red-intense-fg ansi-bold"># 30 ns lag time, selected bb-dihedrals and H-bonds</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 6</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>proj <span class="ansi-yellow-intense-fg ansi-bold">=</span> np<span class="ansi-yellow-intense-fg ansi-bold">.</span>load<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;p30_5.npy&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> allow_pickle<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-green-intense-fg ansi-bold">True</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">      7</span> print<span class="ansi-yellow-intense-fg ansi-bold">(</span>np<span class="ansi-yellow-intense-fg ansi-bold">.</span>shape<span class="ansi-yellow-intense-fg ansi-bold">(</span>proj<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> np<span class="ansi-yellow-intense-fg ansi-bold">.</span>shape<span class="ansi-yellow-intense-fg ansi-bold">(</span>proj<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~/.local/share/virtualenvs/CNN-5gkgQAOT/lib/python3.8/site-packages/numpy/lib/npyio.py</span> in <span class="ansi-cyan-fg">load</span><span class="ansi-blue-intense-fg ansi-bold">(file, mmap_mode, allow_pickle, fix_imports, encoding)</span>
+<span class="ansi-green-fg">    426</span>         own_fid <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-green-intense-fg ansi-bold">False</span>
+<span class="ansi-green-fg">    427</span>     <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 428</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>fid <span class="ansi-yellow-intense-fg ansi-bold">=</span> open<span class="ansi-yellow-intense-fg ansi-bold">(</span>os_fspath<span class="ansi-yellow-intense-fg ansi-bold">(</span>file<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#34;rb&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    429</span>         own_fid <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-green-intense-fg ansi-bold">True</span>
+<span class="ansi-green-fg">    430</span>
+
+<span class="ansi-red-intense-fg ansi-bold">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;p30_5.npy&#39;
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># optionally reduce dimensionality
+# for i in range(len(proj)):
+#     proj[i] = proj[i][:, :3]
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[115]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># initialise clustering
+langerin = cnn.CNN(test=proj)
+langerin.cut(points=(None, None, 100))
+print(langerin)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Configuration file found in /home/janjoswig
+cnn.CNN cluster object
+--------------------------------------------------------------------------------
+alias :                                  root
+hierachy level :                         0
+
+test data shape :                        Parts      - 130
+                                         Points     - [4002, 2501, 2201, 2201, 2201, &#39;...&#39;]
+                                         Dimensions - 5
+
+train data shape :                       Parts      - 130
+                                         Points     - [41, 26, 23, 23, 23, &#39;...&#39;]
+                                         Dimensions - 5
+
+distance matrix calculated (train) :     False
+distance matrix calculated (test) :      False
+clustered :                              False
+children :                               False
+--------------------------------------------------------------------------------
+
+</pre></div></div>
+</div>
+<div class="section" id="Clustering">
+<h2>Clustering<a class="headerlink" href="#Clustering" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[116]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Distance histogram
+langerin.dist_hist(maxima=True, maxima_props={&quot;order&quot;: 5})
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Train distance matrix not calculated. Calculating distance matrix.
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[116]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(&lt;Figure size 975.192x602.669 with 1 Axes&gt;,
+ &lt;matplotlib.axes._subplots.AxesSubplot at 0x7fadde61d250&gt;,
+ [&lt;matplotlib.lines.Line2D at 0x7fae0c9f7490&gt;],
+ [Text(0.35896362584191055, 0.7247888035798966, &#39;0.36&#39;),
+  Text(1.7948178889355477, 0.43464846777076316, &#39;1.79&#39;),
+  Text(3.2306721520291855, 0.2663797558984762, &#39;3.23&#39;),
+  Text(7.251064088691371, 0.050229576941857444, &#39;7.25&#39;),
+  Text(11.271456025353556, 0.018509623274021017, &#39;11.27&#39;)])
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_28_2.png" src="../_images/tutorial_md_example_28_2.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[118]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Axis property defaults for the following plots
+ax_props2 = {
+    &quot;xlabel&quot;: None,
+    &quot;ylabel&quot;: None,
+    &quot;xticks&quot;: (),
+    &quot;yticks&quot;: (),
+}
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[119]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Have a look at the original data ...
+obj = langerin
+fig, Ax = plt.subplots(1, 3, figsize=(6.50128*0.5, 6.50128*0.25*0.618*1.1))
+obj.evaluate(ax=Ax[0], ax_props=ax_props2, mode=&quot;test&quot;, original=True)
+obj.evaluate(ax=Ax[1], ax_props=ax_props2, dim=(1, 2), mode=&quot;test&quot;, original=True)
+obj.evaluate(ax=Ax[2], ax_props=ax_props2, dim=(3, 4), mode=&quot;test&quot;, original=True)
+fig.tight_layout(pad=0.1)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_30_0.png" src="../_images/tutorial_md_example_30_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[121]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Alternatively plot this as free energy landscape
+obj = langerin
+fig = plt.figure(figsize=(6.50128*0.5, 6.50128*0.2*0.618*1.1))
+Ax = []
+gspec = fig.add_gridspec(1, 22)
+Ax.append(fig.add_subplot(gspec[0, :7]))
+Ax.append(fig.add_subplot(gspec[0, 7:14]))
+Ax.append(fig.add_subplot(gspec[0, 14:21]))
+Ax.append(fig.add_subplot(gspec[0, -1]))
+plotted = obj.evaluate(
+    ax=Ax[0], ax_props=ax_props2,
+    mode=&quot;test&quot;, original=True,
+    plot=&#39;contourf&#39;, contour_props={&quot;levels&quot;: 40, &quot;vmin&quot;: 0, &quot;vmax&quot;: 9.5, &quot;extend&quot;: &quot;max&quot;}
+    )[2]
+obj.evaluate(
+    ax=Ax[1], ax_props=ax_props2,
+    dim=(1, 2),
+    mode=&quot;test&quot;, original=True,
+    plot=&#39;contourf&#39;, contour_props={&quot;levels&quot;: 40, &quot;vmin&quot;: 0, &quot;vmax&quot;: 9.5}
+    )
+obj.evaluate(
+    ax=Ax[2], ax_props=ax_props2,
+    dim=(3, 4),
+    mode=&quot;test&quot;, original=True,
+    plot=&#39;contourf&#39;, contour_props={&quot;levels&quot;: 40, &quot;vmin&quot;: 0, &quot;vmax&quot;: 9.5}
+    )
+# cbarax = fig.add_subplot(1, 20, 20)
+cbar = fig.colorbar(mappable=plotted[0], cax=Ax[3], ticks=(2, 4, 6, 8))
+cbar.set_label(r&quot;$\Delta G$ / $kT$&quot;, fontsize=8)
+fig.subplots_adjust(
+    left=0, right=0.8, bottom=0, top=1, wspace=0.5, hspace=1
+    )
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_31_0.png" src="../_images/tutorial_md_example_31_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[122]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># ... and the reduced set
+# Have a look at the original data
+obj = langerin
+fig, Ax = plt.subplots(1, 3, figsize=(6.50128*0.5, 6.50128*0.25*0.618*1.1))
+obj.evaluate(ax=Ax[0], ax_props=ax_props2, original=True)
+obj.evaluate(ax=Ax[1], ax_props=ax_props2, dim=(1, 2), original=True)
+obj.evaluate(ax=Ax[2], ax_props=ax_props2, dim=(3, 4), original=True)
+fig.tight_layout(pad=0.1)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_32_0.png" src="../_images/tutorial_md_example_32_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[123]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Level 1
+r, c = 4, 5
+obj = langerin
+obj.fit(radius_cutoff=r, cnn_cutoff=c)
+fig, Ax = plt.subplots(1, 3, figsize=(6.50128*0.5, 6.50128*0.25*0.618*1.1))
+obj.evaluate(ax=Ax[0], ax_props=ax_props2)
+obj.evaluate(ax=Ax[1], ax_props=ax_props2, dim=(1, 2))
+obj.evaluate(ax=Ax[2], ax_props=ax_props2, dim=(3, 4))
+fig.tight_layout(pad=0.1)
+# # fig.savefig(f&quot;c_{r}_{c}.png&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+-------------------------------------------------------------------------------
+  #points     R     N     M     max     #clusters     %largest     %noise
+    3141      4.0    5     1    None         3         0.97453       0.0
+-------------------------------------------------------------------------------
+Execution time for call of fit():     0 hours, 0 minutes, 2.0126 seconds
+recording: ...
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_33_1.png" src="../_images/tutorial_md_example_33_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[124]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Isolate the result and prepare for level 2
+langerin.isolate()
+l1 = langerin.train_children[1]
+l2 = langerin.train_children[2]
+l3 = langerin.train_children[3]
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Configuration file found in /home/janjoswig
+Configuration file found in /home/janjoswig
+Configuration file found in /home/janjoswig
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[125]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Level 2, child 3
+r, c = 1, 0
+obj = l3
+obj.fit(radius_cutoff=r, cnn_cutoff=c)
+fig, Ax = plt.subplots(1, 3, figsize=(6.50128*0.5, 6.50128*0.25*0.618*1.1))
+obj.evaluate(ax=Ax[0], ax_props=ax_props2)
+obj.evaluate(ax=Ax[1], ax_props=ax_props2, dim=(1, 2))
+obj.evaluate(ax=Ax[2], ax_props=ax_props2, dim=(3, 4))
+fig.tight_layout(pad=0.1)
+# # fig.savefig(f&quot;c3_{r}_{c}.png&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+-------------------------------------------------------------------------------
+  #points     R     N     M     max     #clusters     %largest     %noise
+     24       1.0    0     1    None         2          0.875     0.041667
+-------------------------------------------------------------------------------
+Execution time for call of fit():     0 hours, 0 minutes, 0.0056 seconds
+recording: ...
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_35_1.png" src="../_images/tutorial_md_example_35_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[126]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Level 2, child 2
+r, c = 0.8, 5
+obj = l2
+obj.fit(radius_cutoff=r, cnn_cutoff=c)
+fig, Ax = plt.subplots(1, 3, figsize=(6.50128*0.5, 6.50128*0.25*0.618*1.1))
+obj.evaluate(ax=Ax[0], ax_props=ax_props2)
+obj.evaluate(ax=Ax[1], ax_props=ax_props2, dim=(1, 2))
+obj.evaluate(ax=Ax[2], ax_props=ax_props2, dim=(3, 4))
+fig.tight_layout(pad=0.1)
+# # fig.savefig(f&quot;c2_{r}_{c}.png&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+-------------------------------------------------------------------------------
+  #points     R     N     M     max     #clusters     %largest     %noise
+     56       0.8    5     1    None         2        0.553571    0.035714
+-------------------------------------------------------------------------------
+Execution time for call of fit():     0 hours, 0 minutes, 0.0058 seconds
+recording: ...
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_36_1.png" src="../_images/tutorial_md_example_36_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[127]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Level 2, child 1
+r, c = 1.3, 0
+obj = l1
+obj.fit(radius_cutoff=r, cnn_cutoff=c)
+fig, Ax = plt.subplots(1, 3, figsize=(6.50128*0.5, 6.50128*0.25*0.618*1.1))
+obj.evaluate(ax=Ax[0], ax_props=ax_props2)
+obj.evaluate(ax=Ax[1], ax_props=ax_props2, dim=(1, 2))
+obj.evaluate(ax=Ax[2], ax_props=ax_props2, dim=(3, 4))
+fig.tight_layout(pad=0.1)
+# # fig.savefig(f&quot;c1_{r}_{c}.png&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+-------------------------------------------------------------------------------
+  #points     R     N     M     max     #clusters     %largest     %noise
+    3061      1.3    0     1    None         3        0.991833       0.0
+-------------------------------------------------------------------------------
+Execution time for call of fit():     0 hours, 0 minutes, 1.2624 seconds
+recording: ...
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_37_1.png" src="../_images/tutorial_md_example_37_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[128]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Isolate from l1 and prepare for level 3
+l1.isolate()
+l1_1 = l1.train_children[1]
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Configuration file found in /home/janjoswig
+Configuration file found in /home/janjoswig
+Configuration file found in /home/janjoswig
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[129]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Level 3, child 1
+r, c = 0.9, 0
+obj = l1_1
+obj.fit(radius_cutoff=r, cnn_cutoff=c, member_cutoff=0)
+fig, Ax = plt.subplots(1, 3, figsize=(6.50128*0.5, 6.50128*0.25*0.618*1.1))
+obj.evaluate(ax=Ax[0], ax_props=ax_props2)
+obj.evaluate(ax=Ax[1], ax_props=ax_props2, dim=(1, 2))
+obj.evaluate(ax=Ax[2], ax_props=ax_props2, dim=(3, 4))
+fig.tight_layout(pad=0.1)
+# # fig.savefig(f&quot;c1_1_{r}_{c}.png&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+-------------------------------------------------------------------------------
+  #points     R     N     M     max     #clusters     %largest     %noise
+    3036      0.9    0     0    None         6        0.972661       0.0
+-------------------------------------------------------------------------------
+Execution time for call of fit():     0 hours, 0 minutes, 1.1927 seconds
+recording: ...
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_39_1.png" src="../_images/tutorial_md_example_39_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[130]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Isolate from l1_1 and prepare for level 4
+l1_1.isolate()
+l1_1_1 = l1_1.train_children[1]
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Configuration file found in /home/janjoswig
+Configuration file found in /home/janjoswig
+Configuration file found in /home/janjoswig
+Configuration file found in /home/janjoswig
+Configuration file found in /home/janjoswig
+Configuration file found in /home/janjoswig
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[131]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Level 4, child 1
+r, c = 0.6, 10
+obj = l1_1_1
+obj.fit(radius_cutoff=r, cnn_cutoff=c)
+fig, Ax = plt.subplots(1, 3, figsize=(6.50128*0.5, 6.50128*0.25*0.618*1.1))
+obj.evaluate(ax=Ax[0], ax_props=ax_props2)
+obj.evaluate(ax=Ax[1], ax_props=ax_props2, dim=(1, 2))
+obj.evaluate(ax=Ax[2], ax_props=ax_props2, dim=(3, 4))
+fig.tight_layout(pad=0.1)
+# # fig.savefig(f&quot;c1_1_2_{r}_{c}.png&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+-------------------------------------------------------------------------------
+  #points     R     N     M     max     #clusters     %largest     %noise
+    2953      0.6   10     1    None         4        0.850999    0.013207
+-------------------------------------------------------------------------------
+Execution time for call of fit():     0 hours, 0 minutes, 0.8132 seconds
+recording: ...
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_41_1.png" src="../_images/tutorial_md_example_41_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[132]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Isolate from l1_1_1 and prepare for level 5
+l1_1_1.isolate()
+l1_1_1_1 = l1_1_1.train_children[1]
+l1_1_1_2 = l1_1_1.train_children[2]
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Configuration file found in /home/janjoswig
+Configuration file found in /home/janjoswig
+Configuration file found in /home/janjoswig
+Configuration file found in /home/janjoswig
+Configuration file found in /home/janjoswig
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[133]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Level 5, child 2
+r, c = 0.4, 15
+obj = l1_1_1_2
+obj.fit(radius_cutoff=r, cnn_cutoff=c)
+fig, Ax = plt.subplots(1, 3, figsize=(6.50128*0.5, 6.50128*0.25*0.618*1.1))
+obj.evaluate(ax=Ax[0], ax_props=ax_props2)
+obj.evaluate(ax=Ax[1], ax_props=ax_props2, dim=(1, 2))
+obj.evaluate(ax=Ax[2], ax_props=ax_props2, dim=(3, 4))
+fig.tight_layout(pad=0.1)
+# # fig.savefig(f&quot;c1_1_1_2_{r}_{c}.png&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+-------------------------------------------------------------------------------
+  #points     R     N     M     max     #clusters     %largest     %noise
+     158      0.4   15     1    None         2        0.525316    0.113924
+-------------------------------------------------------------------------------
+Execution time for call of fit():     0 hours, 0 minutes, 0.0100 seconds
+recording: ...
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_43_1.png" src="../_images/tutorial_md_example_43_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[134]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Level 5, child 1
+r, c = 0.4, 20
+obj = l1_1_1_1
+obj.fit(radius_cutoff=r, cnn_cutoff=c)
+fig, Ax = plt.subplots(1, 3, figsize=(6.50128*0.5, 6.50128*0.25*0.618*1.1))
+obj.evaluate(ax=Ax[0], ax_props=ax_props2)
+obj.evaluate(ax=Ax[1], ax_props=ax_props2, dim=(1, 2))
+obj.evaluate(ax=Ax[2], ax_props=ax_props2, dim=(3, 4))
+fig.tight_layout(pad=0.1)
+# # fig.savefig(f&quot;c1_1_1_1_{r}_{c}.png&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+-------------------------------------------------------------------------------
+  #points     R     N     M     max     #clusters     %largest     %noise
+    2513      0.4   20     1    None         2        0.653402    0.024274
+-------------------------------------------------------------------------------
+Execution time for call of fit():     0 hours, 0 minutes, 0.5373 seconds
+recording: ...
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_44_1.png" src="../_images/tutorial_md_example_44_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[135]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Finished?
+langerin.pie()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_45_0.png" src="../_images/tutorial_md_example_45_0.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[136]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Wrap up from child to parent
+l1_1_1.reel()
+l1_1.reel()
+l1.reel()
+langerin.reel()
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[137]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Plot the total clustering result
+obj = langerin
+fig, Ax = plt.subplots(1, 3, figsize=(6.50128*0.5, 6.50128*0.25*0.618*1.1))
+obj.evaluate(ax=Ax[0], ax_props=ax_props2)
+obj.evaluate(ax=Ax[1], ax_props=ax_props2, dim=(1, 2))
+obj.evaluate(ax=Ax[2], ax_props=ax_props2, dim=(3, 4))
+fig.tight_layout(pad=0.1)
+# # fig.savefig(f&quot;c1_1_1_2_{r}_{c}.png&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_47_0.png" src="../_images/tutorial_md_example_47_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[138]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Cluster size overview
+print(json.dumps({k: len(v) for k, v in langerin.train_clusterdict.items()}, indent=4))
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{
+    &#34;0&#34;: 121,
+    &#34;1&#34;: 1642,
+    &#34;2&#34;: 810,
+    &#34;3&#34;: 147,
+    &#34;4&#34;: 96,
+    &#34;5&#34;: 83,
+    &#34;6&#34;: 79,
+    &#34;7&#34;: 57,
+    &#34;8&#34;: 31,
+    &#34;9&#34;: 23,
+    &#34;10&#34;: 22,
+    &#34;11&#34;: 21,
+    &#34;12&#34;: 3,
+    &#34;13&#34;: 2,
+    &#34;14&#34;: 1,
+    &#34;15&#34;: 1,
+    &#34;16&#34;: 1,
+    &#34;17&#34;: 1
+}
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[405]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># store train set assignments
+# np.save(&quot;train_labels_30_5.npy&quot;, langerin.train_labels)
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># load train set assignments
+langerin.train_labels = np.load(&quot;train_labels_30_5.npy&quot;, allow_pickle=True)
+# translate label information into clusterdict information
+langerin.labels2dict()
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Prepare distance matrices for lookup
+langerin.dist()
+langerin.map()
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Predict labels for the test set
+# Going from small to large
+langerin.predict(0.2, 0, clusters=[14, 15, 16, 17], behaviour=&quot;lookup&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>langerin.predict(0.5, 1, clusters=[12, 13], behaviour=&quot;lookup&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>langerin.predict(0.5, 5, clusters=[10, 11], behaviour=&quot;lookup&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>langerin.predict(0.4, 20, clusters=[1, 2], behaviour=&quot;lookup&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>langerin.predict(0.4, 10, clusters=[3, 4, 5, 6, 7, 8, 9], behaviour=&quot;lookup&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Plot the total clustering result
+obj = langerin
+fig, Ax = plt.subplots(1, 3, figsize=(6.50128*0.5, 6.50128*0.25*0.618*1.1))
+obj.evaluate(ax=Ax[0], ax_props=axprops, mode=&quot;test&quot;)
+obj.evaluate(ax=Ax[1], ax_props=axprops, dim=(1, 2), mode=&quot;test&quot;)
+obj.evaluate(ax=Ax[2], ax_props=axprops, dim=(3, 4), mode=&quot;test&quot;)
+fig.tight_layout(pad=0.1)
+# # fig.savefig(f&quot;c1_1_1_2_{r}_{c}.png&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Coreset-MSM-estimation">
+<h2>Coreset MSM estimation<a class="headerlink" href="#Coreset-MSM-estimation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="(MSM-on-train-data-dt-=-10-ns)">
+<h3>(MSM on train data <em>dt</em> = 10 ns)<a class="headerlink" href="#(MSM-on-train-data-dt-=-10-ns)" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Create an MSM object
+M = cmsm.CMSM(langerin.get_dtraj(mode=&#39;train&#39;), unit=&quot;ns&quot;, step=10)
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Estimate csMSM for different lag times (given in steps)
+lags = [1, 2, 3, 4]
+for i in lags:
+    M.cmsm(lag=i, minlenfactor=5)
+    M.get_its()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 10 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 5)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 3126 steps over 17 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 20 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 10)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 3126 steps over 17 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 30 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 15)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 3126 steps over 17 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 40 ns
+---------------------------------------------------------
+
+Trajectories [38, 86, 89, 121]
+are shorter then step threshold (lag*minlenfactor = 20)
+and will not be used to compute the MSM.
+
+Using 126 trajectories with 3073 steps over 17 coresets
+---------------------------------------------------------
+*********************************************************
+
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Plot the time scales
+fig, ax, *_ = M.plot_its()
+fig.tight_layout(pad=0.1)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_63_0.png" src="../_images/tutorial_md_example_63_0.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Space-B">
+<h1>Space B<a class="headerlink" href="#Space-B" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[139]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Load the data
+# 130 replica of holo-langerin;
+# 100 ps time step;
+# 9 dimensional TICA projection;
+# 9 ns lag time, selected bb-dihedrals and H-bonds
+proj = np.load(&#39;p9_9.npy&#39;, allow_pickle=True)
+print(np.shape(proj), np.shape(proj[0]))
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(130,) (4002, 9)
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[140]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># optionally reduce dimensionality
+for i in range(len(proj)):
+    proj[i] = proj[i][:, :3]
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[141]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># initialise clustering
+langerin_b = cnn.CNN(test=proj)
+langerin_b.cut(points=(None, None, 100))
+print(langerin_b)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Configuration file found in /home/janjoswig
+cnn.CNN cluster object
+--------------------------------------------------------------------------------
+alias :                                  root
+hierachy level :                         0
+
+test data shape :                        Parts      - 130
+                                         Points     - [4002, 2501, 2201, 2201, 2201, &#39;...&#39;]
+                                         Dimensions - 3
+
+train data shape :                       Parts      - 130
+                                         Points     - [41, 26, 23, 23, 23, &#39;...&#39;]
+                                         Dimensions - 3
+
+distance matrix calculated (train) :     False
+distance matrix calculated (test) :      False
+clustered :                              False
+children :                               False
+--------------------------------------------------------------------------------
+
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Clustering<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[142]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># You can also use this clustering and skip the prediction ...
+Image(&quot;c_predicted_9_3.png&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[142]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_73_0.png" src="../_images/tutorial_md_example_73_0.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[143]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># load train and test set assignments
+langerin_b.train_labels = np.load(&quot;train_labels_9_3.npy&quot;, allow_pickle=True)
+langerin_b.test_labels = np.load(&quot;test_labels_9_3.npy&quot;, allow_pickle=True)
+# translate label information into clusterdict information
+langerin_b.labels2dict()
+langerin_b.labels2dict(mode=&quot;test&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Coreset MSM estimation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="(MSM-on-test-data-dt-=-0.1-ns)">
+<h3>(MSM on test data <em>dt</em> = 0.1 ns)<a class="headerlink" href="#(MSM-on-test-data-dt-=-0.1-ns)" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[144]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Create an MSM object
+MB = cmsm.CMSM(langerin_b.get_dtraj(mode=&#39;test&#39;), unit=&quot;ns&quot;, step=0.1)
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[145]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Estimate csMSM for different lag times (given in steps)
+lags = [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 125, 150, 175, 200, 250, 300]
+for i in lags:
+    MB.cmsm(lag=i, minlenfactor=5)
+    MB.get_its()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 0.1 ns
+---------------------------------------------------------
+
+Using 130 trajectories with 301170 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 1.0 ns
+---------------------------------------------------------
+
+Using 130 trajectories with 301170 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 2.0 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 100)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 3.0 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 150)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 4.0 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 200)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 5.0 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 250)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 6.0 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 300)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 7.0 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 350)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 8.0 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 400)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 9.0 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 450)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 10.0 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 500)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 12.5 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 625)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 15.0 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 750)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 17.5 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 875)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 20.0 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 1000)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 25.0 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 1250)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 30.0 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 1500)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[146]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Plot the implied time scales
+fig, ax, *_ = MB.plot_its()
+fig.tight_layout(pad=0.1)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_79_0.png" src="../_images/tutorial_md_example_79_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[147]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># A Model at lag time 10 ns might be a good choice
+MB.cmsm(lag=100)
+MB.get_its()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+*********************************************************
+---------------------------------------------------------
+Computing coreset MSM at lagtime 10.0 ns
+---------------------------------------------------------
+
+Trajectories [38]
+are shorter then step threshold (lag*minlenfactor = 1000)
+and will not be used to compute the MSM.
+
+Using 129 trajectories with 301089 steps over 6 coresets
+---------------------------------------------------------
+*********************************************************
+
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[148]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Transition matrix
+MB.T
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[148]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([[ 9.96803579e-01,  2.88007674e-04, -2.90934852e-07,
+         1.85104164e-03,  7.84927156e-04,  2.72735582e-04],
+       [ 2.67709646e-03,  9.68344445e-01,  2.16534956e-02,
+         7.32579034e-03, -4.98370471e-08, -7.77422813e-07],
+       [-7.50856852e-05,  3.43212694e-02,  9.52231599e-01,
+         1.35221937e-02,  1.39780127e-09,  2.18047147e-08],
+       [ 5.29790349e-02,  2.23999339e-02,  2.60014695e-02,
+         8.98635933e-01, -9.86262053e-07, -1.53849930e-05],
+       [ 3.47243911e-02,  1.40713811e-08, -1.42143962e-11,
+        -6.79784120e-06,  9.65292477e-01, -1.00838853e-05],
+       [ 2.44734782e-02,  9.91739893e-09, -1.00181948e-11,
+        -4.79106511e-06, -4.55600275e-07,  9.75531759e-01]])
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[149]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># You can plot the eigenvectors of the transition matrix (right)
+mpl.rcParams[&#39;figure.figsize&#39;] = 6.50128*0.5, 6.50128*0.5*0.618*1*0.25
+fig, Ax = MB.plot_eigenvectors()
+fig.subplots_adjust(
+    left=0.08,
+    bottom=0.15,
+    right=0.99,
+    top=0.99,
+    wspace=None,
+    hspace=0
+    )
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_82_0.png" src="../_images/tutorial_md_example_82_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[150]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># You can plot the eigenvectors of the transition matrix (left)
+mpl.rcParams[&#39;figure.figsize&#39;] = 6.50128*0.5, 6.50128*0.5*0.618*1*0.25
+fig, Ax = MB.plot_eigenvectors(which=&quot;left&quot;, invert=True)
+fig.subplots_adjust(
+    left=0.08,
+    bottom=0.15,
+    right=0.99,
+    top=0.99,
+    wspace=None,
+    hspace=0
+    )
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/tutorial_md_example_83_0.png" src="../_images/tutorial_md_example_83_0.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Benchmark-framework">
+<h4>Benchmark framework<a class="headerlink" href="#Benchmark-framework" title="Permalink to this headline">¶</a></h4>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># Coming soon
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">cnnclustering</a></h1>
+
+
+
+<p class="blurb">CNN clustering and csMSM estimation in Python</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=janjoswig&repo=CNN&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../_source/install.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../_source/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../_source/api_reference.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Jan-Oliver Joswig.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tutorial/md_example.ipynb.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
