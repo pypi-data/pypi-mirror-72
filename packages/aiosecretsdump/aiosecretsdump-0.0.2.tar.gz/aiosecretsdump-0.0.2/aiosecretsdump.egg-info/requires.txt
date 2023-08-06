@@ -1,0 +1,3 @@
+aiosmb>=0.2.22
+pypykatz>=0.3.11
+tqdm
