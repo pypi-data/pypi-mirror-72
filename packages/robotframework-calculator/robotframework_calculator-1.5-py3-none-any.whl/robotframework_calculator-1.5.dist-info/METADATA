@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: robotframework-calculator
+Version: 1.5
+Summary: Extension for Robotframework converting data packet, time str and percent into numeric objects
+Home-page: https://github.com/doguz2509/robotframework-calculator
+Author: Dmitry Oguz
+Author-email: doguz2509@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: robotframework (>3)
+
+# Robotframework Calculator
+-----------------
+Extension for Robotframework converting Time, Percent, DataPacket into numeric like objects
+
+Allow following math operations 
+
+Math operation:
+==============
+- Compare - eq, ne, gt, ge, lt, le (Equality allow deviation in percent)
+- Add
+- Subscript
+- Multiple 
+- Divide
+
+Data formats: 
+====
+- Robot time strings        - 2h 34m, ...
+- Percents                  - 234 + 20%
+- Bitrate (support iperf)  - 1G, 2g, 45m
+
+API:
+====
+- Data Packet
+
+
+    from robot_math import DataPacket 
+    data_packet1 = DataPacket('1M')
+
+    print(f"{data_paket1}")
+    > 1M
+    print(f"{data_paket1:K}")
+    > 1000000K
+    print(f"{data_paket1:b}")
+    > 800000000b
+    data_paket1 += '0.5M'
+    print(f"{data_paket1}")
+    > 1.5M
+
+- Time Interval
+
+
+    from robot_math import TimeInterval
+    t1 = TimeInterval('1h')
+    print(f"{t1}")
+    > 1h
+    t1 += '20m'
+    print(f"{t1}")
+    > 1h 20m
+    t1 += TimeInterval('20m')
+    print(f"{t1}")
+    > 1h 40m
+
+- Percent
+
+
+    from robot_math import Percent
+
+    p = Percent('10.5%')
+    print(f"{p}")
+    > 10.50%
+    print(f"{p:.1%}")
+    > 10.5%
+    print(f"{p:.3f}")
+    > 0.105
+
