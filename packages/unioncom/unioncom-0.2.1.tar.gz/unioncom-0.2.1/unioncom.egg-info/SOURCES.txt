@@ -1,0 +1,15 @@
+README.md
+setup.py
+unioncom/Match.py
+unioncom/Model.py
+unioncom/PrimeDual.py
+unioncom/Project.py
+unioncom/UnionCom.py
+unioncom/__init__.py
+unioncom/test.py
+unioncom/utils.py
+unioncom/visualization.py
+unioncom.egg-info/PKG-INFO
+unioncom.egg-info/SOURCES.txt
+unioncom.egg-info/dependency_links.txt
+unioncom.egg-info/top_level.txt
