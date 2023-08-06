@@ -1,0 +1,15 @@
+nanoemoji/__init__.py,sha256=Ga4NthtMmVwPbSDnh4VuIz-WuNCnO_CYP65U1iWVk5w,700
+nanoemoji/_version.py,sha256=3t99dVZIqAHs5zxoM7x45ZFjNYDof3gPmIyItaGOflA,117
+nanoemoji/color_glyph.py,sha256=SrX7LqBWW0k1coUcMB40X4FaTiP27GHMoTGgH-KQL1k,12282
+nanoemoji/colors.py,sha256=pWEuYGtl_8hHu2aidVPnCxhfPlUMOzCMdJ_oULHH-VY,8483
+nanoemoji/disjoint_set.py,sha256=NuXBXrIRayfgrIPLvPF62vTVw0dQCtJ8KCKh8luk350,1436
+nanoemoji/glyph.py,sha256=078ZmApszVc9WMGRY4cNvuPt0uvOHmXQHQ48vWJzcqE,1518
+nanoemoji/nanoemoji.py,sha256=6gV83Vmpco7kqk4okjyPO--XpITIAm3-znhL0bc87zg,17982
+nanoemoji/paint.py,sha256=nVGzT5YLsOrTfnzBAw2KdC9Wftof6Sj7GnskaWgUtbY,3667
+nanoemoji/svg.py,sha256=M2LGtQZG08X4zCHoFJT_ZUi1-6enl5UTJtGN3IB25yo,9130
+nanoemoji-0.1.10.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+nanoemoji-0.1.10.dist-info/METADATA,sha256=yBBaMzK9FCQRFRxzfeTInjA21gIrtrLX43C3Lk2jFB0,540
+nanoemoji-0.1.10.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+nanoemoji-0.1.10.dist-info/entry_points.txt,sha256=T5v31Otp8HS0Ut65KSF-uP780hyTlGlBfVd2sHoN968,56
+nanoemoji-0.1.10.dist-info/top_level.txt,sha256=XIfQf5IgdmlVUImryu2dNiD7GFpZm7Kx93WGJh3T6QY,10
+nanoemoji-0.1.10.dist-info/RECORD,,
