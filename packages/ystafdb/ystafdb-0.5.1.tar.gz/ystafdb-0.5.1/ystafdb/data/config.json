@@ -1,0 +1,55 @@
+{
+        "_Data_explanation": {
+                "_provider": "Name of the data provider",
+                "_label": "Label for the provider",
+                "_homepage": "URL of provider homepage (optional)",
+                "_datasets": [
+                        {
+                                "_version": "Version of the dataset",
+                                "_name": "Name of the dataset",
+                                "_update_date": "Date of the latest dataset update",
+                                "_label": "Label for the dataset",
+                                "_licence": "URL to dataset licence",
+                                "_rights": "A rights statement",
+                                "_download_uri": "URI to a place where the dataset can be downloaded"
+                        }
+                ]
+        },
+
+        "providers_required_fields": [
+                "provider",
+                "label",
+                "homepage"
+        ],
+
+        "datasets_required_fields": [
+                "version",
+                "name",
+                "update_date",
+                "label",
+                "license",
+                "rights",
+                "download_uri"
+        ],
+
+        "providers": [
+                {
+                        "provider": "Yale University",
+                        "label": "Center for Industrial Ecology at Yale University",
+                        "homepage": "https://cie.research.yale.edu/",
+                        "datasets": [
+                                {
+                                        "version": "1.0",
+                                        "name": "YSTAFDB",
+                                        "update_date": "2019-06-07",
+                                        "label": "The Yale Stocks and Flows Database",
+                                        "license": "http://creativecommons.org/licenses/by/4.0/",
+                                        "rights": "Open Access",
+                                        "download_uri": "https://www.sciencebase.gov/catalog/file/get/5b9a7c28e4b0d966b485d915?f=__disk__0f%2F58%2Fa7%2F0f58a74db669ee5418f36a698bc85781e867e0ab"
+                                }
+                        ]
+                }
+        ],
+
+        "git_repo_name": "ystafdb"
+}
