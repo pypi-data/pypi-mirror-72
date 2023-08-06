@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: ormdb
+Version: 0.0.2
+Summary: Make database operation easier!
+Home-page: https://github.com/YouAreOnlyOne
+Author: Frank YCJ
+Author-email: 1320259466@qq.com
+License: Apache 2.0 license
+Project-URL: Bug Tracker, https://github.com/YouAreOnlyOne/FastFrameJar/issues
+Project-URL: Documentation, https://github.com/YouAreOnlyOne/FastFrameJar
+Project-URL: Source Code, https://github.com/YouAreOnlyOne/FastFrameJar
+Description: 
+        Automated orm framework:
+        
+        1. Map the database according to the entity class;
+        
+        2. It has its own method of adding, deleting, modifying and checking, and each method can set multiple conditions;
+        
+        3. Complete the operation on the database without writing sql;
+        
+        4. Support multiple database types, including mainstream relational database, non-relational database, middleware storage, etc.;
+        
+        5. Free and open source, continuous improvement and update.
+        
+        How to use?
+        
+        Please click here.
+        
+        https://github.com/YouAreOnlyOne/FastFrameJar/blob/master/PythonForORMDB/README.MD
+        
+        
+        More
+        
+        We are working hard to perfect...
+Keywords: orm database mysql sqlserver web log
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.6, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*
+Description-Content-Type: text/markdown
