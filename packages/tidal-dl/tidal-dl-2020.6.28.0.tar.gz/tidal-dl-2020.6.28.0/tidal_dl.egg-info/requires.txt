@@ -1,0 +1,8 @@
+aigpy>=2020.6.28.0
+requests
+ffmpeg
+pycryptodome
+pydub
+secrets
+base64
+pickle
