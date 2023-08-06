@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "stockholm"
+version = "0.4.1"
+description = "An up to date human friendly and flexible approach for development with any kind of monetary amounts"
+authors = ["Carl Oscar Aaro <hello@carloscar.com>"]
+homepage = "https://github.com/kalaspuff/stockholm"
+repository = "https://github.com/kalaspuff/stockholm"
+keywords = ["money", "monetary amount", "monetary value", "currency", "formatting"]
+readme = "README.md"
+license = "MIT"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Office/Business :: Financial",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Typing :: Typed",
+    "License :: OSI Approved :: MIT License"
+]
+
+[tool.poetry.dependencies]
+python = "^3.6 || ^3.7 || ^3.8"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.8.3"
+flake8-black = "^0.2.0"
+pytest = "^5.4.3"
+pytest-cov = "^2.10"
+black = "=19.10b0"
+mypy = "^0.780.0"
+codecov = "^2.1.7"
+
+[tool.black]
+line-length = 120
+target_version = ["py36", "py37", "py38"]
