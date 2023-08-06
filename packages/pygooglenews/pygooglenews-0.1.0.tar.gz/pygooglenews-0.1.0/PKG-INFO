@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pygooglenews
+Version: 0.1.0
+Summary: If Google News had a Python library
+Home-page: https://www.newscatcherapi.com
+License: MIT
+Keywords: News,RSS,Scraping,Data Mining
+Author: kotartemiy
+Author-email: bugara.artem@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: beautifulsoup4 (>=4.9.1,<5.0.0)
+Requires-Dist: dateparser (>=0.7.6,<0.8.0)
+Requires-Dist: feedparser (>=5.2.1,<6.0.0)
+Requires-Dist: requests (>=2.24.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# pygooglenews
+If Google News had a Python library
+
