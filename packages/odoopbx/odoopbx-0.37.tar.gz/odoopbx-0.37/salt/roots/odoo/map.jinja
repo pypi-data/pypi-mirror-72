@@ -1,0 +1,5 @@
+{% import_yaml "odoo/defaults.yaml" as defaults %}
+{% set odoo = salt['pillar.get']('odoo', defaults.odoo, merge=True) %}
+
+{% do odoo.update({"odoover": "odoo{}".format(odoo.rev.split(".")[0])}) %}
+{% do odoo.update({"path": "{}/{}".format(odoo.prefix, odoo.odoover)}) %}
