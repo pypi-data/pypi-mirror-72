@@ -1,0 +1,5 @@
+[console_scripts]
+expanda = expanda:_main
+expanda-shuffling = expanda.shuffling:_main
+expanda-tokenization = expanda.tokenization:_main
+
