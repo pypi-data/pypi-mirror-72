@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: picea
+Version: 0.0.7
+Summary: A lightweight python library for working with             trees and sequence collections
+Home-page: https://github.com/holmrenser/picea
+Author: Rens Holmer
+Author-email: rens.holmer@wur.nl
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: sphinx
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
