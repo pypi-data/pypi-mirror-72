@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+export.pkl
+setup.py
+detect_mask/Mask.py
+detect_mask/__init__.py
+detect_mask/export.pkl
+detect_mask/haarcascade_frontalface_default.xml
+detect_mask.egg-info/PKG-INFO
+detect_mask.egg-info/SOURCES.txt
+detect_mask.egg-info/dependency_links.txt
+detect_mask.egg-info/top_level.txt
