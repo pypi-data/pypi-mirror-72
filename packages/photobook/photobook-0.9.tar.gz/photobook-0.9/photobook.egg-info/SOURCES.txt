@@ -1,0 +1,10 @@
+README.md
+setup.py
+photobook/__init__.py
+photobook/cropping.py
+photobook/photobook.py
+photobook.egg-info/PKG-INFO
+photobook.egg-info/SOURCES.txt
+photobook.egg-info/dependency_links.txt
+photobook.egg-info/requires.txt
+photobook.egg-info/top_level.txt
