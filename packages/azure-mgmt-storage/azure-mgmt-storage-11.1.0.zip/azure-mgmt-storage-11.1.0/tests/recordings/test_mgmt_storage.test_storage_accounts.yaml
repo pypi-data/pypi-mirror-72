@@ -1,0 +1,479 @@
+interactions:
+- request:
+    body: '{"name": "pyarmstorage43b8102a", "type": "Microsoft.Storage/storageAccounts"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '77'
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - python/3.8.2 (Linux-4.19.104-microsoft-standard-x86_64-with-glibc2.29) msrest/0.6.16
+        msrest_azure/0.6.3 azure-mgmt-storage/11.1.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: POST
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Storage/checkNameAvailability?api-version=2019-06-01
+  response:
+    body:
+      string: '{"nameAvailable":true}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '22'
+      content-type:
+      - application/json
+      date:
+      - Sun, 28 Jun 2020 03:00:34 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-Azure-Storage-Resource-Provider/1.0,Microsoft-HTTPAPI/2.0 Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"sku": {"name": "Standard_LRS"}, "kind": "Storage", "location": "westus",
+      "properties": {"supportsHttpsTrafficOnly": true}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '124'
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - python/3.8.2 (Linux-4.19.104-microsoft-standard-x86_64-with-glibc2.29) msrest/0.6.16
+        msrest_azure/0.6.3 azure-mgmt-storage/11.1.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_mgmt_storage_test_storage_accounts43b8102a/providers/Microsoft.Storage/storageAccounts/pyarmstorage43b8102a?api-version=2019-06-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      content-type:
+      - text/plain; charset=utf-8
+      date:
+      - Sun, 28 Jun 2020 03:00:39 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Storage/locations/westus/asyncoperations/7707f69b-d2c1-4490-87b5-f772f615fe98?monitor=true&api-version=2019-06-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-Azure-Storage-Resource-Provider/1.0,Microsoft-HTTPAPI/2.0 Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1198'
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python/3.8.2 (Linux-4.19.104-microsoft-standard-x86_64-with-glibc2.29) msrest/0.6.16
+        msrest_azure/0.6.3 azure-mgmt-storage/11.1.0 Azure-SDK-For-Python
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Storage/locations/westus/asyncoperations/7707f69b-d2c1-4490-87b5-f772f615fe98?monitor=true&api-version=2019-06-01
+  response:
+    body:
+      string: '{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_mgmt_storage_test_storage_accounts43b8102a/providers/Microsoft.Storage/storageAccounts/pyarmstorage43b8102a","name":"pyarmstorage43b8102a","type":"Microsoft.Storage/storageAccounts","location":"westus","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-28T03:00:40.0258668Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-28T03:00:40.0258668Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2020-06-28T03:00:39.9633826Z","primaryEndpoints":{"blob":"https://pyarmstorage43b8102a.blob.core.windows.net/","queue":"https://pyarmstorage43b8102a.queue.core.windows.net/","table":"https://pyarmstorage43b8102a.table.core.windows.net/","file":"https://pyarmstorage43b8102a.file.core.windows.net/"},"primaryLocation":"westus","statusOfPrimary":"available"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1188'
+      content-type:
+      - application/json
+      date:
+      - Sun, 28 Jun 2020 03:00:58 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-Azure-Storage-Resource-Provider/1.0,Microsoft-HTTPAPI/2.0 Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python/3.8.2 (Linux-4.19.104-microsoft-standard-x86_64-with-glibc2.29) msrest/0.6.16
+        msrest_azure/0.6.3 azure-mgmt-storage/11.1.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_mgmt_storage_test_storage_accounts43b8102a/providers/Microsoft.Storage/storageAccounts/pyarmstorage43b8102a?api-version=2019-06-01
+  response:
+    body:
+      string: '{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_mgmt_storage_test_storage_accounts43b8102a/providers/Microsoft.Storage/storageAccounts/pyarmstorage43b8102a","name":"pyarmstorage43b8102a","type":"Microsoft.Storage/storageAccounts","location":"westus","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-28T03:00:40.0258668Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-28T03:00:40.0258668Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2020-06-28T03:00:39.9633826Z","primaryEndpoints":{"blob":"https://pyarmstorage43b8102a.blob.core.windows.net/","queue":"https://pyarmstorage43b8102a.queue.core.windows.net/","table":"https://pyarmstorage43b8102a.table.core.windows.net/","file":"https://pyarmstorage43b8102a.file.core.windows.net/"},"primaryLocation":"westus","statusOfPrimary":"available"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1188'
+      content-type:
+      - application/json
+      date:
+      - Sun, 28 Jun 2020 03:00:58 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-Azure-Storage-Resource-Provider/1.0,Microsoft-HTTPAPI/2.0 Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python/3.8.2 (Linux-4.19.104-microsoft-standard-x86_64-with-glibc2.29) msrest/0.6.16
+        msrest_azure/0.6.3 azure-mgmt-storage/11.1.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: POST
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_mgmt_storage_test_storage_accounts43b8102a/providers/Microsoft.Storage/storageAccounts/pyarmstorage43b8102a/listKeys?api-version=2019-06-01
+  response:
+    body:
+      string: '{"keys":[{"keyName":"key1","value":"Kh4yYuIbPWh5IM7AcskR3Hk6kGyYMXgrz+USfu2WIGqNP4VusR1DokNuL/+C1hrfZ5aFcpVkdmIeeNxodX7eng==","permissions":"FULL"},{"keyName":"key2","value":"Q2W7TrhdytRtIEHYE+4PArJ9V9fjfxOYf4AIwzLjlPXf4UG+C3aYv8NvN5CywdJ1lmUK/rpCfoRdK1ewvM+kIw==","permissions":"FULL"}]}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '288'
+      content-type:
+      - application/json
+      date:
+      - Sun, 28 Jun 2020 03:00:58 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-Azure-Storage-Resource-Provider/1.0,Microsoft-HTTPAPI/2.0 Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-resource-requests:
+      - '11999'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"keyName": "key1"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '19'
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - python/3.8.2 (Linux-4.19.104-microsoft-standard-x86_64-with-glibc2.29) msrest/0.6.16
+        msrest_azure/0.6.3 azure-mgmt-storage/11.1.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: POST
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_mgmt_storage_test_storage_accounts43b8102a/providers/Microsoft.Storage/storageAccounts/pyarmstorage43b8102a/regenerateKey?api-version=2019-06-01
+  response:
+    body:
+      string: '{"keys":[{"keyName":"key1","value":"HRu55fX77be4HZNBn4vnOgGqgDrY2bVbyiCqt9g5SsZOOJXGZAdw0VLhthEPvh/aDiwP70E2GSL+ZkLtuMKqoA==","permissions":"FULL"},{"keyName":"key2","value":"Q2W7TrhdytRtIEHYE+4PArJ9V9fjfxOYf4AIwzLjlPXf4UG+C3aYv8NvN5CywdJ1lmUK/rpCfoRdK1ewvM+kIw==","permissions":"FULL"}]}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '288'
+      content-type:
+      - application/json
+      date:
+      - Sun, 28 Jun 2020 03:00:59 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-Azure-Storage-Resource-Provider/1.0,Microsoft-HTTPAPI/2.0 Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python/3.8.2 (Linux-4.19.104-microsoft-standard-x86_64-with-glibc2.29) msrest/0.6.16
+        msrest_azure/0.6.3 azure-mgmt-storage/11.1.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_mgmt_storage_test_storage_accounts43b8102a/providers/Microsoft.Storage/storageAccounts?api-version=2019-06-01
+  response:
+    body:
+      string: '{"value":[{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_mgmt_storage_test_storage_accounts43b8102a/providers/Microsoft.Storage/storageAccounts/pyarmstorage43b8102a","name":"pyarmstorage43b8102a","type":"Microsoft.Storage/storageAccounts","location":"westus","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-28T03:00:40.0258668Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-28T03:00:40.0258668Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2020-06-28T03:00:39.9633826Z","primaryEndpoints":{"blob":"https://pyarmstorage43b8102a.blob.core.windows.net/","queue":"https://pyarmstorage43b8102a.queue.core.windows.net/","table":"https://pyarmstorage43b8102a.table.core.windows.net/","file":"https://pyarmstorage43b8102a.file.core.windows.net/"},"primaryLocation":"westus","statusOfPrimary":"available"}}]}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1200'
+      content-type:
+      - application/json
+      date:
+      - Sun, 28 Jun 2020 03:00:59 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-Azure-Storage-Resource-Provider/1.0,Microsoft-HTTPAPI/2.0 Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python/3.8.2 (Linux-4.19.104-microsoft-standard-x86_64-with-glibc2.29) msrest/0.6.16
+        msrest_azure/0.6.3 azure-mgmt-storage/11.1.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Storage/storageAccounts?api-version=2019-06-01
+  response:
+    body:
+      string: '{"value":[{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/qiaozhatest/providers/Microsoft.Storage/storageAccounts/qiaozhatestdiag","name":"qiaozhatestdiag","type":"Microsoft.Storage/storageAccounts","location":"eastus","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-05-01T03:28:36.6558790Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-05-01T03:28:36.6558790Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2020-05-01T03:28:36.5776009Z","primaryEndpoints":{"blob":"https://qiaozhatestdiag.blob.core.windows.net/","queue":"https://qiaozhatestdiag.queue.core.windows.net/","table":"https://qiaozhatestdiag.table.core.windows.net/","file":"https://qiaozhatestdiag.file.core.windows.net/"},"primaryLocation":"eastus","statusOfPrimary":"available"}},{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/azure-sdk-for-node/providers/Microsoft.Storage/storageAccounts/azuresdkfornodediag","name":"azuresdkfornodediag","type":"Microsoft.Storage/storageAccounts","location":"westus","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2019-01-10T22:40:25.4342475Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2019-01-10T22:40:25.4342475Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2019-01-10T22:40:25.3405525Z","primaryEndpoints":{"blob":"https://azuresdkfornodediag.blob.core.windows.net/","queue":"https://azuresdkfornodediag.queue.core.windows.net/","table":"https://azuresdkfornodediag.table.core.windows.net/","file":"https://azuresdkfornodediag.file.core.windows.net/"},"primaryLocation":"westus","statusOfPrimary":"available"}},{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/dev-box/providers/Microsoft.Storage/storageAccounts/devboxdiag862","name":"devboxdiag862","type":"Microsoft.Storage/storageAccounts","location":"westus","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2018-08-06T17:53:31.3605408Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2018-08-06T17:53:31.3605408Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2018-08-06T17:53:31.2355702Z","primaryEndpoints":{"blob":"https://devboxdiag862.blob.core.windows.net/","queue":"https://devboxdiag862.queue.core.windows.net/","table":"https://devboxdiag862.table.core.windows.net/","file":"https://devboxdiag862.file.core.windows.net/"},"primaryLocation":"westus","statusOfPrimary":"available"}},{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/msi-test-functions/providers/Microsoft.Storage/storageAccounts/msitestfunctionbc63","name":"msitestfunctionbc63","type":"Microsoft.Storage/storageAccounts","location":"westus","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2019-01-14T18:44:56.9136213Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2019-01-14T18:44:56.9136213Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2019-01-14T18:44:56.8042783Z","primaryEndpoints":{"blob":"https://msitestfunctionbc63.blob.core.windows.net/","queue":"https://msitestfunctionbc63.queue.core.windows.net/","table":"https://msitestfunctionbc63.table.core.windows.net/","file":"https://msitestfunctionbc63.file.core.windows.net/"},"primaryLocation":"westus","statusOfPrimary":"available"}},{"sku":{"name":"Standard_RAGRS","tier":"Standard"},"kind":"StorageV2","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/azure-sdk-for-js/providers/Microsoft.Storage/storageAccounts/proxytestjs","name":"proxytestjs","type":"Microsoft.Storage/storageAccounts","location":"westus","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2019-01-17T18:51:16.0174916Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2019-01-17T18:51:16.0174916Z"}},"keySource":"Microsoft.Storage"},"accessTier":"Hot","provisioningState":"Succeeded","creationTime":"2019-01-17T18:51:15.9237740Z","primaryEndpoints":{"dfs":"https://proxytestjs.dfs.core.windows.net/","web":"https://proxytestjs.z22.web.core.windows.net/","blob":"https://proxytestjs.blob.core.windows.net/","queue":"https://proxytestjs.queue.core.windows.net/","table":"https://proxytestjs.table.core.windows.net/","file":"https://proxytestjs.file.core.windows.net/"},"primaryLocation":"westus","statusOfPrimary":"available","secondaryLocation":"eastus","statusOfSecondary":"available","secondaryEndpoints":{"dfs":"https://proxytestjs-secondary.dfs.core.windows.net/","web":"https://proxytestjs-secondary.z22.web.core.windows.net/","blob":"https://proxytestjs-secondary.blob.core.windows.net/","queue":"https://proxytestjs-secondary.queue.core.windows.net/","table":"https://proxytestjs-secondary.table.core.windows.net/"}}},{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_mgmt_storage_test_storage_accounts43b8102a/providers/Microsoft.Storage/storageAccounts/pyarmstorage43b8102a","name":"pyarmstorage43b8102a","type":"Microsoft.Storage/storageAccounts","location":"westus","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-28T03:00:40.0258668Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-28T03:00:40.0258668Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2020-06-28T03:00:39.9633826Z","primaryEndpoints":{"blob":"https://pyarmstorage43b8102a.blob.core.windows.net/","queue":"https://pyarmstorage43b8102a.queue.core.windows.net/","table":"https://pyarmstorage43b8102a.table.core.windows.net/","file":"https://pyarmstorage43b8102a.file.core.windows.net/"},"primaryLocation":"westus","statusOfPrimary":"available"}},{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_mgmt_compute_test_vm_extensions15a60f10/providers/Microsoft.Storage/storageAccounts/pyvmextstor15a60f10","name":"pyvmextstor15a60f10","type":"Microsoft.Storage/storageAccounts","location":"westus","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-17T04:30:54.7950234Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-17T04:30:54.7950234Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2020-06-17T04:30:54.7169469Z","primaryEndpoints":{"blob":"https://pyvmextstor15a60f10.blob.core.windows.net/","queue":"https://pyvmextstor15a60f10.queue.core.windows.net/","table":"https://pyvmextstor15a60f10.table.core.windows.net/","file":"https://pyvmextstor15a60f10.file.core.windows.net/"},"primaryLocation":"westus","statusOfPrimary":"available"}},{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/qiaozhatest/providers/Microsoft.Storage/storageAccounts/qiaozhadftest","name":"qiaozhadftest","type":"Microsoft.Storage/storageAccounts","location":"westus","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-03-18T13:26:28.6688154Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-03-18T13:26:28.6688154Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2020-03-18T13:26:28.5907139Z","primaryEndpoints":{"blob":"https://qiaozhadftest.blob.core.windows.net/","queue":"https://qiaozhadftest.queue.core.windows.net/","table":"https://qiaozhadftest.table.core.windows.net/","file":"https://qiaozhadftest.file.core.windows.net/"},"primaryLocation":"westus","statusOfPrimary":"available"}},{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/arm-python-RG/providers/Microsoft.Storage/storageAccounts/armpythonrgdiag","name":"armpythonrgdiag","type":"Microsoft.Storage/storageAccounts","location":"westeurope","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-05-08T08:37:58.4541510Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-05-08T08:37:58.4541510Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2020-05-08T08:37:58.3603956Z","primaryEndpoints":{"blob":"https://armpythonrgdiag.blob.core.windows.net/","queue":"https://armpythonrgdiag.queue.core.windows.net/","table":"https://armpythonrgdiag.table.core.windows.net/","file":"https://armpythonrgdiag.file.core.windows.net/"},"primaryLocation":"westeurope","statusOfPrimary":"available"}},{"sku":{"name":"Standard_RAGRS","tier":"Standard"},"kind":"StorageV2","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-changlong/providers/Microsoft.Storage/storageAccounts/testchanglong","name":"testchanglong","type":"Microsoft.Storage/storageAccounts","location":"westeurope","tags":{},"properties":{"privateEndpointConnections":[],"minimumTlsVersion":"TLS1_0","allowBlobPublicAccess":true,"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-28T02:38:27.0613852Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-28T02:38:27.0613852Z"}},"keySource":"Microsoft.Storage"},"accessTier":"Hot","provisioningState":"Succeeded","creationTime":"2020-06-28T02:38:26.9983339Z","primaryEndpoints":{"dfs":"https://testchanglong.dfs.core.windows.net/","web":"https://testchanglong.z6.web.core.windows.net/","blob":"https://testchanglong.blob.core.windows.net/","queue":"https://testchanglong.queue.core.windows.net/","table":"https://testchanglong.table.core.windows.net/","file":"https://testchanglong.file.core.windows.net/"},"primaryLocation":"westeurope","statusOfPrimary":"available","secondaryLocation":"northeurope","statusOfSecondary":"available","secondaryEndpoints":{"dfs":"https://testchanglong-secondary.dfs.core.windows.net/","web":"https://testchanglong-secondary.z6.web.core.windows.net/","blob":"https://testchanglong-secondary.blob.core.windows.net/","queue":"https://testchanglong-secondary.queue.core.windows.net/","table":"https://testchanglong-secondary.table.core.windows.net/"}}},{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"StorageV2","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cloud-shell-storage-southeastasia/providers/Microsoft.Storage/storageAccounts/cs1100320006f639ac4","name":"cs1100320006f639ac4","type":"Microsoft.Storage/storageAccounts","location":"southeastasia","tags":{"ms-resource-usage":"azure-cloud-shell"},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-22T09:18:47.2076778Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-22T09:18:47.2076778Z"}},"keySource":"Microsoft.Storage"},"accessTier":"Hot","provisioningState":"Succeeded","creationTime":"2020-06-22T09:18:47.1451761Z","primaryEndpoints":{"dfs":"https://cs1100320006f639ac4.dfs.core.windows.net/","web":"https://cs1100320006f639ac4.z23.web.core.windows.net/","blob":"https://cs1100320006f639ac4.blob.core.windows.net/","queue":"https://cs1100320006f639ac4.queue.core.windows.net/","table":"https://cs1100320006f639ac4.table.core.windows.net/","file":"https://cs1100320006f639ac4.file.core.windows.net/"},"primaryLocation":"southeastasia","statusOfPrimary":"available"}},{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"StorageV2","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cloud-shell-storage-southeastasia/providers/Microsoft.Storage/storageAccounts/cs192f95d8f3c67x4124x91c","name":"cs192f95d8f3c67x4124x91c","type":"Microsoft.Storage/storageAccounts","location":"southeastasia","tags":{"ms-resource-usage":"azure-cloud-shell"},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-01-19T06:50:51.6330046Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-01-19T06:50:51.6330046Z"}},"keySource":"Microsoft.Storage"},"accessTier":"Hot","provisioningState":"Succeeded","creationTime":"2020-01-19T06:50:51.5705351Z","primaryEndpoints":{"dfs":"https://cs192f95d8f3c67x4124x91c.dfs.core.windows.net/","web":"https://cs192f95d8f3c67x4124x91c.z23.web.core.windows.net/","blob":"https://cs192f95d8f3c67x4124x91c.blob.core.windows.net/","queue":"https://cs192f95d8f3c67x4124x91c.queue.core.windows.net/","table":"https://cs192f95d8f3c67x4124x91c.table.core.windows.net/","file":"https://cs192f95d8f3c67x4124x91c.file.core.windows.net/"},"primaryLocation":"southeastasia","statusOfPrimary":"available"}},{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ml-test/providers/Microsoft.Storage/storageAccounts/billymlteststorage","name":"billymlteststorage","type":"Microsoft.Storage/storageAccounts","location":"southcentralus","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2018-10-11T04:48:02.8290793Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2018-10-11T04:48:02.8290793Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2018-10-11T04:48:02.7509575Z","primaryEndpoints":{"blob":"https://billymlteststorage.blob.core.windows.net/","queue":"https://billymlteststorage.queue.core.windows.net/","table":"https://billymlteststorage.table.core.windows.net/","file":"https://billymlteststorage.file.core.windows.net/"},"primaryLocation":"southcentralus","statusOfPrimary":"available"}},{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/git2gridtesting/providers/Microsoft.Storage/storageAccounts/git2gridb900","name":"git2gridb900","type":"Microsoft.Storage/storageAccounts","location":"centralus","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2018-10-13T01:56:00.4853173Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2018-10-13T01:56:00.4853173Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2018-10-13T01:56:00.3446936Z","primaryEndpoints":{"blob":"https://git2gridb900.blob.core.windows.net/","queue":"https://git2gridb900.queue.core.windows.net/","table":"https://git2gridb900.table.core.windows.net/","file":"https://git2gridb900.file.core.windows.net/"},"primaryLocation":"centralus","statusOfPrimary":"available"}},{"sku":{"name":"Standard_LRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/vpn-lon/providers/Microsoft.Storage/storageAccounts/vpnlondiag","name":"vpnlondiag","type":"Microsoft.Storage/storageAccounts","location":"ukwest","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2018-10-08T20:09:35.3071398Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2018-10-08T20:09:35.3071398Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2018-10-08T20:09:35.2602311Z","primaryEndpoints":{"blob":"https://vpnlondiag.blob.core.windows.net/","queue":"https://vpnlondiag.queue.core.windows.net/","table":"https://vpnlondiag.table.core.windows.net/","file":"https://vpnlondiag.file.core.windows.net/"},"primaryLocation":"ukwest","statusOfPrimary":"available"}}]}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '18636'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sun, 28 Jun 2020 03:01:00 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-original-request-ids:
+      - a717e5cd-7682-4ff7-8a95-8c06cf2de877
+      - 7e84842c-3d0c-498a-9d46-49896e7e6831
+      - 04e4d9f0-41e8-42d1-82ac-53e4700e5901
+      - 6a3ad4fd-b272-411b-9d9b-1bd45e7e47c8
+      - 3cd55285-ecf0-4c43-88fd-e02c8a4d3261
+      - a0325977-cce3-48e6-aaf6-e2af6efe03f0
+      - 9b05d7a7-b77d-4f6a-836c-93756892f946
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"sku": {"name": "Standard_GRS"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '33'
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - python/3.8.2 (Linux-4.19.104-microsoft-standard-x86_64-with-glibc2.29) msrest/0.6.16
+        msrest_azure/0.6.3 azure-mgmt-storage/11.1.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: PATCH
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_mgmt_storage_test_storage_accounts43b8102a/providers/Microsoft.Storage/storageAccounts/pyarmstorage43b8102a?api-version=2019-06-01
+  response:
+    body:
+      string: '{"sku":{"name":"Standard_GRS","tier":"Standard"},"kind":"Storage","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_mgmt_storage_test_storage_accounts43b8102a/providers/Microsoft.Storage/storageAccounts/pyarmstorage43b8102a","name":"pyarmstorage43b8102a","type":"Microsoft.Storage/storageAccounts","location":"westus","tags":{},"properties":{"privateEndpointConnections":[],"networkAcls":{"bypass":"AzureServices","virtualNetworkRules":[],"ipRules":[],"defaultAction":"Allow"},"supportsHttpsTrafficOnly":true,"encryption":{"services":{"file":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-28T03:00:40.0258668Z"},"blob":{"keyType":"Account","enabled":true,"lastEnabledTime":"2020-06-28T03:00:40.0258668Z"}},"keySource":"Microsoft.Storage"},"provisioningState":"Succeeded","creationTime":"2020-06-28T03:00:39.9633826Z","primaryEndpoints":{"blob":"https://pyarmstorage43b8102a.blob.core.windows.net/","queue":"https://pyarmstorage43b8102a.queue.core.windows.net/","table":"https://pyarmstorage43b8102a.table.core.windows.net/","file":"https://pyarmstorage43b8102a.file.core.windows.net/"},"primaryLocation":"westus","statusOfPrimary":"available","secondaryLocation":"eastus","statusOfSecondary":"available"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1249'
+      content-type:
+      - application/json
+      date:
+      - Sun, 28 Jun 2020 03:01:02 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-Azure-Storage-Resource-Provider/1.0,Microsoft-HTTPAPI/2.0 Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1197'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python/3.8.2 (Linux-4.19.104-microsoft-standard-x86_64-with-glibc2.29) msrest/0.6.16
+        msrest_azure/0.6.3 azure-mgmt-storage/11.1.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: DELETE
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_mgmt_storage_test_storage_accounts43b8102a/providers/Microsoft.Storage/storageAccounts/pyarmstorage43b8102a?api-version=2019-06-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      content-type:
+      - text/plain; charset=utf-8
+      date:
+      - Sun, 28 Jun 2020 03:01:05 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-Azure-Storage-Resource-Provider/1.0,Microsoft-HTTPAPI/2.0 Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-deletes:
+      - '14998'
+    status:
+      code: 200
+      message: OK
+version: 1
