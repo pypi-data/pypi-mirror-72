@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+bin/panku
+panku/__init__.py
+panku/panku.py
+panku.egg-info/PKG-INFO
+panku.egg-info/SOURCES.txt
+panku.egg-info/dependency_links.txt
+panku.egg-info/top_level.txt
