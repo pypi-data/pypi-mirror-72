@@ -1,0 +1,10 @@
+coiled:
+  cloud:
+    user: ""
+    token: ""
+    server: https://dev.coiledhq.com
+    account: null
+
+distributed:
+  scheduler:
+    preload: https://dev.coiledhq.com/preloads/insights.py

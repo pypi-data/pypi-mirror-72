@@ -1,0 +1,4 @@
+aiohttp
+aiobotocore>=0.12.0,<0.13
+click
+distributed>=2.19.0
