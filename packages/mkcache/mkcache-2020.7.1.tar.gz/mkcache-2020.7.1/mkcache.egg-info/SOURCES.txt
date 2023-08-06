@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+mkcache.egg-info/PKG-INFO
+mkcache.egg-info/SOURCES.txt
+mkcache.egg-info/dependency_links.txt
+mkcache.egg-info/top_level.txt
+scripts/mkcache
