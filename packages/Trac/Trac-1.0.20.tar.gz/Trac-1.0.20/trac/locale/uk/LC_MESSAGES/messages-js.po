@@ -1,0 +1,231 @@
+# Ukrainian translations for Trac.
+# Copyright (C) 2012-2020 Edgewall Software
+# This file is distributed under the same license as the Trac project.
+#
+# Translators:
+# Remy Blank <remy.blank@pobox.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version:  Trac\n"
+"Report-Msgid-Bugs-To: trac-dev@googlegroups.com\n"
+"POT-Creation-Date: 2019-09-02 18:45+0900\n"
+"PO-Revision-Date: 2020-06-20 21:41+0000\n"
+"Last-Translator: Sergii Galashyn <trovich@gmail.com>\n"
+"Language: uk\n"
+"Language-Team: uk <trac-dev@googlegroups.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: trac/htdocs/js/blame.js:84
+msgid "(no changeset information)"
+msgstr "(немає даних про набір змін)"
+
+#: trac/htdocs/js/blame.js:87
+msgid "Close"
+msgstr "Закрити"
+
+#: trac/htdocs/js/diff.js:119
+msgid "Tabular"
+msgstr "Табличний"
+
+#: trac/htdocs/js/diff.js:125
+msgid "Unified"
+msgstr "Уніфікований"
+
+#: trac/htdocs/js/expand_dir.js:42
+msgid "Expand sub-directory in place"
+msgstr "Розгорнути підтеку на місці"
+
+#: trac/htdocs/js/expand_dir.js:71
+msgid "Re-expand directory"
+msgstr "Знову розгорнути теку"
+
+#: trac/htdocs/js/expand_dir.js:121
+#, python-format
+msgid "Loading %(entry)s..."
+msgstr "Відкриття %(entry)s..."
+
+#: trac/htdocs/js/expand_dir.js:149
+msgid "(empty)"
+msgstr "(порожньо)"
+
+#: trac/htdocs/js/expand_dir.js:157
+msgid "(error)"
+msgstr "(помилка)"
+
+#: trac/htdocs/js/expand_dir.js:164
+msgid "Fold directory"
+msgstr "Згорнути теку"
+
+#: trac/htdocs/js/folding.js:62
+#, python-format
+msgid "Show %(title)s"
+msgstr "Показати %(title)s"
+
+#: trac/htdocs/js/folding.js:78
+#, python-format
+msgid "%(title)s (click to hide column)"
+msgstr "%(title)s (натисніть, щоб сховати стовпчик)"
+
+#. TRANSLATOR: Format in month heading in the datepicker, extracts yearSuffix
+#. and showMonthAfterYear
+#: trac/htdocs/js/jquery-ui-i18n.js:4
+msgid "$month$year"
+msgstr ""
+
+#. TRANSLATOR: Link that closes the datepicker
+#. TRANSLATOR: Link that closes the timepicker
+#: trac/htdocs/js/jquery-ui-i18n.js:7 trac/htdocs/js/jquery-ui-i18n.js:40
+msgid "Done"
+msgstr "Готово"
+
+#. TRANSLATOR: Link to the previous month in the datepicker
+#: trac/htdocs/js/jquery-ui-i18n.js:9
+msgid "Prev"
+msgstr "Попередній"
+
+#. TRANSLATOR: Link to the next month in the datepicker
+#: trac/htdocs/js/jquery-ui-i18n.js:11
+msgid "Next"
+msgstr "Наступний"
+
+#. TRANSLATOR: Link to the current day in the datepicker
+#: trac/htdocs/js/jquery-ui-i18n.js:13
+msgid "Today"
+msgstr "Нині"
+
+#. TRANSLATOR: Heading for the week-of-the-year column in the datepicker
+#: trac/htdocs/js/jquery-ui-i18n.js:20
+msgid "Wk"
+msgstr "Тж"
+
+#. TRANSLATOR: Heading of the standalone timepicker
+#: trac/htdocs/js/jquery-ui-i18n.js:31
+msgid "Choose Time"
+msgstr "Обрати час"
+
+#. TRANSLATOR: Time selector label
+#: trac/htdocs/js/jquery-ui-i18n.js:33
+msgid "Time"
+msgstr "Час"
+
+#. TRANSLATOR: Time labels in the timepicker
+#: trac/htdocs/js/jquery-ui-i18n.js:35
+msgid "Hour"
+msgstr "Година"
+
+#: trac/htdocs/js/jquery-ui-i18n.js:35
+msgid "Minute"
+msgstr "Хвилина"
+
+#: trac/htdocs/js/jquery-ui-i18n.js:35
+msgid "Second"
+msgstr "Секунда"
+
+#: trac/htdocs/js/jquery-ui-i18n.js:36
+msgid "Time Zone"
+msgstr "Часовий пояс"
+
+#. TRANSLATOR: Link to pick the current time in the timepicker
+#: trac/htdocs/js/jquery-ui-i18n.js:38
+msgid "Now"
+msgstr "Зараз"
+
+#: trac/htdocs/js/query.js:132
+msgid "A filter already exists for that property"
+msgstr "Фільтр для цієї властивості вже існує"
+
+#: trac/htdocs/js/query.js:159
+msgid "or"
+msgstr "або"
+
+#: trac/htdocs/js/query.js:182 trac/htdocs/js/query.js:311
+msgid "yes"
+msgstr "так"
+
+#: trac/htdocs/js/query.js:185 trac/htdocs/js/query.js:314
+msgid "no"
+msgstr "ні"
+
+#: trac/htdocs/js/query.js:188
+msgid "between"
+msgstr "між"
+
+#: trac/htdocs/js/query.js:190
+msgid "and"
+msgstr "та"
+
+#: trac/htdocs/js/query.js:342
+msgid " remove:"
+msgstr " вилучити:"
+
+#: trac/htdocs/js/query.js:352
+msgid " add:"
+msgstr " додати:"
+
+#: trac/htdocs/js/query.js:381
+#, python-format
+msgid "Select ticket %(id)s for modification"
+msgstr "Позначте квиток %(id)s для зміни"
+
+#: trac/htdocs/js/query.js:393
+msgid "Toggle selection of all tickets shown in this group"
+msgstr "Перемкнути виділення усіх квитків у цій групі"
+
+#: trac/htdocs/js/trac.js:7
+msgid "Link here"
+msgstr "Посилання сюди"
+
+#: trac/htdocs/js/wikitoolbar.js:59
+msgid "Bold text: '''Example'''"
+msgstr "Жирний текст: '''Зразок'''"
+
+#: trac/htdocs/js/wikitoolbar.js:62
+msgid "Italic text: ''Example''"
+msgstr "Курсивний текст: ''Зразок''"
+
+#: trac/htdocs/js/wikitoolbar.js:65
+msgid "Heading: == Example =="
+msgstr "Заголовок: == Зразок =="
+
+#: trac/htdocs/js/wikitoolbar.js:68
+msgid "Link: [http://www.example.com/ Example]"
+msgstr "Посилання: [http://www.example.com/ Зразок]"
+
+#: trac/htdocs/js/wikitoolbar.js:71
+msgid "Code block: {{{ example }}}"
+msgstr "Блок коду: {{{ зразок }}}"
+
+#: trac/htdocs/js/wikitoolbar.js:74
+msgid "Horizontal rule: ----"
+msgstr "Горизонтальна лінія: ----"
+
+#: trac/htdocs/js/wikitoolbar.js:77
+msgid "New paragraph"
+msgstr "Новий абзац"
+
+#: trac/htdocs/js/wikitoolbar.js:80
+msgid "Line break: [[BR]]"
+msgstr "Розрив рядка: [[BR]]"
+
+#: trac/htdocs/js/wikitoolbar.js:83
+msgid "Image: [[Image()]]"
+msgstr "Зображення: [[Image()]]"
+
+#: trac/ticket/templates/ticket.html:3 trac/wiki/templates/wiki_view.html:3
+msgid "Link to this section"
+msgstr "Посилання на цю секцію"
+
+#: trac/versioncontrol/templates/changeset.html:7
+msgid "Link to this diff"
+msgstr "Посилання на цей diff"
+
+#: trac/wiki/templates/wiki_view.html:5
+#, python-format
+msgid "Link to #%(id)s"
+msgstr "Посилання на #%(id)s"
+
