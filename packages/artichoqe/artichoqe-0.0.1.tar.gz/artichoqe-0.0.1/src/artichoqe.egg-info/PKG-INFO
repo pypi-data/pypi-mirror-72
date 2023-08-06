@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: artichoqe
+Version: 0.0.1
+Summary: Artichoqe is a cloud metadata collector, helping you in your daily decision
+Home-page: https://github.com/vmdude/artichoqe
+Author: Unfeatured team
+Author-email: noreply@lost.com
+License: WTFPL
+Download-URL: https://github.com/vmdude/artichoqe/archive/0.0.1.tar.gz
+Description: file: README.md
+Keywords: aws,prometheus,cloudformation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: test
