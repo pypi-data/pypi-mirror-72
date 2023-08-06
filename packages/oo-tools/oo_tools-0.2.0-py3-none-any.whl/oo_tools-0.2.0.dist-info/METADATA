@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: oo-tools
+Version: 0.2.0
+Summary: Some object-oriented classes + utilities for python
+Home-page: UNKNOWN
+Author: Wesley Uykimpang
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: pyyaml
+Requires-Dist: requests
+
+UNKNOWN
+
+
