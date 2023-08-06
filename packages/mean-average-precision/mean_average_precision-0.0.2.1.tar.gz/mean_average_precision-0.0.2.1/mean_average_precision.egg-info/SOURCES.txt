@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+mean_average_precision/__init__.py
+mean_average_precision/mean_average_precision.py
+mean_average_precision/utils.py
+mean_average_precision.egg-info/PKG-INFO
+mean_average_precision.egg-info/SOURCES.txt
+mean_average_precision.egg-info/dependency_links.txt
+mean_average_precision.egg-info/requires.txt
+mean_average_precision.egg-info/top_level.txt
+mean_average_precision.egg-info/zip-safe
