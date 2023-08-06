@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: algoutils
+Version: 0.0.1
+Summary: Util functions to be used in algorithmic trading.
+Home-page: https://github.com/aticio/algoutils
+Author: Özgür Atıcı
+Author-email: aticiozgur@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: ntplib
+Provides-Extra: dev
+Requires-Dist: pytest (>=3.7) ; extra == 'dev'
+
+# algoutils
+
+
