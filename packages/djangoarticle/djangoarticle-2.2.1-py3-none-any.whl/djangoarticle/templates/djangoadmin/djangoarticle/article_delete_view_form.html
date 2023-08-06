@@ -1,0 +1,11 @@
+{% extends 'djangoadmin/base/body/index_admin.html' %}
+
+{% block body %}
+{% include "djangoadmin/widgets/alerts.html" %}
+{% include "djangoadmin/widgets/dashboard_accordian_detail.html" with data=article_detail is_category="True" %}
+{% include "djangoadmin/widgets/submit_form.html" with type="danger" value="Delete" %}
+{% endblock body %}
+
+{% block sidebar_right %}
+{% include "djangoadmin/widgets/promo-window.html" %}
+{% endblock sidebar_right %}
