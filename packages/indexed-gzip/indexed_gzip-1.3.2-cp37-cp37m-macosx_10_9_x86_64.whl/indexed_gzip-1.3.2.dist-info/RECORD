@@ -1,0 +1,15 @@
+indexed_gzip/__init__.py,sha256=JrwJ_3kbgxr8Vz6l4cVAZO4Sm2ycRMtk4QT9jXjiE5I,547
+indexed_gzip/indexed_gzip.cpython-37m-darwin.so,sha256=dOB4UJ_HjJ9nsQt6IrjjliErrhW6h7N8P7nwQq0I2oI,312804
+indexed_gzip/tests/__init__.py,sha256=n7hXKlGI8MZyCrrPZoZCZ0daoJEr5awopR_3GklBIPQ,5208
+indexed_gzip/tests/benchmark.py,sha256=z-qTFC2IjAci7odA9MRbe_NHP3yJDyXusos5k0hrB0k,4405
+indexed_gzip/tests/ctest_indexed_gzip.cpython-37m-darwin.so,sha256=AgQJ-peKuM-AAb-lDuPrkbSOwcJ3H2OrfV4I05OGiGA,739992
+indexed_gzip/tests/ctest_zran.cpython-37m-darwin.so,sha256=ryZWKULDqWlTQYWst-K-lrxRoQXSde8bSiRHNOlCJpE,408192
+indexed_gzip/tests/test_indexed_gzip.py,sha256=GST35m4CxDT8m03fhcNATpw82r6M-DmwTvTle_V2meE,4563
+indexed_gzip/tests/test_indexed_gzip_threading.py,sha256=pVio7it6_DUmk8Zv_zi6pxZ93eweZUYihfoh0H5ZJ0Q,2196
+indexed_gzip/tests/test_nibabel_integration.py,sha256=hIeN2PKErMOFzHsoK_akcPN68VAc9ImmzA8NFctlzs8,2581
+indexed_gzip/tests/test_zran.py,sha256=BfIzr2LiZj10lX_l64HOkb4hiGqfRvOTdiQosRsqelc,2756
+indexed_gzip-1.3.2.dist-info/LICENSE,sha256=mYatn_d17QmVq4DIPEjYIk_h_3HXnrJasBuUKysRoYc,937
+indexed_gzip-1.3.2.dist-info/METADATA,sha256=wCopSWDJtM_btE1l2a8nA-VaXv2WgGYchDh3EHASRBM,8872
+indexed_gzip-1.3.2.dist-info/WHEEL,sha256=ePSmKDYpHLRUYc6QuHiYMO-IoN8XmQMJmY2AHxzV4Bc,110
+indexed_gzip-1.3.2.dist-info/top_level.txt,sha256=lk5ZVPlCbcmiAtxiJdu7SWX1NUWgdJNxLy48WhZnmAk,13
+indexed_gzip-1.3.2.dist-info/RECORD,,
