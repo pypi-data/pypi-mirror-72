@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/nr/__init__.py
+src/nr.utils.re.egg-info/PKG-INFO
+src/nr.utils.re.egg-info/SOURCES.txt
+src/nr.utils.re.egg-info/dependency_links.txt
+src/nr.utils.re.egg-info/requires.txt
+src/nr.utils.re.egg-info/top_level.txt
+src/nr/utils/__init__.py
+src/nr/utils/re/__init__.py
+src/nr/utils/re/test_re.py
