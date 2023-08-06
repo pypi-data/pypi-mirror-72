@@ -1,0 +1,7 @@
+requirements.txt
+setup.py
+pid_killall.egg-info/PKG-INFO
+pid_killall.egg-info/SOURCES.txt
+pid_killall.egg-info/dependency_links.txt
+pid_killall.egg-info/top_level.txt
+scripts/pid-killall
