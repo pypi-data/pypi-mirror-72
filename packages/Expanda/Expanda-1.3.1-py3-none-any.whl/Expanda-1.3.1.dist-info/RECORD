@@ -1,0 +1,15 @@
+expanda/__init__.py,sha256=BavikByvgdPWe29-J7dnuj6ghXNvR5m7UoLJ7KoE9ys,8667
+expanda/__main__.py,sha256=kfII_jQkVnTQ-GDiuKiOJ4cy5mlZ639aYUGHGDTQfU0,61
+expanda/extension.py,sha256=w59uZ-E2HwhQdugejzWA9PSAc08jJ54gb_eLEQzc860,2830
+expanda/shuffling.py,sha256=K8d7WuP_3fH1vpFDk5qmrxEghtb8e74URy3Jk0DOW10,3572
+expanda/tokenization.py,sha256=ne37v9XvrAM-ZaksXByrS_8fO8-MMKjRVdV_IkyJ6Xw,7970
+expanda/utils.py,sha256=md49LeW8W7RsIA8q2M2HlvZGdkv_Ye4BHNICPb1wLXg,749
+expanda/ext/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+expanda/ext/namuwiki.py,sha256=Qn9fH9TtX3q-HBdjD2CAzYWl1Ls8sNGIl-QPBjtnfCo,6924
+expanda/ext/wikipedia.py,sha256=k3HSxBWSJWgjdsOxW4WodOF16i34Yi84VGyZOrfGuyg,8701
+Expanda-1.3.1.dist-info/LICENSE,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+Expanda-1.3.1.dist-info/METADATA,sha256=bHlOxIKf6EMK7WMQs4PpSZR-0gJdNTsrO1kxyh9U8JU,6076
+Expanda-1.3.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+Expanda-1.3.1.dist-info/entry_points.txt,sha256=xJAUQBXPDHu7Jv1JWNMIBSpuwGgMIPh3xBjY_LtdWdY,137
+Expanda-1.3.1.dist-info/top_level.txt,sha256=BfdMMr0tYEavnXxWWC2V4cW9ivvuhLWG2QXGSMGl35A,8
+Expanda-1.3.1.dist-info/RECORD,,
