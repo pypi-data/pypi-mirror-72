@@ -1,0 +1,11 @@
+continuum_mechanics/__init__.py,sha256=rWvFJwG1JeSA2Wjr7k1NV0d8XTPBcNwrxjEX99JkLTY,175
+continuum_mechanics/solids.py,sha256=j5fxSJ-4ZNTCLsYcBRthBOTwlWrRyq6j6rVEpDauC-E,9902
+continuum_mechanics/tensor.py,sha256=YzcH8AV3dRfP6amuuqFymwGwiZnFYQezeSOl7s-xkiw,2400
+continuum_mechanics/vector.py,sha256=_Cbgsxn61SjEiID9Bw8mYF6z7R6LONxjc_WUuk0l6Sk,18866
+continuum_mechanics/visualization.py,sha256=1iGDFSeenKdj30DcgA42fFg-gERE8OFKKhGhsfxs-T4,8559
+continuum_mechanics-0.2.1.dist-info/AUTHORS.rst,sha256=mwmFScVW6eXcxcAqaWmp0nUTJu3Vq0ZJYRNhx7XpRp8,192
+continuum_mechanics-0.2.1.dist-info/LICENSE,sha256=9xb86VXyZEsIs8ttcW9Csp8zzo_qoE9p5m-E0cC8-Io,1082
+continuum_mechanics-0.2.1.dist-info/METADATA,sha256=sbuFitCk2XCDUAkCwRTy_amzI1lL685fidRDj2tUwB8,2658
+continuum_mechanics-0.2.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+continuum_mechanics-0.2.1.dist-info/top_level.txt,sha256=LRI2jk6ZmqUtIAMMUC9aVq_NwPKCEskRvj3j1YEnveQ,20
+continuum_mechanics-0.2.1.dist-info/RECORD,,
