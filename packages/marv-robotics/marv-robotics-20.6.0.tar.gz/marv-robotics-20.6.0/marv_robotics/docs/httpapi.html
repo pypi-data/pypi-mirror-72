@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HTTP API &#8212; MARV Robotics 20.06.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_paramlinks.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="shortcut icon" href="_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Upload (EE)" href="upload.html" />
+    <link rel="prev" title="Widgets" href="widgets.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="http-api">
+<span id="httpapi"></span><h1>HTTP API<a class="headerlink" href="#http-api" title="Permalink to this headline">¶</a></h1>
+<p>MARV provides an HTTP API for integration with other services. There is a dedicated API endpoint that can be used to run complex queries on the MARV database. For performing actions like tagging or commenting there are no dedicated endpoints at this time, and we recommend using the frontend API endpoints documented below for the time being.</p>
+<p>To work with the API on the command line it is handy to have <a class="reference external" href="https://curl.haxx.se/">curl</a> and <a class="reference external" href="https://stedolan.github.io/jq/">jq</a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install curl jq
+</pre></div>
+</div>
+<p>Set an environment variable for the API.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">MARV_API</span><span class="o">=</span>http://localhost:8000/marv/api
+</pre></div>
+</div>
+<div class="section" id="auth">
+<span id="httpapi-auth"></span><h2>Auth<a class="headerlink" href="#auth" title="Permalink to this headline">¶</a></h2>
+<p>For some API calls you need to be authenticated, let’s get a token, and set handy environment vars.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> -n <span class="s2">&quot;Enter username: &quot;</span><span class="p">;</span> <span class="nb">read</span> -s MARV_USER <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">echo</span> -n <span class="s2">&quot;Enter password: &quot;</span><span class="p">;</span> <span class="nb">read</span> -s MARV_PASS <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nv">TOKEN</span><span class="o">=</span><span class="k">$(</span>curl -s -X POST -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="se">\</span>
+  -d <span class="s1">&#39;{&quot;username&quot;: &quot;&#39;</span><span class="nv">$MARV_USER</span><span class="s1">&#39;&quot;, &quot;password&quot;: &quot;&#39;</span><span class="nv">$MARV_PASS</span><span class="s1">&#39;&quot;}&#39;</span> <span class="se">\</span>
+  <span class="nv">$MARV_API</span>/auth <span class="p">|</span> jq -r .access_token<span class="k">)</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">echo</span> <span class="nv">$TOKEN</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="query">
+<h2>Query<a class="headerlink" href="#query" title="Permalink to this headline">¶</a></h2>
+<p>Database queries can be performed by posting a corresponding request to <code class="docutils literal notranslate"><span class="pre">v1/rpcs</span></code>. The endpoint expects a json encoded object with an <code class="docutils literal notranslate"><span class="pre">rpcs</span></code> key and a list of actions to run. An empty request and its response would look like:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST <span class="se">\</span>
+     -H <span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span> <span class="se">\</span>
+     -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="se">\</span>
+      -d <span class="s1">&#39;{&quot;rpcs&quot;: []}&#39;</span> <span class="se">\</span>
+      <span class="nv">$MARV_API</span>/v1/rpcs
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Query actions are represented by dictionaries with a key <code class="docutils literal notranslate"><span class="pre">query</span></code>. The simplest query payload <code class="docutils literal notranslate"><span class="pre">{&quot;model&quot;:</span> <span class="pre">&quot;dataset&quot;}</span></code> asks for all entries of a single entity, in this case dataset. The valid entities are <code class="docutils literal notranslate"><span class="pre">dataset</span></code>, <code class="docutils literal notranslate"><span class="pre">file</span></code>, <code class="docutils literal notranslate"><span class="pre">comment</span></code>, <code class="docutils literal notranslate"><span class="pre">tag</span></code>, <code class="docutils literal notranslate"><span class="pre">user</span></code>, and <code class="docutils literal notranslate"><span class="pre">group</span></code>. The complete HTTP request to get all datasets looks like:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST <span class="se">\</span>
+     -H <span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span> <span class="se">\</span>
+     -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="se">\</span>
+      -d <span class="s1">&#39;{&quot;rpcs&quot;: [{&quot;query&quot;: {&quot;model&quot;: &quot;dataset&quot;}}]}&#39;</span> <span class="se">\</span>
+      <span class="nv">$MARV_API</span>/v1/rpcs
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;collection&quot;</span><span class="p">:</span> <span class="s2">&quot;bags&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;discarded&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;laser&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;time_added&quot;</span><span class="p">:</span> <span class="mi">1568903426121</span><span class="p">,</span>
+        <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1521328251000</span><span class="p">,</span>
+        <span class="s2">&quot;setid&quot;</span><span class="p">:</span> <span class="s2">&quot;dbgjsro7vfazyrj2pavoouk3vq&quot;</span>
+      <span class="p">},</span>
+      <span class="o">//</span> <span class="ow">and</span> <span class="n">many</span> <span class="n">more</span> <span class="o">...</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Often not all attributes are required on the client side. To restrict the fields in the response the query payload can contain an <code class="docutils literal notranslate"><span class="pre">attrs</span></code> object. Its keys correspond to the database fields that should be returned, and its values are always set to <code class="docutils literal notranslate"><span class="pre">true</span></code> for real database columns.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;attrs&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;setid&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;laser&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;setid&quot;</span><span class="p">:</span> <span class="s2">&quot;dbgjsro7vfazyrj2pavoouk3vq&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;map&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;setid&quot;</span><span class="p">:</span> <span class="s2">&quot;ob56ua4ztunqeh7iw6ywg2ntum&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;navsatfix&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;setid&quot;</span><span class="p">:</span> <span class="s2">&quot;g5nnjxaejquqrph6dnsencj2mi&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;odom&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;setid&quot;</span><span class="p">:</span> <span class="s2">&quot;gl5zdundbwwsr2qhduous5324y&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;setid&quot;</span><span class="p">:</span> <span class="s2">&quot;o6yufr25xqhx7nz7tljdr4ogaa&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">5</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The results can be filtered using the <code class="docutils literal notranslate"><span class="pre">filters</span></code> key. Its value is a list of filter objects to apply. Each filter object consists at least of an operator <code class="docutils literal notranslate"><span class="pre">op</span></code>. Most operators are applied to a field <code class="docutils literal notranslate"><span class="pre">name</span></code> and work with a value <code class="docutils literal notranslate"><span class="pre">value</span></code>. The following query payload gets the dataset where the field <code class="docutils literal notranslate"><span class="pre">id</span></code> equals 3:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;filters&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;navsatfix&quot;</span><span class="p">,</span>
+        <span class="o">//</span> <span class="n">other</span> <span class="n">attrs</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The filters list can contain multiple filter objects and by default the results have to match all. The following operators work on fields and values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">between</span></code>: field is in the range of value ([low, high])</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endswith</span></code>: string field ends with value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eq</span></code>: field equal to value, for comparison to <code class="docutils literal notranslate"><span class="pre">null</span></code> use <code class="docutils literal notranslate"><span class="pre">is</span></code> (see below)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gt</span></code>: field greater than value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gte</span></code>: field greater equal value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">in</span></code>: field is contained in list of values [val1, val2, …]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is</span></code>: field is value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isnot</span></code>: field is not value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lt</span></code>: field is lower than value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lte</span></code>: field is lower equal value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ne</span></code>: field is not equal value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notbetween</span></code>: field is not in the range of value ([low, high])</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notin</span></code>: field is not one of the values in value [val1, val2, …]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startswith</span></code>: string field starts with value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">substring</span></code>: value is a substring of field</p></li>
+</ul>
+<p>There are three additional operators that implement boolean logic to combine filters. Each of the operators works without a field name and operates on value only:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">not</span></code>: Negates val which is another filter object itself</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">and</span></code>: “ANDs” all filter objects in a value list</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">or</span></code>: “ORs” all filter objects in a value list</p></li>
+</ul>
+<p>Filters can also operate on related tables by using a dotted path notation in field names. To search for datasets tagged <code class="docutils literal notranslate"><span class="pre">important</span></code> use:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;filters&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;tags.value&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;important&quot;</span><span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;laser&quot;</span><span class="p">,</span>
+        <span class="o">//</span> <span class="n">other</span> <span class="n">attrs</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A query can also embed related models into the response by setting its corresponding <code class="docutils literal notranslate"><span class="pre">attrs</span></code> key similarly to regular model fields. Set the value to <code class="docutils literal notranslate"><span class="pre">true</span></code> to embed complete objects or set the value to an object that shall be used as <code class="docutils literal notranslate"><span class="pre">attrs</span></code> for the related model:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;attrs&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">},</span>  <span class="c1"># populate tag objects only with value field</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;filters&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;tags.value&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;important&quot;</span><span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;laser&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;tag&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;autonomous&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;important&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The API supports sorting and paging. To sort the results use the option <code class="docutils literal notranslate"><span class="pre">order</span></code> with a value of <code class="docutils literal notranslate"><span class="pre">[&quot;fieldname&quot;</span> <span class="pre">&quot;ORDER&quot;]</span></code> with ORDER being either <code class="docutils literal notranslate"><span class="pre">ASC</span></code> or <code class="docutils literal notranslate"><span class="pre">DESC</span></code>. Paging is achieved with the <code class="docutils literal notranslate"><span class="pre">limit</span></code> and <code class="docutils literal notranslate"><span class="pre">offset</span></code> integer options. An example query payload would look like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;setid&quot;</span><span class="p">,</span> <span class="s2">&quot;ASC&quot;</span><span class="p">],</span>  <span class="c1"># sort ascending by setid</span>
+  <span class="s2">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>                 <span class="c1"># limit number of results to 5</span>
+  <span class="s2">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>               <span class="c1"># skip the first 10 results</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listing-deprecated">
+<h2>Listing (deprecated)<a class="headerlink" href="#listing-deprecated" title="Permalink to this headline">¶</a></h2>
+<p>MARV knows two kind of ids for dataset.</p>
+<ol class="arabic simple">
+<li><p>setid; a random 128 bit integer, base32 encoded without padding chars, e.g. <code class="docutils literal notranslate"><span class="pre">h27zmwsdzcnmu6kqncwdhhvrva</span></code></p></li>
+<li><p>id; id of the dataset within the database, e.g. <code class="docutils literal notranslate"><span class="pre">42</span></code></p></li>
+</ol>
+<p>While the set id is unique for all times and across sites, for many interactions it is more efficient to use the database id.</p>
+<p>Fetch id of all datasets:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl <span class="nv">$MARV_API</span>/collection <span class="p">|</span>jq <span class="s1">&#39;.listing.widget.data.rows[] | .id&#39;</span>
+</pre></div>
+</div>
+<p>And likewise for setid:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl <span class="nv">$MARV_API</span>/collection <span class="p">|</span>jq <span class="s1">&#39;.listing.widget.data.rows[] | .setid&#39;</span>
+</pre></div>
+</div>
+<div class="section" id="filter">
+<span id="httpapi-filter"></span><h3>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -G <span class="se">\</span>
+  --data-urlencode <span class="se">\</span>
+  <span class="s1">&#39;filter={&quot;name&quot;: {&quot;op&quot;: &quot;substring&quot;, &quot;val&quot;: &quot;leica&quot;}}&#39;</span> <span class="se">\</span>
+  <span class="nv">$MARV_API</span>/collection <span class="se">\</span>
+  <span class="p">|</span>jq <span class="s1">&#39;.listing.widget.data.rows[] | .setid&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -G <span class="se">\</span>
+  --data-urlencode <span class="se">\</span>
+  <span class="s1">&#39;filter={&quot;tags&quot;: {&quot;op&quot;: &quot;all&quot;, &quot;val&quot;: [&quot;bar&quot;, &quot;foo&quot;]}}&#39;</span> <span class="se">\</span>
+  <span class="nv">$MARV_API</span>/collection <span class="se">\</span>
+  <span class="p">|</span>jq <span class="s1">&#39;.listing.widget.data.rows[] | .setid&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -G <span class="se">\</span>
+  --data-urlencode <span class="se">\</span>
+  <span class="s1">&#39;filter={&quot;tags&quot;: {&quot;op&quot;: &quot;any&quot;, &quot;val&quot;: [&quot;bar&quot;, &quot;foo&quot;]}}&#39;</span> <span class="se">\</span>
+  <span class="nv">$MARV_API</span>/collection <span class="se">\</span>
+  <span class="p">|</span>jq <span class="s1">&#39;.listing.widget.data.rows[] | .setid&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="list-of-dataset-files">
+<h2>List of dataset files<a class="headerlink" href="#list-of-dataset-files" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST <span class="se">\</span>
+     -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;[42]&quot;</span> <span class="se">\</span>
+     <span class="nv">$MARV_API</span>/file-list
+</pre></div>
+</div>
+<p>output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;paths&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;/scanroot/scan_odom_map_test.bag&quot;</span><span class="p">,</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;urls&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;dataset/h27zmwsdzcnmu6kqncwdhhvrva/0&quot;</span><span class="p">,</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download">
+<h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+<p>First file of dataset</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -OJ <span class="nv">$MARV_API</span>/dataset/h27zmwsdzcnmu6kqncwdhhvrva/0
+</pre></div>
+</div>
+</div>
+<div class="section" id="comment">
+<h2>Comment<a class="headerlink" href="#comment" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST <span class="se">\</span>
+     -H <span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span> <span class="se">\</span>
+     -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="se">\</span>
+     -d <span class="s1">&#39;{&quot;42&quot;: {&quot;add&quot;: [&quot;comment 1&quot;, &quot;comment 2&quot;]}}&#39;</span> <span class="se">\</span>
+     <span class="nv">$MARV_API</span>/comment
+</pre></div>
+</div>
+<p>output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete">
+<h2>Delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X DELETE <span class="se">\</span>
+     -H <span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span> <span class="se">\</span>
+     -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;[1,2]&quot;</span> <span class="se">\</span>
+     <span class="nv">$MARV_API</span>/dataset
+</pre></div>
+</div>
+<p>output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tag">
+<span id="httpapi-tag"></span><h2>Tag<a class="headerlink" href="#tag" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST <span class="se">\</span>
+     -H <span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span> <span class="se">\</span>
+     -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="se">\</span>
+     -d <span class="s1">&#39;{&quot;bags&quot;: {&quot;add&quot;: {&quot;foo&quot;: [42]}, &quot;remove&quot;: {&quot;bar&quot;: [17,42]}}}&#39;</span> <span class="se">\</span>
+     <span class="nv">$MARV_API</span>/tag
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="trigger-actions-ee">
+<span id="httpapi-trigger"></span><h2>Trigger Actions (EE)<a class="headerlink" href="#trigger-actions-ee" title="Permalink to this headline">¶</a></h2>
+<p>The trigger API allows to schedule actions. In case no action is running a triggered action will start immediately, otherwise right after the running action has finished. In both cases the HTTP request will remain open until the action has finished. There are two actions <code class="docutils literal notranslate"><span class="pre">scan</span></code> and <code class="docutils literal notranslate"><span class="pre">run</span></code>, which wrap the corresponding CLI commands and return a mapping with <code class="docutils literal notranslate"><span class="pre">returncode</span></code>, <code class="docutils literal notranslate"><span class="pre">stdout</span></code>, and <code class="docutils literal notranslate"><span class="pre">stderr</span></code>; <code class="docutils literal notranslate"><span class="pre">returncode</span> <span class="pre">==</span> <span class="pre">0</span></code> means success. In case of server-side errors only an <code class="docutils literal notranslate"><span class="pre">error</span></code> field is returned.</p>
+<div class="section" id="scan">
+<h3>Scan<a class="headerlink" href="#scan" title="Permalink to this headline">¶</a></h3>
+<p>The scan action schedules a scan of all configured scanroots.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST <span class="se">\</span>
+     -H <span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span> <span class="se">\</span>
+     -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="se">\</span>
+     -d <span class="s1">&#39;{&quot;action&quot;: &quot;scan&quot;}&#39;</span> <span class="se">\</span>
+     <span class="nv">$MARV_API</span>/v1/trigger
+</pre></div>
+</div>
+<p>Example output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;returncode&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;stdout&quot;</span><span class="p">:</span> <span class="s2">&quot;...&quot;</span><span class="p">,</span> <span class="s2">&quot;stderr&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">stdout</span></code> field will contain the same MARV log messages a scan on the CLI would produce.</p>
+</div>
+<div class="section" id="run">
+<h3>Run<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h3>
+<p>The run action schedules a run of all configured nodes on a specific dataset.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST <span class="se">\</span>
+     -H <span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span> <span class="se">\</span>
+     -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="se">\</span>
+     -d <span class="s1">&#39;{&quot;action&quot;: &quot;run&quot;, &quot;dataset&quot;: &quot;xy5ba2hy2hr5453m6ftokk6kdq&quot;}&#39;</span> <span class="se">\</span>
+     <span class="nv">$MARV_API</span>/v1/trigger
+</pre></div>
+</div>
+<p>Example output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;returncode&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;stdout&quot;</span><span class="p">:</span> <span class="s2">&quot;...&quot;</span><span class="p">,</span> <span class="s2">&quot;stderr&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>If all nodes have already been run on this dataset the action does nothing and returns immediately indicating successful completion.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MARV Robotics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/setup-basic-site.html">Tutorial: Setup basic site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/write-your-own.html">Tutorial: Write your own nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="patterns.html">Patterns and known issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="views.html">Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scan.html">Scanner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="widgets.html">Widgets</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">HTTP API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#auth">Auth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#query">Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listing-deprecated">Listing (deprecated)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-of-dataset-files">List of dataset files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comment">Comment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete">Delete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tag">Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trigger-actions-ee">Trigger Actions (EE)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="upload.html">Upload (EE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migrate/index.html">Migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/marv.html">marv</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="widgets.html" title="previous chapter">Widgets</a></li>
+      <li>Next: <a href="upload.html" title="next chapter">Upload (EE)</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2019  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/httpapi.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

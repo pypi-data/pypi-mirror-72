@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Docker &#8212; MARV Robotics 20.06.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_paramlinks.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Native" href="native.html" />
+    <link rel="prev" title="Installation" href="index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="docker">
+<span id="install-docker"></span><h1>Docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.docker.com/">Docker</a> version 18.03.1-ce or greater, it might work with older versions as well.</p></li>
+<li><p>Checkout of MARV Robotics Enterprise Edition or <a class="reference external" href="https://github.com/ternaris/marv-robotics">Community Edition</a></p></li>
+</ul>
+</div>
+<div class="section" id="building-or-configure-image-used">
+<h2>Building or configure image used<a class="headerlink" href="#building-or-configure-image-used" title="Permalink to this headline">¶</a></h2>
+<p>Users of the Enterprise Edition build their own image based on their custom release of MARV Robotics EE. Users of the Community Edition can use the published MARV Robotics CE Image <code class="docutils literal notranslate"><span class="pre">ternaris/marv-robotics</span></code> or build their own.</p>
+<div class="section" id="enterprise-edition-and-custom-image">
+<h3>Enterprise Edition and custom image<a class="headerlink" href="#enterprise-edition-and-custom-image" title="Permalink to this headline">¶</a></h3>
+<p>Building your own image is as simple as running <code class="docutils literal notranslate"><span class="pre">./scripts/build-image</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./scripts/build-image
+...
+Successfully tagged marvee-marvhub:latest
+</pre></div>
+</div>
+<p>The basename of your checkout of MARV Robotics will be used as image name and subsequently also as container name. That way it is possible to have multiple containers based on different images running side-by-side.</p>
+</div>
+<div class="section" id="marv-user-uid-and-gid">
+<h3>Marv user uid and gid<a class="headerlink" href="#marv-user-uid-and-gid" title="Permalink to this headline">¶</a></h3>
+<p>If the primary uid and gid of the user you are using to start the docker container is not 1000, you need to build a custom image with adjusted uid and gid.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./scripts/build-image --build-arg MARV_UID=1234 --build-arg MARV_GID=5678
+</pre></div>
+</div>
+<p>Failure to do so can lead to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Errno</span> <span class="mi">13</span><span class="p">]</span> <span class="n">Permission</span> <span class="n">denied</span><span class="p">:</span> <span class="s1">&#39;/home/marv/site/sessionkey&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="community-edition-official-marv-robotics-ce-image">
+<h3>Community Edition: Official MARV Robotics CE Image<a class="headerlink" href="#community-edition-official-marv-robotics-ce-image" title="Permalink to this headline">¶</a></h3>
+<p>In order to use the official MARV Robotics Community Edition image instead, the scripts contained in the repository have to be instructed accordingly.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd marv-robotics
+$ echo ternaris/marv-robotics &gt; .image-name
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="start-container">
+<h2>Start container<a class="headerlink" href="#start-container" title="Permalink to this headline">¶</a></h2>
+<p>Run container provides instructions for the basic use case.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./scripts/run-container
+
+Usage: run-container SITE SCANROOT [EXTRA_OPTS ...]
+
+The site is expected to contain marv.conf and gunicorn_cfg.py.
+It is mounted inside the container at /home/marv/site.
+
+The scanroot contains the log files for one or more collections.
+It is mounted read-only into the container at /scanroot.
+
+All additional arguments are passed as options to docker run.
+</pre></div>
+</div>
+<p>Without further arguments it will run the container in the foreground, which is good for development where you want to kill and recreate it occasionally.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./scripts/run-container sites/example path/to/scanroot
+</pre></div>
+</div>
+<p>Use <code class="docutils literal notranslate"><span class="pre">--detach</span></code> to start the container in the background.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./scripts/run-container sites/example path/to/scanroot --detach
+</pre></div>
+</div>
+<p>Either way, you can enter the running container.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./scripts/enter-container
+marv@ce:~$ marv --help
+</pre></div>
+</div>
+<p>The scanroot is mounted read-only as <code class="docutils literal notranslate"><span class="pre">/scanroot</span></code> inside the container. Be aware of that when creating your own configuration.</p>
+</div>
+<div class="section" id="adding-your-own-code">
+<h2>Adding your own code<a class="headerlink" href="#adding-your-own-code" title="Permalink to this headline">¶</a></h2>
+<p>To add your own code, create a python package in <code class="docutils literal notranslate"><span class="pre">./code</span></code> next to the marv packages. When building an image, all of the code is copied into the image and installed automatically. Especially during development, you don’t want to rebuild all the time.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MARV_INIT</span><span class="o">=</span><span class="mi">1</span> <span class="n">DEVELOP</span><span class="o">=</span><span class="mi">1</span> <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">container</span> <span class="n">sites</span><span class="o">/</span><span class="n">example</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">scanroot</span>
+</pre></div>
+</div>
+<p>In general changes you make to your code will be effective immediately. However, after adding the package, when making changes to its <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, and when making changes affecting the web serving part of marv, the container needs to be restarted. As a rule of thumb: when you make changes to the config file, you want to restart using <code class="docutils literal notranslate"><span class="pre">MARV_INIT=1</span></code>, while making changes to your node code does not need a restart.</p>
+</div>
+<div class="section" id="serve-documentation">
+<h2>Serve documentation<a class="headerlink" href="#serve-documentation" title="Permalink to this headline">¶</a></h2>
+<p>While the container is running MARV Robotics should be available at: <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
+<p>And it’s documentation is linked in the footer and served at: <a class="reference external" href="http://localhost:8000/docs/">http://localhost:8000/docs/</a></p>
+<p>Let’s switch to your <a class="reference external" href="http://localhost:8000/docs/install/docker.html#serve-documentation">locally served documentation</a>.</p>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Using tooling from the MARV Robotics repository you created your own docker image or used the official CE image and started a docker container running marv.</p>
+<p>Now you are ready to <a class="reference external" href="../tutorial/setup-basic-site.html">setup a basic site</a>.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">MARV Robotics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="native.html">Native</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/setup-basic-site.html">Tutorial: Setup basic site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/write-your-own.html">Tutorial: Write your own nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../patterns.html">Patterns and known issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../debug.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../views.html">Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scan.html">Scanner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nodes.html">Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../widgets.html">Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../httpapi.html">HTTP API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upload.html">Upload (EE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy.html">Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migrate/index.html">Migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CHANGES.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/marv.html">marv</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Installation</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Installation</a></li>
+      <li>Next: <a href="native.html" title="next chapter">Native</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2019  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/install/docker.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>marv_robotics.trajectory &#8212; MARV Robotics 20.06.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_paramlinks.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for marv_robotics.trajectory</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright 2016 - 2018  Ternaris.</span>
+<span class="c1"># SPDX-License-Identifier: AGPL-3.0-only</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">marv_api</span> <span class="k">as</span> <span class="nn">marv</span>
+<span class="kn">from</span> <span class="nn">marv.types</span> <span class="kn">import</span> <span class="n">GeoJson</span>
+<span class="kn">from</span> <span class="nn">.bag</span> <span class="kn">import</span> <span class="n">get_message_type</span><span class="p">,</span> <span class="n">messages</span>
+
+
+<div class="viewcode-block" id="navsatfix"><a class="viewcode-back" href="../../nodes.html#marv_robotics.trajectory.navsatfix">[docs]</a><span class="nd">@marv</span><span class="o">.</span><span class="n">node</span><span class="p">()</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;stream&#39;</span><span class="p">,</span> <span class="n">foreach</span><span class="o">=</span><span class="n">marv</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">messages</span><span class="p">,</span> <span class="s1">&#39;*:sensor_msgs/NavSatFix&#39;</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">navsatfix</span><span class="p">(</span><span class="n">stream</span><span class="p">):</span>
+    <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">set_header</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">stream</span><span class="o">.</span><span class="n">topic</span><span class="p">)</span>
+    <span class="n">pytype</span> <span class="o">=</span> <span class="n">get_message_type</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+    <span class="n">rosmsg</span> <span class="o">=</span> <span class="n">pytype</span><span class="p">()</span>
+    <span class="n">erroneous</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">msg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">rosmsg</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">rosmsg</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">)</span> <span class="ow">or</span> \
+           <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">rosmsg</span><span class="o">.</span><span class="n">longitude</span><span class="p">)</span> <span class="ow">or</span> \
+           <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">rosmsg</span><span class="o">.</span><span class="n">latitude</span><span class="p">)</span> <span class="ow">or</span> \
+           <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">rosmsg</span><span class="o">.</span><span class="n">altitude</span><span class="p">):</span>
+            <span class="n">erroneous</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">continue</span>
+        <span class="c1"># TODO: namedtuple?</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="n">rosmsg</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">status</span><span class="p">,</span>
+               <span class="s1">&#39;lon&#39;</span><span class="p">:</span> <span class="n">rosmsg</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span>
+               <span class="s1">&#39;lat&#39;</span><span class="p">:</span> <span class="n">rosmsg</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span>
+               <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="n">rosmsg</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">stamp</span><span class="o">.</span><span class="n">to_time</span><span class="p">()}</span>
+        <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">erroneous</span><span class="p">:</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;skipped </span><span class="si">%d</span><span class="s1"> erroneous messages&#39;</span><span class="p">,</span> <span class="n">erroneous</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_create_feature</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">quality</span><span class="p">,</span> <span class="n">timestamps</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">coords</span> <span class="o">=</span> <span class="n">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">geotype</span> <span class="o">=</span> <span class="s1">&#39;point&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">geotype</span> <span class="o">=</span> <span class="s1">&#39;line_string&#39;</span>
+
+    <span class="n">color</span> <span class="o">=</span> <span class="p">((</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span>  <span class="c1"># rgba</span>
+             <span class="p">(</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span>
+             <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span>
+             <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">))[</span><span class="n">quality</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;properties&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="n">color</span><span class="p">,</span>
+            <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mf">4.</span><span class="p">,</span>
+            <span class="s1">&#39;timestamps&#39;</span><span class="p">:</span> <span class="n">timestamps</span><span class="p">,</span>
+            <span class="s1">&#39;markervertices&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">c</span> <span class="o">*</span> <span class="mi">30</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="o">.</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="o">-.</span><span class="mi">3</span><span class="p">)]},</span>
+        <span class="s1">&#39;geometry&#39;</span><span class="p">:</span> <span class="p">{</span><span class="n">geotype</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;coordinates&#39;</span><span class="p">:</span> <span class="n">coords</span><span class="p">}},</span>
+    <span class="p">}</span>
+
+
+<div class="viewcode-block" id="trajectory"><a class="viewcode-back" href="../../nodes.html#marv_robotics.trajectory.trajectory">[docs]</a><span class="nd">@marv</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">GeoJson</span><span class="p">)</span>
+<span class="nd">@marv</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s1">&#39;navsatfixes&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">navsatfix</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">trajectory</span><span class="p">(</span><span class="n">navsatfixes</span><span class="p">):</span>
+    <span class="c1"># Only one topic for now</span>
+    <span class="n">navsatfix</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">navsatfixes</span><span class="p">)</span>  <span class="c1"># pylint: disable=redefined-outer-name</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">navsatfix</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">marv</span><span class="o">.</span><span class="n">Abort</span><span class="p">()</span>
+    <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">set_header</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">navsatfix</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">quality</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">coords</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">timestamps</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">navsatfix</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">msg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">break</span>
+
+        <span class="n">dt</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">]</span>  <span class="c1"># pylint: disable=invalid-name</span>
+        <span class="n">timestamps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">dt</span> <span class="o">*</span> <span class="mf">1e9</span><span class="p">))</span>
+
+        <span class="c1"># Whether to output an augmented fix is determined by both the fix</span>
+        <span class="c1"># type and the last time differential corrections were received.  A</span>
+        <span class="c1"># fix is valid when status &gt;= STATUS_FIX.</span>
+        <span class="c1"># STATUS_NO_FIX =  -1 -&gt; unable to fix position       -&gt; color id 0 = red</span>
+        <span class="c1"># STATUS_FIX =      0 -&gt; unaugmented fix              -&gt; color id 1 = orange</span>
+        <span class="c1"># STATUS_SBAS_FIX = 1 -&gt; satellite-based augmentation -&gt; color id 2 = blue</span>
+        <span class="c1"># STATUS_GBAS_FIX = 2 -&gt; ground-based augmentation    -&gt; color id 3 = green</span>
+        <span class="c1">#                     -&gt; unknown status id            -&gt; color id 4 = black</span>
+        <span class="k">if</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">new_quality</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_quality</span> <span class="o">=</span> <span class="mi">4</span>
+
+        <span class="c1"># start new feature if quality changed</span>
+        <span class="k">if</span> <span class="n">quality</span> <span class="o">!=</span> <span class="n">new_quality</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">coords</span><span class="p">:</span>
+                <span class="n">features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_create_feature</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">quality</span><span class="p">,</span> <span class="n">timestamps</span><span class="p">))</span>
+            <span class="n">quality</span> <span class="o">=</span> <span class="n">new_quality</span>
+            <span class="n">coords</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">timestamps</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">coords</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">msg</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">],</span> <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]))</span>
+
+    <span class="k">if</span> <span class="n">coords</span><span class="p">:</span>
+        <span class="n">features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_create_feature</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">quality</span><span class="p">,</span> <span class="n">timestamps</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">features</span><span class="p">:</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;feature_collection&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="n">features</span><span class="p">}}</span>
+        <span class="k">yield</span> <span class="n">marv</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">out</span><span class="p">)</span></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">MARV Robotics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/setup-basic-site.html">Tutorial: Setup basic site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/write-your-own.html">Tutorial: Write your own nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../patterns.html">Patterns and known issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../debug.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../views.html">Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scan.html">Scanner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nodes.html">Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../widgets.html">Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../httpapi.html">HTTP API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../upload.html">Upload (EE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deploy.html">Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrate/index.html">Migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGES.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/marv.html">marv</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2019  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

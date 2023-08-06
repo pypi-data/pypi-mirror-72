@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Views &#8212; MARV Robotics 20.06.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_paramlinks.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="shortcut icon" href="_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Configuration" href="config.html" />
+    <link rel="prev" title="Debugging" href="debug.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="views">
+<span id="id1"></span><h1>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h1>
+<p>The frontend shipping with marv features:</p>
+<ul class="simple">
+<li><p>a listing view served at the root of the application,</p></li>
+<li><p>a detail view to introspect individual data sets</p></li>
+</ul>
+<p>Listing and detail view are specific to the selected collection. The displayed collection is selected via a drop-down in the header.</p>
+<div class="section" id="listing">
+<h2>Listing<a class="headerlink" href="#listing" title="Permalink to this headline">¶</a></h2>
+<p>The listing view consists of the following sections:</p>
+<ul class="simple">
+<li><p>A filter section that determines the data sets loaded from the server into the listing view (see <a class="reference internal" href="config.html#cfg-c-filters"><span class="std std-ref">filters</span></a>).</p></li>
+<li><p>A summary on the loaded data sets (see <a class="reference internal" href="config.html#cfg-c-listing-summary"><span class="std std-ref">listing_summary</span></a>).</p></li>
+<li><p>A set of fancy filter widgets to refine the search on loaded data sets (EE only). For the default set of filter widgets to appear all of the following <a class="reference internal" href="config.html#cfg-c-listing-columns"><span class="std std-ref">listing_columns</span></a> need to be available: <code class="docutils literal notranslate"><span class="pre">size</span></code>, <code class="docutils literal notranslate"><span class="pre">added</span></code>, <code class="docutils literal notranslate"><span class="pre">start_time</span></code>, <code class="docutils literal notranslate"><span class="pre">end_time</span></code>, and <code class="docutils literal notranslate"><span class="pre">duration</span></code>.</p></li>
+<li><p>A table listing the matching data sets (see <a class="reference internal" href="config.html#cfg-c-listing-columns"><span class="std std-ref">listing_columns</span></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="detail">
+<h2>Detail<a class="headerlink" href="#detail" title="Permalink to this headline">¶</a></h2>
+<p>In order to introspect individual data sets, the first listing column is usually configured to route to the detail view.</p>
+<p>The detail view consists of <a class="reference internal" href="config.html#cfg-c-detail-sections"><span class="std std-ref">detail_sections</span></a> organized as tabs. The first section is special in that it always exists. It displays a list of <a class="reference internal" href="config.html#cfg-c-detail-summary-widgets"><span class="std std-ref">detail_summary_widgets</span></a> and widgets for tagging and commenting.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MARV Robotics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/setup-basic-site.html">Tutorial: Setup basic site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/write-your-own.html">Tutorial: Write your own nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="patterns.html">Patterns and known issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Views</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#listing">Listing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#detail">Detail</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scan.html">Scanner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="widgets.html">Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="httpapi.html">HTTP API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload.html">Upload (EE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migrate/index.html">Migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/marv.html">marv</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="debug.html" title="previous chapter">Debugging</a></li>
+      <li>Next: <a href="config.html" title="next chapter">Configuration</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2019  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/views.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Native &#8212; MARV Robotics 20.06.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_paramlinks.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tutorial: Setup basic site" href="../tutorial/setup-basic-site.html" />
+    <link rel="prev" title="Docker" href="docker.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="native">
+<span id="install-native"></span><h1>Native<a class="headerlink" href="#native" title="Permalink to this headline">¶</a></h1>
+<p>MARV Robotics is implemented in Python using the MARV framework. Most of its Python dependencies will be installed via Python’s package management tools. Apart from these, ROS and some system libraries need to be installed, as outlined in the following section.</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Checkout of MARV Robotics Enterprise Edition or <a class="reference external" href="https://github.com/ternaris/marv-robotics">Community Edition</a></p></li>
+</ul>
+</div>
+<div class="section" id="system-dependenices">
+<h2>System dependenices<a class="headerlink" href="#system-dependenices" title="Permalink to this headline">¶</a></h2>
+<p>MARV Robotics needs Python 3.7 and ships all components to open bag files and process ROS messages. If you need any ROS libraries for your nodes, please let us know if we can assist making them available for Python 3.7.</p>
+<div class="section" id="ubuntu-bionic">
+<h3>Ubuntu bionic<a class="headerlink" href="#ubuntu-bionic" title="Permalink to this headline">¶</a></h3>
+<p>In general, MARV Robotics works on any Linux system. For Ubuntu bionic the following will install the necessary system dependencies.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> apt-get install capnproto <span class="se">\</span>
+                  curl <span class="se">\</span>
+                  ffmpeg <span class="se">\</span>
+                  libcapnp-dev <span class="se">\</span>
+                  libffi-dev <span class="se">\</span>
+                  libfreetype6-dev <span class="se">\</span>
+                  libjpeg-dev <span class="se">\</span>
+                  liblz4-dev <span class="se">\</span>
+                  libpng-dev <span class="se">\</span>
+                  libssl-dev <span class="se">\</span>
+                  libz-dev <span class="se">\</span>
+                  python3.7 <span class="se">\</span>
+                  python3.7-dev <span class="se">\</span>
+                  python3.7-venv
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="marv-robotics">
+<h2>MARV Robotics<a class="headerlink" href="#marv-robotics" title="Permalink to this headline">¶</a></h2>
+<p>MARV Robotics is a Python application <a class="reference external" href="https://pypi.org/project/marv-robotics/">published on PyPI</a> and a simple <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">marv-robotics</span></code> should get you going. However, for increased reproducibility of installations we use and recommend a virtual python environment and a set of frozen requirements.</p>
+<p>For the following commands we assume you are within the directory of your checkout of MARV Robotics.</p>
+<p>Setup MARV Robotics in Python virtual environment and activate it:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> ./scripts/setup-venv requirements/marv-robotics.txt venv
+<span class="gp">$</span> <span class="nb">source</span> venv/bin/activate
+<span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$</span> marv --help
+</pre></div>
+</div>
+<p>Et voilà, marv is successfully installed. The <code class="docutils literal notranslate"><span class="pre">(venv)</span></code> prefix indicates the activated virtualenv. In the following sections we assume that your virtualenv is activated. If <code class="docutils literal notranslate"><span class="pre">marv</span></code> cannot be found, chances are that the virtualenv containing MARV Robotics is not activated.  For more information see <a class="reference external" href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">Virtual Environments</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>MARV Robotics does not need write access to your bag files. As a safety measure install and run MARV as a user having only read-only access to your bag files.</p>
+</div>
+</div>
+<div class="section" id="build-and-serve-documentation">
+<h2>Build and serve documentation<a class="headerlink" href="#build-and-serve-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Let’s dedicate a terminal to build the documentation and to start a small webserver to serve the documentation; actually, to serve MARV Robotics already, which contains the documentation.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$</span> ./scripts/build-docs
+<span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$</span> marv --config tutorial/docs-only-site/marv.conf serve
+</pre></div>
+</div>
+<p>Now you have an instance of MARV running at: <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
+<p>It’s documentation is linked in the footer and served at: <a class="reference external" href="http://localhost:8000/docs/">http://localhost:8000/docs/</a></p>
+<p>Let’s switch to your <a class="reference external" href="http://localhost:8000/docs/install/native.html#build-and-serve-documentation">locally served documentation</a>.</p>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Based on an existing ROS installation, you installed some system dependencies, created a virtual python environment, installed MARV Robotics into it, and started a webserver with marv and its documentation:</p>
+<p>Now you are ready to <a class="reference external" href="../tutorial/setup-basic-site.html">setup a basic site</a>.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">MARV Robotics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="docker.html">Docker</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Native</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/setup-basic-site.html">Tutorial: Setup basic site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/write-your-own.html">Tutorial: Write your own nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../patterns.html">Patterns and known issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../debug.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../views.html">Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scan.html">Scanner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nodes.html">Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../widgets.html">Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../httpapi.html">HTTP API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upload.html">Upload (EE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy.html">Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migrate/index.html">Migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CHANGES.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/marv.html">marv</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Installation</a><ul>
+      <li>Previous: <a href="docker.html" title="previous chapter">Docker</a></li>
+      <li>Next: <a href="../tutorial/setup-basic-site.html" title="next chapter">Tutorial: Setup basic site</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2019  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/install/native.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

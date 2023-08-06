@@ -1,0 +1,8 @@
+-r marv.in
+lz4
+matplotlib
+pillow<7.0.0  # leads to matplotlib not supporting jpg
+pycryptodome
+python-gnupg
+pyyaml
+utm

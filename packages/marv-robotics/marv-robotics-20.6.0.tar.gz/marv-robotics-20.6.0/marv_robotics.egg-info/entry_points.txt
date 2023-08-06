@@ -1,0 +1,3 @@
+[marv_webapi]
+robotics = marv_robotics.webapi:robotics
+

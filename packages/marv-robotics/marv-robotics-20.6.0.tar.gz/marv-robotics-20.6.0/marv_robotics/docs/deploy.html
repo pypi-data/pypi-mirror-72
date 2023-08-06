@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Deployment &#8212; MARV Robotics 20.06.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_paramlinks.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="shortcut icon" href="_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Maintenance" href="maintenance.html" />
+    <link rel="prev" title="Upload (EE)" href="upload.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="deployment">
+<span id="deploy"></span><h1>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h1>
+<p>MARV’s frontend uses a service worker, which requires HTTPS for non-localhost access. You can either use a self-signed certificate or Let’s Encrypt. The latter only if your webserver is accessible from the internet.</p>
+<p>For production usage we <strong>strongly recommend</strong> to use nginx as a reverse-proxy. The increased setup overhead is justified by greatly increased performance for serving large files.</p>
+<p>Two deployments are described here in short:</p>
+<ul class="simple">
+<li><p>NGINX as a reverse proxy with a Let’s Encrypt certificate (recommended)</p></li>
+<li><p>Gunicorn with a self-signed certificate (development only)</p></li>
+</ul>
+<div class="section" id="gunicorn-behind-nginx">
+<span id="deploy-nginx"></span><h2>Gunicorn behind NGINX<a class="headerlink" href="#gunicorn-behind-nginx" title="Permalink to this headline">¶</a></h2>
+<p>References:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://certbot.eff.org/all-instructions/">https://certbot.eff.org/all-instructions/</a></p></li>
+<li><p><a class="reference external" href="https://aiohttp.readthedocs.io/en/stable/deployment.html#nginx-gunicorn">https://aiohttp.readthedocs.io/en/stable/deployment.html#nginx-gunicorn</a></p></li>
+</ul>
+<p>When working behind a revese proxy MARV’s default Gunicorn config will work without change.</p>
+<div class="section" id="nginx-config">
+<h3>nginx config<a class="headerlink" href="#nginx-config" title="Permalink to this headline">¶</a></h3>
+<p>Nginx allows marv to offload serving data from disk which is especially useful for large files. Adjust the paths of the nested internal location block to point to your store, within the docker container and outside of the docker container, under the assumption, that nginx is running directly on your host system. In case you are running marv in a virtual environment also directly on the host system, the paths are identical.</p>
+<div class="highlight-nginx notranslate"><div class="highlight"><pre><span></span><span class="k">server</span> <span class="p">{</span>
+  <span class="kn">server_name</span> <span class="s">example.com</span><span class="p">;</span>
+  <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+  <span class="kn">return</span> <span class="mi">301</span> <span class="s">https://</span><span class="nv">$host$request_uri</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">server</span> <span class="p">{</span>
+  <span class="kn">server_name</span> <span class="s">example.com</span><span class="p">;</span>
+  <span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span> <span class="s">http2</span><span class="p">;</span>
+
+  <span class="kn">include</span> <span class="s">/usr/lib/python3.7/site-packages/certbot_nginx/tls_configs/options-ssl-nginx.conf</span><span class="p">;</span>
+  <span class="kn">ssl_stapling_verify</span> <span class="no">on</span><span class="p">;</span>
+  <span class="kn">ssl_stapling</span> <span class="no">on</span><span class="p">;</span>
+
+  <span class="kn">ssl_trusted_certificate</span> <span class="s">/etc/letsencrypt/live/example.com/chain.pem</span><span class="p">;</span>
+  <span class="kn">ssl_certificate_key</span> <span class="s">/etc/letsencrypt/live/example.com/privkey.pem</span><span class="p">;</span>
+  <span class="kn">ssl_certificate</span> <span class="s">/etc/letsencrypt/live/example.com/fullchain.pem</span><span class="p">;</span>
+
+  <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+    <span class="kn">location</span> <span class="s">/docker/container/path/to/store</span> <span class="p">{</span>
+      <span class="kn">internal</span><span class="p">;</span>
+      <span class="kn">alias</span> <span class="s">/host/path/to/store</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kn">location</span> <span class="s">/scanroot</span> <span class="p">{</span>
+      <span class="kn">internal</span><span class="p">;</span>
+      <span class="kn">alias</span> <span class="s">/host/path/to/scanroot</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kn">client_max_body_size</span> <span class="mi">10m</span><span class="p">;</span>
+    <span class="kn">client_body_buffer_size</span> <span class="mi">128k</span><span class="p">;</span>
+    <span class="kn">proxy_set_header</span> <span class="s">Host</span> <span class="nv">$host</span><span class="p">;</span>
+    <span class="kn">proxy_set_header</span> <span class="s">X-Forwarded-For</span> <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+    <span class="kn">proxy_pass</span> <span class="n">127.0.0.1</span><span class="p">:</span><span class="mi">8000</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="kn">location</span> <span class="s">/other_instance</span> <span class="p">{</span>
+    <span class="kn">location</span> <span class="s">/other_instance/docker/container/path/to/store</span> <span class="p">{</span>
+      <span class="kn">internal</span><span class="p">;</span>
+      <span class="kn">alias</span> <span class="s">/host/path/to/store</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kn">location</span> <span class="s">/other_instance/scanroot</span> <span class="p">{</span>
+      <span class="kn">internal</span><span class="p">;</span>
+      <span class="kn">alias</span> <span class="s">/host/path/to/other/scanroot</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kn">client_max_body_size</span> <span class="mi">10m</span><span class="p">;</span>
+    <span class="kn">client_body_buffer_size</span> <span class="mi">128k</span><span class="p">;</span>
+    <span class="kn">proxy_set_header</span> <span class="s">Host</span> <span class="nv">$host</span><span class="p">;</span>
+    <span class="kn">proxy_set_header</span> <span class="s">X-Forwarded-For</span> <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+    <span class="kn">proxy_pass</span> <span class="n">127.0.0.1</span><span class="p">:</span><span class="mi">8000</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For a <strong>self-signed certificate</strong> (see steps below) remove <code class="docutils literal notranslate"><span class="pre">ssl_trusted_certificate</span></code> and adjust <code class="docutils literal notranslate"><span class="pre">ssl_certificate</span></code> and <code class="docutils literal notranslate"><span class="pre">ssl_certificate_key</span></code> accordingly.</p>
+</div>
+</div>
+<div class="section" id="gunicorn-with-self-signed-certificate">
+<span id="deploy-gunicorn"></span><h2>Gunicorn with self-signed certificate<a class="headerlink" href="#gunicorn-with-self-signed-certificate" title="Permalink to this headline">¶</a></h2>
+<p>Note: Use this mode of deploymeny for development setups only.</p>
+<p>Gunicorn supports HTTPS out of the box with the limitation that it cannot serve HTTP and HTTPS simultaneously. To activate HTTPS mode you only need to provide Gunicorn with a certificate and corresponding keyfile.</p>
+<div class="section" id="generate-self-signed-certificate">
+<h3>Generate self-signed certificate<a class="headerlink" href="#generate-self-signed-certificate" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">genrsa</span> <span class="o">-</span><span class="n">out</span> <span class="n">sites</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">gunicorn</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">key</span> <span class="mi">2048</span>
+<span class="n">openssl</span> <span class="n">req</span> <span class="o">-</span><span class="n">new</span> <span class="o">-</span><span class="n">key</span> <span class="n">sites</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">gunicorn</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">key</span> \
+    <span class="o">-</span><span class="n">out</span> <span class="n">sites</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">gunicorn</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">csr</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="n">req</span> <span class="o">-</span><span class="n">days</span> <span class="mi">3650</span> \
+    <span class="o">-</span><span class="ow">in</span> <span class="n">sites</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">gunicorn</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">csr</span> \
+    <span class="o">-</span><span class="n">signkey</span> <span class="n">sites</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">gunicorn</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">key</span> \
+    <span class="o">-</span><span class="n">out</span> <span class="n">sites</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">gunicorn</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">crt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pass-certificate-files-to-marv">
+<h3>Pass certificate files to MARV<a class="headerlink" href="#pass-certificate-files-to-marv" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">--keyfile</span></code> and <code class="docutils literal notranslate"><span class="pre">--certfile</span></code> options to enable the HTTPS mode. The following example makes MARV run on the default HTTPS port:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(venv) $ marv serve --port 443 --certfile gunicorn-ssl.crt --keyfile gunicorn-ssl.key
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MARV Robotics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/setup-basic-site.html">Tutorial: Setup basic site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/write-your-own.html">Tutorial: Write your own nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="patterns.html">Patterns and known issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="views.html">Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scan.html">Scanner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="widgets.html">Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="httpapi.html">HTTP API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload.html">Upload (EE)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gunicorn-behind-nginx">Gunicorn behind NGINX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gunicorn-with-self-signed-certificate">Gunicorn with self-signed certificate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migrate/index.html">Migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/marv.html">marv</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="upload.html" title="previous chapter">Upload (EE)</a></li>
+      <li>Next: <a href="maintenance.html" title="next chapter">Maintenance</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2019  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/deploy.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

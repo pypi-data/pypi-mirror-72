@@ -1,0 +1,9 @@
+marv==20.06.0
+lz4
+matplotlib
+pillow<7.0.0
+pycryptodome
+python-gnupg
+pyyaml
+utm
+marv-ludwig==20.06.0

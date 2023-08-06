@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Nodes &#8212; MARV Robotics 20.06.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_paramlinks.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="shortcut icon" href="_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Widgets" href="widgets.html" />
+    <link rel="prev" title="Scanner" href="scan.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="nodes">
+<span id="id1"></span><h1>Nodes<a class="headerlink" href="#nodes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="bag-metadata">
+<h2>Bag metadata<a class="headerlink" href="#bag-metadata" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="marv_robotics.bag.bagmeta">
+<code class="sig-prename descclassname">marv_robotics.bag.</code><code class="sig-name descname">bagmeta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/bag.html#bagmeta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.bag.bagmeta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract meta information from bag file.</p>
+<p>In case of multiple connections for one topic, they are assumed to
+be all of the same message type and either all be latching or none.</p>
+<p>A topic’s message type and latching mode, and a message type’s
+md5sum are assumed not to change across split bags.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ros-bag-messages">
+<h2>ROS bag messages<a class="headerlink" href="#ros-bag-messages" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="marv_robotics.bag.raw_messages">
+<code class="sig-prename descclassname">marv_robotics.bag.</code><code class="sig-name descname">raw_messages</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/bag.html#raw_messages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.bag.raw_messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stream messages from a set of bag files.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="marv_robotics.bag.get_message_type">
+<code class="sig-prename descclassname">marv_robotics.bag.</code><code class="sig-name descname">get_message_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stream</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/bag.html#get_message_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.bag.get_message_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>ROS message type from definition stored for stream.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="images">
+<h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="marv_robotics.cam.images">
+<code class="sig-prename descclassname">marv_robotics.cam.</code><code class="sig-name descname">images</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/cam.html#images"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.cam.images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract max_frames equidistantly spread images from each sensor_msgs/Image stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="marv_robotics.cam.images.params.stream"></span><strong>stream</strong><a class="paramlink headerlink reference internal" href="#marv_robotics.cam.images.params.stream">¶</a> – sensor_msgs/Image stream</p></li>
+<li><p><span class="target" id="marv_robotics.cam.images.params.image_width"></span><strong>image_width</strong><a class="paramlink headerlink reference internal" href="#marv_robotics.cam.images.params.image_width">¶</a> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Scale to image_width, keeping aspect ratio.</p></li>
+<li><p><span class="target" id="marv_robotics.cam.images.params.max_frames"></span><strong>max_frames</strong><a class="paramlink headerlink reference internal" href="#marv_robotics.cam.images.params.max_frames">¶</a> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Maximum number of frames to extract.</p></li>
+<li><p><span class="target" id="marv_robotics.cam.images.params.convert_32FC1_scale"></span><strong>convert_32FC1_scale</strong><a class="paramlink headerlink reference internal" href="#marv_robotics.cam.images.params.convert_32FC1_scale">¶</a> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a>) – Scale factor for FC image values.</p></li>
+<li><p><span class="target" id="marv_robotics.cam.images.params.convert_32FC1_offset"></span><strong>convert_32FC1_offset</strong><a class="paramlink headerlink reference internal" href="#marv_robotics.cam.images.params.convert_32FC1_offset">¶</a> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a>) – Offset for FC image values.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="video">
+<h2>Video<a class="headerlink" href="#video" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="marv_robotics.cam.ffmpeg">
+<code class="sig-prename descclassname">marv_robotics.cam.</code><code class="sig-name descname">ffmpeg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/cam.html#ffmpeg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.cam.ffmpeg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create video for each sensor_msgs/Image topic with ffmpeg.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="fulltext">
+<h2>Fulltext<a class="headerlink" href="#fulltext" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="marv_robotics.fulltext.fulltext">
+<code class="sig-prename descclassname">marv_robotics.fulltext.</code><code class="sig-name descname">fulltext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/fulltext.html#fulltext"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.fulltext.fulltext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract all text from bag file and store for fulltext search.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="gnss">
+<h2>GNSS<a class="headerlink" href="#gnss" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="marv_robotics.gnss.positions">
+<code class="sig-prename descclassname">marv_robotics.gnss.</code><code class="sig-name descname">positions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/gnss.html#positions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.gnss.positions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="marv_robotics.gnss.imus">
+<code class="sig-prename descclassname">marv_robotics.gnss.</code><code class="sig-name descname">imus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/gnss.html#imus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.gnss.imus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="marv_robotics.gnss.navsatorients">
+<code class="sig-prename descclassname">marv_robotics.gnss.</code><code class="sig-name descname">navsatorients</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/gnss.html#navsatorients"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.gnss.navsatorients" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="marv_robotics.gnss.orientations">
+<code class="sig-prename descclassname">marv_robotics.gnss.</code><code class="sig-name descname">orientations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/gnss.html#orientations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.gnss.orientations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="marv_robotics.gnss.gnss_plots">
+<code class="sig-prename descclassname">marv_robotics.gnss.</code><code class="sig-name descname">gnss_plots</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/gnss.html#gnss_plots"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.gnss.gnss_plots" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="trajectory">
+<h2>Trajectory<a class="headerlink" href="#trajectory" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="marv_robotics.trajectory.navsatfix">
+<code class="sig-prename descclassname">marv_robotics.trajectory.</code><code class="sig-name descname">navsatfix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/trajectory.html#navsatfix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.trajectory.navsatfix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="marv_robotics.trajectory.trajectory">
+<code class="sig-prename descclassname">marv_robotics.trajectory.</code><code class="sig-name descname">trajectory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/trajectory.html#trajectory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.trajectory.trajectory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="widget-nodes">
+<span id="id2"></span><h2>Widget nodes<a class="headerlink" href="#widget-nodes" title="Permalink to this headline">¶</a></h2>
+<p>Widgets are used by sections or are rendered in the special summary sections when configured in the <a class="reference internal" href="config.html#cfg-c-detail-summary-widgets"><span class="std std-ref">detail_summary_widgets</span></a> config key.</p>
+<dl class="py function">
+<dt id="marv_robotics.detail.bagmeta_table">
+<code class="sig-prename descclassname">marv_robotics.detail.</code><code class="sig-name descname">bagmeta_table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/detail.html#bagmeta_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.detail.bagmeta_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Table widget listing metadata for each bag of dataset.</p>
+<p>Useful for detail_summary_widgets.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="marv_robotics.detail.summary_keyval">
+<code class="sig-prename descclassname">marv_robotics.detail.</code><code class="sig-name descname">summary_keyval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/detail.html#summary_keyval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.detail.summary_keyval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keyval widget summarizing bag metadata.</p>
+<p>Useful for detail_summary_widgets.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="marv_robotics.detail.galleries">
+<code class="sig-prename descclassname">marv_robotics.detail.</code><code class="sig-name descname">galleries</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/detail.html#galleries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.detail.galleries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Galleries for all images streams.</p>
+<p>Used by marv_robotics.detail.images_section.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="section-nodes">
+<span id="id3"></span><h2>Section nodes<a class="headerlink" href="#section-nodes" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="marv_robotics.detail.images_section">
+<code class="sig-prename descclassname">marv_robotics.detail.</code><code class="sig-name descname">images_section</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/detail.html#images_section"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.detail.images_section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Section with galleries of images for each images stream.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="marv_robotics.detail.connections_section">
+<code class="sig-prename descclassname">marv_robotics.detail.</code><code class="sig-name descname">connections_section</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/detail.html#connections_section"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.detail.connections_section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Section displaying information about ROS connections.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="marv_robotics.detail.trajectory_section">
+<code class="sig-prename descclassname">marv_robotics.detail.</code><code class="sig-name descname">trajectory_section</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/detail.html#trajectory_section"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.detail.trajectory_section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Section displaying trajectory on a map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="marv_robotics.detail.trajectory_section.params.title"></span><strong>title</strong><a class="paramlink headerlink reference internal" href="#marv_robotics.detail.trajectory_section.params.title">¶</a> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Detail section title.</p></li>
+<li><p><span class="target" id="marv_robotics.detail.trajectory_section.params.geojson"></span><strong>geojson</strong><a class="paramlink headerlink reference internal" href="#marv_robotics.detail.trajectory_section.params.geojson">¶</a> – Stream with one GeoJson message.</p></li>
+<li><p><span class="target" id="marv_robotics.detail.trajectory_section.params.minzoom"></span><strong>minzoom</strong><a class="paramlink headerlink reference internal" href="#marv_robotics.detail.trajectory_section.params.minzoom">¶</a> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Minimum zoom level.</p></li>
+<li><p><span class="target" id="marv_robotics.detail.trajectory_section.params.maxzoom"></span><strong>maxzoom</strong><a class="paramlink headerlink reference internal" href="#marv_robotics.detail.trajectory_section.params.maxzoom">¶</a> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Maximum zoom level.</p></li>
+<li><p><span class="target" id="marv_robotics.detail.trajectory_section.params.tile_server_protocol"></span><strong>tile_server_protocol</strong><a class="paramlink headerlink reference internal" href="#marv_robotics.detail.trajectory_section.params.tile_server_protocol">¶</a> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Set to <code class="docutils literal notranslate"><span class="pre">https:</span></code> if you host marv
+behind http and prefer the tile requests to be secured.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="marv_robotics.detail.video_section">
+<code class="sig-prename descclassname">marv_robotics.detail.</code><code class="sig-name descname">video_section</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/detail.html#video_section"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.detail.video_section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Section displaying one video player per image stream.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="marv_robotics.detail.gnss_section">
+<code class="sig-prename descclassname">marv_robotics.detail.</code><code class="sig-name descname">gnss_section</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/marv_robotics/detail.html#gnss_section"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#marv_robotics.detail.gnss_section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Section displaying GNSS plots.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MARV Robotics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/setup-basic-site.html">Tutorial: Setup basic site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/write-your-own.html">Tutorial: Write your own nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="patterns.html">Patterns and known issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="views.html">Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scan.html">Scanner</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Nodes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bag-metadata">Bag metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ros-bag-messages">ROS bag messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#video">Video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fulltext">Fulltext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gnss">GNSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trajectory">Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#widget-nodes">Widget nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#section-nodes">Section nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="widgets.html">Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="httpapi.html">HTTP API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload.html">Upload (EE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migrate/index.html">Migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/marv.html">marv</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="scan.html" title="previous chapter">Scanner</a></li>
+      <li>Next: <a href="widgets.html" title="next chapter">Widgets</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2019  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/nodes.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
