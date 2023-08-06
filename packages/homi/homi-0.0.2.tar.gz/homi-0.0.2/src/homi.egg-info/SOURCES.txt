@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+src/homi/__init__.py
+src/homi/__main__.py
+src/homi/cli.py
+src/homi/registries.py
+src/homi/server.py
+src/homi.egg-info/PKG-INFO
+src/homi.egg-info/SOURCES.txt
+src/homi.egg-info/dependency_links.txt
+src/homi.egg-info/entry_points.txt
+src/homi.egg-info/requires.txt
+src/homi.egg-info/top_level.txt
