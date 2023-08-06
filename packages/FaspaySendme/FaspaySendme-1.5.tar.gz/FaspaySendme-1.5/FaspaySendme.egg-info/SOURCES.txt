@@ -1,0 +1,11 @@
+README.md
+setup.py
+FaspaySendme/Api.py
+FaspaySendme/__init__.py
+FaspaySendme/_http.py
+FaspaySendme/_request.py
+FaspaySendme.egg-info/PKG-INFO
+FaspaySendme.egg-info/SOURCES.txt
+FaspaySendme.egg-info/dependency_links.txt
+FaspaySendme.egg-info/not-zip-safe
+FaspaySendme.egg-info/top_level.txt
