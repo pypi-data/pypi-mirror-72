@@ -1,0 +1,15 @@
+aircan/__init__.py,sha256=ESIt_rgVmF6DIR-8KjubRwUjkqk4abbnKM-P82BsfeQ,179
+aircan/dags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aircan/dags/api_ckan_load_multiple_nodes.py,sha256=uljNy_KtqXFVzHzD6OZQ_duz7VXbC8_S2hqeygYV-Yc,3329
+aircan/dags/api_ckan_load_single_node.py,sha256=0qio1rSbMh2TA0hX0xZ7s6YoTfHS4roWSI0nkVgSRQ8,2013
+aircan/dags/hybrid_ckan_load.py,sha256=sPLhjI8YZwObiFRw0dNrtuctjAmcbKBKSG8Z7je0YQU,2730
+aircan/dependencies/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aircan/dependencies/api_load.py,sha256=p00_ZgdL3UPgSX_pM1hmYERJQPIvgcdbyUxoDopCAj8,1392
+aircan/dependencies/hybrid_load.py,sha256=P50NhFH9uiIJYYUKEkZORy6AM4t3UV_JvWgOyT_ugfk,8287
+aircan/dependencies/file_conversion/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aircan/dependencies/file_conversion/csv_to_json.py,sha256=kPLdxTGQc_A6ZOfZSIw3nsOOi5-iK4Ku-ODT7p7W7Zc,195
+aircan-0.0.4.dist-info/LICENSE.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aircan-0.0.4.dist-info/METADATA,sha256=C0cONPeKX2RF9QandkDXWdk5pHub00li0G0dwg1OmXs,13779
+aircan-0.0.4.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+aircan-0.0.4.dist-info/top_level.txt,sha256=_Q_BZW83miwqqQVafB2mJuw3PxLL1YquSCHScVk_Yxk,7
+aircan-0.0.4.dist-info/RECORD,,
