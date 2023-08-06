@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: lmt-india-covid19-risk-assessment
+Version: 1.0.0
+Summary: LMT-India COVID-19 Risk Assessment
+Home-page: https://github.com/istresearch/lmt-india-covid19-risk-assessment
+Author: IST Research
+Author-email: support@istresearch.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: limesurvey-coconut (>=1.0.1)
+
+# lmt-india-covid19-risk-assessment
+
+Defines survey type `LmtIndiaCovid19RiskAssessment` and response `LmtIndiaCovid19Response` using [coconut](https://github.com/istresearch/coconut)
+
+
+## Installation
+
+```
+pip install lmt-india-covid19-risk-assessment
+```
+
+## Usage
+
+```python
+from coconut import LimeAPI, Workbook
+from lmt_india_covid19_risk_assessment import LmtIndiaCovid19RiskAssessment
+
+# Create a LimeAPI instance
+lime = LimeAPI(
+        url="https://surveys.my-lime-survey-instance.org",
+        username="admin",
+        password="password"
+    )
+
+# Create the survey instance
+survey = LmtIndiaCovid19RiskAssessment(survey_id=119618, lime_api=lime)
+
+# Load questions, responses, survey info
+survey.load_data()
+
+# Save the data to an Excel file
+survey.to_excel("survey.xlsx")
+
+# Save response data to a CSV file
+survey.to_csv("survey.csv")
+
+# Update a Google Sheets workbook
+workbook = Workbook(
+    workbook_id="abc123",
+    survey=survey,
+    service_account_json_path="google-cloud-creds.json"
+)
+workbook.sync()
+```
+
