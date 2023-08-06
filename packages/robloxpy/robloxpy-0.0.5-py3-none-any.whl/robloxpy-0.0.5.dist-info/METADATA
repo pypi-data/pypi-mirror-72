@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: robloxpy
+Version: 0.0.5
+Summary: Wrapper for roblox Web API's
+Home-page: https://github.com/KristanSmout/RobloxPyOfficial
+Author: Kristan Smout
+Author-email: python@kristansmout.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# RobloxPyOfficial
+ RobloxPy is a python API wrapper for the roblox web api's. This allows for quick and easy integration of these API's into a python project.
+
+ ## Table of Contents
+
+
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
+
+
+
+##getting-started
+To use the wrapper you will simply need to import RobloxPy into your current python project.
+
+
