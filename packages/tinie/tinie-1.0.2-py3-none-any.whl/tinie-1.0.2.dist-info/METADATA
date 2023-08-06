@@ -1,0 +1,490 @@
+Metadata-Version: 2.1
+Name: tinie
+Version: 1.0.2
+Summary: A non-interacting equilibrium 2D quantum transport simulation framework
+Home-page: https://gitlab.com/compphys-public/tinie
+Author: Rostislav Duda, Joonas Keski-Rahkonen, Janne Solanpää
+Author-email: rostislav.duda@tuni.fi
+License: Boost Software License 1.0
+Keywords: numerics quantum transport physics
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Boost Software License 1.0 (BSL-1.0)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: POSIX
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: mpi4py
+Requires-Dist: progressbar2
+Requires-Dist: findiff
+Requires-Dist: matplotlib
+Requires-Dist: h5py
+Requires-Dist: vegas
+
+[![pypi license](https://img.shields.io/pypi/l/tinie?color=blue)](https://pypi.org/project/tinie/)
+[![pypi version](https://img.shields.io/pypi/v/tinie)](https://pypi.org/project/tinie)
+[![pypi status](https://img.shields.io/pypi/status/tinie)](https://pypi.org/project/tinie)
+[![Python implementation](https://img.shields.io/pypi/implementation/tinie.svg)](https://pypi.org/project/tinie/)
+[![Python versions](https://img.shields.io/pypi/pyversions/tinie.svg)](https://pypi.org/project/tinie/)
+[![Python wheel](https://img.shields.io/pypi/wheel/tinie.svg)](https://pypi.org/project/tinie/)
+[![pipeline status](https://gitlab.com/compphys-public/tinie/badges/master/pipeline.svg)](https://gitlab.com/compphys-public/tinie/-/commits/master)
+[![coverage report](https://gitlab.com/compphys-public/tinie/badges/master/coverage.svg)](https://gitlab.com/compphys-public/tinie/-/commits/master)
+
+Transport In a Non-Interacting Equilibrium simulation framework (TINIE)
+======================================================================
+
+
+Overview
+--------
+We present to you a code that calculates conductance and electric current
+running through 2D cavities, quantum dots or potential wells with arbitrarily
+placed reservoirs in a perpendicular and constant magnetic field. The code can
+be used in a wide range of calculations involving 2D electron transport. The
+main difference between this code and its competitors is the fact that TINIE
+does not need to be provided with free parameters. The code is parallelized 
+with `mpi4py`, allowing for computational tasks distribution across multiple 
+processors. 
+
+
+Installation
+------------
+The code is a Python package (written using Python 3.6). Installation of the 
+package is as easy as typing  `python3 setup.py install`. Thorough unit testing 
+for the package has been  implemented and can be launched via `python3 setup.py test`. 
+The package has scripts with a parser user interface, which need to be given 
+appropriate permissions prior to their execution. To that end, the following commands 
+must be run from the git root repository: 
+```bash 
+$ source dev_setup.sh
+$ scripts/tinie_prepare -dE 1e-7 ...
+$ scripts/tinie -i "transport_equilibrium/test_files/preptinie_test.h5" -dw
+$ 1e-5 ...
+```
+
+
+Package Functionality
+---------------------
+This package contains tools that could be used to calculate coupling of a
+specific system that contains a central region (2DEG) and some leads.  After
+the coupling is calculated one could proceed to calculate transmission
+coefficients and partial currents in the leads. All the calculations are
+performed in Hartee atomic units. After installing the package, a simple test
+run can be launched from the git root directory as follows:
+```bash
+$ scripts/tinie_prepare
+$ scripts/tinie
+```
+
+Package Structure
+-----------------
+The code is written using object-oriented programming, and its functionality
+can be shortly described in the following way: first, `Lead`, and `Center`
+objects are created and passed as inputs for the `Coupling` object and then all
+of them are passed into a `SystemDump` object, which calculates all the
+couplings and Hamiltonians and dumps the data into an hdf5 file. `SystemFetch`
+is then used to read the data from that hdf5 file. That data is passed into the
+`Calculator` interface, where `SelfEnergy` interface calculates the
+self-energies $`\Sigma_{L}(\omega)`$ and rate operators $`\Gamma_{L}(\omega)`$
+using the `Coupling` and the eigenenergies of the `Lead`. 
+
+After that, `SelfEnergy` for all the leads and the eigenenergies of the
+`Center` are passed into the `GreenFunction` interface that evaluates the
+advanced ($`G^{A}(\omega)`$) and retarded ($`G^{R}(\omega)`$) Green's
+functions, finalizing the initialization of the `Calculator`. From there the
+code is able to compute the transmission matrix
+$`\mathcal{T}_{\alpha\beta}(\omega)=\mathrm{Tr}[G^{R}(\omega)\Gamma_{\beta}(\omega)G^{A}(\omega)\Gamma_{\alpha}(\omega)]`$
+and the partial currents 
+```math
+i_{\alpha\beta}=2\int_{\omega}\mathrm{d}\omega\frac{1}{2\pi}[f(\omega-V_{\alpha}-\mu)-f(\omega-V_{\beta}-\mu)]\mathcal{T}_{\alpha\beta}(\omega)
+``` 
+in the lead, where $`f(E)`$ is the Fermi-Dirac energy distribution. Furthermore, 
+it is then  possible to compute other transport properties, such as conductance 
+at a specific temperature. Additionally, we include the possibility of computing
+density of states and local density of states.
+
+Modular structure of the code allows for the implementation of your own custom
+type of conducting channel ("lead"), quantum dot ("central region") and
+coupling via implementation of a class that inherits from `Lead`, `Center` or
+`Coupling`. The details of how exactly the classes should be implemented will
+be explained in the sections to follow.
+
+Example: Usage of TINIE with ITP2D
+----------------------------------
+To better demonstrate how TINIE is used, we will show it by means of an example 
+problem. We will compute transport properties of a quantum-dot system with two 
+leads in a magnetic field. Specifically, we shall procure the information about 
+the central region from ITP2D, a Schrödinger equation eigensolver that 
+interfaces with TINIE. The following workflow is typical for most transport 
+problems solved with TINIE:
+
+**Step 0:** computation of the Hamiltonian and wavefunctions of the central 
+region. We may obtain this information from any eigensolver of our choosing, 
+provided that it is TINIE-compatible. Quantum dot may be modeled by a 
+radial harmonic potential of form $`V(r)=\frac{1}{2}\omega_{0}\Vert r \Vert^{2}`$. 
+Solving the first 25 states of this model with magnetic field strength $`B=1.0`$ is 
+done in ITP2D as follows:
+```bash
+$ ./itp2d -v -n 20 -l 12 -s 100 -p "harmonic(1)" -B 1.0 -o ITP2D_FILE_PATH
+```
+Here the central region occupies a $`[-6,6]`$ region in both x- and y-directions 
+and is centered at the origin. More information about usage of ITP2D can be 
+found on its [bitbucket page](https://bitbucket.org/luukko/itp2d/src/master/).
+
+**Step 1:** the transport system preparation step. In this step, the coupling 
+matrices for the leads are computed. Suppose we wish to compute overlap 
+coupling between the central region and the leads and we want to vary the probe 
+energy within each lead in range $`[0.0,2.0]`$ with energy spacing of 
+$`\Delta E = 0.001`$. In this case, the first 5 states of the central region are 
+sufficient for the calculation. Our leads are such that:
+* Lead 0 is confined to region $`[-10.0,-4.0]`$ in $`x`$-direction, $`[-5.0,5.0]`$ 
+in $`y`$-direction and connects to the lead from the left;
+* Lead 1 is confined to region $`[4.0,10.0]`$ in $`x`$-direction, $`[-5.0,5.0]`$ 
+in $`y`$-direction and connects to the lead from the right.
+
+Both leads in this case have harmonic potential of strength $`\omega=1.0`$ in 
+$`y`$-direction, and particle-in-a-box potential in $`x`$-direction. This 
+information is sufficient for us to commence the system preparation. For that, 
+`tinie_prepare` script is used as follows:
+```bash
+$ tinie_prepare -dE 1e-3 -B 1.0 -ctr "itp2d(ITP2D_FILE_PATH,(0,4))" -l 2 -ld "finharm(left,1.0,dir)" "finharm(right,1.0,dir)" -xlim "[-10.0,-4.0]" "[4.0,10.0]" -ylim "[-5.0,5.0]" "[-5.0,5.0]" -Elim "[0.0,2.0]" "[0.0,2.0]" -cpl "overlap()" "overlap()" -o TINIE_PREPARE_FILE_PATH
+```
+This produces the PREPTINIEFile that contains the information about the 
+coupling of the transport system which can be reused for different transport 
+calculations of the next step.
+
+**Step 2:** the transport calculation step. This is where the real fun begins, 
+the steps before are in a sense just a preparation. To compute various 
+transport properties of the system, such as transmission, conductance and 
+current, we fix temperature of the system $`T=1.0`$, chemical potential $`\mu=1.0`$ 
+and fix bias voltages in the leads to be $`V_{0}=0.5`$ in Lead 0 and $`V_{1}=1.5`$. 
+Moreover, we adjust the energy spacing of probe electrons to 
+$`\Delta\omega=0.01`$ and set the Green's function boundary parameter to 
+$`\eta=0.1`$. With this information we can use `tinie` script as follows:
+```bash
+$ tinie -i TINIE_PREPARE_FILE_PATH -dw 1e-2 -eta 1e-1 -T 1.0 -mu 1.0 -V 0.5 1.5 -o TINIE_FILE_PATH
+```
+This produces the TINIEFile that contains all the above mentioned transport 
+quantities and more, with detailed description of its contents outlined in the 
+sections below.
+
+In addition to the transport properties, we can compute local and standard 
+density of states (LDOS/DOS) of the system via the `tinie_dos` script. To that 
+end, in addition to the parameters specified above, user would want to 
+specify the energies at which LDOS should be evaluated, as well as the 
+location of the file with the central region wavefunctions. We then use the 
+script as follows:
+```bash
+$ tinie_dos -i TINIE_PREPARE_FILE_PATH -psi ITP2D_FILE_PATH --wf-range 0 4 -w 1.0 2.0 3.0 -dw 1e-2 -eta 1e-1 -T 1.0 -mu 1.0 -V 0.5 1.5 -o TINIE_DOS_FILE_PATH
+```
+Here, we evaluated LDOS at probe energies $`\omega\in\{1.0,2.0,3.0\}`$. Results 
+of this calculation are stored in TINIEDOSFile, with details about its contents 
+available in sections below.
+
+**Step 3:** visualizing the results. To that end, one can use the `tinie_draw` 
+script. Suppose we want to plot transmission, conductance, total current and 
+DOS of the system in the energy range $`[0.0,5.0]`$, as well as LDOS at probe 
+energy $`\omega=1.0`$. We then use the following command:
+```bash
+$ tinie_draw -i TINIE_FILE_PATH -idos TINIE_DOS_FILE_PATH -E 0.0 5.0 --ldos-E 1.0 --transmission --conductance --total-currents --dos --ldos -o FIGURE_PATH
+```
+This will produce beautiful LaTeX-rendered plots of the aforementioned 
+quantities. Below we show the example plots of conductance, DOS and LDOS 
+produced by the script:
+
+|Conductance                         |DOS                         | LDOS                          |
+|:----------------------------------:|:--------------------------:|:-----------------------------:|
+|![](example_figures/conductance.png)|![](example_figures/dos.png)|![](example_figures/ldos.png)  |
+
+Quantum transport calculations in two-dimensional systems have never been as 
+easy!
+
+Currently Implemented System Classes
+------------------------------------
+As of now, the following system classes are implemented:
+* `Center` objects, located in `transport_calculator/systems/central_region`
+    * `Itp2dCenter`: itp2d-compatible interface.
+    * `CustomCenter`: container for a custom predefined central region 
+      Hamiltonian $`\mathbf{H}^{C}`$.
+* `Lead` objects, located in `transport_calculator/systems/leads`. Note that
+  wavefunction normalization has been omitted for the sake of compactness of
+  the expression. Wavefunctions in the code are all normalized.
+    * `FiniteHarmonicLead`: lead described by a wavefunction
+      $`\psi^{L}_{k,l}(x,q)=\cos(k(x-x^{L}_{max})+\frac{\pi}{2})e^{-\frac{1}{2}q^2}H_{l}(q)`$,
+      where $`H_{l}(q)`$ is the the Hermite polynomial of order $`l`$,
+      $`q=\sqrt{\omega_{c0}y-\frac{l}{B}\frac{\omega^{2}_{c}}{\omega^{2}_{c0}}}`$,
+      $`\omega_{c}=B,\omega^2_{c0}=\omega^2_0+\omega^2_c`$, with $`\omega_0`$
+      being the frequency of quantum harmonic oscillator and $`B`$ being
+      magnetic field strength. The formula is provided in Hartee atomic units.
+      $`x`$ and $`y`$ coordinate wavefunctions are interchangeable depending on
+      the lead alignment.
+    * `BoxLead`: particle in a box lead describe by wavefunction
+      $`\psi^{L}_{k,l}(x,y)=\sin(\frac{k\pi}{L_{x}}(x-x^L_{max}))\sin(\frac{l\pi}{L_{y}}(y-y^L_{max}))`$,
+      where $`L_{x}`$ and $`L_{y}`$ are the length and width of the box
+      correspondingly and $`k,l \in \mathbb{Z}_{+}\setminus \{0\}`$.
+    * `CustomLead`: container for a custom predefined lead region Hamiltonian
+      $`\mathbf{H}^{L}`$.
+* `Coupling` objects, located in `transport_calculator/systems/couplings`
+    * `OverlapCoupling`: strong coupling of the type
+      $`\mathbf{V}_{ij}=-\frac{1}{2}\int_{\Omega}\mathrm{d}\mathbf{r}\psi^{*}_{L,i}(\mathbf{r})\Delta\psi_{C,j}(\mathbf{r})`$,
+      where $`\psi_{L,i}`$ is the $`i`$th eigenfunction of the lead and
+      $`\psi_{C,j}`$ i
+      s the $`j`$th eigenfunction of the central region and
+      $`\Omega`$ is the overlap region of the lead and the quantum-dot.
+    * `TightBindingCoupling`: weak coupling between non-overlapping lead and
+      central regions of the type
+      $`\mathbf{V}_{ij}=-\frac{1}{2}\int_{\Omega_{L}}\mathrm{d}\mathbf{r'}\psi^{*}_{L,i}(\mathbf{r'})\int_{\Omega_{C}}\mathrm{d}\mathbf{r}\frac{\psi_{C,j}(\mathbf{r})}{||\mathbf{r'}-\mathbf{r}||^2}e^{-i\theta}`$,
+      where $`\theta=-\frac{B}{2}(x'-x)(y'-y)`$, $`\Omega_{L}`$ is the lead
+      region to be coupled and $`\Omega_{C}`$ is the central region to be
+      coupled.
+    * `OneLayerCoupling`: weak coupling between the boundaries of a
+      non-overlapping lead and central regions of the type
+      $`\mathbf{V}_{ij}=-\frac{1}{2}\int_{\partial
+      \Omega_{L}}\mathrm{d}\mathbf{r'}\psi^{*}_{L,i}(\mathbf{r'})\int_{\partial
+      \Omega_{C}}\mathrm{d}\mathbf{r}\frac{\psi_{C,j}(\mathbf{r})}{||\mathbf{r'}-\mathbf{r}||^2}e^{-i\theta}`$.
+    * `CustomCoupling`: container for custom predefined coupling matrix
+      $`\mathbf{V}`$. Compatible only with `CustomCenter` and `CustomLead`
+      objects.
+
+The implementational details of these elements can be checked in the source
+code, which is rich with insightful and helpful comments.
+
+Adding Your Own Custom System Classes
+-------------------------------------
+As it has been mentioned before, the code has been designed in such a way as to
+allow as much freedom in expansion as possible. In particular, you can
+introduce additional types of central regions, lead regions and coupling
+methods. All you have to do is to create your own class file in the
+corresponding folder in `tinie/systems` and make sure that the
+class you are creating inherits from one of the basic abstract classes
+(`Center`, `Lead` or `Coupling`). Below you can find a list of functions you
+would have to implement (correctly) in order for your custom class to be fully
+integrated into the transport scheme:
+
+* `Center` region:
+    * `__init__(*attrs)`: initializer
+    * `get_type_specific_parameters()`: retrieves child-specific extra
+      parameters
+    * `get_energies()`: retrieves central region Hamiltonian $`\mathbf{H}^{C}`$
+    * `get_potential()`: retrieves potential energy values in the central
+      region
+    * `get_state(n)`: retrieves $`n`$th wavefunction 
+    * `get_states()`: retrieves all wavefunctions on the grid
+    * `get_number_of_states()`: retrieves the number of states in the central
+      region
+    * `get_sliced_state(n, width, side)`: retrieves $`n`$th wavefunction on a 
+      grid slice
+    * `get_sliced_states(width, side)`: retrieves all wavefunctions on a
+      grid slice
+    * `get_boundary_state(n, side)`: retrieves nth wavefunction evaluated on 
+      some boundary
+    * `get_coordinate_ranges()`: retrieves x and y coordinate ranges
+    * `get_coordinates()`: retrieves the coordinate meshes
+    * `get_slice_coordinates(width, side)`: retrieves the sliced
+      coordinate meshes
+    * `get_boundary_coordinates(side)`: retrieves the boundary coordinate
+      range
+* `Lead` region:
+    * `__init__(*attrs)`: initializer
+    * `set_magnetic_field_strength(B)`: sets magnetic field strength
+    * `set_energy_spacing(delta_E)`: sets lead energy spacing
+    * `get_type_specific_parameters()`: retrieves child-specific extra
+      parameters
+    * `get_energies()`: retrieves lead region Hamiltonian $`\mathbf{H}^{L}`$
+    * `get_state_point(x, y, n)`: evaluates the $`n`$th state wavefunction at
+      a single point $`(x, y)`$
+    * `get_state(x_points, y_points, n, mode)`: retrieves the $`n`$th
+      state wavefunction on a custom/discretized grid
+    * `get_number_of_states()`: retrieves the number of states in the lead
+      region
+    * `get_boundary_state(n, num_boundary_points)`: retrieves $`n`$th wavefunction 
+      evaluated on the lead boundary
+    * `get_boundary(num_boundary_points)`: retrieves the boundary grid
+      with specified discretization
+* `Coupling` region:
+    * `__init__(Center_object, Lead_object, *attrs)`: initializer, sets the
+      center and lead objects ready for the coupling matrix calculations
+    * `get_coupling_matrix_element(i, j)`: retrieves coupling matrix element 
+     $`\mathbf{V}_{ij}`$, that is, the coupling between $`i`$th lead state and
+     $`j`$th central state
+    * `get_coupling_matrix()`: retrieves the coupling matrix $`\mathbf{V}`$
+
+Details about the input/output parameter types can be found in the source code.
+Upon implementing all of these functions correctly for the corresponding custom
+object and extending the parser interface accordingly, the code extension will
+be fully consistent with the original code!
+
+Scripts Included in the Package
+-------------------------------
+tinie includes a few scripts that should ease the usage of the software:
+
+## scripts/tinie\_prepare
+This script prepares the coupling system and saves it in a tinie\_prepare hdf5 file, 
+which contains the following attributes and datasets:
+
+|                       Attribute | Description                            |
+|--------------------------------:|----------------------------------------|
+| "type"                          | File type, must be "PREPTINIEFile"     |
+| "center/type"                   | Type of the central region             |
+| "center/num\_states"            | Number of states in the central region |
+| "center/parameters"             | Type-dependent parameters of the central region |
+| "leads/num\_leads"              | Number of leads                        |
+| "leads/lead\_n/type"            | Type of the lead $`n`$                 |
+| "leads/lead\_n/num\_states"     | Number of states in lead $`n`$         |
+| "leads/lead\_n/energy\_spacing" | Energy spacing in lead $`n`$           |
+| "leads/lead\_n/parameters"      | Type-dependent parameters of lead $`n`$|
+| "couplings/num\_couplings"      | Number of couplings                    |
+| "couplings/coupling\_n/type"    | Type of coupling between lead $`n`$ and the central region|
+
+|                                  Dataset | Description                                                  |
+|-----------------------------------------:|--------------------------------------------------------------|
+| "center/hamiltonian"                     | Hamiltonian of the central region                            |
+| "center/potential"                       | Potential energy values in the central region                |
+| "leads/lead\_n/hamiltonian"              | Hamiltonian of the lead region $`n`$                         |
+| "leads/lead\_n/x\_axis\_limits"          | x-axis limits of lead $`n`$                                  |
+| "leads/lead\_n/y\_axis\_limits"          | y-axis limits of lead $`n`$                                  |
+| "leads/lead\_n/energy\_limits"           | Energy limits of lead $`n`$                                  |
+| "couplings/coupling\_n/coupling\_matrix" | Coupling matrix between lead $`n`$ and the central region    |
+
+Some of these datasets are stored in chunked/compressed format for more data-intensive
+simulations. All the simulation parameters are adjusted via a parser user 
+interface, which takes the following arguments (type `scripts/preptinie --help` 
+if you ever feel lost!):
+
+|                  Argument | Description                                                                                    |
+|--------------------------:|------------------------------------------------------------------------------------------------|
+| `-dE`,`--delta-E`         | Lead energy spacing                                                                            |
+| `-B`                      | Magnetic field strength                                                                        |
+| `-xlim`,`--x-axis-limits` | x-axis limits of each lead, typed in form `[x_min_0, x_max_0] [x_min_1, x_max_1] ...`          |
+| `-ylim`,`--y-axis-limits` | y-axis limits of each lead, typed in form `[y_min_0, y_max_0] [y_min_1, y_max_1] ...`          |
+| `-Elim`,`--energy-limits` | Energy limits of each lead, typed in form `[E_min_0, E_max_0] [E_min_1, E_max_1] ...`          |
+| `-ctr`,`--center-type`         | Central region type, typed in form `"ctr_type(*ctr_params)"`                                   |
+| `-l`,`--lead-number`      | Number of leads                                                                                |
+| `-ld`,`--lead-types`      | Lead region types, typed in form `"ld0_type(*ld0_params)" "ld1_type(*ld1_params)" ...`         |
+| `-cpl`,`--coupling-types` | Coupling region types, typed in form `"cpl0_type(*cpl0_params)" "cpl1_type(*cpl1_params)" ...` |
+| `-o`, `--output-file`     | Path, where preptinie file is saved                                                            |
+
+## scripts/tinie
+This script reads the preptinie hdf5 file, performs the transport calculation
+and saves the results in a tinie hdf5 with the following attributes and datasets:
+
+|                         Attribute | Description                                   |
+|----------------------------------:|-----------------------------------------------|
+| "type"                            | File type, must be "TINIEFile"                |
+| "evaluated\_chhemical\_potential" | Chemical potential $`\mu`$ of the system     |
+| "evaluated\_bias\_voltage"        | Bias voltage in the leads of the system       |
+| "evaluated\_temperature"          | Temperature of the system                     |
+| "omega\_spacing"                  | Probe energy spacing                          |
+| "lead\_energy\_spacing"           | Lead energy spacing                           |
+| "eta"                          | Small number eta used in the Green's function |
+| "number\_of\_couplings"          | Number of couplings in the system             |
+
+|                              Dataset  | Description                                              |
+|--------------------------------------:|----------------------------------------------------------|
+| "partial\_currents"                   | Matrix of partial currents between each lead             |
+| "total\_currents"                     | Total currents in each lead                              |
+| "omega\_dependent\_partial\_currents" | Energy profile of the partial current matrix             |
+| "omega\_dependent\_total\_currents"   | Energy profile of the total currents                     |
+| "transmission"                        | Transmission matrix as a function of probe energy        |
+| "transmission\_error"                 | Imaginary component of transmission                      |
+| "conductance"                         | System conductance matrix values                         |
+
+Some of these datasets are stored in chunked/compressed format for more data-intensive
+simulations. All the transport calculation parameters are adjusted via a parser user
+interface, which takes the following arguments (type `scripts/tinie --help` if
+you ever feel lost!):
+
+|              Argument | Description                                                                         |
+|----------------------:|-------------------------------------------------------------------------------------|
+| `-dw`,`--delta-omega` | Probe energy spacing                                                                |
+| `-eta`                | Small imaginary constant used in calculating Green's function                       |
+| `-mu`,`--chem-pot`    | Chemical potential, at which system is evaluated                                    |
+| `-V`,`--lead-bias`    | Lead biases, at which system is evaluated, typed in form `V_0 V_1 ...`              |
+| `-T`,`--temperature`  | Temperature, at which system is evaluated                                           |
+| `-i`,`--input-file`   | Path, from which preptinie file is read                                             |
+| `-o`, `--output-file` | Path, where tinie file is saved                                                     |
+| `--wide-band`, `--no-wide-band`   | Boolean flags user can specify if he wishes to use wide band approximation methods (or not)  |
+| `-S`,`--self-energy`  | Path, from which the array of custom self energies is read                          |
+| `-G`,`--rate-operator`| Path, from which the array of rate operators is read                                |
+
+Note that if you wish to use the wide band approximation approach you must specify either self energies or rate 
+operators or both!
+
+## scripts/tinie\_dos
+This scripts reads the preptinie hdf5 file and the file containing the eigenfunctions of the central region,
+computes DOS/LDOS and saves the results in dostinie hdf5 file with the following attributes and datasets:
+
+|                      Attribute | Description                                   |
+|-------------------------------:|-----------------------------------------------|
+| "type"                         | File type, must be "TINIEDOSFile"             |
+
+|                            Dataset | Description                                              |
+|-----------------------------------:|----------------------------------------------------------|
+| "dos"                              | Density of states values                                 |
+| "ldos"                             | Local density of states values                           |
+| "x"                                | x-axis values of the system central region               |
+| "y"                                | y-axis values of the system central region               |
+| "omega\_dos"                        | Energies at which DOS was evaluated                      |
+| "omega\_ldos"                       | Energies at which LDOS was evaluated                     |
+
+Some of these datasets are stored in chunked/compressed format for more data-intensive
+simulations. All the DOS/LDOS calculation parameters are adjusted via a parser user
+interface, which takes the following arguments (type `scripts/dostinie --help` if
+you ever feel lost!):
+
+|                  Argument | Description                                                                                    |
+|--------------------------:|------------------------------------------------------------------------------------------------|
+| `-w`, `--omega-ldos`      | Probe energies, at which LDOS should be evaluated                                              |
+| `-dw`,`--delta-omega`     | Probe energy spacing                                                                           |
+| `-eta`                    | Small imaginary constant used in calculating Green's function                                  |
+| `-mu`,`--chem-pot`        | Chemical potential, at which system is evaluated                                               |
+| `-V`,`--lead-bias`        | Lead biases, at which system is evaluated, typed in form `V_0 V_1 ...`                         |
+| `-T`,`--temperature`      | Temperature, at which system is evaluated                                                      |
+| `-i`, `--input-file`      | Path from which preptinie file is read                                                         |
+| `-psi`, `--wf-file`       | Path from which central region wavefunctions are read                                          |
+| `--wf-range`              | Range of the wavefunctions to read from the wavefunction file                                  |
+| `-o`,`--output-file`      | Path where the dostinie file is saved                                                          |
+| `--dos`, `--no-dos`       | Boolean, decides if DOS is computed                                                            |
+| `--ldos`, `--no-ldos`     | Boolean, decides if LDOS is computed                                                           |
+
+
+## scripts/tinie\_draw
+This script reads data from the tinie hdf file, makes pretty
+transmission/backsacttering/current/density of states plots and saves them.
+This script has a parser user interface, where you can specify the following
+plot arguments:
+
+|                        Argument | Description                                                   |
+|--------------------------------:|---------------------------------------------------------------|
+| `-i`,`--input-file`             | Path from which tinie file is read                            |
+| `-idos`, `--input-dos-file`     | Path from which dostinie  file is read                        |
+| `-o`,`--output-file`            | Path where the plots are saved                                |
+| `-E`, `--energy-rangs`          | Range of energies over which to draw the plot                 |
+| `--transmission`, `--no-transmission`     | Boolean, decides if transmission is plotted                   |
+| `--backscattering`, `--no-backscattering`   | Boolean, decides if backscattering is plotted                 |
+| `--partial-currents`, `--no-partial-currents` | Boolean, decides if partial currents are plotted              |
+| `--total-currents`, `--no-total-currents`   | Boolean, decides if total currents are plotted                |
+| `--dos`, `--no-dos`             | Boolean, decides if density of states is plotted              |
+| `--ldos`, `--no-ldos`             | Boolean, decides if local density of states is plotted              |
+| `--norm-ldos`, `--no-norm-ldos`   | Boolean, decides if LDOS will be normalized by 1 or not      |
+| `--ldos-E`                        | Evaluate LDOS at probe energy closest to the one specified   |
+| `--ldos-idx`                      | Evaluate LDOS at an index corresponding to a probe energy     |
+| `--stability`, `--no-stability`          | Boolean, decides if the numerical stability tests are plotted |
+
+
+## scripts/make\_system\_files
+This script generates custom Hamiltonians or coupling matrices and saves them
+in a .npy file to be passed on as arguments for
+`CustomCenter`/`CustomLead`/`CustomCoupling` objects. They can also be used to 
+generate custom self-energy/rate operators for the wide-band approximation.
+Run the script, follow the instructions and the rest is history.
+
+Naturally, these scripts provide only some of the basic functionality 
+extensions. Additional scripts/code modifications may be added based on the 
+user's end goals.
+
+
