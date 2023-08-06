@@ -1,0 +1,10 @@
+README.md
+setup.py
+styletx/StyleTransfer.py
+styletx/__init__.py
+styletx/process.py
+styletx.egg-info/PKG-INFO
+styletx.egg-info/SOURCES.txt
+styletx.egg-info/dependency_links.txt
+styletx.egg-info/not-zip-safe
+styletx.egg-info/top_level.txt
