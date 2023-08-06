@@ -1,0 +1,13 @@
+{
+    "GeneralInformation": {
+        "planArea": 100.0,
+        "stories": 3
+    },
+    "DamageAndLoss": {
+        "ResponseModel":{
+            "ResponseDescription": {
+                "Realizations": "20000"
+            }
+        }
+    }
+}
