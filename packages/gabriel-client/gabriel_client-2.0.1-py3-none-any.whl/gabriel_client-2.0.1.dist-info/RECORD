@@ -1,0 +1,10 @@
+gabriel_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gabriel_client/measurement_client.py,sha256=noFYM6IxTTiaLQcBmde3P-23bpAf-iINl_hJ4QradLE,3009
+gabriel_client/opencv_adapter.py,sha256=Zq40tQX5NWrHYVSyFl8ssr1U6_ITC-HrIjHcxRg2yi4,2136
+gabriel_client/push_source.py,sha256=muRODDubsCUySv4cJfGQvC8AfBKXptR4mKVl2oX9rZM,2464
+gabriel_client/websocket_client.py,sha256=hQVMcNk0qc9uXUWsXplOL6bNK0i69iTx1P8xYf2lv6E,5666
+gabriel_client-2.0.1.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+gabriel_client-2.0.1.dist-info/METADATA,sha256=9E-RpLmeewJuPqm_ZhTeSPOe_AqWydflg1QFFPN0YuI,5773
+gabriel_client-2.0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+gabriel_client-2.0.1.dist-info/top_level.txt,sha256=Ozom9KJwqMDassnAqBN9seJUT0LWM8gNjRcOf_4a27M,15
+gabriel_client-2.0.1.dist-info/RECORD,,
