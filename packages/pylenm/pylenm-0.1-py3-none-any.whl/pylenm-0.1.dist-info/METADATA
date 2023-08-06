@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pylenm
+Version: 0.1
+Summary: Python functions for Analyzing Historical Groundwater Datasets
+Home-page: http://github.com/
+Author: Aurelien Meray
+Author-email: aurelien.meray@gmail.com
+License: LBNL
+Platform: UNKNOWN
+Requires-Dist: markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: seaborn
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: datetime
+Requires-Dist: sklearn
+Requires-Dist: supersmoother
+
+UNKNOWN
+
+
