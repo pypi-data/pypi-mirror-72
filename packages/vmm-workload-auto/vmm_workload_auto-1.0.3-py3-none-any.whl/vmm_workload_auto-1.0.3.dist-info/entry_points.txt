@@ -1,0 +1,3 @@
+[console_scripts]
+vmm_workload_auto = workload_auto.main:wl_auto_main
+
