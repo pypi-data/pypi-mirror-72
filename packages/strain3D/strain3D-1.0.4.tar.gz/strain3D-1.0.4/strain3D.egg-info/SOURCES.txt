@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+strain3D/__init__.py
+strain3D/strainMyocardium.py
+strain3D.egg-info/PKG-INFO
+strain3D.egg-info/SOURCES.txt
+strain3D.egg-info/dependency_links.txt
+strain3D.egg-info/requires.txt
+strain3D.egg-info/top_level.txt
