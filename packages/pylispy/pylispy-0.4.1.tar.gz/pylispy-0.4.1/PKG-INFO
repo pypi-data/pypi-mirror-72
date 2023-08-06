@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: pylispy
+Version: 0.4.1
+Summary: Basic lisp functions in python
+Home-page: https://github.com/nw0428/pylisp
+Author: David Zabner
+Author-email: david.zabner@gmail.com
+License: MIT
+Download-URL: https://github.com/nw0428/pylisp/archive/v_04.tar.gz
+Description: # pylispy
+        ================
+        This provides users with cons, car, cdr, is_null, is_pair, ls, and null
+        
+        
+        `from pylispy import *`
+        
+Keywords: Lisp,Lists,LISP,car,cdr,cons
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
