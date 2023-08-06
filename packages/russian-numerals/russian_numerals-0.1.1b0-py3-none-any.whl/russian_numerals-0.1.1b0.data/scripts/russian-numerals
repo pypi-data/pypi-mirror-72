@@ -1,0 +1,19 @@
+#!python
+import sys
+from argparse import ArgumentParser
+from russian_numerals import prepare, HANDLERS
+
+
+if __name__ == '__main__':
+    """Запуск обработчиков из консоли."""
+
+    parser = ArgumentParser(description=(
+        'Преобразование чисел в количественные числительные и обратно.'))
+    parser.add_argument('value', help=(
+        'Строка текста с числительными или любое число.'))
+    parser.add_argument('--handler', default='', help=(
+        'Название обработчика текста из списка: %s'
+    ) % ','.join(HANDLERS.keys()))
+    args = parser.parse_args()
+    print(prepare(**vars(args)))
+    sys.exit(0)
