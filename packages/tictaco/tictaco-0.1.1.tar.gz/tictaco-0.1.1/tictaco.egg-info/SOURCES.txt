@@ -1,0 +1,11 @@
+README.md
+setup.py
+tictaco/__init__.py
+tictaco/__version__.py
+tictaco/tictaco.py
+tictaco.egg-info/PKG-INFO
+tictaco.egg-info/SOURCES.txt
+tictaco.egg-info/dependency_links.txt
+tictaco.egg-info/entry_points.txt
+tictaco.egg-info/requires.txt
+tictaco.egg-info/top_level.txt
