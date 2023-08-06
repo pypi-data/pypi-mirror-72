@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: scimma-aws-utils
+Version: 1.1.1
+Summary: Tools for interacting with AWS as a SCIMMA developer
+Home-page: https://github.com/scimma/scimma-aws-utils
+Author: Spencer Nelson
+Author-email: swnelson@uw.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Requires-Dist: boto3 (>=1.12)
+Requires-Dist: bs4
+Requires-Dist: click
+Requires-Dist: colorama
+Requires-Dist: humanize
+Requires-Dist: lxml
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: autopep8 ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: setuptools ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+
+UNKNOWN
+
+
