@@ -1,0 +1,99 @@
+# Android related event formatters.
+
+type: 'conditional'
+data_type: 'android:event:last_resume_time'
+message:
+- 'Package: {package}'
+- 'Component: {component}'
+short_message:
+- 'Package: {package}'
+- 'Component: {component}'
+short_source: 'LOG'
+source: 'Android App Usage'
+---
+type: 'conditional'
+data_type: 'android:event:call'
+message:
+- '{call_type}'
+- 'Number: {number}'
+- 'Name: {name}'
+- 'Duration: {duration} seconds'
+short_message:
+- '{call_type} Call'
+short_source: 'LOG'
+source: 'Android Call History'
+---
+type: 'conditional'
+data_type: 'android:messaging:sms'
+message:
+- 'Type: {sms_type}'
+- 'Address: {address}'
+- 'Status: {sms_read}'
+- 'Message: {body}'
+short_message:
+- '{body}'
+short_source: 'LOG'
+source: 'Android SMS messages'
+---
+type: 'conditional'
+data_type: 'webview:cookie'
+message:
+- 'Domain: {domain}'
+- 'Path: {path}'
+- 'Cookie name: {name}'
+- 'Value: {value}'
+- 'Secure: {secure}'
+short_message:
+- '{domain}'
+- '{name}'
+- '{value}'
+short_source: 'WebView'
+source: 'Android WebView'
+---
+type: 'conditional'
+data_type: 'android:webviewcache'
+message:
+- 'URL: {url}'
+- 'Content Length: {content_length}'
+short_message:
+- '{url}'
+short_source: 'WebViewCache'
+source: 'Android WebViewCache'
+---
+type: 'conditional'
+data_type: 'tango:android:conversation'
+message:
+- 'Conversation ({conversation_identifier})'
+short_message:
+- 'Conversation ({conversation_identifier})'
+short_source: 'Tango Android'
+source: 'Tango Android Conversation'
+---
+type: 'conditional'
+data_type: 'twitter:android:contact'
+message:
+- 'Screen name: {username}'
+- 'Profile picture URL: {image_url}'
+- 'Name: {name}'
+- 'Location: {location}'
+- 'Description: {description}'
+- 'URL: {web_url}'
+- 'Number of followers: {followers}'
+- 'Number of following: {friend}'
+- 'Number of tweets: {statuses}'
+short_message:
+- 'Screen name: {username}'
+- 'Description: {description}'
+- 'URL: {web_url}'
+short_source: 'Twitter Android'
+source: 'Twitter Android Contacts'
+---
+type: 'conditional'
+data_type: 'twitter:android:search'
+message:
+- 'Name: {name}'
+- 'Query: {search_query}'
+short_message:
+- 'Query: {search_query}'
+short_source: 'Twitter Android'
+source: 'Twitter Android Search'

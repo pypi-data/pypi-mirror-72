@@ -1,0 +1,737 @@
+# Event formatters.
+
+type: 'conditional'
+data_type: 'apache:access'
+message:
+- 'http_request: {http_request}'
+- 'from: {ip_address}'
+- 'code: {http_response_code}'
+- 'referer: {http_request_referer}'
+- 'user_agent: {http_request_user_agent}'
+- 'server_name: {server_name}'
+- 'port: {port_number}'
+short_message:
+- '{http_request}'
+- 'from: {ip_address}'
+short_source: 'LOG'
+source: 'Apache Access'
+---
+type: 'conditional'
+data_type: 'apt:history:line'
+message:
+- '{packages}'
+- '[{command}]'
+- '[{error}]'
+- '[{requester}]'
+short_message:
+- '{packages}'
+short_source: 'LOG'
+source: 'APT History Log'
+---
+type: 'conditional'
+data_type: 'av:mcafee:accessprotectionlog'
+message:
+- 'File Name: {filename}'
+- 'User: {username}'
+- '{trigger_location}'
+- '{status}'
+- '{rule}'
+- '{action}'
+short_message:
+- '{filename}'
+- '{action}'
+short_source: 'LOG'
+source: 'McAfee Access Protection Log'
+---
+type: 'basic'
+data_type: 'bash:history:command'
+message: 'Command executed: {command}'
+short_message: '{command}'
+short_source: 'LOG'
+source: 'Bash History'
+---
+type: 'conditional'
+data_type: 'cups:ipp:event'
+message:
+- 'Status: {status}'
+- 'User: {user}'
+- 'Owner: {owner}'
+- 'Job Name: {job_name}'
+- 'Application: {application}'
+- 'Document type: {type_doc}'
+- 'Printer: {printer_id}'
+short_message:
+- 'Status: {status}'
+- 'Job Name: {job_name}'
+short_source: 'LOG'
+source: 'CUPS IPP Log'
+---
+type: 'conditional'
+data_type: 'docker:json:container'
+message:
+- 'Action: {action}'
+- 'Container Name: {container_name}'
+- 'Container ID: {container_id}'
+separator: ', '
+short_message:
+- 'Action: {action}'
+- 'Container Name: {container_name}'
+- 'Container ID: {container_id}'
+short_source: 'DOCKER'
+source: 'Docker Container'
+---
+type: 'conditional'
+data_type: 'docker:json:container:log'
+message:
+- 'Text: {log_line}'
+- 'Container ID: {container_id}'
+- 'Source: {log_source}'
+separator: ', '
+short_message:
+- 'Text: {log_line}'
+- 'Container ID: {container_id}'
+- 'Source: {log_source}'
+short_source: 'DOCKER'
+source: 'Docker Container Logs'
+---
+type: 'conditional'
+data_type: 'docker:json:layer'
+message:
+- 'Command: {command}'
+- 'Layer ID: {layer_id}'
+separator: ', '
+short_message:
+- 'Command: {command}'
+- 'Layer ID: {layer_id}'
+short_source: 'DOCKER'
+source: 'Docker Layer'
+---
+type: 'conditional'
+data_type: 'dpkg:line'
+message:
+- '{body}'
+short_message:
+- '{body}'
+short_source: 'LOG'
+source: 'dpkg log file'
+---
+type: 'conditional'
+data_type: 'file_history:namespace:event'
+message:
+- 'Filename: {original_filename}'
+- 'Identifier: {identifier}'
+- 'Parent Identifier: {parent_identifier}'
+- 'Attributes: {file_attribute}'
+- 'USN number: {usn_number}'
+short_message:
+- 'Filename: {original_filename}'
+short_source: 'LOG'
+source: 'File History Namespace'
+---
+type: 'basic'
+data_type: 'fs:mactime:line'
+message: '{filename}'
+short_message: '{filename}'
+short_source: 'FILE'
+source: 'Mactime Bodyfile'
+---
+type: 'conditional'
+data_type: 'gdrive_sync:log:line'
+message:
+- '[{log_level}'
+- '{pid}'
+- '{thread}'
+- '{source_code}]'
+- '{message}'
+short_message:
+- '{message}'
+short_source: 'LOG'
+source: 'GoogleDriveSync Log File'
+---
+type: 'conditional'
+data_type: 'googlelog:log'
+message:
+  - '{file_name}:'
+  - '{line_number}]'
+  - '{message}'
+short_message:
+  - '{message}'
+short_source: 'LOG'
+source: 'Google Log'
+---
+type: 'conditional'
+data_type: 'java:download:idx'
+message:
+- 'IDX Version: {idx_version}'
+- 'Host IP address: ({ip_address})'
+- 'Download URL: {url}'
+short_message:
+- 'IDX Version: {idx_version}'
+- 'Host IP address: ({ip_address})'
+- 'Download URL: {url}'
+short_source: 'JAVA_IDX'
+source: 'Java Cache IDX'
+---
+type: 'conditional'
+data_type: 'kodi:videos:viewing'
+message:
+- 'Video: {filename}'
+- 'Play Count: {play_count}'
+short_message:
+- '{filename}'
+short_source: 'KODI'
+source: 'Kodi Video Viewed'
+---
+type: 'conditional'
+data_type: 'metadata:openxml'
+message:
+- 'Creating App: {creating_app}'
+- 'App version: {app_version}'
+- 'Title: {title}'
+- 'Subject: {subject}'
+- 'Last saved by: {last_saved_by}'
+- 'Author: {author}'
+- 'Total edit time (secs): {total_edit_time}'
+- 'Keywords: {keywords}'
+- 'Comments: {comments}'
+- 'Revision number: {revision_number}'
+- 'Template: {template}'
+- 'Number of pages: {number_of_pages}'
+- 'Number of words: {number_of_words}'
+- 'Number of characters: {number_of_characters}'
+- 'Number of characters with spaces: {number_of_characters_with_spaces}'
+- 'Number of lines: {number_of_lines}'
+- 'Company: {company}'
+- 'Manager: {manager}'
+- 'Shared: {shared}'
+- 'Security: {security}'
+- 'Hyperlinks changed: {hyperlinks_changed}'
+- 'Links up to date: {links_up_to_date}'
+- 'Scale crop: {scale_crop}'
+- 'Digital signature: {dig_sig}'
+- 'Slides: {slides}'
+- 'Hidden slides: {hidden_slides}'
+- 'Presentation format: {presentation_format}'
+- 'MM clips: {mm_clips}'
+- 'Notes: {notes}'
+short_message:
+- 'Title: {title}'
+- 'Subject: {subject}'
+- 'Author: {author}'
+short_source: 'META'
+source: 'Open XML Metadata'
+---
+type: 'conditional'
+data_type: 'networkminer:fileinfos:file'
+message:
+- 'Source IP: {source_ip}'
+- 'Source Port: {source_port}'
+- 'Destination IP: {destination_ip}'
+- 'Destination Port: {destination_port}'
+- '{filename}'
+- '{file_path}'
+- '{file_size}'
+- '{file_md5}'
+- '{file_details}'
+short_message:
+- 'Source IP: {source_ip}'
+- 'Destination IP: {destination_ip}'
+- '{filename}'
+- '{file_path}'
+- '{file_md5}'
+short_source: 'NetworkMiner'
+source: 'NetworkMiner fileinfos'
+---
+type: 'conditional'
+data_type: 'olecf:document_summary_info'
+message:
+- 'Number of bytes: {number_of_bytes}'
+- 'Number of lines: {number_of_lines}'
+- 'Number of paragraphs: {number_of_paragraphs}'
+- 'Number of slides: {number_of_slides}'
+- 'Number of notes: {number_of_notes}'
+- 'Number of hidden slides: {number_of_hidden_slides}'
+- 'Number of multi-media clips: {number_of_clips}'
+- 'Company: {company}'
+- 'Manager: {manager}'
+- 'Shared document: {shared_document}'
+- 'Application version: {application_version}'
+- 'Content type: {content_type}'
+- 'Content status: {content_status}'
+- 'Language: {language}'
+- 'Document version: {document_version}'
+short_message:
+- 'Company: {company}'
+short_source: 'OLECF'
+source: 'OLECF Document Summary Info'
+---
+type: 'basic'
+data_type: 'olecf:item'
+message: 'Name: {name}'
+short_message: 'Name: {name}'
+short_source: 'OLECF'
+source: 'OLECF Item'
+---
+type: 'conditional'
+data_type: 'p2p:bittorrent:transmission'
+message:
+- 'Saved to {destination}'
+- 'Minutes seeded: {seedtime}'
+separator: '; '
+short_message:
+- 'Saved to {destination}'
+- 'Minutes seeded: {seedtime}'
+short_source: 'TORRENT'
+source: 'Transmission Active Torrents'
+---
+type: 'conditional'
+data_type: 'p2p:bittorrent:utorrent'
+message:
+- 'Torrent {caption}'
+- 'Saved to {path}'
+- 'Minutes seeded: {seedtime}'
+separator: '; '
+short_message:
+- 'Torrent {caption}'
+- 'Saved to {path}'
+- 'Minutes seeded: {seedtime}'
+short_source: 'TORRENT'
+source: 'uTorrent Active Torrents'
+---
+type: 'conditional'
+data_type: 'pe'
+message:
+- 'PE Type: {pe_type}'
+- 'Import hash: {imphash}'
+separator: ' '
+short_message:
+- 'pe_type'
+short_source: 'PE'
+source: 'PE Event'
+---
+type: 'conditional'
+data_type: 'pe:compilation:compilation_time'
+message:
+- 'PE Type: {pe_type}'
+- 'Import hash: {imphash}'
+separator: ' '
+short_message:
+- 'pe_type'
+short_source: 'PE'
+source: 'PE Compilation time'
+---
+type: 'conditional'
+data_type: 'pe:delay_import:import_time'
+message:
+- 'DLL name: {dll_name}'
+- 'PE Type: {pe_type}'
+- 'Import hash: {imphash}'
+separator: ' '
+short_message:
+- '{dll_name}'
+short_source: 'PE'
+source: 'PE Delay Import Time'
+---
+type: 'conditional'
+data_type: 'pe:import:import_time'
+message:
+- 'DLL name: {dll_name}'
+- 'PE Type: {pe_type}'
+- 'Import hash: {imphash}'
+separator: ' '
+short_message:
+- '{dll_name}'
+short_source: 'PE'
+source: 'PE Import Time'
+---
+type: 'conditional'
+data_type: 'pe:load_config:modification_time'
+message:
+- 'PE Type: {pe_type}'
+- 'Import hash: {imphash}'
+separator: ' '
+short_message:
+- 'pe_type'
+short_source: 'PE'
+source: 'PE Load Configuration Table Time'
+---
+type: 'conditional'
+data_type: 'pe:resource:creation_time'
+message:
+- 'PE Type: {pe_type}'
+- 'Import hash: {imphash}'
+separator: ' '
+short_message:
+- 'pe_type'
+short_source: 'PE'
+source: 'PE Resource Creation Time'
+---
+type: 'conditional'
+data_type: 'PLSRecall:event'
+message:
+- 'Sequence number: {sequence_number}'
+- 'Username: {username}'
+- 'Database name: {database_name}'
+- 'Query: {query}'
+short_message:
+- '{sequence_number}'
+- '{username}'
+- '{database_name}'
+- '{query}'
+short_source: 'PLSRecall'
+source: 'PL/SQL Developer Recall file'
+---
+type: 'conditional'
+data_type: 'popularity_contest:log:event'
+message:
+- 'mru [{mru}]'
+- 'package [{package}]'
+- 'tag [{record_tag}]'
+short_message:
+- '{mru}'
+short_source: 'LOG'
+source: 'Popularity Contest Log'
+---
+type: 'conditional'
+data_type: 'popularity_contest:session:event'
+message:
+- 'Session {session}'
+- '{status}'
+- 'ID {hostid}'
+- '[{details}]'
+short_message:
+- 'Session {session}'
+- '{status}'
+short_source: 'LOG'
+source: 'Popularity Contest Session'
+---
+type: 'conditional'
+data_type: 'santa:diskmount'
+message:
+- 'Santa {action}'
+- 'on ({mount})'
+- 'serial: ({serial})'
+- 'for ({dmg_path})'
+short_message:
+- '{action}'
+- '{volume}'
+short_source: 'LOG'
+source: 'Santa disk mount'
+---
+type: 'conditional'
+data_type: 'santa:execution'
+message:
+- 'Santa {decision}'
+- 'process: {process_path}'
+- 'hash: {process_hash}'
+short_message:
+- '{decision}'
+- 'process: {process_path}'
+short_source: 'LOG'
+source: 'Santa Execution'
+---
+type: 'conditional'
+data_type: 'santa:file_system_event'
+message:
+- 'Santa {action} event'
+- '{file_path}'
+- 'by process: {process_path}'
+short_message:
+- 'File {action}'
+- 'on: {file_path}'
+short_source: 'LOG'
+source: 'Santa FSEvent'
+---
+type: 'conditional'
+data_type: 'selinux:line'
+message:
+- '['
+- 'audit_type: {audit_type}'
+- ', pid: {pid}'
+- ']'
+- ' {body}'
+separator: ''
+short_message:
+- '['
+- 'audit_type: {audit_type}'
+- ', pid: {pid}'
+- ']'
+- ' {body}'
+short_source: 'LOG'
+source: 'Audit log File'
+---
+type: 'conditional'
+data_type: 'shell:zsh:history'
+message:
+- '{command}'
+- 'Time elapsed: {elapsed_seconds} seconds'
+short_message:
+- '{command}'
+short_source: 'HIST'
+source: 'Zsh Extended History'
+---
+type: 'conditional'
+data_type: 'skydrive:log:old:line'
+message:
+- '[{source_code}]'
+- '({log_level})'
+- '{text}'
+short_message:
+- '{text}'
+short_source: 'LOG'
+source: 'SkyDrive Log File'
+---
+type: 'conditional'
+data_type: 'skydrive:log:line'
+message:
+- '[{module}'
+- '{source_code}'
+- '{log_level}]'
+- '{detail}'
+short_message:
+- '{detail}'
+short_source: 'LOG'
+source: 'SkyDrive Log File'
+---
+type: 'conditional'
+data_type: 'skype:event:account'
+message:
+- '{username}'
+- '[{email}]'
+- 'Country: {country}'
+short_message:
+- '{username}'
+- '[{email}]'
+- 'Country: {country}'
+short_source: 'LOG'
+source: 'Skype Account'
+---
+type: 'conditional'
+data_type: 'skype:event:call'
+message:
+- 'From: {src_call}'
+- 'To: {dst_call}'
+- '[{call_type}]'
+short_message:
+- 'From: {src_call}'
+- 'To: {dst_call}'
+- '[{call_type}]'
+short_source: 'LOG'
+source: 'Skype Call'
+---
+type: 'conditional'
+data_type: 'skype:event:chat'
+message:
+- 'From: {from_account}'
+- 'To: {to_account}'
+- '[{title}]'
+- 'Message: [{text}]'
+short_message:
+- 'From: {from_account}'
+- 'To: {to_account}'
+short_source: 'LOG'
+source: 'Skype Chat MSG'
+---
+type: 'conditional'
+data_type: 'skype:event:sms'
+message:
+- 'To: {number}'
+- '[{text}]'
+short_message:
+- 'To: {number}'
+- '[{text}]'
+short_source: 'LOG'
+source: 'Skype SMS'
+---
+type: 'conditional'
+data_type: 'skype:event:transferfile'
+message:
+- 'Source: {source}'
+- 'Destination: {destination}'
+- 'File: {transferred_filename}'
+- '[{action_type}]'
+short_message:
+- 'Source: {source}'
+- 'Destination: {destination}'
+- 'File: {transferred_filename}'
+- '[{action_type}]'
+short_source: 'LOG'
+source: 'Skype Transfer Files'
+---
+type: 'conditional'
+data_type: 'sophos:av:log'
+message:
+- '{text}'
+short_message:
+- '{text}'
+short_source: 'LOG'
+source: 'Sophos Anti-Virus log'
+---
+type: 'conditional'
+data_type: 'syslog:comment'
+message:
+- '{body}'
+separator: ''
+short_message:
+- '{body}'
+short_source: 'LOG'
+source: 'Log File'
+---
+type: 'conditional'
+data_type: 'syslog:cron:task_run'
+message:
+- 'Cron ran: {command}'
+- 'for user: {username}'
+- 'pid: {pid}'
+short_message:
+- '{body}'
+short_source: 'LOG'
+source: 'Cron log'
+---
+type: 'conditional'
+data_type: 'syslog:line'
+message:
+- '{severity} '
+- '['
+- '{reporter}'
+- ', pid: {pid}'
+- '] {body}'
+separator: ''
+short_message:
+- '{severity} '
+- '['
+- '{reporter}'
+- ', pid: {pid}'
+- '] {body}'
+short_source: 'LOG'
+source: 'Log File'
+---
+type: 'conditional'
+data_type: 'syslog:ssh:failed_connection'
+message:
+- 'Unsuccessful connection of user: {username}'
+- 'from {address}:'
+- '{port}'
+- 'using authentication method: {authentication_method}'
+- 'ssh pid: {pid}'
+separator: ''
+short_message:
+- '{body}'
+short_source: 'LOG'
+source: 'SSH log'
+---
+type: 'conditional'
+data_type: 'syslog:ssh:login'
+message:
+- 'Successful login of user: {username}'
+- 'from {address}:'
+- '{port}'
+- 'using authentication method: {authentication_method}'
+- 'ssh pid: {pid}'
+separator: ''
+short_message:
+- '{body}'
+short_source: 'LOG'
+source: 'SSH log'
+---
+type: 'conditional'
+data_type: 'syslog:ssh:opened_connection'
+message:
+- 'Connection opened {address}:'
+- '{port}'
+- 'ssh pid: {pid}'
+separator: ''
+short_message:
+- '{body}'
+short_source: 'LOG'
+source: 'SSH log'
+---
+# It would be nice to have the _MACHINE_ID field, which is a unique identifier
+# for the system, and hopefully more unique than the _HOSTNAME field.
+# Unfortunately, journal files that have not been closed cleanly may contain
+# entries that have no _MACHINE_ID field.
+type: 'conditional'
+data_type: 'systemd:journal'
+message:
+- '{hostname} '
+- '['
+- '{reporter}'
+- ', pid: {pid}'
+- '] {body}'
+separator: ''
+short_message:
+- '{hostname} '
+- '['
+- '{reporter}'
+- ', pid: {pid}'
+- '] {body}'
+short_source: 'LOG'
+source: 'systemd-journal'
+---
+type: 'conditional'
+data_type: 'systemd:journal:dirty'
+message:
+- '{hostname} '
+- '['
+- '{reporter}'
+- ', pid: {pid}'
+- '] {body}'
+separator: ''
+short_message:
+- '{hostname} '
+- '['
+- '{reporter}'
+- ', pid: {pid}'
+- '] {body}'
+short_source: 'LOG'
+source: 'systemd-journal-dirty'
+---
+type: 'basic'
+data_type: 'text:entry'
+message: '{text}'
+short_message: '{text}'
+short_source: 'LOG'
+source: 'Text File'
+---
+type: 'conditional'
+data_type: 'vsftpd:log'
+message:
+- '{text}'
+short_message:
+- '{text}'
+short_source: 'LOG'
+source: 'vsftpd log'
+---
+type: 'conditional'
+data_type: 'xchat:log:line'
+message:
+- '[nickname: {nickname}]'
+- '{text}'
+short_message:
+- '[nickname: {nickname}]'
+- '{text}'
+short_source: 'LOG'
+source: 'XChat Log File'
+---
+type: 'conditional'
+data_type: 'xchat:scrollback:line'
+message:
+- '['
+- 'nickname: {nickname}'
+- ']'
+- ' {text}'
+separator: ''
+short_message:
+- '['
+- 'nickname: {nickname}'
+- ']'
+- ' {text}'
+short_source: 'LOG'
+source: 'XChat Scrollback File'
+---
+type: 'basic'
+data_type: 'zeitgeist:activity'
+message: '{subject_uri}'
+short_message: '{subject_uri}'
+short_source: 'LOG'
+source: 'Zeitgeist activity log'
