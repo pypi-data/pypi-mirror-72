@@ -1,0 +1,11 @@
+tauros_api/__init__.py,sha256=RXriRZeDq6thAN_jquw3Zg4q-UrHfOUNfgQqY0psjv8,41
+tauros_api/exceptions.py,sha256=fRt7gj-eNfzvCkwoAgxPyIOeWvWoUvLKkD-_9JC9Qkk,150
+tauros_api/request.py,sha256=EXVH321OrLsmyGazalOGfSGiAaJp-u61xdCC2VcjR1Q,3511
+tauros_api/response.py,sha256=USxmccWGTHDKfz14ErcTNPNI25ME0upllGy3Q_KyE4I,73
+tests/__init__.py,sha256=xVHRUYcZPje6ObYbmtCMgCLJTluGSOqZWqPCPxsq954,86
+tests/test_request_post.py,sha256=5qgKkz2XJ82WW9yMsfTOZ2uzNSMY-QBoi-_7JwgC76A,6184
+tauros_api-1.5.1.dist-info/LICENSE,sha256=YF6QR6Vjxcg5b_sYIyqkME7FZYau5TfEUGTG-0JeRK0,35129
+tauros_api-1.5.1.dist-info/METADATA,sha256=EN2V-hhw0ZnEnXhA564sUM_N-0YOAokqnqLep9s3k5Y,1651
+tauros_api-1.5.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+tauros_api-1.5.1.dist-info/top_level.txt,sha256=-0zHWM1fhYShf6R9xDc-Chj-7lyQqQLzrX7FP4Rni80,17
+tauros_api-1.5.1.dist-info/RECORD,,
