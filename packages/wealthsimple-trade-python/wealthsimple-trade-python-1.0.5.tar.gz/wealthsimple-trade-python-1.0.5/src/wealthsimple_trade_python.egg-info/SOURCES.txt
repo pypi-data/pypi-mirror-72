@@ -1,0 +1,11 @@
+README.rst
+setup.py
+src/wealthsimple/__init__.py
+src/wealthsimple/requestor.py
+src/wealthsimple/wealthsimple.py
+src/wealthsimple_trade_python.egg-info/PKG-INFO
+src/wealthsimple_trade_python.egg-info/SOURCES.txt
+src/wealthsimple_trade_python.egg-info/dependency_links.txt
+src/wealthsimple_trade_python.egg-info/not-zip-safe
+src/wealthsimple_trade_python.egg-info/requires.txt
+src/wealthsimple_trade_python.egg-info/top_level.txt
