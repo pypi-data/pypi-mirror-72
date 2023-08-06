@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pylgbst
+Version: 1.2.0
+Summary: Python library to interact with LEGO PoweredUp devices (Lego BOOST etc.)
+Home-page: https://github.com/undera/pylgbst
+Author: Andrey Pokhilko
+Author-email: apc4@ya.ru
+License: MIT
+Description: UNKNOWN
+Keywords: LEGO,ROBOTICS,BLUETOOTH
+Platform: UNKNOWN
+Provides-Extra: bleak
+Provides-Extra: bluepy
+Provides-Extra: gatt
+Provides-Extra: gattlib
+Provides-Extra: pygatt
