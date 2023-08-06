@@ -1,0 +1,7 @@
+pyserial
+
+[simulator]
+sinstruments>=1
+
+[tango]
+pytango
