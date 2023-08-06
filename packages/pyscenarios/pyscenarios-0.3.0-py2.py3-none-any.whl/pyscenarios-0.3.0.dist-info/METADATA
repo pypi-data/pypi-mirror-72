@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pyscenarios
+Version: 0.3.0
+Summary: Python Monte Carlo Scenario Generator
+Home-page: https://github.com/crusaderky/pyscenarios
+Author: Guido Imperiale
+Author-email: guido.imperiale@gmail.com
+License: Apache
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: setuptools
+Requires-Dist: dask (>=2.2)
+Requires-Dist: numba (>=0.44)
+Requires-Dist: numpy (>=1.15)
+Requires-Dist: pandas (>=0.25)
+Requires-Dist: scipy (>=1.3)
+
+
+- SOBOL generator
+- Copulas (Gaussian, Student T, IT)
+- Statistical analysis tools for copulas
+
