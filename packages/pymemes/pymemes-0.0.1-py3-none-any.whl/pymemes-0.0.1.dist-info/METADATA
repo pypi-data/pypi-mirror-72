@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pymemes
+Version: 0.0.1
+Summary: Memes on Python - just for fun :)
+Home-page: https://github.com/JTCaldeira/pymemes
+Author: João Caldeira
+Author-email: jt.brazaocaldeira@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# pymemes
+Repository for the `pymemes` Python package
+
+
