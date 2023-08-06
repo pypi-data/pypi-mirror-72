@@ -1,0 +1,3 @@
+[console_scripts]
+yenta = yenta.cli:yenta
+
