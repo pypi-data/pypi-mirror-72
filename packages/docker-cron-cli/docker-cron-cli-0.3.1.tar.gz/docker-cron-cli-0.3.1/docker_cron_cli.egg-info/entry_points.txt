@@ -1,0 +1,3 @@
+[console_scripts]
+docker-cron = docker_cron:main
+

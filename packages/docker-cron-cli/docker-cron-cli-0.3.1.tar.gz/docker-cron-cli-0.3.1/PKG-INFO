@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: docker-cron-cli
+Version: 0.3.1
+Summary: Extract Crontab Info from Docker Containers
+Home-page: https://github.com/iamfat/docker-cron-cli
+Author: Jia Huang
+Author-email: iamfat@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: docker cron crontab
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
