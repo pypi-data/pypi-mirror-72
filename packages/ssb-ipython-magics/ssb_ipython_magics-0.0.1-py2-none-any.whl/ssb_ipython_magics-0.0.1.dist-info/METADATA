@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ssb-ipython-magics
+Version: 0.0.1
+Summary: IPython magics for dapla.
+Home-page: https://github.com/statisticsnorway/dapla-ipython-magics
+Author: Statistics Norway
+Author-email: bjorn.skaar@ssb.no
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: ipython (>=4.0.2noserequestsipykernel>=4.2.2notebook>=4.2tornado>=4)
+
+# dapla-ipython-magics
+IPython magics for dapla. This library contains magics for use in Jupyter notebooks (see [example](examples/blueprint_test.ipynb))
+
+
