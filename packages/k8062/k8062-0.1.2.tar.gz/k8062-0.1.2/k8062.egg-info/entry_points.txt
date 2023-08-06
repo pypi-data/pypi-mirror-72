@@ -1,0 +1,3 @@
+[console_scripts]
+k8062 = k8062.__main__:main
+

@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+k8062/__init__.py
+k8062/__main__.py
+k8062/k8062.py
+k8062.egg-info/PKG-INFO
+k8062.egg-info/SOURCES.txt
+k8062.egg-info/dependency_links.txt
+k8062.egg-info/entry_points.txt
+k8062.egg-info/top_level.txt
