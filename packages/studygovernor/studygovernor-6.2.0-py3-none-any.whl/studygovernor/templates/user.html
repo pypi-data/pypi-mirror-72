@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% from "_macros.html" import collapse_card_start, collapse_card_end, card_link_by_title %}
+
+{% block content %}
+
+<h1>User {{ data.name }}</h1>
+{{ collapse_card_start("User Information", show=True) }}
+      <dl class="dl-horizontal">
+        <dt>id</dt>
+        <dd>{{ data.id }}</dd>
+
+        <dt>username</dt>
+        <dd>{{ data.username }}</dd>
+
+        <dt>name</dt>
+        <dd>{{ data.name }}</dd>
+
+        <dt>active</dt>
+        <dd>
+          <span class="badge badge-{{ 'success' if data.active else 'danger' }}">
+            {{ data.active }}
+          </span>
+        </dd>
+
+        <dt>email</dt>
+        <dd>
+          {% if data.email %}
+          <a href="mailto:{{data.email}}">
+            {{ data.email }}
+          </a>
+          {% endif %}
+        </dd>
+
+        <dt>create time</dt>
+        <dd>{{ data.create_time }}</dd>
+      </dl>
+{{ collapse_card_end("User Information") }}
+
+{% endblock %}

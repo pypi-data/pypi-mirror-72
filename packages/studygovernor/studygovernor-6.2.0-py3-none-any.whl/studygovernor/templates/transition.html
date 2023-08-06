@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% from "_macros.html" import collapse_card_start, collapse_card_end %}
+{% block content %}
+
+<h1>Transition {{ transition.id}} </h1>
+
+    {{ collapse_card_start("Info", show=True) }}
+      <dl class="row">
+        <dt class="col-sm-3">id</dt>
+        <dd class="col-sm-9">{{ transition.id }}</dd>
+
+        <dt class="col-sm-3">source state</dt>
+        <dd class="col-sm-9">
+          <a href="{{url_for('web.web_state', id=transition.source_state_id) }}">
+              [{{transition.source_state_id}}] {{transition.source_state.label}}
+          </a>
+        </dd>
+
+        <dt class="col-sm-3">destination state</dt>
+        <dd class="col-sm-9">
+          <a href="{{url_for('web.web_state', id=transition.destination_state_id) }}">
+             [{{transition.destination_state_id}}] {{transition.destination_state.label}}
+          </a>
+        </dd>
+
+      </dl>
+    {{ collapse_card_end("Info") }}
+
+{% if transition.conditions %}
+    {{ collapse_card_start("Conditions", show=True) }}
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>id</th>
+          <th>rul</th>
+          <th>freetext</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for condition in transition.conditions | sort(attribute='id')  %}
+        <tr>
+          <td>{{condition.id}}</td>
+          <td>{{condition.rule}}</td>
+          <td>{{condition.free_text}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {{ collapse_card_end("Conditions") }}
+{% endif %}
+
+{% if transition.actions %}
+    {{ collapse_card_start("Actions", show=True, data_count=transition.actions|length) }}
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>id</th>
+          <th>time</th>
+          <th>experiment</th>
+          <th>start state</th>
+          <th>end state</th>
+          <th>callback success</th>
+          <th>callback finished</th>
+          <th>description</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for action in transition.actions | sort(attribute='id')  %}
+        <tr>
+          <td>{{action.id}}</td>
+          <td>{{action.start_time}}</td>
+          <td>
+            <a href="{{url_for('web.web_experiment', id=action.experiment_id) }}">
+              [{{action.experiment_id}}] {{action.experiment.label}}
+            </a>
+          </td>
+          <td>
+            <a href="{{url_for('web.web_state', id=action.transition.source_state.id) }}">
+              [{{action.transition.source_state.id}}] {{action.transition.source_state.label}}
+            </a>
+          </td>
+          <td>
+            <a href="{{url_for('web.web_state', id=action.transition.destination_state.id) }}">
+              [{{action.transition.destination_state.id}}] {{action.transition.destination_state.label}}
+            </a>
+          </td>
+          <td>
+            <span class="badge badge-{{ 'success' if action.success else 'danger' }}">
+              {{action.success}}
+            </span>
+          </td>
+          <td>{{action.end_time}}</td>
+          <td>{{action.free_text}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {{ collapse_card_end("Actions") }}
+{% endif %}
+
+
+{% endblock %}

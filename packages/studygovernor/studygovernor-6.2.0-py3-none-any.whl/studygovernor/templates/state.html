@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% from "_macros.html" import collapse_card_start, collapse_card_end %}
+{% block content %}
+
+
+<h1>State {{ state.label}} </h1>
+
+{{ collapse_card_start("Info", show=True) }}
+      <dl class="row">
+        <dt class="col-sm-3">id</dt>
+        <dd class="col-sm-9">{{ state.id }}</dd>
+
+        <dt class="col-sm-3">label</dt>
+        <dd class="col-sm-9">{{ state.label }}</dd>
+
+        <dt class="col-sm-3">workflow</dt>
+        <dd class="col-sm-9">
+          <a href="{{ url_for('web.web_state_workflow', id=state.workflow.id) }}">
+            <span class="badge badge-primary">{{ state.workflow.label }}</span>
+          </a>
+        </dd>
+
+        <dt class="col-sm-3">callback</dt>
+        <dd class="col-sm-9">
+          {% if state.callback is not none %}
+           <pre class="language-json line-numbers"><code>{{ state.callback | json_format }}</code></pre>
+          {% endif %}
+        </dd>
+
+        <dt class="col-sm-3">lifespan</dt>
+        <dd class="col-sm-9">{{ state.lifespan }}</dd>
+
+        <dt class="col-sm-3">description</dt>
+        <dd class="col-sm-9">{{ state.freetext }}</dd>
+      </dl>
+{{ collapse_card_end("Info") }}
+
+{% if state.transition_destinations %}
+    {{ collapse_card_start("Incoming Transitions", show=True) }}
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>id</th>
+          <th>source</th>
+          <th>destination</th>
+          <th>conditions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for transition in state.transition_destinations | sort(attribute='id') %}
+        <tr>
+          <td>
+              <a href="{{url_for('web.web_transition', id=transition.id) }}">
+                  {{transition.id}}
+              </a>
+          </td>
+          <td>
+              <a href="{{url_for('web.web_state', id=transition.source_state_id) }}">
+                  [{{transition.source_state_id}}] {{transition.source_state.label}}
+              </a>
+          </td>
+          <td>
+              <a href="{{url_for('web.web_state', id=transition.destination_state_id) }}">
+                 [{{transition.destination_state_id}}] {{transition.destination_state.label}}
+              </a>
+          </td>
+          <td>NI</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {{ collapse_card_end("Incoming Transitions") }}
+{% endif %}
+
+{% if state.transition_sources %}
+    {{ collapse_card_start("Outgoing Transitions", show=True) }}
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>id</th>
+          <th>source</th>
+          <th>destination</th>
+          <th>conditions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for transition in state.transition_sources | sort(attribute='id') %}
+        <tr>
+          <td>
+              <a href="{{url_for('web.web_transition', id=transition.id) }}">
+                  {{transition.id}}
+              </a>
+          </td>
+          <td>
+              <a href="{{url_for('web.web_state', id=transition.source_state_id) }}">
+                  [{{transition.source_state_id}}] {{transition.source_state.label}}
+              </a>
+          </td>
+          <td>
+              <a href="{{url_for('web.web_state', id=transition.destination_state_id) }}">
+                 [{{transition.destination_state_id}}] {{transition.destination_state.label}}
+              </a>
+          </td>
+          <td>NI</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {{ collapse_card_end("Incoming Transitions") }}
+{% endif %}
+
+{% if state.experiments %}
+    {{ collapse_card_start("Experiments", show=True, data_count=state.experiments|length) }}
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>id</th>
+          <th>label</th>
+          <th>scan date</th>
+          <th>subject</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for experiment in state.experiments | sort(attribute='id') %}
+        <tr>
+          <td>
+            <a href="{{ url_for('web.web_experiment', id=experiment.id) }}">
+              {{experiment.id}}
+            </a>
+          </td>
+          <td>
+            <a href="{{ url_for('web.web_experiment', id=experiment.id) }}">
+              {{experiment.label}}
+            </a>
+          </td>
+          <td>{{experiment.scandate}}</td>
+          <td>
+            <a href="{{ url_for('web.web_subject', id=experiment.subject.id) }}">
+              [{{experiment.subject.id}}] {{experiment.subject.label}}
+            </a>
+          </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {{ collapse_card_end("Experiments") }}
+{% endif %}
+
+{% endblock %}

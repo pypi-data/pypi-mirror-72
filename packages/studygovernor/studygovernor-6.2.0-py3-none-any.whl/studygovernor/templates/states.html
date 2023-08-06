@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% from "_macros.html" import collapse_card_start, collapse_card_end %}
+{% block content %}
+
+
+  <h1>State Overview </h1>
+  <div align="right">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Workflows</a>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="{{url_for('web.web_states')}}">-</a>
+        
+        {% for workflow in workflows %}
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="{{url_for('web.web_state_workflow', id=workflow.id) }}">{{workflow.label}}</a>
+        {% endfor %}
+    </div>
+  </div>
+
+
+{{ collapse_card_start("States", show=True, data_count=states|length)}}
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th> label </th>
+      {% for workflow in workflows %}
+      <th>{{workflow.label}}</th>
+      {% endfor %}
+      <th>Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for state in states %}
+    <tr>
+        <td>
+          <a href="{{url_for('web.web_state', id=state.id) }}">
+            {{state.label}}
+          </a>
+        </td>
+        {%set count = [] %}
+        {% for workflow in workflows %}
+        <td>
+            {% if state.workflow.id == workflow.id %}
+              {% if state.experiments|length %}
+                <span class="badge badge-secondary">{{state.experiments|length }}</span>
+                {% if count.append(state.experiments|length) %}{% endif %} 
+              {% endif %}
+
+            {% else %}
+              {% for rstate in repeated_states %}
+                {% if rstate.label == state.label and rstate.workflow.id == workflow.id %}
+                  {% if rstate.experiments|length > 0 %}
+                    <span class="badge badge-secondary">{{ rstate.experiments|length}}</span>
+                    {% if count.append(rstate.experiments|length) %}{% endif %} 
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+
+            {% endif %}
+          </a>
+        </td>
+        {% endfor %}
+        <td>
+            <span class="badge badge-secondary">{{count|sum()}}</span>
+        </td>
+    </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{{ collapse_card_end("States") }}
+
+{% endblock %}

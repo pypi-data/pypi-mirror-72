@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% from "_macros.html" import collapse_card_start, collapse_card_end %}
+{% block content %}
+
+
+<h1>Action {{ action.id }} </h1>
+
+    {{ collapse_card_start("Info") }}
+      <dl class="row">
+        <dt class="col-sm-3">id</dt>
+        <dd class="col-sm-9">{{ action.id }}</dd>
+
+        <dt class="col-sm-3">experiment</dt>
+        <dd class="col-sm-9">
+          <a href="{{url_for('web.web_experiment', id=action.experiment_id) }}">
+            {{action.experiment_id}}
+          </a>
+        </dd>
+
+        <dt class="col-sm-3">transition</dt>
+        <dd class="col-sm-9">
+          <a href="{{url_for('web.web_transition', id=action.transition_id) }}">
+            {{action.transition_id}}
+          </a>
+        </dd>
+
+        <dt class="col-sm-3">description</dt>
+        <dd class="col-sm-9">
+          {{action.freetext}}
+        </dd>
+
+        <dt class="col-sm-3">callback</dt>
+        <dd class="col-sm-9">
+          {% if action.transition.destination_state.callback is not none %}
+          <pre class="language-json line-numbers"><code>{{ action.transition.destination_state.callback | json_format  }}</code></pre>
+          {% else %}
+          <pre class="language-json line-numbers"><code>{{ action.transition.destination_state.callback }}</code></pre>
+          {% endif %}
+        </dd>
+
+        <dt class="col-sm-3">success</dt>
+        <dd class="col-sm-9">
+          <span class="badge badge-{{ 'success' if action.success else 'danger' }}">
+            {{action.success}}
+          </span>
+        </dd>
+
+        <dt class="col-sm-3">start time</dt>
+        <dd class="col-sm-9">{{ action.start_time }}</dd>
+
+        <dt class="col-sm-3">end time</dt>
+        <dd class="col-sm-9">{{ action.end_time }}</dd>
+
+        <dt class="col-sm-3">return value</dt>
+        <dd class="col-sm-9">
+          <pre class="language-rest line-numbers"><code>{{ action.return_value }}</code></pre>
+        </dd>
+      </dl>
+    {{ collapse_card_end("Info") }}
+
+{% endblock %}

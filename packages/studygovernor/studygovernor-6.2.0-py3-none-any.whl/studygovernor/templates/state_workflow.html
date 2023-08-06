@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% from "_macros.html" import collapse_card_start, collapse_card_end %}
+{% block content %}
+
+<h1>State Overview for: <span class="badge badge-primary">{{ current_workflow.label }}</span></h1>
+<div align="right">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Workflows</a>
+  <div class="dropdown-menu" >
+      <a class="dropdown-item" href="{{url_for('web.web_states')}}">-</a>
+      
+      {% for workflow in workflows %}
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="{{url_for('web.web_state_workflow', id=workflow.id) }}">{{workflow.label}}</a>
+      {% endfor %}
+  </div>
+</div>
+{{ collapse_card_start("States", show=True, data_count=states|length)}}
+  <table class="table table-striped">
+
+    <thead>
+    <tr>
+      <th>label</th>
+      <th># experiments</th>
+      <th>freetext</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for state in states %}
+    <tr>
+      <td>
+        <a href="{{url_for('web.web_state', id=state.id) }}">
+          {{state.label}}
+        </a>
+      </td>
+      <td>
+        {% if state.experiments|length > 0 %}
+          <span class="badge badge-secondary">{{state.experiments|length}}</span>
+        {% endif %}
+      </td>
+      <td>{{state.freetext}}</td>
+    </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{{ collapse_card_end("States") }}
+
+
+
+{% endblock %}

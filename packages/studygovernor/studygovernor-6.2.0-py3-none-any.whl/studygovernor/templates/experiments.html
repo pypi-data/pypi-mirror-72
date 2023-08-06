@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% from "_macros.html" import collapse_card_start, collapse_card_end %}
+
+{% block content %}
+
+
+<h1>Experiments Overview</h1>
+  {{ collapse_card_start("Experiments", show=True, data_count=experiments|length) }}
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>label</th>
+        <th>scan date</th>
+        <th>state</th>
+        <th>workflow</th>
+        <th>subject</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for experiment in experiments %}
+      <tr>
+        <td>
+          <a href="{{ url_for('web.web_experiment', id=experiment.id) }}">
+            {{experiment.id}}
+          </a>
+        </td>
+        <td>
+          <a href="{{ url_for('web.web_experiment', id=experiment.id) }}">
+            {{experiment.label}}
+          </a>
+        </td>
+        <td>{{experiment.scandate}}</td>
+        <td>
+          <a href="{{ url_for('web.web_state', id=experiment.state.id) }}">
+            [{{ experiment.state.id }}] {{experiment.state.label }}
+          </a>
+        </td>
+        <td>
+            <a href="{{ url_for('web.web_state', id=experiment.state.id) }}">
+              [{{ experiment.state.workflow_id }}] {{experiment.state.workflow_label }}
+            </a>
+          </td>
+        <td>
+          <a href="{{ url_for('web.web_subject', id=experiment.subject.id) }}">
+            [{{experiment.subject.id}}] {{experiment.subject.label}}
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {{ collapse_card_end("Experiments") }}
+
+{% endblock %}

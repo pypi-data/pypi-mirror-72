@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% from "_macros.html" import collapse_card_start, collapse_card_end %}
+{% block content %}
+
+
+
+<h1>Workflow overview </h1>
+
+
+{{ collapse_card_start("Workflows", show=True, data_count= workflows|length)}}
+  <table class="table table-striped">
+
+    <thead>
+    <tr>
+      <th>label</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for workflow in workflows %}
+    <tr>
+      <td>
+        <a href="{{ url_for('web.web_state_workflow', id=workflow.id) }}">
+          {{workflow.label}}
+        </a>
+      </td>
+    </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{{ collapse_card_end("Workflows") }}
+
+{% endblock %}

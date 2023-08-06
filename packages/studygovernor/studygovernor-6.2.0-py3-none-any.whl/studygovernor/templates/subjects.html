@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% from "_macros.html" import collapse_card_start, collapse_card_end %}
+{% block content %}
+
+
+<h1>Subject Overview</h1>
+    {{ collapse_card_start("Subjects", show=True, data_count=subjects|length) }}
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>id</th>
+          <th>label</th>
+          <th>date of birth</th>
+          <th># experiments</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for subject in subjects %}
+        <tr>
+          <td>
+            <a href="{{url_for('web.web_subject', id=subject.id) }}">
+              {{subject.id}}
+            </a>
+          </td>
+          <td>
+            <a href="{{url_for('web.web_subject', id=subject.id) }}">
+              {{subject.label}}
+            </a>
+          </td>
+          <td>{{subject.date_of_birth}}</td>
+          <td>
+            {% if subject.experiments|length > 0 %}
+              <span class="badge badge-secondary">{{subject.experiments|length}}</span>
+            {% else %}
+              {{subject.experiments|length}}
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {{ collapse_card_end("Subjects") }}
+
+{% endblock %}

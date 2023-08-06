@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% from "_macros.html" import collapse_card_start, collapse_card_end %}
+{% block content %}
+
+
+  <h1>Transition Overview </h1>
+
+  <div align="right">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Workflows</a>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="{{url_for('web.web_transitions')}}">-</a>
+        
+        {% for workflow in workflows %}
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="{{url_for('web.web_transition_workflow', id=workflow.id) }}">{{workflow.label}}</a>
+        {% endfor %}
+    </div>
+  </div>
+
+
+{{ collapse_card_start("Transitions", show=True, data_count=transitions|length) }}
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>source</th>
+    <th>destination</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for transition in transitions %}
+
+  <tr>
+    <td>
+        <a href="{{url_for('web.web_transition', id=transition.id) }}">
+            {{transition.id}}
+        </a>
+    </td>
+    <td>
+        <a href="{{url_for('web.web_state', id=transition.source_state_id) }}">
+            [{{transition.source_state_id}}] {{transition.source_state.label}}
+        </a>
+    </td>
+    <td>
+        <a href="{{url_for('web.web_state', id=transition.destination_state_id) }}">
+           [{{transition.destination_state_id}}] {{transition.destination_state.label}}
+        </a>
+    </td>
+  </tr>
+ 
+  {% endfor %}
+  </tbody>
+</table>
+{{ collapse_card_end("Transitions") }}
+
+
+{% endblock %}
