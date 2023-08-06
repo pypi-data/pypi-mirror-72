@@ -1,0 +1,13 @@
+requirements.txt
+setup.py
+django_postgres_createdb/__init__.py
+django_postgres_createdb/__main__.py
+django_postgres_createdb/apps.py
+django_postgres_createdb.egg-info/PKG-INFO
+django_postgres_createdb.egg-info/SOURCES.txt
+django_postgres_createdb.egg-info/dependency_links.txt
+django_postgres_createdb.egg-info/requires.txt
+django_postgres_createdb.egg-info/top_level.txt
+django_postgres_createdb/management/__init__.py
+django_postgres_createdb/management/commands/__init__.py
+django_postgres_createdb/management/commands/createdb.py
