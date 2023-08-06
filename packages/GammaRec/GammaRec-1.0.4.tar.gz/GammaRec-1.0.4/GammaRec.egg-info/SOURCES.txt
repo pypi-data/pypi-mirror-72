@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+GammaRec.egg-info/PKG-INFO
+GammaRec.egg-info/SOURCES.txt
+GammaRec.egg-info/dependency_links.txt
+GammaRec.egg-info/requires.txt
+GammaRec.egg-info/top_level.txt
+bin/gammarec
+data/gammarec.desktop
+data/gammarec.png
