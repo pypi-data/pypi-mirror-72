@@ -1,0 +1,18 @@
+numpy
+cmake
+pybind11
+
+[dev]
+numpy
+cmake
+pybind11
+matplotlib
+black
+pytest
+setuptools
+matplotlib
+versioneer
+sphinx
+sphinx_rtd_theme
+breathe
+m2r@ git+https://github.com/crossnox/m2r@dev#egg=m2r
