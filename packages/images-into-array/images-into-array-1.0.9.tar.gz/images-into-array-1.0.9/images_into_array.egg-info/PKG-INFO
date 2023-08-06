@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: images-into-array
+Version: 1.0.9
+Summary: Convert Multiple images into a array and saved it into .npy file and letter user it for various task
+Home-page: https://github.com/sujitmandal/images-into-array
+Author: Sujit Mandal
+Author-email: mandals974@gmail.com
+License: MIT
+Description: # Convert-Images-Into-Array:
+        ---------------------------
+        Convert Multiple images into a array and saved it into .npy file and letter user it for various task :
+        ------------------------------------------------------------------------------------------------------
+        This package fuction requres two argument one is path of the images folder and another is image size.
+        
+        # How to import the module:
+        ---------------------------
+        from images_into_array.images_into_array import images
+        from images_into_array.images_into_array import rgb_hls
+        from images_into_array.images_into_array import rgb_luv
+        from images_into_array.images_into_array import rgb_lab
+        from images_into_array.images_into_array import rgb_hsv
+        from images_into_array.images_into_array import rgb_gray
+        from images_into_array.images_into_array import rgb_ycrcb
+        
+        
+        
+        images_path = ('')
+        image_height = Enter The Image Size [32, 64, 128]
+        image_width = Enter The Image Size [32, 64, 128]
+        
+        #NORMAL :
+        ---------
+        array = images(images_path, image_height, image_width)
+        print(array.shape)
+        
+        #RGB ↔ GRAY :
+        -------------
+        gray = rgb_gray(images_path, image_height, image_width)
+        print(array.shape)
+        
+        #RGB ↔ CIE L*a*b* :
+        -------------------
+        lav = rgb_lab(images_path, image_height, image_width)
+        print(array.shape)
+        
+        #RGB ↔ HLS :
+        ------------
+        hls = rgb_hls(images_path, image_height, image_width)
+        print(array.shape)
+        
+        #RGB ↔ CIE L*u*v* :
+        -------------------
+        luv = rgb_luv(images_path, image_height, image_width)
+        print(array.shape)
+        
+        #RGB ↔ HSV :
+        ------------
+        hsv = rgb_hsv(images_path, image_height, image_width)
+        print(array.shape)
+        
+        #RGB ↔ YCrCb JPEG (or YCC) :
+        ----------------------------
+        ycrcb = rgb_ycrcb(images_path, image_height, image_width)
+        print(array.shape)
+        
+        
+        
+        OpenCV Document :
+        -----------------
+        https://docs.opencv.org/3.4/de/d25/imgproc_color_conversions.html
+        
+         Required package’s:
+        ---------------------
+        
+        • conda install -c conda-forge opencv=4.2.0
+        
+        • pip install shuffle
+        
+        • pip install numpy
+        
+        • pip install tqdm
+        
+        License:
+        --------
+        MIT Licensed
+        
+        Author:
+        -------
+        Sujit Mandal
+        
+        Github : https://github.com/sujitmandal
+        
+        LinkedIn : https://www.linkedin.com/in/sujit-mandal-91215013a/
+        
+        Facebook : https://www.facebook.com/sujit.mandal.33671748
+        
+        Twitter : https://twitter.com/mandalsujit37
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
