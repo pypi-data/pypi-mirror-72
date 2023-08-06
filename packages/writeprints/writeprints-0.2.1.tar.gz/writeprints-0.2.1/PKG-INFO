@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: writeprints
+Version: 0.2.1
+Summary: This package extracts writeprints features from a text document or a pandas dataframe containing a column with text per row
+Home-page: https://github.com/shaoormunir/writeprints
+Author: Shaoor Munir
+Author-email: shaoormunir@outlook.com
+License: MIT
+Download-URL: https://github.com/shaoormunir/writeprints/archive/v0.2.1.tar.gz
+Description: UNKNOWN
+Keywords: NLP,Machine Leanrning,Natural Language Processing,Text Features
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
