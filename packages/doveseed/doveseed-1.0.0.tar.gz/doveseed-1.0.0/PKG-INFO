@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: doveseed
+Version: 1.0.0
+Summary: Doveseed is a backend service for email subscriptions to RSS feeds.
+Author: Jan Gosmann
+Author-email: jan@hyper-world.de
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: flask (>=1.1,<2.0)
+Requires-Dist: jinja2 (>=2.10,<3.0)
+Requires-Dist: tinydb (>=3.15,<4.0)
+Requires-Dist: typing_extensions (>=3.7,<4.0)
