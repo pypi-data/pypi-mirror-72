@@ -1,0 +1,17 @@
+README.md
+setup.py
+netbox-plugin-test/__init__.py
+netbox-plugin-test/admin.py
+netbox-plugin-test/asgi.py
+netbox-plugin-test/models.py
+netbox-plugin-test/settings.py
+netbox-plugin-test/setup.py
+netbox-plugin-test/urls.py
+netbox-plugin-test/views.py
+netbox-plugin-test/wsgi.py
+netbox-plugin-test/migrations/0001_initial.py
+netbox-plugin-test/migrations/__init__.py
+netbox_plugin_test.egg-info/PKG-INFO
+netbox_plugin_test.egg-info/SOURCES.txt
+netbox_plugin_test.egg-info/dependency_links.txt
+netbox_plugin_test.egg-info/top_level.txt
