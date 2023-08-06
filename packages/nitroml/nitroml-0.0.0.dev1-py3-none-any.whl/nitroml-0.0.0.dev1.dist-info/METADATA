@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: nitroml
+Version: 0.0.0.dev1
+Summary: NitroML is a benchmark tool.
+Home-page: https://github.com/pypa/sampleproject
+Author: AutoLX
+Author-email: nikhilmehta@google.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# NitroML
+
+NitroML is a benchmarking tool.
+
+
