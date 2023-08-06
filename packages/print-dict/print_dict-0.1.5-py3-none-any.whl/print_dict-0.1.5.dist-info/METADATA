@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: print-dict
+Version: 0.1.5
+Summary: 
+Author: Eyal Levin
+Author-email: eyalev@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: yapf (>=0.30.0,<0.31.0)
+Description-Content-Type: text/markdown
+
+
+# print-dict
+
