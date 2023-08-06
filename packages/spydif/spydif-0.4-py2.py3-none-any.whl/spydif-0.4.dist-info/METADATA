@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: spydif
+Version: 0.4
+Summary: This is pydif
+Home-page: UNKNOWN
+Author: Shaibal Bose
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5, <4
+Requires-Dist: pandas
+Requires-Dist: pypyodbc
+Requires-Dist: numpy
+Requires-Dist: sqlalchemy
+
+UNKNOWN
+
+
