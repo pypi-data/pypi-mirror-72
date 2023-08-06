@@ -1,0 +1,16 @@
+examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/basic.py,sha256=ZAIAlN0TfGVpqKPM5CLJm882r8r3HQMx-_iRvJ-WL3w,373
+examples/temperature_stabilization_test.py,sha256=8azJM11PNyJI_vY5U5ty89Rea3J14Y5CTyXvQQCJV9E,2102
+ika/__init__.py,sha256=Kawpjc6JSDGZH5WH4MGxHb7AMd8nKmTB8lavqnUSVzU,84
+ika/__version__.py,sha256=LTYg9IyHCf5Ohm4_ksoP4wYZ57J7Q0Xhd2aciOafE1Y,23
+ika/c_mag_hs_7.py,sha256=2HuKRvow7O378phXpArEeruK7-LQ-GJtKpAjiRz6ME0,1499
+ika/errors.py,sha256=EMTugX_uAopJ8UzVRVa3c_vr-HfVmh2D9lmGz0epuuw,171
+ika/magnetic_stirrer.py,sha256=k04lDaK8mz018oON7PBAxeSly2ogo-ZpH1cvDX6kjhQ,53347
+ika/utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ika/utilities/data_analysis_visualization.py,sha256=JLJ5Xn4rM-ZbAZOZ2YsuhINiSFevvBt2hfeHaQ7crNM,18127
+ika/utilities/data_utilities.py,sha256=PHeK8I9_6e8OtoZW_7AINtZrFUtZPmVo-NTM1su6KFg,5763
+ika-1.7.1.dist-info/LICENSE,sha256=Ez8RXODSC8cx30Hles95wJ9wzW6wjTgw3XCUGo_MC3k,35057
+ika-1.7.1.dist-info/METADATA,sha256=Ccgf8K4NDjFRovdfyF3zMWA6DLXNBWwWs1VefKwLqUc,1291
+ika-1.7.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ika-1.7.1.dist-info/top_level.txt,sha256=eMDD-p01sUdYlNDNY4t5EET2pYHRL7odFU6lMmVvGu4,13
+ika-1.7.1.dist-info/RECORD,,
