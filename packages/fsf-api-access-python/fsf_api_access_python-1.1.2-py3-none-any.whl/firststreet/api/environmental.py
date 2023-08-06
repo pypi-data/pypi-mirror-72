@@ -1,0 +1,42 @@
+# Author: Kelvin Lai <kelvin@firststreet.org>
+# Copyright: This module is owned by First Street Foundation
+
+# Standard Imports
+import logging
+
+# Internal Imports
+from firststreet.api import csv_format
+from firststreet.api.api import Api
+from firststreet.models.environmental import EnvironmentalPrecipitation
+
+
+class Environmental(Api):
+    """This class receives a list of fsids and handles the creation of a environmental product from the request.
+
+        Methods:
+            get_precipitation: Retrieves a list of Environmental Precipitation for the given list of IDs
+        """
+
+    def get_precipitation(self, fsids, csv=False, limit=100, output_dir=None):
+        """Retrieves environmental precipitation product data from the First Street Foundation API given a list of FSIDs
+        and returns a list of Environmental Precipitation objects.
+
+        Args:
+            fsids (list/file): A First Street Foundation IDs or a file of First Street Foundation IDs
+            csv (bool): To output extracted data to a csv or not
+            limit (int): max number of connections to make
+            output_dir (str): The output directory to save the generated csvs
+        Returns:
+            A list of Adaptation Detail
+        """
+
+        # Get data from api and create objects
+        api_datas = self.call_api(fsids, "environmental", "precipitation", "county", limit=limit)
+        product = [EnvironmentalPrecipitation(api_data) for api_data in api_datas]
+
+        if csv:
+            csv_format.to_csv(product, "environmental", "precipitation", "county", output_dir=output_dir)
+
+        logging.info("Environmental Precipitation Data Ready.")
+
+        return product
