@@ -1,0 +1,16 @@
+hecto/__init__.py,sha256=gamvcvZ_Jc6miNkRhNMHUXH7lCjTliXCzB52SSageLI,69
+hecto/main.py,sha256=QL_ymllBx6xkknzHTsEpeuIVEwDESB8Qq30F7qxDmEU,10117
+hecto/vcs.py,sha256=QL0jJ4btZ31iuLl8BP3bQS666SLrDwlO1jdxnL2D2xY,849
+hecto/version.py,sha256=J7aCzZkKCPGU4eGw8qkJXLJSeT0lHNNQcGKXygVzdYs,149
+hecto/utils/__init__.py,sha256=7B7H_7HYzmqJHHKVHbxAKXXGKJt4tFG-AUirr4idQyI,196
+hecto/utils/files.py,sha256=1_d8LmCqlIyA8l_X0xKvo6JsQV6nUDIE9JmBYPjYWzY,363
+hecto/utils/jinja_render.py,sha256=6y7E5Cslj37652piGWy0FLoTCnoeR5F2bXO-UlgcXiM,965
+hecto/utils/load_config.py,sha256=Jd9qC1rrqZzG9p2hSdaomIZlb7xoP4LvfLgC8ue6SD4,2050
+hecto/utils/make_matcher.py,sha256=MkYPtFSDdbPqzlLvPvzb2xn7CJ2RRDx1AWr4Q0KSaPs,1393
+hecto/utils/printf.py,sha256=XpA2b8NfQX-dmbxlVseHqrCdciTGj8iHXwHNbGe-3ec,699
+hecto/utils/prompt.py,sha256=zaJJO8R7UVkIhBgQDvY3x3lQtAQJdlhSe5LvO542Aes,1947
+hecto-1.200628.dist-info/LICENSE,sha256=1vSunPCAZu7HQdV7mEH35IG8bpTCEtumnDDmkQkSbCw,10212
+hecto-1.200628.dist-info/METADATA,sha256=t-i9s4nqP7U27bQ2s-JYfcOaRphtM_O4u176Awq27vU,6035
+hecto-1.200628.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+hecto-1.200628.dist-info/top_level.txt,sha256=D-vF038vd37DdNIqeSA2WbNYkSEnWTlUSEZAyVtJi_Q,6
+hecto-1.200628.dist-info/RECORD,,
