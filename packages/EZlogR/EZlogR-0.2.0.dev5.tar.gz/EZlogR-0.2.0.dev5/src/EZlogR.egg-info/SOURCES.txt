@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/EZlogR.egg-info/PKG-INFO
+src/EZlogR.egg-info/SOURCES.txt
+src/EZlogR.egg-info/dependency_links.txt
+src/EZlogR.egg-info/top_level.txt
+src/ezlogr/__init__.py
+src/ezlogr/pylogr.py
+src/ezlogr/tests/__init__.py
+src/ezlogr/tests/test.py
+src/ezlogr/tests/test_ezlogr.py
