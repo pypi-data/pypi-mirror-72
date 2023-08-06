@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+simple_s3fs/__init__.py
+simple_s3fs/__main__.py
+simple_s3fs/_version.py
+simple_s3fs/httpfs.py
+simple_s3fs.egg-info/PKG-INFO
+simple_s3fs.egg-info/SOURCES.txt
+simple_s3fs.egg-info/dependency_links.txt
+simple_s3fs.egg-info/entry_points.txt
+simple_s3fs.egg-info/requires.txt
+simple_s3fs.egg-info/top_level.txt
