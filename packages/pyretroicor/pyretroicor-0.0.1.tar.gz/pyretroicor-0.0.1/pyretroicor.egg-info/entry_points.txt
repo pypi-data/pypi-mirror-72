@@ -1,0 +1,3 @@
+[console_scripts]
+pyretroicor = pyretroicor.__main__:main
+
