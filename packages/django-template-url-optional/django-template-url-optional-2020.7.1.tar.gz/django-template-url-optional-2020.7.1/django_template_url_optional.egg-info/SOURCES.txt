@@ -1,0 +1,10 @@
+requirements.txt
+setup.py
+django_template_url_optional/__init__.py
+django_template_url_optional.egg-info/PKG-INFO
+django_template_url_optional.egg-info/SOURCES.txt
+django_template_url_optional.egg-info/dependency_links.txt
+django_template_url_optional.egg-info/requires.txt
+django_template_url_optional.egg-info/top_level.txt
+django_template_url_optional/templatetags/__init__.py
+django_template_url_optional/templatetags/url_optional.py
