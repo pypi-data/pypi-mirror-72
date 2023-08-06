@@ -1,0 +1,9 @@
+cvxopt
+cvxpy >=1.0
+joblib
+numexpr
+numpy
+osqp !=0.6.0,!=0.6.1
+pandas >=0.21
+scipy >=1.0,!=1.3.0
+scikit-learn >=0.22.0,<0.24
