@@ -1,0 +1,10 @@
+README.md
+setup.py
+word2vec/__init__.py
+word2vec/data_reader.py
+word2vec/model.py
+word2vec/trainer.py
+word2vec_torch.egg-info/PKG-INFO
+word2vec_torch.egg-info/SOURCES.txt
+word2vec_torch.egg-info/dependency_links.txt
+word2vec_torch.egg-info/top_level.txt
