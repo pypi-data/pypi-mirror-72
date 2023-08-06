@@ -1,0 +1,10 @@
+{% load wagtailcore_tags %}
+
+<div id="collect-block" class="theme-{{ page.theme }}">
+    <div class="collect">
+        {{ settings.cms.WebspaceSettings.collect_text|richtext }}
+        <div class="collect-btn">
+            <a id="collect-btn" href="#" class="btn primary-light">J'accepte</a>
+        </div>
+    </div>
+</div>
