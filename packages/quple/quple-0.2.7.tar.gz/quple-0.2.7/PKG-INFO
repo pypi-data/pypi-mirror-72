@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: quple
+Version: 0.2.7
+Summary: A framework for quantum machine learning in high energy physics
+Home-page: https://gitlab.cern.ch/clcheng/quple
+Author: Alkaid Cheng
+Author-email: chi.lung.cheng@cern.ch
+License: UNKNOWN
+Description: # Quple
+        
+        A framework for quantum machine learning using the google cirq library
+        
+        ## Feature Map Tutorial
+        
+        * Tutorial I: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/https://gitlab.cern.ch/clcheng/quple/-/raw/master/example/Feature_Map_Walkthrough.ipynb)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
