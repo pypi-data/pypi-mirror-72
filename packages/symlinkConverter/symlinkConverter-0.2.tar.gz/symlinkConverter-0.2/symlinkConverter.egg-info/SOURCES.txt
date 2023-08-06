@@ -1,0 +1,10 @@
+README.md
+setup.py
+./bin/symlinkConverter
+symlinkConverter/__init__.py
+symlinkConverter/converter.py
+symlinkConverter.egg-info/PKG-INFO
+symlinkConverter.egg-info/SOURCES.txt
+symlinkConverter.egg-info/dependency_links.txt
+symlinkConverter.egg-info/not-zip-safe
+symlinkConverter.egg-info/top_level.txt
