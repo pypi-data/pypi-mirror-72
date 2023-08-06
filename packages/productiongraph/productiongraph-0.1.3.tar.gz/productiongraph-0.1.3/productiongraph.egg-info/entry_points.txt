@@ -1,0 +1,4 @@
+[console_scripts]
+prodgraph_init = scripts.init:main
+prodgraph_run = scripts.run:main
+
