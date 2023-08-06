@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: Medeina
+Version: 1.6
+Summary: A cumulative food web
+Home-page: https://github.com/Daniel-Davies/Medeina
+Author: Daniel Davies
+Author-email: dd16785@bristol.ac.uk
+License: UNKNOWN
+Keywords: Food Webs,Species networks,Cumulative Networks
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: 
+Requires-Dist: pycountry
+Requires-Dist: pandas
+Requires-Dist: taxon-parser
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: msgpack
+Requires-Dist: EcoNameTranslator
+
+hello
+
+
