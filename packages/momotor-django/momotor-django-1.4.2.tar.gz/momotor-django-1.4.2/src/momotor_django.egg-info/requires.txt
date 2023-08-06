@@ -1,0 +1,13 @@
+asgiref>=2.0
+backoff
+django<3.1,>=2.2.0
+protobuf
+momotor-engine-proto~=3.0
+momotor-engine-shared~=0.7
+
+[:python_version < "3.7"]
+asyncio_extras
+
+[docs]
+Sphinx
+sphinx-autodoc-typehints
