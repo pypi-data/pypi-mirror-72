@@ -1,0 +1,3 @@
+[console_scripts]
+page_xml_to_mask = pagexml_to_mask.main:main
+

@@ -1,0 +1,11 @@
+README.md
+requirements.txt
+setup.py
+PageXML_to_Mask_converter.egg-info/PKG-INFO
+PageXML_to_Mask_converter.egg-info/SOURCES.txt
+PageXML_to_Mask_converter.egg-info/dependency_links.txt
+PageXML_to_Mask_converter.egg-info/entry_points.txt
+PageXML_to_Mask_converter.egg-info/requires.txt
+PageXML_to_Mask_converter.egg-info/top_level.txt
+pagexml_mask_converter/__init__.py
+pagexml_mask_converter/pagexml_to_mask.py
