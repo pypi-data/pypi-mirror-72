@@ -1,0 +1,13 @@
+gfypy/__init__.py,sha256=8dQad2bi_xnqUzhZIhkTrWnS3T6ks9zyiMDuHz3hdFI,110
+gfypy/client.py,sha256=-Avmum-KWnaP3qZFTLQuOwhWuzQsCn1NZC9MYSBzXWI,7224
+gfypy/exceptions.py,sha256=pg2LuQ_7hS1-dP8JKOVNjZ4hU7mc8N_nc5wxkgStqHo,754
+gfypy/gfy.py,sha256=gDR8t4OWf0dmex-SumpJ8xgR4Hvd_RHx0KfHW8RyH2Y,2079
+gfypy/helpers.py,sha256=7NWuZEVEuby2POyfdt_avirP5WizwuQle6iD1SlHTzM,55
+gfypy/http.py,sha256=YEy65gPyDMg50FWhse85HL2GXA1YuE4uEHis6eHibn0,2827
+gfypy/route.py,sha256=Iecz-XdqrR9h9kxaedbkMRxa0lQqv0JAPo14E8_55vM,673
+gfypy/user.py,sha256=mTBbE8kcVg4tZyYWzmi9q0w8d0s-6vCZ_YC-a_DOZUU,1188
+gfypy-0.0.6.dist-info/LICENSE,sha256=mTAKAO0e6Fr6yUhJG5YG0-vFZwXDR6tIrpcu1R3Sb6U,1065
+gfypy-0.0.6.dist-info/METADATA,sha256=l30EDvKzofElYJxWLORdfTuCpRy6ZA_ufQzG7fdyxUY,662
+gfypy-0.0.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gfypy-0.0.6.dist-info/top_level.txt,sha256=XZx-8uERdkk2-A8ufn5lT1BVx73FwNrqwYsNtKJ-cHk,6
+gfypy-0.0.6.dist-info/RECORD,,
