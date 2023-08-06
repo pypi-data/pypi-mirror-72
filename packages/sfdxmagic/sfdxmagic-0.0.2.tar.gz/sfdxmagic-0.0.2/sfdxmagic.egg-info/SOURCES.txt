@@ -1,0 +1,10 @@
+README.md
+setup.py
+sfdxmagic/__init__.py
+sfdxmagic/functions.py
+sfdxmagic/runner.py
+sfdxmagic.egg-info/PKG-INFO
+sfdxmagic.egg-info/SOURCES.txt
+sfdxmagic.egg-info/dependency_links.txt
+sfdxmagic.egg-info/requires.txt
+sfdxmagic.egg-info/top_level.txt
