@@ -1,0 +1,3 @@
+[console_scripts]
+release.py = dot_tools.scripts.release:main
+
