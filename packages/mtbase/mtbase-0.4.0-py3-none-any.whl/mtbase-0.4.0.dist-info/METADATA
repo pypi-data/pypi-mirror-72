@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: mtbase
+Version: 0.4.0
+Summary: The most fundamental Python modules for Minh-Tri Pham
+Home-page: https://github.com/inteplus/mtbase
+Author: ['Minh-Tri Pham']
+License: UNKNOWN
+Project-URL: Documentation, https://mtbase.readthedocs.io/en/stable/
+Project-URL: Source Code, https://github.com/inteplus/mtbase
+Platform: UNKNOWN
+Requires-Dist: psutil
+Requires-Dist: colorama
+Requires-Dist: Cython
+Requires-Dist: dask[distributed]
+
+UNKNOWN
+
+
