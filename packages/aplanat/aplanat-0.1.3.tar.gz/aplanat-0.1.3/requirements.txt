@@ -1,0 +1,9 @@
+# aplanat requirements. 
+# Add comments to keep track of why we are using particular versions
+bokeh
+fontawesome
+markdown
+numpy
+pandas>=1.0.3
+scipy
+si-prefix
