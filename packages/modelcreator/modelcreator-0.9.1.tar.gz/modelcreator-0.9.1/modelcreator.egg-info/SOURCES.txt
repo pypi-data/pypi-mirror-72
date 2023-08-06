@@ -1,0 +1,14 @@
+setup.py
+modelcreator/__init__.py
+modelcreator/machine.py
+modelcreator/metrics.py
+modelcreator/models.py
+modelcreator/models_generation.py
+modelcreator/transformation_pipelines.py
+modelcreator/transformation_utils.py
+modelcreator/transformer.py
+modelcreator.egg-info/PKG-INFO
+modelcreator.egg-info/SOURCES.txt
+modelcreator.egg-info/dependency_links.txt
+modelcreator.egg-info/requires.txt
+modelcreator.egg-info/top_level.txt
