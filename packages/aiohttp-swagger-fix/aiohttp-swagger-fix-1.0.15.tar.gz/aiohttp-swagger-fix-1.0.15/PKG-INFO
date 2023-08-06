@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: aiohttp-swagger-fix
+Version: 1.0.15
+Summary: Fix of aiothttp-swagger
+Home-page: https://github.com/daanklijn/aiohttp-swagger
+Author: Daan Klijn
+Author-email: daanklijn0@gmail.com
+License: MIT
+Download-URL: https://github.com/daanklijn/aiohttp-swagger/archive/1.0.15.tar.gz
+Description: UNKNOWN
+Keywords: aiohttp,swagger
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
