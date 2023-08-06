@@ -1,0 +1,11 @@
+README
+setup.py
+bin/cfdi
+cfdi/CfdiParser.py
+cfdi/__init__.py
+cfdi/_version.py
+cfdi/cli.py
+cfdi_cli.egg-info/PKG-INFO
+cfdi_cli.egg-info/SOURCES.txt
+cfdi_cli.egg-info/dependency_links.txt
+cfdi_cli.egg-info/top_level.txt
