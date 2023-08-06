@@ -1,0 +1,9 @@
+numpy>=1.12
+pandas
+matplotlib
+seaborn
+networkx==2.3.0
+scipy
+scikit-learn
+tqdm
+xlrd
