@@ -1,0 +1,3 @@
+include README
+include firm_manager.tar.gz
+recursive-include ad9xdds *.py

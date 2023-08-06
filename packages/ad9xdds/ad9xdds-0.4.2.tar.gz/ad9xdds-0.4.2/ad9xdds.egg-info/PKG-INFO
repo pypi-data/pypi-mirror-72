@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ad9xdds
+Version: 0.4.2
+Summary: Ad9xDds is library dedicated to handle AD9854 and AD9912 development board.
+Home-page: https://gitlab.com/bendub/ad9xdds
+Author: Benoit Dubois
+Author-email: benoit.dubois@femto-st.fr
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Provides-Extra: Pure_Python_signalslot_facilities
+Provides-Extra: PyQt_signalslot_facilities
+Provides-Extra: AD9854_support
