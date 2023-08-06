@@ -1,0 +1,3 @@
+import haxor
+
+haxor.main()
