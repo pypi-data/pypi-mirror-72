@@ -1,0 +1,8 @@
+Jinja2>=2.10.1
+networkx==2.4
+
+[Format JS]
+jsbeautifier
+
+[Format Python]
+black

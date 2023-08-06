@@ -1,0 +1,9 @@
+# Include the README
+include *.md
+
+# Include the license file
+include LICENSE.txt
+
+include jsonschema2popo/python_class.tmpl
+include jsonschema2popo/js_class.tmpl
+include test/valid/*
