@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: deepaicolorizer
+Version: 0.0.1
+Summary: Colorizer your bw photos
+Home-page: UNKNOWN
+Author: Islomferg
+Author-email: usfvouhd@gmail.com
+License: UNKNOWN
+Description: # <p align="center">deepaicolorizer
+        
+        ## Getting started.
+        ```
+        $ pip install deepaicolorizer
+        ```
+        
+        ## Colorize photos example
+        ```python
+        import colorizer
+        
+        api = colorizer.Colorizer('Token https://deepai.org')
+        print(api.colorizeByFile(open('test.png', 'rb')))
+        print(api.colorizeByImageUrl('https://www.python.org/static/img/python-logo.png'))
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
