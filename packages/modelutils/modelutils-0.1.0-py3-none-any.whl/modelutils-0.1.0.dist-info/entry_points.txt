@@ -1,0 +1,24 @@
+[console_scripts]
+modelutils-hash-onnx = modelutils.onnx.weights_hash:main
+modelutils-hash-openvino = modelutils.openvino.weights_hash:main
+modelutils-run-caffe = modelutils.caffe.run:main
+modelutils-run-onnx = modelutils.onnx.run:main
+modelutils-run-tensorflow = modelutils.tensorflow.run:main
+modelutils-summarize-onnx = modelutils.onnx.summarize:main
+modelutils-summarize-openvino = modelutils.openvino.summarize:main
+modelutils-summarize-tensorflow = modelutils.tensorflow.summarize:main
+mudump = modelutils.commands.dump:main
+mugetdata = modelutils.commands.get_data:main
+muload = modelutils.commands.load:main
+murun = modelutils.commands.run:main
+musetdata = modelutils.commands.set_data:main
+musummarize = modelutils.commands.summarize:main
+npdiff = modelutils.commands.diff:main
+npget = modelutils.commands.get:main
+npimage = modelutils.commands.image:main
+npjson = modelutils.commands.json:main
+npmax = modelutils.commands.max:main
+npprint = modelutils.commands.print:main
+nptranspose = modelutils.commands.transpose:main
+npzeros = modelutils.commands.zeros:main
+
