@@ -1,0 +1,3 @@
+[console_scripts]
+derivekey = derivekey.__main__:main
+
