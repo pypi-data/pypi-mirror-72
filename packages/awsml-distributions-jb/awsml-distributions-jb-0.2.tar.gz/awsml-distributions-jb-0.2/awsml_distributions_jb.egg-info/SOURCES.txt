@@ -1,0 +1,10 @@
+setup.py
+awsml-distributions-jb/Binomialdistribution.py
+awsml-distributions-jb/Gaussiandistribution.py
+awsml-distributions-jb/Generaldistribution.py
+awsml-distributions-jb/__init__.py
+awsml_distributions_jb.egg-info/PKG-INFO
+awsml_distributions_jb.egg-info/SOURCES.txt
+awsml_distributions_jb.egg-info/dependency_links.txt
+awsml_distributions_jb.egg-info/not-zip-safe
+awsml_distributions_jb.egg-info/top_level.txt
