@@ -1,0 +1,11 @@
+MANIFEST.in
+README.txt
+setup.py
+WofryWiser/__init__.py
+WofryWiser/version.py
+WofryWiser.egg-info/PKG-INFO
+WofryWiser.egg-info/SOURCES.txt
+WofryWiser.egg-info/dependency_links.txt
+WofryWiser.egg-info/not-zip-safe
+WofryWiser.egg-info/requires.txt
+WofryWiser.egg-info/top_level.txt
