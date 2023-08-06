@@ -1,0 +1,7 @@
+setup.py
+bin/cfdi-admin
+cfdi_admin/__init__.py
+cfdi_admin.egg-info/PKG-INFO
+cfdi_admin.egg-info/SOURCES.txt
+cfdi_admin.egg-info/dependency_links.txt
+cfdi_admin.egg-info/top_level.txt
