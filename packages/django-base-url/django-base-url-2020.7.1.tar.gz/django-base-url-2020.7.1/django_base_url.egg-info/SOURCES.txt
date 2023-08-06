@@ -1,0 +1,9 @@
+requirements.txt
+setup.py
+django_base_url/__init__.py
+django_base_url/context_processors.py
+django_base_url.egg-info/PKG-INFO
+django_base_url.egg-info/SOURCES.txt
+django_base_url.egg-info/dependency_links.txt
+django_base_url.egg-info/requires.txt
+django_base_url.egg-info/top_level.txt
