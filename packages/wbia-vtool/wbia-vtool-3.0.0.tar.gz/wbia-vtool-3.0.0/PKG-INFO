@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: wbia-vtool
+Version: 3.0.0
+Summary: Vtool - Image Tools for Wildbook IA
+Home-page: https://github.com/WildbookOrg/wbia-vtool
+Author: Avi Weinstock, Chuck Stewart, Hendrik Weideman, Jason Parham, Jon Crall, Zackary Rutfield, WildMe Developers
+Author-email: dev@wildme.org
+License: BSD
+Description: ===================
+        Wildbook IA - vtool
+        ===================
+        
+        |Pypi| |ReadTheDocs|
+        
+        Vision Tools - tools for computer vision. Part of the WildMe / Wildbook IA Project.
+        
+        
+        Repos relevant to the ibeis project:
+        
+        * https://github.com/WildbookOrg/wbia-vtool
+        
+        * https://github.com/WildbookOrg/wbia-pyflann
+        
+        * https://github.com/WildbookOrg/wbia-pyhesaff
+        
+        * https://github.com/WildbookOrg/wbia-utool
+        
+        * https://github.com/WildbookOrg/wildbook-ia
+        
+        
+        .. |Pypi| image:: https://img.shields.io/pypi/v/vtool.svg
+           :target: https://pypi.python.org/pypi/vtool
+        .. |ReadTheDocs| image:: https://readthedocs.org/projects/wbia-vtool/badge/?version=latest
+            :target: http://wbia-vtool.readthedocs.io/en/latest/
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 6 - Mature
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Unix
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Description-Content-Type: text/x-rst
+Provides-Extra: build
+Provides-Extra: all
+Provides-Extra: tests
+Provides-Extra: runtime
