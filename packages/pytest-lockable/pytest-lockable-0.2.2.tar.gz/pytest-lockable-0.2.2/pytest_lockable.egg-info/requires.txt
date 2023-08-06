@@ -1,0 +1,10 @@
+pytest
+func_timeout
+filelock
+pydash
+
+[dev]
+nose
+coveralls
+pylint
+coverage

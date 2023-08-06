@@ -1,0 +1,17 @@
+.gitignore
+.pylintrc
+LICENSE
+README.md
+setup.py
+.circleci/config.yml
+example/conftest.py
+example/resources.json
+example/test_example.py
+lockable/__init__.py
+lockable/plugin.py
+pytest_lockable.egg-info/PKG-INFO
+pytest_lockable.egg-info/SOURCES.txt
+pytest_lockable.egg-info/dependency_links.txt
+pytest_lockable.egg-info/requires.txt
+pytest_lockable.egg-info/top_level.txt
+tests/test_plugin.py
