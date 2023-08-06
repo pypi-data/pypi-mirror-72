@@ -1,0 +1,4 @@
+[console_scripts]
+pywharf_server=pywharf_core.server:run_server_cli
+pywharf_update_index=pywharf_core.workflow:update_index_cli
+
