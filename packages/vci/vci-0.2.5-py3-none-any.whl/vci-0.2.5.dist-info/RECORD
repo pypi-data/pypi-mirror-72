@@ -1,0 +1,14 @@
+vci/__init__.py,sha256=OUVVAGR_9ymWRGkKFgVA_B4nrg56NJa3y4hvk4U1Jfo,1325
+vci/__version__.py,sha256=cooHUhoYPGER3bw80_X0w2L11s4Rgv30YO6-DwMqnCQ,277
+vci/argument_parsing.py,sha256=YkLQ9ScS6ToBC54yl3MxRCJ1aWvXqTGB8IOc9dT-saE,1557
+vci/common.py,sha256=8XgXTyfH952b6T6bx9PSZYVgOg_8J5PIAtY7gGHn0S0,2126
+vci/config.py,sha256=d9MRs8wEMjIiTE_51831vPaTcP7nfbvpzqxnIBj5NzM,4038
+vci/console.py,sha256=0FfzFqGfuV14E_0Y12PITNEjeeWwKyez2wwyucKg5iM,4724
+vci/find.py,sha256=3AnadLxKEGGR95E8InDE90cuFERK1shDWpudMGLKmH8,7412
+vci/index_contents.py,sha256=uGpE6VsUg1d5TkciWTjpjkRxxmfO7eDeYmukUJmIXDU,2799
+vci-0.2.5.dist-info/LICENSE,sha256=2Vp9y-Z6EzFrTothLM6G8nOZ8F6DXI_chZKueB3xUc8,1514
+vci-0.2.5.dist-info/METADATA,sha256=ZlgPf4qQ2WheJXP7OIVBtF5IVbgwxqJopqzGdzpHnkQ,676
+vci-0.2.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+vci-0.2.5.dist-info/entry_points.txt,sha256=S1qu_KulpQNYIX2of5O4netbvGsBifWlqUQBLpW8fQo,34
+vci-0.2.5.dist-info/top_level.txt,sha256=HaViXaVYLoqcjH9z_IkZ7O5H1ugKfv8uTPfvxRVh44M,4
+vci-0.2.5.dist-info/RECORD,,
