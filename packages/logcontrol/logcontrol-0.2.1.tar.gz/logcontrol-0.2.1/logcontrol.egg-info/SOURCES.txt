@@ -1,0 +1,14 @@
+COPYING
+COPYING.LESSER
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+logcontrol/__init__.py
+logcontrol/constants.py
+logcontrol/loggers.py
+logcontrol/validation.py
+logcontrol.egg-info/PKG-INFO
+logcontrol.egg-info/SOURCES.txt
+logcontrol.egg-info/dependency_links.txt
+logcontrol.egg-info/top_level.txt
