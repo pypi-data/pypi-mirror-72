@@ -1,0 +1,3 @@
+[console_scripts]
+ab-decrypt=ab_decrypt.cli:main
+
