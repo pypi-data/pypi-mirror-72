@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: imaps
+Version: 0.5.0
+Summary: Bioinformatic pipelines for analysis of CLIP data
+Home-page: https://github.com/jernejule/imaps
+Author: Ule lab and Genialis, Inc.
+Author-email:  jernej.ule@crick.ac.uk
+License: Apache 2.0
+Description: Bioinformatic pipelines powering `iMaps`_ platform.
+        
+        .. _iMaps: https://imaps.genialis.com
+Keywords: imaps CLIP iCLIP bioinformatics protein
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6, <3.8
+Description-Content-Type: text/x-rst
+Provides-Extra: docs
+Provides-Extra: package
+Provides-Extra: test
