@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ketos
+Version: 2.0.0
+Summary: MERIDIAN Python package for deep-learning based acoustic detector and classifiers
+Home-page: https://gitlab.meridian.cs.dal.ca/public_projects/ketos
+Author: Fabio Frazao, Oliver Kirsebom
+Author-email: fsfrazao@dal.ca, oliver.kirsebom@dal.ca
+License: GNU General Public License v3.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6.0,<3.8.0
