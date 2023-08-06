@@ -1,0 +1,9 @@
+README.md
+setup.py
+autoreject/__init__.py
+autoreject/__main__.py
+autoreject/autoreject.py
+mastodon_autoreject.egg-info/PKG-INFO
+mastodon_autoreject.egg-info/SOURCES.txt
+mastodon_autoreject.egg-info/dependency_links.txt
+mastodon_autoreject.egg-info/top_level.txt
