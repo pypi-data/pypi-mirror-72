@@ -1,0 +1,16 @@
+aiosmb>=0.2.21
+bidict
+connexion
+connexion[swagger-ui]
+flask-sqlalchemy
+msldap>=0.3.10
+networkx
+pypykatz>=0.3.6
+sqlalchemy
+swagger-ui-bundle>=0.0.2
+tqdm
+werkzeug==0.16.1
+
+[:platform_system == "Windows"]
+colorama
+winacl>=0.0.6
