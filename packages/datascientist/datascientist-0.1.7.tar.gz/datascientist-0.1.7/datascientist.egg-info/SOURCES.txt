@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+datascientist/__init__.py
+datascientist.egg-info/PKG-INFO
+datascientist.egg-info/SOURCES.txt
+datascientist.egg-info/dependency_links.txt
+datascientist.egg-info/requires.txt
+datascientist.egg-info/top_level.txt
+datascientist/connections/__init__.py
+datascientist/connections/rsconnect.py
+datascientist/special/__init__.py
+datascientist/special/s3session.py
+datascientist/workflow/__init__.py
+datascientist/workflow/tracker.py
