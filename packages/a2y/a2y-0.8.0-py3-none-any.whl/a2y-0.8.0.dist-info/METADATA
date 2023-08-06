@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: a2y
+Version: 0.8.0
+Summary: A handy package for installing a2y series modules.
+Home-page: http://www.sorobust.com/a2y/a2y.html
+Author: Yu Han
+Author-email: hanjunyu@163.com
+License: Private
+Platform: Windows
+Platform: Linux
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: Free For Educational Use
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown
+Requires-Dist: a2y-mew
+Requires-Dist: a2y-testparameters
+Requires-Dist: a2y-modbus
+Requires-Dist: a2y-atsui
+Requires-Dist: a2y-ats
+Requires-Dist: a2y-touchui
+Requires-Dist: a2y-touch
+Requires-Dist: a2y-wxtools
+
+# Python Module: a2y
+这个模块的存在只是为了简化a2y系列模块的安装：只要安装a2y包，所有a2y系列的包都将一次性全部安装。
+是的，a2y模块依赖了其他所有a2y包。但它本身没有提供任何实质性的功能。
+
+
