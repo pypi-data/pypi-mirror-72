@@ -1,0 +1,16 @@
+transitions_gui/__init__.py,sha256=gwrDfcPcdtO5g_l2B3EKMtrRy4lhksrMlaAtQQ3P9Ig,46
+transitions_gui/settings.py,sha256=WiRE75ECKCT8H0swRfp0LeSjcMsn9LA_ih0fyGx5jRQ,233
+transitions_gui/version.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+transitions_gui/web.py,sha256=EomNVOeH-bZ2czKe9B1sAyg1Dq0b2jhmCxwzAulWaQ8,3726
+transitions_gui/handlers/__init__.py,sha256=cCEQIjfg4plv4zun1uytl_EMC5Tq22n28EDT2KrZhro,1093
+transitions_gui/static/css/style.css,sha256=MP_v20HhCNmsV8jdinIxRZPNrjnwRf2Fre1eUAIenPo,469
+transitions_gui/static/img/pencil.svg,sha256=6DwYH8o5PClmHdy8xwUoxzs89xUQ7OgKD-j3yEjGCFQ,1045
+transitions_gui/static/img/save.svg,sha256=VYIhxjYH3kYXP9lffJ2m5isymSlN-f5YAiLIPOdDMpk,1035
+transitions_gui/static/js/main.js,sha256=uScQp_nmjTAxlItpsEwMGarjTSX7buhCOQ_HmNBdsFM,523167
+transitions_gui/static/js/main.js.map,sha256=2pDaTSY5vmL2MdcfN-Ib-P2QCpT57MiiBbFveMeJ1uo,2299217
+transitions_gui/templates/index.html,sha256=HtOOECVSbhhRjpinWWSo-lkcnNzoflsh2cw-OCkvu0A,718
+transitions_gui-0.1.0.dist-info/LICENSE,sha256=A7JbJLU70k4G4onfKdnP5sDawkZqtBga_bcKenaDxd8,1073
+transitions_gui-0.1.0.dist-info/METADATA,sha256=O3N8IYSoleb-f5L-lFGDjDiVe-wCRlp1oUCN64Xk-ao,7796
+transitions_gui-0.1.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+transitions_gui-0.1.0.dist-info/top_level.txt,sha256=xLKLcblpMFIJvuzO5MxBcG6TBxQKyFklD3uQEq2wfA8,16
+transitions_gui-0.1.0.dist-info/RECORD,,
