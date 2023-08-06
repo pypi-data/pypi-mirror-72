@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: node-expressions
+Version: 0.1.2
+Summary: API for using expressions to create node graphs in blender
+Home-page: https://github.com/saulzar/node_expressions
+Author: Oliver Batchelor
+Author-email: saulzar@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Requires-Dist: fuzzywuzzy
+
+UNKNOWN
+
+
