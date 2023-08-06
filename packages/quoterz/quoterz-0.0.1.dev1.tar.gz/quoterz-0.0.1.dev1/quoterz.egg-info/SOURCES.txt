@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+quoterz/__init__.py
+quoterz.egg-info/PKG-INFO
+quoterz.egg-info/SOURCES.txt
+quoterz.egg-info/dependency_links.txt
+quoterz.egg-info/entry_points.txt
+quoterz.egg-info/top_level.txt
+quoterz/src/__init__.py
+quoterz/src/analyzer.py
+quoterz/src/interface/__init__.py
+quoterz/src/interface/command_line.py
