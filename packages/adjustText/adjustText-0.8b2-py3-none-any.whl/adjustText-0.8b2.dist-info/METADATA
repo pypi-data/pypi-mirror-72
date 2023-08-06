@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: adjustText
+Version: 0.8b2
+Summary: Iteratively adjust text position in matplotlib plots to minimize overlaps
+Home-page: https://github.com/Phlya/adjustText
+Author: Ilya Flyamer
+Author-email: flyamer@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: Matplotlib
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
