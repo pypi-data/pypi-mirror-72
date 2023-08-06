@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: bbc-dslib
+Version: 0.0.19
+Summary: A lib for the Data Science team at Blablacar
+Home-page: https://bitbucket.corp.blablacar.com/projects/lib/repos/dslib
+Author: Raphaël Berly
+Author-email: raphael.berly@blablacar.com
+License: closed
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Provides-Extra: google
+Provides-Extra: prophet
+Provides-Extra: database
