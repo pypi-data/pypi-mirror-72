@@ -1,0 +1,3 @@
+[console_scripts]
+dok8s=dok8s.cli.__main__:main
+
