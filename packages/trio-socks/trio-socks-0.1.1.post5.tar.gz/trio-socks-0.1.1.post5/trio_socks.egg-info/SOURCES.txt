@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+trio_socks/__init__.py
+trio_socks/log.py
+trio_socks.egg-info/PKG-INFO
+trio_socks.egg-info/SOURCES.txt
+trio_socks.egg-info/dependency_links.txt
+trio_socks.egg-info/requires.txt
+trio_socks.egg-info/top_level.txt
+trio_socks/socks5/__init__.py
+trio_socks/socks5/constructs.py
+trio_socks/socks5/error.py
+trio_socks/socks5/packets.py
+trio_socks/socks5/stream.py
