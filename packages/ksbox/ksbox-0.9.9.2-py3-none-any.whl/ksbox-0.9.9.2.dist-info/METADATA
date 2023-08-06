@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ksbox
+Version: 0.9.9.2
+Summary: 3,4,5,8-sbox module ddt,lat,1-1, 1-2, 2-1 ddt & lat
+Home-page: https://github.com/gy10040412/ksbox
+Author: KG
+Author-email: gi0412@kookmin.ac.kr
+License: UNKNOWN
+Download-URL: https://github.com/gy10040412/ksbox/archive/master.zip
+Keywords: pypi ksbox
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3
+Requires-Dist: colorama
+Requires-Dist: numpy
+
+UNKNOWN
+
+
