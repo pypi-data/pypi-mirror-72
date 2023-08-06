@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: splitio-requests
+Version: 0.4.3
+Summary: Split.io Admin API requests for humans
+Home-page: https://github.com/MikayelAleksanyan
+Author: Mikayel Aleksanyan
+Author-email: miko@cyberprogrammers.net
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.23)
+Requires-Dist: marshmallow (>=3.6)
+Requires-Dist: jsonpatch (>=1.25)
+Requires-Dist: dataclasses (==0.7) ; python_version < "3.7"
+
+# Splitio-requests
+
+
+
