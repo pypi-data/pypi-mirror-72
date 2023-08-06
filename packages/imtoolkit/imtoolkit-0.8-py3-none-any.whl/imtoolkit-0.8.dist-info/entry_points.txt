@@ -1,0 +1,4 @@
+[console_scripts]
+imsearch = imtoolkit.imsearch:main
+imtoolkit = imtoolkit.imtoolkit:main
+
