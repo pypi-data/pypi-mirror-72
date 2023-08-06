@@ -1,0 +1,3 @@
+[console_scripts]
+random_string = random_string:main
+
