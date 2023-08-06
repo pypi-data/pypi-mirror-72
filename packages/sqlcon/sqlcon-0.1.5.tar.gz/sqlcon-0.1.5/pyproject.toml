@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "sqlcon"
+version = "0.1.5"
+description = "Construct indented SQL from Python."
+readme = "README.md"
+authors = ["Timothy Corbett-Clark <timothy.corbettclark@gmail.com>"]
+license = "MIT"
+keywords = ["SQL", "indent", "format", "template", "construct"]
+homepage = "https://github.com/tcorbettclark/sql-constructor"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+flake8 = "^3.8.3"
+isort = "^4.3.21"
+nose2 = {version = ">=0.6.5", extras = ["coverage_plugin"]}
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
