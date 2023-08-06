@@ -1,0 +1,24 @@
+.content {
+  max-width:45em;
+  margin-top:2em;
+  margin-bottom:2em;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.content ul {
+  margin-left:1em;
+}
+
+.content p{
+  margin-top: 1em;
+  text-align: justify;
+}
+
+.post-list {
+}
+
+.post-list-item {
+  margin: 2em 0 ;
+}
+
