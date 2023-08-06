@@ -1,0 +1,6 @@
+{
+    "title": "Workload Template",
+    "description": "Using Excel's Team add-on, copy all work items with the tag \"Workload Template\". Past those tags in the excel table & change the Tags & the name of the feature to match your workload's name.",
+    "tags": ["Workload Template"],
+    "roles": []
+}

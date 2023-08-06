@@ -1,0 +1,6 @@
+{
+    "title": "Update the migration tooling decision tree to reflect VMWare migration options",
+    "description": "Download and modify the migration tool decision tree to align to your expanded migration processes https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/decision-guides/migrate-decision-guide/",
+    "tags": ["First Host"],
+    "roles": []
+}
