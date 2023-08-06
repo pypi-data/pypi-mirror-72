@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: chocobo-test
+Version: 0.0.3
+Summary: chocobo is a python package for delicious chocobo recipes.
+Home-page: https://github.com/shaypal5/chocobo
+Author: Ana Garcia
+Author-email: ana.n.garcia2@gmail.com
+License: MIT
+Description: # Example Package
+        
+        This is a simple example package. You can use
+        [Github-flavored Markdown]()(https://guides.github.com/features/mastering-markdown/)
+        to write your content.
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.5
