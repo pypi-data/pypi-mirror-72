@@ -1,0 +1,10 @@
+setup.py
+gubi_distributions/Binomialdistribution.py
+gubi_distributions/Gaussiandistribution.py
+gubi_distributions/Generaldistribution.py
+gubi_distributions/__init__.py
+gubi_distributions.egg-info/PKG-INFO
+gubi_distributions.egg-info/SOURCES.txt
+gubi_distributions.egg-info/dependency_links.txt
+gubi_distributions.egg-info/not-zip-safe
+gubi_distributions.egg-info/top_level.txt
