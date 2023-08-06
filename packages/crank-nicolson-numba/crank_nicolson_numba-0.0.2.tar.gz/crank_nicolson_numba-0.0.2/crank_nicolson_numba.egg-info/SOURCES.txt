@@ -1,0 +1,11 @@
+README.md
+setup.py
+crank_nicolson_numba/__init__.py
+crank_nicolson_numba/core.py
+crank_nicolson_numba/generic.py
+crank_nicolson_numba/nekhoroshev.py
+crank_nicolson_numba.egg-info/PKG-INFO
+crank_nicolson_numba.egg-info/SOURCES.txt
+crank_nicolson_numba.egg-info/dependency_links.txt
+crank_nicolson_numba.egg-info/requires.txt
+crank_nicolson_numba.egg-info/top_level.txt

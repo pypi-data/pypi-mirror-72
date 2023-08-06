@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: crank_nicolson_numba
+Version: 0.0.2
+Summary: A numba implementation of Crank-Nicolson
+Home-page: https://github.com/carlidel/crank_nicolson_numba
+Author: Carlo Emilio Montanari
+Author-email: carlidel95@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
