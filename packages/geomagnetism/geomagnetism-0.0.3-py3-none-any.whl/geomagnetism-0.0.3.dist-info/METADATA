@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: geomagnetism
+Version: 0.0.3
+Summary: toolbox for geomagnetism computation
+Home-page: https://github.com/Bertin-fap/geomagnetism-exemples
+Author: ArrayStream(François Bertin)
+Author-email: francois.bertin7@wanadoo.fr
+License: MIT
+Keywords: Raman,hyperspectra,data processing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+## Product Name
+Toolbox of utilities to compute the geomagmetic field.
+
+## Installation
+Run the following to install:
+```python
+pip install geomagnetism
+```
+
+## Usage example
+**refer to** [example-raman-hyperspectra](https://github.com/Bertin-fap/geomagnetism-exemples).
+
+
+# Release History
+0.0.1
+
+# Meta
+	- François Bertin– francois.bertin7@wanadoo.fr 
+
+Distributed under the [MIT license](https://mit-license.org/)
+
+# About the authors
+	- François Bertin now retired was an expert senior in nanocharacterization at CEA-LETI
+
