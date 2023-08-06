@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: molgemtools
+Version: 0.0.3
+Summary: Tools for working with molecular geometry data.
+Home-page: https://gitlab.com/d_attila/molgemtools.git
+Author: Attila Dékány
+Author-email: dekanyattilaadam@gmail.com
+License: MIT
+Project-URL: Documentation, https://d_attila.gitlab.io/molgemtools/
+Project-URL: Source Code, https://gitlab.com/d_attila/molgemtools.git
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: numpy
+
+Tools for working with molecular geometry data.
+
+
