@@ -1,0 +1,12 @@
+README.md
+setup.py
+certreader/__init__.py
+certreader/cli.py
+certreader/oid.py
+certreader/parse.py
+certreader.egg-info/PKG-INFO
+certreader.egg-info/SOURCES.txt
+certreader.egg-info/dependency_links.txt
+certreader.egg-info/entry_points.txt
+certreader.egg-info/requires.txt
+certreader.egg-info/top_level.txt
