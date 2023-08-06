@@ -1,0 +1,46 @@
+# noerr
+
+Catch exceptions via context manager in Python.
+
+Super simple to use:
+
+```python
+from noerr import no_err
+
+with no_err:
+    raise Exception("This won't crash my code!")
+
+print("Yup, still going with no error!")
+```
+
+Also possible to log errors:
+
+
+```python
+from noerr import log_err
+
+with log_err:
+    raise Exception("Should probably warn the user about this one.")
+
+print("We now see the error, but don't stop because of it")
+```
+
+Outputs:
+```
+Exception logged by "LogError"
+Traceback (most recent call last):
+  File "<input>", line 4, in <module>
+Exception: Should probably warn the user about this one.
+
+We now see the error, but don't stop because of it
+```
+
+## Install 
+
+```
+pip install noerr
+```
+
+## License 
+
+MIT License - Copyright (c) 2020 Chris Griffith - See LICENSE

@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "noerr"
+version = "1.0.0a0"
+description = "Catch exceptions via a context manager in Python"
+authors = ['Chris Griffith <chris@cdgriffith.com>']
+readme ='README.md'
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.black]
+line-length = 120
+target-version = ['py36', 'py37', 'py38']
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.idea
+  | \.pytest_cache
+  | _build
+  | build
+  | dist
+  | venv
+)/
+'''
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
