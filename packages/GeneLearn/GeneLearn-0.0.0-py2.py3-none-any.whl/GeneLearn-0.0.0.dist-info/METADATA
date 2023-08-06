@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: GeneLearn
+Version: 0.0.0
+Summary: Metaoptimization of genetic algorithms for machine learning
+Home-page: https://github.com/Fittiboy/GeneLearn
+License: UNKNOWN
+Keywords: AI, Artificial Intelilgence, Genetic Algorith, Evolutionary Algorithm, Evolution, Machine Learning, Gene, Learn
+Author: Fitti
+Author-email: dev@fitti.io
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Legal Industry
+Classifier: Intended Audience :: Manufacturing
+Classifier: Intended Audience :: Other Audience
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Project-URL: Bugtracker, https://github.com/Fittiboy/GeneLearn/issues
+Project-URL: Documentation, https://docs.genelearn.ai
+
+# GeneLearn
+A Machine Learning optimization project.<br>
+Using a genetic algorithm for hyperparameter tuning.<br>
+Collecting data on this process to optimize efficiency.
+
