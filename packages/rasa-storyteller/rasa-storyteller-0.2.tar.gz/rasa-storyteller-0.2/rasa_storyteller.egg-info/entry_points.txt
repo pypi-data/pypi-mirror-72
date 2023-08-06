@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        rasa-storyteller=gui.run:launcher
+    
