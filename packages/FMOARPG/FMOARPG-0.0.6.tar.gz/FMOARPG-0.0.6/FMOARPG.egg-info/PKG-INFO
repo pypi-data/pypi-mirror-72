@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: FMOARPG
+Version: 0.0.6
+Summary: Biblioteca para integrar Forge e Power BI
+Home-page: https://github.com/Jpornelas/MAPyForg/tree/master/MAPyForg
+Author: John Martins
+Author-email: jpornelas@poli.ufrj.br
+License: MIT
+Description: Esta biblioteca foi desenvolvida para integrar as APIs da plataforma Forge com o Power BI de maneira direta e simplificada
+Keywords: Forge
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Topic :: Software Development :: Libraries
