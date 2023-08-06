@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: proofdock-chaos-middleware-python
+Version: 0.1.0.dev4
+Summary: A chaos engineering framework for Python applications.
+Home-page: https://github.com/proofdock/chaos-middleware-python
+Author: Proofdock Authors
+Author-email: support@proofdock.io
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5.*
+Description-Content-Type: text/markdown
+
+# Proofdock chaos middleware for Python
+
+![CI](https://github.com/proofdock/chaos-middleware-python/workflows/CI/badge.svg?branch=master)
+[![Python versions](https://img.shields.io/pypi/pyversions/proofdock-chaos-middleware-python.svg)](https://www.python.org/)
+
+Practice chaos engineering on Python applications. This project is a collection of features to inject application level failures. Various Python frameworks are supported.
+
+## Project description
+
+This project is part of the Proofdock Chaos Engineering Platform that helps you to write, run, store and analyze chaos experiments in your Azure DevOps environment.
+
+For more information visit our official [website][proofdock] or [documentation][proofdock_docs]. Feel free to ask for support for this package on [GitHub][proofdock_support].
+
+## Install
+
+This package requires Python 3.5+
+
+```
+$ pip install -U proofdock-chaos-middleware-python
+```
+
+## Usage
+
+To be defined ...
+
+## Configuration
+
+To be defined ...
+
+[proofdock]: https://proofdock.io/
+[proofdock_docs]: https://docs.proofdock.io/
+[proofdock_support]: https://github.com/proofdock/chaos-support/
+
+

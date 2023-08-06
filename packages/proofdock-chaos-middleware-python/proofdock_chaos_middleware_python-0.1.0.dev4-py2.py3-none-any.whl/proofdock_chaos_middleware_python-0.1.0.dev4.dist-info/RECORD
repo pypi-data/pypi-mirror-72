@@ -1,0 +1,11 @@
+pdchaos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdchaos/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdchaos/core/inject.py,sha256=jIqA1tt_kYAqmld7UXur9l0bm8xlY1_eOtYCnRS4WKA,92
+pdchaos/core/url.py,sha256=bdJYM1DgX_v3uLXMUBGIypWTQRguWwBft6m2Neb6Ufo,144
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_inject.py,sha256=bCHzZ8FJSSGlbdOYdmH85G6kmN8eO1VE4erCc-T5-B4,219
+proofdock_chaos_middleware_python-0.1.0.dev4.dist-info/METADATA,sha256=PfTuyhhh8Y_wIXnJN0sOC3MOA0TAkojnp0OUDZRMYlo,1981
+proofdock_chaos_middleware_python-0.1.0.dev4.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+proofdock_chaos_middleware_python-0.1.0.dev4.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+proofdock_chaos_middleware_python-0.1.0.dev4.dist-info/top_level.txt,sha256=gMUUyUftUttgFw85uc7iBiuM9F5IoQZXojkRO1d3_q4,14
+proofdock_chaos_middleware_python-0.1.0.dev4.dist-info/RECORD,,
