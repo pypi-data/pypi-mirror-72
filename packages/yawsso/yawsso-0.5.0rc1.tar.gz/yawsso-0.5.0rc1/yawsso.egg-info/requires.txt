@@ -1,0 +1,14 @@
+
+[dev]
+twine
+setuptools
+wheel
+
+[test]
+pytest
+pytest-cov
+flake8
+mockito
+cli-test-helpers
+nose2
+coveralls
