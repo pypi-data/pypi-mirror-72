@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+src/main.cpp
+wagyu/__init__.py
+wagyu.egg-info/PKG-INFO
+wagyu.egg-info/SOURCES.txt
+wagyu.egg-info/dependency_links.txt
+wagyu.egg-info/not-zip-safe
+wagyu.egg-info/requires.txt
+wagyu.egg-info/top_level.txt
