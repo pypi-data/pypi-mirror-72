@@ -1,0 +1,13 @@
+README.md
+setup.py
+audioplayer/__init__.py
+audioplayer/abstractaudioplayer.py
+audioplayer/audioplayer_linux.py
+audioplayer/audioplayer_macos.py
+audioplayer/audioplayer_windows.py
+audioplayer.egg-info/PKG-INFO
+audioplayer.egg-info/SOURCES.txt
+audioplayer.egg-info/dependency_links.txt
+audioplayer.egg-info/top_level.txt
+test/test_cmds.py
+test/test_formats.py
