@@ -1,0 +1,10 @@
+django_htmx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_htmx/static/htmx/htmx.min.js,sha256=OYXct6GDYwzkRnPIJq0VlBgfO05cUP3BO4_dzM6efds,21096
+django_htmx/templates/htmx/script.html,sha256=GwMVGnvfxkoyAhs7H4X_1Mr9ulpL3fvbhdSZ09zaNac,75
+django_htmx/templates/htmx/wrapper.html,sha256=-nJNJMfBi-Qg8nYGar7TJ6jDmqWXDlb9IUBSJv96xfU,53
+django_htmx/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_htmx/templatetags/htmx.py,sha256=sAhhIeUW-F4Jme1e0MyMN2IK-dhAPDAvhqNpa8zOoIw,3099
+django_htmx/views.py,sha256=LwYc-Gz3jMsn12HIKPx1ziAJTGfyRAxcdgMEsER4CN8,1064
+django_htmx-0.1.0.dist-info/WHEEL,sha256=G_NFpzHmv_dUXgCUSAWL0-bLL-eMzYU6DzDeGXbRXUk,83
+django_htmx-0.1.0.dist-info/METADATA,sha256=YUVl2W0rr9cDucQQ6pQMOw2V9e7mvdvPZFEiCN91AmM,479
+django_htmx-0.1.0.dist-info/RECORD,,
