@@ -1,0 +1,17 @@
+SimLight/__init__.py,sha256=aTQ10xpQ6pNJXqrrn_0MUNyyLy_h0PVeW3UTNfJtEdI,654
+SimLight/_version.py,sha256=miSsqPy2PFJ18TW9kocQJLcv4HFpkfQhcTzgAO-GTVE,22
+SimLight/aperture.py,sha256=1sYz9tNFVC3H9i8yuxftAHcUx3HrKTqmTDv4_T4NevE,578
+SimLight/calc.py,sha256=9t5SVjTFE6_YVaxBqxtewLoABUzAU3o8LJDtVp123nc,4563
+SimLight/diffraction.py,sha256=jIsK5AqVCS_EqtnXCYFoq6mM3y-Vh5Y4YmSOyV6fxmQ,3870
+SimLight/field.py,sha256=Iq8Rt9iMcWNKvWcWGZXPfYI3mYTScSAIOzH-GfhToXc,11282
+SimLight/lens.py,sha256=8vHjS76j3wb2eST1xMSmnNYhoGD9LEVNsEBvh_h8rmo,2933
+SimLight/plottools.py,sha256=f08jTwTpvXG7A9dBite0EEAMVgf7tto8oqtmNBP1kXw,8017
+SimLight/propagation.py,sha256=53NYNqdOCFx8wgk1jcDOkENui2-ZnV7f_KBSK-QEWAo,3874
+SimLight/unwrap.py,sha256=lg-C3m3c7VKqDmtBoUMZSQIToJvkunT-UK0N93yKdfU,532
+SimLight/utils.py,sha256=S_LB9qbCoT58tVzAqW1Mq1ptd4z_AvtXzIkJRO-kDCE,1760
+SimLight/zernike.py,sha256=TyolosnQLpwF4jyF36KDKWzl9PGyNKngHoq7gWxGE2A,2568
+SimLight-0.0.2.dist-info/LICENSE,sha256=2Z2A_QgrKBqLV9exGKwxZeYQZffGsNqfYGu9349Otig,1061
+SimLight-0.0.2.dist-info/METADATA,sha256=9aGw5Q_mu0Piygdhl5r3QnEEUxVV-xMrM3_qUi1ChY0,605
+SimLight-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+SimLight-0.0.2.dist-info/top_level.txt,sha256=loc9peucD5MBiR1cxCb-Yc7G0nptKzo4pwy5geBA0Aw,9
+SimLight-0.0.2.dist-info/RECORD,,

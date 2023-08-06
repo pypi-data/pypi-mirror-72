@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: SimLight
+Version: 0.0.2
+Summary: A tool helps your optical simulation.
+Home-page: https://github.com/Miyoshichi/SimLight
+Author: Miyoshichi
+Author-email: zhou.x.ae@m.titech.ac.jp
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+# SimLight
+A tool helps your optical simulation.
+
