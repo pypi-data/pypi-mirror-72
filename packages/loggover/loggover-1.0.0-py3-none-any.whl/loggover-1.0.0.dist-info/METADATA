@@ -1,0 +1,184 @@
+Metadata-Version: 2.1
+Name: loggover
+Version: 1.0.0
+Summary: module to log requests and response
+Home-page: UNKNOWN
+Author: Priyansh
+Author-email: 17bcs140@ietdavv.edu.in
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.0
+Description-Content-Type: text/markdown
+
+A logger for just about everything. The walkover product.
+
+<h2>Motivation</h2>
+logging is very essential part of any application when you debug ,it helps you a alot. So it is useful for logging purposes.
+
+<h2>Documentation</h2>
+To install loggover use below command:
+<pre><code>pip install loggover</code></pre>
+
+After installation here comes the configuration part , one need to do in order to use this logger in flask application. 
+All you need to do is to copy below snippet and paste it in a file with name "config.json" (NOTE: file name must be same) in your current working directory.
+PLease go through all the comments in the below snippet to understand configurable properties betterly.
+<pre><code>
+{
+    //change below project id to your project id from viasocket's project
+    <b><i>"project_id":"yhfxSRneYYbMjudS1ysj",</i></b>
+    //change below auth_key to your auth_key from viasocket's project
+    <b><i>"auth_key":"ucdPnQgLqT2GPsquD9xv",</i></b>
+    //includes is the list of routes whose logs you want to log."*" means all routes otherwise you can use like "includes"=["/login","/register"]
+    <b><i>"includes":["*"],</i></b>
+    //It is list of levels containg logging levels whose logs you want to log (like error or warn or info) 
+    <b><i>"levels":["*"],</i></b>
+    //This is the time interval in "seconds" after which the this config file will be automatically loaded to get updated value of includes and levels.
+    <b><i>"time_to_refresh_cofg_file" : "30",</i></b>
+    //Below parameter help you set the alias and conditions to check for a particular route.Refer below example for more clarity, here all routes of /login routes go to login flow and it will go if and only if (status_code==200 or name=='priyansh' and method=='get') is true.
+    <b><i>"route_to_endpoint_map" : </i></b>{
+        "/login":{
+            "alias":"/login",
+            "conditions":{
+                "conditionA":{
+                   "condition1":["status_code","200","=="],
+                   "condition2":["name","priyansh","=="]
+                },
+                "conditionB":{
+                    "condition1":["method","GET","=="]
+                }
+            }
+        },
+        "/register":{
+            "alias":"/register"
+        },
+        "/logout":{
+            "alias":"/logout"
+        }
+    }
+}
+</code></pre>
+<h5><i>hasshh!! we are done with this. Lets move forward.</i></h5>
+
+After successfully completing above step , lets move to the core functionality of our logger i.e logging request and response data. For this copy and paste below code in the end of your flask application.
+Before this, PLease make sure you have following imports in your app, install packages if require.
+<pre>
+<code>
+import datetime
+import time
+import json
+import loggover
+from flask import Flask, g, request, abort, jsonify,Response
+</code>
+</pre>
+<pre><code>
+@app.before_request
+def start_timer():
+    print('before every request')
+    g.start = time.time()
+
+@app.after_request
+def fun(response):
+    loggover.log_request(response)
+    return response
+</code></pre>
+
+<h2>Heads up!! We are done.</h2>
+
+logger does not stop serving here only , it has something more for you. Apart from request and response logs  , if you want to log info or error or warning logs then for this logger has three more methods. you can use this methods anywhere you want.
+
+for reference see below snippet.
+<pre>
+<h3>info() method</h3><code>loggover.info('Information message')
+</code>
+</pre>
+
+<pre>
+<h3>warn() method</h3><code>loggover.warn('Warning!!')
+</code>
+</pre>
+
+<pre>
+<h3>error() method</h3><code>loggover.error('Opps!!Error!')
+</code>
+</pre>
+
+<h3>We won't stop here!!</h3>
+In our applications, we may come accross many Runtime Exceptions and Http Exceptions, but we always want our application to have a normal flow and termination, to handle such Exception in your application, pase following snippet at the top of your app.
+<pre><code>
+@app.errorhandler(Exception)
+def handle_exception(e):
+    x=init.handle_exc(e)
+    return x
+</code></pre>
+
+<h4>we are almost done now...but for better understanding about how to use this logger, have a look at complete flask application which uses this logger.</h4>
+<pre><code>
+import datetime
+import time
+import json
+import loggover
+
+from flask import Flask, g, request, abort, jsonify,Response
+
+app = Flask(__name__)
+
+@app.errorhandler(Exception)
+def handle_exception(e):
+    x=loggover.handle_exc(e)
+    return x
+
+@app.route("/")
+def index():
+    loggover.info('inside index')
+    print(1/0)
+    print("index is running!")
+    return "Hello world"
+
+@app.route("/login")
+def login():
+    loggover.error('inside login')
+    name=request.form.get('name')
+    pwd=request.form.get('pwd')
+    response = {"name": name, "pwd": pwd}
+    print(type(response))
+    return response
+
+@app.route("/register")
+def register():
+    loggover.warn('inside register')
+    print("on register page!")
+    return "response page!"
+
+@app.route("/logout")
+def logout():
+    loggover.info('inside logout')
+    abort(404, description="Resource not found")
+    print("on logout page!")
+    return "logout page"
+
+@app.route('/users/<id>')
+def print_user(id):
+    print(id)
+    print('url_rule ',request.url_rule)
+    return "user detail printed"
+
+
+if __name__ == "__main__":
+    app.run()
+
+
+
+@app.before_request
+def start_timer():
+    print('before every request')
+    g.start = time.time()
+
+@app.after_request
+def fun(response):
+    loggover.log_request(response)
+    return response
+</code></pre>
+
