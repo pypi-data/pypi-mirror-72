@@ -1,0 +1,3 @@
+[console_scripts]
+webuntis-cli = webuntis_cli.run:main
+

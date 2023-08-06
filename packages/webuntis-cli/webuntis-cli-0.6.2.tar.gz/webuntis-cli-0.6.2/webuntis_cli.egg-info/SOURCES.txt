@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+webuntis_cli/__init__.py
+webuntis_cli/run.py
+webuntis_cli.egg-info/PKG-INFO
+webuntis_cli.egg-info/SOURCES.txt
+webuntis_cli.egg-info/dependency_links.txt
+webuntis_cli.egg-info/entry_points.txt
+webuntis_cli.egg-info/requires.txt
+webuntis_cli.egg-info/top_level.txt
