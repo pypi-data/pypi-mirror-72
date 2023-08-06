@@ -1,0 +1,13 @@
+data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_sample.py,sha256=JM1HCMJab3r0GpVCC1XDjxUyuTdEb5C4mFnoieejECw,2930
+tests/Event/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/User/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vaknl_user/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vaknl_user/Event/__init__.py,sha256=93Jr80Qfbm5FLnny1DIQYgD1PTXW96DJqtawuun66yE,7820
+vaknl_user/User/__init__.py,sha256=Gb_U8hJJ7gi630TCdubWSJbykjdgo3XLx6OPt1lxJes,37803
+vaknl_user-1.0.20.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+vaknl_user-1.0.20.dist-info/METADATA,sha256=CPKcBK5dsSpei1GLP84_JHoO2VYM5bbrLAz8dYa4uqo,2897
+vaknl_user-1.0.20.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+vaknl_user-1.0.20.dist-info/top_level.txt,sha256=C0qCMssvSwX5HCIchnwmTQgiogzD-K9qTSgVK-Xfqo4,22
+vaknl_user-1.0.20.dist-info/RECORD,,
