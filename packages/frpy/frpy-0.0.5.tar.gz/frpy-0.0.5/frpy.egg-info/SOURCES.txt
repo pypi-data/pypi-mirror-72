@@ -1,0 +1,9 @@
+README.md
+setup.py
+frpy/__init__.py
+frpy/api.py
+frpy.egg-info/PKG-INFO
+frpy.egg-info/SOURCES.txt
+frpy.egg-info/dependency_links.txt
+frpy.egg-info/requires.txt
+frpy.egg-info/top_level.txt
