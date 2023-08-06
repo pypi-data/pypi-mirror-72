@@ -1,0 +1,12 @@
+README.md
+setup.py
+iac_bootstrap/__init__.py
+iac_bootstrap/generate.py
+iac_bootstrap/infra_bootstrap.py
+iac_bootstrap/infra_builder_terraform.py
+iac_bootstrap/install_nginx.py
+iac_bootstrap/remove_terraform.py
+iac_bootstrap.egg-info/PKG-INFO
+iac_bootstrap.egg-info/SOURCES.txt
+iac_bootstrap.egg-info/dependency_links.txt
+iac_bootstrap.egg-info/top_level.txt
