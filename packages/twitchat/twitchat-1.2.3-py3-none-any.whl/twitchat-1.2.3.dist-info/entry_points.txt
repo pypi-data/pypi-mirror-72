@@ -1,0 +1,4 @@
+[console_scripts]
+twitchat=twitchat.twitchbot:main
+twitchat-settings=twitchat.settings:main
+
