@@ -1,0 +1,14 @@
+requirements.txt
+setup.py
+django_s3_static/__init__.py
+django_s3_static/apps.py
+django_s3_static/utils.py
+django_s3_static.egg-info/PKG-INFO
+django_s3_static.egg-info/SOURCES.txt
+django_s3_static.egg-info/dependency_links.txt
+django_s3_static.egg-info/requires.txt
+django_s3_static.egg-info/top_level.txt
+django_s3_static/management/__init__.py
+django_s3_static/management/commands/__init__.py
+django_s3_static/management/commands/s3_static_create.py
+django_s3_static/management/commands/s3_static_sync.py
