@@ -1,0 +1,10 @@
+README.md
+setup.py
+xcrypto/__init__.py
+xcrypto/xcrypto.py
+xcrypto.egg-info/PKG-INFO
+xcrypto.egg-info/SOURCES.txt
+xcrypto.egg-info/dependency_links.txt
+xcrypto.egg-info/entry_points.txt
+xcrypto.egg-info/requires.txt
+xcrypto.egg-info/top_level.txt

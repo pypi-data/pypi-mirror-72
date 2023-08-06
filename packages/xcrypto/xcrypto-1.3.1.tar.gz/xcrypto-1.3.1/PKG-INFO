@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: xcrypto
+Version: 1.3.1
+Summary: Used to encrypt or decrypt based on an SSH RSA key pair.
+Home-page: https://github.com/azweb76/x-crypto
+Author: Dan Clayton
+Author-email: dan@azwebmaster.com
+License: MIT
+Description: UNKNOWN
+Keywords: encrypt decrypt
+Platform: UNKNOWN
