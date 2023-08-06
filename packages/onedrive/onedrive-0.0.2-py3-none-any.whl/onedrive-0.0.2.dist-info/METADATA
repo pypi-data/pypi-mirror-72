@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: onedrive
+Version: 0.0.2
+Summary: Download shared folders with Selenium in bulk.
+Home-page: https://github.com/foxe6/onedrive
+Author: f̣ộx̣ệ6
+Author-email: foxe6@protonmail.com
+License: AGPL-3.0
+Keywords: onedrive sharepoint downloader bulk
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: selenium (==3.141.0)
+Requires-Dist: omnitools (>=0.0.1)
+
+# OneDrive / SharePoint Bulk Downloader
+
+<badges>[![version](https://img.shields.io/pypi/v/onedrive.svg)](https://pypi.org/project/onedrive/)
+[![license](https://img.shields.io/pypi/l/onedrive.svg)](https://pypi.org/project/onedrive/)
+[![pyversions](https://img.shields.io/pypi/pyversions/onedrive.svg)](https://pypi.org/project/onedrive/)  
+[![donate](https://img.shields.io/badge/Donate-Paypal-0070ba.svg)](https://paypal.me/foxe6)
+[![powered](https://img.shields.io/badge/Powered%20by-UTF8-red.svg)](https://paypal.me/foxe6)
+[![made](https://img.shields.io/badge/Made%20with-PyCharm-red.svg)](https://paypal.me/foxe6)
+</badges>
+
+<i>Download shared folders with Selenium in bulk.</i>
+
+# Hierarchy
+
+```
+onedrive
+|---- OneDrive()
+'---- SharePoint()
+```
+
+# Example
+
+## python
+```python
+
+```
+
+
