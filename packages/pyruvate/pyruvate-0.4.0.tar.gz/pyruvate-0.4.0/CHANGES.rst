@@ -1,0 +1,28 @@
+Changelog
+=========
+
+0.4.0 (2020-06-29)
+------------------
+
+* Add a new worker that does nonblocking write
+* Add default arguments
+* Add option to configure maximum number of request headers
+* Add Via header
+
+0.3.0 (2020-06-16)
+------------------
+
+* Switch to rust-cpython
+* Fix passing of tcp connections to worker threads
+
+0.2.0 (2020-03-10)
+------------------
+
+* Added some Python tests (using py.test and tox)
+* Improve handling of HTTP headers
+* Respect content length header when using sendfile
+
+0.1.0 (2020-02-10)
+------------------
+
+* Initial release
