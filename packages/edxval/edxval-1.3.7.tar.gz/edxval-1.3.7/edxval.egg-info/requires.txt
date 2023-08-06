@@ -1,0 +1,11 @@
+edx-drf-extensions
+Django>=1.11
+django-storages
+django-fernet-fields
+django-model-utils
+boto
+pysrt
+lxml
+
+[:python_version < "3.6"]
+enum34
