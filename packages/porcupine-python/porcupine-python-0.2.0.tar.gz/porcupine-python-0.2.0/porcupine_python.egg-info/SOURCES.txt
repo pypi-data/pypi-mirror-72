@@ -1,0 +1,10 @@
+README.md
+setup.py
+porcupine/__init__.py
+porcupine/base.py
+porcupine/version.py
+porcupine_python.egg-info/PKG-INFO
+porcupine_python.egg-info/SOURCES.txt
+porcupine_python.egg-info/dependency_links.txt
+porcupine_python.egg-info/requires.txt
+porcupine_python.egg-info/top_level.txt
