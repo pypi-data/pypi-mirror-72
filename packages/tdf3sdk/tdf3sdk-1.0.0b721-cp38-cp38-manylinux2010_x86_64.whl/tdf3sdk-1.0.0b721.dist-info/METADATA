@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: tdf3sdk
+Version: 1.0.0b721
+Summary: Python Wrapper for TDF3 SDK
+Home-page: https://developer.virtru.com/
+Author: Virtru
+Author-email: developers@virtru.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Description-Content-Type: text/markdown
+
+# TDF3 SDK
+
+## License
+
+The following files are covered under the MIT license:
+
+### General
++ [Python](http://www.python.org "Python home page") This module is built with Python3 libraries so it will ONLY work
+with python3.
+
+The module works on macOS and Raspberry pi4
+
+## Installing the module
+
+
