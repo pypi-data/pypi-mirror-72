@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: MoveItPa
+Version: 0.0.3
+Summary: A movement recognition library
+Home-page: UNKNOWN
+Author: Djamel RAAB
+Author-email: djamelraab95@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: absl-py
+Requires-Dist: astunparse
+Requires-Dist: cachetools
+Requires-Dist: certifi
+Requires-Dist: chardet
+Requires-Dist: cycler
+Requires-Dist: gast
+Requires-Dist: google-auth
+Requires-Dist: google-auth-oauthlib
+Requires-Dist: google-pasta
+Requires-Dist: grpcio
+Requires-Dist: h5py
+Requires-Dist: idna
+Requires-Dist: importlib-metadata
+Requires-Dist: joblib
+Requires-Dist: Keras-Preprocessing
+Requires-Dist: kiwisolver
+Requires-Dist: Markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: oauthlib
+Requires-Dist: opencv-contrib-python
+Requires-Dist: opt-einsum
+Requires-Dist: pandas
+Requires-Dist: protobuf
+Requires-Dist: pyasn1
+Requires-Dist: pyasn1-modules
+Requires-Dist: pyparsing
+Requires-Dist: python-dateutil
+Requires-Dist: pytz
+Requires-Dist: requests
+Requires-Dist: requests-oauthlib
+Requires-Dist: rsa
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: six
+Requires-Dist: tensorboard
+Requires-Dist: tensorboard-plugin-wit
+Requires-Dist: tensorflow
+Requires-Dist: tensorflow-estimator
+Requires-Dist: termcolor
+Requires-Dist: threadpoolctl
+Requires-Dist: urllib3
+Requires-Dist: Werkzeug
+Requires-Dist: wrapt
+Requires-Dist: zipp
+
+UNKNOWN
+
+
