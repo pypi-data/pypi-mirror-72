@@ -1,0 +1,12 @@
+README.md
+setup.py
+datagrab.egg-info/PKG-INFO
+datagrab.egg-info/SOURCES.txt
+datagrab.egg-info/dependency_links.txt
+datagrab.egg-info/requires.txt
+datagrab.egg-info/top_level.txt
+interpret_response/__init__.py
+interpret_response/interpret_html_response.py
+interpret_response/interpret_json_response.py
+retrieve_response/__init__.py
+retrieve_response/retrieve_response.py
