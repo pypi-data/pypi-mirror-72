@@ -1,0 +1,15 @@
+{% load i18n %}
+<ul>
+
+
+
+
+
+    <li><a href="{% url 'masterdata:businessform_list' %}">{% trans 'Cégforma' %}</a></li>
+    <li><a href="{% url 'masterdata:legal_list' %}">{% trans 'Jogviszony' %}</a></li>
+    <li><a href="{% url 'masterdata:pretence_list' %}">{% trans 'Jogcím' %}</a></li>
+    <li><a href="{% url 'masterdata:tax_list' %}">{% trans 'Adónem' %}</a></li>
+    <li><a href="{% url 'masterdata:discount_list' %}">{% trans 'Adókedvezmények' %}</a></li>
+    <li><a href="{% url 'masterdata:pausecategory_list' %}">{% trans 'Biztosítás szüneteltetése' %}</a></li>
+    <li><a href="{% url 'masterdata:timesheetcategory_list' %}">{% trans 'Jelenlét' %}</a></li>
+</ul>
