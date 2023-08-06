@@ -1,0 +1,20 @@
+{% extends 'djangoadmin/base/body/index_admin.html' %}
+
+{% block body %}
+{% include "djangoadmin/widgets/alerts.html" %}
+<form method="POST" action="#" enctype="multipart/form-data" class="">{% csrf_token %}
+{% include "djangoadmin/widgets/TextInput_FormField.html" with field=article_form.title cls="mb-1" %}
+{% include "djangoadmin/widgets/TextArea_FormField_Card.html" with field=article_form.description cls="mb-1" %}
+{% include "djangoadmin/widgets/TextArea_FormField_Card.html" with field=article_form.shortlines cls="mb-1" %}
+{% include "djangoadmin/widgets/TextArea_FormField_Card.html" with field=article_form.content cls="mb-1" %}  
+{% endblock body %}
+
+{% block sidebar_right %}
+{% include "djangoadmin/widgets/Select_FormField_Card.html" with field=article_form.status is_submit="Save" cls="mb-1" %}
+{% include "djangoadmin/widgets/NumberInput_FormField_Card.html" with field=article_form.serial cls="mb-1" %}
+{% include "djangoadmin/widgets/Select_FormField_Card.html" with field=article_form.category cls="mb-1" %}
+{% include "djangoadmin/widgets/FileInput_FormField_Card.html" with field=article_form.cover_image cls="mb-1" %}
+{% include "djangoadmin/widgets/boolean_fields_card.html" with field=article_form.category cls="mb-1" %}
+{% include "djangoadmin/widgets/NumberInput_FormField_Card.html" with field=article_form.total_views cls="mb-1" %}
+</form>
+{% endblock sidebar_right %}
