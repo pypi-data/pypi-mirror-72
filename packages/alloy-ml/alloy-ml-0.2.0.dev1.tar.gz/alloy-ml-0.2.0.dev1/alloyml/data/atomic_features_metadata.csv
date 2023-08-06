@@ -1,0 +1,43 @@
+id,symbol_latex,symbol_2char,symbol_3char,short,full,unit,dim-m,dim-g,dim-s,dim-K,dim-A,dim-mol,description,sources
+at_n,Z,Z,Z,At. #,Atomic Number,-,,,,,,,Atomic number,
+atom_weight,"A_{r,standard}",AW,AtW,At. Wt.,Standard Atomic Weight,-,,,,,,,"Standard atomic weight, formal short",Wikipedia
+boil_pt,T_{b},BP,BPt,Boiling,Boiling Point,K,0,0,0,1,0,0,Boiling point,Periodictable.com
+debye_waller,B,DW,DWF,Debye-Waller,Debye-Waller Factor,Å^2,2,0,0,0,0,0,Debye-Waller factor of elemental crystal at 280 K,"Peng et al., 1996"
+density,\rho,De,Den,Density,Density,g/cm^3,-3,1,0,0,0,0,Density of elemental material,Periodictable.com
+ds_al,D_{Al},DA,DAl,Diffs. Al,Diffusivity in Al,m^2/s * 10^28,2,0,-1,0,0,0,Diffusivity in Al at 293 K,
+elec_aff,E_{ea},EA,EAf,e- Affi.,Electron Affinity,kJ/mol,2,1,-2,0,0,-1,Electron affinity,Periodictable.com
+elec_cond,\rho_e,EC,ECd,e- Cond.,Electrical Conductivity,S/m,-3,-1,3,0,2,0,Electrical conductivity,Periodictable.com
+elec_neg,\chi_r,En,ENg,ElecNegv.,Electronegativity,-,,,,,,,Pauling scale electronegativity,Wikipedia
+elec_res,\rho_r,ER,ERi,Resistivity,Electrical Resistivity,Ω*m,3,1,-3,0,-2,0,Electrical resistivity,Periodictable.com
+ha_b,H_B,HB,HaB,B Hardness,Brinell Hardness,MPa,-1,1,-2,0,0,0,Brinell hardness,Periodictable.com
+ha_m,H_M,HM,HaM,M Hardness,Mohs Hardness,-,,,,,,,Mohs hardness,Periodictable.com
+ha_v,H_V,HV,HaV,V Hardness,Vickers Hardness,MPa,-1,1,-2,0,0,0,Vickers hardness,Periodictable.com
+heat_cap,C_P,HC,HCp,Heat Cap.,Specific Heat Capacity,J/kg/K,2,0,-2,-1,0,0,Specific heat capacity,Periodictable.com
+heat_fus,L_f,HF,HFu,Heat Fus.,Heat of Fusion,kJ/mol,2,1,-2,0,0,-1,Latent heat of fusion,Periodictable.com
+heat_vap,L_v,HV,HVa,Heat Vap.,Heat of Vaporization,kJ/mol,2,1,-2,0,0,-1,Latent heat of vaporization,Periodictable.com
+ion1,"E_{i,1}",I1,IE1,1st Ionz.,First Ionization Energy,kJ/mol,2,1,-2,0,0,-1,First ionization energy,Periodictable.com
+ion2,"E_{i,2}",I2,IE2,2nd Ionz.,Second Ionization Energy,kJ/mol,2,1,-2,0,0,-1,Second ionization energy,Periodictable.com
+ion3,"E_{i,3}",I3,IE3,3rd Ionz.,Third Ionization Energy,kJ/mol,2,1,-2,0,0,-1,Third ionization energy,Periodictable.com
+lattice_mean,,LC,LaC,Latt. Cst.,Mean Lattice Constant,pm,1,0,0,0,0,0,Mean of the three lattice constants: (a+b+c)/3,Periodictable.com
+ligancy,C.N.,CN,Crd,Coord. No.,Coordination Number,-,,,,,,,Nearest-neighbour coordination number,
+mag_susc,\chi^{mag},MS,MSu,Mag. Susc.,Volume Magnetic Susceptibility,-,,,,,,,Volume magnetic susceptibility,Periodictable.com
+melt_pt,T_{m},MP,MPt,Melting,Melting Point,K,0,0,0,1,0,0,Melting point,Periodictable.com
+mod_blk,\kappa^{mod},BM,BuM,Bulk Mod.,Bulk Modulus,GPa,-1,1,-2,0,0,0,Bulk Modulus,Periodictable.com
+mod_sh,G^{mod},SM,ShM,Shear Mod.,Shear Modulus,GPa,-1,1,-2,0,0,0,Shear Modulus,Periodictable.com
+mod_yng,E^{mod},YM,YoM,Young's Mod.,Young's Modulus,GPa,-1,1,-2,0,0,0,Young's Modulus,Wikipedia
+nuc_dist,,ND,IND,Nuc. Dist.,Internuclear Distance,,1,0,0,0,0,0,"Internuclear distance, i.e., minimum distance to neighbouring atom",
+poissons,\nu_{Po},PR,PoR,Poi. Ri.,Poisson's Ratio,-,,,,,,,Poisson's ratio,Periodictable.com
+pt_g,,Gp,Grp,Group,Group,-,,,,,,,Group in periodic table; rare-earth's are included in Group 3,
+pt_p,,Pr,Prd,Period,Period,-,,,,,,,Period in periodic table,
+r_at_cal,r_{at},RA,RAC,At. R,Calculated Atomic Radius,pm,1,0,0,0,0,0,"Atomic radius, calculated",Wikipedia
+r_at_emp,"r_{at,em}",RE,RAE,At. R Emp.,Empirical Atomic Radius,pm,1,0,0,0,0,0,"Atomic radius, empirical",Wikipedia
+r_coval,r_{cov},RC,RCo,Covalent R,Covalent Radius,pm,1,0,0,0,0,0,Covalent radii revisited 2008,https://doi.org/10.1039%2Fb801115j
+rop,E^0,RP,ReP,Redox,Reduction Potential,V,2,1,-3,0,-1,0,Mean standard reduction potential of various ions,Wikipedia
+sol_al,S_{Al},SA,SAl,Sol. Al,Solubility in Al,at%,,,,,,,Solubility in Al at 293 K,Converted from wt% at room temperature from here
+sol_mg,S_{Mg},SM,SMg,Sol. Mg,Solubility in Mg,at%,,,,,,,Solubility in Mg at 293 K,
+sos,c_S,Sp,SoS,Speed Snd.,Speed of Sound,m/s,1,0,-1,0,0,0,Speed of sound in element,Periodictable.com
+sp_grp,,SG,SpG,Sp. Grp.,Space Group,-,,,,,,,Space group,Periodictable.com
+thrm_cond,\lambda^{thrm},TC,ThC,Therm. Cond.,Thermal Conductivity,W/m/K,1,1,-3,-1,0,0,Thermal conductivity,Periodictable.com
+uts,F_{tu},TS,UTS,Tensile,Ultimate Tensile Strength,MPa,-1,1,-2,0,0,0,Ultimate tensile strength (wrought/cold work/as cast etc.; mean values of stronger process preferred),"www.azom.com, http://www.matweb.com, https://www.vbripress.com/aml/pdf/252"
+valence,,Vl,Vln,Valence,Valence,-,,,,,,,Number of electrons in valence,Periodictable.com
+xtl_strut,,CS,CSt,Xtl. Strut.,Crystal Structure,-,,,,,,,Crystal structure,Periodictable.com
