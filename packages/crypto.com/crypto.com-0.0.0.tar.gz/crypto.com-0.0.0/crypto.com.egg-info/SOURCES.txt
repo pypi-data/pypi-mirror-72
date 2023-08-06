@@ -1,0 +1,9 @@
+README.md
+setup.py
+crypto.com.egg-info/PKG-INFO
+crypto.com.egg-info/SOURCES.txt
+crypto.com.egg-info/dependency_links.txt
+crypto.com.egg-info/top_level.txt
+cryptocom/__init__.py
+cryptocom/client.py
+cryptocom/web_sockets.py
