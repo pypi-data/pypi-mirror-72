@@ -1,0 +1,8 @@
+setup.py
+concourse_ci_python_project_demo.egg-info/PKG-INFO
+concourse_ci_python_project_demo.egg-info/SOURCES.txt
+concourse_ci_python_project_demo.egg-info/dependency_links.txt
+concourse_ci_python_project_demo.egg-info/top_level.txt
+mypackage/__init__.py
+mypackage/__version__.py
+mypackage/core.py
