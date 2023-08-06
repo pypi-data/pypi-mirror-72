@@ -1,0 +1,38 @@
+{% load wagtailimages_tags my my_amp %}
+<article class="padding">
+    <a href="{{ blog.url }}">
+        {% for media in blog.cover %}
+            {% if media.block_type == 'svg' %}
+                {% amp_img %}
+                    <img data-layout="responsive" data-width="1920" data-height="1080"
+                         class="lazy svg-img"
+                         data-src="{{ media.value.url }}"
+                         alt="{{ blog.title }}"
+                    />
+                {% endamp_img %}
+            {% elif media.block_type == 'image' %}
+                {% include 'cms/blocks/common/picture.html' with img=media.value %}
+            {% endif %}
+        {% endfor %}
+    </a>
+    <div>
+        <a href="{{ blog.url }}">
+            <h3>{{ blog.title }}</h3>
+            {% include 'cms/blocks/common/tags_blog.html' with root_page=blog.get_parent tags=blog.tags.all links=0 %}
+            <p>{{ blog.intro }}</p>
+            <div class="s-flex-align">
+                <div class="article-author-img">
+                    {% amp_img %}
+                        <img class="s-icon x2 nopad"
+                             src="{{ icons.user|ico:'space' }}"
+                             alt="Astronaute"/>
+                    {% endamp_img %}
+                </div>
+                <div class="article-author">
+                    <p>{{ blog.author.first_name }} {{ blog.author.last_name }}</p>
+                    <small>{{ blog.date|date }} • {{ blog.read_time }}</small>
+                </div>
+            </div>
+        </a>
+    </div>
+</article>
