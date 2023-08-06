@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: exo-predict
+Version: 1.0.19
+Summary: exo_predict will help you determine how likely you are to find an exoplanet!
+Home-page: https://github.com/Rob685/codeastro_ml_planets
+Author: Jea Adams, Rob Tejada, Sofia Covarrubias
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: pandas
+Requires-Dist: sklearn
+Requires-Dist: numpy
+Requires-Dist: xgboost
+
+UNKNOWN
+
+
