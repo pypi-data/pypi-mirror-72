@@ -1,0 +1,12 @@
+README.md
+setup.py
+co2mini/__init__.py
+co2mini/homekit.py
+co2mini/main.py
+co2mini/meter.py
+co2mini.egg-info/PKG-INFO
+co2mini.egg-info/SOURCES.txt
+co2mini.egg-info/dependency_links.txt
+co2mini.egg-info/entry_points.txt
+co2mini.egg-info/requires.txt
+co2mini.egg-info/top_level.txt
