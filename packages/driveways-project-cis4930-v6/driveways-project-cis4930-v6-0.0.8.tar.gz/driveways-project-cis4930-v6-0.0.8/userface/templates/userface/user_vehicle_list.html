@@ -1,0 +1,30 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<style>
+ul {
+  list-style-type: none;
+}
+</style>
+
+    {% if vehicle_list %}
+    
+    <ul style="width:50rem; margin:20px;">
+<div class="list-group">
+      <li class="list-group-item list-group-item-action active">
+            <h2 class="h2"> Vehicle on the accounts: </h1>
+          </li>
+      {% for vehicle in vehicle_list %}
+      
+          
+          <li class="list-group-item"> {{ vehicle.make }} {{vehicle.model}}</li>
+        
+      {% endfor %}
+      </div>
+    </ul>
+
+    {% else %}
+      <p>You have no vehicles</p>
+    {% endif %}
+{% endblock %}

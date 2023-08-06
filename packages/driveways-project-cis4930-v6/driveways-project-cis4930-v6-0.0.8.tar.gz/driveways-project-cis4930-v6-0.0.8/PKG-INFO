@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: driveways-project-cis4930-v6
+Version: 0.0.8
+Summary: Driveways Package
+Home-page: https://github.com/henryparker/drivewaynew
+Author: Andres Canas, Henry Parker, Dylan Fay, Zack Saadioui
+License: UNKNOWN
+Description: This is Driveways by Andres Canas, Dylan Fay, Henry Parker, Zack Saadioui.
+        
+        This app helps user find private parking near hot destinations!
+        
+        This app requires GDAL installation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
