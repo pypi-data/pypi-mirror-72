@@ -1,0 +1,27 @@
+FROM python:3.8
+
+RUN curl --silent --location https://deb.nodesource.com/setup_10.x | bash - && \
+    apt install nodejs
+
+RUN npm install serverless -g
+
+RUN useradd -ms /bin/bash python
+
+RUN mkdir -p /home/python/app && chown python:python /home/python/app
+
+WORKDIR /home/python/app
+
+USER python
+
+COPY package.json package-lock.json ./
+
+RUN npm install
+
+COPY . .
+
+CMD serverless config credentials --provider aws -o --key ${AWS_ACCESS_KEY_ID} --secret ${AWS_SECRET_ACCESS_KEY} && \
+    serverless deploy -v \
+    --sentry_url ${SENTRY_URL} \
+    --stage ${STAGE} \
+    --example_variable_env ${EXAMPLE_VARIABLE_ENV} \
+    --deployment_bucket_name ${DEPLOYMENT_BUCKET_NAME}
