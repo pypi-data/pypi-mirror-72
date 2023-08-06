@@ -1,0 +1,6 @@
+[console_scripts]
+perusat_calibrate = perusatproc.console.calibrate:run
+perusat_orthorectify = perusatproc.console.orthorectify:run
+perusat_pansharpen = perusatproc.console.pansharpen:run
+perusat_process = perusatproc.console.process:run
+

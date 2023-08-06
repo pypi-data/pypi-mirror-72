@@ -1,0 +1,6 @@
+rasterio
+xmltodict
+
+[testing]
+pytest
+pytest-cov
