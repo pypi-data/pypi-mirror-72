@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: varq-py
+Version: 0.1.8
+Summary: VarQ API wrapper for Python.
+Home-page: https://gitlab.com/glyco1/varq-py
+Author: Mauro Song
+Author-email: tik@lag.party
+License: UNKNOWN
+Description: 
+        `varq-py` is an API wrapper for sending, managing and retrieving jobs sent to the VarQ (2.0) backend rewritten in Go.
+        
+        
+        ## Install
+        Requires Python >= 3.7
+        
+        ```pip install varq-py```
+        
+        
+        ## Usage
+        Available fields and methods can be found in `uniprot.py`, `job.py` and `structure.py`.
+        
+        
+        ## Examples
+        ### UniProt data
+        
+        You can get the contents of some fields for a given UniProt accession ID using `get_unp`. It doesn't send or start a new job, it only takes advantage of the retrieving, parsing and referencing that the backend already does (`GET /api/uniprot/:unpID`).
+        
+        ```python
+        >>> from varq import VarQ
+        >>> api = VarQ("http", "localhost:8888")
+        
+        >>> unp = api.get_unp("P06280")
+        
+        >>> print(unp.name)
+        Alpha-galactosidase A
+        
+        >>> print(unp.sequence)
+        MQLRNPELHLGCALALRFLALVSWDIPGARALDNGLARTPTMGWLHWERFMCNLDCQEEPDSCISEKLFMEMAELMVSEGWKDAGYEYLCIDDCWMAPQRDSEGRLQADPQRFPHGIRQLANYVHSKGLKLGIYADVGNKTCAGFPGSFGYYDIDAQTFADWGVDLLKFDGCYCDSLENLADGYKHMSLALNRTGRSIVYSCEWPLYMWPFQKPNYTEIRQYCNHWRNFADIDDSWKSIKSILDWTSFNQERIVDVAGPGGWNDPDMLVIGNFGLSWNQQVTQMALWAIMAAPLFMSNDLRHISPQAKALLQDKDVIAINQDPLGKQGYQLRQGDNFEVWERPLSGLAWAVAMINRQEIGGPRSYTIAVASLGKGVACNPACFITQLLPVKRKLGFYEWTSRLRSHINPTGTVLLQLENTMQMSLKDLL
+        
+        >>> print(unp.pdb_ids)
+        ['1R46', '1R47', '3GXN', '3GXP', '3GXT', '3HG2', '3HG3', '3HG4', '3HG5', '3LX9', '3LXA', '3LXB', '3LXC', '3S5Y', '3S5Z', '3TV8', '4NXS', '6IBK', '6IBM', '6IBR', '6IBT']
+        
+        >>> print(unp.ptms.glycosilation_sites)
+        [GlycoSite(position=139, note='N-linked (GlcNAc...) asparagine'), GlycoSite(position=192, note='N-linked (GlcNAc...) asparagine'), GlycoSite(position=215, note='N-linked (GlcNAc...) asparagine')]
+        
+        >>> print(unp.variants[0])
+        Variant(id='VAR_077365', position=3, from_aa='L', to_aa='P', change='L3P', note='L -> P (polymorphism; does not affect enzyme activity; dbSNP:rs150547672)', evidence='ECO:0000269|PubMed:26415523', dbsnp='rs150547672', clinvar=ClinVar(variation_id='42464', name='NM_000169.3(GLA):c.8T>C (p.Leu3Pro)', clin_sig='Conflicting interpretations of pathogenicity', clin_sig_simple=0, review_status='criteria provided, conflicting interpretations', phenotypes='Cardiovascular phenotype;Deoxygalactonojirimycin response;Fabry disease;not specified'))
+        ```
+        
+        
+        ### Sending and retrieving jobs
+        
+        ```python
+        # Start two jobs for UniProt P06280, PDBs 1R46 and 1R47, 92 D -> F and 231 D -> F substitutions.
+        j1 = api.new_job("P06280", "1R46", ["D92F", "D231F"])
+        j2 = api.new_job("P06280", "1R47", ["D92F", "D231F"])
+        
+        # Starting new jobs is a non-blocking operation.
+        >>> print(j1.status)
+        (1, 'processing')
+        >>> print(j2.status)
+        (0, 'in queue')
+        
+        # ... that means, go grab a coffee and check again later.
+        >>> print(j1.status)
+        (2, 'done')
+        >>> print(j2.status)
+        (2, 'done')
+        
+        # Positions passed are from the UniProt sequence and mapped internally to the structure, unless stated otherwise.
+        >>> print(j1.ddg("D92F"), j1.catalytic(92), j1.buried(92), j1.near_ligands(92), j1.pocket(92))
+        >>> print(j2.ddg("D92F"), j1.catalytic(92), j2.buried(92), j2.near_ligands(92), j1.pocket(92))
+        -1.44298 False True ['EDO'] True
+        -3.95959 False True ['GAL'] True
+        
+        # Errors
+        >>> print(j1.buried(1))
+        # varq.job.PositionError: UniProt position not included in PDB structure.
+        
+        >>> j1.ddg("G666W")
+        # varq.job.NotFoundInResults: SAS not found in FoldX results.
+        
+        # Retrieve a job (in any current status) by ID.
+        from varq.job import Job
+        
+        >>> j = Job("http", "localhost:8888", "8cfcfd9355e5fcb97bdf5c02641a100a16870d36c74d73dd4f6d11ce398264f0")
+        >>> print(j.status)
+        (1, 'in queue')
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
