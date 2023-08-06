@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: scrape-google
+Version: 0.0.2
+Summary: A package used to scrape top links from google
+Home-page: https://github.com/sourabhjain19/scraping
+Author: Sourabh Jain
+Author-email: sourabhjain1991999@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/sourabhjain19/scraping/archive/v1.0.tar.gz
+Keywords: scrape,google,scraping,links,crawling,crawl,web scraping,web,search,google search
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: bs4
+Requires-Dist: requests
+
+# scraping
+
+This package scrapes the string `k` from the google search and returns at max top `n` links from the first page of the google search.
+
+### Usage
+
+```
+import scrape_google
+scrape_google.scrape(k,n)
+```
+
+### Example
+
+```
+import scrape_google
+list=scrape_google.scrape("Hello World",5)
+print(list)
+```
+
+
