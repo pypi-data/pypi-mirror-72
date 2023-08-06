@@ -1,0 +1,20 @@
+#!/bin/sh
+
+. ${0%/*}/test_helper.sh
+
+tuxbuild_build_set="tuxbuild build-set --git-repo https://github.com/torvalds/linux.git --git-ref master --set-name=basic"
+
+test_build_set_pass() {
+    api_v1 --build-failure-rate=0
+    run ${tuxbuild_build_set} --tux-config ${tmpdir}/builds.yaml
+    assertEquals 0 "$status"
+}
+
+test_build_set_fail() {
+    api_v1 --build-failure-rate=100
+    run ${tuxbuild_build_set} --tux-config ${tmpdir}/builds.yaml
+    assertEquals 1 "$status"
+    assertEquals 9 "$(echo "$output" | grep -c Fail)"
+}
+
+. shunit2

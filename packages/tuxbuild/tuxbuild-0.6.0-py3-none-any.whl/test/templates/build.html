@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}
+build {{build.build_key}}
+{% endblock %}
+{% block content %}
+    <table>
+    {% for k, v in build.items()|sort %}
+      <tr>
+        <th>{{k}}</th>
+        <td>{{v}}</td>
+      </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
