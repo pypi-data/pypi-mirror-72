@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: PyCrowdTangle
+Version: 0.0.2
+Summary: A Python Wrapper To Retrieve Data From The CrowdTangle API
+Home-page: https://github.com/UPB-SS1/PyCrowdTangle
+Author: Jose R. Zapata
+Author-email: jjrzg@hotmail.com
+License: MIT
+Description: # PyCrowdTangle
+        A Python Wrapper To Retrieve Data From The CrowdTangle API
+        
+        https://github.com/CrowdTangle/API
+        
+        ## Usage
+        
+        ``` python
+        import PyCrowdTangle as pct
+        
+        #retrieve data from CrowdTangle
+        # get the api_token from https://apps.crowdtangle.com/
+        
+        data = pct.ct_get_posts(api_token="AKJHXDFYTGEBKRJ6535")
+        
+        import pandas as pd
+        
+        df = pd.DataFrame(data['result']['posts'])
+        
+        #show results
+        df.head()
+        ```
+Keywords: crowdtangle,wrapper-api
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
