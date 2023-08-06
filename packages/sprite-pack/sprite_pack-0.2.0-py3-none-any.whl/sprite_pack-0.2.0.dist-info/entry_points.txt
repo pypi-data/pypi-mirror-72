@@ -1,0 +1,3 @@
+[console_scripts]
+sprite-pack=sprite_pack:main
+
