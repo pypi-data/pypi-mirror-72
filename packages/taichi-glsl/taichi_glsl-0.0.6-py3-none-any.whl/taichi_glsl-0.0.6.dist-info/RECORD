@@ -1,0 +1,15 @@
+taichi_glsl/__init__.py,sha256=Ao6xhBKAcUVZ6_2dJ3WePp3GzJddiKeNJekd_rslpDI,344
+taichi_glsl/array.py,sha256=yJQEhhfGzg4wfIwUobeLJSKlOWksTtqfHk8RMKBASSg,1618
+taichi_glsl/glsl.py,sha256=cgr3YkMdA93gGZfmayOp9C9rmbtMYWYMo4PYlFTma2o,6192
+taichi_glsl/gui.py,sha256=hmLUPxsw8OhTHudQq6yzflO030wtXVRSnSR_B6_F_cw,16363
+taichi_glsl/hack.py,sha256=4qv5ffxIwk_p5uXXoP1jFtTUfqbze68F_KO_dShpOvs,1018
+taichi_glsl/linalg.py,sha256=PI_gekQRHuqBCQinjJet1GNLkvKp3WtHhp7MXeCONkI,10670
+taichi_glsl/odop.py,sha256=DRGFR99wxZ-nMvrerF5bxN-dC6odMnX0xIVWYAy86i8,1152
+taichi_glsl/phys.py,sha256=v_ZKSHjQNQlhe8yVa1SPOR89UJ60H9A2-fWxdl0ZZpA,3710
+taichi_glsl/rand.py,sha256=W-kjFSPcs6vGHFJz5xn2z_suKVOTAYKy0QK6OW7rGh0,4057
+taichi_glsl/transform.py,sha256=ZnA8wsStpu8rO3BC4cdowuFYTBpLYW4mf5CsEbYReOw,397
+taichi_glsl/version.py,sha256=sQygSX91aUiu8czsL1objtNjcwfmzzwiFTcom18vfOA,187
+taichi_glsl-0.0.6.dist-info/METADATA,sha256=nQaeNNghwoJyp0BfG7_XLgeIKjXLVfnGXE3s4OvHNyM,1300
+taichi_glsl-0.0.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+taichi_glsl-0.0.6.dist-info/top_level.txt,sha256=27BffqE4CSuuLxDneC5N6QB5dmcn036AqXiTe6kzzjA,12
+taichi_glsl-0.0.6.dist-info/RECORD,,

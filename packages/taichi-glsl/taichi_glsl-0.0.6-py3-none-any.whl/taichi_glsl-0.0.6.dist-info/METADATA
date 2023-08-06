@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: taichi-glsl
+Version: 0.0.6
+Summary: A Taichi extension library providing a set of GLSL-alike helper functions
+Home-page: UNKNOWN
+Author: 彭于斌
+Author-email: 1931127624@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Games/Entertainment :: Simulation
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: taichi (>=0.6.12)
+
+
+Taichi GLSL
+===========
+
+Taichi GLSL is an extension library of the `Taichi Programming Language <https://github.com/taichi-dev/taichi>`_, which provides a set of useful helper functions including but not limited to:
+
+1. Handy scalar functions like ``clamp``, ``smoothstep``, ``mix``, ``round``.
+2. GLSL-alike vector functions like ``normalize``, ``distance``, ``reflect``.
+3. Well-behaved random generators including ``randUnit3D``, ``randNDRange``.
+4. Possible Taichi BUG hotfixes that are not yet released in it's cycle.
+5. Handy vector and matrix initializer: ``vec`` and ``mat``.
+6. Handy vector component shuffle accessor like ``v.xy``.
+7. Useful physics helper functions like ``boundReflect``.
+8. Shadertoy-alike inputed GUI base class ``Animation``.
+
+
