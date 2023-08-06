@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: ninstd
+Version: 0.2
+Summary: A wrapper of Python using only standard libraries.
+Home-page: https://github.com/ninfueng/ninstd
+Author: Ninnart Fuengfusin
+Author-email: ninnart.fuengfusin@yahoo.com
+License: UNKNOWN
+Description: # ninstd
+        A wrapper of Python using only standard libraries. <br>
+        The goad of the module is to provide a basic support for my future modules. <br>
+        `ninstd` includes any type of applications.
+        
+        ## To install
+        ```
+        pip install ninstd
+        ```
+        
+        ## Directory tree
+        ```
+        ninstd_____error
+        	|__check
+        	|__path
+        	|__recorder
+        	|__utils
+        	|__typing
+        ```
+        
+        ## License
+        MIT License with some exceptions. <br>
+        Please look at comments within the module.
+        
+        
+        ## TODO
+        - Type hinting.
+        - 
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
