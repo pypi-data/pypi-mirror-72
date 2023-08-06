@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+eztoml/__init__.py
+eztoml/decoder.py
+eztoml/encoder.py
+eztoml/errors.py
+eztoml/source.py
+eztoml/tokens.py
+eztoml/tz.py
+eztoml/utils.py
+eztoml.egg-info/PKG-INFO
+eztoml.egg-info/SOURCES.txt
+eztoml.egg-info/dependency_links.txt
+eztoml.egg-info/entry_points.txt
+eztoml.egg-info/top_level.txt
