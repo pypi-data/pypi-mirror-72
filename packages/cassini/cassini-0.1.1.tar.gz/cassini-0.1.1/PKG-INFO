@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: cassini
+Version: 0.1.1
+Summary: A tool to structure experimental work, data and analysis using Jupyter Lab.
+License: GPL-3.0-only
+Author: 0Hughman0
+Author-email: rammers2@hotmail.co.uk
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: ipywidgets (>=7.5,<8.0)
+Requires-Dist: pandas (>=1.0,<2.0)
