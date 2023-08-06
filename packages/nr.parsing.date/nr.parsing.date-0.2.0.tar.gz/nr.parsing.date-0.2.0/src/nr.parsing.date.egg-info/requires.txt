@@ -1,0 +1,5 @@
+nr.utils.re<0.2.0,>=0.1.0
+
+[test]
+pytest
+python-dateutil
