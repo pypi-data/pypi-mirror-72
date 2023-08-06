@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: PyHand-Earth
+Version: 0.0.13
+Summary: Google Earth navigation driven by gesture recognition
+Home-page: https://github.com/liujohnj/PyHand_Earth
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: Keras (==2.4.2)
+Requires-Dist: PyQt5
+Requires-Dist: matplotlib (==3.2.2)
+Requires-Dist: opencv-python (==4.2.0.34)
+Requires-Dist: psutil (==5.7.0)
+Requires-Dist: pyautogui (==0.9.50)
+Requires-Dist: tensorflow (==2.2.0)
+
+# PyHand_Earth
+
+
