@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pyrolint"
+version = "0.1.0"
+description = ""
+authors = ["Steve Dignam <steve@dignam.xyz>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+libcst = "^0.3.7"
+
+[tool.poetry.dev-dependencies]
+isort = {version = "^4.3",allows-prereleases = true}
+black = {version = "^18.3-alpha.0",allows-prereleases = true}
+flake8 = {version = "^3.8",allows-prereleases = true}
+mypy = {version = "^0.782.0",allows-prereleases = true}
+ipython = "^7.16"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
