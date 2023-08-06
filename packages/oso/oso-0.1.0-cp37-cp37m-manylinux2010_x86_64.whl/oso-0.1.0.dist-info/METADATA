@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: oso
+Version: 0.1.0
+Summary: oso auth library
+Home-page: UNKNOWN
+Author: oso
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: cffi (==1.14.0)
+Provides-Extra: django
+Provides-Extra: flask
+Requires-Dist: flask ; extra == 'flask'
+Requires-Dist: authlib ; extra == 'flask'
+Provides-Extra: jwt
+Requires-Dist: authlib ; extra == 'jwt'
+
+UNKNOWN
+
+
