@@ -1,0 +1,3 @@
+[console_scripts]
+ttt = ttt.ttt:main
+
