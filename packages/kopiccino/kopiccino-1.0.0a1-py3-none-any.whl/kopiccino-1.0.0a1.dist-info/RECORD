@@ -1,0 +1,14 @@
+kopiccino/__about__.py,sha256=4rF09qw28_PW4HtJNcRR-XRJElGeiR1jPTtkx-L4vEA,268
+kopiccino/__init__.py,sha256=uba_tVdLoVO-HLrUZonm_ZqhyWkC-DY3PGjPwpVa4ss,862
+kopiccino/__main__.py,sha256=VlwlDPUFQme_ppKS7d1cN-_ww3xpMR2WGOPVqVUcMZo,29
+kopiccino/abstract.py,sha256=dnump8Ry8jsKCxuU72MwZywZrJrHZ7ozCKswqtA_dm4,11168
+kopiccino/bootstrap.py,sha256=dH-O5x8gqtNvLwQoFiIO9Xgxn5R-LMK9R3IYXMDUG8A,654
+kopiccino/cli.py,sha256=KIC9wyCj5TG02D5z6VfbWmJzfgGo2thXHSa2Xo2BSG0,2629
+kopiccino/config.py,sha256=HIHj3cnAL-2sfqUBek7flD38jhhBLMMbvnVZfp89OcU,3901
+kopiccino/exceptions.py,sha256=jps4rcfR6C7PG2Ca2chSJ8Itqw0BcoW-Ud6jwBSowkI,210
+kopiccino/utils.py,sha256=soTJ-4hBskkT7GZTotrdrcbTS4HMe-ibl4EsIXeFX7o,6016
+kopiccino-1.0.0a1.dist-info/LICENSE.txt,sha256=kx1ZjLx8wFFCIrNgJR-K5qrXlnqFMP3Qhs_ZPYf-ksA,1052
+kopiccino-1.0.0a1.dist-info/METADATA,sha256=Pf2kMFMeLA0SoBBix_YgpviCB2upx3d50tKdrpGPAfY,3494
+kopiccino-1.0.0a1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+kopiccino-1.0.0a1.dist-info/top_level.txt,sha256=G3_O3hODuw0klYBIyuUux4aa-2URC3hFt4ahSL2ibk8,10
+kopiccino-1.0.0a1.dist-info/RECORD,,
