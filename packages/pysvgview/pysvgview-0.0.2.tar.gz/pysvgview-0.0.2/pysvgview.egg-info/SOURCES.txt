@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+pysvgview/__init__.py
+pysvgview/configs.py
+pysvgview/svg_view.py
+pysvgview/version.py
+pysvgview.egg-info/PKG-INFO
+pysvgview.egg-info/SOURCES.txt
+pysvgview.egg-info/dependency_links.txt
+pysvgview.egg-info/entry_points.txt
+pysvgview.egg-info/requires.txt
+pysvgview.egg-info/top_level.txt
+pysvgview/endpoints/__init__.py
+pysvgview/endpoints/group_default.py
+pysvgview/endpoints/main.py
