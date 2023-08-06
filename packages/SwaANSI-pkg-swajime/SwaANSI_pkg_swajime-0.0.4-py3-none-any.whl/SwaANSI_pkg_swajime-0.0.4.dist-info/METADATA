@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: SwaANSI-pkg-swajime
+Version: 0.0.4
+Summary: Enable wrapping text with color and attributes.
+Home-page: https://github.com/swajime/ansi
+Author: John Simpson
+Author-email: john@swajime.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+
+# SwaANSI
+
+<p>Enable wrapping text with color and attributes per ANSI escape sequences.</p>
+![Python package](https://github.com/swajime/ansi/workflows/Python%20package/badge.svg)
+
