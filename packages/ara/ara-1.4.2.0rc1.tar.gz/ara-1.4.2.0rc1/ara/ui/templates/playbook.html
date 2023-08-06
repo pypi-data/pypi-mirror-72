@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "partials/playbook_card.html" %}
+{% load datetime_formatting %}
+
+<div class="pf-c-card" style="margin: 1em 0;">
+    <div class="pf-c-card__body">
+        <details id="records">
+            <summary>Records</summary>
+            {% if playbook.items.records %}
+            <ul class="pf-c-list">
+                {% for record in playbook.records %}
+                <li><a href="../record/{{ record.id }}.html">{{ record.key }}</a></li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            No records have been saved with <a href="https://ara.readthedocs.io/en/latest/ara-record.html" target="_blank">ara_record</a> for this playbook.
+            {% endif %}
+        </details>
+        <details id="files">
+            <summary>Files</summary>
+            <ul class="pf-c-list">
+                {% for file in playbook.files %}
+                <li><a href="../file/{{ file.id }}.html">{{ file.path }}</a></li>
+                {% endfor %}
+            </ul>
+        </details>
+        <details id="hosts" open="true">
+            <summary><i class="fas fa-server"></i> Hosts</summary>
+            <table class="pf-c-table pf-m-grid-md pf-m-compact" role="grid" id="host-table">
+                <thead>
+                    <tr role="row">
+                        <th role="columnheader" scope="col" class="pf-m-fit-content">Host</th>
+                        <th role="columnheader" scope="col" class="pf-m-fit-content">
+                            <div class="pf-c-alert pf-m-warning pf-m-inline pf-m-fit-content">
+                                <div class="pf-c-alert__icon" title="Tasks completed with changes">
+                                    <i class="fas fa-sync-alt" aria-hidden="true"></i>
+                                    <p>&nbsp;CHANGED</p>
+                                </div>
+                            </div>
+                        </th>
+                        <th role="columnheader" scope="col" class="pf-m-fit-content">
+                            <div class="pf-c-alert pf-m-danger pf-m-inline pf-m-fit-content">
+                                <div class="pf-c-alert__icon" title="Tasks completed with errors">
+                                    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                                    <p>&nbsp;FAILED</p>
+                                </div>
+                            </div>
+                        </th>
+                        <th role="columnheader" scope="col" class="pf-m-fit-content">
+                            <div class="pf-c-alert pf-m-success pf-m-inline pf-m-fit-content">
+                                <div class="pf-c-alert__icon" title="Tasks completed successfully">
+                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                    <p>&nbsp;OK</p>
+                                </div>
+                            </div>
+                        </th>
+                        <th role="columnheader" scope="col" class="pf-m-fit-content">
+                            <div class="pf-c-alert pf-m-inline pf-m-fit-content">
+                                <div class="pf-c-alert__icon" title="Tasks was skipped">
+                                    <i class="fas fa-forward" aria-hidden="true"></i>
+                                    <p>&nbsp;SKIPPED</p>
+                                </div>
+                            </div>
+                        </th>
+                        <th role="columnheader" scope="col" class="pf-m-fit-content">
+                            <div class="pf-c-alert pf-m-danger pf-m-inline pf-m-fit-content">
+                                <div class="pf-c-alert__icon" title="Tasks completed with errors">
+                                    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                                    <p>&nbsp;UNREACHABLE</p>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for host in playbook.hosts %}
+                    <tr>
+                        <td role="cell" data-label="Hostname" class="pf-m-fit-content">
+                            <a href="../host/{{ host.id }}.html">{{ host.name }}</a>
+                        </td>
+                        <td role="cell" data-label="Changed" class="pf-m-fit-content">
+                            {{ host.changed }}
+                        </td>
+                        <td role="cell" data-label="Failed" class="pf-m-fit-content">
+                            {{ host.failed }}
+                        </td>
+                        <td role="cell" data-label="Ok" class="pf-m-fit-content">
+                            {{ host.ok }}
+                        </td>
+                        <td role="cell" data-label="Skipped" class="pf-m-fit-content">
+                            {{ host.skipped }}
+                        </td>
+                        <td role="cell" data-label="Unreachable" class="pf-m-fit-content">
+                            {{ host.unreachable }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </details>
+        <details id="results" open="true">
+            <summary>Task results</summary>
+            <table class="pf-c-table pf-m-grid-md pf-m-compact" role="grid" id="result-table">
+                <thead>
+                    <tr role="row">
+                        <th role="columnheader" scope="col" class="pf-m-fit-content">Status</th>
+                        <th role="columnheader" scope="col">Host</th>
+                        <th role="columnheader" scope="col">Task</th>
+                        <th role="columnheader" scope="col">Action</th>
+                        <th role="columnheader" scope="col" class="pf-m-fit-content">
+                            Duration
+                        </th>
+                        <th role="columnheader" scope="col" class="pf-m-fit-content">
+                            Date
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for play in playbook.plays %}
+                    {% for task in play.tasks %}
+                    {% for result in task.results %}
+                    <tr role="row">
+                        <td role="cell" data-label="Status" class="pf-c-table__icon pf-m-fit-content">
+                            {% include "partials/result_status_icon.html" with status=result.status %}
+                        </td>
+                        <td role="cell" data-label="Host" class="pf-m-fit-content">
+                            {{ result.host.name }}
+                        </td>
+                        <td role="cell" data-label="Name" class="pf-m-fit-content">
+                            <a href="../result/{{ result.id }}.html">{{ task.name }}</a>
+                        </td>
+                        <td role="cell" data-label="Action" class="pf-m-fit-content">
+                            <a href="../file/{{ task.file.id }}.html#{{ task.lineno }}">{{ task.action }}</a>
+                        </td>
+                        <td role="cell" data-label="Duration" class="pf-m-fit-content">
+                            {{ result.duration | format_duration }}
+                        </td>
+                        <td role="cell" data-label="Date" class="pf-m-fit-content">
+                            {{ result.started | format_date }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% endfor %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </details>
+    </div>
+</div>
+{% endblock %}
