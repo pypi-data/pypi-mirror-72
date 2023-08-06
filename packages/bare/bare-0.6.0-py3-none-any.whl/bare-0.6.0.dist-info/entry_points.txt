@@ -1,0 +1,4 @@
+[console_scripts]
+bare = bare.__main__:main
+bare-dump = bare.dump:main
+
