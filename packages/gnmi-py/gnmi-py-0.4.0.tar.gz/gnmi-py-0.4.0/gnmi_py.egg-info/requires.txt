@@ -1,0 +1,5 @@
+grpcio>=1.28.1
+grpcio-tools>=1.28.1
+protobuf>=3.11.3
+toml>=0.10.0
+typing-extensions>=3.7.4.2

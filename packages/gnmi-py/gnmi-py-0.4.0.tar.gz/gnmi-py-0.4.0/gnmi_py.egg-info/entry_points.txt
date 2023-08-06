@@ -1,0 +1,4 @@
+[console_scripts]
+gimpy = gnmi.entry:main
+gnmipy = gnmi.entry:main
+
