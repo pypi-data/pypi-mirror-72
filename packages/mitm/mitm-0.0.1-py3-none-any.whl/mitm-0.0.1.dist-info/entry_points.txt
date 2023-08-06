@@ -1,0 +1,3 @@
+[console_scripts]
+mitm = mitm.run:run
+
