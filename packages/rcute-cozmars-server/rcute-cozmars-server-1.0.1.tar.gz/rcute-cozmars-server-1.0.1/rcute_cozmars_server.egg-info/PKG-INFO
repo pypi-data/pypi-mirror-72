@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: rcute-cozmars-server
+Version: 1.0.1
+Summary: Firmware for Cozmars, the 3d printable educational robot.
+Home-page: https://github.com/hyansuper/rcute-cozmars-server
+Author: Huang Yan
+Author-email: hyansuper@foxmail.com
+License: MIT
+Description: # rcute-cozmars-server
+        Firmware for Cozmars, the 3d printable educational robot.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
