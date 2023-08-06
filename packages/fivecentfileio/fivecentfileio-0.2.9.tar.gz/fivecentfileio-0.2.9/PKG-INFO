@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: fivecentfileio
+Version: 0.2.9
+Summary: custom file reading/writing utilities
+Home-page: https://github.com/endangeredoxen/fivecentfileio
+Author: Steve Nicholes
+Author-email: endangeredoxen@users.noreply.github.com
+License: GPLv3
+Download-URL: https://github.com/endangeredoxen/fivecentfileio/archive/v0.2.9.tar.gz
+Description-Content-Type: text/markdown
+Description: # fivecentfileio
+        file reading utilities
+        
+        pip install https://github.com/endangeredoxen/fivecentfileio/zipball/master
+        
+Keywords: data
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6

@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+fivecentfileio/__init__.py
+fivecentfileio/config.py
+fivecentfileio/html.py
+fivecentfileio/reader.py
+fivecentfileio/utilities.py
+fivecentfileio.egg-info/PKG-INFO
+fivecentfileio.egg-info/SOURCES.txt
+fivecentfileio.egg-info/dependency_links.txt
+fivecentfileio.egg-info/requires.txt
+fivecentfileio.egg-info/top_level.txt
