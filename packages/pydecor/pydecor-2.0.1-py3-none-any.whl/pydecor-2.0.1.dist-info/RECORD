@@ -1,0 +1,16 @@
+pydecor/__init__.py,sha256=K4BxySTo09UZ1CbUu2ISFYkbh34UroXJUThj89AkTK8,399
+pydecor/_memoization.py,sha256=EO6GNGTSa9RfcpoGZlVBQLAxWGpW3876EBTLuyoyATU,588
+pydecor/_version.py,sha256=o3VUGlTvgMjAxmvhCF4NJ-tgMvA6N4pioI-pjf1VyKk,331
+pydecor/caches.py,sha256=daBUpAxNK_XNMr8-Z_mvWgwTPrHqJwIA0VaOuAD0Kzg,3414
+pydecor/constants.py,sha256=aM--cGM-cGFi4M2BkZwAauFHHY9GsX4emD1ZlEHxcpI,163
+pydecor/functions.py,sha256=PbNgM5Xw7Kd8_9xtEyAkUdq2wvf1JnmQnnr9GAZntDs,3535
+pydecor/decorators/__init__.py,sha256=NBGshm1xy0-Vu-Bn3QLTqYHM-uWNuiAy-0BDBYcNGQg,456
+pydecor/decorators/_utility.py,sha256=HWoLsLf0S2QuAsIRU-l8WVynW3X2djs66XhrZS7SbEg,6247
+pydecor/decorators/_visibility.py,sha256=8Gjz9BAi0AYiVfAx6ecf-vKqXxA5K-vr4X4WTcWWk_E,2667
+pydecor/decorators/generic.py,sha256=UuuDVn0CBgNYFLfh-I2NqZDI11jpi0hF9m2ejmdD0fE,18873
+pydecor/decorators/ready_to_wear.py,sha256=izjlSGPubLz08ETw5kQljVwJEYrqDj87fUuDzDEErz4,5875
+pydecor-2.0.1.dist-info/LICENSE,sha256=15zs1xwfOcLbtT21z-tW8YLODIaHrf5Gnzc9Qp7W0tY,1074
+pydecor-2.0.1.dist-info/METADATA,sha256=jZV98mbxlUHKS8mi8OCwG3mtMU0rxUSukEJytIu5NGA,32904
+pydecor-2.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pydecor-2.0.1.dist-info/top_level.txt,sha256=3j87NOTBd7Ir_Wyn29tfND25rSjX7DKGPdzexZwlrtc,8
+pydecor-2.0.1.dist-info/RECORD,,
