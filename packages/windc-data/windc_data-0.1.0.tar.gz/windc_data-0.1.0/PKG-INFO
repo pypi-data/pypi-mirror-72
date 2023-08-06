@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: windc_data
+Version: 0.1.0
+Summary: A helper package to read/write WiNDC Data
+Home-page: https://windc.wisc.edu
+Author: Adam Christensen
+Author-email: achristensen@gams.com
+License: UNKNOWN
+Description: # windc_datastream
+        Data processing tools that generate the input GDX used to build the core WiNDC database.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
