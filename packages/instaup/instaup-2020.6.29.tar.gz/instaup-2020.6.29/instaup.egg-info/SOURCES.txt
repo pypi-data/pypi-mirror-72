@@ -1,0 +1,10 @@
+README.rst
+setup.py
+instaup/__init__.py
+instaup/instaup.py
+instaup.egg-info/PKG-INFO
+instaup.egg-info/SOURCES.txt
+instaup.egg-info/dependency_links.txt
+instaup.egg-info/entry_points.txt
+instaup.egg-info/requires.txt
+instaup.egg-info/top_level.txt
