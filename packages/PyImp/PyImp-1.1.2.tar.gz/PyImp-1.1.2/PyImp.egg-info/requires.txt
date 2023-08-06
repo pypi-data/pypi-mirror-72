@@ -1,0 +1,12 @@
+ConfigSpace>=0.4
+argcomplete
+bokeh>=1.1.0
+fanova
+matplotlib
+numpy
+pandas
+pyrfr>=0.8.0
+scipy
+sklearn
+smac>=0.8.0
+tqdm
