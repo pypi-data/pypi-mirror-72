@@ -1,0 +1,14 @@
+README.md
+setup.py
+crawlutils/__init__.py
+crawlutils/exporters.py
+crawlutils/items.py
+crawlutils/pipelines.py
+crawlutils/settings.py
+crawlutils.egg-info/PKG-INFO
+crawlutils.egg-info/SOURCES.txt
+crawlutils.egg-info/dependency_links.txt
+crawlutils.egg-info/requires.txt
+crawlutils.egg-info/top_level.txt
+crawlutils/base_spiders/__init__.py
+crawlutils/base_spiders/base.py
