@@ -1,0 +1,3 @@
+pylokit==0.8.1
+django<3.0.0
+billiard<3.6.0,>=3.5.0.2
