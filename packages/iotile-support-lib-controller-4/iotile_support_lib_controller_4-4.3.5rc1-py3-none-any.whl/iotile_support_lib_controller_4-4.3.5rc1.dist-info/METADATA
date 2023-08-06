@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: iotile-support-lib-controller-4
+Version: 4.3.5rc1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Arch
+Author-email: info@arch-iot.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pyparsing (<3,>=2.2.1)
+Requires-Dist: typedargs (<2,>=1)
+Requires-Dist: tqdm (>=4.46.1)
+
+UNKNOWN
+
+
