@@ -1,0 +1,35 @@
+.hl {
+  background-color: var(--hl-strong);
+}
+span.hl {
+	background-color: var(--hl-strong);
+	border-width: 0;
+	border-radius: 0.1rem;
+	border-style: solid;
+}
+div.contnr.hl,div.lbl.hl {
+  background-color: var(--hl-strong);
+}
+div.contnr.hl {
+  border-color: var(--hl-rim) ! important;
+	border-width: 0.2rem ! important;
+}
+
+span.hlbx {
+	border-color: var(--hl-rim);
+	border-width: 0.2rem ! important;
+	border-style: solid;
+	border-radius: 0.3rem;
+  padding: 0.2rem;
+  margin: 0.2rem;
+}
+
+span.plain {
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+:root {
+	--hl-strong:        hsla( 60, 100%,  70%, 0.9  );
+	--hl-rim:           hsla( 55,  80%,  50%, 1.0  );
+}
