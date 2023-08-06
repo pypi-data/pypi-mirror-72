@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ccdjangodeploy/cc.py
+ccdjangodeploy/cli.py
+ccdjangodeploy.egg-info/PKG-INFO
+ccdjangodeploy.egg-info/SOURCES.txt
+ccdjangodeploy.egg-info/dependency_links.txt
+ccdjangodeploy.egg-info/entry_points.txt
+ccdjangodeploy.egg-info/top_level.txt
