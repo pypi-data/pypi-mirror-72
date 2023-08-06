@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: django-findcar
+Version: 0.0.5
+Summary: A Django app to identify car models using machine learning.
+Home-page: https://github.com/GaboxFH/cis4930-carfinder
+Author: People who find cars
+Author-email: findcars@findcars.com
+License: UNKNOWN
+Keywords: sample,setuptools,development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.5, <4
+Description-Content-Type: text/markdown
+Requires-Dist: peppercorn
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+FindCar
+=====
+
+Add description
+
+Detailed documentation is in the "docs" directory.
+
+Quick start
+-----------
+
+1. Add "finder" to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = [
+        ...
+        'finder',
+    ]
+
+2. Include the polls URLconf in your project urls.py like this::
+
+    path('polls/', include('polls.urls')),
+
+3. Run ``python manage.py migrate`` to create the polls models.
+
+4. Start the development server and visit http://127.0.0.1:8000/admin/
+   to create a poll (you'll need the Admin app enabled).
+
+5. Visit http://127.0.0.1:8000/polls/ to participate in the poll.
+
