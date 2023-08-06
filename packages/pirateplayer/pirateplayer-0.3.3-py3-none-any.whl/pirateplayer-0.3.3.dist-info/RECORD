@@ -1,0 +1,17 @@
+pirateplayer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pirateplayer/__main__.py,sha256=YyDjHH4lrxj8Z8MhjJ7gKATkQjQ9oAqz4CuskFjgUWE,681
+pirateplayer/controller.py,sha256=1eHh7-8fM4Xnh7eC7zthBUZGr8A3yTx8bVl-F4bxxds,2239
+pirateplayer/library.py,sha256=HAi-cfLXBwznP9Xv2yA9C-BC-fGS1kn-snNqmr5nVw0,2234
+pirateplayer/view.py,sha256=NY1PjSTDLIdyGbHN_pZ1nHPdMpgn4B23aQaFmBuTXnM,4900
+pirateplayer/assets/NotoSansMono-ExtraCondensedSemiBold.ttf,sha256=NWiIT3MerQIDsX3cofx4UkPb2LVg_DLUF7TZBvCl2Fk,517976
+pirateplayer/assets/logo.png,sha256=afTAUdykawdO-YVsjnjWzk5ejs04JEb-DaqInzEf5SM,20960
+pirateplayer/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pirateplayer/utils/confparse.py,sha256=5zRxmXmdS4OoIBxpxosIQX0-t8_tAe-1pIvfzKfUcDE,634
+pirateplayer/utils/gstreamer.py,sha256=pTKBL-zD7Rq29QujsW2zK66-LxRe2zJ2u1lJax8wi6c,2973
+pirateplayer/utils/inputmap.py,sha256=FXuIx9kEgzreKIvfumoHKuL0gWLwuA-HamlUxNez_Cs,760
+pirateplayer-0.3.3.dist-info/LICENSE,sha256=O2FZT-Syynw6Z05cP0uS-z9ypa9JDACmNKX3CV43QNQ,1067
+pirateplayer-0.3.3.dist-info/METADATA,sha256=7uZNRDHD9tPbNlHgxh22iFQsb-nGaydJbPfj-0x141w,2215
+pirateplayer-0.3.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pirateplayer-0.3.3.dist-info/entry_points.txt,sha256=P-xzAochSSl4udrrQD5RKEFLXwwolzYJqMSx2vH6ipc,61
+pirateplayer-0.3.3.dist-info/top_level.txt,sha256=o16u1rZUW0oeLlhGdNJVqdkTI0ui4sR2nkDvAq4LWnk,13
+pirateplayer-0.3.3.dist-info/RECORD,,
