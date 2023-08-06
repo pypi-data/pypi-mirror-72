@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        linetrack=line_track_designer.cli:linetrack
+    

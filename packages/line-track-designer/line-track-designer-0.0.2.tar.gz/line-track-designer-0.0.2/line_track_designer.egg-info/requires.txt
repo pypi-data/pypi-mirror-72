@@ -1,0 +1,6 @@
+Click
+Pillow
+numpy
+
+[:platform_system != "Windows"]
+pycups
