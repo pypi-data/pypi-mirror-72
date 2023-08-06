@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+lib/locald/__init__.py
+lib/locald/cli.py
+lib/locald/client.py
+lib/locald/compat.py
+lib/locald/config.py
+lib/locald/server.py
+lib/locald.egg-info/PKG-INFO
+lib/locald.egg-info/SOURCES.txt
+lib/locald.egg-info/dependency_links.txt
+lib/locald.egg-info/not-zip-safe
+lib/locald.egg-info/requires.txt
+lib/locald.egg-info/top_level.txt
+tools/locald
