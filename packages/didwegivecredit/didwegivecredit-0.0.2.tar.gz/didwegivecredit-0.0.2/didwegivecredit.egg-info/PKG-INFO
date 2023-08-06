@@ -1,0 +1,64 @@
+Metadata-Version: 1.2
+Name: didwegivecredit
+Version: 0.0.2
+Summary: A small linter that checks whether committers to a repository are acknowledged with all-contributors
+Home-page: https://github.com/adswa/didwegivecredit
+Author: Adina Wagner
+Author-email: adina.wagner@t-online.de
+License: MIT license
+Description: ===============
+        didwegivecredit
+        ===============
+        
+        
+        .. image:: https://img.shields.io/pypi/v/didwegivecredit.svg
+                :target: https://pypi.python.org/pypi/didwegivecredit
+        
+        .. image:: https://img.shields.io/travis/adswa/didwegivecredit.svg
+                :target: https://travis-ci.com/adswa/didwegivecredit
+        
+        .. image:: https://readthedocs.org/projects/didwegivecredit/badge/?version=latest
+                :target: https://didwegivecredit.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        If you use the `allcontributors bot <https://allcontributors.org/>`_ to acknowledge contributions to your repository, its easy to miss something.
+        ``didwegivecredit`` is a small linter that checks whether committers to a repository are acknowledged with all-contributors.
+        
+        Features
+        --------
+        
+        * Point the tool to a repository, check whether all committers are found in ``.all-contributorsrc``
+        * Free software: MIT license
+        * Documentation: https://didwegivecredit.readthedocs.io.
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.0.1 (2020-04-23)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: didwegivecredit
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
