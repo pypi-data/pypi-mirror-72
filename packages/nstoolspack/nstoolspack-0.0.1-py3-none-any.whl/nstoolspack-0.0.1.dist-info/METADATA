@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: nstoolspack
+Version: 0.0.1
+Summary: A fraction of features in skydark/nstools
+Home-page: https://github.com/AeGean-Studio/nstoolspack
+Author: AeGean-Studio
+Author-email: wyqsmith@aegeanstudio.com
+License: BSD
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+
+UNKNOWN
+
+
