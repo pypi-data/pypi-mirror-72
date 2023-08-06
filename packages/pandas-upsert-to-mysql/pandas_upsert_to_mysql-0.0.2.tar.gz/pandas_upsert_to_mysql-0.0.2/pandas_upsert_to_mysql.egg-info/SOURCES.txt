@@ -1,0 +1,10 @@
+README.md
+setup.py
+pandas_upsert_to_mysql/__init__.py
+pandas_upsert_to_mysql/core.py
+pandas_upsert_to_mysql/table.py
+pandas_upsert_to_mysql.egg-info/PKG-INFO
+pandas_upsert_to_mysql.egg-info/SOURCES.txt
+pandas_upsert_to_mysql.egg-info/dependency_links.txt
+pandas_upsert_to_mysql.egg-info/requires.txt
+pandas_upsert_to_mysql.egg-info/top_level.txt
