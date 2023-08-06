@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: rosey-deprecated
+Version: 1.20200629
+Summary: Quickly deprecated functions, methods and classes
+Home-page: https://github.com/arose13/rosey-deprecated
+Author: Stephen Rose
+Author-email: me@stephenro.se
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3

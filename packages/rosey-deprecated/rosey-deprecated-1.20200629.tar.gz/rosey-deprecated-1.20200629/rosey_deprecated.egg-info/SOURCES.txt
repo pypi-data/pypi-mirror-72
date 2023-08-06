@@ -1,0 +1,10 @@
+README.md
+setup.py
+rosey_deprecated/__init__.py
+rosey_deprecated.egg-info/PKG-INFO
+rosey_deprecated.egg-info/SOURCES.txt
+rosey_deprecated.egg-info/dependency_links.txt
+rosey_deprecated.egg-info/not-zip-safe
+rosey_deprecated.egg-info/top_level.txt
+tests/__init__.py
+tests/test_all.py
