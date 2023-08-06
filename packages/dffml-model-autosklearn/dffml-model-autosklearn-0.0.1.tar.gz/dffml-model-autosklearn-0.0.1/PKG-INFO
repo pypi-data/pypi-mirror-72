@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: dffml-model-autosklearn
+Version: 0.0.1
+Summary: DFFML model dffml-model-autosklearn
+Home-page: https://github.com/dffml/dffml-model-autosklearn
+Author: Sudhanshu kumar
+Author-email: sudhanshukumar5459@gmail.com
+Maintainer: Sudhanshu kumar
+Maintainer-email: sudhanshukumar5459@gmail.com
+License: MIT
+Description: # DFFML Models for Auto-Sklearn
+        
+        ## About
+        
+        Auto-Sklearn models.
+        
+        ## License
+        
+        Auto-Sklearn Models are distributed under the terms of the
+        [MIT License](LICENSE).
+        
+Keywords: dffml
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/markdown

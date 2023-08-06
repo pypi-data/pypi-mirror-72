@@ -1,0 +1,3 @@
+[dffml.model]
+autoclassifier = dffml_model_autosklearn.autoclassifier:AutoSklearnClassifierModel
+
