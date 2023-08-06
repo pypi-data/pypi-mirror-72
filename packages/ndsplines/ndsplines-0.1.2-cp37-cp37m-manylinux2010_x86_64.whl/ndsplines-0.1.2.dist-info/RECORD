@@ -1,0 +1,10 @@
+ndsplines/ndsplines.py,sha256=RMSdmnHcbjtzG-tgPjrJ6Pl_DCNFGuv2GC2iRDZKSiU,30851
+ndsplines/__init__.py,sha256=s_LKVTbYwmAOrZ6ON_B7MSWxPwaWsnZ-IHn6BBDrXhw,899
+ndsplines/_npy_bspl.py,sha256=XJVM5ymLmMxkArRatGpOxGbUMRc8bdms9V81CjrDxW8,5067
+ndsplines/_bspl.cpython-37m-x86_64-linux-gnu.so,sha256=eWOUIMJTgRB7TC1-EcYkYmKizwIHL57k5REyFLJvVcc,1013040
+ndsplines/version.py,sha256=mdp2CftfqYbdKtP-eWv1z7rAUycYv6X1ntXSMUf8Kss,22
+ndsplines-0.1.2.dist-info/RECORD,,
+ndsplines-0.1.2.dist-info/WHEEL,sha256=fgEDqTvJ7t6Dks7wJIP8MuGNJfT7rZstMDs3LUSwCl8,112
+ndsplines-0.1.2.dist-info/METADATA,sha256=ry-6-8-y2vB1RNStSn142B2qHidrJErCkOK9n35-Sug,8655
+ndsplines-0.1.2.dist-info/top_level.txt,sha256=hAAzrTtKFEqz7k-TQic_dqzoqNB-bmWi-oc_xkKdQUA,10
+ndsplines-0.1.2.dist-info/LICENSE,sha256=j-m0LDh3slEDN21iNceoswE1XBCMEMdPc8DaJy1gHTk,3337
