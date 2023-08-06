@@ -1,0 +1,13 @@
+pytz
+
+[dev]
+flake8
+
+[test]
+pytest
+pytest-runner
+pytest-cov
+pytest-pep8
+requests
+responses
+pyshuttlis

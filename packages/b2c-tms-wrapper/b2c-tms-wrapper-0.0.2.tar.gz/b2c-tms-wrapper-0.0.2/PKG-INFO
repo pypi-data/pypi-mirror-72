@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: b2c-tms-wrapper
+Version: 0.0.2
+Summary: Interface for b2c_tms backend
+Home-page: https://github.com/shuttl-tech/b2c-tms-wrapper
+Author: Shuttl
+Author-email: author@example.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: test
+Provides-Extra: dev
