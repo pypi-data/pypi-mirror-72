@@ -1,0 +1,10 @@
+README.md
+setup.py
+shaloop.egg-info/PKG-INFO
+shaloop.egg-info/SOURCES.txt
+shaloop.egg-info/dependency_links.txt
+shaloop.egg-info/not-zip-safe
+shaloop.egg-info/top_level.txt
+src/_sha_loop.pyx
+src/sha_loop.c
+test/test_sha.py
