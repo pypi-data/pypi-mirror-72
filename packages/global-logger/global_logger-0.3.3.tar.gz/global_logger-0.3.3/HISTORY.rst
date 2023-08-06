@@ -1,0 +1,29 @@
+=======
+History
+=======
+
+
+0.3.3 (2020-06-29)
+------------------
+
+* Github Pages setup
+* Documentation update
+
+
+0.2.11 (2020-06-28)
+-------------------
+
+* Refactoring
+* Bugfix
+
+
+0.2.6 (2020-06-27)
+------------------
+
+* GitHub Actions stabilized.
+
+
+0.1.0 (2020-06-23)
+------------------
+
+* First release on PyPI.
