@@ -1,0 +1,7 @@
+spacy<2.3,>=2.2.2
+nlp_preprocessor>=0.0.1
+PyRuSH>=1.0.3.2
+cycontext>=1.0.3
+clinical_sectionizer>=0.1.1
+target_matcher>=0.0.1
+nlp_postprocessor>=0.0.1
