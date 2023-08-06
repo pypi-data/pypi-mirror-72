@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: tilingsgui
+Version: 0.1.0
+Summary: A graphical user interface for tilings
+Home-page: https://github.com/PermutaTriangle/tilingsgui
+License: BSD-3-Clause
+Keywords: gui,permutation,tiling
+Author: Permuta Triangle
+Author-email: permutatriangle@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Dist: pyglet (>=1.5.5,<2.0.0)
+Requires-Dist: pyperclip (>=1.8.0,<2.0.0)
+Requires-Dist: tilings (>=2.0.0,<3.0.0)
+Project-URL: Repository, https://github.com/PermutaTriangle/tilingsgui
+Description-Content-Type: text/markdown
+
+# TilingsGUI
