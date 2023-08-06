@@ -1,0 +1,10 @@
+setup.py
+adarsh_distributions/Binomialdistribution.py
+adarsh_distributions/Gaussiandistribution.py
+adarsh_distributions/Generaldistribution.py
+adarsh_distributions/__init__.py
+adarsh_distributions.egg-info/PKG-INFO
+adarsh_distributions.egg-info/SOURCES.txt
+adarsh_distributions.egg-info/dependency_links.txt
+adarsh_distributions.egg-info/not-zip-safe
+adarsh_distributions.egg-info/top_level.txt
