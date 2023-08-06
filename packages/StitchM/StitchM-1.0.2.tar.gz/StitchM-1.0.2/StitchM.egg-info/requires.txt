@@ -1,0 +1,7 @@
+tifffile
+mrcfile
+numpy
+omexml-dls
+
+[:platform_system == "Windows"]
+pywin32
