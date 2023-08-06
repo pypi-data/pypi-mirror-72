@@ -1,0 +1,53 @@
+define([
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpArange/Index`,
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpArray/Index`,
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpConcatenate/Index`,
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpFlip/Index`,
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpReshape/Index`,
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpZeros/Index`,
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpOnes/Index`,
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpFull/Index`,
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpEmpty/Index`,
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpIdentity/Index`,
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpEye/Index`,
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpTranspose/Index`,
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpCopy/Index`,
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpFlatten/Index`,
+    `nbextensions/VisualPython/Source/Page/PalettePage/PaletteBlock/Numpy/NpRavel/Index`,
+  
+], function(
+    NpArange,
+    NpArray,
+    NpConcatenate,
+    NpFlip,
+    NpReshape,
+    NpZeros,
+    NpOnes,
+    NpFull,
+    NpEmpty,
+    NpIdentity,
+    NpEye,
+    NpTranspose,
+    NpCopy,
+    NpFlatten,
+    NpRavel
+)
+{
+    return {
+        NpArange,
+        NpArray,
+        NpConcatenate,
+        NpFlip,
+        NpReshape,
+        NpZeros,
+        NpOnes,
+        NpFull,
+        NpEmpty,
+        NpIdentity,
+        NpEye,
+        NpTranspose,
+        NpCopy,
+        NpFlatten,
+        NpRavel
+    }
+});

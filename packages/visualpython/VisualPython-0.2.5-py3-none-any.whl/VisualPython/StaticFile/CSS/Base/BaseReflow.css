@@ -1,0 +1,40 @@
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-column-evenly {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.flex-column-center {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.flex-row-evenly {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.height500 {
+    height: 500px;
+}
+
+.relative100per {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+

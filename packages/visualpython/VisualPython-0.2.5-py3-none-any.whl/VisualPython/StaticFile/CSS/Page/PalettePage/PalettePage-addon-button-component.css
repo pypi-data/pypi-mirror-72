@@ -1,0 +1,72 @@
+.PalettePage-addon-button-component-container {
+    position: absolute;
+    display: none;
+
+    top: 0px;
+    right: 0px;
+
+    width: 400px;
+    height: 100%;
+
+    background-color: white;
+
+    border: 1px solid black;
+}
+
+.PalettePage-addon-button-component-header {
+    width: 100%;
+    height: 50px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.PalettePage-addon-button-component-header-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 14px;
+}
+
+.PalettePage-addon-button-component-header-button span {
+    /* padding: 10px; */
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.PalettePage-addon-button-component-header-button span:hover {
+    cursor: pointer;
+    transition: 0.7s;
+
+    background-color: black;
+    color: white;
+}
+
+.PalettePage-addon-button-component-header-button:nth-child(2) {
+    position: relative;
+    left: 10px;
+}
+
+.PalettePage-addon-button-component-body {
+    height: calc(100% - 50px);
+}
+
+.PalettePage-addon-button-component-body-title {
+
+    margin-top: 10px;
+    
+    text-align: center;
+    font-weight: 700;
+}
+
+.PalettePage-addon-button-component-body-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

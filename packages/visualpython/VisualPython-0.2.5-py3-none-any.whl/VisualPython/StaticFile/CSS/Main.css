@@ -1,0 +1,11 @@
+#main-layout {
+    position: absolute;
+    top:0;
+    right: 0;
+
+    width: 400px;
+    height: 400px;
+
+    box-shadow: 0 0 1px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.1);
+    
+}
