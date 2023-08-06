@@ -1,0 +1,23 @@
+Debian:
+  pkgs:
+    - python3-click
+    - python3-odoorpc
+    - python3-panoramisk
+    - python3-setproctitle
+    - python3-terminado
+    - iptables
+    - ipset
+  pip:
+    - aiorun
+
+RedHat:
+  pkgs:
+    - python3-click
+    - iptables
+    - ipset
+  pip:
+    - aiorun
+    - odoorpc
+    - panoramisk
+    - setproctitle
+    - terminado

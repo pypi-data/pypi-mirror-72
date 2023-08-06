@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+---
+odoo:
+  rev: "13.0"
+  user:  odoo
+  dbname: {{ salt["config.get"]("odoo_db", "odoo") }}
+  prefix: /srv
+  upgrade: True
