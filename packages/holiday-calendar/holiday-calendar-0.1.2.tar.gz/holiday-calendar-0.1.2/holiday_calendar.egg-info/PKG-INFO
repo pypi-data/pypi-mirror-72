@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: holiday-calendar
+Version: 0.1.2
+Summary: The holidays in China
+Home-page: https://github.com/Thchoonlophon/holiday_calendar
+Author: Jingxuan
+Author-email: qian_chen_jin@163.com
+License: MIT License
+Description: # 中国节假日
+        
+        判断某年某月某一天是不是工作日/节假日。
+        
+        ## 安装
+        
+        ```shell
+        pip install holiday-calendar
+        ```
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
