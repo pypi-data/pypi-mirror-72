@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+__pkginfo__.py
+requirements.txt
+setup.py
+wordle/__init__.py
+wordle/core.py
+wordle/py.typed
+wordle.egg-info/PKG-INFO
+wordle.egg-info/SOURCES.txt
+wordle.egg-info/dependency_links.txt
+wordle.egg-info/entry_points.txt
+wordle.egg-info/not-zip-safe
+wordle.egg-info/requires.txt
+wordle.egg-info/top_level.txt
