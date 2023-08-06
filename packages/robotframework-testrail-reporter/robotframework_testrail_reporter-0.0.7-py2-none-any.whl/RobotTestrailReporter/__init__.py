@@ -1,0 +1,1 @@
+from RobotTestrailReporter.RobotTestrailReporter import main

@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: robotframework-testrail-reporter
+Version: 0.0.7
+Summary: robotframework-testrail-reporter
+Home-page: UNKNOWN
+Author: Vincenzo Gasparo
+Author-email: vincenzo.gasparo@gmail.it
+Maintainer: Vincenzo Gasparo
+Maintainer-email: vincenzo.gasparo@gmail.it
+License: MIT
+Keywords: robotframework testrail test testing automation
+Platform: any
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing
+Requires-Dist: lxml
+Requires-Dist: testrail
+
+Library used to update TestRail test run status from RobotFramework output.xml
+
+
