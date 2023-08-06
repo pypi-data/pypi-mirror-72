@@ -1,0 +1,12 @@
+django-model-utils<4.1.0,>=4.0.0
+
+[qa]
+black<=19.10b0
+flake8<=3.9
+isort<=4.3.21
+coveralls
+
+[rest]
+djangorestframework<3.12,>=3.11
+django-filter>=2.2.0<2.3.0
+drf-yasg<1.18,>=1.17
