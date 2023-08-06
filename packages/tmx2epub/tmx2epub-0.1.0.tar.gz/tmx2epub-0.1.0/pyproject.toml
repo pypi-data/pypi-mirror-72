@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "tmx2epub"
+version = "0.1.0"
+description = "converts tmx to epub"
+authors = ["ffreemt"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/ffreemt/tmx2epub"
+repository = "https://github.com/ffreemt/tmx2epub"
+
+include = [
+    "LICENSE",
+]
+keywords = ["tmx", "epub", "language", "learning"]
+classifiers = [
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+[tool.poetry.dependencies]
+python = "^3.7"
+EbookLib = "^0.17.1"
+more_itertools = "^8.4.0"
+pyquery = "^1.4.1"
+absl-py = "^0.9.0"
+logzero = "^1.5.0"
+tqdm = "^4.47.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pylint = "^2.5.3"
+ipython = "^7.16.1"
+pyinstaller = "^3.6"
+pywin32-ctypes = "^0.2.0"
+pefile = "^2019.4.18"
+
+[tool.poetry.scripts]
+tmx2epub = "tmx2epub.__main__:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
