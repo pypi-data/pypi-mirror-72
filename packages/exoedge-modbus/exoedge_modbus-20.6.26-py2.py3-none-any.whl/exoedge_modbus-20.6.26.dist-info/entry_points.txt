@@ -1,0 +1,3 @@
+[console_scripts]
+exomod = exoedge_modbus.cli:main
+
