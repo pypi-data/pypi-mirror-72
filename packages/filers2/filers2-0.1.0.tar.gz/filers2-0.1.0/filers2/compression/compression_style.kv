@@ -1,0 +1,331 @@
+#:import pretty_space base_kivy_app.utils.pretty_space
+
+<CompressionWidget>:
+    size_hint_min_x: self.minimum_width
+    orientation: 'vertical'
+    manager: app.compression_manager
+    source_container: source_container.__self__
+    spacing: '5dp'
+    media_item_log: media_item_log.__self__
+    canvas:
+        Color:
+            rgba: app.theme.primary_light
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    MediaItemLog:
+        id: media_item_log
+        on_kv_post: root.remove_widget(self)
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_min_x: self.minimum_width
+        size_hint_min_y: self.minimum_height
+        size_hint_y: .3
+        canvas:
+            Color:
+                rgba: app.theme.primary
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        FlatLabel:
+            text: 'Sources'
+            height: self.texture_size[1]
+            size_hint_y: None
+            size_hint_min_x: self.texture_size[0]
+            center_texture: True
+            flat_color: app.theme.text_primary
+        BoxLayout:
+            disabled: app.compression_manager.thread_has_job
+            size_hint_y: None
+            size_hint_min_x: self.minimum_width
+            height: '34dp'
+            padding: '15dp', '5dp'
+            spacing: '5dp'
+            FlatImageButton:
+                scale_down_color: True
+                source: 'flat_plus.png'
+                flat_color: app.theme.accent
+                on_release: app.compression_manager.create_source()
+            AnimatedButton:
+                anim_active: bool(app.compression_manager.currently_crawling)
+                scale_down_color: True
+                source: 'flat_refresh.png'
+                flat_color: app.theme.accent
+                on_release: if not app.compression_manager.currently_crawling: app.compression_manager.request_refresh_contents()
+            FlatLabel:
+                text: 'Suffix filter:'
+                size: self.texture_size
+                size_hint: None, None
+                flat_color: app.theme.text_primary
+            FlatSizedTextInput:
+                text: app.compression_manager.match_suffix
+                background_color: app.theme.primary_light
+                hint_text: '.ext'
+                on_focus: if not self.focus: app.compression_manager.match_suffix = self.text
+                width: '50dp'
+                size_hint_x: None
+        ScrollView:
+            bar_width: '10dp'
+            scroll_type: ['bars']
+            size_hint_min_y: min(dp(50), source_container.minimum_height)
+            size_hint_min_x: source_container.minimum_width
+            BoxLayout:
+                id: source_container
+                disabled: bool(app.compression_manager.thread_has_job)
+                size_hint: None, None
+                height: self.minimum_height
+                width: self.parent.width
+                spacing: '5dp'
+                orientation: 'vertical'
+                padding: '10dp', '10dp'
+                canvas:
+                    Color:
+                        rgba: app.theme.primary
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_min: self.minimum_size
+        padding: '3dp', 0
+        canvas:
+            Color:
+                rgba: app.theme.primary
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        FlatLabel:
+            text: 'Files'
+            height: self.texture_size[1]
+            size_hint_y: None
+            size_hint_min_x: self.texture_size[0]
+            center_texture: True
+            flat_color: app.theme.text_primary
+        BoxLayout:
+            size_hint_y: None
+            size_hint_min_x: self.minimum_width
+            height: '34dp'
+            padding: '15dp', '5dp'
+            spacing: '5dp'
+            FlatImageToggleButton:
+                disabled: bool(app.compression_manager.thread_has_job) and not app.compression_manager.currently_processing or app.compression_manager.currently_processing and self.state == 'normal'
+                scale_down_color: True
+                source: 'flat_play.png' if self.state == 'normal' else 'flat_stop.png'
+                flat_color: app.theme.accent
+                state: 'down' if app.compression_manager.currently_processing else 'normal'
+                on_release:
+                    if self.state == 'down': app.compression_manager.request_process_files()
+                    if self.state == 'normal': app.compression_manager.stop_processing = True
+            FlatImageButton:
+                disabled: bool(app.compression_manager.thread_has_job)
+                scale_down_color: True
+                source: 'flat_refresh.png'
+                flat_color: app.theme.accent
+                on_release: app.compression_manager.request_check_target_exists()
+            FlatImageButton:
+                disabled: bool(app.compression_manager.thread_has_job)
+                scale_down_color: True
+                source: 'flat_folder.png'
+                flat_color: app.theme.accent
+                on_release: app.open_filechooser(callback=app.compression_manager.request_refresh_target_path, target=app.compression_manager.target_root, dirselect=True, title='Select target directory')
+            FlatSizedTextInput:
+                disabled: bool(app.compression_manager.thread_has_job)
+                text: app.compression_manager.target_root
+                background_color: app.theme.primary_light
+                hint_text: 'target'
+                on_focus: if not self.focus: app.compression_manager.request_refresh_target_path(self.text)
+                size_hint_min_x: '100dp'
+            FlatLabel:
+                text:'Succeeded: [b]{}[/b], Failed: [b]{}[/b], Skipped: [b]{}[/b]'.format(app.compression_manager.num_processed_files, app.compression_manager.num_failed_files, app.compression_manager.num_skipped_files)
+                size_hint: None, None
+                size: self.texture_size
+                flat_color: app.theme.text_primary
+                center_texture: False
+                markup: True
+        RecycleView:
+            on_kv_post: app.compression_manager.recycle_view = self.__self__
+            viewclass: 'MediaItemView'
+            size_hint_min_x: rv.minimum_width
+            size_hint_min_y: min(dp(50), rv.minimum_height)
+            bar_width: '10dp'
+            scroll_type: ['bars']
+            padding: '10dp', 0
+            RecycleBoxLayout:
+                id: rv
+                default_size: None, None
+                default_size_hint: 1, None
+                size_hint_y: None
+                height: self.minimum_height
+                orientation: 'vertical'
+                spacing: '1dp'
+                canvas:
+                    Color:
+                        rgba: app.theme.accent
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+
+<SourceWidget>:
+    spacing: '5dp'
+    size_hint_min_x: self.minimum_width
+    size_hint_y: None
+    height: self.minimum_height
+    FlatLabel:
+        text: 'Path:'
+        size: self.texture_size
+        size_hint: None, None
+        flat_color: app.theme.text_primary
+    FlatImageButton:
+        scale_down_color: True
+        source: 'flat_folder.png'
+        flat_color: app.theme.accent
+        on_release: app.open_filechooser(callback=root.set_source, target=root.source_obj.source_viz, dirselect=True, multiselect=True, title='Select video directories')
+    FlatSizedTextInput:
+        text: root.source_obj.source_viz
+        background_color: app.theme.primary_light
+        hint_text: 'Source'
+        on_focus: if not self.focus: app.compression_manager.request_set_source(root.source_obj, self.text)
+        size_hint_min_x: '100dp'
+    AnimatedButton:
+        anim_active: root.source_obj.processing
+        scale_down_color: True
+        source: 'flat_refresh.png'
+        flat_color: app.theme.accent
+        on_release: app.compression_manager.request_refresh_contents(root.source_obj)
+    FlatImageButton:
+        scale_down_color: True
+        source: 'flat_delete.png'
+        flat_color: app.theme.accent
+        on_release: app.compression_manager.delete_source(root.source_obj)
+
+
+<MediaItemView>:
+    spacing: '5dp'
+    size_hint_y: None
+    height: self.minimum_height
+    rows: 2
+    exists: False
+    command: ''
+    result: ''
+    status: ''
+    media_item: None
+    padding: '10dp', '2dp'
+    canvas:
+        Color:
+            rgba: app.theme.primary
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    FlatLabel:
+        text: 'Source:'
+        size: self.texture_size
+        size_hint: None, None
+        flat_color: app.theme.text_primary
+        bold: True
+        center_texture: False
+    FlatLabel:
+        id: filename
+        flat_color: app.theme.text_primary
+        text_size: self.width, None
+        shorten: True
+        shorten_from: 'left'
+        size_hint_min_x: '100dp'
+        padding_y: '2dp'
+    FlatLabel:
+        id: file_size
+        size: max(self.texture_size[0], self.width), self.texture_size[1]
+        size_hint: None, None
+        flat_color: app.theme.text_primary
+        bold: True
+        center_texture: False
+    FlatToggleButton:
+        id: skip
+        disabled: root.status == 'processing' or root.exists
+        text: "Don't skip" if self.state == 'normal' else 'Skip'
+        size_hint: None, None
+        size: max(self.texture_size[0], self.width), self.texture_size[1]
+        padding_x: '1dp'
+        bold: True
+        on_release: app.compression_manager.request_set_skip(root.media_item, self.state == 'down')
+        scale_down_color: True
+        flat_color: app.theme.text_primary
+        flat_background_color: app.theme.primary_light if self.state == 'normal' else app.theme.primary_dark
+    AnimatedButton:
+        disabled: root.status == 'processing'
+        anim_active: root.status == 'processing'
+        source: 'flat_refresh.png' if root.status == 'processing' else 'flat_dots_vertical.png'
+        flat_color: app.theme.accent
+        on_release:
+            app.compression_widget.media_item_log.command = root.command
+            app.compression_widget.media_item_log.result = root.result
+            app.compression_widget.media_item_log.open(root)
+    FlatLabel:
+        text: 'Target:'
+        size: self.texture_size
+        size_hint: None, None
+        flat_color: app.theme.text_primary
+        bold: True
+        center_texture: False
+    FlatLabel:
+        id: target_filename
+        flat_color: app.theme.text_primary
+        text_size: self.width, None
+        shorten: True
+        shorten_from: 'left'
+        size_hint_min_x: '100dp'
+        padding_y: '2dp'
+    FlatLabel:
+        id: target_file_size
+        size: max(self.texture_size[0], self.width), self.texture_size[1]
+        size_hint: None, None
+        flat_color: app.theme.text_primary
+        bold: True
+        center_texture: False
+    FlatLabel:
+        text: 'Already exists' if root.exists and not root.status else root.status
+        size: max(self.texture_size[0], self.width), self.texture_size[1]
+        size_hint: None, None
+        flat_color: [1, 0, 0, 1] if root.status == 'failed' or not root.status and root.exists else app.theme.text_primary
+        center_texture: False
+    Widget:
+        size_hint_x: None
+        width: '1dp'
+
+
+<MediaItemLog@FlatDropDown>:
+    flat_color: app.theme.primary_text
+    flat_border_color: app.theme.divider
+    do_scroll: False, False
+    command: ''
+    result: ''
+    FlatSplitter:
+        size_hint: None, None
+        height: self.minimum_height
+        min_size: '300dp'
+        max_size: '800dp'
+        width: '400'
+        sizable_from: 'right'
+        flat_color: app.theme.accent
+        BoxLayout:
+            spacing: '5dp'
+            orientation: 'vertical'
+            size_hint_min_y: self.minimum_height
+            FlatLabel:
+                id: command
+                text: '[b]Command[/b]: {}'.format(root.command)
+                size_hint_y: None
+                height: self.texture_size[1]
+                text_size: self.width, None
+                flat_color: app.theme.text_primary
+                markup: True
+            ScrollView:
+                size_hint_min_y: dp(300)
+                bar_width: '10dp'
+                scroll_type: ['bars']
+                FlatLabel:
+                    id: result
+                    text: root.result
+                    size_hint: None, None
+                    size: self.texture_size
+                    flat_color: app.theme.text_primary
