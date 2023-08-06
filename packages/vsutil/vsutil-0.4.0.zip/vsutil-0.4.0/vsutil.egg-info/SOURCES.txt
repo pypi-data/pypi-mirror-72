@@ -1,0 +1,9 @@
+README.rst
+setup.py
+vsutil/__init__.py
+vsutil/py.typed
+vsutil.egg-info/PKG-INFO
+vsutil.egg-info/SOURCES.txt
+vsutil.egg-info/dependency_links.txt
+vsutil.egg-info/requires.txt
+vsutil.egg-info/top_level.txt
