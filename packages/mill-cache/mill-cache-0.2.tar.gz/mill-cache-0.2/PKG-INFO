@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: mill-cache
+Version: 0.2
+Summary: Mill Cache is a tarball with all of mill's dependencies.
+Home-page: https://github.com/jlsemi
+Author: Leway Colin@JLSemi
+Author-email: colinlin@jlsemi.com
+License: Apache-2.0 License
+Description: UNKNOWN
+Keywords: mill cache files
+Platform: UNKNOWN
+Requires-Python: >=3.6
