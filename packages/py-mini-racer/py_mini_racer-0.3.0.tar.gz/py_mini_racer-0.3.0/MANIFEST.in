@@ -1,0 +1,13 @@
+include AUTHORS.rst
+include CONTRIBUTING.rst
+include HISTORY.rst
+include LICENSE
+include README.rst
+include py_mini_racer/extension/*.gn
+
+recursive-include tests *
+recursive-include requirements *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
+recursive-include docs *.rst conf.py
