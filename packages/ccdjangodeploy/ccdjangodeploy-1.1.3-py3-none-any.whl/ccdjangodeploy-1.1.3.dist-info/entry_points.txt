@@ -1,0 +1,4 @@
+[console_scripts]
+ccdd = ccdjangodeploy.cli:main
+updateccdd = ccdjangodeploy.update:update
+
