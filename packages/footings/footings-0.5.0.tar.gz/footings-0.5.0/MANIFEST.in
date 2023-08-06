@@ -1,0 +1,18 @@
+global-exclude *.pyc
+
+include LICENSE *.rst *.toml *.yml *.yaml *.ini *.md *.py
+graft .github
+
+# Tests
+include tox.ini
+graft tests
+
+# Documentation
+include docs/Makefile
+recursive-include docs *.png
+recursive-include docs *.svg
+recursive-include docs *.py
+recursive-include docs *.rst
+recursive-include docs *.bat
+recursive-include docs *.css
+prune docs/_build

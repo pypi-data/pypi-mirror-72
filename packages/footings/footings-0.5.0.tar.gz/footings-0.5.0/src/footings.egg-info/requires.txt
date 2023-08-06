@@ -1,0 +1,16 @@
+attrs
+pandas
+numpydoc
+openpyxl
+toolz
+
+[dev]
+flake8
+black
+pre-commit
+
+[docs]
+sphinx
+
+[testing]
+pytest
