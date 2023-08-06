@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        djfront=djfront.cli:cli
+    
