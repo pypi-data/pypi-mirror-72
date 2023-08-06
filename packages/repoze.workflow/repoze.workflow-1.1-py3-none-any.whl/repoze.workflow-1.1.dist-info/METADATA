@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: repoze.workflow
+Version: 1.1
+Summary: Content workflow for repoze.bfg
+Home-page: http://www.repoze.org
+Author: Agendaless Consulting
+Author-email: repoze-dev@lists.repoze.org
+License: BSD-derived (http://www.repoze.org/LICENSE.txt)
+Keywords: web repoze workflow
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Requires-Dist: setuptools
+Requires-Dist: repoze.zcml
+Requires-Dist: zope.component
+Requires-Dist: zope.interface
+Requires-Dist: zope.configuration (>=3.8.0)
+Provides-Extra: docs
+Requires-Dist: Sphinx ; extra == 'docs'
+Requires-Dist: repoze.sphinx.autointerface ; extra == 'docs'
+Provides-Extra: testing
+Requires-Dist: zope.testing ; extra == 'testing'
+Requires-Dist: nose ; extra == 'testing'
+Requires-Dist: coverage ; extra == 'testing'
+
+repoze.workflow
+===============
+
+.. image:: https://travis-ci.org/repoze/repoze.workflow.png?branch=master
+        :target: https://travis-ci.org/repoze/repoze.workflow
+
+repoze.workflow is a state machine and associated configuration system
+useful for workflow-like applications.  Refer to docs/index.rst or
+`the online docs <http://docs.repoze.org/workflow>`_ for further
+information.
+
+
+repoze.workflow
+===============
+
+.. image:: https://travis-ci.org/repoze/repoze.workflow.png?branch=master
+        :target: https://travis-ci.org/repoze/repoze.workflow
+
+repoze.workflow is a state machine and associated configuration system
+useful for workflow-like applications.  Refer to docs/index.rst or
+`the online docs <http://docs.repoze.org/workflow>`_ for further
+information.
+
+
