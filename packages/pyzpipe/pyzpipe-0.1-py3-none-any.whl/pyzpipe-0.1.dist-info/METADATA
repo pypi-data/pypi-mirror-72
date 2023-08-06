@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pyzpipe
+Version: 0.1
+Summary: Concurrent and parallel pipeline framework using ZMQ
+Home-page: https://github.com/jheo4/zpipe
+Author: jheo4
+Author-email: 993jin@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: <=3.6
+Requires-Dist: numpy (>=1.19.0)
+Requires-Dist: pyzmq (>=19.0.1)
+Provides-Extra: dev
+Requires-Dist: flake8 (==3.7.9) ; extra == 'dev'
+Requires-Dist: black (==19.10b0) ; extra == 'dev'
+Requires-Dist: pytest (==5.4.1) ; extra == 'dev'
+Provides-Extra: pyopencv
+Requires-Dist: opencv-python (==3.4.2) ; extra == 'pyopencv'
+Requires-Dist: opencv-contrib-python (==3.4.2) ; extra == 'pyopencv'
+Provides-Extra: vidgear
+Requires-Dist: vidgear (>=0.1.8) ; extra == 'vidgear'
+
+UNKNOWN
+
+
